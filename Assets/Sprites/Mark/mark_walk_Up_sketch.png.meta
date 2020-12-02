@@ -1,0 +1,346 @@
+fileFormatVersion: 2
+guid: dc38df94521cfa94e9b03c0141b4602e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7006113508261953890
+    second: mark_walk_Up_sketch_0
+  - first:
+      213: -6677754399572150455
+    second: mark_walk_Up_sketch_1
+  - first:
+      213: -2785925668882991758
+    second: mark_walk_Up_sketch_2
+  - first:
+      213: -3751547863491134233
+    second: mark_walk_Up_sketch_3
+  - first:
+      213: -9045503027466483174
+    second: mark_walk_Up_sketch_4
+  - first:
+      213: 3091409626978350876
+    second: mark_walk_Up_sketch_5
+  - first:
+      213: 872570340616095915
+    second: mark_walk_Up_sketch_6
+  - first:
+      213: 2313806191473531039
+    second: mark_walk_Up_sketch_7
+  - first:
+      213: 861265390010005573
+    second: mark_walk_Up_sketch_8
+  - first:
+      213: -5187345470026101027
+    second: mark_walk_Up_sketch_9
+  - first:
+      213: 2222062355861581950
+    second: mark_walk_Up_sketch_10
+  - first:
+      213: 5505283578945030528
+    second: mark_walk_Up_sketch_11
+  - first:
+      213: -6243052669791265948
+    second: mark_walk_Up_sketch_12
+  - first:
+      213: -5300623806544436114
+    second: mark_walk_Up_sketch_13
+  - first:
+      213: 2865673857043151913
+    second: mark_walk_Up_sketch_14
+  - first:
+      213: 5061684437659341104
+    second: mark_walk_Up_sketch_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 600
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mark_walk_Up_sketch_0
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 24
+        width: 296
+        height: 873
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2610504ad17ba3160800000000000000
+      internalID: 7006113508261953890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mark_walk_Up_sketch_1
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 26
+        width: 296
+        height: 871
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947333cf0c9d353a0800000000000000
+      internalID: -6677754399572150455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mark_walk_Up_sketch_2
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 13
+        width: 293
+        height: 884
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27536975d576659d0800000000000000
+      internalID: -2785925668882991758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mark_walk_Up_sketch_3
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 0
+        width: 289
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec3cbe3813dfebc0800000000000000
+      internalID: -3751547863491134233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mark_walk_Up_sketch_4
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 6
+        width: 284
+        height: 891
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ac321fbeae77280800000000000000
+      internalID: -9045503027466483174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mark_walk_Up_sketch_5
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 6
+        width: 270
+        height: 891
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17744f3da4e6ea20800000000000000
+      internalID: 3091409626978350876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mark_walk_Up_sketch_6
+      rect:
+        serializedVersion: 2
+        x: 3653
+        y: 19
+        width: 272
+        height: 878
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8c6f90a1efb1c00800000000000000
+      internalID: 872570340616095915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mark_walk_Up_sketch_7
+      rect:
+        serializedVersion: 2
+        x: 4225
+        y: 31
+        width: 273
+        height: 866
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9811e9d87a4c1020800000000000000
+      internalID: 2313806191473531039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
