@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
-
     // Singleton
     public static GameSession instance;
 
@@ -36,9 +35,9 @@ public class GameSession : MonoBehaviour
         Initialize();
     }
 
+    // Initialize game variables and start events
     void Initialize()
     {
-        // Initialize game variables and start events
         GameIsPaused = false;
     }
 
@@ -47,16 +46,16 @@ public class GameSession : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    // Handle events after a new scene is loaded
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Events occurring after a new scene is loaded
         SetReferences();
         HandleSceneChanges();
     }
 
+    // Initialize cached references
     void SetReferences()
     {
-        // Initialize cached references
         player = GameObject.Find("Player");
         uiReferences = FindObjectOfType<UIReferences>();
         if (uiReferences != null)
@@ -73,18 +72,7 @@ public class GameSession : MonoBehaviour
 
     void HandleSceneChanges()
     {
-        if(SceneManager.GetActiveScene().name == "Room1")
-        {
-            // Player changes   // TODO find a better way
-            Vector3 scale = player.transform.localScale;
-            scale.x *= 2;
-            scale.y *= 2;
-            player.transform.localScale = scale;
-            player.transform.position = new Vector3(8.24f, 0.7f, transform.position.z);    
-            player.GetComponent<Rigidbody2D>().gravityScale = 5f;
-            player.GetComponent<Rigidbody2D>().mass = 200f;
-            player.GetComponent<Player>().movementSpeed = 0;
-        }
+        
     }
 
     // Update is called once per frame

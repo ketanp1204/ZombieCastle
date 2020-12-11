@@ -3,28 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(PlayerInput))]
 public class Player : MonoBehaviour
 {
     // Singleton
     public static Player instance;
 
     // Cached References
-    private Rigidbody2D rb;
-    private Animator animator;
-    public HealthBar healthBar;
+    private PlayerInput playerInput;                // Reference To The PlayerInput Class
+    private Rigidbody2D rb;                         // Reference To The Player's Rigidbody Component
+    private Animator animator;                      // Reference To The Player's Animator Component
+    private HealthBar healthBar;                    // Reference To The Player's Health Bar 
+    private SceneType sceneType;                    // Reference To The Current Type Of Scene: 2D or 2.5D
+    private SpriteRenderer sR;                      // Reference To The Player GameObject's SpriteRenderer
 
-    // Variables
-    [SerializeField]
-    public float movementSpeed;
-    private bool facingRight;
-    private bool run;
-    private Vector2 movement;
-    public int maxHealth = 100;
-    public int currentHealth;
-
-    // Variables : Player Attack1
-    private bool attack1;
-    private bool attack2;
+    // Variables : Player
+    public float movementSpeed;                     // Player's Current Movement Speed;
+    public float wSpeed;                            // Player's Walking Speed
+    public float rSpeed;                            // Player's Running Speed
+    private bool facingRight;                       // Player's Direction Of Facing
+    private Vector2 movement;                       // Player's Movement Vector
+    public int maxHealth = 100;                     // Player's Maximum Health
+    public int currentHealth;                       // Player's current health
 
     private void Awake()
     {
@@ -39,37 +40,76 @@ public class Player : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    // Handle events after a new scene is loaded
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        SetReferences();
+
+        sceneType = FindObjectOfType<SceneType>();
+
+        if(sceneType.type == SceneType.SceneTypes.S_TwoD)
+        {
+            // rb.mass = 200f;                                                             // Set Player Mass
+            rb.gravityScale = 1f;                                                      // Set Player Gravity Scale
+            facingRight = false;                                                        // Set Player Face Direction
+            /*
+            Vector3 scale = transform.localScale;                                       // Set Player Scale
+            scale.x = -2f;
+            scale.y = 2f;
+            transform.localScale = scale;
+            */
+            wSpeed = 6f;                                                                // Set Player Walk Speed
+            rSpeed = 9f;                                                                // Set Player Run Speed
+            transform.position = new Vector3(8.24f, 0.7f, transform.position.z);        // Set Player Position
+
+        }
+        else if(sceneType.type == SceneType.SceneTypes.S_TwoPointFiveD)
+        {
+            //rb.mass = 1f;                                                               // Set Player Mass
+            // rb.gravityScale = 0f;                                                       // Set Player Gravity Scale
+            facingRight = true;                                                         // Set Player Face Direction
+            /*
+            Vector3 scale = transform.localScale;                                       // Set Player Scale
+            scale.x = 1f;
+            scale.y = 1f;
+            transform.localScale = scale;
+            */
+            wSpeed = 3f;                                                                // Set Player Walk Speed
+            rSpeed = 6f;                                                                // Set Player Run Speed
+            transform.position = new Vector3(-0.03f, -2.68f, transform.position.z);     // Set Player Position
+        }
+    }
+
+    // Link Cached References
+    void SetReferences()
+    {
+        playerInput = GetComponent<PlayerInput>();
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        healthBar = GetComponentInChildren<HealthBar>();
+        sR = GetComponent<SpriteRenderer>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-
         facingRight = true;
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-    }
-
-    private void Update()
-    {
-        HandleInput();
     }
 
     void FixedUpdate()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        run = Input.GetKey(KeyCode.LeftShift);
-
-        movement.x = horizontal;
-        movement.y = vertical;
-
         // Moving the player
-        HandleMovement(movement.normalized);
+        HandleMovement();
 
         // Flip the player sprite depending on where it is facing
-        Flip(movement.x);
+        Flip();
 
         // Player attacks enemies
         HandleAttacks();
@@ -78,63 +118,74 @@ public class Player : MonoBehaviour
         ResetValues();
     }
 
-    private void HandleInput()
+    private void HandleMovement()
     {
-        if (Input.GetMouseButtonDown(0))
+        float horizontal = playerInput.horizontalInput;
+        float vertical = playerInput.verticalInput;
+        bool run = playerInput.runInput;
+
+        movement.x = horizontal;
+        if (sceneType.type == SceneType.SceneTypes.S_TwoD)
         {
-            attack1 = true;
+            movement.y = 0f;
+        }
+        else
+        {
+            movement.y = vertical;
         }
 
-        if (Input.GetMouseButtonDown(1))
+        movement.Normalize();
+
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
         {
-            attack2 = true;
+            rb.velocity = new Vector2(movement.x * movementSpeed, movement.y * movementSpeed);
         }
-    }
 
-    private void HandleMovement(Vector2 movement)
-    {
-        if(SceneManager.GetActiveScene().name != "Room1")       // Temporary. TODO: remove
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Magnitude", movement.magnitude);
+
+        if (run == true)
         {
-            if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
-            {
-                rb.velocity = new Vector2(movement.x * movementSpeed, movement.y * movementSpeed);
-            }
-
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
-            animator.SetFloat("Magnitude", movement.magnitude);
-            if (run)
-            {
-                animator.SetBool("Run", true);
-                movementSpeed = 6f;
-            }
-            else
-            {
-                animator.SetBool("Run", false);
-                movementSpeed = 3f;
-            }
+            animator.SetBool("Run", true);
+            movementSpeed = rSpeed;
         }
-        
 
+        if(run == false)
+        {
+            animator.SetBool("Run", false);
+            movementSpeed = wSpeed;
+        }
     }
 
     private void HandleAttacks()
     {
-        if(attack1 && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
+        if (playerInput.attack1Pressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
         {
-            animator.SetTrigger("Attack1");
+            animator.SetBool("Attack1", true);
             rb.velocity = Vector2.zero;
         }
 
-        if (attack2 && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
+        if (playerInput.attack2Pressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
         {
-            animator.SetTrigger("Attack2");
+            animator.SetBool("Attack2", true);
             rb.velocity = Vector2.zero;
+        }
+
+        if (playerInput.attack1Released && this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
+        {
+            animator.SetBool("Attack1", false);
+        }
+
+        if (playerInput.attack2Released && this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
+        {
+            animator.SetBool("Attack2", false);
         }
     }
 
-    private void Flip(float horizontal)
+    private void Flip()
     {
+        float horizontal = movement.x;
         if(horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
         {
             facingRight = !facingRight;
@@ -150,12 +201,13 @@ public class Player : MonoBehaviour
     {
         currentHealth -= damage;
 
+        // Play hurt animation
+
         healthBar.SetHealth(currentHealth);
     }
 
     private void ResetValues()
     {
-        attack1 = false;
-        attack2 = false;
+        
     }
 }

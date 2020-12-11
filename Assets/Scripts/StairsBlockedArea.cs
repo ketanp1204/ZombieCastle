@@ -41,7 +41,7 @@ public class StairsBlockedArea : MonoBehaviour
 
     public void SetCameraBounds(float xMin, float xMax, float yMin, float yMax)
     {
-        cameraFollow.SetCameraBounds(xMin, xMax, yMin, yMax);     // TODO: Remove hard coded values
+        cameraFollow.SetCameraBounds(xMin, xMax, yMin, yMax);   
     }
 
     [ContextMenu("Autofill Zombie Enemies")]
