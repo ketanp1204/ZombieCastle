@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-
     public float horizontalInput { get; private set; }
     public float verticalInput { get; private set; }
     public bool runInput { get; private set; }
@@ -11,7 +10,6 @@ public class PlayerInput : MonoBehaviour
     public bool attack2Pressed { get; private set; }
     public bool attack1Released { get; private set; }
     public bool attack2Released { get; private set; }
-
 
     private void Update()
     {
