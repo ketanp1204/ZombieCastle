@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public Transform attack1Point;
-    public float attack1Range = 0.5f;
-    public int attack1Damage = 20;
+    [Header("Attack 1 Attributes")]
+    public Transform attack1Point;      // Location of point which registers attack
+    public float attack1Range;          // Range at which attack is enabled
+    public int attack1Damage = 20;      // Damage caused to enemy
 
-    public Transform attack2Point;
-    public float attack2Range = 0.5f;
-    public int attack2Damage = 50;
+    [Header("Attack 2 Attributes")]
+    public Transform attack2Point;      // Location of point which registers attack
+    public float attack2Range;          // Range at which attack is enabled
+    public int attack2Damage = 50;      // Damage caused to enemy
 
+    [Header("Common Attributes")]
     public LayerMask enemyLayers;
 
     // Update is called once per frame
@@ -37,6 +40,7 @@ public class PlayerCombat : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>().TakeDamage(attack1Damage);
+            enemy.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
 
     }
@@ -50,8 +54,8 @@ public class PlayerCombat : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>().TakeDamage(attack2Damage);
+            enemy.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
-
     }
 
     private void OnDrawGizmosSelected()

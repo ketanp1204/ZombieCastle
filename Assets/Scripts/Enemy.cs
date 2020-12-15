@@ -49,6 +49,11 @@ public class Enemy : MonoBehaviour
         // Play die animation
         animator.SetBool("IsDead", true);
 
+        // Stop pathfinding
+        EnemyAI enemyAI = GetComponent<EnemyAI>();
+        enemyAI.followPath = false;
+        enemyAI.StopMovement();
+
         // Invoke Death Event
         OnDeath?.Invoke(this);
 

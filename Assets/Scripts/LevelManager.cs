@@ -51,6 +51,11 @@ public class LevelManager : MonoBehaviour
         instance.StartCoroutine(instance.LoadLevel(sceneToLoad));
     }
 
+    public static void LoadSceneByName(string name)
+    {
+        instance.StartCoroutine(instance.LoadLevel(name));
+    }
+
     private IEnumerator LoadLevel(int levelIndex)
     {
         animator.SetTrigger("CrossFade_Start");
@@ -58,6 +63,15 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(levelIndex);
+    }
+
+    private IEnumerator LoadLevel(string sceneName)
+    {
+        animator.SetTrigger("CrossFade_Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(sceneName);
     }
 
     public void QuitGame()                                      // Quits the game

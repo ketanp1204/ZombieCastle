@@ -1,10 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(PlayerInput))]
+[RequireComponent(typeof(PlayerCombat))]
 public class Player : MonoBehaviour
 {
     // Singleton
@@ -16,9 +18,10 @@ public class Player : MonoBehaviour
     private Animator animator;                      // Reference To The Player's Animator Component
     public HealthBar healthBar;                     // Reference To The Player's Health Bar 
     private SceneType sceneTypeReference;           // Reference To The Current Type Of Scene: 2D or 2.5D
-    private SpriteRenderer sR;                      // Reference To The Player GameObject's SpriteRenderer
+    private UnityEngine.Object playerReference;
 
     // Variables : Player
+    public bool movePlayer;
     public float movementSpeed;                     // Player's Current Movement Speed;
     public float wSpeed;                            // Player's Walking Speed
     public float rSpeed;                            // Player's Running Speed
@@ -27,6 +30,9 @@ public class Player : MonoBehaviour
     public int maxHealth = 100;                     // Player's Maximum Health
     public int currentHealth;                       // Player's current health
     private int sceneType;                          // Type of scene: 1 for 2D, 2 for 2.5D
+
+    // Death Event
+    public event Action<Player> OnDeath;
 
     /*
     private void Awake()
@@ -46,6 +52,7 @@ public class Player : MonoBehaviour
 
     void OnEnable()
     {
+        playerReference = Resources.Load(gameObject.name);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -62,13 +69,11 @@ public class Player : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        sR = GetComponent<SpriteRenderer>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
         SetReferences();
 
         if (sceneTypeReference.type == SceneType.SceneTypes.S_TwoD)
@@ -95,20 +100,23 @@ public class Player : MonoBehaviour
         }
             
         facingRight = true;
+        movePlayer = true;
     }
 
     void FixedUpdate()
     {
         // Moving the player
-        if(sceneType == 1)
+        if(movePlayer)
         {
-            HandleMovementTwoD();
+            if (sceneType == 1)
+            {
+                HandleMovementTwoD();
+            }
+            else if (sceneType == 2)
+            {
+                HandleMovementTwoPointFiveD();
+            }
         }
-        else if(sceneType == 2)
-        {
-            HandleMovementTwoPointFiveD();
-        }
-        
 
         // Flip the player sprite depending on where it is facing
         Flip();
@@ -228,17 +236,67 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        // Reduce health
         currentHealth -= damage;
         PlayerStats.currentHealth = currentHealth;
+
+        // Update Health Bar
+        healthBar.SetHealth(currentHealth);
 
         // Play hurt animation
         animator.SetTrigger("Hurt");
 
-        healthBar.SetHealth(currentHealth);
+        // Die if health is less than 0
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        // Play die animation
+        animator.SetBool("IsDead", true);
+
+        // Invoke Death Event
+        OnDeath?.Invoke(this);
+
+        // Disable the enemy
+        // gameObject.SetActive(false);
+        GetComponent<Collider2D>().enabled = false;
+
+        // Disable Health Bar
+        healthBar.gameObject.SetActive(false);
+
+        Invoke("Respawn", 4);
+
+        StartCoroutine(DestroyGameObjectAfterDelay(gameObject));
+    }
+
+    void Respawn()
+    {
+        GameObject enemyClone = (GameObject)Instantiate(playerReference);
+        enemyClone.transform.position = transform.position;
+    }
+
+    private IEnumerator DestroyGameObjectAfterDelay(GameObject gameObject)
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
     }
 
     private void ResetValues()
     {
         
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            rb.velocity = Vector2.zero;
+            animator.SetFloat("Magnitude", 0f);
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        }
     }
 }
