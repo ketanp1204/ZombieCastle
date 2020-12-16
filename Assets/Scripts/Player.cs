@@ -21,7 +21,8 @@ public class Player : MonoBehaviour
     private UnityEngine.Object playerReference;
 
     // Variables : Player
-    public bool movePlayer;
+    public bool movePlayer;                         // Bool to store whether Player can move or not
+    public bool weaponDrawn;                        // Bool to store whether weapon is drawn or not
     public float movementSpeed;                     // Player's Current Movement Speed;
     public float wSpeed;                            // Player's Walking Speed
     public float rSpeed;                            // Player's Running Speed
@@ -34,32 +35,18 @@ public class Player : MonoBehaviour
     // Death Event
     public event Action<Player> OnDeath;
 
-    /*
+    
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
         }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-        DontDestroyOnLoad(gameObject);
     }
-    */
 
     void OnEnable()
     {
         playerReference = Resources.Load(gameObject.name);
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    // Handle events after a new scene is loaded
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        
     }
 
     // Link Cached References
@@ -101,6 +88,7 @@ public class Player : MonoBehaviour
             
         facingRight = true;
         movePlayer = true;
+        weaponDrawn = false;
     }
 
     void FixedUpdate()
@@ -197,26 +185,29 @@ public class Player : MonoBehaviour
 
     private void HandleAttacks()
     {
-        if (playerInput.attack1Pressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
+        if(weaponDrawn)
         {
-            animator.SetBool("Attack1", true);
-            rb.velocity = Vector2.zero;
-        }
+            if (playerInput.attack1Pressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
+            {
+                animator.SetBool("Attack1", true);
+                rb.velocity = Vector2.zero;
+            }
 
-        if (playerInput.attack2Pressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
-        {
-            animator.SetBool("Attack2", true);
-            rb.velocity = Vector2.zero;
-        }
+            if (playerInput.attack2Pressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
+            {
+                animator.SetBool("Attack2", true);
+                rb.velocity = Vector2.zero;
+            }
 
-        if (playerInput.attack1Released && this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
-        {
-            animator.SetBool("Attack1", false);
-        }
+            if (playerInput.attack1Released && this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
+            {
+                animator.SetBool("Attack1", false);
+            }
 
-        if (playerInput.attack2Released && this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
-        {
-            animator.SetBool("Attack2", false);
+            if (playerInput.attack2Released && this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
+            {
+                animator.SetBool("Attack2", false);
+            }
         }
     }
 
@@ -227,10 +218,21 @@ public class Player : MonoBehaviour
         {
             facingRight = !facingRight;
 
+            if(facingRight)
+            {
+                animator.SetFloat("FaceDirection", 1f);
+            }
+            else
+            {
+                animator.SetFloat("FaceDirection", -1f);
+            }
+
+            /*
             // Multiply the scale of the player object to flip the sprite
             Vector3 scale = transform.localScale;
             scale.x *= -1;
             transform.localScale = scale;
+            */
         }
     }
 
@@ -288,6 +290,21 @@ public class Player : MonoBehaviour
     private void ResetValues()
     {
         
+    }
+
+    public static bool PlayerFacingRight()
+    {
+        return instance.facingRight;
+    }
+
+    public static void DrawWeapon()
+    {
+        instance.animator.SetBool("WeaponDrawn", true);
+    }
+
+    public static void RemoveWeapon()
+    {
+        instance.animator.SetBool("WeaponDrawn", false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -15,14 +15,20 @@ public class BoxTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        sR.enabled = true;
-        checkForInput = true;
+        if (collision.gameObject.tag == "Player")
+        {
+            sR.enabled = true;
+            checkForInput = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        sR.enabled = false;
-        checkForInput = false;
+        if (collision.gameObject.tag == "Player")
+        {
+            sR.enabled = false;
+            checkForInput = false;
+        }
     }
 
     void Update()
@@ -31,7 +37,16 @@ public class BoxTrigger : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                // Handle box open events
+                if (Player.instance.weaponDrawn)
+                {
+                    Player.instance.weaponDrawn = false;
+                    Player.RemoveWeapon();
+                }
+                else
+                {
+                    Player.instance.weaponDrawn = true;
+                    Player.DrawWeapon();
+                }
             }
         }
     }

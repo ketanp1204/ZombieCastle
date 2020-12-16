@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public int maxHealth = 100;
     int currentHealth;
     private UnityEngine.Object enemyReference;
+    public bool IsDead = false;
 
     // Death Event
     public event Action<Enemy> OnDeath;
@@ -37,15 +38,20 @@ public class Enemy : MonoBehaviour
         // Play hurt animation
         animator.SetTrigger("Hurt");
 
-        // Die if health is less than 0
-        if(currentHealth <= 0)
+        if(!IsDead)
         {
-            Die();
+            // Die if health is less than 0
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
     }
 
     void Die()
     {
+        IsDead = true;
+
         // Play die animation
         animator.SetBool("IsDead", true);
 
