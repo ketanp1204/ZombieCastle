@@ -89,6 +89,7 @@ public class Player : MonoBehaviour
         facingRight = true;
         movePlayer = true;
         weaponDrawn = false;
+        animator.SetFloat("FaceDirection", 1f);
     }
 
     void FixedUpdate()

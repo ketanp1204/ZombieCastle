@@ -54,8 +54,11 @@ public class PlayerCombat : MonoBehaviour
         // Damage them
         foreach(Collider2D enemy in hitEnemies)
         {
-            enemy.transform.parent.gameObject.GetComponent<Enemy>().TakeDamage(attack1Damage);
-            enemy.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            if(!enemy.transform.parent.gameObject.GetComponent<Enemy>().IsDead)
+            {
+                enemy.transform.parent.gameObject.GetComponent<Enemy>().TakeDamage(attack1Damage);
+                enemy.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            }
         }
 
     }
@@ -79,8 +82,11 @@ public class PlayerCombat : MonoBehaviour
         // Damage them
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.transform.parent.gameObject.GetComponent<Enemy>().TakeDamage(attack2Damage);
-            enemy.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            if(!enemy.transform.parent.gameObject.GetComponent<Enemy>().IsDead)
+            {
+                enemy.transform.parent.gameObject.GetComponent<Enemy>().TakeDamage(attack2Damage);
+                enemy.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            }
         }
     }
 }

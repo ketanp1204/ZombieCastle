@@ -25,6 +25,7 @@ public class EnemyAI : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private EnemyCombat enemyCombat;
+    private Enemy enemy;
     private SceneType sceneTypeReference;
 
     // Variables
@@ -38,6 +39,7 @@ public class EnemyAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         target = FindObjectOfType<Player>().transform;
         enemyCombat = GetComponent<EnemyCombat>();
+        enemy = GetComponent<Enemy>();
         animator = zombieGFX.GetComponent<Animator>();
         sceneTypeReference = FindObjectOfType<SceneType>();
         followPath = true;
@@ -62,7 +64,7 @@ public class EnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(followPath)
+        if(followPath && !enemy.IsDead)
             FollowPath();
     }
 
