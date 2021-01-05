@@ -8,12 +8,14 @@ public class Enemy : MonoBehaviour
     // Cached References
     public Animator animator;
     public HealthBar healthBar;
+    private SceneType sceneTypeReference;           // Reference To The Current Type Of Scene: 2D or 2.5D
 
     // Variables
     public int maxHealth = 100;
     int currentHealth;
     private UnityEngine.Object enemyReference;
     public bool IsDead = false;
+    private int sceneType;                              // Type of scene: 1 for 2D, 2 for 2.5D
 
     // Death Event
     public event Action<Enemy> OnDeath;
@@ -21,25 +23,35 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sceneTypeReference = FindObjectOfType<SceneType>();
         enemyReference = Resources.Load(gameObject.name.Substring(0, 7));
         currentHealth = maxHealth;
         healthBar.gameObject.SetActive(true);
         healthBar.SetMaxHealth(maxHealth);
+
+        if (sceneTypeReference.type == SceneType.SceneTypes.S_TwoD)
+        {
+            sceneType = 1;
+        }
+        else if (sceneTypeReference.type == SceneType.SceneTypes.S_TwoPointFiveD)
+        {
+            sceneType = 2;
+        }
     }
 
     public void TakeDamage(int damage)
     {
-        // Reduce health
-        currentHealth -= damage;
-
-        // Update Health Bar
-        healthBar.SetHealth(currentHealth);
-
-        // Play hurt animation
-        animator.SetTrigger("Hurt");
-
-        if(!IsDead)
+        if (!IsDead)
         {
+            // Reduce health
+            currentHealth -= damage;
+
+            // Update Health Bar
+            healthBar.SetHealth(currentHealth);
+
+            // Play hurt animation
+            animator.SetTrigger("Hurt");
+
             // Die if health is less than 0
             if (currentHealth <= 0)
             {
@@ -63,9 +75,11 @@ public class Enemy : MonoBehaviour
         // Invoke Death Event
         OnDeath?.Invoke(this);
 
-        // Disable the enemy
-        // gameObject.SetActive(false);
-        GetComponent<Collider2D>().enabled = false;
+        // Disable the collider
+        if (sceneType == 2)
+        {
+            GetComponent<Collider2D>().enabled = false;
+        }
 
         // Disable Health Bar
         healthBar.gameObject.SetActive(false);

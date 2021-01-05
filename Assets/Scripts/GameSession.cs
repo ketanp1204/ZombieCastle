@@ -72,7 +72,8 @@ public class GameSession : MonoBehaviour
 
     void HandleSceneChanges()
     {
-        
+        AudioManager.Initialize();
+        AudioManager.PlaySound(AudioManager.Sound.BackgroundTrack);
     }
 
     // Update is called once per frame

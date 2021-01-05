@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(PlayerCombat))]
+
 public class Player : MonoBehaviour
 {
     // Singleton
@@ -21,12 +22,16 @@ public class Player : MonoBehaviour
     private UnityEngine.Object playerReference;
 
     // Variables : Player
-    public bool movePlayer;                         // Bool to store whether Player can move or not
-    public bool weaponDrawn;                        // Bool to store whether weapon is drawn or not
+    public bool movePlayer;                         // Bool to store whether Player can move
+    public bool weaponDrawn;                        // Bool to store whether weapon is drawn
+    public bool IsDead = false;                     // Bool to store if player dies
+    private bool facingRight;                       // Player's Direction Of Facing
+    [HideInInspector]
+    public bool isClimbingLadder = false;           // Bool to store whether player is climbing a ladder
     public float movementSpeed;                     // Player's Current Movement Speed;
     public float wSpeed;                            // Player's Walking Speed
     public float rSpeed;                            // Player's Running Speed
-    private bool facingRight;                       // Player's Direction Of Facing
+    public float gravityScale;                      // Player's Rigidbody gravity scale factor 
     private Vector2 movement;                       // Player's Movement Vector
     public int maxHealth = 100;                     // Player's Maximum Health
     public int currentHealth;                       // Player's current health
@@ -89,6 +94,7 @@ public class Player : MonoBehaviour
         facingRight = true;
         movePlayer = true;
         weaponDrawn = false;
+        movementSpeed = wSpeed;
         animator.SetFloat("FaceDirection", 1f);
     }
 
@@ -119,19 +125,30 @@ public class Player : MonoBehaviour
 
     private void HandleMovementTwoD()
     {
-        float horizontal = playerInput.horizontalInput;
+        float horizontal, vertical;
+
+        horizontal = playerInput.horizontalInput;
         bool run = playerInput.runInput;
 
         movement.x = horizontal;
+        movement.y = 0f;
+
+        if(isClimbingLadder)
+        {
+            vertical = playerInput.verticalInput;
+            movement.y = vertical;
+        }
 
         movement.Normalize();
 
         if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
         {
-            rb.velocity = new Vector2(movement.x * movementSpeed, rb.velocity.y);
+            rb.MovePosition((Vector2)transform.position + (movement * movementSpeed * Time.deltaTime));
+            // rb.velocity = new Vector2(movement.x * movementSpeed, rb.velocity.y);
         }
 
         animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Magnitude", movement.magnitude);
 
         if (run == true)
@@ -159,7 +176,8 @@ public class Player : MonoBehaviour
 
         if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
         {
-            rb.velocity = new Vector2(movement.x * movementSpeed, movement.y * movementSpeed);
+            rb.MovePosition((Vector2)transform.position + (movement * movementSpeed * Time.deltaTime));
+            // rb.velocity = new Vector2(movement.x * movementSpeed, movement.y * movementSpeed);
         }
 
         animator.SetFloat("Horizontal", movement.x);
@@ -239,34 +257,41 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        // Reduce health
-        currentHealth -= damage;
-        PlayerStats.currentHealth = currentHealth;
-
-        // Update Health Bar
-        healthBar.SetHealth(currentHealth);
-
-        // Play hurt animation
-        animator.SetTrigger("Hurt");
-
-        // Die if health is less than 0
-        if (currentHealth <= 0)
+        if (!IsDead)
         {
-            Die();
+            // Reduce health
+            currentHealth -= damage;
+            PlayerStats.currentHealth = currentHealth;
+
+            // Update Health Bar
+            healthBar.SetHealth(currentHealth);
+
+            // Play hurt animation
+            animator.SetTrigger("Hurt");
+
+            // Die if health is less than 0
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
     }
 
     void Die()
     {
+        IsDead = true;
+
         // Play die animation
         animator.SetBool("IsDead", true);
 
         // Invoke Death Event
         OnDeath?.Invoke(this);
 
-        // Disable the enemy
-        // gameObject.SetActive(false);
-        GetComponent<Collider2D>().enabled = false;
+        // Disable the collider
+        if (sceneType == 2)
+        {
+            GetComponent<Collider2D>().enabled = false;
+        }
 
         // Disable Health Bar
         healthBar.gameObject.SetActive(false);

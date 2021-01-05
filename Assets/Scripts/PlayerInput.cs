@@ -6,6 +6,7 @@ public class PlayerInput : MonoBehaviour
     public float horizontalInput { get; private set; }
     public float verticalInput { get; private set; }
     public bool runInput { get; private set; }
+    public bool jumpInput { get; private set; }
     public bool attack1Pressed { get; private set; }
     public bool attack2Pressed { get; private set; }
     public bool attack1Released { get; private set; }
@@ -24,6 +25,16 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             runInput = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            jumpInput = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            jumpInput = false;
         }
 
         if (Input.GetMouseButtonDown(0))

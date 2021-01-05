@@ -8,14 +8,16 @@ public class EnemyAI : MonoBehaviour
     [Header("Pathfinding")]
     private Transform target;
     public float pathUpdateSeconds;
+    [HideInInspector]
     public bool followPath;
     private Path path;
     private int currentWaypoint = 0;
-    private bool reachedEndOfPath = false;
+    // private bool reachedEndOfPath = false;
 
     [Header("Physics")]
     public float speed = 60f;
     public float nextWaypointDistance = 3f;
+    public float moveForceMultiplier = 19f;
 
     // Zombie sprite object
     private GameObject zombieGFX;
@@ -37,10 +39,10 @@ public class EnemyAI : MonoBehaviour
         zombieGFX = transform.GetChild(0).gameObject;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        target = FindObjectOfType<Player>().transform;
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemyCombat = GetComponent<EnemyCombat>();
         enemy = GetComponent<Enemy>();
-        animator = zombieGFX.GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         sceneTypeReference = FindObjectOfType<SceneType>();
         followPath = true;
 
@@ -58,7 +60,7 @@ public class EnemyAI : MonoBehaviour
 
     void UpdatePath()
     {
-        if (seeker.IsDone())
+        if (seeker.IsDone() && followPath)
             seeker.StartPath(rb.position, target.position, OnPathComplete);
     }
 
@@ -80,12 +82,21 @@ public class EnemyAI : MonoBehaviour
         if (currentWaypoint >= path.vectorPath.Count)
         {
             force = Vector2.zero;
-            enemyCombat.attack1Trigger = true;
+            enemyCombat.InvokeAttack();
         } 
         else
         {
             direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-            force = direction * speed * Time.fixedDeltaTime;
+            
+            // Change movement applied on enemy based on scene type 
+            if (sceneType == 1)
+            {
+                force = new Vector2(direction.x * moveForceMultiplier, direction.y) * speed * Time.fixedDeltaTime;
+            }
+            else
+            {
+                force = direction * speed * Time.fixedDeltaTime;
+            }
 
             // Move the enemy
             rb.AddForce(force);
@@ -114,16 +125,11 @@ public class EnemyAI : MonoBehaviour
 
     void SetMovementAnimationParameters(Vector2 movement)
     {
-        if (sceneType == 1)
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Magnitude", movement.magnitude);
+        if(sceneType == 2)
         {
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Magnitude", movement.magnitude);
-        }
-        else if(sceneType == 2)
-        {
-            animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
-            animator.SetFloat("Magnitude", movement.magnitude);
         }
     }
 

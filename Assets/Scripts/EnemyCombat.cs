@@ -10,31 +10,30 @@ public class EnemyCombat : MonoBehaviour
     public Transform attack1Point;      // Location of point which registers attack
     public float attack1Range;          // Range at which attack is enabled
     public int attack1Damage = 20;      // Damage caused to enemy
+    public float attackRepeatTime;      // Attack rate of enemy
 
+    // Cached References
+    private Animator animator;
     public LayerMask playerLayerMask;
 
-    // Start is called before the first frame update
-    void Start()
+    public void InvokeAttack()
     {
-        if (attack1Trigger)
-            Attack1();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        InvokeRepeating("Attack1", 0f, attackRepeatTime);
+        animator = GetComponent<Animator>();
     }
 
     void Attack1()
     {
+        // Play attack animation
+        animator.SetTrigger("Attack");
+
         // Detect player in range of attack
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attack1Point.position, attack1Range, playerLayerMask);
 
         // Damage them
         foreach (Collider2D player in hitPlayer)
         {
-            player.GetComponent<Player>().TakeDamage(attack1Damage);
+            player.transform.parent.GetComponent<Player>().TakeDamage(attack1Damage);
         }
     }
 }

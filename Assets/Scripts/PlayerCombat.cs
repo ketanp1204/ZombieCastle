@@ -37,16 +37,17 @@ public class PlayerCombat : MonoBehaviour
 
     void Attack1()
     {
+        AudioManager.PlaySound(AudioManager.Sound.PlayerAxeHit, transform.position);
         Collider2D[] hitEnemies;
 
         if (Player.PlayerFacingRight() == true)
         {
-            // Detect enemies in range of attack
+            // Detect enemies in range of right attack position
             hitEnemies = Physics2D.OverlapCircleAll(attack1RightPoint.position, attack1Range, enemyLayers);
         }
         else
         {
-            // Detect enemies in range of attack
+            // Detect enemies in range of left attack position
             hitEnemies = Physics2D.OverlapCircleAll(attack1LeftPoint.position, attack1Range, enemyLayers);
         }
         
