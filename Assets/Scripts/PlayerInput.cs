@@ -5,7 +5,7 @@ public class PlayerInput : MonoBehaviour
 {
     public float horizontalInput { get; private set; }
     public float verticalInput { get; private set; }
-    public bool runInput { get; private set; }
+    public bool walkFastInput { get; private set; }
     public bool jumpInput { get; private set; }
     public bool attack1Pressed { get; private set; }
     public bool attack2Pressed { get; private set; }
@@ -19,12 +19,12 @@ public class PlayerInput : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
-            runInput = true;
+            walkFastInput = true;
         }
 
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            runInput = false;
+            walkFastInput = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))

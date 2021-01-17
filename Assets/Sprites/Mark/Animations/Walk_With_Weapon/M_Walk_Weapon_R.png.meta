@@ -1,0 +1,2884 @@
+fileFormatVersion: 2
+guid: 26e47b344a02c4c8f983ac939f56fe03
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1913877386760811811
+    second: walk right with weapon_0
+  - first:
+      213: -4480419468393816092
+    second: walk right with weapon_1
+  - first:
+      213: 5938525716792316265
+    second: walk right with weapon_2
+  - first:
+      213: 6327214966543911566
+    second: walk right with weapon_3
+  - first:
+      213: 8230450924457946486
+    second: walk right with weapon_4
+  - first:
+      213: 2121144874155992584
+    second: walk right with weapon_5
+  - first:
+      213: 5923629182005094678
+    second: walk right with weapon_6
+  - first:
+      213: 1807029154045806613
+    second: walk right with weapon_7
+  - first:
+      213: -291420242885470441
+    second: walk right with weapon_8
+  - first:
+      213: -1024803317243294121
+    second: walk right with weapon_9
+  - first:
+      213: 7359544641299528145
+    second: walk right with weapon_10
+  - first:
+      213: 2870825985988866131
+    second: walk right with weapon_1
+  - first:
+      213: -3946157093796241984
+    second: walk right with weapon_12
+  - first:
+      213: 2836489884867070589
+    second: walk right with weapon_13
+  - first:
+      213: 859364916950694533
+    second: walk right with weapon_14
+  - first:
+      213: 2347366898173521500
+    second: walk right with weapon_15
+  - first:
+      213: 3860558111522919574
+    second: walk right with weapon_16
+  - first:
+      213: 3203363860303887004
+    second: walk right with weapon_17
+  - first:
+      213: 8178549691608977974
+    second: walk right with weapon_18
+  - first:
+      213: 125749504881772114
+    second: walk right with weapon_19
+  - first:
+      213: -6152818575655387988
+    second: walk right with weapon_20
+  - first:
+      213: 8275016786987804214
+    second: walk right with weapon_21
+  - first:
+      213: 2603840974321804880
+    second: walk right with weapon_22
+  - first:
+      213: -9147079327343693600
+    second: walk right with weapon_23
+  - first:
+      213: 1851557854139827476
+    second: walk right with weapon_24
+  - first:
+      213: 4753748315955987079
+    second: walk right with weapon_25
+  - first:
+      213: -3551920206582918798
+    second: walk right with weapon_26
+  - first:
+      213: -7664673520128413740
+    second: walk right with weapon_27
+  - first:
+      213: 3812642618912524735
+    second: walk right with weapon_28
+  - first:
+      213: 6751785188040553860
+    second: walk right with weapon_29
+  - first:
+      213: -2717582846815359032
+    second: walk right with weapon_30
+  - first:
+      213: 6889582496500034654
+    second: walk right with weapon_31
+  - first:
+      213: -943502912611785275
+    second: walk right with weapon_32
+  - first:
+      213: -903883698848095701
+    second: walk right with weapon_33
+  - first:
+      213: -861980272054716992
+    second: walk right with weapon_34
+  - first:
+      213: 6650318524333174218
+    second: walk right with weapon_35
+  - first:
+      213: 2510444407278041256
+    second: walk right with weapon_36
+  - first:
+      213: 3733854889695571753
+    second: walk right with weapon_37
+  - first:
+      213: -7910716059280100739
+    second: walk right with weapon_38
+  - first:
+      213: -140321082395635435
+    second: walk right with weapon_39
+  - first:
+      213: 6621177681083314022
+    second: walk right with weapon_40
+  - first:
+      213: -1071518675596383302
+    second: walk right with weapon_41
+  - first:
+      213: 3696467378037150098
+    second: walk right with weapon_42
+  - first:
+      213: -4104117487093894089
+    second: walk right with weapon_43
+  - first:
+      213: -1186436104139443685
+    second: walk right with weapon_44
+  - first:
+      213: -957158977817479870
+    second: walk right with weapon_35
+  - first:
+      213: -7754172088232782255
+    second: walk right with weapon_46
+  - first:
+      213: 4039005860187355992
+    second: walk right with weapon_47
+  - first:
+      213: -9018028038624335160
+    second: walk right with weapon_48
+  - first:
+      213: -2737912375667730475
+    second: walk right with weapon_49
+  - first:
+      213: -2400029945732315713
+    second: walk right with weapon_50
+  - first:
+      213: -7697947641541644212
+    second: walk right with weapon_51
+  - first:
+      213: -7975482462469778622
+    second: walk right with weapon_52
+  - first:
+      213: -3109577099443549077
+    second: walk right with weapon_53
+  - first:
+      213: 8465883799243849985
+    second: walk right with weapon_54
+  - first:
+      213: 179298449424802875
+    second: walk right with weapon_55
+  - first:
+      213: -5955401201219793551
+    second: walk right with weapon_56
+  - first:
+      213: -3895440363976448108
+    second: walk right with weapon_57
+  - first:
+      213: -3799260743819397662
+    second: walk right with weapon_58
+  - first:
+      213: -8166893633135148683
+    second: walk right with weapon_59
+  - first:
+      213: -1133836400549488486
+    second: walk right with weapon_60
+  - first:
+      213: 1125213060060216665
+    second: walk right with weapon_61
+  - first:
+      213: 823908175948525914
+    second: walk right with weapon_62
+  - first:
+      213: -2141374508980751034
+    second: walk right with weapon_63
+  - first:
+      213: 428573865532373289
+    second: walk right with weapon_64
+  - first:
+      213: 5776254661585774146
+    second: walk right with weapon_65
+  - first:
+      213: 249556824024501140
+    second: walk right with weapon_66
+  - first:
+      213: -3710807200692053599
+    second: walk right with weapon_67
+  - first:
+      213: -1427727383438779751
+    second: walk right with weapon_68
+  - first:
+      213: -8224720661166838979
+    second: walk right with weapon_69
+  - first:
+      213: 6423245490285264694
+    second: walk right with weapon_70
+  - first:
+      213: -1257473677644844671
+    second: walk right with weapon_71
+  - first:
+      213: 6657647715532199454
+    second: walk right with weapon_72
+  - first:
+      213: -6878701939357744509
+    second: walk right with weapon_73
+  - first:
+      213: -5957463557220488770
+    second: walk right with weapon_74
+  - first:
+      213: -5594987011752154994
+    second: walk right with weapon_75
+  - first:
+      213: 6735237367402635841
+    second: walk right with weapon_76
+  - first:
+      213: 40610191014839283
+    second: walk right with weapon_77
+  - first:
+      213: -7042891455762400483
+    second: walk right with weapon_78
+  - first:
+      213: -6417927852029418599
+    second: walk right with weapon_79
+  - first:
+      213: 4514570346542100128
+    second: walk right with weapon_80
+  - first:
+      213: -6732871835972672968
+    second: walk right with weapon_81
+  - first:
+      213: 4282366215506902885
+    second: walk right with weapon_82
+  - first:
+      213: -2074035500377694918
+    second: walk right with weapon_83
+  - first:
+      213: 7838554097451622617
+    second: walk right with weapon_84
+  - first:
+      213: -2794059751066760813
+    second: walk right with weapon_85
+  - first:
+      213: 8622520785012142381
+    second: walk right with weapon_86
+  - first:
+      213: -70264615089148188
+    second: walk right with weapon_87
+  - first:
+      213: 3401297729398013277
+    second: walk right with weapon_88
+  - first:
+      213: -7253742769675256171
+    second: walk right with weapon_89
+  - first:
+      213: -8955493255721191887
+    second: walk right with weapon_90
+  - first:
+      213: -3150500452285350318
+    second: walk right with weapon_91
+  - first:
+      213: 7618133369297576817
+    second: walk right with weapon_92
+  - first:
+      213: -4863596672356494180
+    second: walk right with weapon_93
+  - first:
+      213: -5343842685975683245
+    second: walk right with weapon_94
+  - first:
+      213: -3118901974177815269
+    second: walk right with weapon_95
+  - first:
+      213: -4352768134897283352
+    second: walk right with weapon_96
+  - first:
+      213: -4861249880713547877
+    second: walk right with weapon_97
+  - first:
+      213: 4902252372145331088
+    second: walk right with weapon_98
+  - first:
+      213: 7214472708718246025
+    second: walk right with weapon_99
+  - first:
+      213: -3956565043934813313
+    second: walk right with weapon_100
+  - first:
+      213: -7473342845923315511
+    second: walk right with weapon_101
+  - first:
+      213: -6831449655120842318
+    second: walk right with weapon_102
+  - first:
+      213: -5588487501536882959
+    second: walk right with weapon_103
+  - first:
+      213: -4626001273524104053
+    second: walk right with weapon_104
+  - first:
+      213: -7609871559995066384
+    second: walk right with weapon_105
+  - first:
+      213: -94301315805958330
+    second: Walk_Weapon_R_0
+  - first:
+      213: 3697540328019122338
+    second: Walk_Weapon_R_2
+  - first:
+      213: 3754700624480268210
+    second: Walk_Weapon_R_3
+  - first:
+      213: 3232607364970498895
+    second: Walk_Weapon_R_4
+  - first:
+      213: -4482551956807129325
+    second: Walk_Weapon_R_5
+  - first:
+      213: 7552370753252801555
+    second: Walk_Weapon_R_6
+  - first:
+      213: -8024588712983791791
+    second: Walk_Weapon_R_7
+  - first:
+      213: -2468046545858570582
+    second: Walk_Weapon_R_8
+  - first:
+      213: 4289918412406386064
+    second: Walk_Weapon_R_9
+  - first:
+      213: -7393794993959889581
+    second: Walk_Weapon_R_10
+  - first:
+      213: 5725660124035353204
+    second: Walk_Weapon_R_1
+  - first:
+      213: -2803613458366613241
+    second: Walk_Weapon_R_12
+  - first:
+      213: -8907462879451645974
+    second: Walk_Weapon_R_13
+  - first:
+      213: -691422453267144022
+    second: Walk_Weapon_R_14
+  - first:
+      213: -7839449443688744648
+    second: Walk_Weapon_R_15
+  - first:
+      213: 3297120477316485890
+    second: Walk_Weapon_R_16
+  - first:
+      213: -4372989754628702252
+    second: Walk_Weapon_R_17
+  - first:
+      213: -5864372932992839352
+    second: Walk_Weapon_R_18
+  - first:
+      213: 6916909736162856890
+    second: Walk_Weapon_R_19
+  - first:
+      213: 555216130101959052
+    second: Walk_Weapon_R_20
+  - first:
+      213: 3132433730667530795
+    second: Walk_Weapon_R_21
+  - first:
+      213: -7121357568741466824
+    second: Walk_Weapon_R_22
+  - first:
+      213: -8195178345399842088
+    second: Walk_Weapon_R_23
+  - first:
+      213: 2335609796792769959
+    second: Walk_Weapon_R_24
+  - first:
+      213: 8387083657007560242
+    second: Walk_Weapon_R_25
+  - first:
+      213: 5045253930016694859
+    second: Walk_Weapon_R_26
+  - first:
+      213: 8591018850812375262
+    second: Walk_Weapon_R_27
+  - first:
+      213: -3684979519104766430
+    second: Walk_Weapon_R_28
+  - first:
+      213: -4406242468755391374
+    second: Walk_Weapon_R_29
+  - first:
+      213: 4275529570337704097
+    second: Walk_Weapon_R_30
+  - first:
+      213: 4130310065716858230
+    second: Walk_Weapon_R_31
+  - first:
+      213: -5890619305902430244
+    second: Walk_Weapon_R_32
+  - first:
+      213: -4864124498449804168
+    second: Walk_Weapon_R_33
+  - first:
+      213: -6327385040048425854
+    second: Walk_Weapon_R_34
+  - first:
+      213: 1625765805604009009
+    second: Walk_Weapon_R_35
+  - first:
+      213: 284886573102455383
+    second: Walk_Weapon_R_36
+  - first:
+      213: -357821435529527378
+    second: Walk_Weapon_R_37
+  - first:
+      213: 8098142094887076207
+    second: Walk_Weapon_R_38
+  - first:
+      213: 1828057688289048291
+    second: Walk_Weapon_R_39
+  - first:
+      213: -2185951564043038088
+    second: Walk_Weapon_R_40
+  - first:
+      213: 5760629861164527482
+    second: Walk_Weapon_R_41
+  - first:
+      213: 4539171292546025396
+    second: Walk_Weapon_R_42
+  - first:
+      213: -1483798877421002402
+    second: Walk_Weapon_R_43
+  - first:
+      213: -8722941972124030151
+    second: Walk_Weapon_R_44
+  - first:
+      213: -8362236700931345410
+    second: Walk_Weapon_R_35
+  - first:
+      213: -816397668752230288
+    second: Walk_Weapon_R_46
+  - first:
+      213: -6456397356107462271
+    second: Walk_Weapon_R_47
+  - first:
+      213: 8437129113115504213
+    second: Walk_Weapon_R_48
+  - first:
+      213: -8757090201148277187
+    second: Walk_Weapon_R_49
+  - first:
+      213: 7870774427881253893
+    second: Walk_Weapon_R_50
+  - first:
+      213: -4352315215472375033
+    second: Walk_Weapon_R_51
+  - first:
+      213: -2956052195881801606
+    second: Walk_Weapon_R_52
+  - first:
+      213: 3149167320014485427
+    second: Walk_Weapon_R_53
+  - first:
+      213: 9051028062606949661
+    second: Walk_Weapon_R_54
+  - first:
+      213: -5606885221121438880
+    second: Walk_Weapon_R_55
+  - first:
+      213: 8714982610652538200
+    second: Walk_Weapon_R_56
+  - first:
+      213: -3440817208791837392
+    second: Walk_Weapon_R_57
+  - first:
+      213: 584556906685484786
+    second: Walk_Weapon_R_58
+  - first:
+      213: 1612437075277701115
+    second: Walk_Weapon_R_59
+  - first:
+      213: -8698096419164374848
+    second: Walk_Weapon_R_60
+  - first:
+      213: -7473727721118886853
+    second: Walk_Weapon_R_61
+  - first:
+      213: 3311262702347511254
+    second: Walk_Weapon_R_62
+  - first:
+      213: -6010601369178628003
+    second: Walk_Weapon_R_63
+  - first:
+      213: 389609031558424765
+    second: Walk_Weapon_R_64
+  - first:
+      213: 2248342743675004331
+    second: Walk_Weapon_R_65
+  - first:
+      213: 8079975689915183400
+    second: Walk_Weapon_R_66
+  - first:
+      213: 3836684583179592719
+    second: Walk_Weapon_R_67
+  - first:
+      213: -3559203326963234379
+    second: Walk_Weapon_R_68
+  - first:
+      213: -860831367042545402
+    second: Walk_Weapon_R_69
+  - first:
+      213: 5260983859970035509
+    second: Walk_Weapon_R_70
+  - first:
+      213: -8930824512557609026
+    second: Walk_Weapon_R_71
+  - first:
+      213: 3208737180667771399
+    second: Walk_Weapon_R_72
+  - first:
+      213: 7017028959521327926
+    second: Walk_Weapon_R_73
+  - first:
+      213: -9222431257718420079
+    second: Walk_Weapon_R_74
+  - first:
+      213: 7655870990672248841
+    second: Walk_Weapon_R_75
+  - first:
+      213: 3485856916176006829
+    second: Walk_Weapon_R_76
+  - first:
+      213: -3466209440191354176
+    second: Walk_Weapon_R_77
+  - first:
+      213: -2185569254248128702
+    second: Walk_Weapon_R_78
+  - first:
+      213: 7167375927859970464
+    second: Walk_Weapon_R_79
+  - first:
+      213: -6799967907765895028
+    second: Walk_Weapon_R_80
+  - first:
+      213: 8344372434189504156
+    second: Walk_Weapon_R_81
+  - first:
+      213: 6231711506645031173
+    second: Walk_Weapon_R_82
+  - first:
+      213: -8121618833524591972
+    second: Walk_Weapon_R_83
+  - first:
+      213: -4299477471754481788
+    second: Walk_Weapon_R_84
+  - first:
+      213: -6399305189154070240
+    second: Walk_Weapon_R_85
+  - first:
+      213: 6252270058327906694
+    second: Walk_Weapon_R_86
+  - first:
+      213: -8154618846927752310
+    second: Walk_Weapon_R_87
+  - first:
+      213: -3554626149514976724
+    second: Walk_Weapon_R_88
+  - first:
+      213: 5235942741518085913
+    second: Walk_Weapon_R_89
+  - first:
+      213: -8513864198185655036
+    second: Walk_Weapon_R_90
+  - first:
+      213: -8710661387495517130
+    second: Walk_Weapon_R_91
+  - first:
+      213: 9166034482205165879
+    second: Walk_Weapon_R_92
+  - first:
+      213: 2909032687005795295
+    second: Walk_Weapon_R_93
+  - first:
+      213: 1573464542091574996
+    second: Walk_Weapon_R_94
+  - first:
+      213: 5182457731146570173
+    second: Walk_Weapon_R_95
+  - first:
+      213: -3529802244275257026
+    second: Walk_Weapon_R_96
+  - first:
+      213: -96118190493826955
+    second: Walk_Weapon_R_97
+  - first:
+      213: 4616659370138151259
+    second: Walk_Weapon_R_98
+  - first:
+      213: -8763505804322223595
+    second: Walk_Weapon_R_99
+  - first:
+      213: -3492515433411265536
+    second: Walk_Weapon_R_100
+  - first:
+      213: -6709232580456212647
+    second: Walk_Weapon_R_101
+  - first:
+      213: -1252923255843608406
+    second: Walk_Weapon_R_102
+  - first:
+      213: -1349491286050837052
+    second: Walk_Weapon_R_103
+  - first:
+      213: -3963420560417608370
+    second: Walk_Weapon_R_104
+  - first:
+      213: -1371431439017314077
+    second: Walk_Weapon_R_105
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Weapon_R_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 7528
+        width: 352
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fa881f379f0bef0800000000000000
+      internalID: -94301315805958330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_2
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 7528
+        width: 334
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8d242865d405330800000000000000
+      internalID: 3697540328019122338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_3
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 7528
+        width: 326
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf651023506b1430800000000000000
+      internalID: 3754700624480268210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_4
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 7528
+        width: 318
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4bc06775478cdc20800000000000000
+      internalID: 3232607364970498895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_5
+      rect:
+        serializedVersion: 2
+        x: 2022
+        y: 7528
+        width: 310
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317674faeb6cac1c0800000000000000
+      internalID: -4482551956807129325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_6
+      rect:
+        serializedVersion: 2
+        x: 2390
+        y: 7528
+        width: 300
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31cbea79f296fc860800000000000000
+      internalID: 7552370753252801555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_7
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 7528
+        width: 292
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157fdf5e41fe2a090800000000000000
+      internalID: -8024588712983791791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_8
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 7528
+        width: 282
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa658f82ebcbfbdd0800000000000000
+      internalID: -2468046545858570582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_9
+      rect:
+        serializedVersion: 2
+        x: 3444
+        y: 7528
+        width: 276
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09de3ee211ad88b30800000000000000
+      internalID: 4289918412406386064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_10
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 7528
+        width: 266
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35595f280a6f36990800000000000000
+      internalID: -7393794993959889581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_1
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 7528
+        width: 344
+        height: 616
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a0fb50c81a57f40800000000000000
+      internalID: 5725660124035353204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_12
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 6848
+        width: 256
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709bd8ee9609719d0800000000000000
+      internalID: -2803613458366613241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_13
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 6848
+        width: 250
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae77e4474b5526480800000000000000
+      internalID: -8907462879451645974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_14
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 6848
+        width: 252
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2684b21f29766f0800000000000000
+      internalID: -691422453267144022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_15
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 6848
+        width: 254
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8397c42244ea43390800000000000000
+      internalID: -7839449443688744648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_16
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 6848
+        width: 256
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2039d10fa99b1cd20800000000000000
+      internalID: 3297120477316485890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_17
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 6848
+        width: 258
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dffeecbcf40053c0800000000000000
+      internalID: -4372989754628702252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_18
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 6848
+        width: 258
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841db8263ef8d9ea0800000000000000
+      internalID: -5864372932992839352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_19
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 6848
+        width: 258
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf8d67f1cccdff50800000000000000
+      internalID: 6916909736162856890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_20
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 6848
+        width: 258
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c895b40f02684b700800000000000000
+      internalID: 555216130101959052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_21
+      rect:
+        serializedVersion: 2
+        x: 2886
+        y: 6848
+        width: 258
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ac3e6b1e3a87b20800000000000000
+      internalID: 3132433730667530795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_22
+      rect:
+        serializedVersion: 2
+        x: 3204
+        y: 6848
+        width: 256
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d10a4950bdb2d90800000000000000
+      internalID: -7121357568741466824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_23
+      rect:
+        serializedVersion: 2
+        x: 3522
+        y: 6848
+        width: 256
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da087bf6b0e44e80800000000000000
+      internalID: -8195178345399842088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_24
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 6170
+        width: 254
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad51cf4cb0c96020800000000000000
+      internalID: 2335609796792769959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_25
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 6170
+        width: 254
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2367b6d3628e46470800000000000000
+      internalID: 8387083657007560242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_26
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 6170
+        width: 250
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42e94ce7b7540640800000000000000
+      internalID: 5045253930016694859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_27
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 6170
+        width: 256
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed03b5da02e693770800000000000000
+      internalID: 8591018850812375262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_28
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 6170
+        width: 264
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22eab27b6a25cdcc0800000000000000
+      internalID: -3684979519104766430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_29
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 6170
+        width: 274
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c3897e1d1e9d2c0800000000000000
+      internalID: -4406242468755391374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_30
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 6170
+        width: 280
+        height: 618
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a848a2dd7bb55b30800000000000000
+      internalID: 4275529570337704097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_31
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 6170
+        width: 290
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d06471f1fc15930800000000000000
+      internalID: 4130310065716858230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_32
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 6170
+        width: 298
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7a0ac73f0504ea0800000000000000
+      internalID: -5890619305902430244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_33
+      rect:
+        serializedVersion: 2
+        x: 3002
+        y: 6170
+        width: 306
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874df963a882f7cb0800000000000000
+      internalID: -4864124498449804168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_34
+      rect:
+        serializedVersion: 2
+        x: 3368
+        y: 6170
+        width: 314
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284faca74dc9038a0800000000000000
+      internalID: -6327385040048425854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_36
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 5490
+        width: 330
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75adc0f24de14f300800000000000000
+      internalID: 284886573102455383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_37
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 5490
+        width: 338
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaffd3adc43c80bf0800000000000000
+      internalID: -357821435529527378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_38
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 5490
+        width: 334
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61c16a5451626070800000000000000
+      internalID: 8098142094887076207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_39
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 5490
+        width: 328
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6f36338c09e5910800000000000000
+      internalID: 1828057688289048291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_40
+      rect:
+        serializedVersion: 2
+        x: 2004
+        y: 5490
+        width: 322
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872510952a0f9a1e0800000000000000
+      internalID: -2185951564043038088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_41
+      rect:
+        serializedVersion: 2
+        x: 2386
+        y: 5490
+        width: 316
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f283d665ed1ff40800000000000000
+      internalID: 5760629861164527482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_42
+      rect:
+        serializedVersion: 2
+        x: 2762
+        y: 5490
+        width: 312
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b74bd2bd306efe30800000000000000
+      internalID: 4539171292546025396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_43
+      rect:
+        serializedVersion: 2
+        x: 3134
+        y: 5490
+        width: 306
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51a23158cc786be0800000000000000
+      internalID: -1483798877421002402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_44
+      rect:
+        serializedVersion: 2
+        x: 3502
+        y: 5490
+        width: 302
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ba3331e72e1f680800000000000000
+      internalID: -8722941972124030151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_35
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 5495
+        width: 320
+        height: 618
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3b049860e53fb80800000000000000
+      internalID: -8362236700931345410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_46
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 4812
+        width: 294
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078f09e45a29ba4f0800000000000000
+      internalID: -816397668752230288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_47
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4812
+        width: 290
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1898174efc44666a0800000000000000
+      internalID: -6456397356107462271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_48
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 4812
+        width: 284
+        height: 618
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e2b5ff934b61570800000000000000
+      internalID: 8437129113115504213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_49
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 4812
+        width: 280
+        height: 618
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3eb08eebd0987680800000000000000
+      internalID: -8757090201148277187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_50
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 4812
+        width: 272
+        height: 616
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c271914ab9a3d60800000000000000
+      internalID: 7870774427881253893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_51
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 4812
+        width: 268
+        height: 616
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70bcd3ffe587993c0800000000000000
+      internalID: -4352315215472375033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_52
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 4812
+        width: 266
+        height: 616
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78a3fe803ef9f6d0800000000000000
+      internalID: -2956052195881801606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_53
+      rect:
+        serializedVersion: 2
+        x: 2418
+        y: 4812
+        width: 264
+        height: 616
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b77bb71ef614bb20800000000000000
+      internalID: 3149167320014485427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_54
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 4812
+        width: 260
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d77cb8116bb9d70800000000000000
+      internalID: 9051028062606949661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_55
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 4812
+        width: 258
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b4ba219975032b0800000000000000
+      internalID: -5606885221121438880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_56
+      rect:
+        serializedVersion: 2
+        x: 3376
+        y: 4812
+        width: 254
+        height: 616
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855a6aba286d1f870800000000000000
+      internalID: 8714982610652538200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_57
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 4812
+        width: 250
+        height: 618
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03559e49af2cf30d0800000000000000
+      internalID: -3440817208791837392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_58
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 4132
+        width: 244
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe4df5d863cc1800800000000000000
+      internalID: 584556906685484786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_59
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 4132
+        width: 252
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bffd8961af6806610800000000000000
+      internalID: 1612437075277701115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_60
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 4132
+        width: 256
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c83c9924672a4780800000000000000
+      internalID: -8698096419164374848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_61
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 4132
+        width: 268
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3418b23c3cf74890800000000000000
+      internalID: -7473727721118886853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_62
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 4132
+        width: 278
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d56c6b42e7f3fd20800000000000000
+      internalID: 3311262702347511254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_63
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 4132
+        width: 294
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d50a1a776ed069ca0800000000000000
+      internalID: -6010601369178628003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_64
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 4132
+        width: 304
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8e257995b286500800000000000000
+      internalID: 389609031558424765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_65
+      rect:
+        serializedVersion: 2
+        x: 2366
+        y: 4132
+        width: 318
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5631a20d7b33f10800000000000000
+      internalID: 2248342743675004331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_66
+      rect:
+        serializedVersion: 2
+        x: 2744
+        y: 4132
+        width: 330
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821bf279417d12070800000000000000
+      internalID: 8079975689915183400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_69
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 4132
+        width: 344
+        height: 618
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6094aebbe66bd04f0800000000000000
+      internalID: -860831367042545402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_70
+      rect:
+        serializedVersion: 2
+        x: 3540
+        y: 4132
+        width: 356
+        height: 618
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53fc39e52f4c20940800000000000000
+      internalID: 5260983859970035509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_71
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3454
+        width: 368
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebf07a16c665f0480800000000000000
+      internalID: -8930824512557609026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_72
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 3454
+        width: 382
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a7a471779b78c20800000000000000
+      internalID: 3208737180667771399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_73
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 3454
+        width: 370
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63bc5ee29ae716160800000000000000
+      internalID: 7017028959521327926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_74
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 3454
+        width: 358
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d0c3632a7530080800000000000000
+      internalID: -9222431257718420079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_75
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 3454
+        width: 344
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900cc3d7a1e1f3a60800000000000000
+      internalID: 7655870990672248841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_76
+      rect:
+        serializedVersion: 2
+        x: 2172
+        y: 3454
+        width: 334
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae628a7560406030800000000000000
+      internalID: 3485856916176006829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_77
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 3454
+        width: 322
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cae94001ec85efc0800000000000000
+      internalID: -3466209440191354176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_78
+      rect:
+        serializedVersion: 2
+        x: 2948
+        y: 3454
+        width: 310
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f5688c75c4ba1e0800000000000000
+      internalID: -2185569254248128702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_79
+      rect:
+        serializedVersion: 2
+        x: 3318
+        y: 3454
+        width: 298
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a187c79e62a77360800000000000000
+      internalID: 7167375927859970464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_80
+      rect:
+        serializedVersion: 2
+        x: 3676
+        y: 3454
+        width: 288
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80ce853739a1a1a0800000000000000
+      internalID: -6799967907765895028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_81
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2774
+        width: 274
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e4d6db48a2dc370800000000000000
+      internalID: 8344372434189504156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_82
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 2774
+        width: 264
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5099a48299c7b7650800000000000000
+      internalID: 6231711506645031173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_83
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 2774
+        width: 250
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92f4aa73b63a4f80800000000000000
+      internalID: -8121618833524591972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_84
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 2774
+        width: 246
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f8740e4003554c0800000000000000
+      internalID: -4299477471754481788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_85
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 2774
+        width: 250
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021682fd5d91137a0800000000000000
+      internalID: -6399305189154070240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_86
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 2774
+        width: 258
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689127afd7684c650800000000000000
+      internalID: 6252270058327906694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_87
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2774
+        width: 260
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a837a2e1d59f4de80800000000000000
+      internalID: -8154618846927752310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_89
+      rect:
+        serializedVersion: 2
+        x: 2596
+        y: 2774
+        width: 270
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f6874ae2ec9a840800000000000000
+      internalID: 5235942741518085913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_90
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 2774
+        width: 274
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4056a31ce9da8d980800000000000000
+      internalID: -8513864198185655036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_91
+      rect:
+        serializedVersion: 2
+        x: 3262
+        y: 2774
+        width: 278
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6345e9f7e938d1780800000000000000
+      internalID: -8710661387495517130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_92
+      rect:
+        serializedVersion: 2
+        x: 3602
+        y: 2774
+        width: 284
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73902de3ccb443f70800000000000000
+      internalID: 9166034482205165879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_93
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 2774
+        width: 268
+        height: 616
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd30bfce0d5fe5820800000000000000
+      internalID: 2909032687005795295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_94
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2096
+        width: 290
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de7a0a1aa116d510800000000000000
+      internalID: 1573464542091574996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_95
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 2096
+        width: 296
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9d77049d9cbe740800000000000000
+      internalID: 5182457731146570173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_96
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 2096
+        width: 300
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31c89e7f8f930fc0800000000000000
+      internalID: -3529802244275257026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_97
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 2096
+        width: 308
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5708927d3058aaef0800000000000000
+      internalID: -96118190493826955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_98
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 2096
+        width: 312
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59201eac3ba11040800000000000000
+      internalID: 4616659370138151259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_99
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 2096
+        width: 318
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51acc4ae6e5c16680800000000000000
+      internalID: -8763505804322223595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_100
+      rect:
+        serializedVersion: 2
+        x: 2234
+        y: 2096
+        width: 322
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00cb3faa7b7188fc0800000000000000
+      internalID: -3492515433411265536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_101
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 2096
+        width: 330
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9571e6ed38404e2a0800000000000000
+      internalID: -6709232580456212647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_102
+      rect:
+        serializedVersion: 2
+        x: 3006
+        y: 2096
+        width: 334
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8ad94efe8bc9ee0800000000000000
+      internalID: -1252923255843608406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_103
+      rect:
+        serializedVersion: 2
+        x: 3402
+        y: 2096
+        width: 340
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd647343d4a54de0800000000000000
+      internalID: -1349491286050837052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_104
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1416
+        width: 344
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d24d8dff91ff8c0800000000000000
+      internalID: -3963420560417608370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Weapon_R_105
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1416
+        width: 352
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8f1935f52b7fce0800000000000000
+      internalID: -1371431439017314077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

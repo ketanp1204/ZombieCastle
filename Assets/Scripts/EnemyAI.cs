@@ -32,6 +32,7 @@ public class EnemyAI : MonoBehaviour
 
     // Variables
     private int sceneType;
+    public float attackStartDistance = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -60,8 +61,13 @@ public class EnemyAI : MonoBehaviour
 
     void UpdatePath()
     {
-        if (seeker.IsDone() && followPath)
+        float distanceToPlayer = Vector2.Distance(transform.position, target.position);
+
+        if (seeker.IsDone() && followPath && distanceToPlayer > attackStartDistance)
+        {
+            enemyCombat.StopAttack();
             seeker.StartPath(rb.position, target.position, OnPathComplete);
+        } 
     }
 
     void FixedUpdate()
@@ -78,11 +84,14 @@ public class EnemyAI : MonoBehaviour
         Vector2 direction;
         Vector2 force;
 
+        float distanceToPlayer = Vector2.Distance(transform.position, target.position);
+
         // Reached end of path
-        if (currentWaypoint >= path.vectorPath.Count)
+        if (currentWaypoint >= path.vectorPath.Count || distanceToPlayer < attackStartDistance)
         {
             force = Vector2.zero;
             enemyCombat.InvokeAttack();
+            Debug.Log("attack");
         } 
         else
         {
@@ -111,11 +120,11 @@ public class EnemyAI : MonoBehaviour
             // Update facing direction of enemy
             if (force.x >= 0.01f)
             {
-                zombieGFX.transform.localScale = new Vector3(1f * Mathf.Abs(zombieGFX.transform.localScale.x), zombieGFX.transform.localScale.y, zombieGFX.transform.localScale.z);
+                transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             else if (force.x <= -0.01f)
             {
-                zombieGFX.transform.localScale = new Vector3(-1f * Mathf.Abs(zombieGFX.transform.localScale.x), zombieGFX.transform.localScale.y, zombieGFX.transform.localScale.z);
+                transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
         }
 

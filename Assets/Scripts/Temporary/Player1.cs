@@ -17,8 +17,11 @@ public class Player1 : MonoBehaviour
 
     // Public Variables
     public float walkSpeed = 7f;
+    public float ladderMoveSpeed = 2f;
     public float jumpHeight = 2f;
     public float timeToJumpApex = 0.3f;
+    [HideInInspector]
+    public bool onLadder = false;
 
     // Component References
     private CharacterController2D controller;
@@ -35,7 +38,7 @@ public class Player1 : MonoBehaviour
 
     void Update()
     {
-        if (controller.collisions.above || controller.collisions.below)
+        if (!onLadder && (controller.collisions.above || controller.collisions.below))
         {
             velocity.y = 0f;
         }
@@ -53,7 +56,11 @@ public class Player1 : MonoBehaviour
                                         ref velocityXSmoothing, 
                                         (controller.collisions.below)?accelerationTimeGrounded:accelerationTimeAirborne);
 
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+        if (!onLadder)
+            velocity.y += gravity * Time.deltaTime;
+        else
+            velocity.y += input.y * ladderMoveSpeed;
+        
+        controller.Move(velocity * Time.deltaTime, onLadder);
     }
 }

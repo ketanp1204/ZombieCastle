@@ -19,37 +19,68 @@ public class PlayerCombat : MonoBehaviour
     [Header("Common Attributes")]
     public LayerMask enemyLayers;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0) && Player.instance.weaponDrawn)
-        {
-            Attack1();
-        }
+    // Cached References
+    private SceneType sceneTypeReference;
 
-        /*
-        if (Input.GetMouseButtonDown(1) && Player.instance.weaponDrawn)
+    // Private variables
+    private int sceneType;
+
+    void Start()
+    {
+        sceneTypeReference = FindObjectOfType<SceneType>();
+
+        if (sceneTypeReference.type == SceneType.SceneTypes.S_TwoD)
         {
-            Attack2();
+            sceneType = 1;
         }
-        */
+        else
+        {
+            sceneType = 2;
+        }
     }
 
-    void Attack1()
+    public void InvokeAttack1()
+    {
+        Attack1();
+    }
+
+    public void InvokeAttack2()
+    {
+        Attack2();
+    }
+
+    private void Attack1()
     {
         AudioManager.PlaySound(AudioManager.Sound.PlayerAxeHit, transform.position);
         Collider2D[] hitEnemies;
 
-        if (Player.PlayerFacingRight() == true)
+        if (sceneType == 1)
         {
-            // Detect enemies in range of right attack position
-            hitEnemies = Physics2D.OverlapCircleAll(attack1RightPoint.position, attack1Range, enemyLayers);
+            if (Player.PlayerFacingRight() == true)
+            {
+                // Detect enemies in range of right attack position
+                hitEnemies = Physics2D.OverlapCircleAll(attack1RightPoint.position, attack1Range, enemyLayers);
+            }
+            else
+            {
+                // Detect enemies in range of left attack position
+                hitEnemies = Physics2D.OverlapCircleAll(attack1LeftPoint.position, attack1Range, enemyLayers);
+            }
         }
         else
         {
-            // Detect enemies in range of left attack position
-            hitEnemies = Physics2D.OverlapCircleAll(attack1LeftPoint.position, attack1Range, enemyLayers);
+            if (PlayerTopDown.PlayerFacingRight() == true)
+            {
+                // Detect enemies in range of right attack position
+                hitEnemies = Physics2D.OverlapCircleAll(attack1RightPoint.position, attack1Range, enemyLayers);
+            }
+            else
+            {
+                // Detect enemies in range of left attack position
+                hitEnemies = Physics2D.OverlapCircleAll(attack1LeftPoint.position, attack1Range, enemyLayers);
+            }
         }
+        
         
 
         // Damage them
@@ -69,16 +100,33 @@ public class PlayerCombat : MonoBehaviour
         // Detect enemies in range of attack
         Collider2D[] hitEnemies;
 
-        if (Player.PlayerFacingRight() == true)
+        if (sceneType == 1)
         {
-            // Detect enemies in range of attack
-            hitEnemies = Physics2D.OverlapCircleAll(attack2RightPoint.position, attack2Range, enemyLayers);
+            if (Player.PlayerFacingRight() == true)
+            {
+                // Detect enemies in range of attack
+                hitEnemies = Physics2D.OverlapCircleAll(attack2RightPoint.position, attack2Range, enemyLayers);
+            }
+            else
+            {
+                // Detect enemies in range of attack
+                hitEnemies = Physics2D.OverlapCircleAll(attack2LeftPoint.position, attack2Range, enemyLayers);
+            }
         }
         else
         {
-            // Detect enemies in range of attack
-            hitEnemies = Physics2D.OverlapCircleAll(attack2LeftPoint.position, attack2Range, enemyLayers);
+            if (PlayerTopDown.PlayerFacingRight() == true)
+            {
+                // Detect enemies in range of attack
+                hitEnemies = Physics2D.OverlapCircleAll(attack2RightPoint.position, attack2Range, enemyLayers);
+            }
+            else
+            {
+                // Detect enemies in range of attack
+                hitEnemies = Physics2D.OverlapCircleAll(attack2LeftPoint.position, attack2Range, enemyLayers);
+            }
         }
+        
 
         // Damage them
         foreach (Collider2D enemy in hitEnemies)

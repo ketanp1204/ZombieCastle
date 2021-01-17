@@ -296,7 +296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &550914885
 Transform:
   m_ObjectHideFlags: 0
@@ -561,8 +561,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 7
+  ladderMoveSpeed: 2
   jumpHeight: 2
   timeToJumpApex: 0.3
+  onLadder: 0
 --- !u!114 &725117497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,12 +577,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172846f5266ccc649848f97affce7274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalRayCount: 4
-  verticalRayCount: 4
   collisionMask:
     serializedVersion: 2
     m_Bits: 512
-  boxCollider: {fileID: 0}
   playerInput: {fileID: 0}
 --- !u!61 &725117498
 BoxCollider2D:
@@ -1237,8 +1236,8 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_XDamping: 1
-  m_YDamping: 1
+  m_XDamping: 2.2
+  m_YDamping: 2.3
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
@@ -2323,7 +2322,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2335,29 +2334,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1722749231557612422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722749231557612444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22c38d43a7344f440b5ff71d0b68e59a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack1LeftPoint: {fileID: 1722749231305646774}
-  attack1RightPoint: {fileID: 1722749231761950066}
-  attack1Range: 0.3
-  attack1Damage: 20
-  attack2LeftPoint: {fileID: 1722749230774574257}
-  attack2RightPoint: {fileID: 1722749230880250845}
-  attack2Range: 0.3
-  attack2Damage: 50
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!61 &1722749231557612423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2371,7 +2347,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.046024084, y: -1.74}
+  m_Offset: {x: -0.046024084, y: 0.26580763}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2382,7 +2358,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.35, y: 0.58}
+  m_Size: {x: 1.35, y: 4.5916157}
   m_EdgeRadius: 0
 --- !u!114 &1722749231557612440
 MonoBehaviour:
@@ -2396,29 +2372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862f857043ca0cd46b9e6be3fc0f395d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1722749231557612441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722749231557612444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95ec134e239a3c34287c9844be00c567, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 1722749230896959394}
-  movePlayer: 0
-  weaponDrawn: 0
-  IsDead: 0
-  isClimbingLadder: 0
-  movementSpeed: 7
-  wSpeed: 7
-  rSpeed: 12
-  gravityScale: 7
-  maxHealth: 100
-  currentHealth: 0
 --- !u!95 &1722749231557612442
 Animator:
   serializedVersion: 3
@@ -2468,12 +2421,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1722749231557612443}
   - component: {fileID: 1722749231557612442}
-  - component: {fileID: 1722749231557612445}
-  - component: {fileID: 1722749231557612441}
   - component: {fileID: 1722749231557612440}
-  - component: {fileID: 1722749231557612422}
   - component: {fileID: 1722749231557612423}
   - component: {fileID: 1722749231557612420}
+  - component: {fileID: 1722749231557612448}
+  - component: {fileID: 1722749231557612447}
+  - component: {fileID: 1722749231557612446}
+  - component: {fileID: 1722749231557612445}
   m_Layer: 10
   m_Name: Mark_Large
   m_TagString: Player
@@ -2496,12 +2450,62 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 7
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1722749231557612446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722749231557612444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a05518e2d2e0847a4947118f924f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 7
+  ladderMoveSpeed: 2
+  jumpHeight: 2
+  timeToJumpApex: 0.2
+  onLadder: 0
+--- !u!114 &1722749231557612447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722749231557612444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172846f5266ccc649848f97affce7274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 512
+  playerInput: {fileID: 0}
+--- !u!114 &1722749231557612448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722749231557612444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423d894c90c6a1649b4486c1f75d1c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxCollider: {fileID: 0}
+  horizontalRaySpacing: 0
+  verticalRaySpacing: 0
+  horizontalRayCount: 4
+  verticalRayCount: 4
 --- !u!4 &1722749231761950066
 Transform:
   m_ObjectHideFlags: 0

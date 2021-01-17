@@ -15,27 +15,30 @@ public class Player : MonoBehaviour
 
     // Cached References
     private PlayerInput playerInput;                // Reference To The PlayerInput Class
+    private PlayerCombat playerCombat;              // Reference To The PlayerCombat Class
     private Rigidbody2D rb;                         // Reference To The Player's Rigidbody Component
     private Animator animator;                      // Reference To The Player's Animator Component
-    public HealthBar healthBar;                     // Reference To The Player's Health Bar 
-    private SceneType sceneTypeReference;           // Reference To The Current Type Of Scene: 2D or 2.5D
+    private HealthBar healthBar;                    // Reference To The Player's Health Bar 
     private UnityEngine.Object playerReference;
 
     // Variables : Player
+    [HideInInspector]
     public bool movePlayer;                         // Bool to store whether Player can move
+    [HideInInspector]
     public bool weaponDrawn;                        // Bool to store whether weapon is drawn
+    [HideInInspector]
     public bool IsDead = false;                     // Bool to store if player dies
     private bool facingRight;                       // Player's Direction Of Facing
     [HideInInspector]
     public bool isClimbingLadder = false;           // Bool to store whether player is climbing a ladder
+    [HideInInspector]
     public float movementSpeed;                     // Player's Current Movement Speed;
     public float wSpeed;                            // Player's Walking Speed
     public float rSpeed;                            // Player's Running Speed
-    public float gravityScale;                      // Player's Rigidbody gravity scale factor 
     private Vector2 movement;                       // Player's Movement Vector
     public int maxHealth = 100;                     // Player's Maximum Health
+    [HideInInspector]
     public int currentHealth;                       // Player's current health
-    private int sceneType;                          // Type of scene: 1 for 2D, 2 for 2.5D
 
     // Death Event
     public event Action<Player> OnDeath;
@@ -57,25 +60,17 @@ public class Player : MonoBehaviour
     // Link Cached References
     void SetReferences()
     {
-        sceneTypeReference = FindObjectOfType<SceneType>();
         playerInput = GetComponent<PlayerInput>();
+        playerCombat = GetComponent<PlayerCombat>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        healthBar = GetComponentInChildren<HealthBar>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
         SetReferences();
-
-        if (sceneTypeReference.type == SceneType.SceneTypes.S_TwoD)
-        {
-            sceneType = 1;
-        }
-        else if (sceneTypeReference.type == SceneType.SceneTypes.S_TwoPointFiveD)
-        {
-            sceneType = 2;
-        }
 
         if (PlayerStats.isFirstScene)
         {
@@ -90,12 +85,17 @@ public class Player : MonoBehaviour
             healthBar.SetMaxHealth(maxHealth);
             healthBar.SetHealth(currentHealth);
         }
-            
+
+        InitializeValues();
+    }
+
+    private void InitializeValues()
+    {
         facingRight = true;
         movePlayer = true;
         weaponDrawn = false;
         movementSpeed = wSpeed;
-        animator.SetFloat("FaceDirection", 1f);
+        animator.SetFloat("FaceDir", 1f);
     }
 
     void FixedUpdate()
@@ -103,18 +103,11 @@ public class Player : MonoBehaviour
         // Moving the player
         if(movePlayer)
         {
-            if (sceneType == 1)
-            {
-                HandleMovementTwoD();
-            }
-            else if (sceneType == 2)
-            {
-                HandleMovementTwoPointFiveD();
-            }
+            HandleMovement();
         }
 
-        // Flip the player sprite depending on where it is facing
-        Flip();
+        // Flip the player direction depending on where he is facing
+        FlipPlayerDirection();
 
         // Player attacks enemies
         HandleAttacks();
@@ -123,12 +116,12 @@ public class Player : MonoBehaviour
         ResetValues();
     }
 
-    private void HandleMovementTwoD()
+    private void HandleMovement()
     {
         float horizontal, vertical;
 
         horizontal = playerInput.horizontalInput;
-        bool run = playerInput.runInput;
+        bool walkFast = playerInput.walkFastInput;
 
         movement.x = horizontal;
         movement.y = 0f;
@@ -151,55 +144,49 @@ public class Player : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Magnitude", movement.magnitude);
 
-        if (run == true)
+        if (walkFast == true)
         {
-            animator.SetBool("Run", true);
+            animator.SetBool("WalkFast", true);
             movementSpeed = rSpeed;
         }
 
-        if (run == false)
+        if (walkFast == false)
         {
-            animator.SetBool("Run", false);
+            animator.SetBool("WalkFast", false);
             movementSpeed = wSpeed;
         }
     }
 
-    private void HandleMovementTwoPointFiveD()
-    {
-        float horizontal = playerInput.horizontalInput;
-        float vertical = playerInput.verticalInput;
-        bool run = playerInput.runInput;
-
-        movement.x = horizontal;
-        movement.y = vertical;
-        movement.Normalize();
-
-        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
-        {
-            rb.MovePosition((Vector2)transform.position + (movement * movementSpeed * Time.deltaTime));
-            // rb.velocity = new Vector2(movement.x * movementSpeed, movement.y * movementSpeed);
-        }
-
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Magnitude", movement.magnitude);
-
-        if (run == true)
-        {
-            animator.SetBool("Run", true);
-            movementSpeed = rSpeed;
-        }
-
-        if(run == false)
-        {
-            animator.SetBool("Run", false);
-            movementSpeed = wSpeed;
-        }
-    }
-
+    /*
     public void AddVerticalVelocity(float vertical)
     {
         rb.velocity = new Vector2(rb.velocity.x, vertical);
+    }
+    */
+
+    private void FlipPlayerDirection()
+    {
+        float horizontal = movement.x;
+        if (horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
+        {
+            facingRight = !facingRight;
+
+            if (facingRight)
+            {
+                animator.SetFloat("FaceDir", 1f);
+            }
+            else
+            {
+                animator.SetFloat("FaceDir", -1f);
+            }
+
+            /*
+            // Multiply the scale of the player object to flip the sprite
+            Vector3 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+            */
+        }
     }
 
     private void HandleAttacks()
@@ -208,16 +195,19 @@ public class Player : MonoBehaviour
         {
             if (playerInput.attack1Pressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
             {
-                animator.SetBool("Attack1", true);
+                playerCombat.InvokeAttack1();
+                animator.SetTrigger("Attack1");
                 rb.velocity = Vector2.zero;
             }
 
             if (playerInput.attack2Pressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
             {
-                animator.SetBool("Attack2", true);
+                playerCombat.InvokeAttack2();
+                animator.SetTrigger("Attack2");
                 rb.velocity = Vector2.zero;
             }
 
+            /*
             if (playerInput.attack1Released && this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
             {
                 animator.SetBool("Attack1", false);
@@ -227,30 +217,6 @@ public class Player : MonoBehaviour
             {
                 animator.SetBool("Attack2", false);
             }
-        }
-    }
-
-    private void Flip()
-    {
-        float horizontal = movement.x;
-        if(horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
-        {
-            facingRight = !facingRight;
-
-            if(facingRight)
-            {
-                animator.SetFloat("FaceDirection", 1f);
-            }
-            else
-            {
-                animator.SetFloat("FaceDirection", -1f);
-            }
-
-            /*
-            // Multiply the scale of the player object to flip the sprite
-            Vector3 scale = transform.localScale;
-            scale.x *= -1;
-            transform.localScale = scale;
             */
         }
     }
@@ -280,6 +246,7 @@ public class Player : MonoBehaviour
     void Die()
     {
         IsDead = true;
+        movePlayer = false;
 
         // Play die animation
         animator.SetBool("IsDead", true);
@@ -287,16 +254,12 @@ public class Player : MonoBehaviour
         // Invoke Death Event
         OnDeath?.Invoke(this);
 
-        // Disable the collider
-        if (sceneType == 2)
-        {
-            GetComponent<Collider2D>().enabled = false;
-        }
-
         // Disable Health Bar
         healthBar.gameObject.SetActive(false);
 
-        Invoke("Respawn", 4);
+        // Respawn the player
+        // Respawn();
+
 
         StartCoroutine(DestroyGameObjectAfterDelay(gameObject));
     }
@@ -323,11 +286,13 @@ public class Player : MonoBehaviour
         return instance.facingRight;
     }
 
+    // Sets the WeaponDrawn animation parameter to true
     public static void DrawWeapon()
     {
         instance.animator.SetBool("WeaponDrawn", true);
     }
 
+    // Sets the WeaponDrawn animation parameter to false
     public static void RemoveWeapon()
     {
         instance.animator.SetBool("WeaponDrawn", false);
