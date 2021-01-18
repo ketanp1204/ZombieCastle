@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class UIReferences : MonoBehaviour
 {
-
+    public Camera mainCamera;
     public GameObject pauseMenuUI;
+    public Canvas staticUICanvas;
+    public Canvas dynamicUICanvas;
 
     [HideInInspector]
     public GameObject gameSession;

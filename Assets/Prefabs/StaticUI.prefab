@@ -65,8 +65,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Controls: \nWSAD/up/left/right/down - movement\nLeft click - Light Attack\nRight
-    click - Heavy Attack\nLeft Shift - Sprint"
+  m_text: "Controls: \nE - Interact with objects\nWSAD/up/left/right/down - movement\nLeft
+    click - Light Attack\nLeft Shift - Sprint"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 1460681342950874835}
   - component: {fileID: 1460681342950874834}
   - component: {fileID: 1460681342950874837}
-  - component: {fileID: 1460681342950874833}
+  - component: {fileID: 1812231013987206693}
   m_Layer: 5
   m_Name: StaticUI
   m_TagString: Untagged
@@ -480,7 +480,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1460681342950874833
+--- !u!114 &1812231013987206693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1460681342950874836}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbab4d3e4ff9c5d43890ec8c4349221f, type: 3}
+  m_Script: {fileID: 11500000, guid: adac95731157a7748b05b65b727d7613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1460681343072107603
@@ -503,6 +503,7 @@ GameObject:
   - component: {fileID: 1460681343072107600}
   - component: {fileID: 1460681343072107614}
   - component: {fileID: 1460681343072107601}
+  - component: {fileID: 1296234188}
   m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
@@ -525,10 +526,10 @@ RectTransform:
   m_Father: {fileID: 1460681342950874832}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 321, y: 144}
-  m_SizeDelta: {x: 584.8508, y: 244.79474}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -301.5, y: -152.1}
+  m_SizeDelta: {x: 581.31, y: 247.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1460681343072107614
 CanvasRenderer:
@@ -568,6 +569,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &1296234188
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460681343072107603}
+  m_Enabled: 1
+  m_Alpha: 0.47
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1460681343556958086
 GameObject:
   m_ObjectHideFlags: 0

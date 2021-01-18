@@ -50,6 +50,22 @@ public static class AudioManager
         }
     }
 
+    public static void PlaySoundLooping(Sound sound)
+    {
+        if (CanPlaySound(sound) && !IsSoundPlaying(sound))
+        {
+            if (oneShotGameObject == null)
+            {
+                oneShotGameObject = new GameObject("One Shot Sound");
+                oneShotGameObject.AddComponent<DontDestroyGameObjectOnLoad>();
+                oneShotAudioSource = oneShotGameObject.AddComponent<AudioSource>();
+            }
+            oneShotAudioSource.loop = true;
+            oneShotAudioSource.clip = GetAudioClip(sound);
+            oneShotAudioSource.Play();
+        }
+    }
+
     private static bool IsSoundPlaying(Sound sound)
     {
         if (oneShotGameObject != null)

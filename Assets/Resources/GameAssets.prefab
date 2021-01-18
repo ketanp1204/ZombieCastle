@@ -52,3 +52,5 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 1eb6746aaaf3e084e911e3f9498f93c9, type: 3}
   - sound: 3
     audioClip: {fileID: 8300000, guid: 93845fe34b84e354aa7ee51a7da5857e, type: 3}
+  interactKeyPrefab: {fileID: 5030435721837794955, guid: d7848a704facc624bb5076b8feef56ce, type: 3}
+  objectNamePrefab: {fileID: 5873620021101757153, guid: fe5bbaa9084d4c949a10f07027549676, type: 3}

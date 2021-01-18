@@ -13,14 +13,18 @@ public class PlayerTopDown : MonoBehaviour
     // Singleton
     public static PlayerTopDown instance;
 
-    // Cached References
+    // Private Cached References
     private PlayerInput playerInput;                // Reference To The PlayerInput Class
     private PlayerCombat playerCombat;              // Reference To The PlayerCombat Class
     private Rigidbody2D rb;                         // Reference To The Player's Rigidbody Component
     private Animator animator;                      // Reference To The Player's Animator Component
     private HealthBar healthBar;                    // Reference To The Player's Health Bar 
     private SceneType sceneTypeReference;           // Reference To The Current Type Of Scene: 2D or 2.5D
-    private UnityEngine.Object playerReference;
+    private UnityEngine.Object playerReference;     // Reference to The Player Gameobject references used to respawn
+
+    // Public Cached References
+    public GameObject rightSelectionArea;           // Reference to the right side selection area collider
+    public GameObject leftSelectionArea;            // Reference to the left side selection area collider
 
     // Variables : Player
     [HideInInspector]
@@ -97,6 +101,9 @@ public class PlayerTopDown : MonoBehaviour
         weaponDrawn = false;
         movementSpeed = wSpeed;
         animator.SetFloat("FaceDir", 1f);
+
+        rightSelectionArea.SetActive(true);
+        leftSelectionArea.SetActive(false);
     }
 
     void FixedUpdate()
@@ -158,11 +165,21 @@ public class PlayerTopDown : MonoBehaviour
 
             if (facingRight)
             {
+                // Set animation parameter
                 animator.SetFloat("FaceDir", 1f);
+
+                // Use right side selection area
+                rightSelectionArea.SetActive(true);
+                leftSelectionArea.SetActive(false);
             }
             else
             {
+                // Set animation parameter
                 animator.SetFloat("FaceDir", -1f);
+
+                // Use left side selection area
+                leftSelectionArea.SetActive(true);
+                rightSelectionArea.SetActive(false);
             }
 
             /*

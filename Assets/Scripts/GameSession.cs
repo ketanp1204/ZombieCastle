@@ -14,10 +14,18 @@ public class GameSession : MonoBehaviour
     [HideInInspector]
     public static bool GameIsPaused;                                // Is true when the game is paused
 
-    // Cached References
-    private UIReferences uiReferences;                              // Stores the references to the UI objects in the scene
-    private GameObject pauseMenuUI;                                 // Stores the reference to the Pause Menu UI gameObject
-    private GameObject player;                                      // Stores the reference to the player
+    // Private Cached References
+    private UIReferences uiReferences;                              // Reference to the UIReference gameObject
+    private GameObject pauseMenuUI;                                 // Reference to the Pause Menu UI gameObject
+    private GameObject player;                                      // Reference to the Player gameObject
+
+    // Public Cached References
+    [HideInInspector]
+    public Canvas dynamicUICanvas;                                  // Reference to the DynamicUI Canvas
+    [HideInInspector]
+    public Camera mainCamera;                                       // Reference to the MainCamera 
+    [HideInInspector]
+    public GameObject objectNameGO;                                 // Holds the current reference to the object name box
 
     void Awake()
     {
@@ -60,20 +68,20 @@ public class GameSession : MonoBehaviour
         uiReferences = FindObjectOfType<UIReferences>();
         if (uiReferences != null)
         {
-            if(uiReferences.pauseMenuUI == null)
-            {
-                uiReferences.pauseMenuUI = GameObject.Find("PauseMenu");        // temporary. TODO: remove
-            }
-            pauseMenuUI = GameObject.Find("PauseMenu");
+            pauseMenuUI = uiReferences.pauseMenuUI;
             pauseMenuUI.transform.Find("ResumeButton").gameObject.GetComponent<Button>().onClick.AddListener(() => Resume());
             pauseMenuUI.transform.Find("QuitButton").gameObject.GetComponent<Button>().onClick.AddListener(() => QuitGame());
+
+            mainCamera = uiReferences.mainCamera;
+            dynamicUICanvas = uiReferences.dynamicUICanvas;
+
         }
     }
 
     void HandleSceneChanges()
     {
         AudioManager.Initialize();
-        AudioManager.PlaySound(AudioManager.Sound.BackgroundTrack);
+        // AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
     }
 
     // Update is called once per frame

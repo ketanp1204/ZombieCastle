@@ -8,12 +8,14 @@ public class PersistentCanvas : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log(gameObject.name + instance);
         if (instance == null)
         {
             instance = this;
         }
         else
         {
+            Debug.Log("destroying " + gameObject.name + " canvas");
             Destroy(gameObject);
             return;
         }

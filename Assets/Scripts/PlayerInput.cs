@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    public static PlayerInput instance;
+
     public float horizontalInput { get; private set; }
     public float verticalInput { get; private set; }
     public bool walkFastInput { get; private set; }
@@ -11,6 +13,15 @@ public class PlayerInput : MonoBehaviour
     public bool attack2Pressed { get; private set; }
     public bool attack1Released { get; private set; }
     public bool attack2Released { get; private set; }
+    public bool interactKey { get; private set; }
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     private void Update()
     {
@@ -57,6 +68,16 @@ public class PlayerInput : MonoBehaviour
         {
             attack2Released = true;
             attack2Pressed = false;
+        }
+
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            interactKey = true;
+        }
+
+        if(Input.GetKeyUp(KeyCode.E))
+        {
+            interactKey = false;
         }
     }
 }

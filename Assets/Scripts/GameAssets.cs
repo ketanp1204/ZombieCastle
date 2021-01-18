@@ -26,5 +26,6 @@ public class GameAssets : MonoBehaviour
         public AudioClip audioClip;
     }
 
-
+    public GameObject interactKeyPrefab;
+    public GameObject objectNamePrefab;
 }
