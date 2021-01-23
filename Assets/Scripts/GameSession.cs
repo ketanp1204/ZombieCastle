@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Cinemachine;
 
 [RequireComponent(typeof(UIReferences))]
 public class GameSession : MonoBehaviour
@@ -18,6 +19,7 @@ public class GameSession : MonoBehaviour
     // Private Cached References
     private GameObject pauseMenuUI;                                 // Reference to the Pause Menu UI gameObject
     private GameObject player;                                      // Reference to the Player gameObject
+    private CinemachineVirtualCamera cinemachineCamera;             // Reference to the current CinemachineCamera
 
     // Public Cached References
     [HideInInspector]
@@ -63,6 +65,7 @@ public class GameSession : MonoBehaviour
     {
         SetReferences();
         HandleSceneChanges();
+        FindCinemachineCamera();
     }
 
     // Initialize cached references
@@ -76,24 +79,26 @@ public class GameSession : MonoBehaviour
         pauseMenuUI = uiReferences.pauseMenuUI;
         pauseMenuUI.transform.Find("ResumeButton").gameObject.GetComponent<Button>().onClick.AddListener(() => Resume());
         pauseMenuUI.transform.Find("QuitButton").gameObject.GetComponent<Button>().onClick.AddListener(() => QuitGame());
-        /*
-        if (uiReferences != null)
-        {
-            pauseMenuUI = uiReferences.pauseMenuUI;
-            pauseMenuUI.transform.Find("ResumeButton").gameObject.GetComponent<Button>().onClick.AddListener(() => Resume());
-            pauseMenuUI.transform.Find("QuitButton").gameObject.GetComponent<Button>().onClick.AddListener(() => QuitGame());
-
-            mainCamera = uiReferences.mainCamera;
-            dynamicUICanvas = uiReferences.dynamicUICanvas;
-            dialogueManager = uiReferences.dialogueManager;
-        }
-        */
     }
 
     void HandleSceneChanges()
     {
         AudioManager.Initialize();
         // AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
+    }
+
+    void FindCinemachineCamera()
+    {
+        int priority = -1;
+        CinemachineVirtualCamera[] cCams = FindObjectsOfType<CinemachineVirtualCamera>();
+        foreach (CinemachineVirtualCamera camera in cCams)
+        {
+            if (camera.Priority > priority)
+            {
+                priority = camera.Priority;
+                cinemachineCamera = camera;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -130,17 +135,72 @@ public class GameSession : MonoBehaviour
 
     public static void Pause()                                  // Pauses the game when 'Escape' is pressed
     {
-        if (instance.pauseMenuUI)
-        {
-            Cursor.visible = true;
-            instance.pauseMenuUI.GetComponent<Animator>().SetTrigger("Pause");
-            Time.timeScale = 0f;
-            GameIsPaused = true;
-        }
+        instance.PauseGame();
+        
     }
 
     public void QuitGame()              // Quits the game from the Pause Menu
     {
         Application.Quit();
+    }
+
+    void PauseGame()
+    {
+        StartCoroutine(PauseAndBounceCamera(cinemachineCamera));
+    }
+
+    private IEnumerator PauseAndBounceCamera(CinemachineVirtualCamera camera)
+    {
+        if (instance.pauseMenuUI)
+        {
+            instance.pauseMenuUI.GetComponent<Animator>().SetTrigger("Pause");
+        }
+
+        float _timeStartedLerping = Time.time;
+        float timeSinceStarted;
+        float percentageComplete;
+
+        float orthographicSize = camera.m_Lens.OrthographicSize;
+
+        while (true)
+        {
+            timeSinceStarted = Time.time - _timeStartedLerping;
+            percentageComplete = timeSinceStarted / 0.1f;
+
+            float currentValue = Mathf.Lerp(orthographicSize, orthographicSize - 0.13f, percentageComplete);
+
+            camera.m_Lens.OrthographicSize = currentValue;
+
+            if (percentageComplete >= 1)
+            {
+                break;
+            }
+
+            yield return new WaitForEndOfFrame();
+        }
+
+        _timeStartedLerping = Time.time;
+        orthographicSize = camera.m_Lens.OrthographicSize;
+
+        while (true)
+        {
+            timeSinceStarted = Time.time - _timeStartedLerping;
+            percentageComplete = timeSinceStarted / 0.2f;
+
+            float currentValue = Mathf.Lerp(orthographicSize, orthographicSize + 0.13f, percentageComplete);
+
+            camera.m_Lens.OrthographicSize = currentValue;
+
+            if (percentageComplete >= 1)
+            {
+                break;
+            }
+
+            yield return new WaitForEndOfFrame();
+        }
+
+        Cursor.visible = true;
+        Time.timeScale = 0f;
+        GameIsPaused = true;
     }
 }

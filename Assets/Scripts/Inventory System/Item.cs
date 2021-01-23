@@ -19,6 +19,7 @@ public class Item : ScriptableObject
     public string responseText;         // Response text after reading note
 
     public bool hasBookDisplay;         // Object has a book display associated with it
+    [Header("For each textbox, character limit is 344")]
     [TextArea(4, 7)]
     public string[] bookTexts;          // Book texts             
 
