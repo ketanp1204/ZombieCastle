@@ -40,7 +40,7 @@ public class EnemyAI : MonoBehaviour
         zombieGFX = transform.GetChild(0).gameObject;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().currentPathfindingTarget.transform;
         enemyCombat = GetComponent<EnemyCombat>();
         enemy = GetComponent<Enemy>();
         animator = GetComponent<Animator>();
@@ -91,7 +91,6 @@ public class EnemyAI : MonoBehaviour
         {
             force = Vector2.zero;
             enemyCombat.InvokeAttack();
-            Debug.Log("attack");
         } 
         else
         {

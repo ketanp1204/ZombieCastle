@@ -1,0 +1,370 @@
+fileFormatVersion: 2
+guid: ae377c631f94ad44b964aa853f214d01
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6876476230845849659
+    second: walk front_0
+  - first:
+      213: 4563833545141062162
+    second: walk front_1
+  - first:
+      213: 2413147261302501077
+    second: walk front_2
+  - first:
+      213: -370061062705219270
+    second: walk front_3
+  - first:
+      213: 3720139600709119496
+    second: walk front_4
+  - first:
+      213: -6257077269838364159
+    second: walk front_5
+  - first:
+      213: 1306178271793949256
+    second: walk front_6
+  - first:
+      213: -6088335774187488806
+    second: walk front_7
+  - first:
+      213: -5747335419572054622
+    second: walk front_0
+  - first:
+      213: 7176119668708554183
+    second: walk front_9
+  - first:
+      213: 3212860686704571860
+    second: walk front_1
+  - first:
+      213: 6466216798301188176
+    second: walk front_11
+  - first:
+      213: -1743547749872991294
+    second: walk front_2
+  - first:
+      213: -7885736857567307248
+    second: walk front_13
+  - first:
+      213: 5930686828977036545
+    second: walk front_3
+  - first:
+      213: -8148672445792619328
+    second: walk front_15
+  - first:
+      213: -4600006357385528012
+    second: walk front_4
+  - first:
+      213: -1773450026314128912
+    second: walk front_17
+  - first:
+      213: 8033856685165305268
+    second: walk front_5
+  - first:
+      213: 5643799285045990424
+    second: walk front_19
+  - first:
+      213: -3671662191825722752
+    second: walk front_6
+  - first:
+      213: 4012997423954881748
+    second: walk front_21
+  - first:
+      213: 6551407408110639658
+    second: walk front_7
+  - first:
+      213: -4268502955347576943
+    second: walk front_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 120
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: walk front_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 364
+        width: 248
+        height: 606
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a51367f2ec5d30b0800000000000000
+      internalID: -5747335419572054622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk front_1
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 348
+        width: 248
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d5f7d7a5cf569c20800000000000000
+      internalID: 3212860686704571860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk front_2
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 348
+        width: 248
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c383e72f8cadc7e0800000000000000
+      internalID: -1743547749872991294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk front_3
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 348
+        width: 248
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d9343bf380e4250800000000000000
+      internalID: 5930686828977036545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk front_4
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 364
+        width: 248
+        height: 606
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d3f7ff69e7920c0800000000000000
+      internalID: -4600006357385528012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk front_5
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 348
+        width: 248
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bddca7071efd7f60800000000000000
+      internalID: 8033856685165305268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk front_6
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 348
+        width: 248
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082eef890b2ab0dc0800000000000000
+      internalID: -3671662191825722752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk front_7
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 348
+        width: 248
+        height: 622
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a1c4ba3564bea50800000000000000
+      internalID: 6551407408110639658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ef511018109d40545b93a660379e8910
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

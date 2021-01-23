@@ -9,6 +9,8 @@ public class EnemyCombat : MonoBehaviour
     public bool attack1Trigger;
     [HideInInspector]
     public bool canAttack = false;
+    [HideInInspector]
+    public bool isAttacking = false;
     public Transform attack1Point;      // Location of point which registers attack
     public float attack1Range;          // Range at which attack is enabled
     public int attack1Damage = 20;      // Damage caused to enemy
@@ -27,7 +29,11 @@ public class EnemyCombat : MonoBehaviour
     public void InvokeAttack()
     {
         canAttack = true;
-        StartCoroutine(Attack());
+        if (!isAttacking)
+        {
+            isAttacking = true;
+            StartCoroutine(Attack());
+        }
         // InvokeRepeating("Attack1", 0f, attackRepeatTime);
         animator = GetComponent<Animator>();
     }
@@ -48,8 +54,13 @@ public class EnemyCombat : MonoBehaviour
             foreach (Collider2D player in hitPlayer)
             {
                 player.transform.parent.GetComponent<Player>().TakeDamage(attack1Damage);
+                if (player.transform.parent.GetComponent<Player>().IsDead)
+                {
+                    canAttack = false;
+                }
             }
         }
+        isAttacking = false;
     }
 
     void Attack1()

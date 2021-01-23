@@ -6,6 +6,7 @@ public class ObjectProperties : MonoBehaviour
 {
 
     public string objectName;
+    public Item objectData;
 
     // Start is called before the first frame update
     void Start()

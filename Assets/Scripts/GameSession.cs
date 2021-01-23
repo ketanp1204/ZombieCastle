@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(UIReferences))]
 public class GameSession : MonoBehaviour
 {
     // Singleton
@@ -15,18 +16,21 @@ public class GameSession : MonoBehaviour
     public static bool GameIsPaused;                                // Is true when the game is paused
 
     // Private Cached References
-    private UIReferences uiReferences;                              // Reference to the UIReference gameObject
     private GameObject pauseMenuUI;                                 // Reference to the Pause Menu UI gameObject
     private GameObject player;                                      // Reference to the Player gameObject
 
     // Public Cached References
     [HideInInspector]
+    public UIReferences uiReferences;                                // Reference to the UIReferences GameObject
+    [HideInInspector]
     public Canvas dynamicUICanvas;                                  // Reference to the DynamicUI Canvas
     [HideInInspector]
     public Camera mainCamera;                                       // Reference to the MainCamera 
     [HideInInspector]
-    public GameObject objectNameGO;                                 // Holds the current reference to the object name box
-
+    public GameObject objectNameGO;                                 // Reference to the object name box
+    [HideInInspector]
+    public GameObject dialogueManager;                              // Reference to the dialogue manager
+    
     void Awake()
     {
         if (instance == null)
@@ -65,7 +69,14 @@ public class GameSession : MonoBehaviour
     void SetReferences()
     {
         player = GameObject.Find("Player");
-        uiReferences = FindObjectOfType<UIReferences>();
+        uiReferences = GameObject.Find("UIReferences").GetComponent<UIReferences>();
+        mainCamera = uiReferences.mainCamera;
+        dynamicUICanvas = uiReferences.dynamicUICanvas;
+        dialogueManager = uiReferences.dialogueManager;
+        pauseMenuUI = uiReferences.pauseMenuUI;
+        pauseMenuUI.transform.Find("ResumeButton").gameObject.GetComponent<Button>().onClick.AddListener(() => Resume());
+        pauseMenuUI.transform.Find("QuitButton").gameObject.GetComponent<Button>().onClick.AddListener(() => QuitGame());
+        /*
         if (uiReferences != null)
         {
             pauseMenuUI = uiReferences.pauseMenuUI;
@@ -74,8 +85,9 @@ public class GameSession : MonoBehaviour
 
             mainCamera = uiReferences.mainCamera;
             dynamicUICanvas = uiReferences.dynamicUICanvas;
-
+            dialogueManager = uiReferences.dialogueManager;
         }
+        */
     }
 
     void HandleSceneChanges()

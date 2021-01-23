@@ -5,28 +5,66 @@ using TMPro;
 
 public class PlayerObjectSelection : MonoBehaviour
 {
-    [HideInInspector]
-    public Canvas dynamicUICanvas;
-    [HideInInspector]
-    public Camera mainCamera;
+    // Private Cached References
+    private Canvas dynamicUICanvas;
+    private GameObject dialogueManager;
+    private Collider2D collidedObject;
 
     private GameObject objectNameGO;
-    private Vector3 screenPosition;
     private bool nameBoxReplaced = false;
+    private bool triggerStay = false;
     private string previousObjectName;
+    private string[] sentenceArray;
+    private string[] noteTextsArray;
+    private string[] noteResponseTextsArray;
 
-    // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         dynamicUICanvas = GameSession.instance.dynamicUICanvas;
-        mainCamera = GameSession.instance.mainCamera;
     }
 
-    // TODO: BUG FIX REQUIRED - Entering multiple colliders changes the name of the current object.
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && triggerStay)
+        {
+            dialogueManager = GameSession.instance.dialogueManager;
+            Dialogue dialogue = dialogueManager.GetComponent<Dialogue>();
+
+            if (!dialogue.IsActive())                                                   
+            {
+                objectNameGO.SetActive(false);                                                          // Hide the object name display
+
+                ObjectProperties objectProperties = collidedObject.GetComponent<ObjectProperties>();
+                sentenceArray = new string[] { objectProperties.objectData.playerComment };
+
+                // Fill response
+                bool hasNote = objectProperties.objectData.hasNote;
+                bool hasResponseAfterNote = objectProperties.objectData.hasResponseAfterNote;
+
+                if (hasNote)
+                {
+                    noteTextsArray = new string[] { objectProperties.objectData.noteText };
+                    dialogue.FillNoteTexts(noteTextsArray);
+                }
+                if (hasResponseAfterNote)
+                {
+                    noteResponseTextsArray = new string[] { objectProperties.objectData.responseText };
+                    dialogue.FillNoteResponseTexts(noteResponseTextsArray);
+                }
+
+                dialogue.FillSentences(sentenceArray);
+                dialogue.StartDialogue(hasNote, hasResponseAfterNote);
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Object"))
         {
+            collidedObject = collision;
+            triggerStay = true;
+
             // Get name of newly found object
             string objectName = collision.GetComponent<ObjectProperties>().objectName;
 
@@ -46,6 +84,7 @@ public class PlayerObjectSelection : MonoBehaviour
             }
 
             // Instantiate ObjectName prefab
+            dynamicUICanvas = GameSession.instance.dynamicUICanvas;
             objectNameGO = Instantiate(GameAssets.instance.objectNamePrefab, dynamicUICanvas.transform);
 
             // Set ObjectName text
@@ -53,22 +92,12 @@ public class PlayerObjectSelection : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Object"))
-        {
-            if (PlayerInput.instance.interactKey)
-            {
-                // Handle interaction events
-                Debug.Log("interact");
-            }
-        }
-    }
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Object"))
         {
+            triggerStay = false;
+
             if (!nameBoxReplaced)
             {
                 Destroy(objectNameGO);

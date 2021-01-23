@@ -84,7 +84,7 @@ public class Enemy : MonoBehaviour
         // Disable Health Bar
         healthBar.gameObject.SetActive(false);
 
-        Invoke("Respawn", 4);
+        // Invoke("Respawn", 4);
 
         StartCoroutine(DestroyGameObjectAfterDelay(gameObject));
     }

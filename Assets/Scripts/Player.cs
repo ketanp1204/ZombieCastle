@@ -13,13 +13,20 @@ public class Player : MonoBehaviour
     // Singleton
     public static Player instance;
 
-    // Cached References
+    // Private Cached References
     private PlayerInput playerInput;                // Reference To The PlayerInput Class
     private PlayerCombat playerCombat;              // Reference To The PlayerCombat Class
     private Rigidbody2D rb;                         // Reference To The Player's Rigidbody Component
     private Animator animator;                      // Reference To The Player's Animator Component
     private HealthBar healthBar;                    // Reference To The Player's Health Bar 
     private UnityEngine.Object playerReference;
+
+    // Public Cached References
+    public GameObject rightCollisionArea;           // Reference to the right side collision area collider
+    public GameObject leftCollisionArea;            // Reference to the left side collision area collider
+    public GameObject rightPathfindingPoint;         // Reference to the right side pathfinding point
+    public GameObject leftPathfindingPoint;          // Reference to the left side pathfinding point
+
 
     // Variables : Player
     [HideInInspector]
@@ -33,12 +40,14 @@ public class Player : MonoBehaviour
     public bool isClimbingLadder = false;           // Bool to store whether player is climbing a ladder
     [HideInInspector]
     public float movementSpeed;                     // Player's Current Movement Speed;
-    public float wSpeed;                            // Player's Walking Speed
-    public float rSpeed;                            // Player's Running Speed
+    public float walkSpeed;                         // Player's Walking Speed
+    public float walkFastSpeed;                     // Player's Running Speed
     private Vector2 movement;                       // Player's Movement Vector
     public int maxHealth = 100;                     // Player's Maximum Health
     [HideInInspector]
     public int currentHealth;                       // Player's current health
+    [HideInInspector]
+    public GameObject currentPathfindingTarget;     // Player's current pathfinding point based on direction of face
 
     // Death Event
     public event Action<Player> OnDeath;
@@ -93,21 +102,29 @@ public class Player : MonoBehaviour
     {
         facingRight = true;
         movePlayer = true;
-        weaponDrawn = false;
-        movementSpeed = wSpeed;
+        weaponDrawn = true;             // FOR TESTING. CHANGE LATER.
+        movementSpeed = walkSpeed;
         animator.SetFloat("FaceDir", 1f);
+
+        //rightCollisionArea.SetActive(true);
+        //leftCollisionArea.SetActive(false);
+
+        rightPathfindingPoint.SetActive(true);
+        leftPathfindingPoint.SetActive(false);
+
+        currentPathfindingTarget = rightPathfindingPoint;
     }
 
     void FixedUpdate()
     {
         // Moving the player
-        if(movePlayer)
+        if (movePlayer)
         {
             HandleMovement();
-        }
 
-        // Flip the player direction depending on where he is facing
-        FlipPlayerDirection();
+            // Flip the player direction depending on where he is facing
+            FlipPlayerDirection();
+        }
 
         // Player attacks enemies
         HandleAttacks();
@@ -124,7 +141,7 @@ public class Player : MonoBehaviour
         bool walkFast = playerInput.walkFastInput;
 
         movement.x = horizontal;
-        movement.y = 0f;
+        movement.y = rb.velocity.y;
 
         if(isClimbingLadder)
         {
@@ -147,22 +164,15 @@ public class Player : MonoBehaviour
         if (walkFast == true)
         {
             animator.SetBool("WalkFast", true);
-            movementSpeed = rSpeed;
+            movementSpeed = walkFastSpeed;
         }
 
         if (walkFast == false)
         {
             animator.SetBool("WalkFast", false);
-            movementSpeed = wSpeed;
+            movementSpeed = walkSpeed;
         }
     }
-
-    /*
-    public void AddVerticalVelocity(float vertical)
-    {
-        rb.velocity = new Vector2(rb.velocity.x, vertical);
-    }
-    */
 
     private void FlipPlayerDirection()
     {
@@ -173,11 +183,31 @@ public class Player : MonoBehaviour
 
             if (facingRight)
             {
+                // Set animation parameter
                 animator.SetFloat("FaceDir", 1f);
+
+                // Use right side collision and pathfinding area
+                //rightCollisionArea.SetActive(true);
+                //leftCollisionArea.SetActive(false);
+
+                rightPathfindingPoint.SetActive(true);
+                leftPathfindingPoint.SetActive(false);
+
+                currentPathfindingTarget = rightPathfindingPoint;
             }
             else
             {
+                // Set animation parameter
                 animator.SetFloat("FaceDir", -1f);
+
+                // Use left side collision and pathfinding area
+                //leftCollisionArea.SetActive(true);
+                //rightCollisionArea.SetActive(false);
+
+                rightPathfindingPoint.SetActive(true);
+                leftPathfindingPoint.SetActive(false);
+
+                currentPathfindingTarget = leftPathfindingPoint;
             }
 
             /*
@@ -257,9 +287,8 @@ public class Player : MonoBehaviour
         // Disable Health Bar
         healthBar.gameObject.SetActive(false);
 
-        // Respawn the player
+        // Respawn player
         // Respawn();
-
 
         StartCoroutine(DestroyGameObjectAfterDelay(gameObject));
     }
@@ -274,6 +303,9 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         Destroy(gameObject);
+
+        PlayerStats.isFirstScene = true;
+        SceneManager.LoadScene("CastleLobby");
     }
 
     private void ResetValues()

@@ -60,6 +60,7 @@ public static class AudioManager
                 oneShotGameObject.AddComponent<DontDestroyGameObjectOnLoad>();
                 oneShotAudioSource = oneShotGameObject.AddComponent<AudioSource>();
             }
+            oneShotAudioSource.volume = 0.5f;   // FOR TESTING. REMOVE LATER
             oneShotAudioSource.loop = true;
             oneShotAudioSource.clip = GetAudioClip(sound);
             oneShotAudioSource.Play();

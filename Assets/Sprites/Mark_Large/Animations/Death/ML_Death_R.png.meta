@@ -814,7 +814,7 @@ TextureImporter:
         width: 707
         height: 445
       alignment: 9
-      pivot: {x: 0.5, y: 0.92}
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -835,7 +835,7 @@ TextureImporter:
         width: 736
         height: 451
       alignment: 9
-      pivot: {x: 0.5, y: 0.94}
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -851,12 +851,12 @@ TextureImporter:
       name: Death_R_25
       rect:
         serializedVersion: 2
-        x: 1609
+        x: 1601
         y: 1725
         width: 766
         height: 451
       alignment: 9
-      pivot: {x: 0.5, y: 0.96}
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -877,7 +877,7 @@ TextureImporter:
         width: 796
         height: 439
       alignment: 9
-      pivot: {x: 0.5, y: 0.98}
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -898,7 +898,7 @@ TextureImporter:
         width: 826
         height: 427
       alignment: 9
-      pivot: {x: 0.5, y: 0.98}
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -919,7 +919,7 @@ TextureImporter:
         width: 854
         height: 424
       alignment: 9
-      pivot: {x: 0.5, y: 0.98}
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -940,7 +940,7 @@ TextureImporter:
         width: 862
         height: 423
       alignment: 9
-      pivot: {x: 0.5, y: 1}
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

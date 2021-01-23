@@ -19,7 +19,6 @@ public class PlayerTopDown : MonoBehaviour
     private Rigidbody2D rb;                         // Reference To The Player's Rigidbody Component
     private Animator animator;                      // Reference To The Player's Animator Component
     private HealthBar healthBar;                    // Reference To The Player's Health Bar 
-    private SceneType sceneTypeReference;           // Reference To The Current Type Of Scene: 2D or 2.5D
     private UnityEngine.Object playerReference;     // Reference to The Player Gameobject references used to respawn
 
     // Public Cached References
@@ -38,8 +37,8 @@ public class PlayerTopDown : MonoBehaviour
     public bool isClimbingLadder = false;           // Bool to store whether player is climbing a ladder
     [HideInInspector]
     public float movementSpeed;                     // Player's Current Movement Speed;
-    public float wSpeed;                            // Player's Walking Speed
-    public float rSpeed;                            // Player's Running Speed
+    public float walkSpeed;                         // Player's Walking Speed
+    public float walkFastSpeed;                     // Player's Running Speed
     private Vector2 movement;                       // Player's Movement Vector
     public int maxHealth = 100;                     // Player's Maximum Health
     [HideInInspector]
@@ -99,7 +98,7 @@ public class PlayerTopDown : MonoBehaviour
         facingRight = true;
         movePlayer = true;
         weaponDrawn = false;
-        movementSpeed = wSpeed;
+        movementSpeed = walkSpeed;
         animator.SetFloat("FaceDir", 1f);
 
         rightSelectionArea.SetActive(true);
@@ -146,13 +145,13 @@ public class PlayerTopDown : MonoBehaviour
         if (walkFast == true)
         {
             animator.SetBool("WalkFast", true);
-            movementSpeed = rSpeed;
+            movementSpeed = walkFastSpeed;
         }
 
         if (walkFast == false)
         {
             animator.SetBool("WalkFast", false);
-            movementSpeed = wSpeed;
+            movementSpeed = walkSpeed;
         }
     }
 
@@ -208,10 +207,10 @@ public class PlayerTopDown : MonoBehaviour
                 animator.SetTrigger("Attack2");
                 rb.velocity = Vector2.zero;
             }
+
             /*
             if (playerInput.attack1Released && this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
             {
-                Debug.Log("attack1_released");
                 animator.SetBool("Attack1", false);
             }
 
