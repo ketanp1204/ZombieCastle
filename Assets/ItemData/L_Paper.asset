@@ -17,7 +17,7 @@ MonoBehaviour:
   playerComment: 'There seems to be something written on it. '
   itemSprite: {fileID: 21300000, guid: b8b3ac0c0c31b7f488aff5de25330add, type: 3}
   sceneName: Lobby
-  hasPopup: 1
-  popupText: Mark, this is your friend, Luke. You have to rescue me!!
-  hasResponseAfterPopup: 1
+  hasNote: 1
+  noteText: Mark, this is your friend Luke. Please rescue me from this evil zombie!!
+  hasResponseAfterNote: 1
   responseText: Damn, I need to find him fast.

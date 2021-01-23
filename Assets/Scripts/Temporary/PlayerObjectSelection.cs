@@ -17,6 +17,7 @@ public class PlayerObjectSelection : MonoBehaviour
     private string[] sentenceArray;
     private string[] noteTextsArray;
     private string[] noteResponseTextsArray;
+    private string[] bookTextsArray;
 
     void OnEnable()
     {
@@ -40,6 +41,7 @@ public class PlayerObjectSelection : MonoBehaviour
                 // Fill response
                 bool hasNote = objectProperties.objectData.hasNote;
                 bool hasResponseAfterNote = objectProperties.objectData.hasResponseAfterNote;
+                bool hasBook = objectProperties.objectData.hasBookDisplay;
 
                 if (hasNote)
                 {
@@ -51,9 +53,14 @@ public class PlayerObjectSelection : MonoBehaviour
                     noteResponseTextsArray = new string[] { objectProperties.objectData.responseText };
                     dialogue.FillNoteResponseTexts(noteResponseTextsArray);
                 }
+                if (hasBook)
+                {
+                    bookTextsArray = objectProperties.objectData.bookTexts;
+                    dialogue.FillBookTexts(bookTextsArray);
+                }
 
                 dialogue.FillSentences(sentenceArray);
-                dialogue.StartDialogue(hasNote, hasResponseAfterNote);
+                dialogue.StartDialogue(hasNote, hasResponseAfterNote, hasBook);
             }
         }
     }
