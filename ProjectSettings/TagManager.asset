@@ -20,7 +20,7 @@ TagManager:
   - Player
   - Zombies
   - PlayerDamagePoint
-  - 
+  - DeadZombie
   - 
   - 
   - 
@@ -48,6 +48,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1352661663
+    locked: 0
+  - name: Zombie
+    uniqueID: 1459152089
     locked: 0
   - name: Player
     uniqueID: 2311545409

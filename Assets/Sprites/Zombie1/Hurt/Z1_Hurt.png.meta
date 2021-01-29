@@ -1,0 +1,1354 @@
+fileFormatVersion: 2
+guid: a64d73f0f9539364a8d4ad3d780feb31
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4272132442541005957
+    second: Z1_Hurt_0
+  - first:
+      213: 955855783959473302
+    second: Z1_Hurt_1
+  - first:
+      213: 6062975845768002224
+    second: Z1_Hurt_2
+  - first:
+      213: 4339579251332090175
+    second: Z1_Hurt_3
+  - first:
+      213: -6971580990356872788
+    second: Z1_Hurt_4
+  - first:
+      213: -4199429389363357639
+    second: Z1_Hurt_5
+  - first:
+      213: 4038579970665876908
+    second: Z1_Hurt_6
+  - first:
+      213: -2513526529005942615
+    second: Z1_Hurt_7
+  - first:
+      213: -4376265093386461649
+    second: Z1_Hurt_8
+  - first:
+      213: 2661097049314828688
+    second: Z1_Hurt_9
+  - first:
+      213: 8450424881133114517
+    second: Z1_Hurt_10
+  - first:
+      213: -5552712742947941019
+    second: Z1_Hurt_11
+  - first:
+      213: 7282533811295052919
+    second: Z1_Hurt_12
+  - first:
+      213: -1584917768664247688
+    second: Z1_Hurt_13
+  - first:
+      213: -1199133736207279096
+    second: Z1_Hurt_14
+  - first:
+      213: -4346094557928517985
+    second: Z1_Hurt_15
+  - first:
+      213: 466750815404843730
+    second: Z1_Hurt_16
+  - first:
+      213: -7027296956921328306
+    second: Z1_Hurt_17
+  - first:
+      213: -6543230223813853348
+    second: Z1_Hurt_18
+  - first:
+      213: 7683149492429088223
+    second: Z1_Hurt_19
+  - first:
+      213: -1030539968599655293
+    second: Z1_Hurt_20
+  - first:
+      213: -5197184406629953990
+    second: Z1_Hurt_21
+  - first:
+      213: -619156933868802046
+    second: Z1_Hurt_22
+  - first:
+      213: 149666355179505044
+    second: Z1_Hurt_23
+  - first:
+      213: 2934503275819378885
+    second: Z1_Hurt_24
+  - first:
+      213: -5931922540941791620
+    second: Z1_Hurt_25
+  - first:
+      213: -8804438030409246989
+    second: Z1_Hurt_26
+  - first:
+      213: 5416160856810111090
+    second: Z1_Hurt_27
+  - first:
+      213: -2441468195597292664
+    second: Z1_Hurt_28
+  - first:
+      213: -6459558005052461369
+    second: Z1_Hurt_29
+  - first:
+      213: -358312734144616189
+    second: Z1_Hurt_30
+  - first:
+      213: -6855643810840200116
+    second: Z1_Hurt_31
+  - first:
+      213: -1061285057113971753
+    second: Z1_Hurt_32
+  - first:
+      213: -3116739403555790571
+    second: Z1_Hurt_33
+  - first:
+      213: -2730258300410676926
+    second: Z1_Hurt_34
+  - first:
+      213: -4097367099487833306
+    second: Z1_Hurt_35
+  - first:
+      213: -8259770166878678645
+    second: Z1_Hurt_36
+  - first:
+      213: 4640093626572159306
+    second: Z1_Hurt_37
+  - first:
+      213: -3881191985189832828
+    second: Z1_Hurt_38
+  - first:
+      213: -5519010150726385891
+    second: Z1_Hurt_39
+  - first:
+      213: 4587743977856913232
+    second: Z1_Hurt_40
+  - first:
+      213: -487180901913761882
+    second: Z1_Hurt_41
+  - first:
+      213: 8868650220403918540
+    second: Z1_Hurt_42
+  - first:
+      213: 1785062458352136634
+    second: Z1_Hurt_43
+  - first:
+      213: -8590319040687850026
+    second: Z1_Hurt_44
+  - first:
+      213: -6102088076515473816
+    second: Z1_Hurt_45
+  - first:
+      213: 2864339038936256193
+    second: Z1_Hurt_46
+  - first:
+      213: -5751553956443935079
+    second: Z1_Hurt_47
+  - first:
+      213: -4446994652427260871
+    second: Z1_Hurt_48
+  - first:
+      213: 5880211761453424970
+    second: Z1_Hurt_49
+  - first:
+      213: 1569549367231459490
+    second: Z1_Hurt_50
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Z1_Hurt_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3469
+        width: 341
+        height: 583
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73ebe0ad2656b4c0800000000000000
+      internalID: -4272132442541005957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_1
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 3469
+        width: 339
+        height: 583
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c286b65c1e34d00800000000000000
+      internalID: 955855783959473302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_2
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 3469
+        width: 337
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba76c0a864042450800000000000000
+      internalID: 6062975845768002224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_3
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 3469
+        width: 335
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f390e464658493c30800000000000000
+      internalID: 4339579251332090175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_4
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 3469
+        width: 332
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1a9eab608ff3f90800000000000000
+      internalID: -6971580990356872788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_5
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 3469
+        width: 329
+        height: 583
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93859ab4831a8b5c0800000000000000
+      internalID: -4199429389363357639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_6
+      rect:
+        serializedVersion: 2
+        x: 2408
+        y: 3469
+        width: 325
+        height: 583
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad0c84061beb0830800000000000000
+      internalID: 4038579970665876908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_7
+      rect:
+        serializedVersion: 2
+        x: 2792
+        y: 3469
+        width: 323
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8841960f82e1dd0800000000000000
+      internalID: -2513526529005942615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_8
+      rect:
+        serializedVersion: 2
+        x: 3174
+        y: 3469
+        width: 321
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e12c185126443c0800000000000000
+      internalID: -4376265093386461649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_9
+      rect:
+        serializedVersion: 2
+        x: 3554
+        y: 3469
+        width: 319
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0912041daad1ee420800000000000000
+      internalID: 2661097049314828688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_10
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2828
+        width: 315
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594df0938a0f54570800000000000000
+      internalID: 8450424881133114517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_11
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 2828
+        width: 313
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5659dc80e2dc0f2b0800000000000000
+      internalID: -5552712742947941019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_12
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 2828
+        width: 311
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7746307bae1c01560800000000000000
+      internalID: 7282533811295052919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_13
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 2828
+        width: 307
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8721098cfad310ae0800000000000000
+      internalID: -1584917768664247688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_14
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 2828
+        width: 305
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c9d2f5832db5fe0800000000000000
+      internalID: -1199133736207279096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_15
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 2828
+        width: 301
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e8962b6029fa3c0800000000000000
+      internalID: -4346094557928517985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_16
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 2828
+        width: 299
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d264d6c46b3a7600800000000000000
+      internalID: 466750815404843730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_17
+      rect:
+        serializedVersion: 2
+        x: 2610
+        y: 2828
+        width: 297
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d458f56a60a7e90800000000000000
+      internalID: -7027296956921328306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_18
+      rect:
+        serializedVersion: 2
+        x: 2964
+        y: 2828
+        width: 295
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fb9f967c6c135a0800000000000000
+      internalID: -6543230223813853348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_19
+      rect:
+        serializedVersion: 2
+        x: 3318
+        y: 2828
+        width: 293
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5657c91c700aa60800000000000000
+      internalID: 7683149492429088223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_20
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 2828
+        width: 289
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c76cccb59c2b1f0800000000000000
+      internalID: -1030539968599655293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_21
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 2187
+        width: 287
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e4f9a6154efd7b0800000000000000
+      internalID: -5197184406629953990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_22
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2187
+        width: 285
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200b7809c005867f0800000000000000
+      internalID: -619156933868802046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_23
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 2187
+        width: 281
+        height: 583
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4954d4fc1c8b31200800000000000000
+      internalID: 149666355179505044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_24
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 2187
+        width: 280
+        height: 583
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c82f638e2379b820800000000000000
+      internalID: 2934503275819378885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_25
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 2187
+        width: 280
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e2800b0e39dada0800000000000000
+      internalID: -5931922540941791620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_26
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 2187
+        width: 280
+        height: 583
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6548e524a50d580800000000000000
+      internalID: -8804438030409246989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_27
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 2187
+        width: 281
+        height: 583
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270ca8c6a911a2b40800000000000000
+      internalID: 5416160856810111090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_28
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 2187
+        width: 285
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b620f8c992e1ed0800000000000000
+      internalID: -2441468195597292664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_29
+      rect:
+        serializedVersion: 2
+        x: 2774
+        y: 2187
+        width: 287
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce21d6f73a0b56a0800000000000000
+      internalID: -6459558005052461369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_30
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2187
+        width: 289
+        height: 583
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 309afca7774070bf0800000000000000
+      internalID: -358312734144616189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_31
+      rect:
+        serializedVersion: 2
+        x: 3468
+        y: 2187
+        width: 291
+        height: 583
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4cb34cd64cdbd0a0800000000000000
+      internalID: -6855643810840200116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_32
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1546
+        width: 295
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3aa4d0dde8541f0800000000000000
+      internalID: -1061285057113971753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_33
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1546
+        width: 295
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5112891960e1fb4d0800000000000000
+      internalID: -3116739403555790571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_34
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1546
+        width: 299
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 249b5f29a8c2c1ad0800000000000000
+      internalID: -2730258300410676926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_35
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 1546
+        width: 301
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623b7a0f45a3327c0800000000000000
+      internalID: -4097367099487833306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_36
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 1546
+        width: 305
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81d3dc9bc66f5d80800000000000000
+      internalID: -8259770166878678645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_37
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 1546
+        width: 307
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a493360b19ce46040800000000000000
+      internalID: 4640093626572159306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_38
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 1546
+        width: 311
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487baa1f37c332ac0800000000000000
+      internalID: -3881191985189832828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_39
+      rect:
+        serializedVersion: 2
+        x: 2572
+        y: 1546
+        width: 313
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1fbd2642898863b0800000000000000
+      internalID: -5519010150726385891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_40
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 1546
+        width: 315
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f499847d0faaf30800000000000000
+      internalID: 4587743977856913232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_41
+      rect:
+        serializedVersion: 2
+        x: 3318
+        y: 1546
+        width: 319
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a763180d8f2d39f0800000000000000
+      internalID: -487180901913761882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_42
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 1546
+        width: 321
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc68d582366c31b70800000000000000
+      internalID: 8868650220403918540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_43
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 905
+        width: 323
+        height: 583
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1f6f329d0d5c810800000000000000
+      internalID: 1785062458352136634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_44
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 905
+        width: 327
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ddb680985e09c880800000000000000
+      internalID: -8590319040687850026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_45
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 905
+        width: 329
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86606238937015ba0800000000000000
+      internalID: -6102088076515473816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_46
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 905
+        width: 331
+        height: 583
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce44141e2d20c720800000000000000
+      internalID: 2864339038936256193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_47
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 905
+        width: 333
+        height: 583
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99eaaaf46206e20b0800000000000000
+      internalID: -5751553956443935079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_48
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 905
+        width: 335
+        height: 583
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ce200cce91942c0800000000000000
+      internalID: -4446994652427260871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_49
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 905
+        width: 339
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41618d3175ba9150800000000000000
+      internalID: 5880211761453424970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Hurt_50
+      rect:
+        serializedVersion: 2
+        x: 2774
+        y: 905
+        width: 343
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0354b65d828c510800000000000000
+      internalID: 1569549367231459490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 520744dddc7cb5a4f97500a0158f7788
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

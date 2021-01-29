@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c094fbe420ba234393937749a6bc256, type: 3}
+  m_Name: L_Vase1
+  m_EditorClassIdentifier: 
+  itemName: Vase
+  itemDescription: A vase lying on the floor
+  sceneName: Lobby
+  playerComment: Something must have knocked this one down.
+  hasNote: 0
+  noteText: 
+  hasResponseAfterNote: 0
+  responseText: 
+  hasBookDisplay: 0
+  bookTexts: []
+  inventorySprite: {fileID: 21300000, guid: 98363e1f71875484ca95c699f0b06b45, type: 3}

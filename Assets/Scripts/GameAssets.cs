@@ -17,15 +17,22 @@ public class GameAssets : MonoBehaviour
         } 
     }
 
+    [Header("Sounds")]
     public SoundAudioClip[] soundAudioClipArray;
 
     [System.Serializable]
     public class SoundAudioClip
     {
         public AudioManager.Sound sound;
-        public AudioClip audioClip;
+        // public AudioClip audioClip;
+        public SoundData soundData;
     }
 
+    [Header("UI Objects")]
     public GameObject interactKeyPrefab;
     public GameObject objectNamePrefab;
+
+    [Header("Sprites")]
+    public Sprite treasureBoxOpenSprite;
+    public Sprite treasureBoxClosedSprite;
 }

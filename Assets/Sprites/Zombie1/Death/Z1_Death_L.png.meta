@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 394a45f4003606d4aacafd4031a37f26
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5002739833332095202
+    second: Z1_Death_L_24
+  - first:
+      213: -2278756845988435753
+    second: Z1_Death_L_26
+  - first:
+      213: 6322190101474383192
+    second: Z1_Death_L_7
+  - first:
+      213: -8445661247931643254
+    second: Z1_Death_L_4
+  - first:
+      213: -7535564843449496827
+    second: Z1_Death_L_7
+  - first:
+      213: 3096206106040640201
+    second: Z1_Death_L_7
+  - first:
+      213: -3576765035488566751
+    second: Z1_Death_L_26
+  - first:
+      213: 1807021362474751255
+    second: Z1_Death_L_24
+  - first:
+      213: -3992130877870633831
+    second: Z1_Death_L_13
+  - first:
+      213: -478167095104851300
+    second: Z1_Death_L_12
+  - first:
+      213: -2857754292726840612
+    second: Z1_Death_L_11
+  - first:
+      213: -5141099718501463359
+    second: Z1_Death_L_12
+  - first:
+      213: 7860678437102133267
+    second: Z1_Death_L_13
+  - first:
+      213: 8493804704570706473
+    second: Z1_Death_L_24
+  - first:
+      213: 5520914759618331808
+    second: Z1_Death_L_18
+  - first:
+      213: 6168630785850052400
+    second: Z1_Death_L_17
+  - first:
+      213: 5157958528843692164
+    second: Z1_Death_L_17
+  - first:
+      213: 812302722769548385
+    second: Z1_Death_L_18
+  - first:
+      213: -6043019034497088070
+    second: Z1_Death_L_26
+  - first:
+      213: 81110591391709281
+    second: Z1_Death_L_23
+  - first:
+      213: -4993387487332582942
+    second: Z1_Death_L_22
+  - first:
+      213: -2398078027857654991
+    second: Z1_Death_L_22
+  - first:
+      213: -1367088675833087918
+    second: Z1_Death_L_23
+  - first:
+      213: -979377666106417352
+    second: Z1_Death_L_24
+  - first:
+      213: 8500227026721360043
+    second: Z1_Death_L_25
+  - first:
+      213: 4037523784181913436
+    second: Z1_Death_L_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: -1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Z1_Death_L_0
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 3482
+        width: 484
+        height: 568
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8d47d6f5d4d6540800000000000000
+      internalID: 5002739833332095202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_1
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 3480
+        width: 456
+        height: 571
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8ae51d8ba3060e0800000000000000
+      internalID: -2278756845988435753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_2
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 3474
+        width: 427
+        height: 576
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8551fd0a66eecb750800000000000000
+      internalID: 6322190101474383192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_4
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 3472
+        width: 398
+        height: 579
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a80cf87dbfaca80800000000000000
+      internalID: -8445661247931643254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_5
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 3470
+        width: 390
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b454433bb4c6790800000000000000
+      internalID: -7535564843449496827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_6
+      rect:
+        serializedVersion: 2
+        x: 2861
+        y: 3468
+        width: 372
+        height: 582
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2a2fd8c0fe7fa20800000000000000
+      internalID: 3096206106040640201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_7
+      rect:
+        serializedVersion: 2
+        x: 3287
+        y: 3470
+        width: 356
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122aaa69627cc5ec0800000000000000
+      internalID: -3576765035488566751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_8
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 3470
+        width: 339
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71599dbea54d31910800000000000000
+      internalID: 1807021362474751255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_9
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 2865
+        width: 653
+        height: 542
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c07a72e1a1998c0800000000000000
+      internalID: -3992130877870633831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_10
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 2857
+        width: 624
+        height: 550
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92bef87f853d59f0800000000000000
+      internalID: -478167095104851300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_11
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 2853
+        width: 596
+        height: 555
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd24bae9c973758d0800000000000000
+      internalID: -2857754292726840612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_12
+      rect:
+        serializedVersion: 2
+        x: 2308
+        y: 2849
+        width: 569
+        height: 558
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca0cd37b0527a8b0800000000000000
+      internalID: -5141099718501463359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_13
+      rect:
+        serializedVersion: 2
+        x: 2937
+        y: 2847
+        width: 540
+        height: 561
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310ab01146db61d60800000000000000
+      internalID: 7860678437102133267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_14
+      rect:
+        serializedVersion: 2
+        x: 3538
+        y: 2843
+        width: 513
+        height: 565
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a8a7f606e00e570800000000000000
+      internalID: 8493804704570706473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_15
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 2388
+        width: 653
+        height: 395
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4034a09ba3e9c40800000000000000
+      internalID: 5520914759618331808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_16
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 2354
+        width: 653
+        height: 428
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f812554016b9550800000000000000
+      internalID: 6168630785850052400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_17
+      rect:
+        serializedVersion: 2
+        x: 1972
+        y: 2322
+        width: 653
+        height: 459
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488bce534ffb49740800000000000000
+      internalID: 5157958528843692164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_18
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 2292
+        width: 653
+        height: 490
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164f2c8c501e54b00800000000000000
+      internalID: 812302722769548385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_19
+      rect:
+        serializedVersion: 2
+        x: 3398
+        y: 2264
+        width: 653
+        height: 517
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab580e59432e22ca0800000000000000
+      internalID: -6043019034497088070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_20
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1967
+        width: 653
+        height: 235
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168bc6337a9202100800000000000000
+      internalID: 81110591391709281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_21
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 1951
+        width: 653
+        height: 252
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e939af498ce3bab0800000000000000
+      internalID: -4993387487332582942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_22
+      rect:
+        serializedVersion: 2
+        x: 1972
+        y: 1917
+        width: 653
+        height: 286
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b00ed3db058bed0800000000000000
+      internalID: -2398078027857654991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_23
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 1879
+        width: 653
+        height: 323
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258728ca710270de0800000000000000
+      internalID: -1367088675833087918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_24
+      rect:
+        serializedVersion: 2
+        x: 3398
+        y: 1843
+        width: 653
+        height: 360
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f96ce933d8862f0800000000000000
+      internalID: -979377666106417352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_25
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 1574
+        width: 653
+        height: 208
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8c6e5d17fd6f570800000000000000
+      internalID: 8500227026721360043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Death_L_26
+      rect:
+        serializedVersion: 2
+        x: 3398
+        y: 1560
+        width: 653
+        height: 222
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c579a507d7a280830800000000000000
+      internalID: 4037523784181913436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 80f084e2033f61548a6c6c6d2565c968
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

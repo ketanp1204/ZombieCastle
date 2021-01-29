@@ -1,0 +1,1954 @@
+fileFormatVersion: 2
+guid: 8d50ed4f3c5f11d4eb93d54869f705af
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3177055270260919688
+    second: Z1_Attack_L_0
+  - first:
+      213: -335531501807415899
+    second: Z1_Attack_L_1
+  - first:
+      213: 3298298758362762585
+    second: Z1_Attack_L_2
+  - first:
+      213: -8578663117912463709
+    second: Z1_Attack_L_3
+  - first:
+      213: 7962793318141671494
+    second: Z1_Attack_L_4
+  - first:
+      213: -5149918795463688465
+    second: Z1_Attack_L_5
+  - first:
+      213: 1371012816286400441
+    second: Z1_Attack_L_6
+  - first:
+      213: -4819919823260980475
+    second: Z1_Attack_L_7
+  - first:
+      213: 8932326300610797569
+    second: Z1_Attack_L_8
+  - first:
+      213: -4396819979437586342
+    second: Z1_Attack_L_9
+  - first:
+      213: -7029571614704458778
+    second: Z1_Attack_L_10
+  - first:
+      213: -3057460256600046361
+    second: Z1_Attack_L_11
+  - first:
+      213: -408825756645088119
+    second: Z1_Attack_L_12
+  - first:
+      213: -1523102210475095243
+    second: Z1_Attack_L_13
+  - first:
+      213: -4990957452394950075
+    second: Z1_Attack_L_14
+  - first:
+      213: 7433388393981902387
+    second: Z1_Attack_L_15
+  - first:
+      213: -3354395802857638062
+    second: Z1_Attack_L_16
+  - first:
+      213: 3502611896321429679
+    second: Z1_Attack_L_17
+  - first:
+      213: 435219591859621687
+    second: Z1_Attack_L_18
+  - first:
+      213: -7133455317179233895
+    second: Z1_Attack_L_19
+  - first:
+      213: -4069874513432501691
+    second: Z1_Attack_L_20
+  - first:
+      213: 2716718877353447356
+    second: Z1_Attack_L_21
+  - first:
+      213: 4212702856747421521
+    second: Z1_Attack_L_22
+  - first:
+      213: -6600287952204698201
+    second: Z1_Attack_L_23
+  - first:
+      213: 6155831523310222700
+    second: Z1_Attack_L_24
+  - first:
+      213: 5842439228151986579
+    second: Z1_Attack_L_25
+  - first:
+      213: 2382972844953305450
+    second: Z1_Attack_L_26
+  - first:
+      213: -7645292299135323876
+    second: Z1_Attack_L_27
+  - first:
+      213: -6816912382781574442
+    second: Z1_Attack_L_28
+  - first:
+      213: -5353566130374230062
+    second: Z1_Attack_L_29
+  - first:
+      213: -3058272861710325459
+    second: Z1_Attack_L_30
+  - first:
+      213: 6386312500197026523
+    second: Z1_Attack_L_31
+  - first:
+      213: -8150163720563743575
+    second: Z1_Attack_L_32
+  - first:
+      213: 3464222573123253607
+    second: Z1_Attack_L_33
+  - first:
+      213: -3896745841955476620
+    second: Z1_Attack_L_34
+  - first:
+      213: -8997399013014700559
+    second: Z1_Attack_L_35
+  - first:
+      213: -7717741858460320224
+    second: Z1_Attack_L_36
+  - first:
+      213: 4562703321345741475
+    second: Z1_Attack_L_37
+  - first:
+      213: -6724048628378883218
+    second: Z1_Attack_L_38
+  - first:
+      213: -2298717830317180188
+    second: Z1_Attack_L_39
+  - first:
+      213: -1962364931384086788
+    second: Z1_Attack_L_40
+  - first:
+      213: 3531081317408594677
+    second: Z1_Attack_L_41
+  - first:
+      213: -2193181972040425983
+    second: Z1_Attack_L_42
+  - first:
+      213: 1537769926684068834
+    second: Z1_Attack_L_43
+  - first:
+      213: 1836690043677336383
+    second: Z1_Attack_L_44
+  - first:
+      213: -2529777268184756053
+    second: Z1_Attack_L_45
+  - first:
+      213: 7611261448837182383
+    second: Z1_Attack_L_46
+  - first:
+      213: 8835783337415472659
+    second: Z1_Attack_L_47
+  - first:
+      213: 8895311607593146096
+    second: Z1_Attack_L_48
+  - first:
+      213: -7551588671729479099
+    second: Z1_Attack_L_49
+  - first:
+      213: -5717729282637153109
+    second: Z1_Attack_L_50
+  - first:
+      213: -401450862793136787
+    second: Z1_Attack_L_51
+  - first:
+      213: -3713980484777685786
+    second: Z1_Attack_L_52
+  - first:
+      213: 3720359452839694980
+    second: Z1_Attack_L_53
+  - first:
+      213: -276723283357314285
+    second: Z1_Attack_L_54
+  - first:
+      213: -6741386870855626061
+    second: Z1_Attack_L_55
+  - first:
+      213: 7515379105546540948
+    second: Z1_Attack_L_56
+  - first:
+      213: 8645120050823575756
+    second: Z1_Attack_L_57
+  - first:
+      213: 1459089583322632396
+    second: Z1_Attack_L_58
+  - first:
+      213: 302674928206568087
+    second: Z1_Attack_L_59
+  - first:
+      213: 6687048151890635708
+    second: Z1_Attack_L_60
+  - first:
+      213: -5322013320298452812
+    second: Z1_Attack_L_61
+  - first:
+      213: 9133102768227017683
+    second: Z1_Attack_L_62
+  - first:
+      213: -6130832934204350040
+    second: Z1_Attack_L_63
+  - first:
+      213: -1478391559285272543
+    second: Z1_Attack_L_64
+  - first:
+      213: -5415767251202309329
+    second: Z1_Attack_L_65
+  - first:
+      213: 8570895456014834414
+    second: Z1_Attack_L_66
+  - first:
+      213: -6037842290153442013
+    second: Z1_Attack_L_67
+  - first:
+      213: -2424012796620914950
+    second: Z1_Attack_L_68
+  - first:
+      213: -6217366847203535704
+    second: Z1_Attack_L_69
+  - first:
+      213: -3936393888310794133
+    second: Z1_Attack_L_70
+  - first:
+      213: 632540425298066022
+    second: Z1_Attack_L_71
+  - first:
+      213: -3941379252237295675
+    second: Z1_Attack_L_72
+  - first:
+      213: -2778794588118734348
+    second: Z1_Attack_L_73
+  - first:
+      213: 6341550257240581615
+    second: Z1_Attack_L_74
+  - first:
+      213: -2934222850220716357
+    second: Z1_Attack_L_75
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: -1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Z1_Attack_L_0
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 7564
+        width: 334
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d4faf7fea271c20800000000000000
+      internalID: 3177055270260919688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_1
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 7564
+        width: 336
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5adc0d770e3f75bf0800000000000000
+      internalID: -335531501807415899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_2
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 7564
+        width: 343
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d035fde39e5cd20800000000000000
+      internalID: 3298298758362762585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_3
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 7564
+        width: 342
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a62511985772f880800000000000000
+      internalID: -8578663117912463709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_4
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 7564
+        width: 334
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64830bb8556818e60800000000000000
+      internalID: 7962793318141671494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_5
+      rect:
+        serializedVersion: 2
+        x: 2134
+        y: 7564
+        width: 334
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee77461420d788b0800000000000000
+      internalID: -5149918795463688465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_6
+      rect:
+        serializedVersion: 2
+        x: 2522
+        y: 7564
+        width: 339
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf324974e0d60310800000000000000
+      internalID: 1371012816286400441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_7
+      rect:
+        serializedVersion: 2
+        x: 2914
+        y: 7564
+        width: 339
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b6aa035743c1db0800000000000000
+      internalID: -4819919823260980475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_8
+      rect:
+        serializedVersion: 2
+        x: 3310
+        y: 7564
+        width: 342
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10029c5e17ff5fb70800000000000000
+      internalID: 8932326300610797569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_9
+      rect:
+        serializedVersion: 2
+        x: 3706
+        y: 7564
+        width: 346
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a584848268b5bf2c0800000000000000
+      internalID: -4396819979437586342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_10
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 6842
+        width: 306
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e32f565cd1f17e90800000000000000
+      internalID: -7029571614704458778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_11
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 6832
+        width: 298
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4ca728818b195d0800000000000000
+      internalID: -3057460256600046361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_12
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 6823
+        width: 291
+        height: 687
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984a320f32f835af0800000000000000
+      internalID: -408825756645088119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_13
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 6835
+        width: 291
+        height: 675
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b050cfb9adcdae0800000000000000
+      internalID: -1523102210475095243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_14
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 6851
+        width: 299
+        height: 659
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54219e8e3ae8cbab0800000000000000
+      internalID: -4990957452394950075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_15
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 6867
+        width: 302
+        height: 643
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e7dcc4c53b82760800000000000000
+      internalID: 7433388393981902387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_16
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 6883
+        width: 307
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257fb962acac271d0800000000000000
+      internalID: -3354395802857638062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_17
+      rect:
+        serializedVersion: 2
+        x: 2610
+        y: 6899
+        width: 311
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0db4a46f6cb9030800000000000000
+      internalID: 3502611896321429679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_18
+      rect:
+        serializedVersion: 2
+        x: 2978
+        y: 6915
+        width: 311
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f4514b9e53a0600800000000000000
+      internalID: 435219591859621687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_19
+      rect:
+        serializedVersion: 2
+        x: 3346
+        y: 6923
+        width: 322
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99909660f20e00d90800000000000000
+      internalID: -7133455317179233895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_20
+      rect:
+        serializedVersion: 2
+        x: 3725
+        y: 6923
+        width: 330
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542a07271b6e487c0800000000000000
+      internalID: -4069874513432501691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_21
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 6183
+        width: 391
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf0047dc69b3b520800000000000000
+      internalID: 2716718877353447356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_22
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 6183
+        width: 383
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f04b8ade6867a30800000000000000
+      internalID: 4212702856747421521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_23
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 6183
+        width: 374
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad6c89c3111764a0800000000000000
+      internalID: -6600287952204698201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_24
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 6183
+        width: 364
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6dbe0cc728ed6550800000000000000
+      internalID: 6155831523310222700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_25
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 6179
+        width: 359
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3997ecff583841150800000000000000
+      internalID: 5842439228151986579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_26
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 6160
+        width: 343
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6108dc4d25021120800000000000000
+      internalID: 2382972844953305450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_27
+      rect:
+        serializedVersion: 2
+        x: 2966
+        y: 6143
+        width: 334
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c117202192776e590800000000000000
+      internalID: -7645292299135323876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_28
+      rect:
+        serializedVersion: 2
+        x: 3354
+        y: 6128
+        width: 326
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2b75f2e467561a0800000000000000
+      internalID: -6816912382781574442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_29
+      rect:
+        serializedVersion: 2
+        x: 3738
+        y: 6114
+        width: 314
+        height: 652
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2df3b7508ff44b5b0800000000000000
+      internalID: -5353566130374230062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_30
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 5472
+        width: 403
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29e9832905de85d0800000000000000
+      internalID: -3058272861710325459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_31
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 5471
+        width: 407
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda61eef16db0a850800000000000000
+      internalID: 6386312500197026523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_32
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 5472
+        width: 403
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4a58e074dc4ee80800000000000000
+      internalID: -8150163720563743575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_33
+      rect:
+        serializedVersion: 2
+        x: 1826
+        y: 5472
+        width: 403
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765b6e57314631030800000000000000
+      internalID: 3464222573123253607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_34
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 5472
+        width: 403
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b63467d4afbe9c0800000000000000
+      internalID: -3896745841955476620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_35
+      rect:
+        serializedVersion: 2
+        x: 2746
+        y: 5471
+        width: 403
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdfec69441d22380800000000000000
+      internalID: -8997399013014700559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_36
+      rect:
+        serializedVersion: 2
+        x: 3206
+        y: 5472
+        width: 395
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e3f4a8ba215e490800000000000000
+      internalID: -7717741858460320224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_37
+      rect:
+        serializedVersion: 2
+        x: 3658
+        y: 5472
+        width: 394
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a2de4c1f7af15f30800000000000000
+      internalID: 4562703321345741475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_38
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 4787
+        width: 366
+        height: 631
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b2605e5616fa2a0800000000000000
+      internalID: -6724048628378883218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_39
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 4796
+        width: 374
+        height: 618
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea761dff405910e0800000000000000
+      internalID: -2298717830317180188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_40
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 4803
+        width: 378
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfeea21fd7744c4e0800000000000000
+      internalID: -1962364931384086788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_41
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 4815
+        width: 387
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa582defbbe00130800000000000000
+      internalID: 3531081317408594677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_42
+      rect:
+        serializedVersion: 2
+        x: 1846
+        y: 4823
+        width: 387
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e5dbccd904091e0800000000000000
+      internalID: -2193181972040425983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_43
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 4831
+        width: 395
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb4842d991475510800000000000000
+      internalID: 1537769926684068834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_44
+      rect:
+        serializedVersion: 2
+        x: 2742
+        y: 4831
+        width: 394
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3362ef0ddb3d7910800000000000000
+      internalID: 1836690043677336383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_45
+      rect:
+        serializedVersion: 2
+        x: 3194
+        y: 4831
+        width: 398
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba05df85afc64ecd0800000000000000
+      internalID: -2529777268184756053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_46
+      rect:
+        serializedVersion: 2
+        x: 3650
+        y: 4831
+        width: 402
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3b09626f1a0a960800000000000000
+      internalID: 7611261448837182383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_47
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 4088
+        width: 327
+        height: 646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316f6f2a1220f9a70800000000000000
+      internalID: 8835783337415472659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_48
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 4075
+        width: 308
+        height: 659
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f69ff817ce727b70800000000000000
+      internalID: 8895311607593146096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_49
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 4067
+        width: 295
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54253b3fc1e533790800000000000000
+      internalID: -7551588671729479099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_50
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 4070
+        width: 302
+        height: 660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac3092e28b86a0b0800000000000000
+      internalID: -5717729282637153109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_51
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 4071
+        width: 315
+        height: 659
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65e0783192cd6af0800000000000000
+      internalID: -401450862793136787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_52
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 4075
+        width: 322
+        height: 659
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ecc7163d6a457cc0800000000000000
+      internalID: -3713980484777685786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_53
+      rect:
+        serializedVersion: 2
+        x: 2506
+        y: 4080
+        width: 330
+        height: 650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482d647063f51a330800000000000000
+      internalID: 3720359452839694980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_54
+      rect:
+        serializedVersion: 2
+        x: 2892
+        y: 4083
+        width: 341
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3135862d3a1e82cf0800000000000000
+      internalID: -276723283357314285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_55
+      rect:
+        serializedVersion: 2
+        x: 3290
+        y: 4091
+        width: 350
+        height: 643
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b21b2dbb58c172a0800000000000000
+      internalID: -6741386870855626061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_56
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 4098
+        width: 358
+        height: 636
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4979e727a7dfb4860800000000000000
+      internalID: 7515379105546540948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_57
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 3427
+        width: 426
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc832f5e1e2a9f770800000000000000
+      internalID: 8645120050823575756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_58
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 3427
+        width: 420
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc01b65de3abf3410800000000000000
+      internalID: 1459089583322632396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_59
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 3427
+        width: 411
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a5b2a5e31533400800000000000000
+      internalID: 302674928206568087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_60
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 3427
+        width: 403
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbaf595dda2dcc50800000000000000
+      internalID: 6687048151890635708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_61
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 3427
+        width: 390
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8a6b915196426b0800000000000000
+      internalID: -5322013320298452812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_62
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 3416
+        width: 377
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3ee45149c4fbe70800000000000000
+      internalID: 9133102768227017683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_63
+      rect:
+        serializedVersion: 2
+        x: 3290
+        y: 3399
+        width: 359
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1eb7bcde7eaeaa0800000000000000
+      internalID: -6130832934204350040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_64
+      rect:
+        serializedVersion: 2
+        x: 3706
+        y: 3383
+        width: 346
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1209ddda5b2bb7be0800000000000000
+      internalID: -1478391559285272543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_65
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 2742
+        width: 371
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2384e5016457d4b0800000000000000
+      internalID: -5415767251202309329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_66
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 2739
+        width: 383
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea16c6b100f1f670800000000000000
+      internalID: 8570895456014834414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_67
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 2742
+        width: 399
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325b29d4d66453ca0800000000000000
+      internalID: -6037842290153442013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_68
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 2742
+        width: 410
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afeb866543d2c5ed0800000000000000
+      internalID: -2424012796620914950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_69
+      rect:
+        serializedVersion: 2
+        x: 2186
+        y: 2742
+        width: 419
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a494222bc977b9a0800000000000000
+      internalID: -6217366847203535704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_70
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 2742
+        width: 423
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68673f4d9e1f59c0800000000000000
+      internalID: -3936393888310794133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_71
+      rect:
+        serializedVersion: 2
+        x: 3142
+        y: 2742
+        width: 426
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a37fb5a2c37c800800000000000000
+      internalID: 632540425298066022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_72
+      rect:
+        serializedVersion: 2
+        x: 3626
+        y: 2742
+        width: 426
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf1d41d3786d49c0800000000000000
+      internalID: -3941379252237295675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_73
+      rect:
+        serializedVersion: 2
+        x: 2886
+        y: 2099
+        width: 344
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9a7677b0dbf69d0800000000000000
+      internalID: -2778794588118734348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_74
+      rect:
+        serializedVersion: 2
+        x: 3290
+        y: 2102
+        width: 347
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5ac182c56b10850800000000000000
+      internalID: 6341550257240581615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_L_75
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 2099
+        width: 358
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe82c82ddb8747d0800000000000000
+      internalID: -2934222850220716357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7307347710e7e114689da385f72896f2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class BoxTrigger : MonoBehaviour
 {
     private bool checkForInput = false;
+    private SpriteRenderer parentSR;
     private SpriteRenderer sR;
 
     void Start()
     {
+        parentSR = transform.parent.gameObject.GetComponent<SpriteRenderer>();
         sR = GetComponent<SpriteRenderer>();
     }
 
@@ -39,11 +41,13 @@ public class BoxTrigger : MonoBehaviour
             {
                 if (Player.instance.weaponDrawn)
                 {
+                    parentSR.sprite = GameAssets.instance.treasureBoxClosedSprite;
                     Player.instance.weaponDrawn = false;
                     Player.RemoveWeapon();
                 }
                 else
                 {
+                    parentSR.sprite = GameAssets.instance.treasureBoxOpenSprite;
                     Player.instance.weaponDrawn = true;
                     Player.DrawWeapon();
                 }

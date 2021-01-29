@@ -22,10 +22,7 @@ public class Player : MonoBehaviour
     private UnityEngine.Object playerReference;
 
     // Public Cached References
-    public GameObject rightCollisionArea;           // Reference to the right side collision area collider
-    public GameObject leftCollisionArea;            // Reference to the left side collision area collider
-    public GameObject rightPathfindingPoint;         // Reference to the right side pathfinding point
-    public GameObject leftPathfindingPoint;          // Reference to the left side pathfinding point
+    public Transform pathfindingTarget;             // Reference to the player's pathfinding target
 
 
     // Variables : Player
@@ -47,18 +44,21 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public int currentHealth;                       // Player's current health
     [HideInInspector]
-    public GameObject currentPathfindingTarget;     // Player's current pathfinding point based on direction of face
+    public bool takingDamage;
 
-    // Death Event
-    public event Action<Player> OnDeath;
 
-    
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
         }
+
+        SetReferences();
+        InitializeValues();
+
+        // Ignore player collisions with dead zombies
+        Physics2D.IgnoreLayerCollision(gameObject.layer, 13);
     }
 
     void OnEnable()
@@ -76,10 +76,14 @@ public class Player : MonoBehaviour
         healthBar = GetComponentInChildren<HealthBar>();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void InitializeValues()
     {
-        SetReferences();
+        facingRight = true;
+        movePlayer = true;
+        takingDamage = false;
+        weaponDrawn = true;             // FOR TESTING. CHANGE LATER.
+        movementSpeed = walkSpeed;
+        animator.SetFloat("FaceDir", 1f);
 
         if (PlayerStats.isFirstScene)
         {
@@ -94,25 +98,6 @@ public class Player : MonoBehaviour
             healthBar.SetMaxHealth(maxHealth);
             healthBar.SetHealth(currentHealth);
         }
-
-        InitializeValues();
-    }
-
-    private void InitializeValues()
-    {
-        facingRight = true;
-        movePlayer = true;
-        weaponDrawn = true;             // FOR TESTING. CHANGE LATER.
-        movementSpeed = walkSpeed;
-        animator.SetFloat("FaceDir", 1f);
-
-        //rightCollisionArea.SetActive(true);
-        //leftCollisionArea.SetActive(false);
-
-        rightPathfindingPoint.SetActive(true);
-        leftPathfindingPoint.SetActive(false);
-
-        currentPathfindingTarget = rightPathfindingPoint;
     }
 
     void FixedUpdate()
@@ -153,8 +138,10 @@ public class Player : MonoBehaviour
 
         if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
         {
-            rb.MovePosition((Vector2)transform.position + (movement * movementSpeed * Time.deltaTime));
-            // rb.velocity = new Vector2(movement.x * movementSpeed, rb.velocity.y);
+            if (!takingDamage)
+            {
+                rb.MovePosition((Vector2)transform.position + (movement * movementSpeed * Time.deltaTime));
+            }
         }
 
         animator.SetFloat("Horizontal", movement.x);
@@ -185,29 +172,11 @@ public class Player : MonoBehaviour
             {
                 // Set animation parameter
                 animator.SetFloat("FaceDir", 1f);
-
-                // Use right side collision and pathfinding area
-                //rightCollisionArea.SetActive(true);
-                //leftCollisionArea.SetActive(false);
-
-                rightPathfindingPoint.SetActive(true);
-                leftPathfindingPoint.SetActive(false);
-
-                currentPathfindingTarget = rightPathfindingPoint;
             }
             else
             {
                 // Set animation parameter
                 animator.SetFloat("FaceDir", -1f);
-
-                // Use left side collision and pathfinding area
-                //leftCollisionArea.SetActive(true);
-                //rightCollisionArea.SetActive(false);
-
-                rightPathfindingPoint.SetActive(true);
-                leftPathfindingPoint.SetActive(false);
-
-                currentPathfindingTarget = leftPathfindingPoint;
             }
 
             /*
@@ -251,63 +220,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
-    {
-        if (!IsDead)
-        {
-            // Reduce health
-            currentHealth -= damage;
-            PlayerStats.currentHealth = currentHealth;
-
-            // Update Health Bar
-            healthBar.SetHealth(currentHealth);
-
-            // Play hurt animation
-            animator.SetTrigger("Hurt");
-
-            // Die if health is less than 0
-            if (currentHealth <= 0)
-            {
-                Die();
-            }
-        }
-    }
-
-    void Die()
-    {
-        IsDead = true;
-        movePlayer = false;
-
-        // Play die animation
-        animator.SetBool("IsDead", true);
-
-        // Invoke Death Event
-        OnDeath?.Invoke(this);
-
-        // Disable Health Bar
-        healthBar.gameObject.SetActive(false);
-
-        // Respawn player
-        // Respawn();
-
-        StartCoroutine(DestroyGameObjectAfterDelay(gameObject));
-    }
-
-    void Respawn()
-    {
-        GameObject enemyClone = (GameObject)Instantiate(playerReference);
-        enemyClone.transform.position = transform.position;
-    }
-
-    private IEnumerator DestroyGameObjectAfterDelay(GameObject gameObject)
-    {
-        yield return new WaitForSeconds(5f);
-        Destroy(gameObject);
-
-        PlayerStats.isFirstScene = true;
-        SceneManager.LoadScene("CastleLobby");
-    }
-
     private void ResetValues()
     {
         
@@ -334,8 +246,8 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            rb.velocity = Vector2.zero;
-            animator.SetFloat("Magnitude", 0f);
+            // rb.velocity = Vector2.zero;
+            // animator.SetFloat("Magnitude", 0f);
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
     }

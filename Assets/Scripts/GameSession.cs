@@ -84,7 +84,7 @@ public class GameSession : MonoBehaviour
     void HandleSceneChanges()
     {
         AudioManager.Initialize();
-        // AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
+        AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
     }
 
     void FindCinemachineCamera()

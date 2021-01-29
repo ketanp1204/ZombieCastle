@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using System;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(EnemyCombat))]
 public class EnemyAI : MonoBehaviour
-{
+{ 
     [Header("Pathfinding")]
-    private Transform target;
     public float pathUpdateSeconds;
     [HideInInspector]
     public bool followPath;
@@ -19,60 +22,48 @@ public class EnemyAI : MonoBehaviour
     public float nextWaypointDistance = 3f;
     public float moveForceMultiplier = 19f;
 
-    // Zombie sprite object
-    private GameObject zombieGFX;
-
     // Cached References
+    private Transform target;
     private Seeker seeker;
     private Rigidbody2D rb;
     private Animator animator;
     private EnemyCombat enemyCombat;
-    private Enemy enemy;
-    private SceneType sceneTypeReference;
 
     // Variables
-    private int sceneType;
-    public float attackStartDistance = 3f;
+    public float attackStartDistance;
+    [HideInInspector]
+    public bool isAttacking;
+    private float distanceToPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
-        zombieGFX = transform.GetChild(0).gameObject;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().currentPathfindingTarget.transform;
         enemyCombat = GetComponent<EnemyCombat>();
-        enemy = GetComponent<Enemy>();
         animator = GetComponent<Animator>();
-        sceneTypeReference = FindObjectOfType<SceneType>();
         followPath = true;
+        isAttacking = false;
 
-        if (sceneTypeReference.type == SceneType.SceneTypes.S_TwoD)
-        {
-            sceneType = 1;
-        }
-        else if (sceneTypeReference.type == SceneType.SceneTypes.S_TwoPointFiveD)
-        {
-            sceneType = 2;
-        }
-
-        InvokeRepeating("UpdatePath", 0f, pathUpdateSeconds);
+        InvokeRepeating("UpdatePath", 1f, pathUpdateSeconds);
     }
 
     void UpdatePath()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, target.position);
-
-        if (seeker.IsDone() && followPath && distanceToPlayer > attackStartDistance)
+        if (followPath && !EnemyCombat.instance.IsDead)
         {
-            enemyCombat.StopAttack();
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
-        } 
+            target = Player.instance.pathfindingTarget;
+            if (seeker.IsDone())
+            {
+                enemyCombat.StopAttack();
+                seeker.StartPath(rb.position, target.position, OnPathComplete);
+            }
+        }
     }
 
     void FixedUpdate()
     {
-        if(followPath && !enemy.IsDead)
+        if(followPath && !EnemyCombat.instance.IsDead)
             FollowPath();
     }
 
@@ -89,22 +80,17 @@ public class EnemyAI : MonoBehaviour
         // Reached end of path
         if (currentWaypoint >= path.vectorPath.Count || distanceToPlayer < attackStartDistance)
         {
+            followPath = false;
+            isAttacking = true;
             force = Vector2.zero;
             enemyCombat.InvokeAttack();
+            StartCoroutine(WaitForPlayerToMoveAway());
         } 
         else
         {
             direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
             
-            // Change movement applied on enemy based on scene type 
-            if (sceneType == 1)
-            {
-                force = new Vector2(direction.x * moveForceMultiplier, direction.y) * speed * Time.fixedDeltaTime;
-            }
-            else
-            {
-                force = direction * speed * Time.fixedDeltaTime;
-            }
+            force = new Vector2(direction.x * moveForceMultiplier, rb.velocity.y) * speed * Time.fixedDeltaTime;
 
             // Move the enemy
             rb.AddForce(force);
@@ -135,10 +121,6 @@ public class EnemyAI : MonoBehaviour
     {
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Magnitude", movement.magnitude);
-        if(sceneType == 2)
-        {
-            animator.SetFloat("Vertical", movement.y);
-        }
     }
 
     void OnPathComplete(Path p)
@@ -155,19 +137,17 @@ public class EnemyAI : MonoBehaviour
         rb.velocity = Vector2.zero;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private IEnumerator WaitForPlayerToMoveAway()
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            followPath = false;
-        }
-    }
+        target = Player.instance.pathfindingTarget;
+        distanceToPlayer = Vector2.Distance(transform.position, target.position);
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
+        while (distanceToPlayer < attackStartDistance)
         {
-            followPath = true;
+            yield return new WaitForSeconds(pathUpdateSeconds);
+            distanceToPlayer = Vector2.Distance(transform.position, target.position);
         }
+
+        followPath = true;
     }
 }

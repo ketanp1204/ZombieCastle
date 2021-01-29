@@ -45,12 +45,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundAudioClipArray:
   - sound: 0
-    audioClip: {fileID: 8300000, guid: 68272ef33e02b494d8b2f960b5850d70, type: 3}
+    soundData: {fileID: 11400000, guid: b9f580fac2d29c044b7aeeaa49aabb50, type: 2}
   - sound: 1
-    audioClip: {fileID: 8300000, guid: 406fa556dd0b88445bf7934bbe82bf36, type: 3}
+    soundData: {fileID: 11400000, guid: 296b61f02f2e8f046aeee2f799aa53f7, type: 2}
   - sound: 2
-    audioClip: {fileID: 8300000, guid: 1eb6746aaaf3e084e911e3f9498f93c9, type: 3}
+    soundData: {fileID: 11400000, guid: fa09a295ae8a7134aac144e0bd82d9c4, type: 2}
   - sound: 3
-    audioClip: {fileID: 8300000, guid: 93845fe34b84e354aa7ee51a7da5857e, type: 3}
+    soundData: {fileID: 11400000, guid: 5a95db12644e57d4f82ff46971a1ba50, type: 2}
   interactKeyPrefab: {fileID: 5030435721837794955, guid: d7848a704facc624bb5076b8feef56ce, type: 3}
   objectNamePrefab: {fileID: 5873620021101757153, guid: fe5bbaa9084d4c949a10f07027549676, type: 3}
+  treasureBoxOpenSprite: {fileID: 21300000, guid: fcf983593b0d1b443b76767648faae7d, type: 3}
+  treasureBoxClosedSprite: {fileID: 21300000, guid: 23bf4929c984bc8429d0721ec6325e3b, type: 3}

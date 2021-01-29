@@ -224,6 +224,96 @@ TextureImporter:
   - first:
       213: -8391387775580315987
     second: Death_L_29
+  - first:
+      213: 3379978139057674508
+    second: ML_Death_L_0
+  - first:
+      213: 3173524237294645299
+    second: ML_Death_L_1
+  - first:
+      213: 5596851816370630852
+    second: ML_Death_L_2
+  - first:
+      213: -7952489504205738702
+    second: ML_Death_L_3
+  - first:
+      213: 540798259350299817
+    second: ML_Death_L_4
+  - first:
+      213: 1787801153307703109
+    second: ML_Death_L_5
+  - first:
+      213: 714958242205572543
+    second: ML_Death_L_6
+  - first:
+      213: -4674838398079684088
+    second: ML_Death_L_7
+  - first:
+      213: 6143919963334489821
+    second: ML_Death_L_8
+  - first:
+      213: 3993286949297774919
+    second: ML_Death_L_9
+  - first:
+      213: 386987802042542409
+    second: ML_Death_L_10
+  - first:
+      213: 3214706984180793269
+    second: ML_Death_L_11
+  - first:
+      213: -3764515125841818723
+    second: ML_Death_L_13
+  - first:
+      213: 9028905712500150135
+    second: ML_Death_L_12
+  - first:
+      213: 2787055792686106670
+    second: ML_Death_L_14
+  - first:
+      213: -2610549106147354041
+    second: ML_Death_L_15
+  - first:
+      213: 7501238298484140353
+    second: ML_Death_L_16
+  - first:
+      213: 6860447278912158758
+    second: ML_Death_L_17
+  - first:
+      213: 7088412726532148127
+    second: ML_Death_L_22
+  - first:
+      213: -9077052485834060039
+    second: ML_Death_L_18
+  - first:
+      213: 481491156042675402
+    second: ML_Death_L_19
+  - first:
+      213: -3395080550402532993
+    second: ML_Death_L_20
+  - first:
+      213: -5076149077035338635
+    second: ML_Death_L_21
+  - first:
+      213: -5014501835296845832
+    second: ML_Death_L_23
+  - first:
+      213: -8570144981980759388
+    second: ML_Death_L_24
+  - first:
+      213: -3222921620986800369
+    second: ML_Death_L_25
+  - first:
+      213: 3854165670569984678
+    second: ML_Death_L_27
+  - first:
+      213: -2557505819289928303
+    second: ML_Death_L_26
+  - first:
+      213: 7196804718002244918
+    second: ML_Death_L_28
+  - first:
+      213: 3355564588354325590
+    second: ML_Death_L_29
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -268,7 +358,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 120
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -285,7 +375,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -297,7 +387,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -309,7 +399,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -321,7 +411,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -335,631 +425,631 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death_L_0
+      name: ML_Death_L_0
       rect:
         serializedVersion: 2
         x: 45
         y: 3434
         width: 306
         height: 617
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f40b7e8433741680800000000000000
-      internalID: -8785270303527074574
+      spriteID: c095e17a53818ee20800000000000000
+      internalID: 3379978139057674508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_1
+      name: ML_Death_L_1
       rect:
         serializedVersion: 2
         x: 412
         y: 3440
         width: 313
         height: 610
-      alignment: 9
-      pivot: {x: 0.5, y: 0.52}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f6e44eba4e850db0800000000000000
-      internalID: -4826294973986707723
+      spriteID: 3303a02da7f9a0c20800000000000000
+      internalID: 3173524237294645299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_2
+      name: ML_Death_L_2
       rect:
         serializedVersion: 2
         x: 786
         y: 3446
         width: 317
         height: 603
-      alignment: 9
-      pivot: {x: 0.5, y: 0.54}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49f8cde92701d0fd0800000000000000
-      internalID: -2374223344076812396
+      spriteID: 4c07547d2130cad40800000000000000
+      internalID: 5596851816370630852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_3
+      name: ML_Death_L_3
       rect:
         serializedVersion: 2
         x: 1164
         y: 3454
         width: 319
         height: 597
-      alignment: 9
-      pivot: {x: 0.5, y: 0.56}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f78cb79ac03970c0800000000000000
-      internalID: -4577573899558156297
+      spriteID: 23d6bc51ee413a190800000000000000
+      internalID: -7952489504205738702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_4
+      name: ML_Death_L_4
       rect:
         serializedVersion: 2
         x: 1545
         y: 3460
         width: 322
         height: 589
-      alignment: 9
-      pivot: {x: 0.5, y: 0.58}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1268b54e68e74e300800000000000000
-      internalID: 280488194625734177
+      spriteID: 9a469bfc62d418700800000000000000
+      internalID: 540798259350299817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_5
+      name: ML_Death_L_5
       rect:
         serializedVersion: 2
         x: 1928
         y: 3468
         width: 325
         height: 582
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d5899f8cca144c00800000000000000
-      internalID: 883860892756313556
+      spriteID: 54770ff3dab8fc810800000000000000
+      internalID: 1787801153307703109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_6
+      name: ML_Death_L_6
       rect:
         serializedVersion: 2
         x: 2315
         y: 3482
         width: 338
         height: 568
-      alignment: 9
-      pivot: {x: 0.5, y: 0.62}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b89bf10319d8e4c0800000000000000
-      internalID: -4257914772017932107
+      spriteID: fbd96e7bbba0ce900800000000000000
+      internalID: 714958242205572543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_7
+      name: ML_Death_L_7
       rect:
         serializedVersion: 2
         x: 2714
         y: 3498
         width: 353
         height: 553
-      alignment: 9
-      pivot: {x: 0.5, y: 0.64}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9f5616b5f19f2b10800000000000000
-      internalID: 1958944847437389724
+      spriteID: 802ba1cce33af1fb0800000000000000
+      internalID: -4674838398079684088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_8
+      name: ML_Death_L_8
       rect:
         serializedVersion: 2
         x: 3127
         y: 3510
         width: 368
         height: 540
-      alignment: 9
-      pivot: {x: 0.5, y: 0.66}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4448f4002b836f80800000000000000
-      internalID: -8114489133952908212
+      spriteID: dd6bbfe97a6934550800000000000000
+      internalID: 6143919963334489821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_9
+      name: ML_Death_L_9
       rect:
         serializedVersion: 2
         x: 3555
         y: 3526
         width: 382
         height: 524
-      alignment: 9
-      pivot: {x: 0.5, y: 0.68}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71a9157a06f156c30800000000000000
-      internalID: 4351919114907916823
+      spriteID: 741e813b2510b6730800000000000000
+      internalID: 3993286949297774919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_10
+      name: ML_Death_L_10
       rect:
         serializedVersion: 2
         x: 47
         y: 2863
         width: 396
         height: 510
-      alignment: 9
-      pivot: {x: 0.5, y: 0.7}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 221cc108cc2159370800000000000000
-      internalID: 8328583755423596834
+      spriteID: 949a7290b5bde5500800000000000000
+      internalID: 386987802042542409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_11
+      name: ML_Death_L_11
       rect:
         serializedVersion: 2
         x: 505
         y: 2875
         width: 410
         height: 498
-      alignment: 9
-      pivot: {x: 0.5, y: 0.72}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81e77a3367575bcf0800000000000000
-      internalID: -237154254833877480
+      spriteID: 5bf301948feec9c20800000000000000
+      internalID: 3214706984180793269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_13
+      name: ML_Death_L_13
       rect:
         serializedVersion: 2
         x: 1453
         y: 2899
         width: 430
         height: 475
-      alignment: 9
-      pivot: {x: 0.5, y: 0.76}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a753624638d2eeb0800000000000000
-      internalID: -4691950134212995166
+      spriteID: d9b0d943071c1cbc0800000000000000
+      internalID: -3764515125841818723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_12
+      name: ML_Death_L_12
       rect:
         serializedVersion: 2
         x: 975
         y: 2887
         width: 418
         height: 479
-      alignment: 9
-      pivot: {x: 0.5, y: 0.74}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7b5fbe7523a9f430800000000000000
-      internalID: 3817261540608793467
+      spriteID: 77f011888ed1d4d70800000000000000
+      internalID: 9028905712500150135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_14
+      name: ML_Death_L_14
       rect:
         serializedVersion: 2
         x: 1943
         y: 2911
         width: 444
         height: 448
-      alignment: 9
-      pivot: {x: 0.5, y: 0.78}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18aba87c2c8f2de90800000000000000
-      internalID: -7002260955152598399
+      spriteID: e28004c1a7c9da620800000000000000
+      internalID: 2787055792686106670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_15
+      name: ML_Death_L_15
       rect:
         serializedVersion: 2
         x: 2448
         y: 2923
         width: 459
         height: 432
-      alignment: 9
-      pivot: {x: 0.5, y: 0.8}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 529b2854628844940800000000000000
-      internalID: 5279494361141393701
+      spriteID: 74a9f535b6775cbd0800000000000000
+      internalID: -2610549106147354041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_16
+      name: ML_Death_L_16
       rect:
         serializedVersion: 2
         x: 2967
         y: 2937
         width: 488
         height: 416
-      alignment: 9
-      pivot: {x: 0.5, y: 0.82}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fb4ce9fc0c0cb100800000000000000
-      internalID: 124988139531684853
+      spriteID: 149e3bc3d70c91860800000000000000
+      internalID: 7501238298484140353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_17
+      name: ML_Death_L_17
       rect:
         serializedVersion: 2
-        x: 3519
+        x: 3516
         y: 2949
         width: 517
         height: 399
-      alignment: 9
-      pivot: {x: 0.5, y: 0.84}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a645998c425062f50800000000000000
-      internalID: 6856173138260612202
+      spriteID: 62cbad3b374353f50800000000000000
+      internalID: 6860447278912158758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_22
+      name: ML_Death_L_22
       rect:
         serializedVersion: 2
         x: 2645
         y: 2412
         width: 662
-        height: 384
-      alignment: 9
-      pivot: {x: 0.5, y: 0.9}
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6ab24fea9a2cb8d0800000000000000
-      internalID: -2829339620968056209
+      spriteID: f9b8e4a91d91f5260800000000000000
+      internalID: 7088412726532148127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_18
+      name: ML_Death_L_18
       rect:
         serializedVersion: 2
         x: 45
         y: 2394
         width: 546
         height: 383
-      alignment: 9
-      pivot: {x: 0.5, y: 0.86}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c08148091fc241980800000000000000
-      internalID: -8569174774955894772
+      spriteID: 9fec84e3bd4d70280800000000000000
+      internalID: -9077052485834060039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_19
+      name: ML_Death_L_19
       rect:
         serializedVersion: 2
         x: 652
         y: 2398
         width: 575
         height: 384
-      alignment: 9
-      pivot: {x: 0.5, y: 0.88}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b1cc3c6f3dd5f600800000000000000
-      internalID: 501550197990277555
+      spriteID: ac47a66c7a99ea600800000000000000
+      internalID: 481491156042675402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_20
+      name: ML_Death_L_20
       rect:
         serializedVersion: 2
         x: 1287
         y: 2406
         width: 604
         height: 384
-      alignment: 9
-      pivot: {x: 0.5, y: 0.9}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b43272949fa40ec0800000000000000
-      internalID: -3601560749342575436
+      spriteID: f795b613a3042e0d0800000000000000
+      internalID: -3395080550402532993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_21
+      name: ML_Death_L_21
       rect:
         serializedVersion: 2
         x: 1952
         y: 2412
         width: 633
         height: 384
-      alignment: 9
-      pivot: {x: 0.5, y: 0.9}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c847a3a4b16acb910800000000000000
-      internalID: 1854539782709474444
+      spriteID: 574b16c1f45ed89b0800000000000000
+      internalID: -5076149077035338635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_23
+      name: ML_Death_L_23
       rect:
         serializedVersion: 2
-        x: 38
-        y: 1920
+        x: 46
+        y: 1947
         width: 691
-        height: 413
-      alignment: 9
-      pivot: {x: 0.5, y: 0.9}
+        height: 387
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9c20fdd29db1a640800000000000000
-      internalID: 5089557492391750812
+      spriteID: 8ff46951629e86ab0800000000000000
+      internalID: -5014501835296845832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_24
+      name: ML_Death_L_24
       rect:
         serializedVersion: 2
         x: 797
-        y: 1919
+        y: 1946
         width: 751
-        height: 414
-      alignment: 9
-      pivot: {x: 0.5, y: 0.9}
+        height: 387
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b270eefed3b1a2990800000000000000
-      internalID: -7410080284052420821
+      spriteID: 4aab073ab8ab01980800000000000000
+      internalID: -8570144981980759388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_25
+      name: ML_Death_L_25
       rect:
         serializedVersion: 2
         x: 1577
         y: 1947
         width: 750
         height: 386
-      alignment: 9
-      pivot: {x: 0.5, y: 0.9}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76017f52588f987f0800000000000000
-      internalID: -609683023780704153
+      spriteID: f07d72a8cd1e543d0800000000000000
+      internalID: -3222921620986800369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_27
+      name: ML_Death_L_27
       rect:
         serializedVersion: 2
         x: 3227
         y: 1947
         width: 808
-        height: 381
-      alignment: 9
-      pivot: {x: 0.5, y: 0.9}
+        height: 290
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cf353066fdd7e870800000000000000
-      internalID: 8712176054417309639
+      spriteID: 6a244d3d14fbc7530800000000000000
+      internalID: 3854165670569984678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_26
+      name: ML_Death_L_26
       rect:
         serializedVersion: 2
         x: 2388
         y: 1947
         width: 779
-        height: 387
-      alignment: 9
-      pivot: {x: 0.5, y: 0.9}
+        height: 286
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10e6fa1cc11d73980800000000000000
-      internalID: -8559142645355549183
+      spriteID: 19dba32f10ae18cd0800000000000000
+      internalID: -2557505819289928303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_28
+      name: ML_Death_L_28
       rect:
         serializedVersion: 2
         x: 46
         y: 1500
         width: 837
-        height: 388
-      alignment: 9
-      pivot: {x: 0.5, y: 0.9}
+        height: 271
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9990647914ce724e0800000000000000
-      internalID: -2006375342515287655
+      spriteID: 63d016eb2cf20e360800000000000000
+      internalID: 7196804718002244918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_L_29
+      name: ML_Death_L_29
       rect:
         serializedVersion: 2
         x: 943
         y: 1500
         width: 850
-        height: 382
-      alignment: 9
-      pivot: {x: 0.5, y: 0.9}
+        height: 271
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: daedaff074dcb8b80800000000000000
-      internalID: -8391387775580315987
+      spriteID: 65c4dbde63c519e20800000000000000
+      internalID: 3355564588354325590
       vertices: []
       indices: 
       edges: []

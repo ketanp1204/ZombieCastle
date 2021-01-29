@@ -1,0 +1,2182 @@
+fileFormatVersion: 2
+guid: 4b87023de173a174394c1cdc30d61045
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8905367697482299808
+    second: Z1_Attack_R_0
+  - first:
+      213: 3162151311357259260
+    second: Z1_Attack_R_1
+  - first:
+      213: 4589373859847182334
+    second: Z1_Attack_R_2
+  - first:
+      213: 7553313263988902777
+    second: Z1_Attack_R_3
+  - first:
+      213: -2219956379929353363
+    second: Z1_Attack_R_4
+  - first:
+      213: 8437984560245766080
+    second: Z1_Attack_R_5
+  - first:
+      213: 5168832447967949083
+    second: Z1_Attack_R_6
+  - first:
+      213: 4902163663355255511
+    second: Z1_Attack_R_7
+  - first:
+      213: -4024361622038279513
+    second: Z1_Attack_R_8
+  - first:
+      213: 1057866848134554570
+    second: Z1_Attack_R_9
+  - first:
+      213: 2046171426503322142
+    second: Z1_Attack_R_10
+  - first:
+      213: 269203855344384300
+    second: Z1_Attack_R_11
+  - first:
+      213: -749713388421393459
+    second: Z1_Attack_R_12
+  - first:
+      213: -7848531018415350793
+    second: Z1_Attack_R_13
+  - first:
+      213: -5629272230529313082
+    second: Z1_Attack_R_14
+  - first:
+      213: 6291908110723432904
+    second: Z1_Attack_R_15
+  - first:
+      213: 6780171110709356837
+    second: Z1_Attack_R_16
+  - first:
+      213: -2038622149670202860
+    second: Z1_Attack_R_17
+  - first:
+      213: 4287438607460162275
+    second: Z1_Attack_R_18
+  - first:
+      213: -2864302639119007376
+    second: Z1_Attack_R_19
+  - first:
+      213: 470236052452184207
+    second: Z1_Attack_R_20
+  - first:
+      213: -3590211701732556023
+    second: Z1_Attack_R_21
+  - first:
+      213: 2104723442693623774
+    second: Z1_Attack_R_22
+  - first:
+      213: 6173774820385532364
+    second: Z1_Attack_R_23
+  - first:
+      213: -8797350100418604257
+    second: Z1_Attack_R_24
+  - first:
+      213: 6068632536844821529
+    second: Z1_Attack_R_25
+  - first:
+      213: -7580724865341011360
+    second: Z1_Attack_R_26
+  - first:
+      213: 9173207116649834486
+    second: Z1_Attack_R_27
+  - first:
+      213: -5212443957904638584
+    second: Z1_Attack_R_28
+  - first:
+      213: -3124327408281320499
+    second: Z1_Attack_R_29
+  - first:
+      213: 6213203719728767472
+    second: Z1_Attack_R_30
+  - first:
+      213: -7708209327999886703
+    second: Z1_Attack_R_31
+  - first:
+      213: 1253540914557109573
+    second: Z1_Attack_R_32
+  - first:
+      213: 8103929175842815189
+    second: Z1_Attack_R_33
+  - first:
+      213: 6317847220727496419
+    second: Z1_Attack_R_34
+  - first:
+      213: 5798368332588468510
+    second: Z1_Attack_R_35
+  - first:
+      213: 3506272103065073085
+    second: Z1_Attack_R_36
+  - first:
+      213: 3670853406243797109
+    second: Z1_Attack_R_37
+  - first:
+      213: -3377750798003034763
+    second: Z1_Attack_R_38
+  - first:
+      213: -3169696156380324372
+    second: Z1_Attack_R_39
+  - first:
+      213: 183490107496240923
+    second: Z1_Attack_R_40
+  - first:
+      213: -1757081692706892165
+    second: Z1_Attack_R_41
+  - first:
+      213: 2500329753847690416
+    second: Z1_Attack_R_42
+  - first:
+      213: 6923577915460533701
+    second: Z1_Attack_R_43
+  - first:
+      213: 2164146860790121145
+    second: Z1_Attack_R_44
+  - first:
+      213: -3675653447134537261
+    second: Z1_Attack_R_45
+  - first:
+      213: 7474364120446291681
+    second: Z1_Attack_R_46
+  - first:
+      213: 620069563357133289
+    second: Z1_Attack_R_47
+  - first:
+      213: -8004411557840793977
+    second: Z1_Attack_R_48
+  - first:
+      213: -6042210004665919897
+    second: Z1_Attack_R_49
+  - first:
+      213: -1728467083410778627
+    second: Z1_Attack_R_50
+  - first:
+      213: -5837517071870510177
+    second: Z1_Attack_R_51
+  - first:
+      213: 104052142101266697
+    second: Z1_Attack_R_52
+  - first:
+      213: -607918008080338413
+    second: Z1_Attack_R_53
+  - first:
+      213: -194195048306621677
+    second: Z1_Attack_R_54
+  - first:
+      213: -6185131310440421557
+    second: Z1_Attack_R_55
+  - first:
+      213: 7675718063680231778
+    second: Z1_Attack_R_56
+  - first:
+      213: -2432199643684920761
+    second: Z1_Attack_R_57
+  - first:
+      213: 6632741627768561254
+    second: Z1_Attack_R_58
+  - first:
+      213: -4619911400795679577
+    second: Z1_Attack_R_59
+  - first:
+      213: -1905000499440966730
+    second: Z1_Attack_R_60
+  - first:
+      213: 7485339536715426362
+    second: Z1_Attack_R_61
+  - first:
+      213: -41039257485250886
+    second: Z1_Attack_R_62
+  - first:
+      213: -4486823352703046136
+    second: Z1_Attack_R_63
+  - first:
+      213: 1582421785149591039
+    second: Z1_Attack_R_64
+  - first:
+      213: -1759644983307791569
+    second: Z1_Attack_R_65
+  - first:
+      213: -4614810677229430879
+    second: Z1_Attack_R_66
+  - first:
+      213: 2959510208942515094
+    second: Z1_Attack_R_67
+  - first:
+      213: 5841670264618140566
+    second: Z1_Attack_R_68
+  - first:
+      213: 480434297706670184
+    second: Z1_Attack_R_69
+  - first:
+      213: -3548738810541439600
+    second: Z1_Attack_R_70
+  - first:
+      213: -669260822783580008
+    second: Z1_Attack_R_71
+  - first:
+      213: -5903757026499721382
+    second: Z1_Attack_R_72
+  - first:
+      213: -461885462012610050
+    second: Z1_Attack_R_73
+  - first:
+      213: 7442146409700869171
+    second: Z1_Attack_R_74
+  - first:
+      213: -5839772597580192436
+    second: Z1_Attack_R_75
+  - first:
+      213: -4293048709345512570
+    second: Z1_Attack_0
+  - first:
+      213: 8533560639705783200
+    second: Z1_Attack_1
+  - first:
+      213: 3949193069472291954
+    second: Z1_Attack_2
+  - first:
+      213: 878558102319915568
+    second: Z1_Attack_3
+  - first:
+      213: 3137635409469366458
+    second: Z1_Attack_4
+  - first:
+      213: 1986462502697649081
+    second: Z1_Attack_5
+  - first:
+      213: -5232225830125134128
+    second: Z1_Attack_6
+  - first:
+      213: 3413441488633151599
+    second: Z1_Attack_7
+  - first:
+      213: 7205214807917283142
+    second: Z1_Attack_8
+  - first:
+      213: 1486888738171402027
+    second: Z1_Attack_9
+  - first:
+      213: 917339470240301661
+    second: Z1_Attack_10
+  - first:
+      213: -3281021928299855442
+    second: Z1_Attack_11
+  - first:
+      213: -1298748193145383512
+    second: Z1_Attack_12
+  - first:
+      213: 6952931818009970096
+    second: Z1_Attack_13
+  - first:
+      213: -8007689635392216558
+    second: Z1_Attack_14
+  - first:
+      213: -3255898553850555325
+    second: Z1_Attack_15
+  - first:
+      213: 6221405270108019760
+    second: Z1_Attack_16
+  - first:
+      213: -5051230254579504687
+    second: Z1_Attack_17
+  - first:
+      213: -339521380769999167
+    second: Z1_Attack_18
+  - first:
+      213: 6040592745274357191
+    second: Z1_Attack_19
+  - first:
+      213: 6259732763476410509
+    second: Z1_Attack_20
+  - first:
+      213: -6624425097701926843
+    second: Z1_Attack_21
+  - first:
+      213: 8567113603659358882
+    second: Z1_Attack_22
+  - first:
+      213: -7946724804242658498
+    second: Z1_Attack_23
+  - first:
+      213: -3638023617585411101
+    second: Z1_Attack_24
+  - first:
+      213: 3983916909614609955
+    second: Z1_Attack_25
+  - first:
+      213: 6471899928192454209
+    second: Z1_Attack_26
+  - first:
+      213: -6373664549274107735
+    second: Z1_Attack_27
+  - first:
+      213: 7179106103683906609
+    second: Z1_Attack_28
+  - first:
+      213: 590696794082798007
+    second: Z1_Attack_29
+  - first:
+      213: -8552607695651246574
+    second: Z1_Attack_30
+  - first:
+      213: 4807102891680864813
+    second: Z1_Attack_31
+  - first:
+      213: 8002973453628140390
+    second: Z1_Attack_32
+  - first:
+      213: 6707596516676535674
+    second: Z1_Attack_33
+  - first:
+      213: 8389866042603891829
+    second: Z1_Attack_34
+  - first:
+      213: 374512480518535503
+    second: Z1_Attack_35
+  - first:
+      213: 6406544023860372857
+    second: Z1_Attack_36
+  - first:
+      213: -1663035554436783515
+    second: Z1_Attack_37
+  - first:
+      213: -4635472847491567333
+    second: Z1_Attack_38
+  - first:
+      213: 3927907801824052732
+    second: Z1_Attack_39
+  - first:
+      213: -4567605582939495806
+    second: Z1_Attack_40
+  - first:
+      213: 3747386844706215514
+    second: Z1_Attack_41
+  - first:
+      213: -1602456928758800184
+    second: Z1_Attack_42
+  - first:
+      213: -2992830716268740541
+    second: Z1_Attack_43
+  - first:
+      213: 265966029716884839
+    second: Z1_Attack_44
+  - first:
+      213: 5114352506614283476
+    second: Z1_Attack_45
+  - first:
+      213: 6094519226987641559
+    second: Z1_Attack_46
+  - first:
+      213: -682281823138354122
+    second: Z1_Attack_47
+  - first:
+      213: -8027336941225392523
+    second: Z1_Attack_48
+  - first:
+      213: -3189720621079051943
+    second: Z1_Attack_49
+  - first:
+      213: 7617169367612244030
+    second: Z1_Attack_50
+  - first:
+      213: 7014957799352280364
+    second: Z1_Attack_51
+  - first:
+      213: -7136060627835965016
+    second: Z1_Attack_52
+  - first:
+      213: -1250789608335499194
+    second: Z1_Attack_53
+  - first:
+      213: -8298410691742335957
+    second: Z1_Attack_54
+  - first:
+      213: 5552468425883453950
+    second: Z1_Attack_55
+  - first:
+      213: 9161127455940854065
+    second: Z1_Attack_56
+  - first:
+      213: 7970420364227156612
+    second: Z1_Attack_57
+  - first:
+      213: 8825251563709877259
+    second: Z1_Attack_58
+  - first:
+      213: -7590589822284230208
+    second: Z1_Attack_59
+  - first:
+      213: 4763300516264837337
+    second: Z1_Attack_60
+  - first:
+      213: 4305133151078660843
+    second: Z1_Attack_61
+  - first:
+      213: 4226618582753106401
+    second: Z1_Attack_62
+  - first:
+      213: 2093479950604862270
+    second: Z1_Attack_63
+  - first:
+      213: -4345696357286068535
+    second: Z1_Attack_64
+  - first:
+      213: -4980105462149601068
+    second: Z1_Attack_65
+  - first:
+      213: -4299914883737477642
+    second: Z1_Attack_66
+  - first:
+      213: 2437360638299944758
+    second: Z1_Attack_67
+  - first:
+      213: -1706643010924677867
+    second: Z1_Attack_68
+  - first:
+      213: -3103636122202909264
+    second: Z1_Attack_69
+  - first:
+      213: 4427955727016799039
+    second: Z1_Attack_70
+  - first:
+      213: -5357016525105205233
+    second: Z1_Attack_71
+  - first:
+      213: 142570827793409777
+    second: Z1_Attack_72
+  - first:
+      213: -7476796291428760824
+    second: Z1_Attack_73
+  - first:
+      213: -7975373479588354169
+    second: Z1_Attack_74
+  - first:
+      213: -457336343403575290
+    second: Z1_Attack_75
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Z1_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 7566
+        width: 339
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683f204c1f60c64c0800000000000000
+      internalID: -4293048709345512570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 7566
+        width: 336
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab1be6603c4d6670800000000000000
+      internalID: 8533560639705783200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 7566
+        width: 334
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c94574c2a5ec630800000000000000
+      internalID: 3949193069472291954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 7566
+        width: 331
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032e15370f3413c00800000000000000
+      internalID: 878558102319915568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 7566
+        width: 327
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0eb10f7ce1b8b20800000000000000
+      internalID: 3137635409469366458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 7566
+        width: 333
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b34de81f15519b10800000000000000
+      internalID: 1986462502697649081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 7566
+        width: 335
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de94ca34566367b0800000000000000
+      internalID: -5232225830125134128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_7
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 7566
+        width: 335
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f604f8fd2fafe5f20800000000000000
+      internalID: 3413441488633151599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_8
+      rect:
+        serializedVersion: 2
+        x: 3202
+        y: 7566
+        width: 332
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6474b4461b01ef360800000000000000
+      internalID: 7205214807917283142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_9
+      rect:
+        serializedVersion: 2
+        x: 3594
+        y: 7566
+        width: 329
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b273c33fd6d72a410800000000000000
+      internalID: 1486888738171402027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_10
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 6925
+        width: 324
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d524e1e436b0bbc00800000000000000
+      internalID: 917339470240301661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_11
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 6925
+        width: 317
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea18b6790f77772d0800000000000000
+      internalID: -3281021928299855442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_12
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 6917
+        width: 309
+        height: 589
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a593ee366be9fde0800000000000000
+      internalID: -1298748193145383512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_13
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 6901
+        width: 305
+        height: 605
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5cef776a6cd7060800000000000000
+      internalID: 6952931818009970096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_14
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 6885
+        width: 301
+        height: 621
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212aed204b8fed090800000000000000
+      internalID: -8007689635392216558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_15
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 6869
+        width: 297
+        height: 636
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34497090489b0d2d0800000000000000
+      internalID: -3255898553850555325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_16
+      rect:
+        serializedVersion: 2
+        x: 2262
+        y: 6853
+        width: 292
+        height: 652
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c1888712fd65650800000000000000
+      internalID: 6221405270108019760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_17
+      rect:
+        serializedVersion: 2
+        x: 2615
+        y: 6839
+        width: 288
+        height: 666
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9251598dc66e9b0800000000000000
+      internalID: -5051230254579504687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_18
+      rect:
+        serializedVersion: 2
+        x: 2963
+        y: 6825
+        width: 287
+        height: 680
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6dd816a17c94bf0800000000000000
+      internalID: -339521380769999167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_19
+      rect:
+        serializedVersion: 2
+        x: 3310
+        y: 6833
+        width: 291
+        height: 672
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c531eee81f74d350800000000000000
+      internalID: 6040592745274357191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_20
+      rect:
+        serializedVersion: 2
+        x: 3662
+        y: 6843
+        width: 299
+        height: 662
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80c2eb68c90fd650800000000000000
+      internalID: 6259732763476410509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_21
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 6114
+        width: 310
+        height: 649
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5485b4aa8705114a0800000000000000
+      internalID: -6624425097701926843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_22
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 6130
+        width: 321
+        height: 635
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a268889e6084e670800000000000000
+      internalID: 8567113603659358882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_23
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 6144
+        width: 331
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ba453e4ef87b190800000000000000
+      internalID: -7946724804242658498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_24
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 6162
+        width: 341
+        height: 603
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb075d7bc4238dc0800000000000000
+      internalID: -3638023617585411101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_25
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 6180
+        width: 353
+        height: 585
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32630445257b94730800000000000000
+      internalID: 3983916909614609955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_26
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 6184
+        width: 363
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e89c1f1bec0d950800000000000000
+      internalID: 6471899928192454209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_27
+      rect:
+        serializedVersion: 2
+        x: 2425
+        y: 6184
+        width: 372
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0440f8cd13c87a0800000000000000
+      internalID: -6373664549274107735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_28
+      rect:
+        serializedVersion: 2
+        x: 2859
+        y: 6184
+        width: 380
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13cfaeaf6fe41a360800000000000000
+      internalID: 7179106103683906609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_29
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 6184
+        width: 386
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b96445ca93923800800000000000000
+      internalID: 590696794082798007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_30
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 5473
+        width: 389
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e6f6d4d980f4980800000000000000
+      internalID: -8552607695651246574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_31
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 5473
+        width: 393
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a14616c9246b240800000000000000
+      internalID: 4807102891680864813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_32
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 5473
+        width: 396
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66be26a54f5401f60800000000000000
+      internalID: 8002973453628140390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_33
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 5473
+        width: 399
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7507295e7b261d50800000000000000
+      internalID: 6707596516676535674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_34
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 5473
+        width: 401
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c648ed6bace6470800000000000000
+      internalID: 8389866042603891829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_35
+      rect:
+        serializedVersion: 2
+        x: 2328
+        y: 5473
+        width: 401
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49f145ed19823500800000000000000
+      internalID: 374512480518535503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_36
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 5473
+        width: 401
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975691ca8dd98e850800000000000000
+      internalID: 6406544023860372857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_37
+      rect:
+        serializedVersion: 2
+        x: 3251
+        y: 5473
+        width: 399
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56263f079f5bbe8e0800000000000000
+      internalID: -1663035554436783515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_38
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 4832
+        width: 398
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11fb47410e7bafb0800000000000000
+      internalID: -4635472847491567333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_39
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 4832
+        width: 396
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf54536b55bb28630800000000000000
+      internalID: 3927907801824052732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_40
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 4832
+        width: 393
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282ecca2cea9c90c0800000000000000
+      internalID: -4567605582939495806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_41
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 4832
+        width: 389
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a569fa21b74610430800000000000000
+      internalID: 3747386844706215514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_42
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 4824
+        width: 385
+        height: 588
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0e779d9ede2c9e0800000000000000
+      internalID: -1602456928758800184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_43
+      rect:
+        serializedVersion: 2
+        x: 2309
+        y: 4816
+        width: 380
+        height: 597
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3408cebf1545776d0800000000000000
+      internalID: -2992830716268740541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_44
+      rect:
+        serializedVersion: 2
+        x: 2749
+        y: 4806
+        width: 374
+        height: 606
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d8893e1b6e0b300800000000000000
+      internalID: 265966029716884839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_45
+      rect:
+        serializedVersion: 2
+        x: 3185
+        y: 4798
+        width: 368
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc7fdcf184d9f640800000000000000
+      internalID: 5114352506614283476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_46
+      rect:
+        serializedVersion: 2
+        x: 3613
+        y: 4790
+        width: 361
+        height: 623
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7daf26162f4149450800000000000000
+      internalID: 6094519226987641559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_47
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 4099
+        width: 353
+        height: 630
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ce127fb4c0886f0800000000000000
+      internalID: -682281823138354122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_48
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 4093
+        width: 345
+        height: 636
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576c3e5259b299090800000000000000
+      internalID: -8027336941225392523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_49
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 4087
+        width: 336
+        height: 642
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95148d7bef5dbb3d0800000000000000
+      internalID: -3189720621079051943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_50
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 4081
+        width: 328
+        height: 648
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30c38eae2f95b960800000000000000
+      internalID: 7617169367612244030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_51
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 4077
+        width: 318
+        height: 652
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c25afb0a3f22a5160800000000000000
+      internalID: 7014957799352280364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_52
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 4073
+        width: 309
+        height: 656
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1bf2edaae97fc90800000000000000
+      internalID: -7136060627835965016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_53
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 4071
+        width: 299
+        height: 658
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 640a96a6a7d44aee0800000000000000
+      internalID: -1250789608335499194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_54
+      rect:
+        serializedVersion: 2
+        x: 2756
+        y: 4069
+        width: 289
+        height: 661
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2cf466517f16dc80800000000000000
+      internalID: -8298410691742335957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_55
+      rect:
+        serializedVersion: 2
+        x: 3106
+        y: 4077
+        width: 303
+        height: 652
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef90b577d945e0d40800000000000000
+      internalID: 5552468425883453950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_56
+      rect:
+        serializedVersion: 2
+        x: 3471
+        y: 4091
+        width: 322
+        height: 639
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131ce6922ecd22f70800000000000000
+      internalID: 9161127455940854065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_57
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3384
+        width: 340
+        height: 624
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a9c48971f9c9e60800000000000000
+      internalID: 7970420364227156612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_58
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 3400
+        width: 356
+        height: 608
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c436cf987997a70800000000000000
+      internalID: 8825251563709877259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_59
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 3418
+        width: 372
+        height: 590
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c19d07f5cec8a690800000000000000
+      internalID: -7590589822284230208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_60
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 3428
+        width: 386
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0866e1594aa1240800000000000000
+      internalID: 4763300516264837337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_61
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 3428
+        width: 399
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea3dc49ac7eebb30800000000000000
+      internalID: 4305133151078660843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_62
+      rect:
+        serializedVersion: 2
+        x: 2203
+        y: 3428
+        width: 410
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9501a1537f7aa30800000000000000
+      internalID: 4226618582753106401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_63
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 3428
+        width: 416
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3384306ce88d0d10800000000000000
+      internalID: 2093479950604862270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_64
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 3428
+        width: 421
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce3142003cf0b3c0800000000000000
+      internalID: -4345696357286068535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_65
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 2743
+        width: 423
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d82798c77c13eab0800000000000000
+      internalID: -4980105462149601068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_66
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 2743
+        width: 422
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd9966f132a354c0800000000000000
+      internalID: -4299914883737477642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_67
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 2743
+        width: 420
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637336b369e33d120800000000000000
+      internalID: 2437360638299944758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_68
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 2743
+        width: 415
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5157e674939c058e0800000000000000
+      internalID: -1706643010924677867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_69
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 2743
+        width: 407
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b55600046bade4d0800000000000000
+      internalID: -3103636122202909264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_70
+      rect:
+        serializedVersion: 2
+        x: 2436
+        y: 2743
+        width: 395
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b2efdf542437d30800000000000000
+      internalID: 4427955727016799039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_71
+      rect:
+        serializedVersion: 2
+        x: 2891
+        y: 2743
+        width: 381
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00f4356add08a5b0800000000000000
+      internalID: -5357016525105205233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_72
+      rect:
+        serializedVersion: 2
+        x: 3333
+        y: 2743
+        width: 365
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f6a5f999638af100800000000000000
+      internalID: 142570827793409777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_73
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2102
+        width: 351
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8034e6ff2651d3890800000000000000
+      internalID: -7476796291428760824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_74
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 2102
+        width: 346
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787a01e5318c15190800000000000000
+      internalID: -7975373479588354169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Z1_Attack_75
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 2102
+        width: 339
+        height: 581
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608cd8cc40737a9f0800000000000000
+      internalID: -457336343403575290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d43a2bce3a9edc54ebcb87a4af4dd4a8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

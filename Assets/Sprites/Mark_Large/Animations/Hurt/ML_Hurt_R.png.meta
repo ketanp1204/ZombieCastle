@@ -260,6 +260,96 @@ TextureImporter:
   - first:
       213: 777035636940579440
     second: Hurt_R_54
+  - first:
+      213: 8719872273912715660
+    second: ML_Hurt_R_0
+  - first:
+      213: 6083122443623041164
+    second: ML_Hurt_R_1
+  - first:
+      213: 1172110280753689745
+    second: ML_Hurt_R_2
+  - first:
+      213: -4098750298858363062
+    second: ML_Hurt_R_3
+  - first:
+      213: 5852652102011131129
+    second: ML_Hurt_R_4
+  - first:
+      213: 3926151302776718273
+    second: ML_Hurt_R_5
+  - first:
+      213: 3919222292358488332
+    second: ML_Hurt_R_6
+  - first:
+      213: -7903996452786575630
+    second: ML_Hurt_R_7
+  - first:
+      213: -5034099944734299642
+    second: ML_Hurt_R_8
+  - first:
+      213: 8725100410784601059
+    second: ML_Hurt_R_9
+  - first:
+      213: -4664923934879364228
+    second: ML_Hurt_R_10
+  - first:
+      213: 7507216700741773546
+    second: ML_Hurt_R_11
+  - first:
+      213: 2345981060091071507
+    second: ML_Hurt_R_12
+  - first:
+      213: 8752207486515861006
+    second: ML_Hurt_R_13
+  - first:
+      213: 1311592487995705554
+    second: ML_Hurt_R_14
+  - first:
+      213: -3467914487825822800
+    second: ML_Hurt_R_15
+  - first:
+      213: -8622685140097152794
+    second: ML_Hurt_R_16
+  - first:
+      213: 813400032591658061
+    second: ML_Hurt_R_18
+  - first:
+      213: -4323981724876378419
+    second: ML_Hurt_R_19
+  - first:
+      213: 2716671529823576457
+    second: ML_Hurt_R_21
+  - first:
+      213: 2598635625685675484
+    second: ML_Hurt_R_26
+  - first:
+      213: -2357910410742890716
+    second: ML_Hurt_R_27
+  - first:
+      213: 1327894967656730913
+    second: ML_Hurt_R_29
+  - first:
+      213: 7901638049978329731
+    second: ML_Hurt_R_38
+  - first:
+      213: 1101253858140216692
+    second: ML_Hurt_R_40
+  - first:
+      213: -7774929848992616857
+    second: ML_Hurt_R_42
+  - first:
+      213: -1475853454294027434
+    second: ML_Hurt_R_45
+  - first:
+      213: -1039078963944181975
+    second: ML_Hurt_R_48
+  - first:
+      213: 1948152248115258018
+    second: ML_Hurt_R_51
+  - first:
+      213: 7142140266146556731
+    second: ML_Hurt_R_54
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -304,7 +394,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 120
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -321,7 +411,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -333,7 +423,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -345,7 +435,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -357,7 +447,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -371,631 +461,631 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hurt_R_0
+      name: ML_Hurt_R_0
       rect:
         serializedVersion: 2
         x: 46
         y: 3430
         width: 248
         height: 619
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6c50e0e857e8b830800000000000000
-      internalID: 4087271030754663535
+      spriteID: c89585d12a5330970800000000000000
+      internalID: 8719872273912715660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_1
+      name: ML_Hurt_R_1
       rect:
         serializedVersion: 2
         x: 355
         y: 3430
         width: 248
         height: 619
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36b8d0776bb2a0e60800000000000000
-      internalID: 7929198156620598115
+      spriteID: c888b59f1a79b6450800000000000000
+      internalID: 6083122443623041164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_2
+      name: ML_Hurt_R_2
       rect:
         serializedVersion: 2
         x: 664
         y: 3430
         width: 248
         height: 619
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 306ff7eb0d17701d0800000000000000
-      internalID: -3384611453582445053
+      spriteID: 19438e9171c244010800000000000000
+      internalID: 1172110280753689745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_3
+      name: ML_Hurt_R_3
       rect:
         serializedVersion: 2
         x: 973
         y: 3430
         width: 248
         height: 619
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3d6a193af91a94d0800000000000000
-      internalID: -3127158428764836548
+      spriteID: a47658db1505e17c0800000000000000
+      internalID: -4098750298858363062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_4
+      name: ML_Hurt_R_4
       rect:
         serializedVersion: 2
         x: 1282
         y: 3432
         width: 248
         height: 619
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0282a4786a61125a0800000000000000
-      internalID: -6547927478729824224
+      spriteID: 9f4115ef31cc83150800000000000000
+      internalID: 5852652102011131129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_5
+      name: ML_Hurt_R_5
       rect:
         serializedVersion: 2
         x: 1591
         y: 3432
         width: 248
         height: 618
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44dcefdfe92064570800000000000000
-      internalID: 8450444632696737092
+      spriteID: 1c38178eecd7c7630800000000000000
+      internalID: 3926151302776718273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_6
+      name: ML_Hurt_R_6
       rect:
         serializedVersion: 2
         x: 1900
         y: 3432
         width: 250
         height: 618
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f0fab3310f9a2e60800000000000000
-      internalID: 7938332120705593586
+      spriteID: c01e1d3f8efd36630800000000000000
+      internalID: 3919222292358488332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_7
+      name: ML_Hurt_R_7
       rect:
         serializedVersion: 2
         x: 2211
         y: 3432
         width: 256
         height: 619
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ec1caf6d9aea7460800000000000000
-      internalID: 7240357312855809250
+      spriteID: 2f665b57a1d5f4290800000000000000
+      internalID: -7903996452786575630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_8
+      name: ML_Hurt_R_8
       rect:
         serializedVersion: 2
         x: 2527
         y: 3432
         width: 263
         height: 619
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c10d63aa54af2f6b0800000000000000
-      internalID: -5263869837327282148
+      spriteID: 60a6c46a5c8432ab0800000000000000
+      internalID: -5034099944734299642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_9
+      name: ML_Hurt_R_9
       rect:
         serializedVersion: 2
         x: 2850
         y: 3432
         width: 269
         height: 618
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce6a68193853be1e0800000000000000
-      internalID: -2167579956450253076
+      spriteID: 3e35e669898c51970800000000000000
+      internalID: 8725100410784601059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_10
+      name: ML_Hurt_R_10
       rect:
         serializedVersion: 2
         x: 3179
         y: 3432
         width: 275
         height: 617
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fadbe66a29a66ddc0800000000000000
-      internalID: -3614584472828199505
+      spriteID: c7b4c45a56cd24fb0800000000000000
+      internalID: -4664923934879364228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_11
+      name: ML_Hurt_R_11
       rect:
         serializedVersion: 2
         x: 3515
         y: 3434
         width: 282
         height: 617
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 171f1e0736696b570800000000000000
-      internalID: 8482132302038692209
+      spriteID: ae8e79b70ddfe2860800000000000000
+      internalID: 7507216700741773546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_12
+      name: ML_Hurt_R_12
       rect:
         serializedVersion: 2
         x: 47
         y: 2753
         width: 287
         height: 616
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24f7e753133770ae0800000000000000
-      internalID: -1583170088809365694
+      spriteID: 31cc58838599e8020800000000000000
+      internalID: 2345981060091071507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_13
+      name: ML_Hurt_R_13
       rect:
         serializedVersion: 2
         x: 395
         y: 2755
         width: 290
         height: 615
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c071d3252caf0040800000000000000
-      internalID: 4616097418592743623
+      spriteID: e06da4a7656167970800000000000000
+      internalID: 8752207486515861006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_14
+      name: ML_Hurt_R_14
       rect:
         serializedVersion: 2
         x: 746
         y: 2755
         width: 292
         height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c955d35a62db0e3c0800000000000000
-      internalID: -4332254867851749988
+      spriteID: 2d80e013b66b33210800000000000000
+      internalID: 1311592487995705554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_15
+      name: ML_Hurt_R_15
       rect:
         serializedVersion: 2
         x: 1099
         y: 2755
         width: 294
         height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68522baa4db0a2420800000000000000
-      internalID: 2605908342412027270
+      spriteID: 0bb06b9a52e7fdfc0800000000000000
+      internalID: -3467914487825822800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_16
+      name: ML_Hurt_R_16
       rect:
         serializedVersion: 2
         x: 1453
         y: 2749
         width: 295
         height: 615
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4e9bd86032d3f0a0800000000000000
-      internalID: -6848899502940905910
+      spriteID: 6e8487ecc81165880800000000000000
+      internalID: -8622685140097152794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_18
+      name: ML_Hurt_R_18
       rect:
         serializedVersion: 2
         x: 1810
         y: 2747
         width: 291
         height: 622
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad1d5e92901796640800000000000000
-      internalID: 5073710739381146074
+      spriteID: d4cbae22507c94b00800000000000000
+      internalID: 813400032591658061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_19
+      name: ML_Hurt_R_19
       rect:
         serializedVersion: 2
         x: 2162
         y: 2747
         width: 286
         height: 617
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 059f2beaf550c5370800000000000000
-      internalID: 8312524920730089808
+      spriteID: dce6679d7812ef3c0800000000000000
+      internalID: -4323981724876378419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_21
+      name: ML_Hurt_R_21
       rect:
         serializedVersion: 2
         x: 2508
         y: 2745
         width: 281
         height: 618
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 493082ee338c08b30800000000000000
-      internalID: 4287646970621199252
+      spriteID: 9812d82ec5e83b520800000000000000
+      internalID: 2716671529823576457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_26
+      name: ML_Hurt_R_26
       rect:
         serializedVersion: 2
         x: 2851
         y: 2743
         width: 275
         height: 610
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d93f3ab7c843aee0800000000000000
-      internalID: -1251076248818468395
+      spriteID: cdd6ba95555301420800000000000000
+      internalID: 2598635625685675484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_27
+      name: ML_Hurt_R_27
       rect:
         serializedVersion: 2
         x: 3187
         y: 2743
         width: 270
         height: 610
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 712f326047c7a0000800000000000000
-      internalID: 2951587528176151
+      spriteID: 42f797369f4074fd0800000000000000
+      internalID: -2357910410742890716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_29
+      name: ML_Hurt_R_29
       rect:
         serializedVersion: 2
         x: 3522
         y: 2741
         width: 264
         height: 610
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f4af469e92799d60800000000000000
-      internalID: 7897469447023076598
+      spriteID: 12155360071ad6210800000000000000
+      internalID: 1327894967656730913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_38
+      name: ML_Hurt_R_38
       rect:
         serializedVersion: 2
         x: 55
         y: 2050
         width: 257
         height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0e0f0c044d256e00800000000000000
-      internalID: 1037285059462106638
+      spriteID: 38a2ba811f148ad60800000000000000
+      internalID: 7901638049978329731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_40
+      name: ML_Hurt_R_40
       rect:
         serializedVersion: 2
         x: 382
         y: 2050
         width: 257
         height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72cfea4c2f39ef7c0800000000000000
-      internalID: -4035625545186214873
+      spriteID: 47dd9fd9c80784f00800000000000000
+      internalID: 1101253858140216692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_42
+      name: ML_Hurt_R_42
       rect:
         serializedVersion: 2
         x: 709
         y: 2050
         width: 257
         height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0a901ff9a19839c0800000000000000
-      internalID: -3947244914075461105
+      spriteID: 76ea635ee76e91490800000000000000
+      internalID: -7774929848992616857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_45
+      name: ML_Hurt_R_45
       rect:
         serializedVersion: 2
         x: 1045
         y: 2050
         width: 248
         height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9421993097b96150800000000000000
-      internalID: 5866421819695768732
+      spriteID: 653754c4a17b48be0800000000000000
+      internalID: -1475853454294027434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_48
+      name: ML_Hurt_R_48
       rect:
         serializedVersion: 2
         x: 1372
         y: 2050
         width: 248
         height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9576edbfa9e9eb5c0800000000000000
-      internalID: -4197743414174914727
+      spriteID: 92fa68400337491f0800000000000000
+      internalID: -1039078963944181975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_51
+      name: ML_Hurt_R_51
       rect:
         serializedVersion: 2
         x: 1699
         y: 2050
         width: 248
         height: 623
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f70ff0b92f980430800000000000000
-      internalID: 3749421691197917170
+      spriteID: 2a2e94dd52a390b10800000000000000
+      internalID: 1948152248115258018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_R_54
+      name: ML_Hurt_R_54
       rect:
         serializedVersion: 2
         x: 2026
         y: 2052
         width: 248
         height: 622
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 072a9ad7bc598ca00800000000000000
-      internalID: 777035636940579440
+      spriteID: b3bedab3bbafd1360800000000000000
+      internalID: 7142140266146556731
       vertices: []
       indices: 
       edges: []
