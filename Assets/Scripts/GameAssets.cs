@@ -35,4 +35,8 @@ public class GameAssets : MonoBehaviour
     [Header("Sprites")]
     public Sprite treasureBoxOpenSprite;
     public Sprite treasureBoxClosedSprite;
+
+    [Header("ParticleSystem Prefabs")]
+    public GameObject bloodParticles;
+    
 }

@@ -56,3 +56,4 @@ MonoBehaviour:
   objectNamePrefab: {fileID: 5873620021101757153, guid: fe5bbaa9084d4c949a10f07027549676, type: 3}
   treasureBoxOpenSprite: {fileID: 21300000, guid: fcf983593b0d1b443b76767648faae7d, type: 3}
   treasureBoxClosedSprite: {fileID: 21300000, guid: 23bf4929c984bc8429d0721ec6325e3b, type: 3}
+  bloodParticles: {fileID: 3095269012409172603, guid: 6f7d3f8ada96d264899aff44f820f75e, type: 3}

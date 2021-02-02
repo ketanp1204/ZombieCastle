@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     public bool weaponDrawn;                        // Bool to store whether weapon is drawn
     [HideInInspector]
     public bool IsDead = false;                     // Bool to store if player dies
-    private bool facingRight;                       // Player's Direction Of Facing
+    private bool facingRight;                       // Player's direction of facing
     [HideInInspector]
     public bool isClimbingLadder = false;           // Bool to store whether player is climbing a ladder
     [HideInInspector]
@@ -192,16 +192,16 @@ public class Player : MonoBehaviour
     {
         if(weaponDrawn)
         {
-            if (playerInput.attack1Pressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
+            if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
             {
-                playerCombat.InvokeAttack1();
+                playerCombat.InvokeAxeAttack();
                 animator.SetTrigger("Attack1");
                 rb.velocity = Vector2.zero;
             }
 
             if (playerInput.attack2Pressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
             {
-                playerCombat.InvokeAttack2();
+                playerCombat.InvokeKnifeAttack();
                 animator.SetTrigger("Attack2");
                 rb.velocity = Vector2.zero;
             }

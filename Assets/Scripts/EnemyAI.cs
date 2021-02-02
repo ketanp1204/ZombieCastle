@@ -34,6 +34,8 @@ public class EnemyAI : MonoBehaviour
     [HideInInspector]
     public bool isAttacking;
     private float distanceToPlayer;
+    [HideInInspector]
+    public bool facingRight = true;
 
     // Start is called before the first frame update
     void Start()
@@ -93,7 +95,10 @@ public class EnemyAI : MonoBehaviour
             force = new Vector2(direction.x * moveForceMultiplier, rb.velocity.y) * speed * Time.fixedDeltaTime;
 
             // Move the enemy
-            rb.AddForce(force);
+            if (!EnemyCombat.instance.takingDamage)
+            {
+                rb.AddForce(force);
+            }
 
             // Next Waypoint
             float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
@@ -105,16 +110,30 @@ public class EnemyAI : MonoBehaviour
             // Update facing direction of enemy
             if (force.x >= 0.01f)
             {
-                transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                UpdateFaceDirection(true);
+                facingRight = true;
             }
             else if (force.x <= -0.01f)
             {
-                transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                UpdateFaceDirection(false);
+                facingRight = false;
             }
         }
 
         // Set movement animation parameters
         SetMovementAnimationParameters(force);
+    }
+
+    public void UpdateFaceDirection(bool isFacingRight)
+    {
+        if (isFacingRight)
+        {
+            transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else
+        {
+            transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
     }
 
     void SetMovementAnimationParameters(Vector2 movement)

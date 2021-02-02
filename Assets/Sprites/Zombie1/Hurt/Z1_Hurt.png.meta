@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a64d73f0f9539364a8d4ad3d780feb31
+guid: dd9324c6ce980e34ba8b9119cc3bfa85
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -216,7 +216,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -228,7 +228,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -240,7 +240,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -252,7 +252,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -292,8 +292,8 @@ TextureImporter:
         serializedVersion: 2
         x: 446
         y: 3469
-        width: 339
-        height: 583
+        width: 337
+        height: 581
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,7 +313,7 @@ TextureImporter:
         serializedVersion: 2
         x: 842
         y: 3469
-        width: 337
+        width: 333
         height: 581
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -332,10 +332,10 @@ TextureImporter:
       name: Z1_Hurt_3
       rect:
         serializedVersion: 2
-        x: 1238
+        x: 1234
         y: 3469
-        width: 335
-        height: 581
+        width: 329
+        height: 583
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -353,9 +353,9 @@ TextureImporter:
       name: Z1_Hurt_4
       rect:
         serializedVersion: 2
-        x: 1630
+        x: 1620
         y: 3469
-        width: 332
+        width: 325
         height: 581
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -374,9 +374,9 @@ TextureImporter:
       name: Z1_Hurt_5
       rect:
         serializedVersion: 2
-        x: 2020
+        x: 2004
         y: 3469
-        width: 329
+        width: 319
         height: 583
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -395,10 +395,10 @@ TextureImporter:
       name: Z1_Hurt_6
       rect:
         serializedVersion: 2
-        x: 2408
+        x: 2382
         y: 3469
-        width: 325
-        height: 583
+        width: 317
+        height: 581
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -416,9 +416,9 @@ TextureImporter:
       name: Z1_Hurt_7
       rect:
         serializedVersion: 2
-        x: 2792
+        x: 2758
         y: 3469
-        width: 323
+        width: 313
         height: 581
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -437,10 +437,10 @@ TextureImporter:
       name: Z1_Hurt_8
       rect:
         serializedVersion: 2
-        x: 3174
+        x: 3130
         y: 3469
-        width: 321
-        height: 581
+        width: 307
+        height: 583
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -458,9 +458,9 @@ TextureImporter:
       name: Z1_Hurt_9
       rect:
         serializedVersion: 2
-        x: 3554
+        x: 3496
         y: 3469
-        width: 319
+        width: 303
         height: 581
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -481,7 +481,7 @@ TextureImporter:
         serializedVersion: 2
         x: 46
         y: 2828
-        width: 315
+        width: 299
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -500,9 +500,9 @@ TextureImporter:
       name: Z1_Hurt_11
       rect:
         serializedVersion: 2
-        x: 420
+        x: 404
         y: 2828
-        width: 313
+        width: 295
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -521,9 +521,9 @@ TextureImporter:
       name: Z1_Hurt_12
       rect:
         serializedVersion: 2
-        x: 790
+        x: 756
         y: 2828
-        width: 311
+        width: 291
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -542,9 +542,9 @@ TextureImporter:
       name: Z1_Hurt_13
       rect:
         serializedVersion: 2
-        x: 1160
+        x: 1106
         y: 2828
-        width: 307
+        width: 285
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -563,9 +563,9 @@ TextureImporter:
       name: Z1_Hurt_14
       rect:
         serializedVersion: 2
-        x: 1526
+        x: 1450
         y: 2828
-        width: 305
+        width: 283
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -584,9 +584,9 @@ TextureImporter:
       name: Z1_Hurt_15
       rect:
         serializedVersion: 2
-        x: 1890
+        x: 1792
         y: 2828
-        width: 301
+        width: 280
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -605,9 +605,9 @@ TextureImporter:
       name: Z1_Hurt_16
       rect:
         serializedVersion: 2
-        x: 2252
+        x: 2130
         y: 2828
-        width: 299
+        width: 280
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -626,9 +626,9 @@ TextureImporter:
       name: Z1_Hurt_17
       rect:
         serializedVersion: 2
-        x: 2610
+        x: 2470
         y: 2828
-        width: 297
+        width: 280
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -647,9 +647,9 @@ TextureImporter:
       name: Z1_Hurt_18
       rect:
         serializedVersion: 2
-        x: 2964
+        x: 2808
         y: 2828
-        width: 295
+        width: 280
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -668,9 +668,9 @@ TextureImporter:
       name: Z1_Hurt_19
       rect:
         serializedVersion: 2
-        x: 3318
+        x: 3148
         y: 2828
-        width: 293
+        width: 280
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -689,9 +689,9 @@ TextureImporter:
       name: Z1_Hurt_20
       rect:
         serializedVersion: 2
-        x: 3668
+        x: 3487
         y: 2828
-        width: 289
+        width: 281
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -710,9 +710,9 @@ TextureImporter:
       name: Z1_Hurt_21
       rect:
         serializedVersion: 2
-        x: 44
+        x: 45
         y: 2187
-        width: 287
+        width: 285
         height: 581
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -731,10 +731,10 @@ TextureImporter:
       name: Z1_Hurt_22
       rect:
         serializedVersion: 2
-        x: 390
+        x: 389
         y: 2187
-        width: 285
-        height: 581
+        width: 291
+        height: 583
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -752,10 +752,10 @@ TextureImporter:
       name: Z1_Hurt_23
       rect:
         serializedVersion: 2
-        x: 734
+        x: 739
         y: 2187
-        width: 281
-        height: 583
+        width: 295
+        height: 581
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -773,9 +773,9 @@ TextureImporter:
       name: Z1_Hurt_24
       rect:
         serializedVersion: 2
-        x: 1074
+        x: 1093
         y: 2187
-        width: 280
+        width: 301
         height: 583
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -794,9 +794,9 @@ TextureImporter:
       name: Z1_Hurt_25
       rect:
         serializedVersion: 2
-        x: 1412
+        x: 1451
         y: 2187
-        width: 280
+        width: 305
         height: 581
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -815,9 +815,9 @@ TextureImporter:
       name: Z1_Hurt_26
       rect:
         serializedVersion: 2
-        x: 1752
+        x: 1815
         y: 2187
-        width: 280
+        width: 301
         height: 583
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -836,10 +836,10 @@ TextureImporter:
       name: Z1_Hurt_27
       rect:
         serializedVersion: 2
-        x: 2092
+        x: 2175
         y: 2187
-        width: 281
-        height: 583
+        width: 295
+        height: 581
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -857,10 +857,10 @@ TextureImporter:
       name: Z1_Hurt_28
       rect:
         serializedVersion: 2
-        x: 2432
+        x: 2529
         y: 2187
-        width: 285
-        height: 581
+        width: 291
+        height: 583
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -878,7 +878,7 @@ TextureImporter:
       name: Z1_Hurt_29
       rect:
         serializedVersion: 2
-        x: 2774
+        x: 2877
         y: 2187
         width: 287
         height: 581
@@ -899,9 +899,9 @@ TextureImporter:
       name: Z1_Hurt_30
       rect:
         serializedVersion: 2
-        x: 3120
+        x: 3223
         y: 2187
-        width: 289
+        width: 283
         height: 583
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -920,10 +920,10 @@ TextureImporter:
       name: Z1_Hurt_31
       rect:
         serializedVersion: 2
-        x: 3468
+        x: 3564
         y: 2187
-        width: 291
-        height: 583
+        width: 280
+        height: 581
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -943,7 +943,7 @@ TextureImporter:
         serializedVersion: 2
         x: 44
         y: 1546
-        width: 295
+        width: 280
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -962,9 +962,9 @@ TextureImporter:
       name: Z1_Hurt_33
       rect:
         serializedVersion: 2
-        x: 398
+        x: 384
         y: 1546
-        width: 295
+        width: 280
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -983,9 +983,9 @@ TextureImporter:
       name: Z1_Hurt_34
       rect:
         serializedVersion: 2
-        x: 754
+        x: 722
         y: 1546
-        width: 299
+        width: 280
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1004,9 +1004,9 @@ TextureImporter:
       name: Z1_Hurt_35
       rect:
         serializedVersion: 2
-        x: 1112
+        x: 1062
         y: 1546
-        width: 301
+        width: 280
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1025,9 +1025,9 @@ TextureImporter:
       name: Z1_Hurt_36
       rect:
         serializedVersion: 2
-        x: 1472
+        x: 1400
         y: 1546
-        width: 305
+        width: 283
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1046,9 +1046,9 @@ TextureImporter:
       name: Z1_Hurt_37
       rect:
         serializedVersion: 2
-        x: 1836
+        x: 1742
         y: 1546
-        width: 307
+        width: 287
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1067,9 +1067,9 @@ TextureImporter:
       name: Z1_Hurt_38
       rect:
         serializedVersion: 2
-        x: 2202
+        x: 2086
         y: 1546
-        width: 311
+        width: 291
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1088,9 +1088,9 @@ TextureImporter:
       name: Z1_Hurt_39
       rect:
         serializedVersion: 2
-        x: 2572
+        x: 2436
         y: 1546
-        width: 313
+        width: 295
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1109,9 +1109,9 @@ TextureImporter:
       name: Z1_Hurt_40
       rect:
         serializedVersion: 2
-        x: 2944
+        x: 2790
         y: 1546
-        width: 315
+        width: 299
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1130,9 +1130,9 @@ TextureImporter:
       name: Z1_Hurt_41
       rect:
         serializedVersion: 2
-        x: 3318
+        x: 3148
         y: 1546
-        width: 319
+        width: 305
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1151,9 +1151,9 @@ TextureImporter:
       name: Z1_Hurt_42
       rect:
         serializedVersion: 2
-        x: 3694
+        x: 3512
         y: 1546
-        width: 321
+        width: 307
         height: 582
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1174,7 +1174,7 @@ TextureImporter:
         serializedVersion: 2
         x: 46
         y: 905
-        width: 323
+        width: 311
         height: 583
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1193,10 +1193,10 @@ TextureImporter:
       name: Z1_Hurt_44
       rect:
         serializedVersion: 2
-        x: 428
+        x: 416
         y: 905
-        width: 327
-        height: 581
+        width: 315
+        height: 583
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1214,9 +1214,9 @@ TextureImporter:
       name: Z1_Hurt_45
       rect:
         serializedVersion: 2
-        x: 812
+        x: 790
         y: 905
-        width: 329
+        width: 321
         height: 581
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1235,9 +1235,9 @@ TextureImporter:
       name: Z1_Hurt_46
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 1170
         y: 905
-        width: 331
+        width: 323
         height: 583
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1256,10 +1256,10 @@ TextureImporter:
       name: Z1_Hurt_47
       rect:
         serializedVersion: 2
-        x: 1590
+        x: 1552
         y: 905
-        width: 333
-        height: 583
+        width: 329
+        height: 581
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1277,9 +1277,9 @@ TextureImporter:
       name: Z1_Hurt_48
       rect:
         serializedVersion: 2
-        x: 1982
+        x: 1940
         y: 905
-        width: 335
+        width: 333
         height: 583
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1298,10 +1298,10 @@ TextureImporter:
       name: Z1_Hurt_49
       rect:
         serializedVersion: 2
-        x: 2376
+        x: 2332
         y: 905
-        width: 339
-        height: 581
+        width: 337
+        height: 583
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1319,9 +1319,9 @@ TextureImporter:
       name: Z1_Hurt_50
       rect:
         serializedVersion: 2
-        x: 2774
+        x: 2728
         y: 905
-        width: 343
+        width: 341
         height: 581
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1339,7 +1339,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 520744dddc7cb5a4f97500a0158f7788
+    spriteID: a3e57a47e1eb9de43801e67b6bbc7003
     internalID: 0
     vertices: []
     indices: 

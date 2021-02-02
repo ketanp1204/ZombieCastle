@@ -26,22 +26,30 @@ public class EnemyCombat : MonoBehaviour
 
     // Cached References
     private Animator animator;
+    private EnemyAI enemyAI;
+    [Header("References")]
     public LayerMask playerLayerMask;
     public HealthBar healthBar;
     public Animator attackHitboxAnimator;
+    public GameObject attackHitbox;
     public BoxCollider2D hitboxCollider;
+    public Transform bloodParticlesStartPosition;
 
     // Private Variables
     private UnityEngine.Object enemyReference;
     private int currentHealth;
 
     // Public variables exposed to Inspector
+    [Header("Enemy Attributes")]
     public int maxHealth;
     public float destroyDelayAfterDeath = 7f;
+    public float pushDistanceOnHit;
 
     // Public variables hidden from Inspector
     [HideInInspector]
     public bool IsDead = false;
+    [HideInInspector]
+    public bool takingDamage = false;
 
     // Death Event
     public event Action<EnemyCombat> OnDeath;
@@ -53,11 +61,13 @@ public class EnemyCombat : MonoBehaviour
             instance = this;
         }
 
+        enemyAI = GetComponent<EnemyAI>();
         enemyReference = Resources.Load(gameObject.name.Substring(0, 7));
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
         healthBar.gameObject.SetActive(true);
         healthBar.SetMaxHealth(maxHealth);
+        attackHitbox.SetActive(false);
     }
 
     public void StopAttack()
@@ -76,13 +86,12 @@ public class EnemyCombat : MonoBehaviour
             isAttacking = true;
             StartCoroutine(Attack());
         }
-        // InvokeRepeating("Attack1", 0f, attackRepeatTime);
         
     }
 
     private IEnumerator Attack()
     {
-        while (canAttack)
+        while (canAttack && !takingDamage)
         {
             if (instance.IsDead)
             {
@@ -90,12 +99,17 @@ public class EnemyCombat : MonoBehaviour
                 isAttacking = false;
                 yield break;
             }
+
+            // Enable hitbox
+            attackHitbox.SetActive(true);
+
             // Play attack animation
             animator.SetTrigger("Attack");
             attackHitboxAnimator.SetTrigger("Attack");
             yield return new WaitForSeconds(attackRepeatTime);
         }
         isAttacking = false;
+        attackHitbox.SetActive(false);
     }
 
     void Attack1()
@@ -109,20 +123,36 @@ public class EnemyCombat : MonoBehaviour
         // Damage them
         foreach (Collider2D player in hitPlayer)
         {
-
-            player.transform.parent.GetComponent<PlayerCombat>().TakeDamage(attack1Damage);
+            player.transform.parent.GetComponent<PlayerCombat>().TakeDamage(this.transform, attack1Damage);
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(Transform playerPos, int damage)
     {
         if (!IsDead)
         {
+            // Create blood particles
+            GameObject bloodParticles = Instantiate(GameAssets.instance.bloodParticles, bloodParticlesStartPosition);
+            if (enemyAI.facingRight)
+            {
+                bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            else
+            {
+                bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            StartCoroutine(DestroyGameObjectAfterDelay(bloodParticles, 5f));
+
+            // Set enemy taking damage bool to true to stop attacks
+            takingDamage = true;
+
             // Reduce health
             currentHealth -= damage;
 
             // Update Health Bar
             healthBar.SetHealth(currentHealth);
+
+            StartCoroutine(PushEnemyInHitDirection(playerPos));
 
             // Play hurt animation
             animator.SetTrigger("Hurt");
@@ -132,6 +162,26 @@ public class EnemyCombat : MonoBehaviour
             {
                 Die();
             }
+        }
+    }
+
+    private IEnumerator PushEnemyInHitDirection(Transform playerPos)
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        if (playerPos.position.x < transform.position.x)
+        {
+            // Push enemy to the right
+            rb.velocity = new Vector2(pushDistanceOnHit, rb.velocity.y);
+            yield return new WaitForSeconds(0.5f);
+            takingDamage = false;
+        }
+        else
+        {
+            // Push enemy to the left
+            rb.velocity = new Vector2(-pushDistanceOnHit, rb.velocity.y);
+            yield return new WaitForSeconds(0.5f);
+            takingDamage = false;
         }
     }
 

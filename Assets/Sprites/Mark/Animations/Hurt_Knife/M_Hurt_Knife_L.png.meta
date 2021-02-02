@@ -1,0 +1,853 @@
+fileFormatVersion: 2
+guid: 2434292579b1a9b4399b36ad547e94c5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1405941977227510204
+    second: M_Hurt_Knife_L_0
+  - first:
+      213: -7502684944881903656
+    second: M_Hurt_Knife_L_1
+  - first:
+      213: -6726219019781907734
+    second: M_Hurt_Knife_L_2
+  - first:
+      213: 6902738123545265342
+    second: M_Hurt_Knife_L_3
+  - first:
+      213: -4212838204128868278
+    second: M_Hurt_Knife_L_4
+  - first:
+      213: 3503744964452023565
+    second: M_Hurt_Knife_L_5
+  - first:
+      213: 7394937003701780810
+    second: M_Hurt_Knife_L_6
+  - first:
+      213: 6319263990431616232
+    second: M_Hurt_Knife_L_7
+  - first:
+      213: -5971065533476522210
+    second: M_Hurt_Knife_L_8
+  - first:
+      213: 2120964974206152117
+    second: M_Hurt_Knife_L_9
+  - first:
+      213: 2106743614700730570
+    second: M_Hurt_Knife_L_10
+  - first:
+      213: 312264730966871460
+    second: M_Hurt_Knife_L_11
+  - first:
+      213: 1983285210257729551
+    second: M_Hurt_Knife_L_12
+  - first:
+      213: 7503240252104569938
+    second: M_Hurt_Knife_L_13
+  - first:
+      213: -2877680881485567486
+    second: M_Hurt_Knife_L_14
+  - first:
+      213: 2405748080793519181
+    second: M_Hurt_Knife_L_15
+  - first:
+      213: -3085934204538323049
+    second: M_Hurt_Knife_L_16
+  - first:
+      213: 5891420178710624390
+    second: M_Hurt_Knife_L_17
+  - first:
+      213: -4756158863818816431
+    second: M_Hurt_Knife_L_17
+  - first:
+      213: 3212244988591772400
+    second: M_Hurt_Knife_L_18
+  - first:
+      213: -4507143248459095625
+    second: M_Hurt_Knife_L_19
+  - first:
+      213: 7986718781921261403
+    second: M_Hurt_Knife_L_22
+  - first:
+      213: 8632263020583206141
+    second: M_Hurt_Knife_L_21
+  - first:
+      213: 3847686698205678081
+    second: M_Hurt_Knife_L_35
+  - first:
+      213: 7009503923633334701
+    second: M_Hurt_Knife_L_20
+  - first:
+      213: -4908100001242002566
+    second: M_Hurt_Knife_L_19
+  - first:
+      213: -5882783107511527247
+    second: M_Hurt_Knife_L_25
+  - first:
+      213: -8875037865043466897
+    second: M_Hurt_Knife_L_22
+  - first:
+      213: 4378143394389045412
+    second: M_Hurt_Knife_L_27
+  - first:
+      213: 4725415472478268247
+    second: M_Hurt_Knife_L_28
+  - first:
+      213: 8316961852651745770
+    second: M_Hurt_Knife_L_29
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 3434
+        width: 291
+        height: 617
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e3b8088371d7ce0800000000000000
+      internalID: -1405941977227510204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_1
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 3434
+        width: 294
+        height: 617
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d794a62bcb11e790800000000000000
+      internalID: -7502684944881903656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_2
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 3434
+        width: 295
+        height: 616
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea5c64407ba7a2a0800000000000000
+      internalID: -6726219019781907734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_3
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 3434
+        width: 294
+        height: 616
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4467740c37bcf50800000000000000
+      internalID: 6902738123545265342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_4
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 3434
+        width: 292
+        height: 616
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4844b259fdf885c0800000000000000
+      internalID: -4212838204128868278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_5
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 3434
+        width: 291
+        height: 616
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0df9b54b7dcf9030800000000000000
+      internalID: 3503744964452023565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_6
+      rect:
+        serializedVersion: 2
+        x: 2166
+        y: 3434
+        width: 292
+        height: 615
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41490a560810a660800000000000000
+      internalID: 7394937003701780810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_7
+      rect:
+        serializedVersion: 2
+        x: 2519
+        y: 3436
+        width: 296
+        height: 615
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec089f4e1982b750800000000000000
+      internalID: 6319263990431616232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_8
+      rect:
+        serializedVersion: 2
+        x: 2876
+        y: 3436
+        width: 300
+        height: 614
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e17bd8a8883822da0800000000000000
+      internalID: -5971065533476522210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_9
+      rect:
+        serializedVersion: 2
+        x: 3236
+        y: 3436
+        width: 303
+        height: 614
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd6a9c186e2f6d10800000000000000
+      internalID: 2120964974206152117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_10
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 3436
+        width: 307
+        height: 613
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac83f03d728ac3d10800000000000000
+      internalID: 2106743614700730570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_11
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2761
+        width: 309
+        height: 613
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4adc92d4e13655400800000000000000
+      internalID: 312264730966871460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_12
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 2761
+        width: 313
+        height: 612
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08a2bd046b068b10800000000000000
+      internalID: 1983285210257729551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_13
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 2761
+        width: 316
+        height: 612
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254fa13614dd02860800000000000000
+      internalID: 7503240252104569938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_14
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 2763
+        width: 320
+        height: 610
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20aae122c7c6018d0800000000000000
+      internalID: -2877680881485567486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_15
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 2763
+        width: 323
+        height: 610
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4486ce122fe26120800000000000000
+      internalID: 2405748080793519181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_16
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 2755
+        width: 327
+        height: 611
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ff342e03f8c25d0800000000000000
+      internalID: -3085934204538323049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_17
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 2753
+        width: 324
+        height: 613
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6887d9e307782c150800000000000000
+      internalID: 5891420178710624390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_18
+      rect:
+        serializedVersion: 2
+        x: 2706
+        y: 2751
+        width: 320
+        height: 614
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15401ca66babefdb0800000000000000
+      internalID: -4756158863818816431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_20
+      rect:
+        serializedVersion: 2
+        x: 3464
+        y: 2749
+        width: 313
+        height: 624
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f29a844ccf249c20800000000000000
+      internalID: 3212244988591772400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_19
+      rect:
+        serializedVersion: 2
+        x: 3087
+        y: 2751
+        width: 317
+        height: 606
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1abcb68196371c0800000000000000
+      internalID: -4507143248459095625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_22
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 2062
+        width: 304
+        height: 627
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b577b5daa6686de60800000000000000
+      internalID: 7986718781921261403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_21
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2062
+        width: 309
+        height: 606
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc3a954b75fbc770800000000000000
+      internalID: 8632263020583206141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_23
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 2060
+        width: 302
+        height: 609
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da92fdb3ea2c64160800000000000000
+      internalID: 7009503923633334701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_24
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 2060
+        width: 303
+        height: 609
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b40e79d0de2ebb0800000000000000
+      internalID: -4908100001242002566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_25
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 2060
+        width: 294
+        height: 609
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b85b1a9ee72c5ea0800000000000000
+      internalID: -5882783107511527247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_26
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 2060
+        width: 296
+        height: 609
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6561fd651885d480800000000000000
+      internalID: -8875037865043466897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_27
+      rect:
+        serializedVersion: 2
+        x: 2291
+        y: 2060
+        width: 298
+        height: 610
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a03846883a42cc30800000000000000
+      internalID: 4378143394389045412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_28
+      rect:
+        serializedVersion: 2
+        x: 2671
+        y: 2060
+        width: 299
+        height: 620
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ba33df55c049140800000000000000
+      internalID: 4725415472478268247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Knife_L_29
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 2060
+        width: 298
+        height: 615
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae138c56db8cb6370800000000000000
+      internalID: 8316961852651745770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1de78bdbb834dba4f95c45fc14908d4f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

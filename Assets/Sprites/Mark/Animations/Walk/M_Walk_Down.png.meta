@@ -74,6 +74,30 @@ TextureImporter:
   - first:
       213: -4268502955347576943
     second: walk front_23
+  - first:
+      213: 1274534653487437289
+    second: M_Walk_Down_0
+  - first:
+      213: 5031656130886603554
+    second: M_Walk_Down_1
+  - first:
+      213: 7118851344329496126
+    second: M_Walk_Down_2
+  - first:
+      213: 6763253983554524647
+    second: M_Walk_Down_3
+  - first:
+      213: -3790678673869953870
+    second: M_Walk_Down_4
+  - first:
+      213: 4281712700093173200
+    second: M_Walk_Down_5
+  - first:
+      213: 3205506212065808045
+    second: M_Walk_Down_6
+  - first:
+      213: 7004138481891890659
+    second: M_Walk_Down_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -185,169 +209,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk front_0
+      name: M_Walk_Down_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 364
-        width: 248
-        height: 606
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 45
+        y: 365
+        width: 252
+        height: 614
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a51367f2ec5d30b0800000000000000
-      internalID: -5747335419572054622
+      spriteID: 9e55b0bb38e00b110800000000000000
+      internalID: 1274534653487437289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk front_1
+      name: M_Walk_Down_1
       rect:
         serializedVersion: 2
         x: 358
         y: 348
-        width: 248
-        height: 622
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 253
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d5f7d7a5cf569c20800000000000000
-      internalID: 3212860686704571860
+      spriteID: 2239969979804d540800000000000000
+      internalID: 5031656130886603554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk front_2
+      name: M_Walk_Down_2
       rect:
         serializedVersion: 2
         x: 672
         y: 348
-        width: 248
-        height: 622
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 253
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c383e72f8cadc7e0800000000000000
-      internalID: -1743547749872991294
+      spriteID: e365293949d3bc260800000000000000
+      internalID: 7118851344329496126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk front_3
+      name: M_Walk_Down_3
       rect:
         serializedVersion: 2
         x: 986
         y: 348
-        width: 248
-        height: 622
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 253
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10d9343bf380e4250800000000000000
-      internalID: 5930686828977036545
+      spriteID: 7e5538f2aa7ebdd50800000000000000
+      internalID: 6763253983554524647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk front_4
+      name: M_Walk_Down_4
       rect:
         serializedVersion: 2
-        x: 1298
-        y: 364
-        width: 248
-        height: 606
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1299
+        y: 365
+        width: 252
+        height: 614
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43d3f7ff69e7920c0800000000000000
-      internalID: -4600006357385528012
+      spriteID: 2b4255a74ddc46bc0800000000000000
+      internalID: -3790678673869953870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk front_5
+      name: M_Walk_Down_5
       rect:
         serializedVersion: 2
         x: 1612
         y: 348
-        width: 248
-        height: 622
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 253
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bddca7071efd7f60800000000000000
-      internalID: 8033856685165305268
+      spriteID: 0dd0557e303bb6b30800000000000000
+      internalID: 4281712700093173200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk front_6
+      name: M_Walk_Down_6
       rect:
         serializedVersion: 2
         x: 1926
         y: 348
-        width: 248
-        height: 622
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 253
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 082eef890b2ab0dc0800000000000000
-      internalID: -3671662191825722752
+      spriteID: dae8d779aee3c7c20800000000000000
+      internalID: 3205506212065808045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk front_7
+      name: M_Walk_Down_7
       rect:
         serializedVersion: 2
         x: 2240
         y: 348
-        width: 248
-        height: 622
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 253
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2a1c4ba3564bea50800000000000000
-      internalID: 6551407408110639658
+      spriteID: 3e55fcaf6d2b33160800000000000000
+      internalID: 7004138481891890659
       vertices: []
       indices: 
       edges: []

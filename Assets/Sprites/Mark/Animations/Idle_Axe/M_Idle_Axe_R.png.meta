@@ -1,0 +1,1630 @@
+fileFormatVersion: 2
+guid: feda3864832a444e09ae017b1b6acb21
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8409008568581553612
+    second: idle right with weapon_0
+  - first:
+      213: 8353700063089689361
+    second: idle right with weapon_1
+  - first:
+      213: -5099521757172143917
+    second: idle right with weapon_2
+  - first:
+      213: 8363732420383739738
+    second: idle right with weapon_3
+  - first:
+      213: 3985366430335292500
+    second: idle right with weapon_4
+  - first:
+      213: -1498003291219981464
+    second: idle right with weapon_5
+  - first:
+      213: 767845799248904641
+    second: idle right with weapon_6
+  - first:
+      213: 8827360460097673547
+    second: idle right with weapon_7
+  - first:
+      213: -7106804959796208454
+    second: idle right with weapon_8
+  - first:
+      213: -6996910246028366549
+    second: idle right with weapon_9
+  - first:
+      213: -8113798464396497136
+    second: idle right with weapon_10
+  - first:
+      213: -4999742159893240562
+    second: idle right with weapon_11
+  - first:
+      213: -4683235205802819488
+    second: idle right with weapon_12
+  - first:
+      213: -5458924425725268504
+    second: idle right with weapon_13
+  - first:
+      213: -4403044688228196813
+    second: idle right with weapon_14
+  - first:
+      213: 4735730658592692831
+    second: idle right with weapon_15
+  - first:
+      213: -6290860214371448589
+    second: idle right with weapon_16
+  - first:
+      213: 1007415141895030241
+    second: idle right with weapon_17
+  - first:
+      213: -8170627044284170597
+    second: idle right with weapon_18
+  - first:
+      213: -1386063320556125386
+    second: idle right with weapon_19
+  - first:
+      213: 3931533692048280625
+    second: idle right with weapon_20
+  - first:
+      213: 4134056698404460707
+    second: idle right with weapon_21
+  - first:
+      213: -6018391668036848245
+    second: idle right with weapon_22
+  - first:
+      213: 6947274614501614522
+    second: idle right with weapon_23
+  - first:
+      213: -4221817383508820059
+    second: idle right with weapon_24
+  - first:
+      213: 3204984985097162600
+    second: idle right with weapon_25
+  - first:
+      213: -8338018049202277119
+    second: idle right with weapon_26
+  - first:
+      213: 6918955709436740062
+    second: idle right with weapon_27
+  - first:
+      213: -5690724615604892095
+    second: idle right with weapon_28
+  - first:
+      213: 983422491208235197
+    second: idle right with weapon_29
+  - first:
+      213: -3613183371319539864
+    second: idle right with weapon_30
+  - first:
+      213: 7534271736022640536
+    second: idle right with weapon_31
+  - first:
+      213: 2015882568630626063
+    second: idle right with weapon_32
+  - first:
+      213: -744370349285591920
+    second: idle right with weapon_33
+  - first:
+      213: -5708419532705172083
+    second: idle right with weapon_34
+  - first:
+      213: 5029483156135226463
+    second: idle right with weapon_35
+  - first:
+      213: -762313030947024739
+    second: idle right with weapon_36
+  - first:
+      213: -8959185614384050226
+    second: idle right with weapon_37
+  - first:
+      213: -1895015856074294939
+    second: idle right with weapon_38
+  - first:
+      213: -3293843314134206630
+    second: idle right with weapon_39
+  - first:
+      213: 2911790996886518022
+    second: idle right with weapon_40
+  - first:
+      213: -1174391012118069632
+    second: idle right with weapon_41
+  - first:
+      213: -2405463248316426983
+    second: idle right with weapon_42
+  - first:
+      213: -6680344483949078988
+    second: idle right with weapon_43
+  - first:
+      213: 8797847510657528503
+    second: idle right with weapon_44
+  - first:
+      213: -2972461507822395395
+    second: idle right with weapon_45
+  - first:
+      213: -3449871189279166941
+    second: idle right with weapon_46
+  - first:
+      213: 5713337017317314957
+    second: idle right with weapon_47
+  - first:
+      213: 302288566654086319
+    second: idle right with weapon_48
+  - first:
+      213: -2028626898479633430
+    second: idle right with weapon_49
+  - first:
+      213: -1104706702966542296
+    second: Idle_Weapon_R_0
+  - first:
+      213: 4290422423494951575
+    second: Idle_Weapon_R_1
+  - first:
+      213: 7978927051412538143
+    second: Idle_Weapon_R_2
+  - first:
+      213: -8667169240395327392
+    second: Idle_Weapon_R_3
+  - first:
+      213: 1549074520428587991
+    second: Idle_Weapon_R_4
+  - first:
+      213: 1469498619917225401
+    second: Idle_Weapon_R_5
+  - first:
+      213: 6760926928643294412
+    second: Idle_Weapon_R_6
+  - first:
+      213: -4544862614002934680
+    second: Idle_Weapon_R_7
+  - first:
+      213: -617793579694384880
+    second: Idle_Weapon_R_8
+  - first:
+      213: 26520661512834687
+    second: Idle_Weapon_R_9
+  - first:
+      213: 8397875881901917701
+    second: Idle_Weapon_R_10
+  - first:
+      213: -7920027719494501901
+    second: Idle_Weapon_R_11
+  - first:
+      213: 5079070882321834329
+    second: Idle_Weapon_R_12
+  - first:
+      213: 6842324566956527204
+    second: Idle_Weapon_R_13
+  - first:
+      213: 976459866277971483
+    second: Idle_Weapon_R_14
+  - first:
+      213: 9040376035733295317
+    second: Idle_Weapon_R_15
+  - first:
+      213: -3636305530067290404
+    second: Idle_Weapon_R_16
+  - first:
+      213: -3845145665881658022
+    second: Idle_Weapon_R_17
+  - first:
+      213: -3525938665303058476
+    second: Idle_Weapon_R_18
+  - first:
+      213: 822683724399822448
+    second: Idle_Weapon_R_19
+  - first:
+      213: 6400069228238258848
+    second: Idle_Weapon_R_20
+  - first:
+      213: 4560591912464773954
+    second: Idle_Weapon_R_21
+  - first:
+      213: 1585184040246779033
+    second: Idle_Weapon_R_22
+  - first:
+      213: -1718009675715801277
+    second: Idle_Weapon_R_23
+  - first:
+      213: -918079035355776215
+    second: Idle_Weapon_R_24
+  - first:
+      213: -5003552671082204734
+    second: Idle_Weapon_R_25
+  - first:
+      213: 914392823855456962
+    second: Idle_Weapon_R_26
+  - first:
+      213: -6707301410831297016
+    second: Idle_Weapon_R_27
+  - first:
+      213: -2571958933957669975
+    second: Idle_Weapon_R_28
+  - first:
+      213: 205302487142885124
+    second: Idle_Weapon_R_29
+  - first:
+      213: 1886031791289629632
+    second: Idle_Weapon_R_30
+  - first:
+      213: 5312759635446146517
+    second: Idle_Weapon_R_31
+  - first:
+      213: -6744400201223185852
+    second: Idle_Weapon_R_32
+  - first:
+      213: -4184264455745020209
+    second: Idle_Weapon_R_33
+  - first:
+      213: -5605623124498018377
+    second: Idle_Weapon_R_34
+  - first:
+      213: 1002139349064472217
+    second: Idle_Weapon_R_35
+  - first:
+      213: -4826928202757273194
+    second: Idle_Weapon_R_36
+  - first:
+      213: -3507493386627184683
+    second: Idle_Weapon_R_37
+  - first:
+      213: -5461291273488200726
+    second: Idle_Weapon_R_38
+  - first:
+      213: -4021782478889827032
+    second: Idle_Weapon_R_39
+  - first:
+      213: 7266049728027650722
+    second: Idle_Weapon_R_40
+  - first:
+      213: -9214652285110876779
+    second: Idle_Weapon_R_41
+  - first:
+      213: 2634188572658855750
+    second: Idle_Weapon_R_42
+  - first:
+      213: 7053051035138211870
+    second: Idle_Weapon_R_43
+  - first:
+      213: 2823245749277345591
+    second: Idle_Weapon_R_44
+  - first:
+      213: -8734706168218916266
+    second: Idle_Weapon_R_45
+  - first:
+      213: 525225124964809579
+    second: Idle_Weapon_R_46
+  - first:
+      213: -3533283959678322300
+    second: Idle_Weapon_R_47
+  - first:
+      213: -2079456088208089139
+    second: Idle_Weapon_R_48
+  - first:
+      213: 4262274382118918640
+    second: Idle_Weapon_R_49
+  - first:
+      213: -9087458958921655158
+    second: M_Idle_Axe_R_0
+  - first:
+      213: 6738148642229959209
+    second: M_Idle_Axe_R_1
+  - first:
+      213: -1162317413115259486
+    second: M_Idle_Axe_R_2
+  - first:
+      213: 6723332675891164470
+    second: M_Idle_Axe_R_3
+  - first:
+      213: 7553360519541321274
+    second: M_Idle_Axe_R_4
+  - first:
+      213: -4715010303530251335
+    second: M_Idle_Axe_R_5
+  - first:
+      213: 115103802291463540
+    second: M_Idle_Axe_R_6
+  - first:
+      213: 8497684807359188785
+    second: M_Idle_Axe_R_7
+  - first:
+      213: -4501923268198227227
+    second: M_Idle_Axe_R_8
+  - first:
+      213: -6410469690696808182
+    second: M_Idle_Axe_R_9
+  - first:
+      213: 649067568142382079
+    second: M_Idle_Axe_R_10
+  - first:
+      213: 6855192171641652073
+    second: M_Idle_Axe_R_11
+  - first:
+      213: 338609317049566221
+    second: M_Idle_Axe_R_12
+  - first:
+      213: -8849335665051019837
+    second: M_Idle_Axe_R_13
+  - first:
+      213: -8814750808227537591
+    second: M_Idle_Axe_R_14
+  - first:
+      213: 8279876578833482250
+    second: M_Idle_Axe_R_15
+  - first:
+      213: 5429780713365105119
+    second: M_Idle_Axe_R_16
+  - first:
+      213: -3114392932908573439
+    second: M_Idle_Axe_R_17
+  - first:
+      213: -6847536596356068769
+    second: M_Idle_Axe_R_18
+  - first:
+      213: -1815226805108031357
+    second: M_Idle_Axe_R_19
+  - first:
+      213: -747035977682485465
+    second: M_Idle_Axe_R_20
+  - first:
+      213: -6992033749650264284
+    second: M_Idle_Axe_R_21
+  - first:
+      213: 2854162983495715732
+    second: M_Idle_Axe_R_22
+  - first:
+      213: 7652595325335370365
+    second: M_Idle_Axe_R_23
+  - first:
+      213: -5665744854379104889
+    second: M_Idle_Axe_R_24
+  - first:
+      213: 2348642051737841603
+    second: M_Idle_Axe_R_25
+  - first:
+      213: -9048089522886167857
+    second: M_Idle_Axe_R_26
+  - first:
+      213: 3068437070013184758
+    second: M_Idle_Axe_R_27
+  - first:
+      213: 2686167132143557802
+    second: M_Idle_Axe_R_28
+  - first:
+      213: 2039609114206473223
+    second: M_Idle_Axe_R_29
+  - first:
+      213: 3918544668113073459
+    second: M_Idle_Axe_R_30
+  - first:
+      213: 7814504588058675837
+    second: M_Idle_Axe_R_31
+  - first:
+      213: 4001890286015100808
+    second: M_Idle_Axe_R_32
+  - first:
+      213: 7798077753011582375
+    second: M_Idle_Axe_R_33
+  - first:
+      213: -8068080180729602578
+    second: M_Idle_Axe_R_34
+  - first:
+      213: 7829109688780818469
+    second: M_Idle_Axe_R_35
+  - first:
+      213: 8350970386507189143
+    second: M_Idle_Axe_R_36
+  - first:
+      213: 3978570912861487469
+    second: M_Idle_Axe_R_37
+  - first:
+      213: -3659354718507837767
+    second: M_Idle_Axe_R_38
+  - first:
+      213: 5071100508375602941
+    second: M_Idle_Axe_R_39
+  - first:
+      213: -4282954160878797151
+    second: M_Idle_Axe_R_40
+  - first:
+      213: 7476507827251134951
+    second: M_Idle_Axe_R_41
+  - first:
+      213: 5191735737494643494
+    second: M_Idle_Axe_R_42
+  - first:
+      213: 1360961833672173631
+    second: M_Idle_Axe_R_43
+  - first:
+      213: 615739771586424574
+    second: M_Idle_Axe_R_44
+  - first:
+      213: 6457811462837624719
+    second: M_Idle_Axe_R_45
+  - first:
+      213: 1183036701744297290
+    second: M_Idle_Axe_R_46
+  - first:
+      213: 8793859048941662561
+    second: M_Idle_Axe_R_47
+  - first:
+      213: -5166646097854457384
+    second: M_Idle_Axe_R_48
+  - first:
+      213: -325621247217071468
+    second: M_Idle_Axe_R_49
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c988a693cd2e180800000000000000
+      internalID: -9087458958921655158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_1
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ab5e76d76b28d50800000000000000
+      internalID: 6738148642229959209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_2
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a59303987e9edfe0800000000000000
+      internalID: -1162317413115259486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_3
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 635f44d62731e4d50800000000000000
+      internalID: 6723332675891164470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_4
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e68b38f5de2d860800000000000000
+      internalID: 7553360519541321274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_5
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bbc5c13c1be09eb0800000000000000
+      internalID: -4715010303530251335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_6
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47521ef5c4ee89100800000000000000
+      internalID: 115103802291463540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_7
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13fc0e34f47dde570800000000000000
+      internalID: 8497684807359188785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_8
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2aaf8c3a4f581c0800000000000000
+      internalID: -4501923268198227227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_9
+      rect:
+        serializedVersion: 2
+        x: 2827
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09cb9ac7cf6907a0800000000000000
+      internalID: -6410469690696808182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_10
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff37a5aa383f10900800000000000000
+      internalID: 649067568142382079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_11
+      rect:
+        serializedVersion: 2
+        x: 3445
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9634db1b5f8822f50800000000000000
+      internalID: 6855192171641652073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_12
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04806c316bf2b400800000000000000
+      internalID: 338609317049566221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_13
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2757
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c550723918d03580800000000000000
+      internalID: -8849335665051019837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_14
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2757
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d920ca7d6bba580800000000000000
+      internalID: -8814750808227537591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_15
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02427931e708e270800000000000000
+      internalID: 8279876578833482250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_16
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9e4646ac47a5b40800000000000000
+      internalID: 5429780713365105119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_17
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d5ff6d02477c4d0800000000000000
+      internalID: -3114392932908573439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_18
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a85b3deb9a8f0a0800000000000000
+      internalID: -6847536596356068769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_19
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380c4c696d40fc6e0800000000000000
+      internalID: -1815226805108031357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_20
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f7ccb7cbef1a5f0800000000000000
+      internalID: -747035977682485465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_21
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42fad8e995e47fe90800000000000000
+      internalID: -6992033749650264284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_22
+      rect:
+        serializedVersion: 2
+        x: 2827
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49bc45a8c160c9720800000000000000
+      internalID: 2854162983495715732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_23
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7afd6837ea733a60800000000000000
+      internalID: 7652595325335370365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_24
+      rect:
+        serializedVersion: 2
+        x: 3445
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7857cb6c21b3f51b0800000000000000
+      internalID: -5665744854379104889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_25
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cfe06e908d089020800000000000000
+      internalID: 2348642051737841603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_26
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2080
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2bf6c848abe6280800000000000000
+      internalID: -9048089522886167857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_27
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2080
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fab6c50247459a20800000000000000
+      internalID: 3068437070013184758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_28
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 2080
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac1fb656ce274520800000000000000
+      internalID: 2686167132143557802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_29
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 2080
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c0decdea52e4c10800000000000000
+      internalID: 2039609114206473223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_30
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 2080
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33571634d97716630800000000000000
+      internalID: 3918544668113073459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_31
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 2080
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ac5e21582b27c60800000000000000
+      internalID: 7814504588058675837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_32
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 2080
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88734002302998730800000000000000
+      internalID: 4001890286015100808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_33
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 2080
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5b12f7666583c60800000000000000
+      internalID: 7798077753011582375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_34
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 2080
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed1e3872db680090800000000000000
+      internalID: -8068080180729602578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_35
+      rect:
+        serializedVersion: 2
+        x: 2827
+        y: 2080
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528895318c596ac60800000000000000
+      internalID: 7829109688780818469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_36
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 2080
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b4199325b94e370800000000000000
+      internalID: 8350970386507189143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_37
+      rect:
+        serializedVersion: 2
+        x: 3445
+        y: 2080
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d618fc67a29b63730800000000000000
+      internalID: 3978570912861487469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_38
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 2080
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6d038854c573dc0800000000000000
+      internalID: -3659354718507837767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_39
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6d7066b0b206640800000000000000
+      internalID: 5071100508375602941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_40
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aeb98bf1e3ef84c0800000000000000
+      internalID: -4282954160878797151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_41
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e14bb3b144e1c760800000000000000
+      internalID: 7476507827251134951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_42
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623a1117520cc0840800000000000000
+      internalID: 5191735737494643494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_43
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38e4e8b39b13e210800000000000000
+      internalID: 1360961833672173631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_44
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe2d775f0c8b8800800000000000000
+      internalID: 615739771586424574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_45
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fd1ec7f41ce9950800000000000000
+      internalID: 6457811462837624719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_46
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45f7bbbc9dfa6010800000000000000
+      internalID: 1183036701744297290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_47
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161b50196301a0a70800000000000000
+      internalID: 8793859048941662561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_48
+      rect:
+        serializedVersion: 2
+        x: 2827
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d91a318fb26c48b0800000000000000
+      internalID: -5166646097854457384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Idle_Axe_R_49
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a8e4c63392b7bf0800000000000000
+      internalID: -325621247217071468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

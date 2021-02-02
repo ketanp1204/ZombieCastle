@@ -33,6 +33,7 @@ public class PlayerCombat : MonoBehaviour
 
     // Cached References
     public HealthBar healthBar;
+    public Transform bloodParticlesStartPosition;
     private SceneType sceneTypeReference;
     private Animator animator;
 
@@ -59,19 +60,22 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    public void InvokeAttack1()
+    public void InvokeAxeAttack()
     {
-        Attack1();
+        AxeAttack();
     }
 
-    public void InvokeAttack2()
+    public void InvokeKnifeAttack()
     {
-        Attack2();
+        KnifeAttack();
     }
 
-    private void Attack1()
+    private void AxeAttack()
     {
+        // Play axe hit sound
         AudioManager.PlaySoundAtPosition(AudioManager.Sound.PlayerAxeHit, transform.position);
+
+        // Detect enemies in range of attack
         Collider2D[] hitEnemies;
 
         if (sceneType == 1)
@@ -106,15 +110,18 @@ public class PlayerCombat : MonoBehaviour
         {
             if(!enemy.transform.parent.gameObject.GetComponent<EnemyCombat>().IsDead)
             {
-                enemy.transform.parent.gameObject.GetComponent<EnemyCombat>().TakeDamage(attack1Damage);
-                enemy.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                enemy.transform.parent.gameObject.GetComponent<EnemyCombat>().TakeDamage(Player.instance.pathfindingTarget, attack1Damage);
+                // enemy.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             }
         }
 
     }
 
-    void Attack2()
+    void KnifeAttack()
     {
+        // TODO: Play knife hit sound
+
+
         // Detect enemies in range of attack
         Collider2D[] hitEnemies;
 
@@ -151,24 +158,36 @@ public class PlayerCombat : MonoBehaviour
         {
             if(!enemy.transform.parent.gameObject.GetComponent<EnemyCombat>().IsDead)
             {
-                enemy.transform.parent.gameObject.GetComponent<EnemyCombat>().TakeDamage(attack2Damage);
-                enemy.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                enemy.transform.parent.gameObject.GetComponent<EnemyCombat>().TakeDamage(Player.instance.pathfindingTarget, attack2Damage);
+                // enemy.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             }
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(Transform enemyPos, int damage)
     {
         if (!PlayerStats.IsDead)
         {
-            // Set player taking damage bool on Player script to stop keybaord movement
+            // Create blood particles
+            GameObject bloodParticles = Instantiate(GameAssets.instance.bloodParticles, bloodParticlesStartPosition);
+            if (Player.PlayerFacingRight())
+            {
+                bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            else
+            {
+                bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            StartCoroutine(DestroyGameObjectAfterDelay(bloodParticles, 5f));
+
+            // Set player taking damage bool on Player script to stop keybaord movement and attacks
             Player.instance.takingDamage = true;
 
             // Reduce health
             PlayerStats.currentHealth -= damage;
 
             // Push player in direction of hit
-            StartCoroutine(PushPlayerInHitDirection());
+            StartCoroutine(PushPlayerInHitDirection(enemyPos));
 
             // Update Health Bar
             healthBar.SetHealth(PlayerStats.currentHealth);
@@ -184,20 +203,21 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    private IEnumerator PushPlayerInHitDirection()
+    private IEnumerator PushPlayerInHitDirection(Transform enemyPos)
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        bool facingRight = Player.PlayerFacingRight();
-        if (facingRight)
+
+        if (enemyPos.transform.position.x < transform.position.x)
         {
-            rb.velocity = new Vector2(-pushDistanceOnHit, rb.velocity.y);
+            // Push push to the right
+            rb.velocity = new Vector2(pushDistanceOnHit, 0);
             yield return new WaitForSeconds(0.5f);
             Player.instance.takingDamage = false;
         }
         else
         {
-            
-            rb.velocity = new Vector2(pushDistanceOnHit, rb.velocity.y);
+            // Push player to the left
+            rb.velocity = new Vector2(-pushDistanceOnHit, 0);
             yield return new WaitForSeconds(0.5f);
             Player.instance.takingDamage = false;
         }
@@ -217,12 +237,12 @@ public class PlayerCombat : MonoBehaviour
         // Disable Health Bar
         healthBar.gameObject.SetActive(false);
 
-        StartCoroutine(DestroyGameObjectAfterDelay(gameObject));
+        StartCoroutine(DestroyGameObjectAfterDelay(gameObject, 5f));
     }
 
-    private IEnumerator DestroyGameObjectAfterDelay(GameObject gameObject)
+    private IEnumerator DestroyGameObjectAfterDelay(GameObject gameObject, float delay)
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(delay);
         Destroy(gameObject);
 
         PlayerStats.isFirstScene = true;

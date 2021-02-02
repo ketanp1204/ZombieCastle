@@ -1,0 +1,3187 @@
+fileFormatVersion: 2
+guid: 26e47b344a02c4c8f983ac939f56fe03
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1913877386760811811
+    second: walk right with weapon_0
+  - first:
+      213: -4480419468393816092
+    second: walk right with weapon_1
+  - first:
+      213: 5938525716792316265
+    second: walk right with weapon_2
+  - first:
+      213: 6327214966543911566
+    second: walk right with weapon_3
+  - first:
+      213: 8230450924457946486
+    second: walk right with weapon_4
+  - first:
+      213: 2121144874155992584
+    second: walk right with weapon_5
+  - first:
+      213: 5923629182005094678
+    second: walk right with weapon_6
+  - first:
+      213: 1807029154045806613
+    second: walk right with weapon_7
+  - first:
+      213: -291420242885470441
+    second: walk right with weapon_8
+  - first:
+      213: -1024803317243294121
+    second: walk right with weapon_9
+  - first:
+      213: 7359544641299528145
+    second: walk right with weapon_10
+  - first:
+      213: 2870825985988866131
+    second: walk right with weapon_1
+  - first:
+      213: -3946157093796241984
+    second: walk right with weapon_12
+  - first:
+      213: 2836489884867070589
+    second: walk right with weapon_13
+  - first:
+      213: 859364916950694533
+    second: walk right with weapon_14
+  - first:
+      213: 2347366898173521500
+    second: walk right with weapon_15
+  - first:
+      213: 3860558111522919574
+    second: walk right with weapon_16
+  - first:
+      213: 3203363860303887004
+    second: walk right with weapon_17
+  - first:
+      213: 8178549691608977974
+    second: walk right with weapon_18
+  - first:
+      213: 125749504881772114
+    second: walk right with weapon_19
+  - first:
+      213: -6152818575655387988
+    second: walk right with weapon_20
+  - first:
+      213: 8275016786987804214
+    second: walk right with weapon_21
+  - first:
+      213: 2603840974321804880
+    second: walk right with weapon_22
+  - first:
+      213: -9147079327343693600
+    second: walk right with weapon_23
+  - first:
+      213: 1851557854139827476
+    second: walk right with weapon_24
+  - first:
+      213: 4753748315955987079
+    second: walk right with weapon_25
+  - first:
+      213: -3551920206582918798
+    second: walk right with weapon_26
+  - first:
+      213: -7664673520128413740
+    second: walk right with weapon_27
+  - first:
+      213: 3812642618912524735
+    second: walk right with weapon_28
+  - first:
+      213: 6751785188040553860
+    second: walk right with weapon_29
+  - first:
+      213: -2717582846815359032
+    second: walk right with weapon_30
+  - first:
+      213: 6889582496500034654
+    second: walk right with weapon_31
+  - first:
+      213: -943502912611785275
+    second: walk right with weapon_32
+  - first:
+      213: -903883698848095701
+    second: walk right with weapon_33
+  - first:
+      213: -861980272054716992
+    second: walk right with weapon_34
+  - first:
+      213: 6650318524333174218
+    second: walk right with weapon_35
+  - first:
+      213: 2510444407278041256
+    second: walk right with weapon_36
+  - first:
+      213: 3733854889695571753
+    second: walk right with weapon_37
+  - first:
+      213: -7910716059280100739
+    second: walk right with weapon_38
+  - first:
+      213: -140321082395635435
+    second: walk right with weapon_39
+  - first:
+      213: 6621177681083314022
+    second: walk right with weapon_40
+  - first:
+      213: -1071518675596383302
+    second: walk right with weapon_41
+  - first:
+      213: 3696467378037150098
+    second: walk right with weapon_42
+  - first:
+      213: -4104117487093894089
+    second: walk right with weapon_43
+  - first:
+      213: -1186436104139443685
+    second: walk right with weapon_44
+  - first:
+      213: -957158977817479870
+    second: walk right with weapon_35
+  - first:
+      213: -7754172088232782255
+    second: walk right with weapon_46
+  - first:
+      213: 4039005860187355992
+    second: walk right with weapon_47
+  - first:
+      213: -9018028038624335160
+    second: walk right with weapon_48
+  - first:
+      213: -2737912375667730475
+    second: walk right with weapon_49
+  - first:
+      213: -2400029945732315713
+    second: walk right with weapon_50
+  - first:
+      213: -7697947641541644212
+    second: walk right with weapon_51
+  - first:
+      213: -7975482462469778622
+    second: walk right with weapon_52
+  - first:
+      213: -3109577099443549077
+    second: walk right with weapon_53
+  - first:
+      213: 8465883799243849985
+    second: walk right with weapon_54
+  - first:
+      213: 179298449424802875
+    second: walk right with weapon_55
+  - first:
+      213: -5955401201219793551
+    second: walk right with weapon_56
+  - first:
+      213: -3895440363976448108
+    second: walk right with weapon_57
+  - first:
+      213: -3799260743819397662
+    second: walk right with weapon_58
+  - first:
+      213: -8166893633135148683
+    second: walk right with weapon_59
+  - first:
+      213: -1133836400549488486
+    second: walk right with weapon_60
+  - first:
+      213: 1125213060060216665
+    second: walk right with weapon_61
+  - first:
+      213: 823908175948525914
+    second: walk right with weapon_62
+  - first:
+      213: -2141374508980751034
+    second: walk right with weapon_63
+  - first:
+      213: 428573865532373289
+    second: walk right with weapon_64
+  - first:
+      213: 5776254661585774146
+    second: walk right with weapon_65
+  - first:
+      213: 249556824024501140
+    second: walk right with weapon_66
+  - first:
+      213: -3710807200692053599
+    second: walk right with weapon_67
+  - first:
+      213: -1427727383438779751
+    second: walk right with weapon_68
+  - first:
+      213: -8224720661166838979
+    second: walk right with weapon_69
+  - first:
+      213: 6423245490285264694
+    second: walk right with weapon_70
+  - first:
+      213: -1257473677644844671
+    second: walk right with weapon_71
+  - first:
+      213: 6657647715532199454
+    second: walk right with weapon_72
+  - first:
+      213: -6878701939357744509
+    second: walk right with weapon_73
+  - first:
+      213: -5957463557220488770
+    second: walk right with weapon_74
+  - first:
+      213: -5594987011752154994
+    second: walk right with weapon_75
+  - first:
+      213: 6735237367402635841
+    second: walk right with weapon_76
+  - first:
+      213: 40610191014839283
+    second: walk right with weapon_77
+  - first:
+      213: -7042891455762400483
+    second: walk right with weapon_78
+  - first:
+      213: -6417927852029418599
+    second: walk right with weapon_79
+  - first:
+      213: 4514570346542100128
+    second: walk right with weapon_80
+  - first:
+      213: -6732871835972672968
+    second: walk right with weapon_81
+  - first:
+      213: 4282366215506902885
+    second: walk right with weapon_82
+  - first:
+      213: -2074035500377694918
+    second: walk right with weapon_83
+  - first:
+      213: 7838554097451622617
+    second: walk right with weapon_84
+  - first:
+      213: -2794059751066760813
+    second: walk right with weapon_85
+  - first:
+      213: 8622520785012142381
+    second: walk right with weapon_86
+  - first:
+      213: -70264615089148188
+    second: walk right with weapon_87
+  - first:
+      213: 3401297729398013277
+    second: walk right with weapon_88
+  - first:
+      213: -7253742769675256171
+    second: walk right with weapon_89
+  - first:
+      213: -8955493255721191887
+    second: walk right with weapon_90
+  - first:
+      213: -3150500452285350318
+    second: walk right with weapon_91
+  - first:
+      213: 7618133369297576817
+    second: walk right with weapon_92
+  - first:
+      213: -4863596672356494180
+    second: walk right with weapon_93
+  - first:
+      213: -5343842685975683245
+    second: walk right with weapon_94
+  - first:
+      213: -3118901974177815269
+    second: walk right with weapon_95
+  - first:
+      213: -4352768134897283352
+    second: walk right with weapon_96
+  - first:
+      213: -4861249880713547877
+    second: walk right with weapon_97
+  - first:
+      213: 4902252372145331088
+    second: walk right with weapon_98
+  - first:
+      213: 7214472708718246025
+    second: walk right with weapon_99
+  - first:
+      213: -3956565043934813313
+    second: walk right with weapon_100
+  - first:
+      213: -7473342845923315511
+    second: walk right with weapon_101
+  - first:
+      213: -6831449655120842318
+    second: walk right with weapon_102
+  - first:
+      213: -5588487501536882959
+    second: walk right with weapon_103
+  - first:
+      213: -4626001273524104053
+    second: walk right with weapon_104
+  - first:
+      213: -7609871559995066384
+    second: walk right with weapon_105
+  - first:
+      213: -94301315805958330
+    second: Walk_Weapon_R_0
+  - first:
+      213: 3697540328019122338
+    second: Walk_Weapon_R_2
+  - first:
+      213: 3754700624480268210
+    second: Walk_Weapon_R_3
+  - first:
+      213: 3232607364970498895
+    second: Walk_Weapon_R_4
+  - first:
+      213: -4482551956807129325
+    second: Walk_Weapon_R_5
+  - first:
+      213: 7552370753252801555
+    second: Walk_Weapon_R_6
+  - first:
+      213: -8024588712983791791
+    second: Walk_Weapon_R_7
+  - first:
+      213: -2468046545858570582
+    second: Walk_Weapon_R_8
+  - first:
+      213: 4289918412406386064
+    second: Walk_Weapon_R_9
+  - first:
+      213: -7393794993959889581
+    second: Walk_Weapon_R_10
+  - first:
+      213: 5725660124035353204
+    second: Walk_Weapon_R_1
+  - first:
+      213: -2803613458366613241
+    second: Walk_Weapon_R_12
+  - first:
+      213: -8907462879451645974
+    second: Walk_Weapon_R_13
+  - first:
+      213: -691422453267144022
+    second: Walk_Weapon_R_14
+  - first:
+      213: -7839449443688744648
+    second: Walk_Weapon_R_15
+  - first:
+      213: 3297120477316485890
+    second: Walk_Weapon_R_16
+  - first:
+      213: -4372989754628702252
+    second: Walk_Weapon_R_17
+  - first:
+      213: -5864372932992839352
+    second: Walk_Weapon_R_18
+  - first:
+      213: 6916909736162856890
+    second: Walk_Weapon_R_19
+  - first:
+      213: 555216130101959052
+    second: Walk_Weapon_R_20
+  - first:
+      213: 3132433730667530795
+    second: Walk_Weapon_R_21
+  - first:
+      213: -7121357568741466824
+    second: Walk_Weapon_R_22
+  - first:
+      213: -8195178345399842088
+    second: Walk_Weapon_R_23
+  - first:
+      213: 2335609796792769959
+    second: Walk_Weapon_R_24
+  - first:
+      213: 8387083657007560242
+    second: Walk_Weapon_R_25
+  - first:
+      213: 5045253930016694859
+    second: Walk_Weapon_R_26
+  - first:
+      213: 8591018850812375262
+    second: Walk_Weapon_R_27
+  - first:
+      213: -3684979519104766430
+    second: Walk_Weapon_R_28
+  - first:
+      213: -4406242468755391374
+    second: Walk_Weapon_R_29
+  - first:
+      213: 4275529570337704097
+    second: Walk_Weapon_R_30
+  - first:
+      213: 4130310065716858230
+    second: Walk_Weapon_R_31
+  - first:
+      213: -5890619305902430244
+    second: Walk_Weapon_R_32
+  - first:
+      213: -4864124498449804168
+    second: Walk_Weapon_R_33
+  - first:
+      213: -6327385040048425854
+    second: Walk_Weapon_R_34
+  - first:
+      213: 1625765805604009009
+    second: Walk_Weapon_R_35
+  - first:
+      213: 284886573102455383
+    second: Walk_Weapon_R_36
+  - first:
+      213: -357821435529527378
+    second: Walk_Weapon_R_37
+  - first:
+      213: 8098142094887076207
+    second: Walk_Weapon_R_38
+  - first:
+      213: 1828057688289048291
+    second: Walk_Weapon_R_39
+  - first:
+      213: -2185951564043038088
+    second: Walk_Weapon_R_40
+  - first:
+      213: 5760629861164527482
+    second: Walk_Weapon_R_41
+  - first:
+      213: 4539171292546025396
+    second: Walk_Weapon_R_42
+  - first:
+      213: -1483798877421002402
+    second: Walk_Weapon_R_43
+  - first:
+      213: -8722941972124030151
+    second: Walk_Weapon_R_44
+  - first:
+      213: -8362236700931345410
+    second: Walk_Weapon_R_35
+  - first:
+      213: -816397668752230288
+    second: Walk_Weapon_R_46
+  - first:
+      213: -6456397356107462271
+    second: Walk_Weapon_R_47
+  - first:
+      213: 8437129113115504213
+    second: Walk_Weapon_R_48
+  - first:
+      213: -8757090201148277187
+    second: Walk_Weapon_R_49
+  - first:
+      213: 7870774427881253893
+    second: Walk_Weapon_R_50
+  - first:
+      213: -4352315215472375033
+    second: Walk_Weapon_R_51
+  - first:
+      213: -2956052195881801606
+    second: Walk_Weapon_R_52
+  - first:
+      213: 3149167320014485427
+    second: Walk_Weapon_R_53
+  - first:
+      213: 9051028062606949661
+    second: Walk_Weapon_R_54
+  - first:
+      213: -5606885221121438880
+    second: Walk_Weapon_R_55
+  - first:
+      213: 8714982610652538200
+    second: Walk_Weapon_R_56
+  - first:
+      213: -3440817208791837392
+    second: Walk_Weapon_R_57
+  - first:
+      213: 584556906685484786
+    second: Walk_Weapon_R_58
+  - first:
+      213: 1612437075277701115
+    second: Walk_Weapon_R_59
+  - first:
+      213: -8698096419164374848
+    second: Walk_Weapon_R_60
+  - first:
+      213: -7473727721118886853
+    second: Walk_Weapon_R_61
+  - first:
+      213: 3311262702347511254
+    second: Walk_Weapon_R_62
+  - first:
+      213: -6010601369178628003
+    second: Walk_Weapon_R_63
+  - first:
+      213: 389609031558424765
+    second: Walk_Weapon_R_64
+  - first:
+      213: 2248342743675004331
+    second: Walk_Weapon_R_65
+  - first:
+      213: 8079975689915183400
+    second: Walk_Weapon_R_66
+  - first:
+      213: 3836684583179592719
+    second: Walk_Weapon_R_67
+  - first:
+      213: -3559203326963234379
+    second: Walk_Weapon_R_68
+  - first:
+      213: -860831367042545402
+    second: Walk_Weapon_R_69
+  - first:
+      213: 5260983859970035509
+    second: Walk_Weapon_R_70
+  - first:
+      213: -8930824512557609026
+    second: Walk_Weapon_R_71
+  - first:
+      213: 3208737180667771399
+    second: Walk_Weapon_R_72
+  - first:
+      213: 7017028959521327926
+    second: Walk_Weapon_R_73
+  - first:
+      213: -9222431257718420079
+    second: Walk_Weapon_R_74
+  - first:
+      213: 7655870990672248841
+    second: Walk_Weapon_R_75
+  - first:
+      213: 3485856916176006829
+    second: Walk_Weapon_R_76
+  - first:
+      213: -3466209440191354176
+    second: Walk_Weapon_R_77
+  - first:
+      213: -2185569254248128702
+    second: Walk_Weapon_R_78
+  - first:
+      213: 7167375927859970464
+    second: Walk_Weapon_R_79
+  - first:
+      213: -6799967907765895028
+    second: Walk_Weapon_R_80
+  - first:
+      213: 8344372434189504156
+    second: Walk_Weapon_R_81
+  - first:
+      213: 6231711506645031173
+    second: Walk_Weapon_R_82
+  - first:
+      213: -8121618833524591972
+    second: Walk_Weapon_R_83
+  - first:
+      213: -4299477471754481788
+    second: Walk_Weapon_R_84
+  - first:
+      213: -6399305189154070240
+    second: Walk_Weapon_R_85
+  - first:
+      213: 6252270058327906694
+    second: Walk_Weapon_R_86
+  - first:
+      213: -8154618846927752310
+    second: Walk_Weapon_R_87
+  - first:
+      213: -3554626149514976724
+    second: Walk_Weapon_R_88
+  - first:
+      213: 5235942741518085913
+    second: Walk_Weapon_R_89
+  - first:
+      213: -8513864198185655036
+    second: Walk_Weapon_R_90
+  - first:
+      213: -8710661387495517130
+    second: Walk_Weapon_R_91
+  - first:
+      213: 9166034482205165879
+    second: Walk_Weapon_R_92
+  - first:
+      213: 2909032687005795295
+    second: Walk_Weapon_R_93
+  - first:
+      213: 1573464542091574996
+    second: Walk_Weapon_R_94
+  - first:
+      213: 5182457731146570173
+    second: Walk_Weapon_R_95
+  - first:
+      213: -3529802244275257026
+    second: Walk_Weapon_R_96
+  - first:
+      213: -96118190493826955
+    second: Walk_Weapon_R_97
+  - first:
+      213: 4616659370138151259
+    second: Walk_Weapon_R_98
+  - first:
+      213: -8763505804322223595
+    second: Walk_Weapon_R_99
+  - first:
+      213: -3492515433411265536
+    second: Walk_Weapon_R_100
+  - first:
+      213: -6709232580456212647
+    second: Walk_Weapon_R_101
+  - first:
+      213: -1252923255843608406
+    second: Walk_Weapon_R_102
+  - first:
+      213: -1349491286050837052
+    second: Walk_Weapon_R_103
+  - first:
+      213: -3963420560417608370
+    second: Walk_Weapon_R_104
+  - first:
+      213: -1371431439017314077
+    second: Walk_Weapon_R_105
+  - first:
+      213: 2833581729938587831
+    second: M_Walk_Axe_R_0
+  - first:
+      213: 7354936186652928465
+    second: M_Walk_Axe_R_1
+  - first:
+      213: -8016035506011359705
+    second: M_Walk_Axe_R_2
+  - first:
+      213: 3745478585297195956
+    second: M_Walk_Axe_R_3
+  - first:
+      213: 2774583572142545230
+    second: M_Walk_Axe_R_4
+  - first:
+      213: 1278488640838398424
+    second: M_Walk_Axe_R_5
+  - first:
+      213: -6237028138786032209
+    second: M_Walk_Axe_R_6
+  - first:
+      213: 4977717603425767121
+    second: M_Walk_Axe_R_7
+  - first:
+      213: 6919585656812959643
+    second: M_Walk_Axe_R_8
+  - first:
+      213: 5152019217668929199
+    second: M_Walk_Axe_R_9
+  - first:
+      213: -3265480589004934070
+    second: M_Walk_Axe_R_10
+  - first:
+      213: -3892887923317067952
+    second: M_Walk_Axe_R_11
+  - first:
+      213: 7466933579249028387
+    second: M_Walk_Axe_R_12
+  - first:
+      213: -5722197695410214682
+    second: M_Walk_Axe_R_13
+  - first:
+      213: -7545324157504604092
+    second: M_Walk_Axe_R_14
+  - first:
+      213: -5838400201530747331
+    second: M_Walk_Axe_R_15
+  - first:
+      213: -3675114608550395517
+    second: M_Walk_Axe_R_16
+  - first:
+      213: -7906366862995796655
+    second: M_Walk_Axe_R_17
+  - first:
+      213: 5296012887084121601
+    second: M_Walk_Axe_R_18
+  - first:
+      213: -2307567557215990191
+    second: M_Walk_Axe_R_19
+  - first:
+      213: 246420177872276993
+    second: M_Walk_Axe_R_20
+  - first:
+      213: -7701384841328028428
+    second: M_Walk_Axe_R_21
+  - first:
+      213: -5711094707486594183
+    second: M_Walk_Axe_R_22
+  - first:
+      213: -914869645824093616
+    second: M_Walk_Axe_R_23
+  - first:
+      213: -5762909511245411283
+    second: M_Walk_Axe_R_24
+  - first:
+      213: -3905526817350310201
+    second: M_Walk_Axe_R_25
+  - first:
+      213: -2313848776960868421
+    second: M_Walk_Axe_R_26
+  - first:
+      213: -3430175447888908317
+    second: M_Walk_Axe_R_27
+  - first:
+      213: 3051895508424862251
+    second: M_Walk_Axe_R_28
+  - first:
+      213: -6000081066351552740
+    second: M_Walk_Axe_R_29
+  - first:
+      213: -5802535154569411639
+    second: M_Walk_Axe_R_30
+  - first:
+      213: 3332293458800055518
+    second: M_Walk_Axe_R_31
+  - first:
+      213: 5127791883115660660
+    second: M_Walk_Axe_R_32
+  - first:
+      213: -6096669095897166044
+    second: M_Walk_Axe_R_33
+  - first:
+      213: 2354197128405202123
+    second: M_Walk_Axe_R_34
+  - first:
+      213: 62513062461563324
+    second: M_Walk_Axe_R_35
+  - first:
+      213: 4151540844150375311
+    second: M_Walk_Axe_R_36
+  - first:
+      213: 4482239223050164761
+    second: M_Walk_Axe_R_37
+  - first:
+      213: -4278638618971630615
+    second: M_Walk_Axe_R_38
+  - first:
+      213: -5842370246603429118
+    second: M_Walk_Axe_R_39
+  - first:
+      213: 5456608364491044129
+    second: M_Walk_Axe_R_40
+  - first:
+      213: -3976373255793664377
+    second: M_Walk_Axe_R_41
+  - first:
+      213: 6652820588410491774
+    second: M_Walk_Axe_R_42
+  - first:
+      213: -79575802685675482
+    second: M_Walk_Axe_R_43
+  - first:
+      213: -2475829464873827047
+    second: M_Walk_Axe_R_44
+  - first:
+      213: -6945546053864191730
+    second: M_Walk_Axe_R_45
+  - first:
+      213: -4913629184717988793
+    second: M_Walk_Axe_R_46
+  - first:
+      213: -8378566424032140206
+    second: M_Walk_Axe_R_47
+  - first:
+      213: -5061898102472870842
+    second: M_Walk_Axe_R_48
+  - first:
+      213: 4536691364304959738
+    second: M_Walk_Axe_R_49
+  - first:
+      213: 2002316468765399644
+    second: M_Walk_Axe_R_50
+  - first:
+      213: -7871787846984288876
+    second: M_Walk_Axe_R_51
+  - first:
+      213: -4416722604595074522
+    second: M_Walk_Axe_R_52
+  - first:
+      213: 7228579853309118608
+    second: M_Walk_Axe_R_53
+  - first:
+      213: 2974580348382077502
+    second: M_Walk_Axe_R_54
+  - first:
+      213: 8720628821587490593
+    second: M_Walk_Axe_R_55
+  - first:
+      213: -6103576168674311837
+    second: M_Walk_Axe_R_56
+  - first:
+      213: -6028188214393661043
+    second: M_Walk_Axe_R_57
+  - first:
+      213: -1267922359252654202
+    second: M_Walk_Axe_R_58
+  - first:
+      213: 2434792307403156681
+    second: M_Walk_Axe_R_59
+  - first:
+      213: 9158823883103327537
+    second: M_Walk_Axe_R_60
+  - first:
+      213: -72409112702987867
+    second: M_Walk_Axe_R_61
+  - first:
+      213: -6774714929299221498
+    second: M_Walk_Axe_R_62
+  - first:
+      213: 2753485610174941585
+    second: M_Walk_Axe_R_63
+  - first:
+      213: -6288374973666697695
+    second: M_Walk_Axe_R_64
+  - first:
+      213: -8004077465189444300
+    second: M_Walk_Axe_R_65
+  - first:
+      213: -4654493447330342945
+    second: M_Walk_Axe_R_66
+  - first:
+      213: 1204103224681020557
+    second: M_Walk_Axe_R_67
+  - first:
+      213: 5221001349082837416
+    second: M_Walk_Axe_R_68
+  - first:
+      213: -5473596521221289308
+    second: M_Walk_Axe_R_69
+  - first:
+      213: 4456656867106157280
+    second: M_Walk_Axe_R_70
+  - first:
+      213: -3821196279403741086
+    second: M_Walk_Axe_R_71
+  - first:
+      213: 2478854209348010232
+    second: M_Walk_Axe_R_72
+  - first:
+      213: -2686423503447506109
+    second: M_Walk_Axe_R_73
+  - first:
+      213: 5296344110827193743
+    second: M_Walk_Axe_R_74
+  - first:
+      213: -8093605791370248361
+    second: M_Walk_Axe_R_75
+  - first:
+      213: 7351032075987725689
+    second: M_Walk_Axe_R_76
+  - first:
+      213: 6686910824835303644
+    second: M_Walk_Axe_R_77
+  - first:
+      213: 6409663242656741339
+    second: M_Walk_Axe_R_78
+  - first:
+      213: 8207387177457023945
+    second: M_Walk_Axe_R_79
+  - first:
+      213: -6532712605358291769
+    second: M_Walk_Axe_R_80
+  - first:
+      213: -4028387309610209959
+    second: M_Walk_Axe_R_81
+  - first:
+      213: -6023958118838466619
+    second: M_Walk_Axe_R_82
+  - first:
+      213: 3768831766519463214
+    second: M_Walk_Axe_R_83
+  - first:
+      213: -1779560768147170403
+    second: M_Walk_Axe_R_84
+  - first:
+      213: -5609529157533836765
+    second: M_Walk_Axe_R_85
+  - first:
+      213: 1265644892027208914
+    second: M_Walk_Axe_R_86
+  - first:
+      213: -2427879311490803494
+    second: M_Walk_Axe_R_87
+  - first:
+      213: 8247299758463807032
+    second: M_Walk_Axe_R_88
+  - first:
+      213: -7038370656006112864
+    second: M_Walk_Axe_R_89
+  - first:
+      213: -708872312120906654
+    second: M_Walk_Axe_R_90
+  - first:
+      213: -7899827172615475930
+    second: M_Walk_Axe_R_91
+  - first:
+      213: -8081369803729307374
+    second: M_Walk_Axe_R_92
+  - first:
+      213: -8829482851456700443
+    second: M_Walk_Axe_R_93
+  - first:
+      213: -5136029612523618439
+    second: M_Walk_Axe_R_94
+  - first:
+      213: 1985624668972826917
+    second: M_Walk_Axe_R_95
+  - first:
+      213: -3063423432372251168
+    second: M_Walk_Axe_R_96
+  - first:
+      213: -1845586617988342592
+    second: M_Walk_Axe_R_97
+  - first:
+      213: 8563301762083009654
+    second: M_Walk_Axe_R_98
+  - first:
+      213: 2099126402642096666
+    second: M_Walk_Axe_R_99
+  - first:
+      213: 5224981290268628063
+    second: M_Walk_Axe_R_100
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 7528
+        width: 351
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0c6070297e25720800000000000000
+      internalID: 2833581729938587831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_1
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 7528
+        width: 344
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d92d1f5e7bf11660800000000000000
+      internalID: 7354936186652928465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_2
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 7528
+        width: 334
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72636459d2251c090800000000000000
+      internalID: -8016035506011359705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_3
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 7528
+        width: 327
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3d87ecdec9af330800000000000000
+      internalID: 3745478585297195956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_4
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 7528
+        width: 318
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49d039fe0d418620800000000000000
+      internalID: 2774583572142545230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_5
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 7528
+        width: 308
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d17b8625aa1eb110800000000000000
+      internalID: 1278488640838398424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_6
+      rect:
+        serializedVersion: 2
+        x: 2391
+        y: 7528
+        width: 299
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5fa85f3ff9179a0800000000000000
+      internalID: -6237028138786032209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_7
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 7528
+        width: 291
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dec66889c7641540800000000000000
+      internalID: 4977717603425767121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_8
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 7528
+        width: 282
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97793b4e7e470060800000000000000
+      internalID: 6919585656812959643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_9
+      rect:
+        serializedVersion: 2
+        x: 3445
+        y: 7528
+        width: 274
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa674219e26af7740800000000000000
+      internalID: 5152019217668929199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_10
+      rect:
+        serializedVersion: 2
+        x: 3779
+        y: 7528
+        width: 267
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a447d6f94beaea2d0800000000000000
+      internalID: -3265480589004934070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_11
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 6849
+        width: 258
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f27442f0fa9f9c0800000000000000
+      internalID: -3892887923317067952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_12
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 6849
+        width: 249
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d03906780ef9760800000000000000
+      internalID: 7466933579249028387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_13
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 6849
+        width: 251
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8e386738ba690b0800000000000000
+      internalID: -5722197695410214682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_14
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 6849
+        width: 253
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448b3c4d7af994790800000000000000
+      internalID: -7545324157504604092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_15
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 6849
+        width: 255
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36d03b23f5d9fea0800000000000000
+      internalID: -5838400201530747331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_16
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 6849
+        width: 257
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38141803cbe5ffcc0800000000000000
+      internalID: -3675114608550395517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_17
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 6849
+        width: 258
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d47335a31f64290800000000000000
+      internalID: -7906366862995796655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_18
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 6849
+        width: 257
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e3a8c49a73f7940800000000000000
+      internalID: 5296012887084121601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_19
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 6849
+        width: 257
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ecce0688fd9ffd0800000000000000
+      internalID: -2307567557215990191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_20
+      rect:
+        serializedVersion: 2
+        x: 2886
+        y: 6849
+        width: 257
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ec09f98d57b6300800000000000000
+      internalID: 246420177872276993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_21
+      rect:
+        serializedVersion: 2
+        x: 3204
+        y: 6849
+        width: 256
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4901e5a4f2f1590800000000000000
+      internalID: -7701384841328028428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_22
+      rect:
+        serializedVersion: 2
+        x: 3522
+        y: 6849
+        width: 255
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97be5a94f9d1eb0b0800000000000000
+      internalID: -5711094707486594183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_23
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 6170
+        width: 254
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0521ed087eabd43f0800000000000000
+      internalID: -914869645824093616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_24
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 6170
+        width: 251
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c4f7d25580600b0800000000000000
+      internalID: -5762909511245411283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_25
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 6170
+        width: 249
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6a21f4d08ccc9c0800000000000000
+      internalID: -3905526817350310201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_26
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 6170
+        width: 255
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf7641fbce83efd0800000000000000
+      internalID: -2313848776960868421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_27
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 6170
+        width: 265
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3efa05f9a919560d0800000000000000
+      internalID: -3430175447888908317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_28
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 6170
+        width: 272
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a26479bc28a5a20800000000000000
+      internalID: 3051895508424862251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_29
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 6170
+        width: 280
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1791985f0e6bbca0800000000000000
+      internalID: -6000081066351552740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_30
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 6170
+        width: 289
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c38c232501497fa0800000000000000
+      internalID: -5802535154569411639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_31
+      rect:
+        serializedVersion: 2
+        x: 2645
+        y: 6170
+        width: 297
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4922bde3fae3e20800000000000000
+      internalID: 3332293458800055518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_32
+      rect:
+        serializedVersion: 2
+        x: 3002
+        y: 6170
+        width: 305
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4758d3bac83992740800000000000000
+      internalID: 5127791883115660660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_33
+      rect:
+        serializedVersion: 2
+        x: 3368
+        y: 6170
+        width: 314
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f82f142c7446ba0800000000000000
+      internalID: -6096669095897166044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_34
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 5491
+        width: 322
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc436d1b0d9cba020800000000000000
+      internalID: 2354197128405202123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_35
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 5491
+        width: 331
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1e7d19c471ed000800000000000000
+      internalID: 62513062461563324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_36
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 5491
+        width: 338
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83cb16e66c3d9930800000000000000
+      internalID: 4151540844150375311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_37
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 5491
+        width: 334
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a5a3053dc143e30800000000000000
+      internalID: 4482239223050164761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_38
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 5491
+        width: 329
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e39de168d83f94c0800000000000000
+      internalID: -4278638618971630615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_39
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 5491
+        width: 323
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b24e4073bbbeea0800000000000000
+      internalID: -5842370246603429118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_40
+      rect:
+        serializedVersion: 2
+        x: 2385
+        y: 5491
+        width: 317
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125f9eba564c9bb40800000000000000
+      internalID: 5456608364491044129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_41
+      rect:
+        serializedVersion: 2
+        x: 2762
+        y: 5491
+        width: 311
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e1e02779511d8c0800000000000000
+      internalID: -3976373255793664377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_42
+      rect:
+        serializedVersion: 2
+        x: 3133
+        y: 5491
+        width: 307
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73dc96b311935c50800000000000000
+      internalID: 6652820588410491774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_43
+      rect:
+        serializedVersion: 2
+        x: 3501
+        y: 5491
+        width: 302
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6282434aa3a45eef0800000000000000
+      internalID: -79575802685675482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_44
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 4812
+        width: 294
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91500cd183614add0800000000000000
+      internalID: -2475829464873827047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_45
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4812
+        width: 289
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e090f40c9a67c9f90800000000000000
+      internalID: -6945546053864191730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_46
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 4812
+        width: 284
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c54ee3a484fcbb0800000000000000
+      internalID: -4913629184717988793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_47
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 4812
+        width: 279
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254ac889a3a59bb80800000000000000
+      internalID: -8378566424032140206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_48
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 4812
+        width: 272
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64471e0be7680c9b0800000000000000
+      internalID: -5061898102472870842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_49
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 4812
+        width: 267
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8baf862c095fe30800000000000000
+      internalID: 4536691364304959738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_50
+      rect:
+        serializedVersion: 2
+        x: 2093
+        y: 4812
+        width: 265
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a1da83838a9cb10800000000000000
+      internalID: 2002316468765399644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_51
+      rect:
+        serializedVersion: 2
+        x: 2418
+        y: 4812
+        width: 263
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495b341e8aac1c290800000000000000
+      internalID: -7871787846984288876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_52
+      rect:
+        serializedVersion: 2
+        x: 2741
+        y: 4812
+        width: 259
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a2ca12136a4b2c0800000000000000
+      internalID: -4416722604595074522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_53
+      rect:
+        serializedVersion: 2
+        x: 3061
+        y: 4812
+        width: 256
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0980903f313115460800000000000000
+      internalID: 7228579853309118608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_54
+      rect:
+        serializedVersion: 2
+        x: 3377
+        y: 4812
+        width: 253
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32eb2d1115d74920800000000000000
+      internalID: 2974580348382077502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_55
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 4812
+        width: 249
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12771c895b5e50970800000000000000
+      internalID: 8720628821587490593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_56
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 4133
+        width: 244
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361c0ae00ddbb4ba0800000000000000
+      internalID: -6103576168674311837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_57
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 4133
+        width: 250
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d899ed9f1c2975ca0800000000000000
+      internalID: -6028188214393661043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_58
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 4133
+        width: 255
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68768fdf45f676ee0800000000000000
+      internalID: -1267922359252654202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_59
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 4133
+        width: 268
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc6e9814be1ac120800000000000000
+      internalID: 2434792307403156681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_60
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 4133
+        width: 280
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135dcb0dbcdaa1f70800000000000000
+      internalID: 9158823883103327537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_61
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 4133
+        width: 292
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a156deab40cefef0800000000000000
+      internalID: -72409112702987867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_62
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 4133
+        width: 304
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60495907aa06bf1a0800000000000000
+      internalID: -6774714929299221498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_63
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 4133
+        width: 319
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19980a8e298563620800000000000000
+      internalID: 2753485610174941585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_64
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 4133
+        width: 331
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ed32857443bb8a0800000000000000
+      internalID: -6288374973666697695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_65
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 4133
+        width: 344
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4359cace3fdcbe090800000000000000
+      internalID: -8004077465189444300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_66
+      rect:
+        serializedVersion: 2
+        x: 3539
+        y: 4133
+        width: 357
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7dd76cedae76fb0800000000000000
+      internalID: -4654493447330342945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_67
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3454
+        width: 368
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8cb304d085d5b010800000000000000
+      internalID: 1204103224681020557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_68
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 3454
+        width: 381
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1faef9019b47840800000000000000
+      internalID: 5221001349082837416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_69
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 3454
+        width: 370
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa8accd6f0e904b0800000000000000
+      internalID: -5473596521221289308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_70
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 3454
+        width: 358
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2faa9eec939dd30800000000000000
+      internalID: 4456656867106157280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_71
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 3454
+        width: 346
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 260881dba3268fac0800000000000000
+      internalID: -3821196279403741086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_72
+      rect:
+        serializedVersion: 2
+        x: 2172
+        y: 3454
+        width: 333
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f08b2615c8a66220800000000000000
+      internalID: 2478854209348010232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_73
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 3454
+        width: 322
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34340c09e08e7bad0800000000000000
+      internalID: -2686423503447506109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_74
+      rect:
+        serializedVersion: 2
+        x: 2948
+        y: 3454
+        width: 309
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85461658e4608940800000000000000
+      internalID: 5296344110827193743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_75
+      rect:
+        serializedVersion: 2
+        x: 3317
+        y: 3454
+        width: 299
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ff45d1a6cbdaf80800000000000000
+      internalID: -8093605791370248361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_76
+      rect:
+        serializedVersion: 2
+        x: 3677
+        y: 3454
+        width: 286
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d20c5c9bc140660800000000000000
+      internalID: 7351032075987725689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_77
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 2775
+        width: 275
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8c50767fdaccc50800000000000000
+      internalID: 6686910824835303644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_78
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 2775
+        width: 262
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7fe6462c2b3f850800000000000000
+      internalID: 6409663242656741339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_79
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 2775
+        width: 252
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbfb6e372f76e170800000000000000
+      internalID: 8207387177457023945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_80
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 2775
+        width: 244
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c407e94f742755a0800000000000000
+      internalID: -6532712605358291769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_81
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 2775
+        width: 250
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95dedf0d51b4818c0800000000000000
+      internalID: -4028387309610209959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_82
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 2775
+        width: 255
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c78dc8d10a966ca0800000000000000
+      internalID: -6023958118838466619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_83
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2775
+        width: 260
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2db99506849d4430800000000000000
+      internalID: 3768831766519463214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_84
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 2775
+        width: 266
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9bdd5ee8eabd47e0800000000000000
+      internalID: -1779560768147170403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_85
+      rect:
+        serializedVersion: 2
+        x: 2597
+        y: 2775
+        width: 269
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32adff7a3f2f622b0800000000000000
+      internalID: -5609529157533836765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_86
+      rect:
+        serializedVersion: 2
+        x: 2927
+        y: 2775
+        width: 272
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4c119d259709110800000000000000
+      internalID: 1265644892027208914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_87
+      rect:
+        serializedVersion: 2
+        x: 3260
+        y: 2775
+        width: 280
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8121131a07e4ed0800000000000000
+      internalID: -2427879311490803494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_88
+      rect:
+        serializedVersion: 2
+        x: 3601
+        y: 2775
+        width: 284
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e666b2f6b447270800000000000000
+      internalID: 8247299758463807032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_89
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2096
+        width: 290
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9f833ed2fa25e90800000000000000
+      internalID: -7038370656006112864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_90
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 2096
+        width: 295
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c6cec43649926f0800000000000000
+      internalID: -708872312120906654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_91
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 2096
+        width: 302
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62da645aa0d2e5290800000000000000
+      internalID: -7899827172615475930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_92
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 2096
+        width: 306
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219752efaf439df80800000000000000
+      internalID: -8081369803729307374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_93
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 2096
+        width: 313
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef25809020677580800000000000000
+      internalID: -8829482851456700443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_94
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 2096
+        width: 317
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f74ad774829b8b0800000000000000
+      internalID: -5136029612523618439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_95
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 2096
+        width: 324
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521c06bbd1b5e8b10800000000000000
+      internalID: 1985624668972826917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_96
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 2096
+        width: 329
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e518d47e988c75d0800000000000000
+      internalID: -3063423432372251168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_97
+      rect:
+        serializedVersion: 2
+        x: 3005
+        y: 2096
+        width: 335
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc1790dfb82366e0800000000000000
+      internalID: -1845586617988342592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_98
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 2096
+        width: 341
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6743f611595f6d670800000000000000
+      internalID: 8563301762083009654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_99
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1417
+        width: 346
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1230207758912d10800000000000000
+      internalID: 2099126402642096666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Walk_Axe_R_100
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1417
+        width: 351
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f541684ecccd28840800000000000000
+      internalID: 5224981290268628063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

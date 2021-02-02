@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 04a8f32a9b8c82744a1f31932d678936
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2371408821341307830
+    second: MT_Walk_Axe_Idle_R_0
+  - first:
+      213: 6811682654517591802
+    second: MT_Walk_Axe_Idle_R_1
+  - first:
+      213: -1958543393990599267
+    second: MT_Walk_Axe_Idle_R_2
+  - first:
+      213: -4014412137639387564
+    second: MT_Walk_Axe_Idle_R_3
+  - first:
+      213: 1008372686811808471
+    second: MT_Walk_Axe_Idle_R_4
+  - first:
+      213: 3989602869142240750
+    second: MT_Walk_Axe_Idle_R_5
+  - first:
+      213: -1734302176748328561
+    second: MT_Walk_Axe_Idle_R_6
+  - first:
+      213: -7425222327034251553
+    second: MT_Walk_Axe_Idle_R_7
+  - first:
+      213: 4328935700722734415
+    second: MT_Walk_Axe_Idle_R_8
+  - first:
+      213: -2534260290371763093
+    second: MT_Walk_Axe_Idle_R_9
+  - first:
+      213: -7898214019729953575
+    second: MT_Walk_Axe_Idle_R_10
+  - first:
+      213: -4953170059634129780
+    second: MT_Walk_Axe_Idle_R_11
+  - first:
+      213: -7875041391831147915
+    second: MT_Walk_Axe_Idle_R_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MT_Walk_Axe_Idle_R_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 364
+        width: 336
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3c64d32cfe8e020800000000000000
+      internalID: 2371408821341307830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MT_Walk_Axe_Idle_R_1
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 364
+        width: 329
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afef531d845f78e50800000000000000
+      internalID: 6811682654517591802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MT_Walk_Axe_Idle_R_2
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 364
+        width: 322
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d9004f82bd1d4e0800000000000000
+      internalID: -1958543393990599267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MT_Walk_Axe_Idle_R_3
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 364
+        width: 313
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45edcf91e61f948c0800000000000000
+      internalID: -4014412137639387564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MT_Walk_Axe_Idle_R_4
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 364
+        width: 307
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2cf96bd957efd00800000000000000
+      internalID: 1008372686811808471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MT_Walk_Axe_Idle_R_5
+      rect:
+        serializedVersion: 2
+        x: 1954
+        y: 364
+        width: 299
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed3a12fbaaed5730800000000000000
+      internalID: 3989602869142240750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MT_Walk_Axe_Idle_R_6
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 364
+        width: 291
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89aab5eb558ee7e0800000000000000
+      internalID: -1734302176748328561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MT_Walk_Axe_Idle_R_7
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 364
+        width: 285
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6f2d252af44f890800000000000000
+      internalID: -7425222327034251553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MT_Walk_Axe_Idle_R_8
+      rect:
+        serializedVersion: 2
+        x: 3010
+        y: 362
+        width: 276
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45d5198518731c30800000000000000
+      internalID: 4328935700722734415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MT_Walk_Axe_Idle_R_9
+      rect:
+        serializedVersion: 2
+        x: 3346
+        y: 362
+        width: 269
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64430861bf74dcd0800000000000000
+      internalID: -2534260290371763093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MT_Walk_Axe_Idle_R_10
+      rect:
+        serializedVersion: 2
+        x: 3675
+        y: 362
+        width: 261
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc6cf11238e36290800000000000000
+      internalID: -7898214019729953575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MT_Walk_Axe_Idle_R_11
+      rect:
+        serializedVersion: 2
+        x: 3997
+        y: 362
+        width: 254
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c844863e21ec24bb0800000000000000
+      internalID: -4953170059634129780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MT_Walk_Axe_Idle_R_12
+      rect:
+        serializedVersion: 2
+        x: 4312
+        y: 362
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a1860f39b36b290800000000000000
+      internalID: -7875041391831147915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -14,11 +14,11 @@ public class PlayerTopDown : MonoBehaviour
     public static PlayerTopDown instance;
 
     // Private Cached References
-    private PlayerInput playerInput;                // Reference To The PlayerInput Class
-    private PlayerCombat playerCombat;              // Reference To The PlayerCombat Class
-    private Rigidbody2D rb;                         // Reference To The Player's Rigidbody Component
-    private Animator animator;                      // Reference To The Player's Animator Component
-    private HealthBar healthBar;                    // Reference To The Player's Health Bar 
+    private PlayerInput playerInput;                // Reference to the PlayerInput Class
+    private PlayerCombat playerCombat;              // Reference to the PlayerCombat Class
+    private Rigidbody2D rb;                         // Reference to the Player's Rigidbody Component
+    private Animator animator;                      // Reference to the Player's Animator Component
+    private HealthBar healthBar;                    // Reference to the Player's Health Bar 
     private UnityEngine.Object playerReference;     // Reference to The Player Gameobject references used to respawn
 
     // Public Cached References
@@ -29,7 +29,9 @@ public class PlayerTopDown : MonoBehaviour
     [HideInInspector]
     public bool movePlayer;                         // Bool to store whether Player can move
     [HideInInspector]
-    public bool weaponDrawn;                        // Bool to store whether weapon is drawn
+    public bool axeDrawn;                           // Bool to store whether axe is drawn
+    [HideInInspector]
+    public bool knifeDrawn;                         // Bool to store whether knife is drawn
     [HideInInspector]
     public bool IsDead = false;                     // Bool to store if player dies
     private bool facingRight;                       // Player's Direction Of Facing
@@ -97,7 +99,8 @@ public class PlayerTopDown : MonoBehaviour
     {
         facingRight = true;
         movePlayer = true;
-        weaponDrawn = false;
+        axeDrawn = false;
+        knifeDrawn = false;
         movementSpeed = walkSpeed;
         animator.SetFloat("FaceDir", 1f);
 
@@ -133,7 +136,7 @@ public class PlayerTopDown : MonoBehaviour
         movement.y = vertical;
         movement.Normalize();
 
-        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
             rb.MovePosition((Vector2)transform.position + (movement * movementSpeed * Time.deltaTime));
         }
@@ -192,33 +195,24 @@ public class PlayerTopDown : MonoBehaviour
 
     private void HandleAttacks()
     {
-        if (weaponDrawn)
+        if (axeDrawn)
         {
-            if (playerInput.attack1Pressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
+            if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
             {
-                playerCombat.InvokeAttack1();
-                animator.SetTrigger("Attack1");
+                playerCombat.InvokeAxeAttack();
+                animator.SetTrigger("AxeAttack");
                 rb.velocity = Vector2.zero;
             }
+        }
 
-            if (playerInput.attack2Pressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
+        if (knifeDrawn)
+        {
+            if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
             {
-                playerCombat.InvokeAttack2();
-                animator.SetTrigger("Attack2");
+                playerCombat.InvokeKnifeAttack();
+                animator.SetTrigger("KnifeAttack");
                 rb.velocity = Vector2.zero;
             }
-
-            /*
-            if (playerInput.attack1Released && this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
-            {
-                animator.SetBool("Attack1", false);
-            }
-
-            if (playerInput.attack2Released && this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
-            {
-                animator.SetBool("Attack2", false);
-            }
-            */
         }
     }
 

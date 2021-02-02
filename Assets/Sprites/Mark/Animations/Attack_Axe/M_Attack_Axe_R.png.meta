@@ -1,0 +1,1330 @@
+fileFormatVersion: 2
+guid: 4ebab3fe39f334935bd04c963b03c48f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1307335853992555945
+    second: attack right_0
+  - first:
+      213: -6818380382416607605
+    second: attack right_1
+  - first:
+      213: -7534855350008262360
+    second: attack right_2
+  - first:
+      213: -3307215134016326305
+    second: attack right_3
+  - first:
+      213: 1556871728653999188
+    second: attack right_4
+  - first:
+      213: -5832125507035957703
+    second: attack right_5
+  - first:
+      213: -3284554809913497149
+    second: attack right_6
+  - first:
+      213: -6757867337143802198
+    second: attack right_7
+  - first:
+      213: 6170897760467201904
+    second: attack right_8
+  - first:
+      213: 2342584687527028107
+    second: attack right_9
+  - first:
+      213: -5920330136236346392
+    second: attack right_10
+  - first:
+      213: -8753817491091002518
+    second: attack right_11
+  - first:
+      213: 5683031405590694385
+    second: attack right_12
+  - first:
+      213: 701222024812137933
+    second: attack right_13
+  - first:
+      213: -1136371129210215925
+    second: attack right_14
+  - first:
+      213: -3339386749862639895
+    second: attack right_15
+  - first:
+      213: 961205563798191114
+    second: attack right_16
+  - first:
+      213: 5895261521614665879
+    second: attack right_17
+  - first:
+      213: 8926959651763614849
+    second: attack right_18
+  - first:
+      213: -733055477751489524
+    second: attack right_19
+  - first:
+      213: 7555578091364530602
+    second: attack right_20
+  - first:
+      213: 2237168427783979269
+    second: attack right_21
+  - first:
+      213: -1238214354298857421
+    second: attack right_22
+  - first:
+      213: 7977450932641780769
+    second: attack right_23
+  - first:
+      213: -881613731871065744
+    second: attack right_24
+  - first:
+      213: -1845567832795964787
+    second: attack right_25
+  - first:
+      213: -4841859236020035767
+    second: attack right_26
+  - first:
+      213: 1178911843408871018
+    second: attack right_27
+  - first:
+      213: -5948805853983992329
+    second: attack right_28
+  - first:
+      213: -7448160325629009250
+    second: attack right_29
+  - first:
+      213: 1416118201089577384
+    second: attack right_30
+  - first:
+      213: 5643881683424388341
+    second: attack right_31
+  - first:
+      213: 7564604033296390207
+    second: attack right_32
+  - first:
+      213: 9166075628471799110
+    second: attack right_33
+  - first:
+      213: 8201494034881056889
+    second: attack right_34
+  - first:
+      213: -7478827851161719480
+    second: attack right_35
+  - first:
+      213: -665299975275556736
+    second: attack right_36
+  - first:
+      213: -1178686464201161190
+    second: attack right_37
+  - first:
+      213: -3556748892217729015
+    second: attack right_38
+  - first:
+      213: -3814688358605344909
+    second: attack right_39
+  - first:
+      213: 9137725303946889636
+    second: Attack_R_0
+  - first:
+      213: -6579155492135216830
+    second: Attack_R_1
+  - first:
+      213: 5778057247988406616
+    second: Attack_R_2
+  - first:
+      213: -2456511289396408775
+    second: Attack_R_3
+  - first:
+      213: -1093519317842938025
+    second: Attack_R_4
+  - first:
+      213: -2134461600184095580
+    second: Attack_R_5
+  - first:
+      213: -4596994101335176039
+    second: Attack_R_6
+  - first:
+      213: -9098673178316067791
+    second: Attack_R_7
+  - first:
+      213: -7245968894177702369
+    second: Attack_R_8
+  - first:
+      213: -6722622694594041478
+    second: Attack_R_9
+  - first:
+      213: 5172660230701370078
+    second: Attack_R_10
+  - first:
+      213: -5619638299421931448
+    second: Attack_R_11
+  - first:
+      213: 1291681221803080462
+    second: Attack_R_12
+  - first:
+      213: 2622837714474877671
+    second: Attack_R_13
+  - first:
+      213: 4771512498983348110
+    second: Attack_R_14
+  - first:
+      213: 4418460174346352611
+    second: Attack_R_15
+  - first:
+      213: -6572875995008325008
+    second: Attack_R_16
+  - first:
+      213: -4657858075379485474
+    second: Attack_R_17
+  - first:
+      213: -5318388033450183708
+    second: Attack_R_18
+  - first:
+      213: -5610423787078631963
+    second: Attack_R_19
+  - first:
+      213: 76020261394611626
+    second: Attack_R_20
+  - first:
+      213: 3780682389099357629
+    second: Attack_R_21
+  - first:
+      213: -2342842852445216375
+    second: Attack_R_22
+  - first:
+      213: 4641646891118337409
+    second: Attack_R_23
+  - first:
+      213: 5586889999085753655
+    second: Attack_R_24
+  - first:
+      213: 3617857059477760650
+    second: Attack_R_25
+  - first:
+      213: -3950202967429017482
+    second: Attack_R_26
+  - first:
+      213: -655995597851018246
+    second: Attack_R_27
+  - first:
+      213: -799900881817690809
+    second: Attack_R_28
+  - first:
+      213: 5383945946287800398
+    second: Attack_R_29
+  - first:
+      213: -3092624828819217369
+    second: Attack_R_30
+  - first:
+      213: -3560004881950520400
+    second: Attack_R_31
+  - first:
+      213: 2186955496631120265
+    second: Attack_R_32
+  - first:
+      213: 1734602675189499629
+    second: Attack_R_33
+  - first:
+      213: -480225802325548222
+    second: Attack_R_34
+  - first:
+      213: -4083623231621417528
+    second: Attack_R_35
+  - first:
+      213: 3724898809115944061
+    second: Attack_R_36
+  - first:
+      213: -3893437269799431874
+    second: Attack_R_37
+  - first:
+      213: 2809873789885853734
+    second: Attack_R_38
+  - first:
+      213: 4936133632030998489
+    second: Attack_R_39
+  - first:
+      213: -1983858525604440852
+    second: M_Attack_Axe_R_0
+  - first:
+      213: -3024643768465785045
+    second: M_Attack_Axe_R_1
+  - first:
+      213: 2055112335105871861
+    second: M_Attack_Axe_R_2
+  - first:
+      213: -8044948957151990288
+    second: M_Attack_Axe_R_3
+  - first:
+      213: -6230381878548572701
+    second: M_Attack_Axe_R_4
+  - first:
+      213: -1073320048517983717
+    second: M_Attack_Axe_R_5
+  - first:
+      213: -7733275130928421448
+    second: M_Attack_Axe_R_6
+  - first:
+      213: 4953736846707616962
+    second: M_Attack_Axe_R_7
+  - first:
+      213: 1932453316297372893
+    second: M_Attack_Axe_R_8
+  - first:
+      213: -8419957020670438478
+    second: M_Attack_Axe_R_9
+  - first:
+      213: -6408545008961594837
+    second: M_Attack_Axe_R_10
+  - first:
+      213: 2538686693720873592
+    second: M_Attack_Axe_R_11
+  - first:
+      213: 3043127730440532713
+    second: M_Attack_Axe_R_12
+  - first:
+      213: 8181183904471425959
+    second: M_Attack_Axe_R_13
+  - first:
+      213: -1943543368431695598
+    second: M_Attack_Axe_R_14
+  - first:
+      213: 8737338750111854444
+    second: M_Attack_Axe_R_15
+  - first:
+      213: -3141595119751015544
+    second: M_Attack_Axe_R_16
+  - first:
+      213: -8767333648031599745
+    second: M_Attack_Axe_R_17
+  - first:
+      213: 4552706996766604691
+    second: M_Attack_Axe_R_18
+  - first:
+      213: -2362441747929675586
+    second: M_Attack_Axe_R_19
+  - first:
+      213: 7976055215284573358
+    second: M_Attack_Axe_R_20
+  - first:
+      213: -6408576160823041243
+    second: M_Attack_Axe_R_21
+  - first:
+      213: 4070220196496045088
+    second: M_Attack_Axe_R_22
+  - first:
+      213: -5727063801190580894
+    second: M_Attack_Axe_R_23
+  - first:
+      213: -155659715190120751
+    second: M_Attack_Axe_R_24
+  - first:
+      213: 7127099314790771709
+    second: M_Attack_Axe_R_25
+  - first:
+      213: -8447127526604196964
+    second: M_Attack_Axe_R_26
+  - first:
+      213: 426362452683213483
+    second: M_Attack_Axe_R_27
+  - first:
+      213: 8736691516662528925
+    second: M_Attack_Axe_R_28
+  - first:
+      213: -1773640275611711123
+    second: M_Attack_Axe_R_29
+  - first:
+      213: -5452653415877802899
+    second: M_Attack_Axe_R_30
+  - first:
+      213: 1725497866741991168
+    second: M_Attack_Axe_R_31
+  - first:
+      213: 2715664239765902437
+    second: M_Attack_Axe_R_32
+  - first:
+      213: -6470759314822308253
+    second: M_Attack_Axe_R_33
+  - first:
+      213: -25865196985178499
+    second: M_Attack_Axe_R_34
+  - first:
+      213: 5066389354125683907
+    second: M_Attack_Axe_R_35
+  - first:
+      213: 8466814290890513682
+    second: M_Attack_Axe_R_36
+  - first:
+      213: -5787325115196450058
+    second: M_Attack_Axe_R_37
+  - first:
+      213: 1164950994085165189
+    second: M_Attack_Axe_R_38
+  - first:
+      213: -6546694318969703922
+    second: M_Attack_Axe_R_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3434
+        width: 248
+        height: 616
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce497b09e2be774e0800000000000000
+      internalID: -1983858525604440852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_1
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 3434
+        width: 254
+        height: 616
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f7f70948e4606d0800000000000000
+      internalID: -3024643768465785045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_2
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 3434
+        width: 268
+        height: 616
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff4283c7c9358c10800000000000000
+      internalID: 2055112335105871861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_3
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 3434
+        width: 279
+        height: 616
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd6ec42c899a5090800000000000000
+      internalID: -8044948957151990288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_4
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 3434
+        width: 286
+        height: 616
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5d41201bc3989a0800000000000000
+      internalID: -6230381878548572701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_5
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 3434
+        width: 292
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12d7c14a1dca11f0800000000000000
+      internalID: -1073320048517983717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_6
+      rect:
+        serializedVersion: 2
+        x: 2037
+        y: 3436
+        width: 297
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b526a6bd33eda490800000000000000
+      internalID: -7733275130928421448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_7
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 3436
+        width: 301
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc65c28a653fb440800000000000000
+      internalID: 4953736846707616962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_8
+      rect:
+        serializedVersion: 2
+        x: 2755
+        y: 3436
+        width: 304
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd43ee67d0471da10800000000000000
+      internalID: 1932453316297372893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_9
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 3436
+        width: 307
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3d1e653bd462b80800000000000000
+      internalID: -8419957020670438478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_10
+      rect:
+        serializedVersion: 2
+        x: 3487
+        y: 3436
+        width: 308
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2addbda4464017a0800000000000000
+      internalID: -6408545008961594837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_11
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2759
+        width: 308
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a5e3fe81a3b3320800000000000000
+      internalID: 2538686693720873592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_12
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 2753
+        width: 300
+        height: 620
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e27c033c8c5b3a20800000000000000
+      internalID: 3043127730440532713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_13
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 2733
+        width: 300
+        height: 641
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3a9245a67698170800000000000000
+      internalID: 8181183904471425959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_14
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 2715
+        width: 297
+        height: 658
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219001f8a952705e0800000000000000
+      internalID: -1943543368431695598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_15
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 2703
+        width: 288
+        height: 671
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f2ca20d43414970800000000000000
+      internalID: 8737338750111854444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_16
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 2695
+        width: 275
+        height: 678
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 883d32b22efc664d0800000000000000
+      internalID: -3141595119751015544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_17
+      rect:
+        serializedVersion: 2
+        x: 2177
+        y: 2693
+        width: 257
+        height: 680
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f733fb99f7c245680800000000000000
+      internalID: -8767333648031599745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_18
+      rect:
+        serializedVersion: 2
+        x: 2495
+        y: 2699
+        width: 248
+        height: 674
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d75bc64e67e2f30800000000000000
+      internalID: 4552706996766604691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_19
+      rect:
+        serializedVersion: 2
+        x: 2804
+        y: 2715
+        width: 248
+        height: 658
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8491c3fbbe63fd0800000000000000
+      internalID: -2362441747929675586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_20
+      rect:
+        serializedVersion: 2
+        x: 3113
+        y: 2733
+        width: 248
+        height: 640
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea450f795f3a0be60800000000000000
+      internalID: 7976055215284573358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_21
+      rect:
+        serializedVersion: 2
+        x: 3422
+        y: 2681
+        width: 258
+        height: 693
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5232b129fe92017a0800000000000000
+      internalID: -6408576160823041243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_22
+      rect:
+        serializedVersion: 2
+        x: 3740
+        y: 2667
+        width: 309
+        height: 707
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02474c924b35c7830800000000000000
+      internalID: 4070220196496045088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_23
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1966
+        width: 364
+        height: 640
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d790ce0d16580b0800000000000000
+      internalID: -5727063801190580894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_24
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 1992
+        width: 396
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de1142505cf6ddf0800000000000000
+      internalID: -155659715190120751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_25
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 1992
+        width: 402
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfba809d01b88e260800000000000000
+      internalID: 7127099314790771709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_26
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 1992
+        width: 385
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c933554f446c5ca80800000000000000
+      internalID: -8447127526604196964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_27
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 1992
+        width: 358
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa4fb9446ebae500800000000000000
+      internalID: 426362452683213483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_28
+      rect:
+        serializedVersion: 2
+        x: 2256
+        y: 1992
+        width: 351
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9bb6da35a6fe3970800000000000000
+      internalID: 8736691516662528925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_29
+      rect:
+        serializedVersion: 2
+        x: 2668
+        y: 1992
+        width: 343
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6986d40193c267e0800000000000000
+      internalID: -1773640275611711123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_30
+      rect:
+        serializedVersion: 2
+        x: 3073
+        y: 1992
+        width: 336
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64884f8b984454b0800000000000000
+      internalID: -5452653415877802899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_31
+      rect:
+        serializedVersion: 2
+        x: 3470
+        y: 1992
+        width: 328
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007c9dfea2332f710800000000000000
+      internalID: 1725497866741991168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_32
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1291
+        width: 320
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5645a74ec3affa520800000000000000
+      internalID: 2715664239765902437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_33
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1291
+        width: 312
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e57fccfae3336a0800000000000000
+      internalID: -6470759314822308253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_34
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1291
+        width: 304
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7627a98dbb14aff0800000000000000
+      internalID: -25865196985178499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_35
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 1291
+        width: 289
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc6b72564e6f4640800000000000000
+      internalID: 5066389354125683907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_36
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 1291
+        width: 274
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ddabb0dba208570800000000000000
+      internalID: 8466814290890513682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_37
+      rect:
+        serializedVersion: 2
+        x: 1851
+        y: 1289
+        width: 258
+        height: 616
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fad405687a4fafa0800000000000000
+      internalID: -5787325115196450058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_38
+      rect:
+        serializedVersion: 2
+        x: 2170
+        y: 1289
+        width: 248
+        height: 616
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5883f27c1ccba2010800000000000000
+      internalID: 1164950994085165189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Attack_Axe_R_39
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 1289
+        width: 248
+        height: 616
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e023eb8e3387525a0800000000000000
+      internalID: -6546694318969703922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

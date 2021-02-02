@@ -1,0 +1,1021 @@
+fileFormatVersion: 2
+guid: 2fbe8d5a5a9454911aeeb8d2b1e3ccaf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8884344710857561873
+    second: hurt left_0
+  - first:
+      213: -1994241968660632122
+    second: hurt left_1
+  - first:
+      213: 2221293916391802627
+    second: hurt left_2
+  - first:
+      213: 5616438989015588750
+    second: hurt left_3
+  - first:
+      213: -8139292375601476315
+    second: hurt left_4
+  - first:
+      213: 2541555312719652043
+    second: hurt left_5
+  - first:
+      213: 890247781976397381
+    second: hurt left_6
+  - first:
+      213: 2148266778172378593
+    second: hurt left_7
+  - first:
+      213: -7025064141056701635
+    second: hurt left_8
+  - first:
+      213: -1792356293634166155
+    second: hurt left_9
+  - first:
+      213: -2525795314155652386
+    second: hurt left_10
+  - first:
+      213: -275754102229670032
+    second: hurt left_11
+  - first:
+      213: 4563598653743536217
+    second: hurt left_12
+  - first:
+      213: -7096562489265246825
+    second: hurt left_13
+  - first:
+      213: -6369088502859805537
+    second: hurt left_14
+  - first:
+      213: -4990408115504165211
+    second: hurt left_15
+  - first:
+      213: 1808398083421429660
+    second: hurt left_16
+  - first:
+      213: -1584296488904178469
+    second: hurt left_17
+  - first:
+      213: -5125972531157090066
+    second: hurt left_18
+  - first:
+      213: 7668048351137923127
+    second: hurt left_19
+  - first:
+      213: -472613583823513603
+    second: hurt left_20
+  - first:
+      213: 6482713020527539994
+    second: hurt left_21
+  - first:
+      213: -5108818847398703734
+    second: hurt left_22
+  - first:
+      213: 7316845336761520065
+    second: hurt left_23
+  - first:
+      213: -133741926990421051
+    second: hurt left_24
+  - first:
+      213: -4955735380058876429
+    second: hurt left_25
+  - first:
+      213: -7727638708157903734
+    second: hurt left_26
+  - first:
+      213: -6823405648755458639
+    second: hurt left_27
+  - first:
+      213: -2023939132411525550
+    second: hurt left_28
+  - first:
+      213: 752376847148794475
+    second: hurt left_29
+  - first:
+      213: -1624569969239599604
+    second: hurt left_30
+  - first:
+      213: 4801615842725398265
+    second: hurt left_31
+  - first:
+      213: 1792651934080312974
+    second: hurt left_32
+  - first:
+      213: -6560229803961218549
+    second: hurt left_33
+  - first:
+      213: -666182597604711599
+    second: hurt left_34
+  - first:
+      213: -5005410063439045111
+    second: hurt left_35
+  - first:
+      213: -1097627279797993143
+    second: hurt left_36
+  - first:
+      213: -7023960928977560020
+    second: hurt left_37
+  - first:
+      213: 7281770261548278353
+    second: hurt left_38
+  - first:
+      213: 7171377698236680137
+    second: hurt left_39
+  - first:
+      213: 5141819154771372500
+    second: hurt left_40
+  - first:
+      213: -7408391574888237162
+    second: hurt left_41
+  - first:
+      213: -9012703165014089242
+    second: hurt left_42
+  - first:
+      213: 7690448984130634077
+    second: hurt left_43
+  - first:
+      213: 5423417705597683556
+    second: hurt left_44
+  - first:
+      213: -748809452145973182
+    second: hurt left_45
+  - first:
+      213: 3856800415161258286
+    second: hurt left_46
+  - first:
+      213: -6267767818016254760
+    second: hurt left_47
+  - first:
+      213: 5992106956453667793
+    second: hurt left_48
+  - first:
+      213: -6642923147379881000
+    second: hurt left_49
+  - first:
+      213: -1510960148616444806
+    second: hurt left_50
+  - first:
+      213: 2903581220706193115
+    second: hurt left_51
+  - first:
+      213: -3597647898599595092
+    second: hurt left_52
+  - first:
+      213: 2800847547510006025
+    second: hurt left_53
+  - first:
+      213: 310438189432545597
+    second: hurt left_54
+  - first:
+      213: 2778220318957717361
+    second: hurt left_55
+  - first:
+      213: 8803459143067515580
+    second: M_Hurt_Axe_L_0
+  - first:
+      213: -1378810892375580295
+    second: M_Hurt_Axe_L_1
+  - first:
+      213: -147431596459454118
+    second: M_Hurt_Axe_L_2
+  - first:
+      213: 8747376904941932887
+    second: M_Hurt_Axe_L_3
+  - first:
+      213: 7992593582166292622
+    second: M_Hurt_Axe_L_4
+  - first:
+      213: 398062417263421531
+    second: M_Hurt_Axe_L_5
+  - first:
+      213: -8390106087657354017
+    second: M_Hurt_Axe_L_6
+  - first:
+      213: -2066178808121290166
+    second: M_Hurt_Axe_L_7
+  - first:
+      213: -7447545324032914905
+    second: M_Hurt_Axe_L_8
+  - first:
+      213: 5172990612670923694
+    second: M_Hurt_Axe_L_9
+  - first:
+      213: 6873532068194765407
+    second: M_Hurt_Axe_L_10
+  - first:
+      213: 5974074043024025579
+    second: M_Hurt_Axe_L_11
+  - first:
+      213: -133551271194235027
+    second: M_Hurt_Axe_L_12
+  - first:
+      213: -5401647059311628688
+    second: M_Hurt_Axe_L_13
+  - first:
+      213: -2979755774180320497
+    second: M_Hurt_Axe_L_14
+  - first:
+      213: 5988527808782423719
+    second: M_Hurt_Axe_L_15
+  - first:
+      213: 61485401211337974
+    second: M_Hurt_Axe_L_16
+  - first:
+      213: -4751987714686438316
+    second: M_Hurt_Axe_L_16
+  - first:
+      213: 4128027924708208546
+    second: M_Hurt_Axe_L_17
+  - first:
+      213: -2632027807721550275
+    second: M_Hurt_Axe_L_18
+  - first:
+      213: 5661160229755202657
+    second: M_Hurt_Axe_L_19
+  - first:
+      213: -6896633317806459497
+    second: M_Hurt_Axe_L_21
+  - first:
+      213: 7295052333083699669
+    second: M_Hurt_Axe_L_30
+  - first:
+      213: 7292295709069589187
+    second: M_Hurt_Axe_L_20
+  - first:
+      213: -2172757734460076841
+    second: M_Hurt_Axe_L_23
+  - first:
+      213: 8221713183051117624
+    second: M_Hurt_Axe_L_24
+  - first:
+      213: -1220128225839063028
+    second: M_Hurt_Axe_L_25
+  - first:
+      213: -2083955634283184116
+    second: M_Hurt_Axe_L_26
+  - first:
+      213: -4259486392600431977
+    second: M_Hurt_Axe_L_27
+  - first:
+      213: -4908428475014804439
+    second: M_Hurt_Axe_L_19
+  - first:
+      213: 7416903459280099121
+    second: M_Hurt_Axe_L_21
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_0
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 3399
+        width: 304
+        height: 617
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba3439a27b2c2a70800000000000000
+      internalID: 8803459143067515580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_1
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 3399
+        width: 306
+        height: 617
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971a3837cca7ddce0800000000000000
+      internalID: -1378810892375580295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_2
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 3399
+        width: 306
+        height: 617
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a519d508eb734fdf0800000000000000
+      internalID: -147431596459454118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_3
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 3399
+        width: 306
+        height: 616
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751158f03fce46970800000000000000
+      internalID: 8747376904941932887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_4
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 3399
+        width: 304
+        height: 616
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88b61334856bee60800000000000000
+      internalID: 7992593582166292622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_5
+      rect:
+        serializedVersion: 2
+        x: 2211
+        y: 3399
+        width: 303
+        height: 616
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b586b63d8a3368500800000000000000
+      internalID: 398062417263421531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_6
+      rect:
+        serializedVersion: 2
+        x: 2635
+        y: 3399
+        width: 304
+        height: 615
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc475947fa509b80800000000000000
+      internalID: -8390106087657354017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_7
+      rect:
+        serializedVersion: 2
+        x: 3059
+        y: 3401
+        width: 309
+        height: 615
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a429d7332557353e0800000000000000
+      internalID: -2066178808121290166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_8
+      rect:
+        serializedVersion: 2
+        x: 3484
+        y: 3401
+        width: 312
+        height: 614
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a85609cf005a890800000000000000
+      internalID: -7447545324032914905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_9
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 2664
+        width: 317
+        height: 614
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea34ea6fd872ac740800000000000000
+      internalID: 5172990612670923694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_10
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 2664
+        width: 321
+        height: 613
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a410d9ff0b36f50800000000000000
+      internalID: 6873532068194765407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_11
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 2666
+        width: 324
+        height: 613
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7245ca0bc28e250800000000000000
+      internalID: 5974074043024025579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_12
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 2666
+        width: 329
+        height: 612
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f6a2193d7852ef0800000000000000
+      internalID: -133551271194235027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_13
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 2666
+        width: 333
+        height: 611
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e62b36e9e7905b0800000000000000
+      internalID: -5401647059311628688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_14
+      rect:
+        serializedVersion: 2
+        x: 2309
+        y: 2668
+        width: 335
+        height: 610
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b109a29e7c5a6d0800000000000000
+      internalID: -2979755774180320497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_15
+      rect:
+        serializedVersion: 2
+        x: 2764
+        y: 2668
+        width: 339
+        height: 610
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6560240568b1350800000000000000
+      internalID: 5988527808782423719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_16
+      rect:
+        serializedVersion: 2
+        x: 3223
+        y: 2660
+        width: 342
+        height: 611
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fcf21a85a07ad000800000000000000
+      internalID: 61485401211337974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_17
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1919
+        width: 339
+        height: 613
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4543811c95c8d0eb0800000000000000
+      internalID: -4751987714686438316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_18
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 1917
+        width: 336
+        height: 621
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af202bb683b94930800000000000000
+      internalID: 4128027924708208546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_20
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1915
+        width: 328
+        height: 624
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e8ec967a8297bd0800000000000000
+      internalID: -2632027807721550275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_19
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1917
+        width: 331
+        height: 606
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ca02f1c3b709e40800000000000000
+      internalID: 5661160229755202657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_21
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 1913
+        width: 323
+        height: 606
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795b502998c3a40a0800000000000000
+      internalID: -6896633317806459497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_22
+      rect:
+        serializedVersion: 2
+        x: 2344
+        y: 1913
+        width: 319
+        height: 608
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cab238af40733560800000000000000
+      internalID: 7292295709069589187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_23
+      rect:
+        serializedVersion: 2
+        x: 2791
+        y: 1911
+        width: 316
+        height: 609
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc468e2a50d8d1e0800000000000000
+      internalID: -2172757734460076841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_24
+      rect:
+        serializedVersion: 2
+        x: 3238
+        y: 1911
+        width: 318
+        height: 609
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83478e85494691270800000000000000
+      internalID: 8221713183051117624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_25
+      rect:
+        serializedVersion: 2
+        x: 3686
+        y: 1911
+        width: 308
+        height: 609
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c006f66d7db311fe0800000000000000
+      internalID: -1220128225839063028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_26
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1162
+        width: 309
+        height: 609
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0080e2546d4413e0800000000000000
+      internalID: -2083955634283184116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_27
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1162
+        width: 310
+        height: 611
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792f07391b343e4c0800000000000000
+      internalID: -4259486392600431977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_28
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 1162
+        width: 311
+        height: 620
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c8455de42c1ebb0800000000000000
+      internalID: -4908428475014804439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_Axe_L_29
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 1162
+        width: 310
+        height: 615
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13791c756622ee660800000000000000
+      internalID: 7416903459280099121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

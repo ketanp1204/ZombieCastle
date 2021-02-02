@@ -9,7 +9,7 @@ public class PlayerInput : MonoBehaviour
     public float verticalInput { get; private set; }
     public bool walkFastInput { get; private set; }
     public bool jumpInput { get; private set; }
-    public bool attack1Pressed { get; private set; }
+    public bool leftMousePressed { get; private set; }
     public bool attack2Pressed { get; private set; }
     public bool attack1Released { get; private set; }
     public bool attack2Released { get; private set; }
@@ -50,7 +50,7 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            attack1Pressed = true;
+            leftMousePressed = true;
         }
 
         if (Input.GetMouseButtonDown(1))
@@ -61,7 +61,7 @@ public class PlayerInput : MonoBehaviour
         if(Input.GetMouseButtonUp(0))
         {
             attack1Released = true;
-            attack1Pressed = false;
+            leftMousePressed = false;
         }
 
         if(Input.GetMouseButtonUp(1))
