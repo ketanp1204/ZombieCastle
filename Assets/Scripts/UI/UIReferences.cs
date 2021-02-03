@@ -18,13 +18,18 @@ public class UIReferences : MonoBehaviour
     public CanvasGroup dialogueBoxCanvasGroup;
     public TextMeshProUGUI dialogueText;
     public GameObject dBoxContinueButton;
+
     [Header("Note Box")]
     public CanvasGroup noteBoxCanvasGroup;
     public TextMeshProUGUI noteText;
     public GameObject noteContinueButton;
+
     [Header("Book Display")]
     public CanvasGroup bookCanvasGroup;
     public TextMeshProUGUI bookTextPage1;
     public TextMeshProUGUI bookTextPage2;
     public GameObject bookContinueButton;
+
+    [Header("Maze Puzzle")]
+    public CanvasGroup mazeCloseButtonCanvasGroup;
 }

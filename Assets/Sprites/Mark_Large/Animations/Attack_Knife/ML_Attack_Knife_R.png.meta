@@ -1,0 +1,1480 @@
+fileFormatVersion: 2
+guid: ac38f6dddf718d44d9e5da0b0005785e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5127017005821575818
+    second: M_Attack_Knife_R_0
+  - first:
+      213: -6387892638530428891
+    second: M_Attack_Knife_R_1
+  - first:
+      213: 2672711803577434436
+    second: M_Attack_Knife_R_2
+  - first:
+      213: 7700582466852706769
+    second: M_Attack_Knife_R_3
+  - first:
+      213: 2746565815501684968
+    second: M_Attack_Knife_R_4
+  - first:
+      213: 5043465285314992793
+    second: M_Attack_Knife_R_5
+  - first:
+      213: 3552580409682206131
+    second: M_Attack_Knife_R_6
+  - first:
+      213: -7937986227400155573
+    second: M_Attack_Knife_R_7
+  - first:
+      213: -212782855992490328
+    second: M_Attack_Knife_R_8
+  - first:
+      213: -4124428518884410817
+    second: M_Attack_Knife_R_9
+  - first:
+      213: -23380689957303348
+    second: M_Attack_Knife_R_10
+  - first:
+      213: 8787676390998540737
+    second: M_Attack_Knife_R_11
+  - first:
+      213: -5611574238913078296
+    second: M_Attack_Knife_R_12
+  - first:
+      213: 8310449630605803228
+    second: M_Attack_Knife_R_13
+  - first:
+      213: -5056335295532496475
+    second: M_Attack_Knife_R_14
+  - first:
+      213: -36192792306578482
+    second: M_Attack_Knife_R_15
+  - first:
+      213: 8298132396005130597
+    second: M_Attack_Knife_R_16
+  - first:
+      213: -8245035098229944220
+    second: M_Attack_Knife_R_17
+  - first:
+      213: -5015868164810709023
+    second: M_Attack_Knife_R_18
+  - first:
+      213: 8763859167085523996
+    second: M_Attack_Knife_R_19
+  - first:
+      213: 8335949389429393235
+    second: M_Attack_Knife_R_20
+  - first:
+      213: 8957410129904335235
+    second: M_Attack_Knife_R_21
+  - first:
+      213: 7052517075109678081
+    second: M_Attack_Knife_R_22
+  - first:
+      213: 2223968512771237026
+    second: M_Attack_Knife_R_23
+  - first:
+      213: 1620056508539031165
+    second: M_Attack_Knife_R_24
+  - first:
+      213: 644590930494628665
+    second: M_Attack_Knife_R_25
+  - first:
+      213: 6361460153145359767
+    second: M_Attack_Knife_R_26
+  - first:
+      213: 8952779917193689860
+    second: M_Attack_Knife_R_27
+  - first:
+      213: -6853348178922292904
+    second: M_Attack_Knife_R_28
+  - first:
+      213: 5464323429453156327
+    second: M_Attack_Knife_R_29
+  - first:
+      213: 7023415975167895693
+    second: M_Attack_Knife_R_30
+  - first:
+      213: 4886095362357415146
+    second: M_Attack_Knife_R_31
+  - first:
+      213: 5451834678964896827
+    second: M_Attack_Knife_R_32
+  - first:
+      213: -6999694043678632446
+    second: M_Attack_Knife_R_33
+  - first:
+      213: -963724298668409685
+    second: M_Attack_Knife_R_34
+  - first:
+      213: 4970771929528073792
+    second: M_Attack_Knife_R_35
+  - first:
+      213: -6040044396618195014
+    second: M_Attack_Knife_R_36
+  - first:
+      213: 5754604722728684399
+    second: M_Attack_Knife_R_37
+  - first:
+      213: -6676757052198112911
+    second: M_Attack_Knife_R_38
+  - first:
+      213: -7530288720529164091
+    second: M_Attack_Knife_R_39
+  - first:
+      213: -73379403495358712
+    second: M_Attack_Knife_R_40
+  - first:
+      213: -3168434707202958679
+    second: M_Attack_Knife_R_41
+  - first:
+      213: -5755192827680850614
+    second: M_Attack_Knife_R_42
+  - first:
+      213: 2255177398875591132
+    second: M_Attack_Knife_R_43
+  - first:
+      213: -299177400347765669
+    second: M_Attack_Knife_R_44
+  - first:
+      213: -5732357954036791761
+    second: M_Attack_Knife_R_45
+  - first:
+      213: -965816463051164706
+    second: M_Attack_Knife_R_46
+  - first:
+      213: 7434101500820046124
+    second: M_Attack_Knife_R_47
+  - first:
+      213: 8905173264760248508
+    second: M_Attack_Knife_R_48
+  - first:
+      213: -7760670275135053578
+    second: M_Attack_Knife_R_49
+  - first:
+      213: 6907426530079758161
+    second: ML_Attack_Knife_R_0
+  - first:
+      213: 1732445978255161590
+    second: ML_Attack_Knife_R_1
+  - first:
+      213: 7626054921948968883
+    second: ML_Attack_Knife_R_2
+  - first:
+      213: -2696680014560113589
+    second: ML_Attack_Knife_R_3
+  - first:
+      213: 3991014565824173112
+    second: ML_Attack_Knife_R_4
+  - first:
+      213: -6753299411357450562
+    second: ML_Attack_Knife_R_5
+  - first:
+      213: 5411667950780624481
+    second: ML_Attack_Knife_R_6
+  - first:
+      213: -1646834503703154003
+    second: ML_Attack_Knife_R_7
+  - first:
+      213: 8757350229611673383
+    second: ML_Attack_Knife_R_8
+  - first:
+      213: 4440713590503515836
+    second: ML_Attack_Knife_R_9
+  - first:
+      213: -6220150543588397045
+    second: ML_Attack_Knife_R_10
+  - first:
+      213: 8022896843650169175
+    second: ML_Attack_Knife_R_11
+  - first:
+      213: -5914458887056230045
+    second: ML_Attack_Knife_R_12
+  - first:
+      213: -6057749238944765873
+    second: ML_Attack_Knife_R_13
+  - first:
+      213: -3911442058698369375
+    second: ML_Attack_Knife_R_14
+  - first:
+      213: 3663189267558488806
+    second: ML_Attack_Knife_R_15
+  - first:
+      213: 5647874494006886733
+    second: ML_Attack_Knife_R_16
+  - first:
+      213: -7645116157674870390
+    second: ML_Attack_Knife_R_17
+  - first:
+      213: -1421708486705298825
+    second: ML_Attack_Knife_R_18
+  - first:
+      213: 793112616285408614
+    second: ML_Attack_Knife_R_19
+  - first:
+      213: 3197856350002609168
+    second: ML_Attack_Knife_R_20
+  - first:
+      213: 7087717834154800634
+    second: ML_Attack_Knife_R_21
+  - first:
+      213: 327849807801198555
+    second: ML_Attack_Knife_R_22
+  - first:
+      213: -203510124755049432
+    second: ML_Attack_Knife_R_23
+  - first:
+      213: 4767857547139403781
+    second: ML_Attack_Knife_R_24
+  - first:
+      213: 6441269950544941205
+    second: ML_Attack_Knife_R_25
+  - first:
+      213: 4292625024016968421
+    second: ML_Attack_Knife_R_26
+  - first:
+      213: -5092832434420167483
+    second: ML_Attack_Knife_R_27
+  - first:
+      213: 4139486366536176931
+    second: ML_Attack_Knife_R_28
+  - first:
+      213: 6476002462909899882
+    second: ML_Attack_Knife_R_29
+  - first:
+      213: -7916266819328118546
+    second: ML_Attack_Knife_R_30
+  - first:
+      213: -7004495179598097068
+    second: ML_Attack_Knife_R_31
+  - first:
+      213: 2180207063841660203
+    second: ML_Attack_Knife_R_32
+  - first:
+      213: -889648001247701208
+    second: ML_Attack_Knife_R_33
+  - first:
+      213: 4298556390898498
+    second: ML_Attack_Knife_R_34
+  - first:
+      213: 3573513368336124402
+    second: ML_Attack_Knife_R_35
+  - first:
+      213: 2093513339198299021
+    second: ML_Attack_Knife_R_36
+  - first:
+      213: -8250541754124617840
+    second: ML_Attack_Knife_R_37
+  - first:
+      213: 4779584808995844579
+    second: ML_Attack_Knife_R_38
+  - first:
+      213: 7943715149278723465
+    second: ML_Attack_Knife_R_39
+  - first:
+      213: -2698873270255122169
+    second: ML_Attack_Knife_R_40
+  - first:
+      213: -458950729171595124
+    second: ML_Attack_Knife_R_41
+  - first:
+      213: 5888095397904270772
+    second: ML_Attack_Knife_R_42
+  - first:
+      213: 638166894158822728
+    second: ML_Attack_Knife_R_43
+  - first:
+      213: -4716703228629685249
+    second: ML_Attack_Knife_R_44
+  - first:
+      213: -4140483037481484715
+    second: ML_Attack_Knife_R_45
+  - first:
+      213: 4185087001176107746
+    second: ML_Attack_Knife_R_46
+  - first:
+      213: -765163232116318835
+    second: ML_Attack_Knife_R_47
+  - first:
+      213: 5808527980238406878
+    second: ML_Attack_Knife_R_48
+  - first:
+      213: 3227888656144139171
+    second: ML_Attack_Knife_R_49
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 135
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157538df4db1cdf50800000000000000
+      internalID: 6907426530079758161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_1
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 3434
+        width: 248
+        height: 616
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f8f3763072ea0810800000000000000
+      internalID: 1732445978255161590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_2
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 3434
+        width: 248
+        height: 616
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b733640c8035d960800000000000000
+      internalID: 7626054921948968883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_3
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 3434
+        width: 248
+        height: 616
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ccf3b70d7739ad0800000000000000
+      internalID: -2696680014560113589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_4
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 3436
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8341c513a9ee26730800000000000000
+      internalID: 3991014565824173112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_5
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 3436
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe3f2447f57742a0800000000000000
+      internalID: -6753299411357450562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_6
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 3436
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e25a8345b1a1b40800000000000000
+      internalID: 5411667950780624481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_7
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 3436
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da2bae28eb44529e0800000000000000
+      internalID: -1646834503703154003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_8
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 3436
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72770b9a2ab588970800000000000000
+      internalID: 8757350229611673383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_9
+      rect:
+        serializedVersion: 2
+        x: 2827
+        y: 3436
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6263f8b7590ad30800000000000000
+      internalID: 4440713590503515836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_10
+      rect:
+        serializedVersion: 2
+        x: 3137
+        y: 3436
+        width: 250
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00f5ff49069da9a0800000000000000
+      internalID: -6220150543588397045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_11
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 3436
+        width: 257
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759fe531c2e075f60800000000000000
+      internalID: 8022896843650169175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_12
+      rect:
+        serializedVersion: 2
+        x: 3768
+        y: 3436
+        width: 263
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3697c567afe9beda0800000000000000
+      internalID: -5914458887056230045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_13
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2759
+        width: 266
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f48ed4a992d8eeba0800000000000000
+      internalID: -6057749238944765873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_14
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 2759
+        width: 267
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6d2cbdb24c7b9c0800000000000000
+      internalID: -3911442058698369375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_15
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 2759
+        width: 258
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ead8ddfa3346d230800000000000000
+      internalID: 3663189267558488806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_16
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 2759
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d410547bde7416e40800000000000000
+      internalID: 5647874494006886733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_17
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 2759
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a89a0333c5717e590800000000000000
+      internalID: -7645116157674870390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_18
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 2759
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772c5c3f9a3154ce0800000000000000
+      internalID: -1421708486705298825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_19
+      rect:
+        serializedVersion: 2
+        x: 1948
+        y: 2759
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66d8290f8b3b10b00800000000000000
+      internalID: 793112616285408614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_20
+      rect:
+        serializedVersion: 2
+        x: 2257
+        y: 2759
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01cf1a84861116c20800000000000000
+      internalID: 3197856350002609168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_21
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 2759
+        width: 252
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af57ffc51d1ac5260800000000000000
+      internalID: 7087717834154800634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_22
+      rect:
+        serializedVersion: 2
+        x: 2878
+        y: 2759
+        width: 267
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7aba5c9a1cc8400800000000000000
+      internalID: 327849807801198555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_23
+      rect:
+        serializedVersion: 2
+        x: 3205
+        y: 2759
+        width: 280
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824a7c9ae9cfc2df0800000000000000
+      internalID: -203510124755049432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_24
+      rect:
+        serializedVersion: 2
+        x: 3547
+        y: 2759
+        width: 294
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500d8ec8d25da2240800000000000000
+      internalID: 4767857547139403781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_25
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 2084
+        width: 306
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59011a884ecf36950800000000000000
+      internalID: 6441269950544941205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_26
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 2084
+        width: 313
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eaeb7e47b7729b30800000000000000
+      internalID: 4292625024016968421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_27
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 2084
+        width: 306
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc4cc542ef9259b0800000000000000
+      internalID: -5092832434420167483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_28
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 2084
+        width: 285
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32516fd1be8627930800000000000000
+      internalID: 4139486366536176931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_29
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 2084
+        width: 264
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64ac4ebde16fd950800000000000000
+      internalID: 6476002462909899882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_30
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 2084
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee07cbe1545c32290800000000000000
+      internalID: -7916266819328118546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_31
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 2084
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4559e1ddeb80bce90800000000000000
+      internalID: -7004495179598097068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_32
+      rect:
+        serializedVersion: 2
+        x: 2441
+        y: 2084
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d5419f5c6a14e10800000000000000
+      internalID: 2180207063841660203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_33
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 2084
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8279e7e3bd557a3f0800000000000000
+      internalID: -889648001247701208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_34
+      rect:
+        serializedVersion: 2
+        x: 3059
+        y: 2084
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24bf9b6a3854f0000800000000000000
+      internalID: 4298556390898498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_35
+      rect:
+        serializedVersion: 2
+        x: 3368
+        y: 2084
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9c8c7a97ba79130800000000000000
+      internalID: 3573513368336124402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_36
+      rect:
+        serializedVersion: 2
+        x: 3677
+        y: 2084
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bd4734a47ad0d10800000000000000
+      internalID: 2093513339198299021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_37
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1409
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 097bfd4ecff208d80800000000000000
+      internalID: -8250541754124617840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_38
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1409
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1fc0a7f0f745240800000000000000
+      internalID: 4779584808995844579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_39
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1409
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98db5a537debd3e60800000000000000
+      internalID: 7943715149278723465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_40
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 1409
+        width: 248
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70985a85f0dab8ad0800000000000000
+      internalID: -2698873270255122169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_41
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 1409
+        width: 270
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8012525eba71a9f0800000000000000
+      internalID: -458950729171595124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_42
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 1409
+        width: 322
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b542b36197b6b150800000000000000
+      internalID: 5888095397904270772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_43
+      rect:
+        serializedVersion: 2
+        x: 1996
+        y: 1409
+        width: 350
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d30c9b8693bd800800000000000000
+      internalID: 638166894158822728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_44
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 1409
+        width: 338
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffbe69a5767ea8eb0800000000000000
+      internalID: -4716703228629685249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_45
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 1409
+        width: 316
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55eb2685d9c0a86c0800000000000000
+      internalID: -4140483037481484715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_46
+      rect:
+        serializedVersion: 2
+        x: 3183
+        y: 1407
+        width: 286
+        height: 615
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eae43b347a641a30800000000000000
+      internalID: 4185087001176107746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_47
+      rect:
+        serializedVersion: 2
+        x: 3530
+        y: 1407
+        width: 248
+        height: 616
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d548a28189165f0800000000000000
+      internalID: -765163232116318835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_48
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 730
+        width: 248
+        height: 617
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed407025c690c9050800000000000000
+      internalID: 5808527980238406878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_Knife_R_49
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 730
+        width: 248
+        height: 617
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a30cf371a3cbcc20800000000000000
+      internalID: 3227888656144139171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 51bfd158c58f02b429caaca7cbb4fea2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

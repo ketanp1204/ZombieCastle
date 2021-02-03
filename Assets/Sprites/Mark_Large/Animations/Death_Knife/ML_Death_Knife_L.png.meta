@@ -1,0 +1,850 @@
+fileFormatVersion: 2
+guid: e67f02784f8583e4abb0dc529b690b4d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1856018818002433692
+    second: ML_Death_Knife_L_0
+  - first:
+      213: -8593899910992189875
+    second: ML_Death_Knife_L_1
+  - first:
+      213: -6538162231871342796
+    second: ML_Death_Knife_L_2
+  - first:
+      213: -4895217388568769799
+    second: ML_Death_Knife_L_3
+  - first:
+      213: 3711606264995113761
+    second: ML_Death_Knife_L_4
+  - first:
+      213: 7385622948994037664
+    second: ML_Death_Knife_L_5
+  - first:
+      213: -598033127390065246
+    second: ML_Death_Knife_L_6
+  - first:
+      213: -4568724859310785683
+    second: ML_Death_Knife_L_7
+  - first:
+      213: 1132570407524627661
+    second: ML_Death_Knife_L_8
+  - first:
+      213: -6528738749681835202
+    second: ML_Death_Knife_L_9
+  - first:
+      213: 3609561971751691680
+    second: ML_Death_Knife_L_10
+  - first:
+      213: -5661902749196536894
+    second: ML_Death_Knife_L_11
+  - first:
+      213: -169905164044827731
+    second: ML_Death_Knife_L_13
+  - first:
+      213: 4544526458494071434
+    second: ML_Death_Knife_L_12
+  - first:
+      213: 8858738982247481700
+    second: ML_Death_Knife_L_14
+  - first:
+      213: 5394919500876506995
+    second: ML_Death_Knife_L_15
+  - first:
+      213: -8676559983223077571
+    second: ML_Death_Knife_L_16
+  - first:
+      213: 6562220675794556258
+    second: ML_Death_Knife_L_17
+  - first:
+      213: -5326385649797890279
+    second: ML_Death_Knife_L_17
+  - first:
+      213: 4104011735819108659
+    second: ML_Death_Knife_L_12
+  - first:
+      213: -803422865225956345
+    second: ML_Death_Knife_L_14
+  - first:
+      213: 1883469033399927271
+    second: ML_Death_Knife_L_15
+  - first:
+      213: -876480154569044641
+    second: ML_Death_Knife_L_16
+  - first:
+      213: -7663989431786492394
+    second: ML_Death_Knife_L_23
+  - first:
+      213: -5678260500801187627
+    second: ML_Death_Knife_L_24
+  - first:
+      213: 245001029413947186
+    second: ML_Death_Knife_L_25
+  - first:
+      213: -3640595505682336868
+    second: ML_Death_Knife_L_22
+  - first:
+      213: -8105037169250264419
+    second: ML_Death_Knife_L_26
+  - first:
+      213: 2614182860037370556
+    second: ML_Death_Knife_L_28
+  - first:
+      213: -2399355998490594240
+    second: ML_Death_Knife_L_18
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 135
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 3434
+        width: 292
+        height: 617
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96b9770847e1c910800000000000000
+      internalID: 1856018818002433692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_1
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3440
+        width: 301
+        height: 610
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46ac0a30955cb880800000000000000
+      internalID: -8593899910992189875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_2
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 3446
+        width: 306
+        height: 603
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437fe6d3718c345a0800000000000000
+      internalID: -6538162231871342796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_3
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 3454
+        width: 308
+        height: 597
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa0b0898b1b01cb0800000000000000
+      internalID: -4895217388568769799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_4
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 3460
+        width: 311
+        height: 589
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12be52bab36428330800000000000000
+      internalID: 3711606264995113761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_5
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 3468
+        width: 315
+        height: 582
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a733cff0f00f7660800000000000000
+      internalID: 7385622948994037664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_6
+      rect:
+        serializedVersion: 2
+        x: 2243
+        y: 3482
+        width: 328
+        height: 568
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2adcff50a0c53b7f0800000000000000
+      internalID: -598033127390065246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_7
+      rect:
+        serializedVersion: 2
+        x: 2632
+        y: 3498
+        width: 343
+        height: 553
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6bb84452f0a890c0800000000000000
+      internalID: -4568724859310785683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_8
+      rect:
+        serializedVersion: 2
+        x: 3035
+        y: 3510
+        width: 358
+        height: 540
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4ff97f8c2b7bf00800000000000000
+      internalID: 1132570407524627661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_9
+      rect:
+        serializedVersion: 2
+        x: 3453
+        y: 3526
+        width: 372
+        height: 524
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33e2e9a2b24565a0800000000000000
+      internalID: -6528738749681835202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_10
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2863
+        width: 387
+        height: 510
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5a4013d7db71230800000000000000
+      internalID: 3609561971751691680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_11
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 2875
+        width: 401
+        height: 498
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c335599271ec61b0800000000000000
+      internalID: -5661902749196536894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_13
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 2905
+        width: 430
+        height: 475
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da38a9b472064adf0800000000000000
+      internalID: -169905164044827731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_12
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 2887
+        width: 416
+        height: 479
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8237ee6cb6611f30800000000000000
+      internalID: 4544526458494071434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_14
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 2911
+        width: 444
+        height: 448
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46144c23b2090fa70800000000000000
+      internalID: 8858738982247481700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_15
+      rect:
+        serializedVersion: 2
+        x: 2426
+        y: 2923
+        width: 459
+        height: 432
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3776299d3ba9eda40800000000000000
+      internalID: 5394919500876506995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_16
+      rect:
+        serializedVersion: 2
+        x: 2945
+        y: 2937
+        width: 488
+        height: 416
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d358e976aaaa69780800000000000000
+      internalID: -8676559983223077571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_17
+      rect:
+        serializedVersion: 2
+        x: 3494
+        y: 2949
+        width: 517
+        height: 399
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265557ebfe0b11b50800000000000000
+      internalID: 6562220675794556258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_22
+      rect:
+        serializedVersion: 2
+        x: 2645
+        y: 2413
+        width: 662
+        height: 390
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ffe0fc870e416b0800000000000000
+      internalID: -5326385649797890279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_18
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 2394
+        width: 546
+        height: 383
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33148830ee064f830800000000000000
+      internalID: 4104011735819108659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_19
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 2398
+        width: 575
+        height: 384
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704c7c9292ba9d4f0800000000000000
+      internalID: -803422865225956345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_20
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 2406
+        width: 604
+        height: 384
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e140495b1d632a10800000000000000
+      internalID: 1883469033399927271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_21
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 2412
+        width: 633
+        height: 384
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d8b3671fd16d3f0800000000000000
+      internalID: -876480154569044641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_23
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1938
+        width: 691
+        height: 396
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ea404a73a04a590800000000000000
+      internalID: -7663989431786492394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_24
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 1934
+        width: 751
+        height: 399
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d01d93c824c231b0800000000000000
+      internalID: -5678260500801187627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_25
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 1942
+        width: 750
+        height: 391
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237c2df532b666300800000000000000
+      internalID: 245001029413947186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_27
+      rect:
+        serializedVersion: 2
+        x: 3227
+        y: 1947
+        width: 808
+        height: 387
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93bbe02da10a7dc0800000000000000
+      internalID: -3640595505682336868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_26
+      rect:
+        serializedVersion: 2
+        x: 2388
+        y: 1947
+        width: 779
+        height: 386
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a108b03af158f80800000000000000
+      internalID: -8105037169250264419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_28
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1500
+        width: 837
+        height: 257
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2317ee571774420800000000000000
+      internalID: 2614182860037370556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Death_Knife_L_29
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 1500
+        width: 850
+        height: 257
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044f3448e66c3bed0800000000000000
+      internalID: -2399355998490594240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f3b30b59a2791fe498c108d6079da3a3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

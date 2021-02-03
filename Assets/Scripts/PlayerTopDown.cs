@@ -56,6 +56,23 @@ public class PlayerTopDown : MonoBehaviour
         {
             instance = this;
         }
+
+        SetReferences();
+        InitializeValues();
+
+        if (PlayerStats.isFirstScene)
+        {
+            currentHealth = maxHealth;
+            PlayerStats.currentHealth = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
+            PlayerStats.isFirstScene = false;
+        }
+        else
+        {
+            currentHealth = PlayerStats.currentHealth;
+            healthBar.SetMaxHealth(maxHealth);
+            healthBar.SetHealth(currentHealth);
+        }
     }
 
     void OnEnable()
@@ -71,28 +88,6 @@ public class PlayerTopDown : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         healthBar = GetComponentInChildren<HealthBar>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        SetReferences();
-
-        if (PlayerStats.isFirstScene)
-        {
-            currentHealth = maxHealth;
-            PlayerStats.currentHealth = maxHealth;
-            healthBar.SetMaxHealth(maxHealth);
-            PlayerStats.isFirstScene = false;
-        }
-        else
-        {
-            currentHealth = PlayerStats.currentHealth;
-            healthBar.SetMaxHealth(maxHealth);
-            healthBar.SetHealth(currentHealth);
-        }
-
-        InitializeValues();
     }
 
     private void InitializeValues()
@@ -280,16 +275,50 @@ public class PlayerTopDown : MonoBehaviour
         return instance.facingRight;
     }
 
-    // Sets the WeaponDrawn animation parameter to true
-    public static void DrawWeapon()
+    public static void StopMovement()
     {
-        instance.animator.SetBool("WeaponDrawn", true);
+        instance.movePlayer = false;
     }
 
-    // Sets the WeaponDrawn animation parameter to false
-    public static void RemoveWeapon()
+    public static void EnableMovement()
     {
-        instance.animator.SetBool("WeaponDrawn", false);
+        instance.movePlayer = true;
+    }
+
+    // Sets the AxeDrawn animation parameter to true
+    public static void EquipAxe()
+    {
+        instance.axeDrawn = true;
+        instance.animator.SetBool("AxeDrawn", true);
+
+        // Set other weapon bools to false
+        instance.knifeDrawn = false;
+        instance.animator.SetBool("KnifeDrawn", false);
+    }
+
+    // Sets the AxeDrawn animation parameter to false
+    public static void UnequipAxe()
+    {
+        instance.axeDrawn = false;
+        instance.animator.SetBool("AxeDrawn", false);
+    }
+
+    // Sets the KnifeDrawn animation parameter to true
+    public static void EquipKnife()
+    {
+        instance.knifeDrawn = true;
+        instance.animator.SetBool("KnifeDrawn", true);
+
+        // Set other weapon bools to false
+        instance.axeDrawn = false;
+        instance.animator.SetBool("AxeDrawn", false);
+    }
+
+    // Sets the KnifeDrawn animation parameter to false
+    public static void UnequipKnife()
+    {
+        instance.knifeDrawn = false;
+        instance.animator.SetBool("KnifeDrawn", false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

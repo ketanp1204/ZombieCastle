@@ -73,7 +73,6 @@ public class EnemyCombat : MonoBehaviour
     public void StopAttack()
     {
         canAttack = false;
-        // CancelInvoke();
     }
 
     public void InvokeAttack()
@@ -86,7 +85,6 @@ public class EnemyCombat : MonoBehaviour
             isAttacking = true;
             StartCoroutine(Attack());
         }
-        
     }
 
     private IEnumerator Attack()
@@ -129,6 +127,7 @@ public class EnemyCombat : MonoBehaviour
 
     public void TakeDamage(Transform playerPos, int damage)
     {
+        Debug.Log("taking damage");
         if (!IsDead)
         {
             // Create blood particles

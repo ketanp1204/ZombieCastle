@@ -75,7 +75,7 @@ public class PlayerObjectSelection : MonoBehaviour
             // Get name of newly found object
             string objectName = collision.GetComponent<ObjectProperties>().objectName;
 
-            // Show interaction key
+            // Show object name
             if (objectNameGO != null)
             {
                 if (!previousObjectName.Equals(objectName))

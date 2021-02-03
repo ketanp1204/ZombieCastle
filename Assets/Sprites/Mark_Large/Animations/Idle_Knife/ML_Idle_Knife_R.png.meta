@@ -1,0 +1,1480 @@
+fileFormatVersion: 2
+guid: 3d1073607a945c24cab2704a7dc712e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3223356948673858862
+    second: M_Idle_Knife_R_0
+  - first:
+      213: -5737046159761916104
+    second: M_Idle_Knife_R_1
+  - first:
+      213: 8325587581464020017
+    second: M_Idle_Knife_R_2
+  - first:
+      213: -611722760062362419
+    second: M_Idle_Knife_R_3
+  - first:
+      213: 4907460377350288940
+    second: M_Idle_Knife_R_4
+  - first:
+      213: -638774239616801001
+    second: M_Idle_Knife_R_5
+  - first:
+      213: -6992995918147339157
+    second: M_Idle_Knife_R_6
+  - first:
+      213: 3154663382218949918
+    second: M_Idle_Knife_R_7
+  - first:
+      213: -6331732763007285835
+    second: M_Idle_Knife_R_8
+  - first:
+      213: 6119611900768039093
+    second: M_Idle_Knife_R_9
+  - first:
+      213: 652919567974949330
+    second: M_Idle_Knife_R_10
+  - first:
+      213: -880809654146659256
+    second: M_Idle_Knife_R_11
+  - first:
+      213: 6211832982415165006
+    second: M_Idle_Knife_R_12
+  - first:
+      213: -175537273405409458
+    second: M_Idle_Knife_R_13
+  - first:
+      213: -5720537733218380199
+    second: M_Idle_Knife_R_14
+  - first:
+      213: 2235209067617425411
+    second: M_Idle_Knife_R_15
+  - first:
+      213: 183010832459616820
+    second: M_Idle_Knife_R_16
+  - first:
+      213: -148755674339173897
+    second: M_Idle_Knife_R_17
+  - first:
+      213: 2897160389813889314
+    second: M_Idle_Knife_R_18
+  - first:
+      213: 3165539037414298958
+    second: M_Idle_Knife_R_19
+  - first:
+      213: -3381867912171003116
+    second: M_Idle_Knife_R_20
+  - first:
+      213: -61204896534178123
+    second: M_Idle_Knife_R_21
+  - first:
+      213: -8659653335520979486
+    second: M_Idle_Knife_R_22
+  - first:
+      213: -1489222357055429515
+    second: M_Idle_Knife_R_23
+  - first:
+      213: -2792979262435732898
+    second: M_Idle_Knife_R_24
+  - first:
+      213: -667574484209284406
+    second: M_Idle_Knife_R_25
+  - first:
+      213: 1387490488196308674
+    second: M_Idle_Knife_R_26
+  - first:
+      213: -6143980853098467183
+    second: M_Idle_Knife_R_27
+  - first:
+      213: 8337082872213529785
+    second: M_Idle_Knife_R_28
+  - first:
+      213: -6392424952349265371
+    second: M_Idle_Knife_R_29
+  - first:
+      213: -2302250090523842529
+    second: M_Idle_Knife_R_30
+  - first:
+      213: 5331684805899604575
+    second: M_Idle_Knife_R_31
+  - first:
+      213: 621485673338619412
+    second: M_Idle_Knife_R_32
+  - first:
+      213: -6126158198780279122
+    second: M_Idle_Knife_R_33
+  - first:
+      213: -8737043607720162365
+    second: M_Idle_Knife_R_34
+  - first:
+      213: -7286396782291998014
+    second: M_Idle_Knife_R_35
+  - first:
+      213: 6151733548343508813
+    second: M_Idle_Knife_R_36
+  - first:
+      213: -6824337469478861331
+    second: M_Idle_Knife_R_37
+  - first:
+      213: 2126245772707974378
+    second: M_Idle_Knife_R_38
+  - first:
+      213: -2803445711667475612
+    second: M_Idle_Knife_R_39
+  - first:
+      213: 8837658125699816938
+    second: M_Idle_Knife_R_40
+  - first:
+      213: 1972758982002378194
+    second: M_Idle_Knife_R_41
+  - first:
+      213: -1703123307088228203
+    second: M_Idle_Knife_R_42
+  - first:
+      213: 3438985841844904515
+    second: M_Idle_Knife_R_43
+  - first:
+      213: 111190086642054991
+    second: M_Idle_Knife_R_44
+  - first:
+      213: 7750461786872769168
+    second: M_Idle_Knife_R_45
+  - first:
+      213: 4422287825438542804
+    second: M_Idle_Knife_R_46
+  - first:
+      213: 7660760925483003737
+    second: M_Idle_Knife_R_47
+  - first:
+      213: 192476283713880508
+    second: M_Idle_Knife_R_48
+  - first:
+      213: -2778069233009456720
+    second: M_Idle_Knife_R_49
+  - first:
+      213: -5003188574612383831
+    second: ML_Idle_Knife_R_0
+  - first:
+      213: -3585288321779021319
+    second: ML_Idle_Knife_R_1
+  - first:
+      213: 4202141835899653648
+    second: ML_Idle_Knife_R_2
+  - first:
+      213: 2427178399622808943
+    second: ML_Idle_Knife_R_3
+  - first:
+      213: -778640983226228466
+    second: ML_Idle_Knife_R_4
+  - first:
+      213: 1297510371388364248
+    second: ML_Idle_Knife_R_5
+  - first:
+      213: -4831053779373679309
+    second: ML_Idle_Knife_R_6
+  - first:
+      213: -2365806923840808394
+    second: ML_Idle_Knife_R_7
+  - first:
+      213: -7379935981111300184
+    second: ML_Idle_Knife_R_8
+  - first:
+      213: -186002026394418853
+    second: ML_Idle_Knife_R_9
+  - first:
+      213: 4719978264488733056
+    second: ML_Idle_Knife_R_10
+  - first:
+      213: -5750926605134777387
+    second: ML_Idle_Knife_R_11
+  - first:
+      213: 7568571956823187745
+    second: ML_Idle_Knife_R_12
+  - first:
+      213: -1884495505212993164
+    second: ML_Idle_Knife_R_13
+  - first:
+      213: 267991599498258922
+    second: ML_Idle_Knife_R_14
+  - first:
+      213: -8438847450049976877
+    second: ML_Idle_Knife_R_15
+  - first:
+      213: 6819287207979419425
+    second: ML_Idle_Knife_R_16
+  - first:
+      213: 3946045991305470946
+    second: ML_Idle_Knife_R_17
+  - first:
+      213: -7775289618788785981
+    second: ML_Idle_Knife_R_18
+  - first:
+      213: -2630201940191333449
+    second: ML_Idle_Knife_R_19
+  - first:
+      213: 524916687975942114
+    second: ML_Idle_Knife_R_20
+  - first:
+      213: 3584234402766817399
+    second: ML_Idle_Knife_R_21
+  - first:
+      213: 5151560801905076992
+    second: ML_Idle_Knife_R_22
+  - first:
+      213: -39254285327101749
+    second: ML_Idle_Knife_R_23
+  - first:
+      213: 52362330243343725
+    second: ML_Idle_Knife_R_24
+  - first:
+      213: -4097803060738910162
+    second: ML_Idle_Knife_R_25
+  - first:
+      213: -4362548230676323640
+    second: ML_Idle_Knife_R_26
+  - first:
+      213: -2224189011971782971
+    second: ML_Idle_Knife_R_27
+  - first:
+      213: -4991197658054351924
+    second: ML_Idle_Knife_R_28
+  - first:
+      213: 5726114709488512905
+    second: ML_Idle_Knife_R_29
+  - first:
+      213: 6162416904986922714
+    second: ML_Idle_Knife_R_30
+  - first:
+      213: -5056908168826757388
+    second: ML_Idle_Knife_R_31
+  - first:
+      213: -1609963698962983838
+    second: ML_Idle_Knife_R_32
+  - first:
+      213: -6061982727143315028
+    second: ML_Idle_Knife_R_33
+  - first:
+      213: -7578725385182596858
+    second: ML_Idle_Knife_R_34
+  - first:
+      213: -3322967215748985484
+    second: ML_Idle_Knife_R_35
+  - first:
+      213: -3093295704760293668
+    second: ML_Idle_Knife_R_36
+  - first:
+      213: 70956821592153866
+    second: ML_Idle_Knife_R_37
+  - first:
+      213: 1842197928034860140
+    second: ML_Idle_Knife_R_38
+  - first:
+      213: -4354376993860698704
+    second: ML_Idle_Knife_R_39
+  - first:
+      213: 8947570284485196487
+    second: ML_Idle_Knife_R_40
+  - first:
+      213: -7609387111603396521
+    second: ML_Idle_Knife_R_41
+  - first:
+      213: 881327715016292647
+    second: ML_Idle_Knife_R_42
+  - first:
+      213: 946243794967044558
+    second: ML_Idle_Knife_R_43
+  - first:
+      213: 8085052726808349269
+    second: ML_Idle_Knife_R_44
+  - first:
+      213: 2905919067813850800
+    second: ML_Idle_Knife_R_45
+  - first:
+      213: -4533637444614726316
+    second: ML_Idle_Knife_R_46
+  - first:
+      213: 8308508721429749850
+    second: ML_Idle_Knife_R_47
+  - first:
+      213: -8385522902052857337
+    second: ML_Idle_Knife_R_48
+  - first:
+      213: 6688623098517861505
+    second: ML_Idle_Knife_R_49
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 135
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a79fe9df7a119ab0800000000000000
+      internalID: -5003188574612383831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_1
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9410b544f7e3ec0800000000000000
+      internalID: -3585288321779021319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_2
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e4b906cb1015a30800000000000000
+      internalID: 4202141835899653648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_3
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65c40c05e11fa120800000000000000
+      internalID: 2427178399622808943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_4
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e016d33b626b135f0800000000000000
+      internalID: -778640983226228466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_5
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d51dfaeecea10210800000000000000
+      internalID: 1297510371388364248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_6
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d9f950f26a4fcb0800000000000000
+      internalID: -4831053779373679309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_7
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63a1f492327fa2fd0800000000000000
+      internalID: -2365806923840808394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_8
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8afacb46353359990800000000000000
+      internalID: -7379935981111300184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_9
+      rect:
+        serializedVersion: 2
+        x: 2827
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51024974203b6df0800000000000000
+      internalID: -186002026394418853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_10
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0896a6a593bb08140800000000000000
+      internalID: 4719978264488733056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_11
+      rect:
+        serializedVersion: 2
+        x: 3445
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3399be8ba9030b0800000000000000
+      internalID: -5750926605134777387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_12
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 3434
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121ed6f3818f80960800000000000000
+      internalID: 7568571956823187745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_13
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2757
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47195fe825de8d5e0800000000000000
+      internalID: -1884495505212993164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_14
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2757
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9e1ea90f818b300800000000000000
+      internalID: 267991599498258922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_15
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d56f0284f033ea80800000000000000
+      internalID: -8438847450049976877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_16
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1278af4e599f2ae50800000000000000
+      internalID: 6819287207979419425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_17
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3ed1b0ceb23c630800000000000000
+      internalID: 3946045991305470946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_18
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0ef46794f981490800000000000000
+      internalID: -7775289618788785981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_19
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b33a535545af7bd0800000000000000
+      internalID: -2630201940191333449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_20
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e70b7352f0e84700800000000000000
+      internalID: 524916687975942114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_21
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77886a00332cdb130800000000000000
+      internalID: 3584234402766817399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_22
+      rect:
+        serializedVersion: 2
+        x: 2827
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00be06451450e7740800000000000000
+      internalID: 5151560801905076992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_23
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc09a2b7f6a847ff0800000000000000
+      internalID: -39254285327101749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_24
+      rect:
+        serializedVersion: 2
+        x: 3445
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6524cd03470ab000800000000000000
+      internalID: 52362330243343725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_25
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 2757
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28162dc3dda127c0800000000000000
+      internalID: -4097803060738910162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_26
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2080
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2670b7f7d1573c0800000000000000
+      internalID: -4362548230676323640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_27
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2080
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6481cb0e71221e0800000000000000
+      internalID: -2224189011971782971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_28
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 2080
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3a8ebac24bbbab0800000000000000
+      internalID: -4991197658054351924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_29
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 2080
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fa3327dfe377f40800000000000000
+      internalID: 5726114709488512905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_30
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 2080
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade8b93768d458550800000000000000
+      internalID: 6162416904986922714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_31
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 2080
+        width: 248
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe5f4720d042d9b0800000000000000
+      internalID: -5056908168826757388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_32
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 2080
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2649906bb8248a9e0800000000000000
+      internalID: -1609963698962983838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_33
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 2080
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9a112d3d28fdba0800000000000000
+      internalID: -6061982727143315028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_34
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 2080
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601b4fd7a65f2d690800000000000000
+      internalID: -7578725385182596858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_35
+      rect:
+        serializedVersion: 2
+        x: 2827
+        y: 2080
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d43015ce272e1d0800000000000000
+      internalID: -3322967215748985484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_36
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 2080
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6658c02f76215d0800000000000000
+      internalID: -3093295704760293668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_37
+      rect:
+        serializedVersion: 2
+        x: 3445
+        y: 2080
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f14617ad61cf000800000000000000
+      internalID: 70956821592153866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_38
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 2080
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c7a72514dc09910800000000000000
+      internalID: 1842197928034860140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_39
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bdbccec1352293c0800000000000000
+      internalID: -4354376993860698704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_40
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cab49974c72c2c70800000000000000
+      internalID: 8947570284485196487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_41
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750a17efcb6066690800000000000000
+      internalID: -7609387111603396521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_42
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729b04823ea1b3c00800000000000000
+      internalID: 881327715016292647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_43
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1ade5d7bbb12d00800000000000000
+      internalID: 946243794967044558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_44
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a07bb5e90e33070800000000000000
+      internalID: 8085052726808349269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_45
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be2417fef5e35820800000000000000
+      internalID: 2905919067813850800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_46
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d545da3c84511c0800000000000000
+      internalID: -4533637444614726316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_47
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a502e0a69a0cd4370800000000000000
+      internalID: 8308508721429749850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_48
+      rect:
+        serializedVersion: 2
+        x: 2827
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a9c375953a0ab80800000000000000
+      internalID: -8385522902052857337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Idle_Knife_R_49
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 1403
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18431af2543c2dc50800000000000000
+      internalID: 6688623098517861505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6ef4f1bc931e36d4b85f7abc8f23bd49
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

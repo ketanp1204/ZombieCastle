@@ -1,0 +1,2857 @@
+fileFormatVersion: 2
+guid: 5e9c0babf9fcee74cb4c5befb8165a25
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3927786220853388304
+    second: M_Walk_Knife_L_0
+  - first:
+      213: -650323779308777348
+    second: M_Walk_Knife_L_1
+  - first:
+      213: 4169295982372903992
+    second: M_Walk_Knife_L_2
+  - first:
+      213: -5111086204823810832
+    second: M_Walk_Knife_L_3
+  - first:
+      213: -4710435469899973992
+    second: M_Walk_Knife_L_4
+  - first:
+      213: 7026995691292512537
+    second: M_Walk_Knife_L_5
+  - first:
+      213: -836471055089131010
+    second: M_Walk_Knife_L_6
+  - first:
+      213: -3649072602616913229
+    second: M_Walk_Knife_L_7
+  - first:
+      213: 6086471192343917827
+    second: M_Walk_Knife_L_8
+  - first:
+      213: -1999781421758618338
+    second: M_Walk_Knife_L_9
+  - first:
+      213: -8167506949492678795
+    second: M_Walk_Knife_L_10
+  - first:
+      213: 1260419276178403377
+    second: M_Walk_Knife_L_11
+  - first:
+      213: -4472018032067808475
+    second: M_Walk_Knife_L_12
+  - first:
+      213: 417023684931477522
+    second: M_Walk_Knife_L_13
+  - first:
+      213: 1553606838838601041
+    second: M_Walk_Knife_L_14
+  - first:
+      213: 412421395151377540
+    second: M_Walk_Knife_L_15
+  - first:
+      213: 2936233610321130934
+    second: M_Walk_Knife_L_16
+  - first:
+      213: -6485557466184020648
+    second: M_Walk_Knife_L_17
+  - first:
+      213: 7440807576883710640
+    second: M_Walk_Knife_L_18
+  - first:
+      213: 2773289736819899369
+    second: M_Walk_Knife_L_19
+  - first:
+      213: 6669540817878613202
+    second: M_Walk_Knife_L_20
+  - first:
+      213: -4944416427933555381
+    second: M_Walk_Knife_L_21
+  - first:
+      213: -7426388122363636049
+    second: M_Walk_Knife_L_22
+  - first:
+      213: -1278260872123947663
+    second: M_Walk_Knife_L_23
+  - first:
+      213: -9019584839824621368
+    second: M_Walk_Knife_L_24
+  - first:
+      213: 5614230347401126082
+    second: M_Walk_Knife_L_25
+  - first:
+      213: 8303827626529349588
+    second: M_Walk_Knife_L_26
+  - first:
+      213: 2190180626332298888
+    second: M_Walk_Knife_L_27
+  - first:
+      213: -4797224027829905463
+    second: M_Walk_Knife_L_28
+  - first:
+      213: 1803004889727133593
+    second: M_Walk_Knife_L_29
+  - first:
+      213: -8005551516101852568
+    second: M_Walk_Knife_L_30
+  - first:
+      213: 2063594422922511194
+    second: M_Walk_Knife_L_31
+  - first:
+      213: -4140850837386057665
+    second: M_Walk_Knife_L_32
+  - first:
+      213: 2619023340513448188
+    second: M_Walk_Knife_L_33
+  - first:
+      213: 3153709820778644645
+    second: M_Walk_Knife_L_34
+  - first:
+      213: 3692599053616185014
+    second: M_Walk_Knife_L_35
+  - first:
+      213: -8955256775593752029
+    second: M_Walk_Knife_L_36
+  - first:
+      213: -1063321167072939786
+    second: M_Walk_Knife_L_37
+  - first:
+      213: 5128160414983607859
+    second: M_Walk_Knife_L_38
+  - first:
+      213: 4923395233433407151
+    second: M_Walk_Knife_L_39
+  - first:
+      213: -5939187819011338963
+    second: M_Walk_Knife_L_40
+  - first:
+      213: -5977683681138093581
+    second: M_Walk_Knife_L_41
+  - first:
+      213: -341159880789145928
+    second: M_Walk_Knife_L_42
+  - first:
+      213: 8230917621538585893
+    second: M_Walk_Knife_L_43
+  - first:
+      213: 4783502720564891518
+    second: M_Walk_Knife_L_44
+  - first:
+      213: -5691865684756732443
+    second: M_Walk_Knife_L_45
+  - first:
+      213: 1172598962007982101
+    second: M_Walk_Knife_L_46
+  - first:
+      213: 1423116660126843257
+    second: M_Walk_Knife_L_47
+  - first:
+      213: -712549198796114895
+    second: M_Walk_Knife_L_48
+  - first:
+      213: -1772126694594976990
+    second: M_Walk_Knife_L_49
+  - first:
+      213: 5247418913796096383
+    second: M_Walk_Knife_L_50
+  - first:
+      213: 7433801899678953564
+    second: M_Walk_Knife_L_51
+  - first:
+      213: -9091242808918927023
+    second: M_Walk_Knife_L_52
+  - first:
+      213: 7973498386561062386
+    second: M_Walk_Knife_L_53
+  - first:
+      213: 4846179204431548964
+    second: M_Walk_Knife_L_54
+  - first:
+      213: 6248806561673393982
+    second: M_Walk_Knife_L_55
+  - first:
+      213: -9082253932926839472
+    second: M_Walk_Knife_L_56
+  - first:
+      213: -3864324889001542768
+    second: M_Walk_Knife_L_57
+  - first:
+      213: 7904232087390877443
+    second: M_Walk_Knife_L_58
+  - first:
+      213: -8491954718210097350
+    second: M_Walk_Knife_L_59
+  - first:
+      213: -484563049686319778
+    second: M_Walk_Knife_L_60
+  - first:
+      213: 4139371239701726281
+    second: M_Walk_Knife_L_61
+  - first:
+      213: 4261345132673589777
+    second: M_Walk_Knife_L_62
+  - first:
+      213: -507958639485870497
+    second: M_Walk_Knife_L_63
+  - first:
+      213: -1100331788601845671
+    second: M_Walk_Knife_L_64
+  - first:
+      213: -5051042025371982595
+    second: M_Walk_Knife_L_65
+  - first:
+      213: -8402060064443581052
+    second: M_Walk_Knife_L_66
+  - first:
+      213: 7121165570647966878
+    second: M_Walk_Knife_L_67
+  - first:
+      213: 3869205712379159910
+    second: M_Walk_Knife_L_68
+  - first:
+      213: -3069289391164956310
+    second: M_Walk_Knife_L_69
+  - first:
+      213: 3802622416110258413
+    second: M_Walk_Knife_L_70
+  - first:
+      213: 5971296630036516734
+    second: M_Walk_Knife_L_71
+  - first:
+      213: 2621519083639564749
+    second: M_Walk_Knife_L_72
+  - first:
+      213: 2236188830347017348
+    second: M_Walk_Knife_L_73
+  - first:
+      213: 8006760010354828503
+    second: M_Walk_Knife_L_74
+  - first:
+      213: 5924278383695043644
+    second: M_Walk_Knife_L_75
+  - first:
+      213: -2282123491467228457
+    second: M_Walk_Knife_L_76
+  - first:
+      213: -6239675777663091694
+    second: M_Walk_Knife_L_77
+  - first:
+      213: -4978335441388176428
+    second: M_Walk_Knife_L_78
+  - first:
+      213: 3001613964170299006
+    second: M_Walk_Knife_L_79
+  - first:
+      213: -3113034074964348749
+    second: M_Walk_Knife_L_80
+  - first:
+      213: -5133145216966453064
+    second: M_Walk_Knife_L_81
+  - first:
+      213: 687967400029786360
+    second: M_Walk_Knife_L_82
+  - first:
+      213: 1535865016217413965
+    second: M_Walk_Knife_L_83
+  - first:
+      213: 3686086620969612006
+    second: M_Walk_Knife_L_84
+  - first:
+      213: 4424255675193309763
+    second: M_Walk_Knife_L_85
+  - first:
+      213: -7825930648765137343
+    second: M_Walk_Knife_L_86
+  - first:
+      213: -6615061648578376230
+    second: M_Walk_Knife_L_87
+  - first:
+      213: -3601549617838419517
+    second: M_Walk_Knife_L_88
+  - first:
+      213: 7699443374176117000
+    second: M_Walk_Knife_L_89
+  - first:
+      213: 6301470569377438074
+    second: M_Walk_Knife_L_90
+  - first:
+      213: 4041105964920716089
+    second: M_Walk_Knife_L_91
+  - first:
+      213: -1036532512348441700
+    second: M_Walk_Knife_L_92
+  - first:
+      213: -5327344244560188944
+    second: M_Walk_Knife_L_93
+  - first:
+      213: -1814828076196920178
+    second: M_Walk_Knife_L_94
+  - first:
+      213: -6364505383776989037
+    second: M_Walk_Knife_L_95
+  - first:
+      213: -439029286883706507
+    second: M_Walk_Knife_L_96
+  - first:
+      213: 6550441281887133485
+    second: M_Walk_Knife_L_97
+  - first:
+      213: 3290215762404511977
+    second: M_Walk_Knife_L_98
+  - first:
+      213: -6094645788072870146
+    second: M_Walk_Knife_L_99
+  - first:
+      213: -6619181989853444059
+    second: M_Walk_Knife_L_100
+  - first:
+      213: 7904282965009920484
+    second: ML_Walk_Knife_L_0
+  - first:
+      213: 2685305014228333299
+    second: ML_Walk_Knife_L_1
+  - first:
+      213: 6273336993374869262
+    second: ML_Walk_Knife_L_2
+  - first:
+      213: 3918675551674420867
+    second: ML_Walk_Knife_L_3
+  - first:
+      213: -7263743437422245109
+    second: ML_Walk_Knife_L_4
+  - first:
+      213: 8756183849867903670
+    second: ML_Walk_Knife_L_5
+  - first:
+      213: 7475737267065232170
+    second: ML_Walk_Knife_L_6
+  - first:
+      213: -1961094598436486324
+    second: ML_Walk_Knife_L_7
+  - first:
+      213: 8246533583518358699
+    second: ML_Walk_Knife_L_8
+  - first:
+      213: -5662927243631270103
+    second: ML_Walk_Knife_L_9
+  - first:
+      213: -5144764688505676802
+    second: ML_Walk_Knife_L_10
+  - first:
+      213: -1970348484348373539
+    second: ML_Walk_Knife_L_11
+  - first:
+      213: -3801501556565023661
+    second: ML_Walk_Knife_L_12
+  - first:
+      213: 9054969559402085008
+    second: ML_Walk_Knife_L_13
+  - first:
+      213: -2756419572946062390
+    second: ML_Walk_Knife_L_14
+  - first:
+      213: -8074442135079745308
+    second: ML_Walk_Knife_L_15
+  - first:
+      213: -4685726529001255804
+    second: ML_Walk_Knife_L_16
+  - first:
+      213: -5718524166671597692
+    second: ML_Walk_Knife_L_17
+  - first:
+      213: 1103644853791718108
+    second: ML_Walk_Knife_L_18
+  - first:
+      213: 5947123748981911496
+    second: ML_Walk_Knife_L_19
+  - first:
+      213: -2477536371086971072
+    second: ML_Walk_Knife_L_20
+  - first:
+      213: 8038900068718928590
+    second: ML_Walk_Knife_L_21
+  - first:
+      213: -5589145761564806878
+    second: ML_Walk_Knife_L_22
+  - first:
+      213: 3921694544382610523
+    second: ML_Walk_Knife_L_23
+  - first:
+      213: -3764344109315351685
+    second: ML_Walk_Knife_L_24
+  - first:
+      213: -3883063166358105176
+    second: ML_Walk_Knife_L_25
+  - first:
+      213: 6473954514478267557
+    second: ML_Walk_Knife_L_26
+  - first:
+      213: -1573885277914761682
+    second: ML_Walk_Knife_L_27
+  - first:
+      213: -4996244652798349669
+    second: ML_Walk_Knife_L_28
+  - first:
+      213: 3110096686624756224
+    second: ML_Walk_Knife_L_29
+  - first:
+      213: 6334393944925725198
+    second: ML_Walk_Knife_L_30
+  - first:
+      213: 4345471081802424687
+    second: ML_Walk_Knife_L_31
+  - first:
+      213: 78433853135493340
+    second: ML_Walk_Knife_L_32
+  - first:
+      213: 8827748750839085663
+    second: ML_Walk_Knife_L_33
+  - first:
+      213: -5267381905621642556
+    second: ML_Walk_Knife_L_34
+  - first:
+      213: 931821507952919453
+    second: ML_Walk_Knife_L_35
+  - first:
+      213: 4375648546355194030
+    second: ML_Walk_Knife_L_36
+  - first:
+      213: 7692859527646063426
+    second: ML_Walk_Knife_L_37
+  - first:
+      213: -8056768926460784491
+    second: ML_Walk_Knife_L_38
+  - first:
+      213: -4529334028750219615
+    second: ML_Walk_Knife_L_39
+  - first:
+      213: -4635146744968396842
+    second: ML_Walk_Knife_L_40
+  - first:
+      213: 3611497163722802263
+    second: ML_Walk_Knife_L_41
+  - first:
+      213: 8033497864925071171
+    second: ML_Walk_Knife_L_42
+  - first:
+      213: -5132068703373564233
+    second: ML_Walk_Knife_L_43
+  - first:
+      213: 7404779076148891915
+    second: ML_Walk_Knife_L_44
+  - first:
+      213: 3791950009280671900
+    second: ML_Walk_Knife_L_45
+  - first:
+      213: -3053197181135292617
+    second: ML_Walk_Knife_L_46
+  - first:
+      213: -5068462331962971277
+    second: ML_Walk_Knife_L_47
+  - first:
+      213: -5519885087911110254
+    second: ML_Walk_Knife_L_48
+  - first:
+      213: 2307384392368426323
+    second: ML_Walk_Knife_L_49
+  - first:
+      213: -3891441169518615285
+    second: ML_Walk_Knife_L_50
+  - first:
+      213: -786989635190761088
+    second: ML_Walk_Knife_L_51
+  - first:
+      213: 6865897304527784198
+    second: ML_Walk_Knife_L_52
+  - first:
+      213: 6794181792005637523
+    second: ML_Walk_Knife_L_53
+  - first:
+      213: 8180217303121138705
+    second: ML_Walk_Knife_L_54
+  - first:
+      213: 7635955416080361552
+    second: ML_Walk_Knife_L_55
+  - first:
+      213: 6459761787485185702
+    second: ML_Walk_Knife_L_56
+  - first:
+      213: 5632021280622506343
+    second: ML_Walk_Knife_L_57
+  - first:
+      213: -4857199162704803729
+    second: ML_Walk_Knife_L_58
+  - first:
+      213: 4973457909198701542
+    second: ML_Walk_Knife_L_59
+  - first:
+      213: -1440430573199728664
+    second: ML_Walk_Knife_L_60
+  - first:
+      213: 2903604698479010663
+    second: ML_Walk_Knife_L_61
+  - first:
+      213: 4781006974666979807
+    second: ML_Walk_Knife_L_62
+  - first:
+      213: 3994247434395951752
+    second: ML_Walk_Knife_L_63
+  - first:
+      213: -3530171651346567121
+    second: ML_Walk_Knife_L_64
+  - first:
+      213: -8852516892620700208
+    second: ML_Walk_Knife_L_65
+  - first:
+      213: 6113775892017705386
+    second: ML_Walk_Knife_L_66
+  - first:
+      213: -8247476780670133599
+    second: ML_Walk_Knife_L_67
+  - first:
+      213: -6935480694977417278
+    second: ML_Walk_Knife_L_68
+  - first:
+      213: 8604610565701108014
+    second: ML_Walk_Knife_L_69
+  - first:
+      213: -640419434464390968
+    second: ML_Walk_Knife_L_70
+  - first:
+      213: -7385930609115028420
+    second: ML_Walk_Knife_L_71
+  - first:
+      213: -2499716431888966229
+    second: ML_Walk_Knife_L_72
+  - first:
+      213: 4610524117941266501
+    second: ML_Walk_Knife_L_73
+  - first:
+      213: -1770912266744006077
+    second: ML_Walk_Knife_L_74
+  - first:
+      213: 3766882793189758508
+    second: ML_Walk_Knife_L_75
+  - first:
+      213: -8849222287996661528
+    second: ML_Walk_Knife_L_76
+  - first:
+      213: -6352129085716915131
+    second: ML_Walk_Knife_L_77
+  - first:
+      213: -5789943876547654398
+    second: ML_Walk_Knife_L_78
+  - first:
+      213: -6656955182561767127
+    second: ML_Walk_Knife_L_79
+  - first:
+      213: -926760685754519894
+    second: ML_Walk_Knife_L_80
+  - first:
+      213: 7632281843478950205
+    second: ML_Walk_Knife_L_81
+  - first:
+      213: -2084447134100015869
+    second: ML_Walk_Knife_L_82
+  - first:
+      213: 2682705945338563413
+    second: ML_Walk_Knife_L_83
+  - first:
+      213: -5643765614619159135
+    second: ML_Walk_Knife_L_84
+  - first:
+      213: -1643954219813572804
+    second: ML_Walk_Knife_L_85
+  - first:
+      213: -1349142304234579243
+    second: ML_Walk_Knife_L_86
+  - first:
+      213: 7776353010418502485
+    second: ML_Walk_Knife_L_87
+  - first:
+      213: 6211866564319675222
+    second: ML_Walk_Knife_L_88
+  - first:
+      213: 5594574316793249467
+    second: ML_Walk_Knife_L_89
+  - first:
+      213: -1515359564876795054
+    second: ML_Walk_Knife_L_90
+  - first:
+      213: 8587925999533954758
+    second: ML_Walk_Knife_L_91
+  - first:
+      213: -829084096381219104
+    second: ML_Walk_Knife_L_92
+  - first:
+      213: 1793506082202594780
+    second: ML_Walk_Knife_L_93
+  - first:
+      213: 4413403791151846409
+    second: ML_Walk_Knife_L_94
+  - first:
+      213: -7675727176341288539
+    second: ML_Walk_Knife_L_95
+  - first:
+      213: 5893969509811209555
+    second: ML_Walk_Knife_L_96
+  - first:
+      213: -8246588933759308951
+    second: ML_Walk_Knife_L_97
+  - first:
+      213: 6269315850350667326
+    second: ML_Walk_Knife_L_98
+  - first:
+      213: 7441356664273189966
+    second: ML_Walk_Knife_L_99
+  - first:
+      213: 6262921717670381049
+    second: ML_Walk_Knife_L_100
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 135
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 7532
+        width: 333
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1769d5a77a1bd60800000000000000
+      internalID: 7904282965009920484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_1
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 7532
+        width: 326
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2b7aedeae144520800000000000000
+      internalID: 2685305014228333299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_2
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 7530
+        width: 319
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e071d6602ce5f0750800000000000000
+      internalID: 6273336993374869262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_3
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 7530
+        width: 309
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ecf87f6aee16630800000000000000
+      internalID: 3918675551674420867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_4
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 7530
+        width: 303
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b4fd024dff13b90800000000000000
+      internalID: -7263743437422245109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_5
+      rect:
+        serializedVersion: 2
+        x: 1937
+        y: 7528
+        width: 294
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b28367b1d6348970800000000000000
+      internalID: 8756183849867903670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_6
+      rect:
+        serializedVersion: 2
+        x: 2292
+        y: 7528
+        width: 286
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b929daf672fb760800000000000000
+      internalID: 7475737267065232170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_7
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 7528
+        width: 284
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4381416adac8c4e0800000000000000
+      internalID: -1961094598436486324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_8
+      rect:
+        serializedVersion: 2
+        x: 2983
+        y: 7528
+        width: 283
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bacd0f92a92917270800000000000000
+      internalID: 8246533583518358699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_9
+      rect:
+        serializedVersion: 2
+        x: 3326
+        y: 7528
+        width: 283
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927e976ecad3961b0800000000000000
+      internalID: -5662927243631270103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_10
+      rect:
+        serializedVersion: 2
+        x: 3670
+        y: 7528
+        width: 282
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb55a026cf1a98b0800000000000000
+      internalID: -5144764688505676802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_11
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 6849
+        width: 283
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd59faa2e7ae7a4e0800000000000000
+      internalID: -1970348484348373539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_12
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 6849
+        width: 282
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 354e8dbb97a5e3bc0800000000000000
+      internalID: -3801501556565023661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_13
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 6851
+        width: 287
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09af228c6d6b9ad70800000000000000
+      internalID: 9054969559402085008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_14
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 6851
+        width: 292
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac3bd96a00b3fb9d0800000000000000
+      internalID: -2756419572946062390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_15
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 6853
+        width: 296
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8002b88a1d1ff80800000000000000
+      internalID: -8074442135079745308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_16
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 6853
+        width: 299
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c81444c84f8feb0800000000000000
+      internalID: -4685726529001255804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_17
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 6853
+        width: 304
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f7d068198b3a0b0800000000000000
+      internalID: -5718524166671597692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_18
+      rect:
+        serializedVersion: 2
+        x: 2515
+        y: 6853
+        width: 306
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda717ca52fe05f00800000000000000
+      internalID: 1103644853791718108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_19
+      rect:
+        serializedVersion: 2
+        x: 2882
+        y: 6853
+        width: 308
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cf2b5d5a8d688250800000000000000
+      internalID: 5947123748981911496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_20
+      rect:
+        serializedVersion: 2
+        x: 3251
+        y: 6851
+        width: 312
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f204b0cc50e9dd0800000000000000
+      internalID: -2477536371086971072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_21
+      rect:
+        serializedVersion: 2
+        x: 3623
+        y: 6851
+        width: 313
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2ead44509ef8f60800000000000000
+      internalID: 8038900068718928590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_22
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 6170
+        width: 314
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221bc0cda8d5f62b0800000000000000
+      internalID: -5589145761564806878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_23
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 6170
+        width: 315
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c438bf868ac6630800000000000000
+      internalID: 3921694544382610523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_24
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 6170
+        width: 315
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b9ce71afc52cbc0800000000000000
+      internalID: -3764344109315351685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_25
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 6170
+        width: 315
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a352d0af969c1ac0800000000000000
+      internalID: -3883063166358105176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_26
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 6170
+        width: 321
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac7387945b18d950800000000000000
+      internalID: 6473954514478267557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_27
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 6170
+        width: 327
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e267ca4bdaf682ae0800000000000000
+      internalID: -1573885277914761682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_28
+      rect:
+        serializedVersion: 2
+        x: 2318
+        y: 6170
+        width: 334
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e6203a5f5c9aab0800000000000000
+      internalID: -4996244652798349669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_29
+      rect:
+        serializedVersion: 2
+        x: 2713
+        y: 6170
+        width: 338
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002536f5578492b20800000000000000
+      internalID: 3110096686624756224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_30
+      rect:
+        serializedVersion: 2
+        x: 3111
+        y: 6172
+        width: 345
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02eeaa5bb948e750800000000000000
+      internalID: 6334393944925725198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_31
+      rect:
+        serializedVersion: 2
+        x: 3516
+        y: 6172
+        width: 351
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61e094fce63e4c30800000000000000
+      internalID: 4345471081802424687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_32
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 5493
+        width: 356
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd891828c27a61100800000000000000
+      internalID: 78433853135493340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_33
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 5495
+        width: 362
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a792ca7b6728a70800000000000000
+      internalID: 8827748750839085663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_34
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 5495
+        width: 369
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c21a1b801086e6b0800000000000000
+      internalID: -5267381905621642556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_35
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 5495
+        width: 373
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d934a9779be7eec00800000000000000
+      internalID: 931821507952919453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_36
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 5493
+        width: 361
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8a4737b2d69bc30800000000000000
+      internalID: 4375648546355194030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_37
+      rect:
+        serializedVersion: 2
+        x: 2168
+        y: 5493
+        width: 349
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ba25c5bf682ca60800000000000000
+      internalID: 7692859527646063426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_38
+      rect:
+        serializedVersion: 2
+        x: 2577
+        y: 5493
+        width: 337
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59056e4195b903090800000000000000
+      internalID: -8056768926460784491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_39
+      rect:
+        serializedVersion: 2
+        x: 2975
+        y: 5491
+        width: 324
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a61143c2b29421c0800000000000000
+      internalID: -4529334028750219615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_40
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 5491
+        width: 309
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfb950f796acafb0800000000000000
+      internalID: -4635146744968396842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_41
+      rect:
+        serializedVersion: 2
+        x: 3728
+        y: 5491
+        width: 297
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754470f298d9e1230800000000000000
+      internalID: 3611497163722802263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_42
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 4812
+        width: 289
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347c7beaeb7bc7f60800000000000000
+      internalID: 8033497864925071171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_43
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 4812
+        width: 289
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6e48484ba37c8b0800000000000000
+      internalID: -5132068703373564233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_44
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 4812
+        width: 286
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01991a665f03c660800000000000000
+      internalID: 7404779076148891915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_45
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 4812
+        width: 284
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90b63d5176bf9430800000000000000
+      internalID: 3791950009280671900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_46
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 4814
+        width: 282
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737f43d175dd0a5d0800000000000000
+      internalID: -3053197181135292617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_47
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 4814
+        width: 286
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b26e9ec5439a9b0800000000000000
+      internalID: -5068462331962971277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_48
+      rect:
+        serializedVersion: 2
+        x: 2129
+        y: 4814
+        width: 291
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299151612cd6563b0800000000000000
+      internalID: -5519885087911110254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_49
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 4816
+        width: 295
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d866b31e9750020800000000000000
+      internalID: 2307384392368426323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_50
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 4816
+        width: 299
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b052382cfd2def9c0800000000000000
+      internalID: -3891441169518615285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_51
+      rect:
+        serializedVersion: 2
+        x: 3195
+        y: 4816
+        width: 304
+        height: 614
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0895a80b81d0415f0800000000000000
+      internalID: -786989635190761088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_52
+      rect:
+        serializedVersion: 2
+        x: 3559
+        y: 4816
+        width: 307
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609c0bca831984f50800000000000000
+      internalID: 6865897304527784198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_53
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 4135
+        width: 308
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3954cebb758c94e50800000000000000
+      internalID: 6794181792005637523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_54
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 4135
+        width: 310
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1141a0aeb48f58170800000000000000
+      internalID: 8180217303121138705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_55
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 4135
+        width: 313
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058a0307efc58f960800000000000000
+      internalID: 7635955416080361552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_56
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 4133
+        width: 314
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a662b4de1fa5a950800000000000000
+      internalID: 6459761787485185702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_57
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 4133
+        width: 315
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761f1f6d385f82e40800000000000000
+      internalID: 5632021280622506343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_58
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 4133
+        width: 315
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68c7a79813c79cb0800000000000000
+      internalID: -4857199162704803729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_59
+      rect:
+        serializedVersion: 2
+        x: 2284
+        y: 4133
+        width: 316
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3452f2e95450540800000000000000
+      internalID: 4973457909198701542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_60
+      rect:
+        serializedVersion: 2
+        x: 2661
+        y: 4133
+        width: 324
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef51d08600920ce0800000000000000
+      internalID: -1440430573199728664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_61
+      rect:
+        serializedVersion: 2
+        x: 3046
+        y: 4133
+        width: 330
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7632ffcd61dab4820800000000000000
+      internalID: 2903604698479010663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_62
+      rect:
+        serializedVersion: 2
+        x: 3436
+        y: 4133
+        width: 337
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9b0b9338c895240800000000000000
+      internalID: 4781006974666979807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_63
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3454
+        width: 342
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882af2011ea6e6730800000000000000
+      internalID: 3994247434395951752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_64
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 3456
+        width: 349
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f207555369f420fc0800000000000000
+      internalID: -3530171651346567121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_65
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 3456
+        width: 355
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5c23fe9ca852580800000000000000
+      internalID: -8852516892620700208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_66
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 3456
+        width: 361
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1ff0818ce78d450800000000000000
+      internalID: 6113775892017705386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_67
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 3458
+        width: 368
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aadfd2a0931b8d80800000000000000
+      internalID: -8247476780670133599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_68
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 3458
+        width: 373
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfaa4dbd0930cf90800000000000000
+      internalID: -6935480694977417278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_69
+      rect:
+        serializedVersion: 2
+        x: 2555
+        y: 3458
+        width: 363
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21003768b7b96770800000000000000
+      internalID: 8604610565701108014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_70
+      rect:
+        serializedVersion: 2
+        x: 2978
+        y: 3456
+        width: 351
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c05e7ddae5cc17f0800000000000000
+      internalID: -640419434464390968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_71
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 3456
+        width: 340
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34a30c4e37ef7990800000000000000
+      internalID: -7385930609115028420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_72
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 2777
+        width: 329
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad1d0636293f4dd0800000000000000
+      internalID: -2499716431888966229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_73
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 2775
+        width: 318
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548a246f14fdbff30800000000000000
+      internalID: 4610524117941266501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_74
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 2775
+        width: 307
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a77541da47c67e0800000000000000
+      internalID: -1770912266744006077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_75
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 2775
+        width: 294
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c265b9e41f7a64430800000000000000
+      internalID: 3766882793189758508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_76
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 2775
+        width: 289
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e05d79d63f313580800000000000000
+      internalID: -8849222287996661528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_77
+      rect:
+        serializedVersion: 2
+        x: 1885
+        y: 2775
+        width: 288
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c9a666044b8d7a0800000000000000
+      internalID: -6352129085716915131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_78
+      rect:
+        serializedVersion: 2
+        x: 2234
+        y: 2775
+        width: 286
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dcde088bcf5afa0800000000000000
+      internalID: -5789943876547654398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_79
+      rect:
+        serializedVersion: 2
+        x: 2581
+        y: 2775
+        width: 286
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921d5b1188ebd93a0800000000000000
+      internalID: -6656955182561767127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_80
+      rect:
+        serializedVersion: 2
+        x: 2927
+        y: 2777
+        width: 289
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaeedc5011c7323f0800000000000000
+      internalID: -926760685754519894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_81
+      rect:
+        serializedVersion: 2
+        x: 3277
+        y: 2777
+        width: 294
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31f93a26ef4be960800000000000000
+      internalID: 7632281843478950205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_82
+      rect:
+        serializedVersion: 2
+        x: 3633
+        y: 2777
+        width: 297
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30533ea106e8213e0800000000000000
+      internalID: -2084447134100015869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_83
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2100
+        width: 300
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bcbbcf7d2ea3520800000000000000
+      internalID: 2682705945338563413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_84
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 2100
+        width: 303
+        height: 614
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a59f0153115da1b0800000000000000
+      internalID: -5643765614619159135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_85
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 2100
+        width: 307
+        height: 614
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fe10dd8508f29e0800000000000000
+      internalID: -1643954219813572804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_86
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 2100
+        width: 308
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da55ace832e64de0800000000000000
+      internalID: -1349142304234579243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_87
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 2098
+        width: 309
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bc802bcd72beb60800000000000000
+      internalID: 7776353010418502485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_88
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 2098
+        width: 310
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65386667abbf43650800000000000000
+      internalID: 6211866564319675222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_89
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 2098
+        width: 311
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe3cf523bbe3ad40800000000000000
+      internalID: 5594574316793249467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_90
+      rect:
+        serializedVersion: 2
+        x: 2617
+        y: 2096
+        width: 312
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2533784218c58fae0800000000000000
+      internalID: -1515359564876795054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_91
+      rect:
+        serializedVersion: 2
+        x: 2989
+        y: 2096
+        width: 311
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6109f12317e2770800000000000000
+      internalID: 8587925999533954758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_92
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 2096
+        width: 311
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee854238608e74f0800000000000000
+      internalID: -829084096381219104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_93
+      rect:
+        serializedVersion: 2
+        x: 3731
+        y: 2096
+        width: 311
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd20348740d3e810800000000000000
+      internalID: 1793506082202594780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_94
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1417
+        width: 310
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904d7f56d5f8f3d30800000000000000
+      internalID: 4413403791151846409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_95
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1417
+        width: 314
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a98d550dc65a7590800000000000000
+      internalID: -7675727176341288539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_96
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 1417
+        width: 317
+        height: 618
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355c745aa069bc150800000000000000
+      internalID: 5893969509811209555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_97
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1419
+        width: 321
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96beb9a9e0b3e8d80800000000000000
+      internalID: -8246588933759308951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_98
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 1419
+        width: 327
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36a0e4bc85110750800000000000000
+      internalID: 6269315850350667326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_99
+      rect:
+        serializedVersion: 2
+        x: 1937
+        y: 1419
+        width: 330
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c3dfcc572054760800000000000000
+      internalID: 7441356664273189966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Knife_L_100
+      rect:
+        serializedVersion: 2
+        x: 2327
+        y: 1421
+        width: 333
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f582ddae1e5ae650800000000000000
+      internalID: 6262921717670381049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 45b52e4016ca71246bceb9d2133f1bba
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

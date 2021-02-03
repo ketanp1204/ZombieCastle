@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: accd3ce982ae11a4e9416f89d9a03ec3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1608025341795848389
+    second: MT_Idle_Walk_Knife_L_0
+  - first:
+      213: 8750825736897206834
+    second: MT_Idle_Walk_Knife_L_1
+  - first:
+      213: 115728891610708829
+    second: MT_Idle_Walk_Knife_L_2
+  - first:
+      213: 8589146985006667759
+    second: MT_Idle_Walk_Knife_L_3
+  - first:
+      213: -1478353851006973711
+    second: MT_Idle_Walk_Knife_L_4
+  - first:
+      213: -3237441145287465179
+    second: MT_Idle_Walk_Knife_L_5
+  - first:
+      213: -5940602648673224774
+    second: MT_Idle_Walk_Knife_L_6
+  - first:
+      213: 2103261284925553841
+    second: MT_Idle_Walk_Knife_L_7
+  - first:
+      213: -5767802028762054198
+    second: MT_Idle_Walk_Knife_L_8
+  - first:
+      213: -7226063176846891274
+    second: MT_Idle_Walk_Knife_L_9
+  - first:
+      213: 7092507843647024975
+    second: MT_Idle_Walk_Knife_L_10
+  - first:
+      213: 2142861103775581142
+    second: MT_Idle_Walk_Knife_L_11
+  - first:
+      213: -9148057199344238112
+    second: MT_Idle_Walk_Knife_L_12
+  - first:
+      213: 8423980939912877060
+    second: MLT_Idle_Walk_Knife_L_0
+  - first:
+      213: 1762640785408801622
+    second: MLT_Idle_Walk_Knife_L_1
+  - first:
+      213: 6530897019088514622
+    second: MLT_Idle_Walk_Knife_L_2
+  - first:
+      213: 4818075872462650572
+    second: MLT_Idle_Walk_Knife_L_3
+  - first:
+      213: 6658480984906936556
+    second: MLT_Idle_Walk_Knife_L_4
+  - first:
+      213: 7471030819599530596
+    second: MLT_Idle_Walk_Knife_L_5
+  - first:
+      213: -4325415191999179128
+    second: MLT_Idle_Walk_Knife_L_6
+  - first:
+      213: -5910176829274525210
+    second: MLT_Idle_Walk_Knife_L_7
+  - first:
+      213: 697266141171871855
+    second: MLT_Idle_Walk_Knife_L_8
+  - first:
+      213: 7737225879285516472
+    second: MLT_Idle_Walk_Knife_L_9
+  - first:
+      213: 5060124090580785316
+    second: MLT_Idle_Walk_Knife_L_10
+  - first:
+      213: 5119849613281612601
+    second: MLT_Idle_Walk_Knife_L_11
+  - first:
+      213: -8479272495044137423
+    second: MLT_Idle_Walk_Knife_L_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 135
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_Knife_L_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1386
+        width: 287
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4041b2e580ef7e470800000000000000
+      internalID: 8423980939912877060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_Knife_L_1
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1386
+        width: 289
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b38e89478267810800000000000000
+      internalID: 1762640785408801622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_Knife_L_2
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 1386
+        width: 291
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ead679c3862aa50800000000000000
+      internalID: 6530897019088514622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_Knife_L_3
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 1388
+        width: 292
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc340f8a7e3dd240800000000000000
+      internalID: 4818075872462650572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_Knife_L_4
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1388
+        width: 294
+        height: 614
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce032197d2da76c50800000000000000
+      internalID: 6658480984906936556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_Knife_L_5
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 1388
+        width: 294
+        height: 614
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ab93c72fe6ea760800000000000000
+      internalID: 7471030819599530596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_Knife_L_6
+      rect:
+        serializedVersion: 2
+        x: 2155
+        y: 1390
+        width: 295
+        height: 613
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8869fc6ccc909f3c0800000000000000
+      internalID: -4325415191999179128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_Knife_L_7
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 1390
+        width: 296
+        height: 612
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1f85bbc75dafda0800000000000000
+      internalID: -5910176829274525210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_Knife_L_8
+      rect:
+        serializedVersion: 2
+        x: 2869
+        y: 1390
+        width: 297
+        height: 611
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60f4727cdf2da900800000000000000
+      internalID: 697266141171871855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_Knife_L_9
+      rect:
+        serializedVersion: 2
+        x: 3226
+        y: 1392
+        width: 301
+        height: 611
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8c5c191f5206b60800000000000000
+      internalID: 7737225879285516472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_Knife_L_10
+      rect:
+        serializedVersion: 2
+        x: 3587
+        y: 1392
+        width: 309
+        height: 610
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8d67afc0c293640800000000000000
+      internalID: 5060124090580785316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_Knife_L_11
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 715
+        width: 316
+        height: 610
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933521fd81c5d0740800000000000000
+      internalID: 5119849613281612601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_Knife_L_12
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 715
+        width: 322
+        height: 610
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e67234792935a80800000000000000
+      internalID: -8479272495044137423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7fd88dee48696e24d999c51cc08b107c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

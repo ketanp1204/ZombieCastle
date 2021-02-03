@@ -1,0 +1,1450 @@
+fileFormatVersion: 2
+guid: 35ec8b5d58256de40a3f5bb0e18c3312
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2602531190104613893
+    second: attack left_0
+  - first:
+      213: 8054644970997688265
+    second: attack left_1
+  - first:
+      213: -2599513538113612278
+    second: attack left_2
+  - first:
+      213: 9216833308982195821
+    second: attack left_3
+  - first:
+      213: 8676508743221148364
+    second: attack left_4
+  - first:
+      213: 7885043933392267276
+    second: attack left_5
+  - first:
+      213: -4771186623644644587
+    second: attack left_6
+  - first:
+      213: -2380075866247490210
+    second: attack left_7
+  - first:
+      213: -7832803836666912615
+    second: attack left_8
+  - first:
+      213: -8663503071131135913
+    second: attack left_9
+  - first:
+      213: -8628067525347226743
+    second: attack left_10
+  - first:
+      213: 7786888413413907933
+    second: attack left_11
+  - first:
+      213: -4735291461863727734
+    second: attack left_12
+  - first:
+      213: -5360420645313260713
+    second: attack left_13
+  - first:
+      213: -7936913795207954450
+    second: attack left_14
+  - first:
+      213: -6910236794714551436
+    second: attack left_15
+  - first:
+      213: -3533363713613538784
+    second: attack left_16
+  - first:
+      213: -8785679570881141370
+    second: attack left_17
+  - first:
+      213: -4247516472795163551
+    second: attack left_18
+  - first:
+      213: -3900663764235244330
+    second: attack left_19
+  - first:
+      213: -1026809465742493425
+    second: attack left_20
+  - first:
+      213: 2129793820448785160
+    second: attack left_21
+  - first:
+      213: 4077569461155382349
+    second: attack left_22
+  - first:
+      213: 1697909062122497772
+    second: attack left_23
+  - first:
+      213: 3819961462151397981
+    second: attack left_24
+  - first:
+      213: -3844495466834890731
+    second: attack left_25
+  - first:
+      213: -7812353586383165388
+    second: attack left_26
+  - first:
+      213: -8642255140661905354
+    second: attack left_27
+  - first:
+      213: -6342306036345316227
+    second: attack left_28
+  - first:
+      213: 6549917738394836338
+    second: attack left_29
+  - first:
+      213: -2374365376600953179
+    second: attack left_30
+  - first:
+      213: 1974673175440603289
+    second: attack left_31
+  - first:
+      213: -5580739681418655861
+    second: attack left_32
+  - first:
+      213: -4533622726939196714
+    second: attack left_33
+  - first:
+      213: 895403574643206612
+    second: attack left_34
+  - first:
+      213: 5707639503551599152
+    second: attack left_35
+  - first:
+      213: -2841701261476606205
+    second: attack left_36
+  - first:
+      213: 5973996965937341546
+    second: attack left_37
+  - first:
+      213: 336435069106672212
+    second: attack left_38
+  - first:
+      213: -4078688227759512471
+    second: attack left_39
+  - first:
+      213: -8730126812632404440
+    second: attack left_0
+  - first:
+      213: -372256981290633752
+    second: attack left_1
+  - first:
+      213: -307649764291485697
+    second: attack left_2
+  - first:
+      213: -6677319309119827460
+    second: attack left_3
+  - first:
+      213: 8194334194797656275
+    second: attack left_4
+  - first:
+      213: 2334088940812938408
+    second: attack left_5
+  - first:
+      213: -2765475658368676209
+    second: attack left_6
+  - first:
+      213: -4588977374967533076
+    second: attack left_7
+  - first:
+      213: 3747057554361432697
+    second: attack left_8
+  - first:
+      213: -3863139443326677153
+    second: attack left_9
+  - first:
+      213: 977337064074206767
+    second: attack left_10
+  - first:
+      213: 7172311620030937856
+    second: attack left_11
+  - first:
+      213: -4200970219336970268
+    second: attack left_12
+  - first:
+      213: 2011202485421980071
+    second: attack left_13
+  - first:
+      213: 4907694695396744542
+    second: attack left_14
+  - first:
+      213: 4489719852724223765
+    second: attack left_15
+  - first:
+      213: -8667244808032660860
+    second: attack left_16
+  - first:
+      213: -8517140486503810097
+    second: attack left_17
+  - first:
+      213: -1483012688846748872
+    second: attack left_18
+  - first:
+      213: 3438111764711474894
+    second: attack left_19
+  - first:
+      213: -4684362178462383637
+    second: attack left_20
+  - first:
+      213: -4475726998978835039
+    second: attack left_21
+  - first:
+      213: 6712842067148080242
+    second: attack left_22
+  - first:
+      213: 2323199380199474008
+    second: attack left_23
+  - first:
+      213: -5896742799653916014
+    second: attack left_24
+  - first:
+      213: 4091680425901153266
+    second: attack left_25
+  - first:
+      213: 4967284166290166055
+    second: attack left_26
+  - first:
+      213: 7646956111490860632
+    second: attack left_27
+  - first:
+      213: -4688852393166460199
+    second: attack left_28
+  - first:
+      213: 8724352128168343529
+    second: attack left_29
+  - first:
+      213: 3188375328328312839
+    second: attack left_30
+  - first:
+      213: 9189488112568859352
+    second: attack left_31
+  - first:
+      213: -4368337778247087102
+    second: attack left_32
+  - first:
+      213: 2922489128057295183
+    second: attack left_33
+  - first:
+      213: -4937231944476371743
+    second: attack left_34
+  - first:
+      213: 5450162175451281950
+    second: attack left_35
+  - first:
+      213: -2795338890230228710
+    second: attack left_36
+  - first:
+      213: 1244475822332699625
+    second: attack left_37
+  - first:
+      213: -2449210629547614170
+    second: attack left_38
+  - first:
+      213: 3258316358953012746
+    second: attack left_39
+  - first:
+      213: -7554234666483050304
+    second: Attack_L_0
+  - first:
+      213: -629368301248031326
+    second: Attack_L_1
+  - first:
+      213: -9223330752386418260
+    second: Attack_L_2
+  - first:
+      213: -2861714768847609729
+    second: Attack_L_3
+  - first:
+      213: -5260063509324262029
+    second: Attack_L_4
+  - first:
+      213: -630535383182892556
+    second: Attack_L_5
+  - first:
+      213: -6026471678323583847
+    second: Attack_L_6
+  - first:
+      213: -6485305417967598482
+    second: Attack_L_7
+  - first:
+      213: -8584584087273065900
+    second: Attack_L_8
+  - first:
+      213: 2320846259283356740
+    second: Attack_L_9
+  - first:
+      213: 5799817972855961022
+    second: Attack_L_10
+  - first:
+      213: -7175257925338397526
+    second: Attack_L_11
+  - first:
+      213: -419909612437778875
+    second: Attack_L_12
+  - first:
+      213: -4862113408969868289
+    second: Attack_L_13
+  - first:
+      213: -2455161855585722255
+    second: Attack_L_14
+  - first:
+      213: -184147929426987710
+    second: Attack_L_15
+  - first:
+      213: 3795842231679301685
+    second: Attack_L_16
+  - first:
+      213: 9132976748747339007
+    second: Attack_L_17
+  - first:
+      213: 5983554552763309327
+    second: Attack_L_18
+  - first:
+      213: -3120783679657528196
+    second: Attack_L_19
+  - first:
+      213: -8381735085058213296
+    second: Attack_L_20
+  - first:
+      213: -3737407109985412292
+    second: Attack_L_21
+  - first:
+      213: -3481950238036780100
+    second: Attack_L_22
+  - first:
+      213: -9016376932664243708
+    second: Attack_L_23
+  - first:
+      213: -7953031141095234376
+    second: Attack_L_24
+  - first:
+      213: -8149180153520458156
+    second: Attack_L_25
+  - first:
+      213: 1615722979781959606
+    second: Attack_L_26
+  - first:
+      213: -7046604501816029751
+    second: Attack_L_27
+  - first:
+      213: 3553503234376669290
+    second: Attack_L_28
+  - first:
+      213: -6302457005680395601
+    second: Attack_L_29
+  - first:
+      213: 924780448756633099
+    second: Attack_L_30
+  - first:
+      213: -2687082302611609311
+    second: Attack_L_31
+  - first:
+      213: -1107643157851477706
+    second: Attack_L_32
+  - first:
+      213: -5303362066367218059
+    second: Attack_L_33
+  - first:
+      213: 6575032804402664171
+    second: Attack_L_34
+  - first:
+      213: 7440552732860830022
+    second: Attack_L_35
+  - first:
+      213: 2340046065322220580
+    second: Attack_L_36
+  - first:
+      213: 2197084616176518896
+    second: Attack_L_37
+  - first:
+      213: 7642719394499429587
+    second: Attack_L_38
+  - first:
+      213: -1103494697098090933
+    second: Attack_L_39
+  - first:
+      213: -4599795544570981373
+    second: ML_Attack_L_0
+  - first:
+      213: -8641365387171770957
+    second: ML_Attack_L_1
+  - first:
+      213: 2583673415222522163
+    second: ML_Attack_L_2
+  - first:
+      213: 6615106975046060237
+    second: ML_Attack_L_3
+  - first:
+      213: -3762562457414536935
+    second: ML_Attack_L_4
+  - first:
+      213: 451620365003434257
+    second: ML_Attack_L_5
+  - first:
+      213: 221041697271743432
+    second: ML_Attack_L_6
+  - first:
+      213: 5313019724635273056
+    second: ML_Attack_L_7
+  - first:
+      213: 5301608333901399406
+    second: ML_Attack_L_8
+  - first:
+      213: 2905429406621262254
+    second: ML_Attack_L_9
+  - first:
+      213: -5517535024834603283
+    second: ML_Attack_L_10
+  - first:
+      213: 5376701470479267591
+    second: ML_Attack_L_11
+  - first:
+      213: 1398442607350151675
+    second: ML_Attack_L_12
+  - first:
+      213: -487325534867867136
+    second: ML_Attack_L_13
+  - first:
+      213: -1469606596559451068
+    second: ML_Attack_L_14
+  - first:
+      213: 5260806713274039616
+    second: ML_Attack_L_15
+  - first:
+      213: 1499180279832112453
+    second: ML_Attack_L_16
+  - first:
+      213: 3990515398050366030
+    second: ML_Attack_L_17
+  - first:
+      213: -2588886938214089015
+    second: ML_Attack_L_18
+  - first:
+      213: -6088236398825716746
+    second: ML_Attack_L_19
+  - first:
+      213: -8391838441867433030
+    second: ML_Attack_L_20
+  - first:
+      213: -2515615957669519886
+    second: ML_Attack_L_21
+  - first:
+      213: 7313948137968988735
+    second: ML_Attack_L_22
+  - first:
+      213: 5141740778077059478
+    second: ML_Attack_L_23
+  - first:
+      213: 1919793551768159870
+    second: ML_Attack_L_24
+  - first:
+      213: -7781142684612204714
+    second: ML_Attack_L_25
+  - first:
+      213: -6912087376227106014
+    second: ML_Attack_L_26
+  - first:
+      213: 8038117364793354251
+    second: ML_Attack_L_27
+  - first:
+      213: 6999351507035255583
+    second: ML_Attack_L_28
+  - first:
+      213: 3500855975992780155
+    second: ML_Attack_L_29
+  - first:
+      213: -8404964113777223344
+    second: ML_Attack_L_30
+  - first:
+      213: -347206974801337352
+    second: ML_Attack_L_31
+  - first:
+      213: 5386148201983392387
+    second: ML_Attack_L_32
+  - first:
+      213: -2592136293274283193
+    second: ML_Attack_L_33
+  - first:
+      213: -5539150528967467043
+    second: ML_Attack_L_34
+  - first:
+      213: 6398807337349304014
+    second: ML_Attack_L_35
+  - first:
+      213: -5567346489152892047
+    second: ML_Attack_L_36
+  - first:
+      213: 6987140762376330432
+    second: ML_Attack_L_37
+  - first:
+      213: 3112413262108031379
+    second: ML_Attack_L_38
+  - first:
+      213: -3249890047816201040
+    second: ML_Attack_L_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 135
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ML_Attack_L_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 3415
+        width: 291
+        height: 614
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3041c6ea25e3a20c0800000000000000
+      internalID: -4599795544570981373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_1
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 3415
+        width: 305
+        height: 614
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd454bd6f3b31880800000000000000
+      internalID: -8641365387171770957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_2
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 3415
+        width: 319
+        height: 614
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33175f1484d0bd320800000000000000
+      internalID: 2583673415222522163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_3
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 3415
+        width: 332
+        height: 614
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc844d6deb49dcb50800000000000000
+      internalID: 6615106975046060237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_4
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 3417
+        width: 343
+        height: 613
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911f5904161b8cbc0800000000000000
+      internalID: -3762562457414536935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_5
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 3417
+        width: 352
+        height: 613
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119ac55445a744600800000000000000
+      internalID: 451620365003434257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_6
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 3417
+        width: 356
+        height: 612
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c38e66a04c411300800000000000000
+      internalID: 221041697271743432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_7
+      rect:
+        serializedVersion: 2
+        x: 3014
+        y: 3417
+        width: 356
+        height: 612
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067778b3a43abb940800000000000000
+      internalID: 5313019724635273056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_8
+      rect:
+        serializedVersion: 2
+        x: 3463
+        y: 3417
+        width: 352
+        height: 612
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e658178c0b8139940800000000000000
+      internalID: 5301608333901399406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_9
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 2710
+        width: 342
+        height: 612
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea162a5d6a8225820800000000000000
+      internalID: 2905429406621262254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_10
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 2710
+        width: 332
+        height: 612
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de615f8c027cd63b0800000000000000
+      internalID: -5517535024834603283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_11
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 2710
+        width: 335
+        height: 611
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707bc3b1081ed9a40800000000000000
+      internalID: 5376701470479267591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_12
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 2706
+        width: 339
+        height: 616
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf970e16424486310800000000000000
+      internalID: 1398442607350151675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_13
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 2690
+        width: 340
+        height: 633
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00a393c020cac39f0800000000000000
+      internalID: -487325534867867136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_14
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 2678
+        width: 336
+        height: 645
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44cc0843698ea9be0800000000000000
+      internalID: -1469606596559451068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_15
+      rect:
+        serializedVersion: 2
+        x: 2649
+        y: 2672
+        width: 326
+        height: 651
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d70b035d3220940800000000000000
+      internalID: 5260806713274039616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_16
+      rect:
+        serializedVersion: 2
+        x: 3068
+        y: 2672
+        width: 312
+        height: 651
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54de9a185882ec410800000000000000
+      internalID: 1499180279832112453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_17
+      rect:
+        serializedVersion: 2
+        x: 3472
+        y: 2678
+        width: 293
+        height: 644
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42c483ac98216730800000000000000
+      internalID: 3990515398050366030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_18
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1949
+        width: 272
+        height: 630
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ceb914db0d621cd0800000000000000
+      internalID: -2588886938214089015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_19
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 1959
+        width: 267
+        height: 621
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3c36b804d328ba0800000000000000
+      internalID: -6088236398825716746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_20
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 1953
+        width: 260
+        height: 627
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb260426633a8b80800000000000000
+      internalID: -8391838441867433030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_21
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 1945
+        width: 286
+        height: 634
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fdddc36d9cb61dd0800000000000000
+      internalID: -2515615957669519886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_22
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 1929
+        width: 334
+        height: 650
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32754d941d508560800000000000000
+      internalID: 7313948137968988735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_23
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1951
+        width: 358
+        height: 628
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6997c6cdef12b5740800000000000000
+      internalID: 5141740778077059478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_24
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1969
+        width: 381
+        height: 609
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e760a37501a74aa10800000000000000
+      internalID: 1919793551768159870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_25
+      rect:
+        serializedVersion: 2
+        x: 2874
+        y: 1969
+        width: 422
+        height: 609
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6576f0164f3d30490800000000000000
+      internalID: -7781142684612204714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_26
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 1969
+        width: 399
+        height: 609
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223858337255310a0800000000000000
+      internalID: -6912087376227106014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_27
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1228
+        width: 340
+        height: 609
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08286fc7212d8f60800000000000000
+      internalID: 8038117364793354251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_28
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1228
+        width: 333
+        height: 609
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f137eea8c11b22160800000000000000
+      internalID: 6999351507035255583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_29
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1226
+        width: 327
+        height: 609
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b756ada36f9859030800000000000000
+      internalID: 3500855975992780155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_30
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 1226
+        width: 321
+        height: 610
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05917608ba19b5b80800000000000000
+      internalID: -8404964113777223344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_31
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1226
+        width: 316
+        height: 611
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3ad6398197e2bf0800000000000000
+      internalID: -347206974801337352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_32
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 1226
+        width: 311
+        height: 611
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a34dea0417fba40800000000000000
+      internalID: 5386148201983392387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_33
+      rect:
+        serializedVersion: 2
+        x: 2571
+        y: 1224
+        width: 306
+        height: 611
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7431df566c1e60cd0800000000000000
+      internalID: -2592136293274283193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_34
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 1224
+        width: 302
+        height: 612
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf1a7b01fbf023b0800000000000000
+      internalID: -5539150528967467043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_35
+      rect:
+        serializedVersion: 2
+        x: 3365
+        y: 1224
+        width: 298
+        height: 612
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece4ed8fe512dc850800000000000000
+      internalID: 6398807337349304014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_36
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 519
+        width: 294
+        height: 612
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173168c7ddfccb2b0800000000000000
+      internalID: -5567346489152892047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_37
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 519
+        width: 289
+        height: 613
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ccd711018f47f060800000000000000
+      internalID: 6987140762376330432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_38
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 517
+        width: 286
+        height: 613
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399f9222f53813b20800000000000000
+      internalID: 3112413262108031379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Attack_L_39
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 517
+        width: 283
+        height: 613
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc86dc583216e2d0800000000000000
+      internalID: -3249890047816201040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

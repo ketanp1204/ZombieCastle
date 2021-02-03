@@ -24,12 +24,13 @@ public class Player : MonoBehaviour
     // Public Cached References
     public Transform pathfindingTarget;             // Reference to the player's pathfinding target
 
-
     // Variables : Player
     [HideInInspector]
     public bool movePlayer;                         // Bool to store whether Player can move
     [HideInInspector]
-    public bool weaponDrawn;                        // Bool to store whether weapon is drawn
+    public bool axeDrawn;                           // Bool to store whether axe is drawn
+    [HideInInspector]
+    public bool knifeDrawn;                           // Bool to store whether knife is drawn
     [HideInInspector]
     public bool IsDead = false;                     // Bool to store if player dies
     private bool facingRight;                       // Player's direction of facing
@@ -59,6 +60,9 @@ public class Player : MonoBehaviour
 
         // Ignore player collisions with dead zombies
         Physics2D.IgnoreLayerCollision(gameObject.layer, 13);
+
+        // Ignore player collision with maze collider
+        Physics2D.IgnoreLayerCollision(gameObject.layer, 14);
     }
 
     void OnEnable()
@@ -81,7 +85,9 @@ public class Player : MonoBehaviour
         facingRight = true;
         movePlayer = true;
         takingDamage = false;
-        weaponDrawn = true;             // FOR TESTING. CHANGE LATER.
+        axeDrawn = false;             
+        knifeDrawn = true;
+        animator.SetBool("KnifeDrawn", true);       // FOR TESTING, CHANGE LATER.
         movementSpeed = walkSpeed;
         animator.SetFloat("FaceDir", 1f);
 
@@ -121,7 +127,6 @@ public class Player : MonoBehaviour
     private void HandleMovement()
     {
         float horizontal, vertical;
-
         horizontal = playerInput.horizontalInput;
         bool walkFast = playerInput.walkFastInput;
 
@@ -136,7 +141,7 @@ public class Player : MonoBehaviour
 
         movement.Normalize();
 
-        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
             if (!takingDamage)
             {
@@ -190,33 +195,24 @@ public class Player : MonoBehaviour
 
     private void HandleAttacks()
     {
-        if(weaponDrawn)
+        if(axeDrawn)
         {
-            if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
+            if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
             {
                 playerCombat.InvokeAxeAttack();
-                animator.SetTrigger("Attack1");
+                animator.SetTrigger("AxeAttack");
                 rb.velocity = Vector2.zero;
             }
+        }
 
-            if (playerInput.attack2Pressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
+        if (knifeDrawn)
+        {
+            if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
             {
                 playerCombat.InvokeKnifeAttack();
-                animator.SetTrigger("Attack2");
+                animator.SetTrigger("KnifeAttack");
                 rb.velocity = Vector2.zero;
             }
-
-            /*
-            if (playerInput.attack1Released && this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
-            {
-                animator.SetBool("Attack1", false);
-            }
-
-            if (playerInput.attack2Released && this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
-            {
-                animator.SetBool("Attack2", false);
-            }
-            */
         }
     }
 
@@ -230,16 +226,50 @@ public class Player : MonoBehaviour
         return instance.facingRight;
     }
 
-    // Sets the WeaponDrawn animation parameter to true
-    public static void DrawWeapon()
+    public static void StopMovement()
     {
-        instance.animator.SetBool("WeaponDrawn", true);
+        instance.movePlayer = false;
     }
 
-    // Sets the WeaponDrawn animation parameter to false
-    public static void RemoveWeapon()
+    public static void EnableMovement()
     {
-        instance.animator.SetBool("WeaponDrawn", false);
+        instance.movePlayer = true;
+    }
+
+    // Sets the AxeDrawn animation parameter to true
+    public static void EquipAxe()
+    {
+        instance.axeDrawn = true;
+        instance.animator.SetBool("AxeDrawn", true);
+
+        // Set other weapon bools to false
+        instance.knifeDrawn = false;
+        instance.animator.SetBool("KnifeDrawn", false);
+    }
+
+    // Sets the AxeDrawn animation parameter to false
+    public static void UnequipAxe()
+    {
+        instance.axeDrawn = false;
+        instance.animator.SetBool("AxeDrawn", false);
+    }
+
+    // Sets the KnifeDrawn animation parameter to true
+    public static void EquipKnife()
+    {
+        instance.knifeDrawn = true;
+        instance.animator.SetBool("KnifeDrawn", true);
+
+        // Set other weapon bools to false
+        instance.axeDrawn = false;
+        instance.animator.SetBool("AxeDrawn", false);
+    }
+
+    // Sets the KnifeDrawn animation parameter to false
+    public static void UnequipKnife()
+    {
+        instance.knifeDrawn = false;
+        instance.animator.SetBool("KnifeDrawn", false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

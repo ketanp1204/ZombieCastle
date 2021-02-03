@@ -1,0 +1,3187 @@
+fileFormatVersion: 2
+guid: 868290c183a062446aec1f75c71bec6f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1913877386760811811
+    second: walk right with weapon_0
+  - first:
+      213: -4480419468393816092
+    second: walk right with weapon_1
+  - first:
+      213: 5938525716792316265
+    second: walk right with weapon_2
+  - first:
+      213: 6327214966543911566
+    second: walk right with weapon_3
+  - first:
+      213: 8230450924457946486
+    second: walk right with weapon_4
+  - first:
+      213: 2121144874155992584
+    second: walk right with weapon_5
+  - first:
+      213: 5923629182005094678
+    second: walk right with weapon_6
+  - first:
+      213: 1807029154045806613
+    second: walk right with weapon_7
+  - first:
+      213: -291420242885470441
+    second: walk right with weapon_8
+  - first:
+      213: -1024803317243294121
+    second: walk right with weapon_9
+  - first:
+      213: 7359544641299528145
+    second: walk right with weapon_10
+  - first:
+      213: 2870825985988866131
+    second: walk right with weapon_1
+  - first:
+      213: -3946157093796241984
+    second: walk right with weapon_12
+  - first:
+      213: 2836489884867070589
+    second: walk right with weapon_13
+  - first:
+      213: 859364916950694533
+    second: walk right with weapon_14
+  - first:
+      213: 2347366898173521500
+    second: walk right with weapon_15
+  - first:
+      213: 3860558111522919574
+    second: walk right with weapon_16
+  - first:
+      213: 3203363860303887004
+    second: walk right with weapon_17
+  - first:
+      213: 8178549691608977974
+    second: walk right with weapon_18
+  - first:
+      213: 125749504881772114
+    second: walk right with weapon_19
+  - first:
+      213: -6152818575655387988
+    second: walk right with weapon_20
+  - first:
+      213: 8275016786987804214
+    second: walk right with weapon_21
+  - first:
+      213: 2603840974321804880
+    second: walk right with weapon_22
+  - first:
+      213: -9147079327343693600
+    second: walk right with weapon_23
+  - first:
+      213: 1851557854139827476
+    second: walk right with weapon_24
+  - first:
+      213: 4753748315955987079
+    second: walk right with weapon_25
+  - first:
+      213: -3551920206582918798
+    second: walk right with weapon_26
+  - first:
+      213: -7664673520128413740
+    second: walk right with weapon_27
+  - first:
+      213: 3812642618912524735
+    second: walk right with weapon_28
+  - first:
+      213: 6751785188040553860
+    second: walk right with weapon_29
+  - first:
+      213: -2717582846815359032
+    second: walk right with weapon_30
+  - first:
+      213: 6889582496500034654
+    second: walk right with weapon_31
+  - first:
+      213: -943502912611785275
+    second: walk right with weapon_32
+  - first:
+      213: -903883698848095701
+    second: walk right with weapon_33
+  - first:
+      213: -861980272054716992
+    second: walk right with weapon_34
+  - first:
+      213: 6650318524333174218
+    second: walk right with weapon_35
+  - first:
+      213: 2510444407278041256
+    second: walk right with weapon_36
+  - first:
+      213: 3733854889695571753
+    second: walk right with weapon_37
+  - first:
+      213: -7910716059280100739
+    second: walk right with weapon_38
+  - first:
+      213: -140321082395635435
+    second: walk right with weapon_39
+  - first:
+      213: 6621177681083314022
+    second: walk right with weapon_40
+  - first:
+      213: -1071518675596383302
+    second: walk right with weapon_41
+  - first:
+      213: 3696467378037150098
+    second: walk right with weapon_42
+  - first:
+      213: -4104117487093894089
+    second: walk right with weapon_43
+  - first:
+      213: -1186436104139443685
+    second: walk right with weapon_44
+  - first:
+      213: -957158977817479870
+    second: walk right with weapon_35
+  - first:
+      213: -7754172088232782255
+    second: walk right with weapon_46
+  - first:
+      213: 4039005860187355992
+    second: walk right with weapon_47
+  - first:
+      213: -9018028038624335160
+    second: walk right with weapon_48
+  - first:
+      213: -2737912375667730475
+    second: walk right with weapon_49
+  - first:
+      213: -2400029945732315713
+    second: walk right with weapon_50
+  - first:
+      213: -7697947641541644212
+    second: walk right with weapon_51
+  - first:
+      213: -7975482462469778622
+    second: walk right with weapon_52
+  - first:
+      213: -3109577099443549077
+    second: walk right with weapon_53
+  - first:
+      213: 8465883799243849985
+    second: walk right with weapon_54
+  - first:
+      213: 179298449424802875
+    second: walk right with weapon_55
+  - first:
+      213: -5955401201219793551
+    second: walk right with weapon_56
+  - first:
+      213: -3895440363976448108
+    second: walk right with weapon_57
+  - first:
+      213: -3799260743819397662
+    second: walk right with weapon_58
+  - first:
+      213: -8166893633135148683
+    second: walk right with weapon_59
+  - first:
+      213: -1133836400549488486
+    second: walk right with weapon_60
+  - first:
+      213: 1125213060060216665
+    second: walk right with weapon_61
+  - first:
+      213: 823908175948525914
+    second: walk right with weapon_62
+  - first:
+      213: -2141374508980751034
+    second: walk right with weapon_63
+  - first:
+      213: 428573865532373289
+    second: walk right with weapon_64
+  - first:
+      213: 5776254661585774146
+    second: walk right with weapon_65
+  - first:
+      213: 249556824024501140
+    second: walk right with weapon_66
+  - first:
+      213: -3710807200692053599
+    second: walk right with weapon_67
+  - first:
+      213: -1427727383438779751
+    second: walk right with weapon_68
+  - first:
+      213: -8224720661166838979
+    second: walk right with weapon_69
+  - first:
+      213: 6423245490285264694
+    second: walk right with weapon_70
+  - first:
+      213: -1257473677644844671
+    second: walk right with weapon_71
+  - first:
+      213: 6657647715532199454
+    second: walk right with weapon_72
+  - first:
+      213: -6878701939357744509
+    second: walk right with weapon_73
+  - first:
+      213: -5957463557220488770
+    second: walk right with weapon_74
+  - first:
+      213: -5594987011752154994
+    second: walk right with weapon_75
+  - first:
+      213: 6735237367402635841
+    second: walk right with weapon_76
+  - first:
+      213: 40610191014839283
+    second: walk right with weapon_77
+  - first:
+      213: -7042891455762400483
+    second: walk right with weapon_78
+  - first:
+      213: -6417927852029418599
+    second: walk right with weapon_79
+  - first:
+      213: 4514570346542100128
+    second: walk right with weapon_80
+  - first:
+      213: -6732871835972672968
+    second: walk right with weapon_81
+  - first:
+      213: 4282366215506902885
+    second: walk right with weapon_82
+  - first:
+      213: -2074035500377694918
+    second: walk right with weapon_83
+  - first:
+      213: 7838554097451622617
+    second: walk right with weapon_84
+  - first:
+      213: -2794059751066760813
+    second: walk right with weapon_85
+  - first:
+      213: 8622520785012142381
+    second: walk right with weapon_86
+  - first:
+      213: -70264615089148188
+    second: walk right with weapon_87
+  - first:
+      213: 3401297729398013277
+    second: walk right with weapon_88
+  - first:
+      213: -7253742769675256171
+    second: walk right with weapon_89
+  - first:
+      213: -8955493255721191887
+    second: walk right with weapon_90
+  - first:
+      213: -3150500452285350318
+    second: walk right with weapon_91
+  - first:
+      213: 7618133369297576817
+    second: walk right with weapon_92
+  - first:
+      213: -4863596672356494180
+    second: walk right with weapon_93
+  - first:
+      213: -5343842685975683245
+    second: walk right with weapon_94
+  - first:
+      213: -3118901974177815269
+    second: walk right with weapon_95
+  - first:
+      213: -4352768134897283352
+    second: walk right with weapon_96
+  - first:
+      213: -4861249880713547877
+    second: walk right with weapon_97
+  - first:
+      213: 4902252372145331088
+    second: walk right with weapon_98
+  - first:
+      213: 7214472708718246025
+    second: walk right with weapon_99
+  - first:
+      213: -3956565043934813313
+    second: walk right with weapon_100
+  - first:
+      213: -7473342845923315511
+    second: walk right with weapon_101
+  - first:
+      213: -6831449655120842318
+    second: walk right with weapon_102
+  - first:
+      213: -5588487501536882959
+    second: walk right with weapon_103
+  - first:
+      213: -4626001273524104053
+    second: walk right with weapon_104
+  - first:
+      213: -7609871559995066384
+    second: walk right with weapon_105
+  - first:
+      213: -94301315805958330
+    second: Walk_Weapon_R_0
+  - first:
+      213: 3697540328019122338
+    second: Walk_Weapon_R_2
+  - first:
+      213: 3754700624480268210
+    second: Walk_Weapon_R_3
+  - first:
+      213: 3232607364970498895
+    second: Walk_Weapon_R_4
+  - first:
+      213: -4482551956807129325
+    second: Walk_Weapon_R_5
+  - first:
+      213: 7552370753252801555
+    second: Walk_Weapon_R_6
+  - first:
+      213: -8024588712983791791
+    second: Walk_Weapon_R_7
+  - first:
+      213: -2468046545858570582
+    second: Walk_Weapon_R_8
+  - first:
+      213: 4289918412406386064
+    second: Walk_Weapon_R_9
+  - first:
+      213: -7393794993959889581
+    second: Walk_Weapon_R_10
+  - first:
+      213: 5725660124035353204
+    second: Walk_Weapon_R_1
+  - first:
+      213: -2803613458366613241
+    second: Walk_Weapon_R_12
+  - first:
+      213: -8907462879451645974
+    second: Walk_Weapon_R_13
+  - first:
+      213: -691422453267144022
+    second: Walk_Weapon_R_14
+  - first:
+      213: -7839449443688744648
+    second: Walk_Weapon_R_15
+  - first:
+      213: 3297120477316485890
+    second: Walk_Weapon_R_16
+  - first:
+      213: -4372989754628702252
+    second: Walk_Weapon_R_17
+  - first:
+      213: -5864372932992839352
+    second: Walk_Weapon_R_18
+  - first:
+      213: 6916909736162856890
+    second: Walk_Weapon_R_19
+  - first:
+      213: 555216130101959052
+    second: Walk_Weapon_R_20
+  - first:
+      213: 3132433730667530795
+    second: Walk_Weapon_R_21
+  - first:
+      213: -7121357568741466824
+    second: Walk_Weapon_R_22
+  - first:
+      213: -8195178345399842088
+    second: Walk_Weapon_R_23
+  - first:
+      213: 2335609796792769959
+    second: Walk_Weapon_R_24
+  - first:
+      213: 8387083657007560242
+    second: Walk_Weapon_R_25
+  - first:
+      213: 5045253930016694859
+    second: Walk_Weapon_R_26
+  - first:
+      213: 8591018850812375262
+    second: Walk_Weapon_R_27
+  - first:
+      213: -3684979519104766430
+    second: Walk_Weapon_R_28
+  - first:
+      213: -4406242468755391374
+    second: Walk_Weapon_R_29
+  - first:
+      213: 4275529570337704097
+    second: Walk_Weapon_R_30
+  - first:
+      213: 4130310065716858230
+    second: Walk_Weapon_R_31
+  - first:
+      213: -5890619305902430244
+    second: Walk_Weapon_R_32
+  - first:
+      213: -4864124498449804168
+    second: Walk_Weapon_R_33
+  - first:
+      213: -6327385040048425854
+    second: Walk_Weapon_R_34
+  - first:
+      213: 1625765805604009009
+    second: Walk_Weapon_R_35
+  - first:
+      213: 284886573102455383
+    second: Walk_Weapon_R_36
+  - first:
+      213: -357821435529527378
+    second: Walk_Weapon_R_37
+  - first:
+      213: 8098142094887076207
+    second: Walk_Weapon_R_38
+  - first:
+      213: 1828057688289048291
+    second: Walk_Weapon_R_39
+  - first:
+      213: -2185951564043038088
+    second: Walk_Weapon_R_40
+  - first:
+      213: 5760629861164527482
+    second: Walk_Weapon_R_41
+  - first:
+      213: 4539171292546025396
+    second: Walk_Weapon_R_42
+  - first:
+      213: -1483798877421002402
+    second: Walk_Weapon_R_43
+  - first:
+      213: -8722941972124030151
+    second: Walk_Weapon_R_44
+  - first:
+      213: -8362236700931345410
+    second: Walk_Weapon_R_35
+  - first:
+      213: -816397668752230288
+    second: Walk_Weapon_R_46
+  - first:
+      213: -6456397356107462271
+    second: Walk_Weapon_R_47
+  - first:
+      213: 8437129113115504213
+    second: Walk_Weapon_R_48
+  - first:
+      213: -8757090201148277187
+    second: Walk_Weapon_R_49
+  - first:
+      213: 7870774427881253893
+    second: Walk_Weapon_R_50
+  - first:
+      213: -4352315215472375033
+    second: Walk_Weapon_R_51
+  - first:
+      213: -2956052195881801606
+    second: Walk_Weapon_R_52
+  - first:
+      213: 3149167320014485427
+    second: Walk_Weapon_R_53
+  - first:
+      213: 9051028062606949661
+    second: Walk_Weapon_R_54
+  - first:
+      213: -5606885221121438880
+    second: Walk_Weapon_R_55
+  - first:
+      213: 8714982610652538200
+    second: Walk_Weapon_R_56
+  - first:
+      213: -3440817208791837392
+    second: Walk_Weapon_R_57
+  - first:
+      213: 584556906685484786
+    second: Walk_Weapon_R_58
+  - first:
+      213: 1612437075277701115
+    second: Walk_Weapon_R_59
+  - first:
+      213: -8698096419164374848
+    second: Walk_Weapon_R_60
+  - first:
+      213: -7473727721118886853
+    second: Walk_Weapon_R_61
+  - first:
+      213: 3311262702347511254
+    second: Walk_Weapon_R_62
+  - first:
+      213: -6010601369178628003
+    second: Walk_Weapon_R_63
+  - first:
+      213: 389609031558424765
+    second: Walk_Weapon_R_64
+  - first:
+      213: 2248342743675004331
+    second: Walk_Weapon_R_65
+  - first:
+      213: 8079975689915183400
+    second: Walk_Weapon_R_66
+  - first:
+      213: 3836684583179592719
+    second: Walk_Weapon_R_67
+  - first:
+      213: -3559203326963234379
+    second: Walk_Weapon_R_68
+  - first:
+      213: -860831367042545402
+    second: Walk_Weapon_R_69
+  - first:
+      213: 5260983859970035509
+    second: Walk_Weapon_R_70
+  - first:
+      213: -8930824512557609026
+    second: Walk_Weapon_R_71
+  - first:
+      213: 3208737180667771399
+    second: Walk_Weapon_R_72
+  - first:
+      213: 7017028959521327926
+    second: Walk_Weapon_R_73
+  - first:
+      213: -9222431257718420079
+    second: Walk_Weapon_R_74
+  - first:
+      213: 7655870990672248841
+    second: Walk_Weapon_R_75
+  - first:
+      213: 3485856916176006829
+    second: Walk_Weapon_R_76
+  - first:
+      213: -3466209440191354176
+    second: Walk_Weapon_R_77
+  - first:
+      213: -2185569254248128702
+    second: Walk_Weapon_R_78
+  - first:
+      213: 7167375927859970464
+    second: Walk_Weapon_R_79
+  - first:
+      213: -6799967907765895028
+    second: Walk_Weapon_R_80
+  - first:
+      213: 8344372434189504156
+    second: Walk_Weapon_R_81
+  - first:
+      213: 6231711506645031173
+    second: Walk_Weapon_R_82
+  - first:
+      213: -8121618833524591972
+    second: Walk_Weapon_R_83
+  - first:
+      213: -4299477471754481788
+    second: Walk_Weapon_R_84
+  - first:
+      213: -6399305189154070240
+    second: Walk_Weapon_R_85
+  - first:
+      213: 6252270058327906694
+    second: Walk_Weapon_R_86
+  - first:
+      213: -8154618846927752310
+    second: Walk_Weapon_R_87
+  - first:
+      213: -3554626149514976724
+    second: Walk_Weapon_R_88
+  - first:
+      213: 5235942741518085913
+    second: Walk_Weapon_R_89
+  - first:
+      213: -8513864198185655036
+    second: Walk_Weapon_R_90
+  - first:
+      213: -8710661387495517130
+    second: Walk_Weapon_R_91
+  - first:
+      213: 9166034482205165879
+    second: Walk_Weapon_R_92
+  - first:
+      213: 2909032687005795295
+    second: Walk_Weapon_R_93
+  - first:
+      213: 1573464542091574996
+    second: Walk_Weapon_R_94
+  - first:
+      213: 5182457731146570173
+    second: Walk_Weapon_R_95
+  - first:
+      213: -3529802244275257026
+    second: Walk_Weapon_R_96
+  - first:
+      213: -96118190493826955
+    second: Walk_Weapon_R_97
+  - first:
+      213: 4616659370138151259
+    second: Walk_Weapon_R_98
+  - first:
+      213: -8763505804322223595
+    second: Walk_Weapon_R_99
+  - first:
+      213: -3492515433411265536
+    second: Walk_Weapon_R_100
+  - first:
+      213: -6709232580456212647
+    second: Walk_Weapon_R_101
+  - first:
+      213: -1252923255843608406
+    second: Walk_Weapon_R_102
+  - first:
+      213: -1349491286050837052
+    second: Walk_Weapon_R_103
+  - first:
+      213: -3963420560417608370
+    second: Walk_Weapon_R_104
+  - first:
+      213: -1371431439017314077
+    second: Walk_Weapon_R_105
+  - first:
+      213: 1242331073155418666
+    second: ML_Walk_Weapon_R_0
+  - first:
+      213: 3173188608480817604
+    second: ML_Walk_Weapon_R_1
+  - first:
+      213: -5652859967407938572
+    second: ML_Walk_Weapon_R_2
+  - first:
+      213: -5528061495670906788
+    second: ML_Walk_Weapon_R_3
+  - first:
+      213: -4441249916726784008
+    second: ML_Walk_Weapon_R_4
+  - first:
+      213: 7705297355138552281
+    second: ML_Walk_Weapon_R_5
+  - first:
+      213: 2229920197490040548
+    second: ML_Walk_Weapon_R_6
+  - first:
+      213: -6356968756334923176
+    second: ML_Walk_Weapon_R_7
+  - first:
+      213: -81624179035339968
+    second: ML_Walk_Weapon_R_8
+  - first:
+      213: -8484888563191567167
+    second: ML_Walk_Weapon_R_9
+  - first:
+      213: 6578849393672168938
+    second: ML_Walk_Weapon_R_10
+  - first:
+      213: -1151396581299566894
+    second: ML_Walk_Weapon_R_11
+  - first:
+      213: 182934630218804360
+    second: ML_Walk_Weapon_R_12
+  - first:
+      213: -3153172058166980145
+    second: ML_Walk_Weapon_R_13
+  - first:
+      213: -2999979657023374339
+    second: ML_Walk_Weapon_R_14
+  - first:
+      213: -3740179095182314236
+    second: ML_Walk_Weapon_R_15
+  - first:
+      213: 1158425112060129988
+    second: ML_Walk_Weapon_R_16
+  - first:
+      213: 2096279961876617678
+    second: ML_Walk_Weapon_R_17
+  - first:
+      213: 3116161063528908038
+    second: ML_Walk_Weapon_R_18
+  - first:
+      213: -323167661509726587
+    second: ML_Walk_Weapon_R_19
+  - first:
+      213: 2942883526270764648
+    second: ML_Walk_Weapon_R_20
+  - first:
+      213: -4693167521158401212
+    second: ML_Walk_Weapon_R_21
+  - first:
+      213: -7797634100746831564
+    second: ML_Walk_Weapon_R_22
+  - first:
+      213: -2500155497380072327
+    second: ML_Walk_Weapon_R_23
+  - first:
+      213: 3817351002577176035
+    second: ML_Walk_Weapon_R_24
+  - first:
+      213: 4722428486972597045
+    second: ML_Walk_Weapon_R_25
+  - first:
+      213: -8023556431111114736
+    second: ML_Walk_Weapon_R_26
+  - first:
+      213: -5444997432627217150
+    second: ML_Walk_Weapon_R_27
+  - first:
+      213: 2653351761481863483
+    second: ML_Walk_Weapon_R_28
+  - first:
+      213: -7096872498106918962
+    second: ML_Walk_Weapon_R_29
+  - first:
+      213: 3694060380367780060
+    second: ML_Walk_Weapon_R_30
+  - first:
+      213: -790097852866808175
+    second: ML_Walk_Weapon_R_31
+  - first:
+      213: 4653349321718380240
+    second: ML_Walk_Weapon_R_32
+  - first:
+      213: -2735960810871564930
+    second: ML_Walk_Weapon_R_33
+  - first:
+      213: -932447811141354282
+    second: ML_Walk_Weapon_R_34
+  - first:
+      213: -564509529772847420
+    second: ML_Walk_Weapon_R_35
+  - first:
+      213: -4501238576059514452
+    second: ML_Walk_Weapon_R_36
+  - first:
+      213: -1392193085216322960
+    second: ML_Walk_Weapon_R_37
+  - first:
+      213: 4188613928808805294
+    second: ML_Walk_Weapon_R_38
+  - first:
+      213: -3371444792389134868
+    second: ML_Walk_Weapon_R_39
+  - first:
+      213: 2952084109877473798
+    second: ML_Walk_Weapon_R_40
+  - first:
+      213: 3104256276856191840
+    second: ML_Walk_Weapon_R_41
+  - first:
+      213: 649929076093266890
+    second: ML_Walk_Weapon_R_42
+  - first:
+      213: -612020151120727079
+    second: ML_Walk_Weapon_R_43
+  - first:
+      213: -2332342498091580789
+    second: ML_Walk_Weapon_R_44
+  - first:
+      213: 919111724648389868
+    second: ML_Walk_Weapon_R_45
+  - first:
+      213: 4688513211465953609
+    second: ML_Walk_Weapon_R_46
+  - first:
+      213: 6867304309829547433
+    second: ML_Walk_Weapon_R_47
+  - first:
+      213: 8860470961406817208
+    second: ML_Walk_Weapon_R_48
+  - first:
+      213: -8546150626822870622
+    second: ML_Walk_Weapon_R_49
+  - first:
+      213: -1426806684386084118
+    second: ML_Walk_Weapon_R_50
+  - first:
+      213: -1559557708460257218
+    second: ML_Walk_Weapon_R_51
+  - first:
+      213: 9031990553092298349
+    second: ML_Walk_Weapon_R_52
+  - first:
+      213: 6508796156611247741
+    second: ML_Walk_Weapon_R_53
+  - first:
+      213: 8865979087870740782
+    second: ML_Walk_Weapon_R_54
+  - first:
+      213: -333311302172429983
+    second: ML_Walk_Weapon_R_55
+  - first:
+      213: -6371487286872504859
+    second: ML_Walk_Weapon_R_56
+  - first:
+      213: 4738058143451545752
+    second: ML_Walk_Weapon_R_57
+  - first:
+      213: -1176348388278505204
+    second: ML_Walk_Weapon_R_58
+  - first:
+      213: 953943720584327205
+    second: ML_Walk_Weapon_R_59
+  - first:
+      213: 267436988384844688
+    second: ML_Walk_Weapon_R_60
+  - first:
+      213: 4220308048296339764
+    second: ML_Walk_Weapon_R_61
+  - first:
+      213: -2142337220383361811
+    second: ML_Walk_Weapon_R_62
+  - first:
+      213: 5066938628587560534
+    second: ML_Walk_Weapon_R_63
+  - first:
+      213: 8284655952161066205
+    second: ML_Walk_Weapon_R_64
+  - first:
+      213: 6240360293611500912
+    second: ML_Walk_Weapon_R_65
+  - first:
+      213: 2023692561997689149
+    second: ML_Walk_Weapon_R_66
+  - first:
+      213: -7238567117087796858
+    second: ML_Walk_Weapon_R_67
+  - first:
+      213: -7045318731847070745
+    second: ML_Walk_Weapon_R_68
+  - first:
+      213: 8465837747069959797
+    second: ML_Walk_Weapon_R_69
+  - first:
+      213: -3625496440737448982
+    second: ML_Walk_Weapon_R_70
+  - first:
+      213: -4641628138934974923
+    second: ML_Walk_Weapon_R_71
+  - first:
+      213: -1180806385408478757
+    second: ML_Walk_Weapon_R_72
+  - first:
+      213: 6045498935640621435
+    second: ML_Walk_Weapon_R_73
+  - first:
+      213: 8050596464282359592
+    second: ML_Walk_Weapon_R_74
+  - first:
+      213: -2296096098131590655
+    second: ML_Walk_Weapon_R_75
+  - first:
+      213: -6180829905674577556
+    second: ML_Walk_Weapon_R_76
+  - first:
+      213: -8819166864941885423
+    second: ML_Walk_Weapon_R_77
+  - first:
+      213: -1461718130134548660
+    second: ML_Walk_Weapon_R_78
+  - first:
+      213: -89912465064871265
+    second: ML_Walk_Weapon_R_79
+  - first:
+      213: -6101259167011764034
+    second: ML_Walk_Weapon_R_80
+  - first:
+      213: 1255192828301208523
+    second: ML_Walk_Weapon_R_81
+  - first:
+      213: -1496169114170510742
+    second: ML_Walk_Weapon_R_82
+  - first:
+      213: -3167986137363856513
+    second: ML_Walk_Weapon_R_83
+  - first:
+      213: 4360951907226243975
+    second: ML_Walk_Weapon_R_84
+  - first:
+      213: -504572884469861510
+    second: ML_Walk_Weapon_R_85
+  - first:
+      213: -1636668088679098410
+    second: ML_Walk_Weapon_R_86
+  - first:
+      213: -4293720730285633174
+    second: ML_Walk_Weapon_R_87
+  - first:
+      213: -4335324129152293233
+    second: ML_Walk_Weapon_R_88
+  - first:
+      213: -1943364969884489384
+    second: ML_Walk_Weapon_R_89
+  - first:
+      213: -1118800617063659856
+    second: ML_Walk_Weapon_R_90
+  - first:
+      213: -7108479943713539818
+    second: ML_Walk_Weapon_R_91
+  - first:
+      213: -2442077550703249097
+    second: ML_Walk_Weapon_R_92
+  - first:
+      213: -1900081115942128671
+    second: ML_Walk_Weapon_R_93
+  - first:
+      213: -4690402657598774833
+    second: ML_Walk_Weapon_R_94
+  - first:
+      213: 3028984841502695413
+    second: ML_Walk_Weapon_R_95
+  - first:
+      213: 3691700895921284958
+    second: ML_Walk_Weapon_R_96
+  - first:
+      213: -6619769310623776696
+    second: ML_Walk_Weapon_R_97
+  - first:
+      213: 4785400933816384031
+    second: ML_Walk_Weapon_R_98
+  - first:
+      213: -6201065479975188597
+    second: ML_Walk_Weapon_R_99
+  - first:
+      213: -4542984347620573244
+    second: ML_Walk_Weapon_R_100
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 135
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 7528
+        width: 351
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2acbd46785ad3110800000000000000
+      internalID: 1242331073155418666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_1
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 7528
+        width: 344
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1b0d52a3e690c20800000000000000
+      internalID: 3173188608480817604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_2
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 7528
+        width: 334
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3af9d4fc10d81b0800000000000000
+      internalID: -5652859967407938572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_3
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 7528
+        width: 327
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50650ecb516843b0800000000000000
+      internalID: -5528061495670906788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_4
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 7528
+        width: 318
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff44c24bb28d52c0800000000000000
+      internalID: -4441249916726784008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_5
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 7528
+        width: 308
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d15acdbe17beea60800000000000000
+      internalID: 7705297355138552281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_6
+      rect:
+        serializedVersion: 2
+        x: 2391
+        y: 7528
+        width: 299
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eedcd0ea9442fe10800000000000000
+      internalID: 2229920197490040548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_7
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 7528
+        width: 291
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8527666c89287c7a0800000000000000
+      internalID: -6356968756334923176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_8
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 7528
+        width: 282
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043048bdd330edef0800000000000000
+      internalID: -81624179035339968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_9
+      rect:
+        serializedVersion: 2
+        x: 3445
+        y: 7528
+        width: 274
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc21308ece9f3a80800000000000000
+      internalID: -8484888563191567167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_10
+      rect:
+        serializedVersion: 2
+        x: 3779
+        y: 7528
+        width: 267
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5af94daa4cc4b50800000000000000
+      internalID: 6578849393672168938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_11
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 6849
+        width: 258
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d64a00e8ea6500f0800000000000000
+      internalID: -1151396581299566894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_12
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 6849
+        width: 249
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c2f43b31ae98200800000000000000
+      internalID: 182934630218804360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_13
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 6849
+        width: 251
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1154528bead34d0800000000000000
+      internalID: -3153172058166980145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_14
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 6849
+        width: 253
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb39b1856eed56d0800000000000000
+      internalID: -2999979657023374339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_15
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 6849
+        width: 255
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405f053ede6381cc0800000000000000
+      internalID: -3740179095182314236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_16
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 6849
+        width: 257
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c27c37708d831010800000000000000
+      internalID: 1158425112060129988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_17
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 6849
+        width: 258
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9dc6dc48b771d10800000000000000
+      internalID: 2096279961876617678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_18
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 6849
+        width: 257
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6054b862af3de3b20800000000000000
+      internalID: 3116161063528908038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_19
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 6849
+        width: 257
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ea1dc59b0e38bf0800000000000000
+      internalID: -323167661509726587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_20
+      rect:
+        serializedVersion: 2
+        x: 2886
+        y: 6849
+        width: 257
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866c7be99f837d820800000000000000
+      internalID: 2942883526270764648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_21
+      rect:
+        serializedVersion: 2
+        x: 3204
+        y: 6849
+        width: 256
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443f3f541058edeb0800000000000000
+      internalID: -4693167521158401212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_22
+      rect:
+        serializedVersion: 2
+        x: 3522
+        y: 6849
+        width: 255
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4393388591d39c390800000000000000
+      internalID: -7797634100746831564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_23
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 6170
+        width: 254
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974bb6f42d9ad4dd0800000000000000
+      internalID: -2500155497380072327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_24
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 6170
+        width: 251
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5089bf284f9f430800000000000000
+      internalID: 3817351002577176035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_25
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 6170
+        width: 249
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533ef2b30bf698140800000000000000
+      internalID: 4722428486972597045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_26
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 6170
+        width: 255
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0103250cfe996a090800000000000000
+      internalID: -8023556431111114736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_27
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 6170
+        width: 265
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d37511fab7f64b0800000000000000
+      internalID: -5444997432627217150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_28
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 6170
+        width: 272
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3198477e5992d420800000000000000
+      internalID: 2653351761481863483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_29
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 6170
+        width: 280
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec719165018d28d90800000000000000
+      internalID: -7096872498106918962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_30
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 6170
+        width: 289
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd87aae0850f34330800000000000000
+      internalID: 3694060380367780060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_31
+      rect:
+        serializedVersion: 2
+        x: 2645
+        y: 6170
+        width: 297
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196331e50320905f0800000000000000
+      internalID: -790097852866808175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_32
+      rect:
+        serializedVersion: 2
+        x: 3002
+        y: 6170
+        width: 305
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d634d8bd84049040800000000000000
+      internalID: 4653349321718380240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_33
+      rect:
+        serializedVersion: 2
+        x: 3368
+        y: 6170
+        width: 314
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e755c94632ae70ad0800000000000000
+      internalID: -2735960810871564930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_34
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 5491
+        width: 322
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc3455f7a74f03f0800000000000000
+      internalID: -932447811141354282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_35
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 5491
+        width: 331
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce0195d2957a28f0800000000000000
+      internalID: -564509529772847420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_36
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 5491
+        width: 338
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca100b81d536881c0800000000000000
+      internalID: -4501238576059514452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_37
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 5491
+        width: 334
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a0de0e3cfedace0800000000000000
+      internalID: -1392193085216322960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_38
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 5491
+        width: 329
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3f6ef0d22f02a30800000000000000
+      internalID: 4188613928808805294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_39
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 5491
+        width: 323
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce51ec1f2d83631d0800000000000000
+      internalID: -3371444792389134868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_40
+      rect:
+        serializedVersion: 2
+        x: 2385
+        y: 5491
+        width: 317
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602725c6bd8e7f820800000000000000
+      internalID: 2952084109877473798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_41
+      rect:
+        serializedVersion: 2
+        x: 2762
+        y: 5491
+        width: 311
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b3ac103a8841b20800000000000000
+      internalID: 3104256276856191840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_42
+      rect:
+        serializedVersion: 2
+        x: 3133
+        y: 5491
+        width: 307
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acbacbd1d03050900800000000000000
+      internalID: 649929076093266890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_43
+      rect:
+        serializedVersion: 2
+        x: 3501
+        y: 5491
+        width: 302
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d371194aeaa187f0800000000000000
+      internalID: -612020151120727079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_44
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 4812
+        width: 294
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8244b2fadad1afd0800000000000000
+      internalID: -2332342498091580789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_45
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4812
+        width: 289
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec50907e3751cc00800000000000000
+      internalID: 919111724648389868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_46
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 4812
+        width: 284
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941772ecce1f01140800000000000000
+      internalID: 4688513211465953609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_47
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 4812
+        width: 279
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a536ef92e09d4f50800000000000000
+      internalID: 6867304309829547433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_48
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 4812
+        width: 272
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b331550567b6fa70800000000000000
+      internalID: 8860470961406817208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_49
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 4812
+        width: 267
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9ad3bc849f56980800000000000000
+      internalID: -8546150626822870622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_50
+      rect:
+        serializedVersion: 2
+        x: 2093
+        y: 4812
+        width: 265
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeab30e41e6f23ce0800000000000000
+      internalID: -1426806684386084118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_51
+      rect:
+        serializedVersion: 2
+        x: 2418
+        y: 4812
+        width: 263
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30118ce6865b5ae0800000000000000
+      internalID: -1559557708460257218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_52
+      rect:
+        serializedVersion: 2
+        x: 2741
+        y: 4812
+        width: 259
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6610c3fd83185d70800000000000000
+      internalID: 9031990553092298349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_53
+      rect:
+        serializedVersion: 2
+        x: 3061
+        y: 4812
+        width: 256
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ebd3e8e93e35a50800000000000000
+      internalID: 6508796156611247741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_54
+      rect:
+        serializedVersion: 2
+        x: 3377
+        y: 4812
+        width: 253
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29c396a1094a0b70800000000000000
+      internalID: 8865979087870740782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_55
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 4812
+        width: 249
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161b36af227df5bf0800000000000000
+      internalID: -333311302172429983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_56
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 4133
+        width: 244
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e50c07f11ee397a0800000000000000
+      internalID: -6371487286872504859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_57
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 4133
+        width: 250
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890839537c6f0c140800000000000000
+      internalID: 4738058143451545752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_58
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 4133
+        width: 255
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c017e889f55ccafe0800000000000000
+      internalID: -1176348388278505204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_59
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 4133
+        width: 268
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520b42972c61d3d00800000000000000
+      internalID: 953943720584327205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_60
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 4133
+        width: 280
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b9a74268026b300800000000000000
+      internalID: 267436988384844688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_61
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 4133
+        width: 292
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439ec6d4fcb819a30800000000000000
+      internalID: 4220308048296339764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_62
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 4133
+        width: 304
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4b3fd06a3e442e0800000000000000
+      internalID: -2142337220383361811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_63
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 4133
+        width: 319
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e9aaf36d1615640800000000000000
+      internalID: 5066938628587560534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_64
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 4133
+        width: 331
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddcc2eac1b209f270800000000000000
+      internalID: 8284655952161066205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_65
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 4133
+        width: 344
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0757a2bcf963a9650800000000000000
+      internalID: 6240360293611500912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_66
+      rect:
+        serializedVersion: 2
+        x: 3539
+        y: 4133
+        width: 357
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31f874c9a9951c10800000000000000
+      internalID: 2023692561997689149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_67
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3454
+        width: 368
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681982ffe817b8b90800000000000000
+      internalID: -7238567117087796858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_68
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 3454
+        width: 381
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb89dae0fff93e90800000000000000
+      internalID: -7045318731847070745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_69
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 3454
+        width: 370
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57eb238b392bc7570800000000000000
+      internalID: 8465837747069959797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_70
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 3454
+        width: 358
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aebb6632236afadc0800000000000000
+      internalID: -3625496440737448982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_71
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 3454
+        width: 346
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536c25fcccf959fb0800000000000000
+      internalID: -4641628138934974923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_72
+      rect:
+        serializedVersion: 2
+        x: 2172
+        y: 3454
+        width: 333
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1f63149deec9fe0800000000000000
+      internalID: -1180806385408478757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_73
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 3454
+        width: 322
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b718cd4604de5e350800000000000000
+      internalID: 6045498935640621435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_74
+      rect:
+        serializedVersion: 2
+        x: 2948
+        y: 3454
+        width: 309
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 827d09394d679bf60800000000000000
+      internalID: 8050596464282359592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_75
+      rect:
+        serializedVersion: 2
+        x: 3317
+        y: 3454
+        width: 299
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102c4b493c0a220e0800000000000000
+      internalID: -2296096098131590655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_76
+      rect:
+        serializedVersion: 2
+        x: 3677
+        y: 3454
+        width: 286
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69d72fb2f7493aa0800000000000000
+      internalID: -6180829905674577556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_77
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 2775
+        width: 275
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1185e3856760c9580800000000000000
+      internalID: -8819166864941885423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_78
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 2775
+        width: 262
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ff49bea1fe6bbe0800000000000000
+      internalID: -1461718130134548660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_79
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 2775
+        width: 252
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9abde2e61190cef0800000000000000
+      internalID: -89912465064871265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_80
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 2775
+        width: 244
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb80bab0d19f35ba0800000000000000
+      internalID: -6101259167011764034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_81
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 2775
+        width: 250
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcbe28f1a375b6110800000000000000
+      internalID: 1255192828301208523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_82
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 2775
+        width: 255
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62b4f12e1a8c3be0800000000000000
+      internalID: -1496169114170510742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_83
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 2775
+        width: 260
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73c01d846d0904d0800000000000000
+      internalID: -3167986137363856513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_84
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 2775
+        width: 266
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78358c087a6358c30800000000000000
+      internalID: 4360951907226243975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_85
+      rect:
+        serializedVersion: 2
+        x: 2597
+        y: 2775
+        width: 269
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7331e982a56ff8f0800000000000000
+      internalID: -504572884469861510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_86
+      rect:
+        serializedVersion: 2
+        x: 2927
+        y: 2775
+        width: 272
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d790177b036949e0800000000000000
+      internalID: -1636668088679098410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_87
+      rect:
+        serializedVersion: 2
+        x: 3260
+        y: 2775
+        width: 280
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a611892beb3a964c0800000000000000
+      internalID: -4293720730285633174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_88
+      rect:
+        serializedVersion: 2
+        x: 3601
+        y: 2775
+        width: 284
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86a2bf8ca5d5d3c0800000000000000
+      internalID: -4335324129152293233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_89
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2096
+        width: 290
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859e8153bd7c705e0800000000000000
+      internalID: -1943364969884489384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_90
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 2096
+        width: 295
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6ce6534c83970f0800000000000000
+      internalID: -1118800617063659856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_91
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 2096
+        width: 302
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61937fd472b995d90800000000000000
+      internalID: -7108479943713539818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_92
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 2096
+        width: 306
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7397064086ffb1ed0800000000000000
+      internalID: -2442077550703249097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_93
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 2096
+        width: 313
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e377d7ca4e81a5e0800000000000000
+      internalID: -1900081115942128671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_94
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 2096
+        width: 317
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1e64c32a758eeb0800000000000000
+      internalID: -4690402657598774833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_95
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 2096
+        width: 324
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff9fc34aad190a20800000000000000
+      internalID: 3028984841502695413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_96
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 2096
+        width: 329
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e572166c76e8b3330800000000000000
+      internalID: 3691700895921284958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_97
+      rect:
+        serializedVersion: 2
+        x: 3005
+        y: 2096
+        width: 335
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840cc3192ead124a0800000000000000
+      internalID: -6619769310623776696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_98
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 2096
+        width: 341
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ab2ff8bc8296240800000000000000
+      internalID: 4785400933816384031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_99
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1417
+        width: 346
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b874425fcc361f9a0800000000000000
+      internalID: -6201065479975188597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ML_Walk_Weapon_R_100
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1417
+        width: 351
+        height: 619
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf7aeb3ec314f0c0800000000000000
+      internalID: -4542984347620573244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

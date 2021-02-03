@@ -9,13 +9,11 @@ public class Dialogue : MonoBehaviour
     private UIReferences uiReferences;
     // Dialogue Box
     private CanvasGroup dialogueBoxCG;                                                              // Reference to the CanvasGroup of the dialogue box
-    private Animator dialogueBoxAnimator;                                                           // Reference to the animator component of the dialogue box
     private TextMeshProUGUI dialogueText;                                                           // Reference to the text area of the dialogue box
     private GameObject dBoxContinueButton;                                                          // Reference to the continue button of the dialogue box
 
     // Note box
     private CanvasGroup noteBoxCG;                                                                  // Reference to the CanvasGroup of the note box
-    private Animator noteAnimator;                                                                  // Reference to the animator component of the note box
     private TextMeshProUGUI noteText;                                                               // Reference to the text area of the note box
     private GameObject noteContinueButton;                                                          // Reference to the continue button of the note box
 

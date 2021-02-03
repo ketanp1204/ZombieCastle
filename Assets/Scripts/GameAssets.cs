@@ -38,5 +38,8 @@ public class GameAssets : MonoBehaviour
 
     [Header("ParticleSystem Prefabs")]
     public GameObject bloodParticles;
+
+    [Header("Other GameObjects")]
+    public GameObject mazePuzzleColliderGO;
     
 }

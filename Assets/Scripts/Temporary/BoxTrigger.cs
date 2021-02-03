@@ -39,17 +39,17 @@ public class BoxTrigger : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (Player.instance.weaponDrawn)
+                if (Player.instance.axeDrawn)
                 {
                     parentSR.sprite = GameAssets.instance.treasureBoxClosedSprite;
-                    Player.instance.weaponDrawn = false;
-                    Player.RemoveWeapon();
+                    Player.instance.axeDrawn = false;
+                    Player.UnequipAxe();
                 }
                 else
                 {
                     parentSR.sprite = GameAssets.instance.treasureBoxOpenSprite;
-                    Player.instance.weaponDrawn = true;
-                    Player.DrawWeapon();
+                    Player.instance.axeDrawn = true;
+                    Player.EquipAxe();
                 }
             }
         }

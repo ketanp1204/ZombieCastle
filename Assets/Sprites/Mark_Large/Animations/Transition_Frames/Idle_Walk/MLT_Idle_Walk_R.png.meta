@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: ab9d8746ea6157d4e8824efcb27cf1c0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3335133242825548055
+    second: MT_Idle_Walk_R_0
+  - first:
+      213: -3420536078341771441
+    second: MT_Idle_Walk_R_1
+  - first:
+      213: 4909844908327388988
+    second: MT_Idle_Walk_R_2
+  - first:
+      213: -8270815924371830254
+    second: MT_Idle_Walk_R_3
+  - first:
+      213: 7428331153234188796
+    second: MT_Idle_Walk_R_4
+  - first:
+      213: 438059974352148216
+    second: MT_Idle_Walk_R_5
+  - first:
+      213: -1418383833212593813
+    second: MT_Idle_Walk_R_6
+  - first:
+      213: -152057578213622856
+    second: MT_Idle_Walk_R_7
+  - first:
+      213: 888270535122773713
+    second: MT_Idle_Walk_R_8
+  - first:
+      213: 6394520822407175306
+    second: MT_Idle_Walk_R_9
+  - first:
+      213: 1113711046021808538
+    second: MT_Idle_Walk_R_10
+  - first:
+      213: -8848046245886982541
+    second: MT_Idle_Walk_R_11
+  - first:
+      213: -7749149395016861371
+    second: MT_Idle_Walk_R_12
+  - first:
+      213: 1666352673968626175
+    second: MLT_Idle_Walk_R_0
+  - first:
+      213: 8420630765725920653
+    second: MLT_Idle_Walk_R_1
+  - first:
+      213: 1729579488541190633
+    second: MLT_Idle_Walk_R_2
+  - first:
+      213: 457936492893388950
+    second: MLT_Idle_Walk_R_3
+  - first:
+      213: 4873881615308730572
+    second: MLT_Idle_Walk_R_4
+  - first:
+      213: 7802083341222816326
+    second: MLT_Idle_Walk_R_5
+  - first:
+      213: -3784194898699000313
+    second: MLT_Idle_Walk_R_6
+  - first:
+      213: -9131255066935920482
+    second: MLT_Idle_Walk_R_7
+  - first:
+      213: -6975338201873676318
+    second: MLT_Idle_Walk_R_8
+  - first:
+      213: 3132616006520176964
+    second: MLT_Idle_Walk_R_9
+  - first:
+      213: 4330866270996248984
+    second: MLT_Idle_Walk_R_10
+  - first:
+      213: 2583441794829123063
+    second: MLT_Idle_Walk_R_11
+  - first:
+      213: 1552770582670501810
+    second: MLT_Idle_Walk_R_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 135
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_R_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 362
+        width: 248
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff91c62ade2102710800000000000000
+      internalID: 1666352673968626175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_R_1
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 362
+        width: 254
+        height: 617
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8da1d721171cd470800000000000000
+      internalID: 8420630765725920653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_R_2
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 362
+        width: 261
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9ac419163b00810800000000000000
+      internalID: 1729579488541190633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_R_3
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 362
+        width: 269
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690499460daea5600800000000000000
+      internalID: 457936492893388950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_R_4
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 362
+        width: 276
+        height: 616
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc0b8c5918183a340800000000000000
+      internalID: 4873881615308730572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_R_5
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 364
+        width: 285
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a249d2671964c60800000000000000
+      internalID: 7802083341222816326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_R_6
+      rect:
+        serializedVersion: 2
+        x: 2001
+        y: 364
+        width: 291
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70663360ac6db7bc0800000000000000
+      internalID: -3784194898699000313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_R_7
+      rect:
+        serializedVersion: 2
+        x: 2352
+        y: 364
+        width: 299
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e987cc565e3474180800000000000000
+      internalID: -9131255066935920482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_R_8
+      rect:
+        serializedVersion: 2
+        x: 2711
+        y: 364
+        width: 307
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e78b11ccde923f90800000000000000
+      internalID: -6975338201873676318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_R_9
+      rect:
+        serializedVersion: 2
+        x: 3078
+        y: 364
+        width: 313
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441865e19a9497b20800000000000000
+      internalID: 3132616006520176964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_R_10
+      rect:
+        serializedVersion: 2
+        x: 3452
+        y: 364
+        width: 322
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899b3747de35a1c30800000000000000
+      internalID: 4330866270996248984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_R_11
+      rect:
+        serializedVersion: 2
+        x: 3834
+        y: 364
+        width: 329
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fdffaeef9a3ad320800000000000000
+      internalID: 2583441794829123063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLT_Idle_Walk_R_12
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 364
+        width: 336
+        height: 615
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b760c53e9c8c8510800000000000000
+      internalID: 1552770582670501810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
