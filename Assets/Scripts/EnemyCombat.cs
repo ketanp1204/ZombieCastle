@@ -127,7 +127,6 @@ public class EnemyCombat : MonoBehaviour
 
     public void TakeDamage(Transform playerPos, int damage)
     {
-        Debug.Log("taking damage");
         if (!IsDead)
         {
             // Create blood particles

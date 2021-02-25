@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     private Animator animator;                      // Reference To The Player's Animator Component
     private HealthBar healthBar;                    // Reference To The Player's Health Bar 
     private UnityEngine.Object playerReference;
+    public LayerMask groundLayerMask;
 
     // Public Cached References
     public Transform pathfindingTarget;             // Reference to the player's pathfinding target
@@ -31,8 +32,6 @@ public class Player : MonoBehaviour
     public bool axeDrawn;                           // Bool to store whether axe is drawn
     [HideInInspector]
     public bool knifeDrawn;                           // Bool to store whether knife is drawn
-    [HideInInspector]
-    public bool IsDead = false;                     // Bool to store if player dies
     private bool facingRight;                       // Player's direction of facing
     [HideInInspector]
     public bool isClimbingLadder = false;           // Bool to store whether player is climbing a ladder
@@ -68,6 +67,7 @@ public class Player : MonoBehaviour
     void OnEnable()
     {
         playerReference = Resources.Load(gameObject.name);
+        ResetAnimatorParameters();
     }
 
     // Link Cached References
@@ -82,14 +82,14 @@ public class Player : MonoBehaviour
 
     private void InitializeValues()
     {
-        facingRight = true;
+        facingRight = false;
         movePlayer = true;
         takingDamage = false;
         axeDrawn = false;             
         knifeDrawn = true;
         animator.SetBool("KnifeDrawn", true);       // FOR TESTING, CHANGE LATER.
         movementSpeed = walkSpeed;
-        animator.SetFloat("FaceDir", 1f);
+        animator.SetFloat("FaceDir", -1f);
 
         if (PlayerStats.isFirstScene)
         {
@@ -104,6 +104,18 @@ public class Player : MonoBehaviour
             healthBar.SetMaxHealth(maxHealth);
             healthBar.SetHealth(currentHealth);
         }
+    }
+
+    private void ResetAnimatorParameters()
+    {
+        animator.SetFloat("Horizontal", 0f);
+        animator.SetFloat("Vertical", 0f);
+        animator.SetFloat("Magnitude", 0f);
+        animator.SetFloat("FaceDir", -1f);
+        animator.SetBool("WalkFast", false);
+        animator.SetBool("IsDead", false);
+        animator.SetBool("AxeDrawn", false);
+        animator.SetBool("KnifeDrawn", true);
     }
 
     void FixedUpdate()
@@ -131,23 +143,24 @@ public class Player : MonoBehaviour
         bool walkFast = playerInput.walkFastInput;
 
         movement.x = horizontal;
-        movement.y = rb.velocity.y;
+        movement.y = 0f;
 
-        if(isClimbingLadder)
+        if (isClimbingLadder)
         {
             vertical = playerInput.verticalInput;
             movement.y = vertical;
         }
 
-        movement.Normalize();
 
         if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
             if (!takingDamage)
             {
-                rb.MovePosition((Vector2)transform.position + (movement * movementSpeed * Time.deltaTime));
+                movement.Normalize();
+                rb.velocity = new Vector2(movement.x * movementSpeed * Time.deltaTime, rb.velocity.y);
             }
         }
+        
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
@@ -197,7 +210,7 @@ public class Player : MonoBehaviour
     {
         if(axeDrawn)
         {
-            if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+            if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Hurt") && !PlayerStats.IsDead)
             {
                 playerCombat.InvokeAxeAttack();
                 animator.SetTrigger("AxeAttack");
@@ -207,7 +220,7 @@ public class Player : MonoBehaviour
 
         if (knifeDrawn)
         {
-            if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+            if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Hurt") && !PlayerStats.IsDead)
             {
                 playerCombat.InvokeKnifeAttack();
                 animator.SetTrigger("KnifeAttack");

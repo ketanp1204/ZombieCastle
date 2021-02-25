@@ -203,4 +203,10 @@ public class GameSession : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+
+    public static void ResetPlayerStats()
+    {
+        PlayerStats.isFirstScene = true;
+        PlayerStats.IsDead = false;
+    }
 }

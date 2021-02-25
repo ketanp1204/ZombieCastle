@@ -47,12 +47,12 @@ public class EnemyAI : MonoBehaviour
         followPath = true;
         isAttacking = false;
 
-        InvokeRepeating("UpdatePath", 1f, pathUpdateSeconds);
+        InvokeRepeating("UpdatePath", 3f, pathUpdateSeconds);
     }
 
     void UpdatePath()
     {
-        if (followPath && !EnemyCombat.instance.IsDead)
+        if (followPath && !EnemyCombat.instance.IsDead && !PlayerStats.IsDead)
         {
             target = Player.instance.pathfindingTarget;
             if (seeker.IsDone())
@@ -65,8 +65,13 @@ public class EnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(followPath && !EnemyCombat.instance.IsDead)
+        if(followPath && !EnemyCombat.instance.IsDead && !PlayerStats.IsDead)
             FollowPath();
+
+        if (PlayerStats.IsDead)
+        {
+            enemyCombat.StopAttack();
+        }
     }
 
     private void FollowPath()
@@ -75,7 +80,7 @@ public class EnemyAI : MonoBehaviour
             return;
 
         Vector2 direction;
-        Vector2 force;
+        Vector2 movement;
 
         float distanceToPlayer = Vector2.Distance(transform.position, target.position);
 
@@ -84,20 +89,22 @@ public class EnemyAI : MonoBehaviour
         {
             followPath = false;
             isAttacking = true;
-            force = Vector2.zero;
+            movement = Vector2.zero;
             enemyCombat.InvokeAttack();
             StartCoroutine(WaitForPlayerToMoveAway());
         } 
         else
         {
             direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-            
-            force = new Vector2(direction.x * moveForceMultiplier, rb.velocity.y) * speed * Time.fixedDeltaTime;
+
+            //movement.x = direction.x * moveForceMultiplier;
+            movement.x = direction.x;
+            movement.y = 0f;
 
             // Move the enemy
             if (!EnemyCombat.instance.takingDamage)
             {
-                rb.AddForce(force);
+                rb.velocity = new Vector2(movement.x * speed * Time.deltaTime, rb.velocity.y);
             }
 
             // Next Waypoint
@@ -108,12 +115,12 @@ public class EnemyAI : MonoBehaviour
             }
 
             // Update facing direction of enemy
-            if (force.x >= 0.01f)
+            if (movement.x >= 0.01f)
             {
                 UpdateFaceDirection(true);
                 facingRight = true;
             }
-            else if (force.x <= -0.01f)
+            else if (movement.x <= -0.01f)
             {
                 UpdateFaceDirection(false);
                 facingRight = false;
@@ -121,7 +128,7 @@ public class EnemyAI : MonoBehaviour
         }
 
         // Set movement animation parameters
-        SetMovementAnimationParameters(force);
+        SetMovementAnimationParameters(movement);
     }
 
     public void UpdateFaceDirection(bool isFacingRight)

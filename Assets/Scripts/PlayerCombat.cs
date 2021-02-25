@@ -42,11 +42,7 @@ public class PlayerCombat : MonoBehaviour
     // Cached References
     public HealthBar healthBar;
     public Transform bloodParticlesStartPosition;
-    private SceneType sceneTypeReference;
     private Animator animator;
-
-    // Private variables
-    private int sceneType;
 
     void Start()
     {
@@ -55,19 +51,7 @@ public class PlayerCombat : MonoBehaviour
             instance = this;
         }
 
-        sceneTypeReference = FindObjectOfType<SceneType>();
         animator = GetComponent<Animator>();
-
-        if (sceneTypeReference.type == SceneType.SceneTypes.S_TwoD)
-        {
-            sceneType = 1;
-        }
-        else
-        {
-            sceneType = 2;
-        }
-
-        knifeHitbox_L.SetActive(false);
     }
 
     public void StopAttack()
@@ -75,22 +59,10 @@ public class PlayerCombat : MonoBehaviour
         canAttack = false;
     }
 
-    /*
-    public void InvokeAxeAttack()
-    {
-        AxeAttack();
-    }
-    
-    public void InvokeKnifeAttack()
-    {
-        KnifeAttack();
-    }
-    */
-
     public void InvokeAxeAttack()
     {
         canAttack = true;
-        if (!isAttacking_Axe && !Player.instance.IsDead)
+        if (!isAttacking_Axe && !PlayerStats.IsDead)
         {
             isAttacking_Axe = true;
             StartCoroutine(AttackAxe());
@@ -100,68 +72,20 @@ public class PlayerCombat : MonoBehaviour
     public void InvokeKnifeAttack()
     {
         canAttack = true;
-        if (!isAttacking_Knife && !Player.instance.IsDead)
+        if (!isAttacking_Knife && !PlayerStats.IsDead)
         {
             isAttacking_Knife = true;
             StartCoroutine(AttackKnife());
         }
     }
 
-    /*
-    private void AxeAttack()
-    {
-        // Play axe hit sound
-        AudioManager.PlaySoundAtPosition(AudioManager.Sound.PlayerAxeHit, transform.position);
-
-        // Detect enemies in range of attack
-        Collider2D[] hitEnemies;
-
-        if (sceneType == 1)
-        {
-            if (Player.PlayerFacingRight() == true)
-            {
-                // Detect enemies in range of right attack position
-                hitEnemies = Physics2D.OverlapCircleAll(attack1RightPoint.position, attack1Range, enemyLayers);
-            }
-            else
-            {
-                // Detect enemies in range of left attack position
-                hitEnemies = Physics2D.OverlapCircleAll(attack1LeftPoint.position, attack1Range, enemyLayers);
-            }
-        }
-        else
-        {
-            if (PlayerTopDown.PlayerFacingRight() == true)
-            {
-                // Detect enemies in range of right attack position
-                hitEnemies = Physics2D.OverlapCircleAll(attack1RightPoint.position, attack1Range, enemyLayers);
-            }
-            else
-            {
-                // Detect enemies in range of left attack position
-                hitEnemies = Physics2D.OverlapCircleAll(attack1LeftPoint.position, attack1Range, enemyLayers);
-            }
-        }
-        
-        // Damage them
-        foreach(Collider2D enemy in hitEnemies)
-        {
-            if(!enemy.transform.parent.gameObject.GetComponent<EnemyCombat>().IsDead)
-            {
-                enemy.transform.parent.gameObject.GetComponent<EnemyCombat>().TakeDamage(Player.instance.pathfindingTarget, attack1Damage);
-                // enemy.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            }
-        }
-
-    }
-    */
-
+    // TODO: Debug: Every second axe attack does not move the hitbox
     private IEnumerator AttackAxe()
     {
         bool facingRight = Player.PlayerFacingRight();
         if (canAttack && !Player.instance.takingDamage)
         {
-            if (Player.instance.IsDead)
+            if (PlayerStats.IsDead)
             {
                 canAttack = false;
                 isAttacking_Axe = false;
@@ -199,7 +123,7 @@ public class PlayerCombat : MonoBehaviour
         bool facingRight = Player.PlayerFacingRight();
         if (canAttack && !Player.instance.takingDamage)
         {
-            if (Player.instance.IsDead)
+            if (PlayerStats.IsDead)
             {
                 canAttack = false;
                 isAttacking_Knife = false;
@@ -231,57 +155,6 @@ public class PlayerCombat : MonoBehaviour
             knifeHitbox_L.SetActive(false);
         }
     }
-
-    /*
-    void KnifeAttack()
-    {
-        // TODO: Play knife hit sound
-
-        // Enable knife attack hitbox
-        knifeAttackHitboxGO.SetActive(true);
-
-        // Detect enemies in range of attack
-        Collider2D[] hitEnemies;
-
-        if (sceneType == 1)
-        {
-            if (Player.PlayerFacingRight() == true)
-            {
-                // Detect enemies in range of attack
-                hitEnemies = Physics2D.OverlapCircleAll(knifeAttackHitbox_R.position, knifeAttackRange, enemyLayers);
-            }
-            else
-            {
-                // Detect enemies in range of attack
-                hitEnemies = Physics2D.OverlapCircleAll(knifeAttackHitbox_L.position, knifeAttackRange, enemyLayers);
-            }
-        }
-        else
-        {
-            if (PlayerTopDown.PlayerFacingRight() == true)
-            {
-                // Detect enemies in range of attack
-                hitEnemies = Physics2D.OverlapCircleAll(knifeAttackHitbox_R.position, knifeAttackRange, enemyLayers);
-            }
-            else
-            {
-                // Detect enemies in range of attack
-                hitEnemies = Physics2D.OverlapCircleAll(knifeAttackHitbox_L.position, knifeAttackRange, enemyLayers);
-            }
-        }
-        
-
-        // Damage them
-        foreach (Collider2D enemy in hitEnemies)
-        {
-            if(!enemy.transform.parent.gameObject.GetComponent<EnemyCombat>().IsDead)
-            {
-                enemy.transform.parent.gameObject.GetComponent<EnemyCombat>().TakeDamage(Player.instance.pathfindingTarget, knifeDamage);
-                // enemy.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            }
-        }
-    }
-    */
 
     public void TakeDamage(Transform enemyPos, int damage)
     {
@@ -375,7 +248,7 @@ public class PlayerCombat : MonoBehaviour
         yield return new WaitForSeconds(delay);
         Destroy(player);
 
-        PlayerStats.isFirstScene = true;
-        SceneManager.LoadScene("CastleLobby");
+        GameSession.ResetPlayerStats();
+        SceneManager.LoadScene("Room1");        // for testing, change later
     }
 }
