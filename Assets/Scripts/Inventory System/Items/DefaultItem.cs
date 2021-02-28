@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewItem", menuName = "Item/Simple Item")]
-public class Item : ScriptableObject
+[CreateAssetMenu(fileName = "DefaultObject", menuName = "Inventory System/Items/Default Item")]
+public class DefaultItem : ItemObject
 {
-    public string itemName;
-    public string itemDescription;      // Description of the item
+    public void Awake()
+    {
+        type = ItemType.Default;
+    }
+
     public string sceneName;            // Name of the scene in which the item is present
+
     [TextArea(4, 10)]
     public string playerComment;        // Comment of the player on seeing this item
 
@@ -24,7 +28,4 @@ public class Item : ScriptableObject
     [Header("For each textbox, character limit is 344")]
     [TextArea(4, 7)]
     public string[] bookTexts;          // Book texts     
-
-    [Header("Sprites")]
-    public Sprite inventorySprite;
 }

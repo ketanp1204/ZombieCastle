@@ -232,7 +232,7 @@ public class PlayerCombat : MonoBehaviour
         OnDeath?.Invoke(this);
 
         // Disable Health Bar
-        healthBar.gameObject.SetActive(false);
+        // healthBar.gameObject.SetActive(false);
 
         StartCoroutine(DestroyPlayerAndReturnToLobby(gameObject, 5f));
     }

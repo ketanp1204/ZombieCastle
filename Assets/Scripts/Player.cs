@@ -18,12 +18,13 @@ public class Player : MonoBehaviour
     private PlayerCombat playerCombat;              // Reference To The PlayerCombat Class
     private Rigidbody2D rb;                         // Reference To The Player's Rigidbody Component
     private Animator animator;                      // Reference To The Player's Animator Component
-    private HealthBar healthBar;                    // Reference To The Player's Health Bar 
     private UnityEngine.Object playerReference;
     public LayerMask groundLayerMask;
 
     // Public Cached References
     public Transform pathfindingTarget;             // Reference to the player's pathfinding target
+    public HealthBar healthBar;                     // Reference To The Player's Health Bar 
+    public InventoryObject inventory;               // Reference to the Player's inventory system object
 
     // Variables : Player
     [HideInInspector]
@@ -31,14 +32,13 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public bool axeDrawn;                           // Bool to store whether axe is drawn
     [HideInInspector]
-    public bool knifeDrawn;                           // Bool to store whether knife is drawn
+    public bool knifeDrawn;                         // Bool to store whether knife is drawn
     private bool facingRight;                       // Player's direction of facing
     [HideInInspector]
     public bool isClimbingLadder = false;           // Bool to store whether player is climbing a ladder
     [HideInInspector]
     public float movementSpeed;                     // Player's Current Movement Speed;
-    public float walkSpeed;                         // Player's Walking Speed
-    public float walkFastSpeed;                     // Player's Running Speed
+    public float walkSpeed;                         // Player's Walking Speed/
     private Vector2 movement;                       // Player's Movement Vector
     public int maxHealth = 100;                     // Player's Maximum Health
     [HideInInspector]
@@ -77,7 +77,6 @@ public class Player : MonoBehaviour
         playerCombat = GetComponent<PlayerCombat>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        healthBar = GetComponentInChildren<HealthBar>();
     }
 
     private void InitializeValues()
@@ -112,7 +111,6 @@ public class Player : MonoBehaviour
         animator.SetFloat("Vertical", 0f);
         animator.SetFloat("Magnitude", 0f);
         animator.SetFloat("FaceDir", -1f);
-        animator.SetBool("WalkFast", false);
         animator.SetBool("IsDead", false);
         animator.SetBool("AxeDrawn", false);
         animator.SetBool("KnifeDrawn", true);
@@ -123,10 +121,13 @@ public class Player : MonoBehaviour
         // Moving the player
         if (movePlayer)
         {
-            HandleMovement();
+            if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && !takingDamage)
+            {
+                HandleMovement();
 
-            // Flip the player direction depending on where he is facing
-            FlipPlayerDirection();
+                // Flip the player direction depending on where he is facing
+                FlipPlayerDirection();
+            }
         }
 
         // Player attacks enemies
@@ -140,7 +141,6 @@ public class Player : MonoBehaviour
     {
         float horizontal, vertical;
         horizontal = playerInput.horizontalInput;
-        bool walkFast = playerInput.walkFastInput;
 
         movement.x = horizontal;
         movement.y = 0f;
@@ -151,32 +151,12 @@ public class Player : MonoBehaviour
             movement.y = vertical;
         }
 
-
-        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
-        {
-            if (!takingDamage)
-            {
-                movement.Normalize();
-                rb.velocity = new Vector2(movement.x * movementSpeed * Time.deltaTime, rb.velocity.y);
-            }
-        }
+        movement.Normalize();
+        rb.velocity = new Vector2(movement.x * movementSpeed * Time.deltaTime, rb.velocity.y);
         
-
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Magnitude", movement.magnitude);
-
-        if (walkFast == true)
-        {
-            animator.SetBool("WalkFast", true);
-            movementSpeed = walkFastSpeed;
-        }
-
-        if (walkFast == false)
-        {
-            animator.SetBool("WalkFast", false);
-            movementSpeed = walkSpeed;
-        }
     }
 
     private void FlipPlayerDirection()
@@ -196,13 +176,6 @@ public class Player : MonoBehaviour
                 // Set animation parameter
                 animator.SetFloat("FaceDir", -1f);
             }
-
-            /*
-            // Multiply the scale of the player object to flip the sprite
-            Vector3 scale = transform.localScale;
-            scale.x *= -1;
-            transform.localScale = scale;
-            */
         }
     }
 
@@ -242,6 +215,9 @@ public class Player : MonoBehaviour
     public static void StopMovement()
     {
         instance.movePlayer = false;
+        instance.animator.SetFloat("Horizontal", 0f);
+        instance.animator.SetFloat("Vertical", 0f);
+        instance.animator.SetFloat("Magnitude", 0f);
     }
 
     public static void EnableMovement()

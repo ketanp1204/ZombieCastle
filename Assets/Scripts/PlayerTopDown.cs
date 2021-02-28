@@ -18,12 +18,13 @@ public class PlayerTopDown : MonoBehaviour
     private PlayerCombat playerCombat;              // Reference to the PlayerCombat Class
     private Rigidbody2D rb;                         // Reference to the Player's Rigidbody Component
     private Animator animator;                      // Reference to the Player's Animator Component
-    private HealthBar healthBar;                    // Reference to the Player's Health Bar 
     private UnityEngine.Object playerReference;     // Reference to The Player Gameobject references used to respawn
 
     // Public Cached References
     public GameObject rightSelectionArea;           // Reference to the right side selection area collider
     public GameObject leftSelectionArea;            // Reference to the left side selection area collider
+    public HealthBar healthBar;                     // Reference to the Player's Health Bar 
+    public InventoryObject inventory;               // Reference to the Player's inventory system object
 
     // Variables : Player
     [HideInInspector]
@@ -87,7 +88,6 @@ public class PlayerTopDown : MonoBehaviour
         playerCombat = GetComponent<PlayerCombat>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        healthBar = GetComponentInChildren<HealthBar>();
     }
 
     private void InitializeValues()
@@ -140,6 +140,7 @@ public class PlayerTopDown : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Magnitude", movement.magnitude);
 
+        /*
         if (walkFast == true)
         {
             animator.SetBool("WalkFast", true);
@@ -151,6 +152,7 @@ public class PlayerTopDown : MonoBehaviour
             animator.SetBool("WalkFast", false);
             movementSpeed = walkSpeed;
         }
+        */
     }
 
     private void FlipPlayerDirection()
@@ -278,6 +280,9 @@ public class PlayerTopDown : MonoBehaviour
     public static void StopMovement()
     {
         instance.movePlayer = false;
+        instance.animator.SetFloat("Horizontal", 0f);
+        instance.animator.SetFloat("Vertical", 0f);
+        instance.animator.SetFloat("Magnitude", 0f);
     }
 
     public static void EnableMovement()
