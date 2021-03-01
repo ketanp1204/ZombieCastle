@@ -59,7 +59,7 @@ public class PlayerTopDown : MonoBehaviour
         }
 
         SetReferences();
-        InitializeValues();
+        Initialization();
 
         if (PlayerStats.isFirstScene)
         {
@@ -90,7 +90,7 @@ public class PlayerTopDown : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void InitializeValues()
+    private void Initialization()
     {
         facingRight = true;
         movePlayer = true;
@@ -101,6 +101,20 @@ public class PlayerTopDown : MonoBehaviour
 
         rightSelectionArea.SetActive(true);
         leftSelectionArea.SetActive(false);
+
+        if (PlayerStats.isFirstScene)
+        {
+            currentHealth = maxHealth;
+            PlayerStats.currentHealth = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
+            PlayerStats.isFirstScene = false;
+        }
+        else
+        {
+            currentHealth = PlayerStats.currentHealth;
+            healthBar.SetMaxHealth(maxHealth);
+            healthBar.SetHealth(currentHealth);
+        }
     }
 
     void FixedUpdate()
@@ -290,6 +304,12 @@ public class PlayerTopDown : MonoBehaviour
         instance.movePlayer = true;
     }
 
+    // Returns the inventory scriptable object attached to this player
+    public static InventoryObject GetInventory()
+    {
+        return instance.inventory;
+    }
+
     // Sets the AxeDrawn animation parameter to true
     public static void EquipAxe()
     {
@@ -324,15 +344,5 @@ public class PlayerTopDown : MonoBehaviour
     {
         instance.knifeDrawn = false;
         instance.animator.SetBool("KnifeDrawn", false);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            rb.velocity = Vector2.zero;
-            animator.SetFloat("Magnitude", 0f);
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        }
     }
 }

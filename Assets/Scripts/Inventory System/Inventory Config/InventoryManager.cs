@@ -7,13 +7,17 @@ using TMPro;
 public class InventoryManager : MonoBehaviour
 {
     // Public Cached References
-    public InventoryObject inventory;
-    public GameObject inventorySlotPrefab;
+    public GameObject weaponGridSlotPrefab;
+    public GameObject itemGridSlotPrefab;
 
     // Private Cached References
-    private List<GameObject> inventorySlots = new List<GameObject>();
+    private InventoryObject inventory;
+    private List<GameObject> weaponSlots = new List<GameObject>();
+    private List<GameObject> itemSlots = new List<GameObject>();
     private CanvasGroup inventoryCanvasGroup;
-    private PlayerInput playerInput;
+
+    private Transform weaponGridContainer;
+    private Transform itemGridContainer;
 
     // Private variables
     private bool isInventoryOpen = false;
@@ -21,8 +25,27 @@ public class InventoryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SetReferences();
+
+        // Get inventory scriptable object from player
+        if (Player.instance)
+        {
+            LoadInventory(Player.GetInventory());
+        }
+        else if(PlayerTopDown.instance)
+        {
+            LoadInventory(PlayerTopDown.GetInventory());
+        }
+
+        // Fill default inventory slots
+        FillInventorySlots();
+    }
+
+    private void SetReferences()
+    {
+        weaponGridContainer = transform.GetChild(0).Find("WeaponGrid");
+        itemGridContainer = transform.GetChild(0).Find("ItemsGrid");
         inventoryCanvasGroup = GetComponent<CanvasGroup>();
-        CreateDisplay();
     }
 
     // Update is called once per frame
@@ -35,6 +58,11 @@ public class InventoryManager : MonoBehaviour
             else if (isInventoryOpen)
                 HideInventory();
         }
+    }
+
+    private void LoadInventory(InventoryObject _inventory)
+    {
+        inventory = _inventory;
     }
 
     private void ShowInventory()
@@ -86,39 +114,79 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    private void CreateDisplay()
+    private void FillInventorySlots()
     {
         for (int i = 0; i < inventory.Container.Count; i++)
         {
-            // Instantiate inventory display slot
-            GameObject slot = Instantiate(inventorySlotPrefab, transform.GetChild(0));
-            inventorySlots.Add(slot);
-
-            // Get Graphic Image component
-            Image graphic = slot.GetComponentInChildren<Image>();
-
-            // Get item sprite from ScriptableObject data
-            graphic.sprite = inventory.Container[i].item.inventorySprite;
-
-            // Set the display image component's alpha to 1
-            Color c = graphic.color;
-            c.a = 1f;
-            graphic.color = c;
-
-            // Get AmountText TextMeshProUGUI component
-            TextMeshProUGUI amountText = slot.transform.Find("AmountText").GetComponent<TextMeshProUGUI>();
-
-            // Set AmountText text if quantity is greater than 1
-            if (inventory.Container[i].amount > 1)
+            // Check type of item : Add to weapon grid if weapon otherwise into item grid
+            if (inventory.Container[i].item.type == ItemType.Weapon)
             {
-                amountText.text = inventory.Container[i].amount.ToString();
+                // Instantiate weapon grid slot
+                GameObject weaponSlot = Instantiate(weaponGridSlotPrefab, weaponGridContainer);
+
+                // Add to local weapon slots list
+                weaponSlots.Add(weaponSlot);
+
+                // Get ItemIcon image component
+                Image weaponIcon = weaponSlot.transform.Find("ItemIcon").GetComponent<Image>();
+
+                // Set ItemIcon image sprite from ScriptableObject
+                weaponIcon.sprite = inventory.Container[i].item.inventorySprite;
+
+                // Set ItemIcon image component's alpha to 1
+                Color c = weaponIcon.color;
+                c.a = 1f;
+                weaponIcon.color = c;
+
+                // Get AmountText TextMeshProUGUI component
+                TextMeshProUGUI amountText = weaponSlot.transform.Find("AmountText").GetComponent<TextMeshProUGUI>();
+
+                // Set AmountText if quantity is greater than 1
+                if (inventory.Container[i].amount > 1)
+                {
+                    amountText.text = inventory.Container[i].amount.ToString();
+                }
+
+                // Get NameText TextMeshProUGUI component
+                TextMeshProUGUI nameText = weaponSlot.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
+
+                // Set NameText 
+                nameText.text = inventory.Container[i].item.itemName;
             }
+            else
+            {
+                // Instantiate item grid slot
+                GameObject itemSlot = Instantiate(itemGridSlotPrefab, itemGridContainer);
 
-            // Get NameText TextMeshProUGUI component
-            TextMeshProUGUI nameText = slot.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
+                // Add to local item slots list
+                itemSlots.Add(itemSlot);
 
-            // Set NameText text
-            nameText.text = inventory.Container[i].item.itemName;
+                // Get ItemIcon image component
+                Image itemIcon = itemSlot.transform.Find("ItemIcon").GetComponent<Image>();
+
+                // Set ItemIcon image sprite from ScriptableObject 
+                itemIcon.sprite = inventory.Container[i].item.inventorySprite;
+
+                // Set ItemIcon image component's alpha to 1
+                Color c = itemIcon.color;
+                c.a = 1f;
+                itemIcon.color = c;
+
+                // Get AmountText TextMeshProUGUI component
+                TextMeshProUGUI amountText = itemSlot.transform.Find("AmountText").GetComponent<TextMeshProUGUI>();
+
+                // Set AmountText text if quantity is greater than 1
+                if (inventory.Container[i].amount > 1)
+                {
+                    amountText.text = inventory.Container[i].amount.ToString();
+                }
+
+                // Get NameText TextMeshProUGUI component
+                TextMeshProUGUI nameText = itemSlot.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
+
+                // Set NameText 
+                nameText.text = inventory.Container[i].item.itemName;
+            }
         }
     }
 }

@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
         }
 
         SetReferences();
-        InitializeValues();
+        Initialization();
 
         // Ignore player collisions with dead zombies
         Physics2D.IgnoreLayerCollision(gameObject.layer, 13);
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void InitializeValues()
+    private void Initialization()
     {
         facingRight = false;
         movePlayer = true;
@@ -223,6 +223,12 @@ public class Player : MonoBehaviour
     public static void EnableMovement()
     {
         instance.movePlayer = true;
+    }
+
+    // Returns the inventory scriptable object attached to this player
+    public static InventoryObject GetInventory()
+    {
+        return instance.inventory;
     }
 
     // Sets the AxeDrawn animation parameter to true
