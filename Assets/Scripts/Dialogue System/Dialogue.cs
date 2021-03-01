@@ -7,6 +7,7 @@ public class Dialogue : MonoBehaviour
 {
     // Private Cached References
     private UIReferences uiReferences;
+
     // Dialogue Box
     private CanvasGroup dialogueBoxCG;                                                              // Reference to the CanvasGroup of the dialogue box
     private TextMeshProUGUI dialogueText;                                                           // Reference to the text area of the dialogue box

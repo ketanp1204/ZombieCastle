@@ -15,5 +15,5 @@ public abstract class ItemObject : ScriptableObject
     [TextArea(6, 10)]
     public string itemDescription;      // Description of the item
 
-    public ItemType type;
+    public ItemType itemType;
 }

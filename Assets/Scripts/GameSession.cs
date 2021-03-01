@@ -23,13 +23,11 @@ public class GameSession : MonoBehaviour
 
     // Public Cached References
     [HideInInspector]
-    public UIReferences uiReferences;                                // Reference to the UIReferences GameObject
+    public UIReferences uiReferences;                               // Reference to the UIReferences GameObject
     [HideInInspector]
     public Canvas dynamicUICanvas;                                  // Reference to the DynamicUI Canvas
     [HideInInspector]
     public Camera mainCamera;                                       // Reference to the MainCamera 
-    [HideInInspector]
-    public GameObject objectNameGO;                                 // Reference to the object name box
     [HideInInspector]
     public GameObject dialogueManager;                              // Reference to the dialogue manager
     

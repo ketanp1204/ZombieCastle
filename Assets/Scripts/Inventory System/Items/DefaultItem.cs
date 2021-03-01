@@ -7,7 +7,7 @@ public class DefaultItem : ItemObject
 {
     public void Awake()
     {
-        type = ItemType.Default;
+        itemType = ItemType.Default;
     }
 
     public string sceneName;            // Name of the scene in which the item is present

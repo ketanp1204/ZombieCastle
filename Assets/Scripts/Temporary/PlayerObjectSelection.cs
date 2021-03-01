@@ -6,35 +6,24 @@ using TMPro;
 public class PlayerObjectSelection : MonoBehaviour
 {
     // Private Cached References
-    private Canvas dynamicUICanvas;
     private GameObject dialogueManager;
     private Collider2D collidedObject;
-
-    private GameObject objectNameGO;
-    private bool nameBoxReplaced = false;
+    private Dialogue dialogue;
     private bool triggerStay = false;
-    private string previousObjectName;
     private string[] sentenceArray;
     private string[] noteTextsArray;
     private string[] noteResponseTextsArray;
     private string[] bookTextsArray;
-
-    void OnEnable()
-    {
-        dynamicUICanvas = GameSession.instance.dynamicUICanvas;
-    }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && triggerStay)
         {
             dialogueManager = GameSession.instance.dialogueManager;
-            Dialogue dialogue = dialogueManager.GetComponent<Dialogue>();
+            dialogue = dialogueManager.GetComponent<Dialogue>();
 
             if (!dialogue.IsActive())                                                   
             {
-                objectNameGO.SetActive(false);                                                          // Hide the object name display
-
                 ObjectProperties objectProperties = collidedObject.GetComponent<ObjectProperties>();
                 sentenceArray = new string[] { objectProperties.objectData.playerComment };
 
@@ -69,33 +58,13 @@ public class PlayerObjectSelection : MonoBehaviour
     {
         if (collision.CompareTag("Object"))
         {
-            collidedObject = collision;
             triggerStay = true;
 
-            // Get name of newly found object
-            string objectName = collision.GetComponent<ObjectProperties>().objectName;
+            // Store the collided object
+            collidedObject = collision;
 
-            // Show object name
-            if (objectNameGO != null)
-            {
-                if (!previousObjectName.Equals(objectName))
-                {
-                    previousObjectName = objectNameGO.GetComponentInChildren<TextMeshProUGUI>().text;
-                    Destroy(objectNameGO);
-                    nameBoxReplaced = true;
-                }
-            }
-            else
-            {
-                previousObjectName = "";
-            }
-
-            // Instantiate ObjectName prefab
-            dynamicUICanvas = GameSession.instance.dynamicUICanvas;
-            objectNameGO = Instantiate(GameAssets.instance.objectNamePrefab, dynamicUICanvas.transform);
-
-            // Set ObjectName text
-            objectNameGO.GetComponentInChildren<TextMeshProUGUI>().text = objectName;
+            // Enable Glow
+            collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
         }
     }
 
@@ -105,18 +74,8 @@ public class PlayerObjectSelection : MonoBehaviour
         {
             triggerStay = false;
 
-            if (!nameBoxReplaced)
-            {
-                Destroy(objectNameGO);
-            }
-            else
-            {
-                nameBoxReplaced = false;
-                if (previousObjectName != "")
-                {
-                    objectNameGO.GetComponentInChildren<TextMeshProUGUI>().text = previousObjectName;
-                }
-            }
+            // Disable Glow
+            collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = false;
         }
     }
 }

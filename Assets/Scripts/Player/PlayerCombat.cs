@@ -10,6 +10,12 @@ public class PlayerCombat : MonoBehaviour
     // Singleton
     public static PlayerCombat instance;
 
+    public enum WeaponTypes
+    {
+        Knife,
+        Axe
+    }
+    
     [Header("Axe Attack")]
     public int axeDamage = 20;                                                          // Damage caused to enemy
     public float axeAttackRepeatTime = 1f;                                              // Delay between successive attacks
@@ -82,77 +88,158 @@ public class PlayerCombat : MonoBehaviour
     // TODO: Debug: Every second axe attack does not move the hitbox
     private IEnumerator AttackAxe()
     {
-        bool facingRight = Player.PlayerFacingRight();
-        if (canAttack && !Player.instance.takingDamage)
+        if (Player.instance)
         {
-            if (PlayerStats.IsDead)
+            bool facingRight = Player.PlayerFacingRight();
+            if (canAttack && !Player.instance.takingDamage)
             {
-                canAttack = false;
-                isAttacking_Axe = false;
-                yield break;
-            }
+                if (PlayerStats.IsDead)
+                {
+                    canAttack = false;
+                    isAttacking_Axe = false;
+                    yield break;
+                }
 
-            // Enable hitbox
+                // Enable hitbox
+                if (facingRight)
+                {
+                    axeHitbox_R.SetActive(true);
+                    axeHitboxAnimator_R.SetTrigger("Attack");
+                }
+                else
+                {
+                    axeHitbox_L.SetActive(true);
+                    axeHitboxAnimator_L.SetTrigger("Attack");
+                }
+
+                // Wait for attack to end
+                yield return new WaitForSeconds(axeAttackRepeatTime);
+            }
+            isAttacking_Axe = false;
             if (facingRight)
             {
-                axeHitbox_R.SetActive(true);
-                axeHitboxAnimator_R.SetTrigger("Attack");
+                axeHitbox_R.SetActive(false);
             }
             else
             {
-                axeHitbox_L.SetActive(true);
-                axeHitboxAnimator_L.SetTrigger("Attack");
+                axeHitbox_L.SetActive(false);
             }
-
-            // Wait for attack to end
-            yield return new WaitForSeconds(axeAttackRepeatTime);
-        }
-        isAttacking_Axe = false;
-        if (facingRight)
-        {
-            axeHitbox_R.SetActive(false);
         }
         else
         {
-            axeHitbox_L.SetActive(false);
+            bool facingRight = PlayerTopDown.PlayerFacingRight();
+            if (canAttack && !PlayerTopDown.instance.takingDamage)
+            {
+                if (PlayerStats.IsDead)
+                {
+                    canAttack = false;
+                    isAttacking_Axe = false;
+                    yield break;
+                }
+
+                // Enable hitbox
+                if (facingRight)
+                {
+                    axeHitbox_R.SetActive(true);
+                    axeHitboxAnimator_R.SetTrigger("Attack");
+                }
+                else
+                {
+                    axeHitbox_L.SetActive(true);
+                    axeHitboxAnimator_L.SetTrigger("Attack");
+                }
+
+                // Wait for attack to end
+                yield return new WaitForSeconds(axeAttackRepeatTime);
+            }
+            isAttacking_Axe = false;
+            if (facingRight)
+            {
+                axeHitbox_R.SetActive(false);
+            }
+            else
+            {
+                axeHitbox_L.SetActive(false);
+            }
         }
+        
     }
 
     private IEnumerator AttackKnife()
     {
-        bool facingRight = Player.PlayerFacingRight();
-        if (canAttack && !Player.instance.takingDamage)
+        if (Player.instance != null)
         {
-            if (PlayerStats.IsDead)
+            bool facingRight = Player.PlayerFacingRight();
+            if (canAttack && !Player.instance.takingDamage)
             {
-                canAttack = false;
-                isAttacking_Knife = false;
-                yield break;
-            }
+                if (PlayerStats.IsDead)
+                {
+                    canAttack = false;
+                    isAttacking_Knife = false;
+                    yield break;
+                }
 
-            // Enable hitbox and play animation
+                // Enable hitbox and play animation
+                if (facingRight)
+                {
+                    knifeHitbox_R.SetActive(true);
+                    knifeHitboxAnimator_R.SetTrigger("Attack");
+                }
+                else
+                {
+                    knifeHitbox_L.SetActive(true);
+                    knifeHitboxAnimator_L.SetTrigger("Attack");
+                }
+
+                // Wait for attack to end
+                yield return new WaitForSeconds(knifeAttackRepeatTime);
+            }
+            isAttacking_Knife = false;
             if (facingRight)
             {
-                knifeHitbox_R.SetActive(true);
-                knifeHitboxAnimator_R.SetTrigger("Attack");
+                knifeHitbox_R.SetActive(false);
             }
             else
             {
-                knifeHitbox_L.SetActive(true);
-                knifeHitboxAnimator_L.SetTrigger("Attack");
+                knifeHitbox_L.SetActive(false);
             }
-
-            // Wait for attack to end
-            yield return new WaitForSeconds(knifeAttackRepeatTime);
-        }
-        isAttacking_Knife = false;
-        if (facingRight)
-        {
-            knifeHitbox_R.SetActive(false);
         }
         else
         {
-            knifeHitbox_L.SetActive(false);
+            bool facingRight = PlayerTopDown.PlayerFacingRight();
+            if (canAttack && !PlayerTopDown.instance.takingDamage)
+            {
+                if (PlayerStats.IsDead)
+                {
+                    canAttack = false;
+                    isAttacking_Knife = false;
+                    yield break;
+                }
+
+                // Enable hitbox and play animation
+                if (facingRight)
+                {
+                    knifeHitbox_R.SetActive(true);
+                    knifeHitboxAnimator_R.SetTrigger("Attack");
+                }
+                else
+                {
+                    knifeHitbox_L.SetActive(true);
+                    knifeHitboxAnimator_L.SetTrigger("Attack");
+                }
+
+                // Wait for attack to end
+                yield return new WaitForSeconds(knifeAttackRepeatTime);
+            }
+            isAttacking_Knife = false;
+            if (facingRight)
+            {
+                knifeHitbox_R.SetActive(false);
+            }
+            else
+            {
+                knifeHitbox_L.SetActive(false);
+            }
         }
     }
 
@@ -162,21 +249,40 @@ public class PlayerCombat : MonoBehaviour
         {
             // Create blood particles
             GameObject bloodParticles = Instantiate(GameAssets.instance.bloodParticles, bloodParticlesStartPosition);
-            if (Player.PlayerFacingRight())
+
+            if (Player.instance != null)
             {
-                bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                if (Player.PlayerFacingRight())
+                {
+                    bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                }
+                else
+                {
+                    bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                }
+
+                // Set player taking damage bool on Player script to stop keybaord movement
+                Player.instance.takingDamage = true;
             }
             else
             {
-                bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                if (PlayerTopDown.PlayerFacingRight())
+                {
+                    bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                }
+                else
+                {
+                    bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                }
+
+                // Set player taking damage bool on Player script to stop keybaord movement
+                PlayerTopDown.instance.takingDamage = true;
             }
+            
             StartCoroutine(DestroyGameObjectAfterDelay(bloodParticles, 5f));
 
             // Prevent player attack
             canAttack = false;
-
-            // Set player taking damage bool on Player script to stop keybaord movement
-            Player.instance.takingDamage = true;
 
             // Reduce health
             PlayerStats.currentHealth -= damage;
@@ -207,7 +313,10 @@ public class PlayerCombat : MonoBehaviour
             // Push push to the right
             rb.velocity = new Vector2(pushDistanceOnHit, 0);
             yield return new WaitForSeconds(0.5f);
-            Player.instance.takingDamage = false;
+            if (Player.instance != null)
+                Player.instance.takingDamage = false;
+            else
+                PlayerTopDown.instance.takingDamage = false;
             canAttack = true;
         }
         else
@@ -215,7 +324,10 @@ public class PlayerCombat : MonoBehaviour
             // Push player to the left
             rb.velocity = new Vector2(-pushDistanceOnHit, 0);
             yield return new WaitForSeconds(0.5f);
-            Player.instance.takingDamage = false;
+            if (Player.instance != null)
+                Player.instance.takingDamage = false;
+            else
+                PlayerTopDown.instance.takingDamage = false;
             canAttack = true;
         }
     }
@@ -223,7 +335,11 @@ public class PlayerCombat : MonoBehaviour
     void Die()
     {
         PlayerStats.IsDead = true;
-        Player.StopMovement();
+        if (Player.instance != null)
+            Player.StopMovement();
+        else
+            PlayerTopDown.StopMovement();
+        
 
         // Play die animation
         animator.SetBool("IsDead", true);

@@ -119,13 +119,19 @@ public class InventoryManager : MonoBehaviour
         for (int i = 0; i < inventory.Container.Count; i++)
         {
             // Check type of item : Add to weapon grid if weapon otherwise into item grid
-            if (inventory.Container[i].item.type == ItemType.Weapon)
+            if (inventory.Container[i].item.itemType == ItemType.Weapon)
             {
                 // Instantiate weapon grid slot
                 GameObject weaponSlot = Instantiate(weaponGridSlotPrefab, weaponGridContainer);
 
                 // Add to local weapon slots list
                 weaponSlots.Add(weaponSlot);
+
+                // Get WeaponSlotInteraction script component
+                WeaponSlotInteraction interactionScript = weaponSlot.GetComponent<WeaponSlotInteraction>();
+
+                // Set the weapon type on the interaction script
+                interactionScript.weaponType = ((WeaponObject)inventory.Container[i].item).weaponType;
 
                 // Get ItemIcon image component
                 Image weaponIcon = weaponSlot.transform.Find("ItemIcon").GetComponent<Image>();

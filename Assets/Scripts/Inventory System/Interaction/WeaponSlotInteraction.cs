@@ -6,7 +6,12 @@ using UnityEngine.EventSystems;
 
 public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
+    // Private references
     private TextMeshProUGUI nameText;
+
+    // Public variables
+    [HideInInspector]
+    public PlayerCombat.WeaponTypes weaponType;
 
     private void Start()
     {
@@ -27,6 +32,64 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        // Handle interaction
+        // Check whether weapon is equipped
+        if (weaponType == PlayerCombat.WeaponTypes.Knife)
+        {
+            if (Player.instance != null)
+            {
+                if (Player.KnifeDrawn())
+                {
+                    // Unequip
+                    Player.UnequipKnife();
+                }
+                else
+                {
+                    // Equip
+                    Player.EquipKnife();
+                }
+            }
+            else
+            {
+                if (PlayerTopDown.KnifeDrawn())
+                {
+                    // Unequip
+                    PlayerTopDown.UnequipKnife();
+                }
+                else
+                {
+                    // Equip
+                    PlayerTopDown.EquipKnife();
+                }
+            }
+        }
+        else if (weaponType == PlayerCombat.WeaponTypes.Axe)
+        {
+            if (Player.instance != null)
+            {
+                if (Player.AxeDrawn())
+                {
+                    // Unequip
+                    Player.UnequipAxe();
+                }
+                else
+                {
+                    // Equip
+                    Player.EquipAxe();
+                }
+            }
+            else
+            {
+                if (PlayerTopDown.AxeDrawn())
+                {
+                    // Unequip
+                    PlayerTopDown.UnequipAxe();
+                }
+                else
+                {
+                    // Equip
+                    PlayerTopDown.EquipAxe();
+                }
+            }
+        }
     }
 }

@@ -7,6 +7,8 @@ public class WeaponObject : ItemObject
 {
     public void Awake()
     {
-        type = ItemType.Weapon;
+        itemType = ItemType.Weapon;
     }
+
+    public PlayerCombat.WeaponTypes weaponType;
 }
