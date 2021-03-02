@@ -102,7 +102,7 @@ public class GameSession : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))                   // Pauses the game on pressing 'Escape'
+        if (Input.GetKeyDown(KeyCode.Escape))           // Pauses the game on pressing 'Escape'
         {
             if (GameIsPaused)
             {
@@ -115,12 +115,7 @@ public class GameSession : MonoBehaviour
         }
     }
 
-    public void ResumeGame()
-    {
-        Resume();
-    }
-
-    public static void Resume()                                 // Resume game from the pause menu
+    public static void Resume()                                // Resume game from the pause menu
     {
         if (instance.pauseMenuUI != null)
         {
@@ -131,13 +126,13 @@ public class GameSession : MonoBehaviour
         }
     }
 
-    public static void Pause()                                  // Pauses the game when 'Escape' is pressed
+    public static void Pause()                                 // Pauses the game when 'Escape' is pressed
     {
         instance.PauseGame();
         
     }
 
-    public void QuitGame()              // Quits the game from the Pause Menu
+    public static void QuitGame()                              // Quits the game from the Pause Menu
     {
         Application.Quit();
     }
