@@ -17,38 +17,47 @@ public class PlayerCombat : MonoBehaviour
     }
     
     [Header("Axe Attack")]
-    public int axeDamage = 20;                                                          // Damage caused to enemy
-    public float axeAttackRepeatTime = 1f;                                              // Delay between successive attacks
-    public GameObject axeHitbox_L;                                                      // GameObject of the left hitbox of the axe
-    public GameObject axeHitbox_R;                                                      // GameObject of the right hitbox of the axe
-    public Animator axeHitboxAnimator_L;                                                // Reference to the animator of the left hitbox
-    public Animator axeHitboxAnimator_R;                                                // Reference to the animator of the right hitbox
+    public int axeDamage = 20;                                                          // Float - Damage caused to enemy
+    public float axeAttackRepeatTime = 1f;                                              // Float - Delay between successive attacks
+    public GameObject axeHitbox_L;                                                      // Reference - Axe left hitbox
+    public GameObject axeHitbox_R;                                                      // Reference - Axe right hitbox 
+    public Animator axeHitboxAnimator_L;                                                // Reference - Left hitbox animator
+    public Animator axeHitboxAnimator_R;                                                // Reference - Right hitbox animator
 
     [Header("Knife Attack")]
-    public int knifeDamage = 10;                                                        // Damage caused to enemy
-    public float knifeAttackRepeatTime = 1f;                                            // Delay between successive attacks
-    public GameObject knifeHitbox_L;                                                    // GameObject of the left hitbox of the knife
-    public GameObject knifeHitbox_R;                                                    // GameObject of the left hitbox of the knife
-    public Animator knifeHitboxAnimator_L;                                              // Reference to the animator of the left hitbox
-    public Animator knifeHitboxAnimator_R;                                              // Reference to the animator of the right hitbox
+    public int knifeDamage = 10;                                                        // Float - Damage caused to enemy
+    public float knifeAttackRepeatTime = 1f;                                            // Float - Delay between successive attacks
+    public GameObject knifeHitbox_L;                                                    // Reference - Knife left hitbox
+    public GameObject knifeHitbox_R;                                                    // Reference - Knife left hitbox
+    public Animator knifeHitboxAnimator_L;                                              // Reference - Left hitbox animator
+    public Animator knifeHitboxAnimator_R;                                              // Reference - Right hitbox animator
 
     [Header("Common Attributes")]
-    public LayerMask enemyLayers;
-    public float pushDistanceOnHit;                                                     // Distance by which player is pushed back on taking damage
-    [HideInInspector]
-    public bool isAttacking_Axe = false;
-    [HideInInspector]
-    public bool isAttacking_Knife = false;
-    [HideInInspector]
-    public bool canAttack = false;
+    public LayerMask enemyLayers;                                                       // LayerMask - Enemies
 
-    // Death Event
-    public event Action<PlayerCombat> OnDeath;
+    public float pushDistanceOnHit;                                                     // Float - Distance by which player is pushed back on taking damage
 
-    // Cached References
-    public HealthBar healthBar;
-    public Transform bloodParticlesStartPosition;
-    private Animator animator;
+    [HideInInspector]
+    public bool isAttacking_Axe = false;                                                // Bool - Axe attack status
+
+    [HideInInspector]
+    public bool isAttacking_Knife = false;                                              // Bool - Knife attack status
+
+    [HideInInspector]
+    public bool canAttack = false;                                                      // Bool - Player allowed to attack
+
+    public event Action<PlayerCombat> OnDeath;                                          // Death Event
+
+    // Private Cached References
+    private UIReferences uiReferences;                                                  // Reference - Current UIReferences script in the scene
+
+    private HealthBar healthBar;                                                        // Reference - Player health bar
+
+    private Animator animator;                                                          // Reference - Player animator
+
+    // Public Cached References
+    public Transform bloodParticlesStartPosition;                                       // Transform - Blood particles spawn position
+    
 
     void Start()
     {
@@ -56,6 +65,9 @@ public class PlayerCombat : MonoBehaviour
         {
             instance = this;
         }
+
+        uiReferences = FindObjectOfType<UIReferences>();
+        healthBar = uiReferences.playerHealthBar;
 
         animator = GetComponent<Animator>();
     }

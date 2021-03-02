@@ -14,16 +14,23 @@ public class Player : MonoBehaviour
     public static Player instance;
 
     // Private Cached References
+    private UIReferences uiReferences;                                              // Reference - Current UIReferences script in the scene
+
     private PlayerInput playerInput;                                                // Reference - PlayerInput class
+
     private PlayerCombat playerCombat;                                              // Reference - PlayerCombat class
+
     private Rigidbody2D rb;                                                         // Reference - Rigidbody component
+
     private Animator animator;                                                      // Reference - Animator component
-    public LayerMask groundLayerMask;
+
+    private HealthBar healthBar;                                                    // Reference - Health bar 
+
+    private InventoryObject inventory;                                              // Reference - Inventory ScriptableObject
 
     // Public Cached References
     public Transform pathfindingTarget;                                             // Reference - Pathfinding target
-    public HealthBar healthBar;                                                     // Reference - Health bar 
-    public InventoryObject inventory;                                               // Reference - Inventory ScriptableObject
+
 
     // Public Variables
     [HideInInspector]
@@ -66,18 +73,21 @@ public class Player : MonoBehaviour
 
     void OnEnable()
     {
+        SetReferences();
         ResetAnimatorParameters();
     }
 
     // Store References
     void SetReferences()
     {
+        uiReferences = FindObjectOfType<UIReferences>();
+        healthBar = uiReferences.playerHealthBar;
+        inventory = uiReferences.playerInventory;
+
         playerInput = GetComponent<PlayerInput>();
         playerCombat = GetComponent<PlayerCombat>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
-        
     }
 
     // Default Values

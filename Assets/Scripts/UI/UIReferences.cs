@@ -32,4 +32,10 @@ public class UIReferences : MonoBehaviour
 
     [Header("Maze Puzzle")]
     public CanvasGroup mazeCloseButtonCanvasGroup;
+
+    [Header("Inventory")]
+    public InventoryObject playerInventory;
+
+    [Header("Health Bar")]
+    public HealthBar playerHealthBar;
 }

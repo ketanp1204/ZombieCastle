@@ -15,6 +15,8 @@ public class PlayerTopDown : MonoBehaviour
 
 
     // Private Cached References
+    private UIReferences uiReferences;                                              // Reference - Current UIReferences script in the scene
+
     private PlayerInput playerInput;                                                // Reference - PlayerInput class
 
     private PlayerCombat playerCombat;                                              // Reference - PlayerCombat class
@@ -23,15 +25,15 @@ public class PlayerTopDown : MonoBehaviour
 
     private Animator animator;                                                      // Reference - Animator component
 
+    private HealthBar healthBar;                                                    // Reference - Health bar 
+
+    private InventoryObject inventory;                                              // Reference - Inventory ScriptableObject
+
 
     // Public Cached References
     public GameObject rightSelectionArea;                                           // Reference - Right side selection area collider
 
     public GameObject leftSelectionArea;                                            // Reference - Left side selection area collider
-
-    public HealthBar healthBar;                                                     // Reference - Health bar 
-
-    public InventoryObject inventory;                                               // Reference - Inventory ScriptableObject
 
 
     // Public Variables
@@ -80,6 +82,10 @@ public class PlayerTopDown : MonoBehaviour
     // Store References
     void SetReferences()
     {
+        uiReferences = FindObjectOfType<UIReferences>();
+        healthBar = uiReferences.playerHealthBar;
+        inventory = uiReferences.playerInventory;
+
         playerInput = GetComponent<PlayerInput>();
         playerCombat = GetComponent<PlayerCombat>();
         rb = GetComponent<Rigidbody2D>();
