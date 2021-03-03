@@ -2,28 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LoadSceneOnEnter : MonoBehaviour
 {
     public string sceneName;
     private bool checkForInput = false;
-    private SpriteRenderer sR;
+    private UIReferences uiReferences;
+    private TextMeshProUGUI doorOpenInstructionText;
 
     void Start()
     {
-        sR = GetComponent<SpriteRenderer>();
+        uiReferences = GameSession.instance.uiReferences;
+        doorOpenInstructionText = uiReferences.doorOpenInstruction;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        sR.enabled = true;
         checkForInput = true;
+        new Task(UIAnimation.FadeTMProTextAfterDelay(doorOpenInstructionText, 0f, 1f, 0f, 0.1f));
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        sR.enabled = false;
         checkForInput = false;
+        new Task(UIAnimation.FadeTMProTextAfterDelay(doorOpenInstructionText, 1f, 0f, 0f, 0.1f));
     }
 
     void Update()
@@ -32,6 +35,7 @@ public class LoadSceneOnEnter : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                new Task(UIAnimation.FadeTMProTextAfterDelay(doorOpenInstructionText, 1f, 0f, 0f, 0.1f));
                 LevelManager.LoadSceneByName(sceneName);
             }
         }

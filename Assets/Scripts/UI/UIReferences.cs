@@ -30,12 +30,18 @@ public class UIReferences : MonoBehaviour
     public TextMeshProUGUI bookTextPage2;
     public GameObject bookContinueButton;
 
-    [Header("Maze Puzzle")]
-    public CanvasGroup mazeCloseButtonCanvasGroup;
-
     [Header("Inventory")]
     public InventoryObject playerInventory;
 
     [Header("Health Bar")]
     public HealthBar playerHealthBar;
+
+    [Header("Maze Puzzle")]
+    public CanvasGroup mazeCloseButtonCanvasGroup;
+
+    [Header("Ladder Use Instruction")]
+    public TextMeshProUGUI ladderUseInstruction;
+
+    [Header("Door Open Instruction")]
+    public TextMeshProUGUI doorOpenInstruction;
 }
