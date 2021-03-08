@@ -818,7 +818,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736930040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.075136185, y: 0.01999998, z: -10}
+  m_LocalPosition: {x: -0.075136185, y: 0.019999862, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1259,7 +1259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829335294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.75, y: -1.01, z: -10}
+  m_LocalPosition: {x: 7.6, y: -1.18, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1506756609}
@@ -1842,7 +1842,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500992419}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.03, y: -0.31, z: 0}
+  m_LocalPosition: {x: -14.1, y: -0.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 891781782}
@@ -2453,8 +2453,7 @@ MonoBehaviour:
   playerInventory: {fileID: 11400000, guid: 2b3398ac389869d4e923b3387c76be84, type: 2}
   playerHealthBar: {fileID: 1849337643}
   mazeCloseButtonCanvasGroup: {fileID: 0}
-  ladderUseInstruction: {fileID: 0}
-  doorOpenInstruction: {fileID: 464127360842757143}
+  popupTextUI: {fileID: 0}
 --- !u!4 &1718763710
 Transform:
   m_ObjectHideFlags: 0
@@ -18358,7 +18357,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5315932687889639573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.75, y: -1.01, z: 0}
+  m_LocalPosition: {x: 7.6, y: -1.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5315932686776461640}

@@ -39,9 +39,6 @@ public class UIReferences : MonoBehaviour
     [Header("Maze Puzzle")]
     public CanvasGroup mazeCloseButtonCanvasGroup;
 
-    [Header("Ladder Use Instruction")]
-    public TextMeshProUGUI ladderUseInstruction;
-
-    [Header("Door Open Instruction")]
-    public TextMeshProUGUI doorOpenInstruction;
+    [Header("Text Popup")]
+    public TextMeshProUGUI popupTextUI;
 }

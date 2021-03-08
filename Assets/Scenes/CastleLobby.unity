@@ -13473,7 +13473,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.4
+  m_Intensity: 0.54
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000004b568cbd9ffa9f504162c789
   m_LightCookieSprite: {fileID: 0}
@@ -14670,8 +14670,7 @@ MonoBehaviour:
   playerInventory: {fileID: 11400000, guid: 2b3398ac389869d4e923b3387c76be84, type: 2}
   playerHealthBar: {fileID: 56389312}
   mazeCloseButtonCanvasGroup: {fileID: 0}
-  ladderUseInstruction: {fileID: 0}
-  doorOpenInstruction: {fileID: 7673330911713553278}
+  popupTextUI: {fileID: 7673330911713553278}
 --- !u!4 &1481313267
 Transform:
   m_ObjectHideFlags: 0
@@ -17404,6 +17403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerDialogueBox
       objectReference: {fileID: 0}
+    - target: {fileID: 1254770587353563770, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1254770587353563771, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -18171,6 +18174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InventoryBox
       objectReference: {fileID: 0}
+    - target: {fileID: 5461778991519988499, guid: 0c6b23f1d5309a04a81a2755d5bf88f8, type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5461778992305295965, guid: 0c6b23f1d5309a04a81a2755d5bf88f8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -18274,7 +18281,7 @@ GameObject:
   - component: {fileID: 7673330911713553277}
   - component: {fileID: 7673330911713553278}
   m_Layer: 5
-  m_Name: DoorOpenInstruction
+  m_Name: PopupTextUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18308,7 +18315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (E) - Open Door
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95b4db3800aab4a42bf38e033774ee8f, type: 2}
   m_sharedMaterial: {fileID: -233519735266989834, guid: 95b4db3800aab4a42bf38e033774ee8f, type: 2}
@@ -18342,7 +18349,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -18393,7 +18400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 221, y: 97}
+  m_AnchoredPosition: {x: 254, y: 97}
   m_SizeDelta: {x: 350, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9149205566082648858

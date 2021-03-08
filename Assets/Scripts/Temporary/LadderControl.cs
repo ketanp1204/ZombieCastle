@@ -19,7 +19,7 @@ public class LadderControl : MonoBehaviour
 
     private BoxCollider2D ladderBoxCollider;
 
-    private TextMeshProUGUI ladderUseInstruction;
+    private TextMeshProUGUI popupTextUI;
 
     private bool triggerStay = false;
 
@@ -28,7 +28,7 @@ public class LadderControl : MonoBehaviour
     private void Start()
     {
         uiReferences = GameSession.instance.uiReferences;
-        ladderUseInstruction = uiReferences.ladderUseInstruction;
+        popupTextUI = uiReferences.popupTextUI;
 
         ladderBoxCollider = transform.parent.GetComponent<BoxCollider2D>();
     }
@@ -41,16 +41,8 @@ public class LadderControl : MonoBehaviour
 
             playerGameObject = collision.gameObject;
 
-            new Task(UIAnimation.FadeTMProTextAfterDelay(ladderUseInstruction, 0f, 1f, 0f, 0.1f));
-
-            if (triggerLocation == TriggerLocation.Top)
-            {
-                
-            }
-            else
-            {
-
-            }
+            popupTextUI.text = "F - Use Ladder";
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
         }
     }
 
@@ -60,7 +52,7 @@ public class LadderControl : MonoBehaviour
         {
             triggerStay = false;
 
-            new Task(UIAnimation.FadeTMProTextAfterDelay(ladderUseInstruction, 1f, 0f, 0f, 0.1f));
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
         }
     }
 
@@ -70,6 +62,8 @@ public class LadderControl : MonoBehaviour
         {
             ladderBoxCollider.enabled = false;
             Player.StopMovement();
+
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
 
             if (triggerLocation == TriggerLocation.Top)
             {

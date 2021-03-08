@@ -3023,8 +3023,7 @@ MonoBehaviour:
   playerInventory: {fileID: 11400000, guid: 2b3398ac389869d4e923b3387c76be84, type: 2}
   playerHealthBar: {fileID: 1314805444}
   mazeCloseButtonCanvasGroup: {fileID: 0}
-  ladderUseInstruction: {fileID: 598252177}
-  doorOpenInstruction: {fileID: 5488931261704243573}
+  popupTextUI: {fileID: 0}
 --- !u!4 &1718763710
 Transform:
   m_ObjectHideFlags: 0

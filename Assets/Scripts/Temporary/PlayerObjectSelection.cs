@@ -6,19 +6,35 @@ using TMPro;
 public class PlayerObjectSelection : MonoBehaviour
 {
     // Private Cached References
+    private UIReferences uiReferences;
+
+    private TextMeshProUGUI popupTextUI;
+
     private GameObject dialogueManager;
+
     private Collider2D collidedObject;
+
     private Dialogue dialogue;
+
     private bool triggerStay = false;
+
     private string[] sentenceArray;
     private string[] noteTextsArray;
     private string[] noteResponseTextsArray;
     private string[] bookTextsArray;
 
+    private void Start()
+    {
+        uiReferences = GameSession.instance.uiReferences;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && triggerStay)
         {
+            // Hide object name text popup
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
+
             dialogueManager = GameSession.instance.dialogueManager;
             dialogue = dialogueManager.GetComponent<Dialogue>();
 
@@ -63,6 +79,11 @@ public class PlayerObjectSelection : MonoBehaviour
             // Store the collided object
             collidedObject = collision;
 
+            // Show object name text popup
+            popupTextUI = uiReferences.popupTextUI;
+            popupTextUI.text = collision.GetComponent<ObjectProperties>().objectName;
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
+
             // Enable Glow
             collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
         }
@@ -76,6 +97,9 @@ public class PlayerObjectSelection : MonoBehaviour
 
             // Disable Glow
             collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = false;
+
+            // Hide object name text popup
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
         }
     }
 }

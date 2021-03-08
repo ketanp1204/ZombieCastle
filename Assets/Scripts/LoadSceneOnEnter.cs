@@ -9,24 +9,25 @@ public class LoadSceneOnEnter : MonoBehaviour
     public string sceneName;
     private bool checkForInput = false;
     private UIReferences uiReferences;
-    private TextMeshProUGUI doorOpenInstructionText;
+    private TextMeshProUGUI popupTextUI;
 
     void Start()
     {
         uiReferences = GameSession.instance.uiReferences;
-        doorOpenInstructionText = uiReferences.doorOpenInstruction;
+        popupTextUI = uiReferences.popupTextUI;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         checkForInput = true;
-        new Task(UIAnimation.FadeTMProTextAfterDelay(doorOpenInstructionText, 0f, 1f, 0f, 0.1f));
+        popupTextUI.text = "E - Open Door";
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         checkForInput = false;
-        new Task(UIAnimation.FadeTMProTextAfterDelay(doorOpenInstructionText, 1f, 0f, 0f, 0.1f));
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
     }
 
     void Update()
@@ -35,7 +36,7 @@ public class LoadSceneOnEnter : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                new Task(UIAnimation.FadeTMProTextAfterDelay(doorOpenInstructionText, 1f, 0f, 0f, 0.1f));
+                new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
                 LevelManager.LoadSceneByName(sceneName);
             }
         }
