@@ -32,6 +32,7 @@ public class UIReferences : MonoBehaviour
 
     [Header("Inventory")]
     public InventoryObject playerInventory;
+    public InventoryManager inventoryManager;
 
     [Header("Health Bar")]
     public HealthBar playerHealthBar;

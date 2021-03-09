@@ -26,7 +26,8 @@ public class DamageTheEnemy : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
-            EnemyCombat.instance.TakeDamage(transform.parent.transform, damageAmount);
+            collision.GetComponentInParent<EnemyCombat>().TakeDamage(transform.parent.transform, damageAmount);
+            // EnemyCombat.instance.TakeDamage(transform.parent.transform, damageAmount);
         }
     }
 }

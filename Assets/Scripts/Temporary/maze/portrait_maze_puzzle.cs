@@ -84,7 +84,8 @@ public class portrait_maze_puzzle : MonoBehaviour
 
                 mazePlayer.StartPuzzle();
 
-                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
+                Cursor.lockState = CursorLockMode.None;                                                 // Unlock mouse cursor
             }
         }
     }
@@ -106,7 +107,7 @@ public class portrait_maze_puzzle : MonoBehaviour
         // maze is inactive
         isActive = false;
 
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
 
         cam.Follow = FindObjectOfType<Player>().transform;
     }

@@ -9,9 +9,6 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyCombat))]
 public class EnemyCombat : MonoBehaviour
 {
-    // Singleton
-    public static EnemyCombat instance;
-
     [Header("Attack 1 Attributes")]
     [HideInInspector]
     public bool attack1Trigger;
@@ -56,11 +53,6 @@ public class EnemyCombat : MonoBehaviour
 
     private void Start()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-
         enemyAI = GetComponent<EnemyAI>();
         enemyReference = Resources.Load(gameObject.name.Substring(0, 7));
         animator = GetComponent<Animator>();
@@ -91,7 +83,7 @@ public class EnemyCombat : MonoBehaviour
     {
         while (canAttack && !takingDamage)
         {
-            if (instance.IsDead)
+            if (IsDead)
             {
                 canAttack = false;
                 isAttacking = false;

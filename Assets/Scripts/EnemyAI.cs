@@ -47,12 +47,15 @@ public class EnemyAI : MonoBehaviour
         followPath = true;
         isAttacking = false;
 
+        // Ignore enemy collisions with other enemies   TODO: remove if it looks bad
+        Physics2D.IgnoreLayerCollision(gameObject.layer, 11);
+
         InvokeRepeating("UpdatePath", 3f, pathUpdateSeconds);
     }
 
     void UpdatePath()
     {
-        if (followPath && !EnemyCombat.instance.IsDead && !PlayerStats.IsDead)
+        if (followPath && !enemyCombat.IsDead && !PlayerStats.IsDead)
         {
             target = Player.instance.pathfindingTarget;
             if (seeker.IsDone())
@@ -65,7 +68,7 @@ public class EnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(followPath && !EnemyCombat.instance.IsDead && !PlayerStats.IsDead)
+        if(followPath && !enemyCombat.IsDead && !PlayerStats.IsDead)
             FollowPath();
 
         if (PlayerStats.IsDead)
@@ -102,7 +105,7 @@ public class EnemyAI : MonoBehaviour
             movement.y = 0f;
 
             // Move the enemy
-            if (!EnemyCombat.instance.takingDamage)
+            if (!enemyCombat.takingDamage)
             {
                 rb.velocity = new Vector2(movement.x * speed * Time.deltaTime, rb.velocity.y);
             }

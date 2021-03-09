@@ -8,7 +8,8 @@ public class DamageThePlayer : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            PlayerCombat.instance.TakeDamage(transform.parent.transform, EnemyCombat.instance.attack1Damage);
+            PlayerCombat.instance.TakeDamage(transform.parent.transform, transform.GetComponentInParent<EnemyCombat>().attack1Damage);
+            // PlayerCombat.instance.TakeDamage(transform.parent.transform, EnemyCombat.instance.attack1Damage);
         }
     }
 }

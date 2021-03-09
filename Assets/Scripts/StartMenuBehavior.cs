@@ -11,13 +11,14 @@ public class StartMenuBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
+        Cursor.lockState = CursorLockMode.None;                                                 // Unlock mouse cursor
     }
 
     public void StartGame()
     {
         animator.SetTrigger("FadeOut");
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
         LevelManager.LoadNextLevel();
     }
 }

@@ -12,16 +12,20 @@ public class GameSession : MonoBehaviour
     // Singleton
     public static GameSession instance;
 
-    // Static variables
-    [HideInInspector]
-    public static bool GameIsPaused;                                // Is true when the game is paused
+    // Public static variables
+    // [HideInInspector]
+    // public static bool GameIsPaused;                                // Is true when the game is paused
 
-    // Private Cached References
-    private GameObject pauseMenuUI;                                 // Reference to the Pause Menu UI gameObject
+    // Public variables
+    // [HideInInspector]
+    // public bool CanPauseGame;                                       // Is true if no UI object that can be closed by pressing escape is open
+
+    // Private cached references
+    // private GameObject pauseMenuUI;                                 // Reference to the Pause Menu UI gameObject
     private GameObject player;                                      // Reference to the Player gameObject
-    private CinemachineVirtualCamera cinemachineCamera;             // Reference to the current CinemachineCamera
+    // private CinemachineVirtualCamera cinemachineCamera;             // Reference to the current CinemachineCamera
 
-    // Public Cached References
+    // Public cached references
     [HideInInspector]
     public UIReferences uiReferences;                               // Reference to the UIReferences GameObject
     [HideInInspector]
@@ -50,7 +54,8 @@ public class GameSession : MonoBehaviour
     // Initialize game variables and start events
     void Initialize()
     {
-        GameIsPaused = false;
+        // CanPauseGame = true;
+        // GameIsPaused = false;
     }
 
     void OnEnable()
@@ -63,7 +68,7 @@ public class GameSession : MonoBehaviour
     {
         SetReferences();
         HandleSceneChanges();
-        FindCinemachineCamera();
+        // FindCinemachineCamera();
     }
 
     // Initialize cached references
@@ -74,9 +79,9 @@ public class GameSession : MonoBehaviour
         mainCamera = uiReferences.mainCamera;
         dynamicUICanvas = uiReferences.dynamicUICanvas;
         dialogueManager = uiReferences.dialogueManager;
-        pauseMenuUI = uiReferences.pauseMenuUI;
-        pauseMenuUI.transform.Find("ResumeButton").gameObject.GetComponent<Button>().onClick.AddListener(() => Resume());
-        pauseMenuUI.transform.Find("QuitButton").gameObject.GetComponent<Button>().onClick.AddListener(() => QuitGame());
+        // pauseMenuUI = uiReferences.pauseMenuUI;
+        // pauseMenuUI.transform.Find("ResumeButton").gameObject.GetComponent<Button>().onClick.AddListener(() => Resume());
+        // pauseMenuUI.transform.Find("QuitButton").gameObject.GetComponent<Button>().onClick.AddListener(() => QuitGame());
     }
 
     void HandleSceneChanges()
@@ -85,6 +90,7 @@ public class GameSession : MonoBehaviour
         // AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
     }
 
+    /*
     void FindCinemachineCamera()
     {
         int priority = -1;
@@ -98,11 +104,13 @@ public class GameSession : MonoBehaviour
             }
         }
     }
+    */ 
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))           // Pauses the game on pressing 'Escape'
+        /*
+        if (Input.GetKeyDown(KeyCode.Escape))                   // Pauses the game on pressing 'Escape'
         {
             if (GameIsPaused)
             {
@@ -110,29 +118,39 @@ public class GameSession : MonoBehaviour
             }
             else
             {
-                Pause();
+                Pause();   
             }
         }
+        */
     }
 
-    public static void Resume()                                // Resume game from the pause menu
+    /*
+
+    public static void Resume()                                 // Resume game from the pause menu
     {
-        if (instance.pauseMenuUI != null)
+        // NOTE:    In the Unity editor, the Resume function does not work as intended. 
+        //          On clicking on the resume button in the pause menu to resume the game, the mouse cursor disappears as expected.
+        //          But on pressing escape from pause menu to resume the game, the mouse cursor does not disappear.
+        //          However, in the game build, this function works as expected when pressing escape to resume.
+        //
+
+        if (instance.pauseMenuUI != null && GameIsPaused)
         {
-            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;           // Center and lock mouse cursor
             instance.pauseMenuUI.GetComponent<Animator>().SetTrigger("Resume");
             Time.timeScale = 1f;
             GameIsPaused = false;
+            EventSystem.current.SetSelectedGameObject(null);
         }
     }
 
-    public static void Pause()                                 // Pauses the game when 'Escape' is pressed
+    public static void Pause()                                  // Pauses the game when 'Escape' is pressed
     {
-        instance.PauseGame();
-        
+        if (!GameIsPaused && instance.CanPauseGame)
+            instance.PauseGame();
     }
 
-    public static void QuitGame()                              // Quits the game from the Pause Menu
+    public static void QuitGame()                               // Quits the game from the Pause Menu
     {
         Application.Quit();
     }
@@ -192,14 +210,25 @@ public class GameSession : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
+        Cursor.lockState = CursorLockMode.None;                                                 // Unlock mouse cursor
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+
+    public static IEnumerator EnableCanPauseGameBoolAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        instance.CanPauseGame = true;
+    }
+
+*/
 
     public static void ResetPlayerStats()
     {
         PlayerStats.isFirstScene = true;
         PlayerStats.IsDead = false;
     }
+
+    
 }
