@@ -1571,7 +1571,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.019671082, y: 0.06294775}
+  m_Offset: {x: -0.08, y: 0.06294775}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6994,8 +6994,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 124c0b97159f0084784dfa8ffadbb989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightSelectionArea: {fileID: 1105666880}
-  leftSelectionArea: {fileID: 1765487225}
   movePlayer: 0
   IsDead: 0
   movementSpeed: 3
@@ -7918,7 +7916,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07475126, y: -0.00000023841858}
+  m_Offset: {x: 0.05, y: -0.00000023841858}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -13796,10 +13794,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1105666881}
   - component: {fileID: 1105666882}
-  - component: {fileID: 1105666883}
+  - component: {fileID: 1105666884}
   m_Layer: 10
   m_Name: RightSelectionArea
-  m_TagString: Untagged
+  m_TagString: PlayerSelectionArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13812,7 +13810,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105666880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13, y: -0.07, z: 0}
+  m_LocalPosition: {x: 0, y: -0.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 670594833}
@@ -13831,7 +13829,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.46, y: 1.36}
+  m_Offset: {x: 0, y: 1.4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -13842,9 +13840,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23375559, y: 1}
+  m_Size: {x: 0.4, y: 1.42}
   m_EdgeRadius: 0
---- !u!114 &1105666883
+--- !u!114 &1105666884
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13853,7 +13851,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1105666880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d99399fa1070cf6429e1e6c98926ad4b, type: 3}
+  m_Script: {fileID: 11500000, guid: d9fdb4cc0bed6e14ab3ac7798af60f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1116234550
@@ -14802,11 +14800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea4e76fd2e50c34387b636e9764b565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 721609108}
-  pauseMenuUI: {fileID: 1460681343757880617}
-  dialogueManager: {fileID: 1193666773}
-  staticUICanvas: {fileID: 1460681342149677410}
-  dynamicUICanvas: {fileID: 866864832}
   dialogueBoxCanvasGroup: {fileID: 1679293009}
   dialogueText: {fileID: 42763977}
   dBoxContinueButton: {fileID: 1044480160}
@@ -16024,7 +16017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1765487226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17962,11 +17955,6 @@ GameObject:
 --- !u!224 &1460681343757880616 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6737800668374369072, guid: 7773193072ee24e4596b938388034f73, type: 3}
-  m_PrefabInstance: {fileID: 5315404191188028952}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1460681343757880617 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6737800668374369073, guid: 7773193072ee24e4596b938388034f73, type: 3}
   m_PrefabInstance: {fileID: 5315404191188028952}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1812231013185128852

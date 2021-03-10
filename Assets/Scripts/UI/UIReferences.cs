@@ -5,15 +5,6 @@ using TMPro;
 
 public class UIReferences : MonoBehaviour
 {
-    [Header("General")]
-    public Camera mainCamera;
-    public GameObject pauseMenuUI;
-    public GameObject dialogueManager;
-
-    [Header("Canvases")]
-    public Canvas staticUICanvas;
-    public Canvas dynamicUICanvas;
-    
     [Header("Dialogue Box")]
     public CanvasGroup dialogueBoxCanvasGroup;
     public TextMeshProUGUI dialogueText;
@@ -30,11 +21,11 @@ public class UIReferences : MonoBehaviour
     public TextMeshProUGUI bookTextPage2;
     public GameObject bookContinueButton;
 
-    [Header("Inventory")]
+    [Header("Inventory System")]
     public InventoryObject playerInventory;
     public InventoryManager inventoryManager;
 
-    [Header("Health Bar")]
+    [Header("Player Health Bar")]
     public HealthBar playerHealthBar;
 
     [Header("Maze Puzzle")]

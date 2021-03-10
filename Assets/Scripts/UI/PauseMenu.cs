@@ -19,8 +19,6 @@ public class PauseMenu : MonoBehaviour
     public bool CanPauseGame;                                       // Is true if no UI object that can be closed by pressing escape is open
 
     // Private cached references
-    private Button resumeButton;
-    private Button exitButton;
     private Animator animator;
     private CinemachineVirtualCamera cinemachineCamera;             // Reference to the current CinemachineCamera
 
@@ -40,8 +38,6 @@ public class PauseMenu : MonoBehaviour
     private void SetReferences()
     {
         animator = GetComponent<Animator>();
-        resumeButton = transform.GetChild(0).GetComponent<Button>();
-        exitButton = transform.GetChild(1).GetComponent<Button>();
     }
 
     void FindCinemachineCamera()
@@ -100,6 +96,7 @@ public class PauseMenu : MonoBehaviour
 
     public static void QuitGame()                                               // Quits the game from the Pause Menu
     {
+        Debug.Log("Quitting Game...");
         Application.Quit();
     }
 

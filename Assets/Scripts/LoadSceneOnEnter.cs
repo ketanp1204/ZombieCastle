@@ -19,15 +19,21 @@ public class LoadSceneOnEnter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        checkForInput = true;
-        popupTextUI.text = "E - Open Door";
-        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
+        if (collision.CompareTag("PlayerSelectionArea"))
+        {
+            checkForInput = true;
+            popupTextUI.text = "E - Open Door";
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        checkForInput = false;
-        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
+        if (collision.CompareTag("PlayerSelectionArea"))
+        {
+            checkForInput = false;
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
+        }
     }
 
     void Update()

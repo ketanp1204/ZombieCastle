@@ -59,7 +59,7 @@ public class EnemyCombat : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.gameObject.SetActive(true);
         healthBar.SetMaxHealth(maxHealth);
-        attackHitbox.SetActive(false);
+        // attackHitbox.SetActive(false);
     }
 
     public void StopAttack()
@@ -81,7 +81,9 @@ public class EnemyCombat : MonoBehaviour
 
     private IEnumerator Attack()
     {
-        while (canAttack && !takingDamage)
+        float healthWhenAttackStarted = currentHealth;
+
+        while (canAttack && healthWhenAttackStarted == currentHealth)
         {
             if (IsDead)
             {
@@ -90,31 +92,13 @@ public class EnemyCombat : MonoBehaviour
                 yield break;
             }
 
-            // Enable hitbox
-            attackHitbox.SetActive(true);
-
             // Play attack animation
             animator.SetTrigger("Attack");
+            attackHitboxAnimator.enabled = true;
             attackHitboxAnimator.SetTrigger("Attack");
             yield return new WaitForSeconds(attackRepeatTime);
         }
         isAttacking = false;
-        attackHitbox.SetActive(false);
-    }
-
-    void Attack1()
-    {
-        // Play attack animation
-        animator.SetTrigger("Attack");
-
-        // Detect player in range of attack
-        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attack1Point.position, attack1Range, playerLayerMask);
-
-        // Damage them
-        foreach (Collider2D player in hitPlayer)
-        {
-            player.transform.parent.GetComponent<PlayerCombat>().TakeDamage(this.transform, attack1Damage);
-        }
     }
 
     public void TakeDamage(Transform playerPos, int damage)
@@ -142,10 +126,14 @@ public class EnemyCombat : MonoBehaviour
             // Update Health Bar
             healthBar.SetHealth(currentHealth);
 
+            // Push enemy in hit direction
             StartCoroutine(PushEnemyInHitDirection(playerPos));
 
             // Play hurt animation
             animator.SetTrigger("Hurt");
+
+            // Stop attack hitbox animation if running
+            attackHitboxAnimator.enabled = false;
 
             // Die if health is less than 0
             if (currentHealth <= 0)

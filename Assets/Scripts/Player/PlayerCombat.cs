@@ -112,15 +112,17 @@ public class PlayerCombat : MonoBehaviour
                     yield break;
                 }
 
-                // Enable hitbox
+                // Animate hitbox
                 if (facingRight)
                 {
-                    axeHitbox_R.SetActive(true);
+                    // axeHitbox_R.SetActive(true);
+                    axeHitboxAnimator_R.enabled = true;
                     axeHitboxAnimator_R.SetTrigger("Attack");
                 }
                 else
                 {
-                    axeHitbox_L.SetActive(true);
+                    // axeHitbox_L.SetActive(true);
+                    axeHitboxAnimator_L.enabled = true;
                     axeHitboxAnimator_L.SetTrigger("Attack");
                 }
 
@@ -128,6 +130,7 @@ public class PlayerCombat : MonoBehaviour
                 yield return new WaitForSeconds(axeAttackRepeatTime);
             }
             isAttacking_Axe = false;
+            /*
             if (facingRight)
             {
                 axeHitbox_R.SetActive(false);
@@ -136,6 +139,7 @@ public class PlayerCombat : MonoBehaviour
             {
                 axeHitbox_L.SetActive(false);
             }
+            */
         }
         else
         {
@@ -152,12 +156,14 @@ public class PlayerCombat : MonoBehaviour
                 // Enable hitbox
                 if (facingRight)
                 {
-                    axeHitbox_R.SetActive(true);
+                    // axeHitbox_R.SetActive(true);
+                    axeHitboxAnimator_R.enabled = true;
                     axeHitboxAnimator_R.SetTrigger("Attack");
                 }
                 else
                 {
-                    axeHitbox_L.SetActive(true);
+                    // axeHitbox_L.SetActive(true);
+                    axeHitboxAnimator_L.enabled = true;
                     axeHitboxAnimator_L.SetTrigger("Attack");
                 }
 
@@ -165,6 +171,7 @@ public class PlayerCombat : MonoBehaviour
                 yield return new WaitForSeconds(axeAttackRepeatTime);
             }
             isAttacking_Axe = false;
+            /*
             if (facingRight)
             {
                 axeHitbox_R.SetActive(false);
@@ -173,8 +180,8 @@ public class PlayerCombat : MonoBehaviour
             {
                 axeHitbox_L.SetActive(false);
             }
+            */
         }
-        
     }
 
     private IEnumerator AttackKnife()
@@ -194,12 +201,14 @@ public class PlayerCombat : MonoBehaviour
                 // Enable hitbox and play animation
                 if (facingRight)
                 {
-                    knifeHitbox_R.SetActive(true);
+                    // knifeHitbox_R.SetActive(true);
+                    knifeHitboxAnimator_R.enabled = true;
                     knifeHitboxAnimator_R.SetTrigger("Attack");
                 }
                 else
                 {
-                    knifeHitbox_L.SetActive(true);
+                    // knifeHitbox_L.SetActive(true);
+                    knifeHitboxAnimator_L.enabled = true;
                     knifeHitboxAnimator_L.SetTrigger("Attack");
                 }
 
@@ -207,6 +216,7 @@ public class PlayerCombat : MonoBehaviour
                 yield return new WaitForSeconds(knifeAttackRepeatTime);
             }
             isAttacking_Knife = false;
+            /*
             if (facingRight)
             {
                 knifeHitbox_R.SetActive(false);
@@ -215,6 +225,7 @@ public class PlayerCombat : MonoBehaviour
             {
                 knifeHitbox_L.SetActive(false);
             }
+            */
         }
         else
         {
@@ -231,12 +242,14 @@ public class PlayerCombat : MonoBehaviour
                 // Enable hitbox and play animation
                 if (facingRight)
                 {
-                    knifeHitbox_R.SetActive(true);
+                    // knifeHitbox_R.SetActive(true);
+                    knifeHitboxAnimator_R.enabled = true;
                     knifeHitboxAnimator_R.SetTrigger("Attack");
                 }
                 else
                 {
-                    knifeHitbox_L.SetActive(true);
+                    // knifeHitbox_L.SetActive(true);
+                    knifeHitboxAnimator_L.enabled = true;
                     knifeHitboxAnimator_L.SetTrigger("Attack");
                 }
 
@@ -244,6 +257,7 @@ public class PlayerCombat : MonoBehaviour
                 yield return new WaitForSeconds(knifeAttackRepeatTime);
             }
             isAttacking_Knife = false;
+            /*
             if (facingRight)
             {
                 knifeHitbox_R.SetActive(false);
@@ -252,6 +266,7 @@ public class PlayerCombat : MonoBehaviour
             {
                 knifeHitbox_L.SetActive(false);
             }
+            */
         }
     }
 
@@ -307,6 +322,12 @@ public class PlayerCombat : MonoBehaviour
 
             // Play hurt animation
             animator.SetTrigger("Hurt");
+
+            // Stop attack hitbox animation
+            axeHitboxAnimator_L.enabled = false;
+            axeHitboxAnimator_R.enabled = false;
+            knifeHitboxAnimator_L.enabled = false;
+            knifeHitboxAnimator_R.enabled = false;
 
             // Die if health is less than 0
             if (PlayerStats.currentHealth <= 0)

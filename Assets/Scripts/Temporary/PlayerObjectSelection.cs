@@ -10,12 +10,12 @@ public class PlayerObjectSelection : MonoBehaviour
 
     private TextMeshProUGUI popupTextUI;
 
-    private GameObject dialogueManager;
-
     private Collider2D collidedObject;
 
     private Dialogue dialogue;
 
+
+    // Private variables
     private bool triggerStay = false;
 
     private string[] sentenceArray;
@@ -26,6 +26,7 @@ public class PlayerObjectSelection : MonoBehaviour
     private void Start()
     {
         uiReferences = GameSession.instance.uiReferences;
+        popupTextUI = uiReferences.popupTextUI;
     }
 
     void Update()
@@ -35,8 +36,7 @@ public class PlayerObjectSelection : MonoBehaviour
             // Hide object name text popup
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
 
-            dialogueManager = GameSession.instance.dialogueManager;
-            dialogue = dialogueManager.GetComponent<Dialogue>();
+            dialogue = FindObjectOfType<Dialogue>();
 
             if (!dialogue.IsActive())                                                   
             {
@@ -76,16 +76,15 @@ public class PlayerObjectSelection : MonoBehaviour
         {
             triggerStay = true;
 
+            // Enable Object Glow
+            collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
+
             // Store the collided object
             collidedObject = collision;
 
             // Show object name text popup
-            popupTextUI = uiReferences.popupTextUI;
             popupTextUI.text = collision.GetComponent<ObjectProperties>().objectName;
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
-
-            // Enable Glow
-            collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
         }
     }
 

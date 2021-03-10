@@ -30,12 +30,6 @@ public class PlayerTopDown : MonoBehaviour
     private InventoryObject inventory;                                              // Reference - Inventory ScriptableObject
 
 
-    // Public Cached References
-    public GameObject rightSelectionArea;                                           // Reference - Right side selection area collider
-
-    public GameObject leftSelectionArea;                                            // Reference - Left side selection area collider
-
-
     // Public Variables
     [HideInInspector]
     public bool movePlayer;                                                         // Bool - Player can move
@@ -106,10 +100,6 @@ public class PlayerTopDown : MonoBehaviour
         weaponEquippedDict = new Dictionary<PlayerCombat.WeaponTypes, bool>();
         weaponEquippedDict[PlayerCombat.WeaponTypes.Knife] = false;
         weaponEquippedDict[PlayerCombat.WeaponTypes.Axe] = false;
-
-        // Object interaction
-        rightSelectionArea.SetActive(true);
-        leftSelectionArea.SetActive(false);
 
         // Health
         if (PlayerStats.isFirstScene)
@@ -186,19 +176,11 @@ public class PlayerTopDown : MonoBehaviour
             {
                 // Set animation parameter
                 animator.SetFloat("FaceDir", 1f);
-
-                // Use right side selection area
-                rightSelectionArea.SetActive(true);
-                leftSelectionArea.SetActive(false);
             }
             else
             {
                 // Set animation parameter
                 animator.SetFloat("FaceDir", -1f);
-
-                // Use left side selection area
-                leftSelectionArea.SetActive(true);
-                rightSelectionArea.SetActive(false);
             }
         }
     }
