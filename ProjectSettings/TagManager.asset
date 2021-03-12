@@ -8,6 +8,7 @@ TagManager:
   - Object
   - SlopeCollider
   - PlayerSelectionArea
+  - R1_MazePuzzle
   layers:
   - Default
   - TransparentFX

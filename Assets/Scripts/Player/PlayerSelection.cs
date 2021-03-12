@@ -15,6 +15,8 @@ public class PlayerSelection : MonoBehaviour
     // Private variables
     private bool triggerStay = false;
 
+    private bool isMazePuzzleCollider = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,20 @@ public class PlayerSelection : MonoBehaviour
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
 
             Debug.Log("interact");
+            if (isMazePuzzleCollider)
+            {
+                // dialogue stuff before starting maze
+
+                // Start maze puzzle game (TODO: have to refactor this to where the dialogue ends)
+                MazePuzzle.instance.StartMazePuzzle();
+
+                triggerStay = false;
+            }
+            else
+            {
+                // normal "Object" tag interaction
+
+            }
         }
     }
 
@@ -47,6 +63,21 @@ public class PlayerSelection : MonoBehaviour
             popupTextUI.text = collision.GetComponent<ObjectProperties>().objectName;
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
         }
+
+        if (collision.CompareTag("R1_MazePuzzle"))
+        {
+            triggerStay = true;
+
+            // Set flag bool
+            isMazePuzzleCollider = true;
+
+            // Enable Object Glow
+            collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
+
+            // Show object name text popup
+            popupTextUI.text = collision.GetComponent<ObjectProperties>().objectName;
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -54,6 +85,20 @@ public class PlayerSelection : MonoBehaviour
         if (collision.CompareTag("Object"))
         {
             triggerStay = false;
+
+            // Disable Glow
+            collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = false;
+
+            // Hide object name text popup
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
+        }
+
+        if (collision.CompareTag("R1_MazePuzzle"))
+        {
+            triggerStay = false;
+
+            // Unset flag bool
+            isMazePuzzleCollider = false;
 
             // Disable Glow
             collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = false;

@@ -15,6 +15,7 @@ public class portrait_maze_puzzle : MonoBehaviour
     public GameObject mazePuzzleGO;
     public CinemachineVirtualCamera cam;
 
+    // Private Variables
     private bool isActive;
     private bool checkForInput = false;
     private float mazePuzzleDisplayDelay = 0.3f;

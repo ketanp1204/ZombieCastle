@@ -6,6 +6,6 @@ public class puzzleSolved : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        portrait_maze_puzzle.instance.ClosePuzzle();
+        MazePuzzle.instance.CloseMazePuzzle();
     }
 }

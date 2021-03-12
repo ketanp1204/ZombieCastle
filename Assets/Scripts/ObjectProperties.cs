@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ObjectProperties : MonoBehaviour
 {
-
     public string objectName;
     public DefaultItem objectData;
 
@@ -16,11 +15,5 @@ public class ObjectProperties : MonoBehaviour
         spriteGlowEffectComponent = GetComponent<SpriteGlow.SpriteGlowEffect>();
         if (spriteGlowEffectComponent)
             spriteGlowEffectComponent.enabled = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
