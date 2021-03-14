@@ -557,7 +557,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60637064}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.253, y: -5.701, z: -10}
+  m_LocalPosition: {x: -0.17, y: -5.26, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1215687050}
@@ -6887,7 +6887,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670594832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.253, y: -5.701, z: 0}
+  m_LocalPosition: {x: -0.17, y: -5.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2134493997}
@@ -7174,7 +7174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721609105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25300047, y: -2.7561903, z: -10}
+  m_LocalPosition: {x: -0.17, y: -2.7561903, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13374,7 +13374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5461778991519988499, guid: 0c6b23f1d5309a04a81a2755d5bf88f8, type: 3}
       propertyPath: m_Alpha
-      value: 0
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5461778992305295965, guid: 0c6b23f1d5309a04a81a2755d5bf88f8, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13621,7 +13621,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.54
+  m_Intensity: 0.2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000004b568cbd9ffa9f504162c789
   m_LightCookieSprite: {fileID: 0}
@@ -14165,7 +14165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196177628}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.253, y: -5.701, z: -10}
+  m_LocalPosition: {x: -0.17, y: -5.26, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 584580496}
@@ -14812,8 +14812,15 @@ MonoBehaviour:
   bookContinueButton: {fileID: 214337274}
   playerInventory: {fileID: 11400000, guid: 2b3398ac389869d4e923b3387c76be84, type: 2}
   inventoryManager: {fileID: 941612641}
+  playerHealthBarCanvasGroup: {fileID: 0}
   playerHealthBar: {fileID: 56389312}
   mazeCloseButtonCanvasGroup: {fileID: 0}
+  mazeUICanvasGroup: {fileID: 0}
+  mazeSwitch1: {fileID: 0}
+  mazeSwitch2: {fileID: 0}
+  mazeCountdownTimerText: {fileID: 0}
+  interactButton: {fileID: 0}
+  interactText: {fileID: 0}
   popupTextUI: {fileID: 7673330911713553278}
 --- !u!4 &1481313267
 Transform:
@@ -15370,8 +15377,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643232454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.91, y: -5.74, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.01, y: -5.85, z: 0}
+  m_LocalScale: {x: 0.71, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 1908690197}
   m_RootOrder: 6
@@ -15389,7 +15396,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15602982, y: 0.0040011406}
+  m_Offset: {x: -0.110052526, y: 0.0040011406}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -15400,7 +15407,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0019352, y: 0.7135706}
+  m_Size: {x: 2.7446437, y: 0.7135706}
   m_EdgeRadius: 0
 --- !u!114 &1643232458
 MonoBehaviour:
@@ -17532,6 +17539,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1193666775}
+    - target: {fileID: 1254770585905870987, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1254770587353563748, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
       propertyPath: m_Name
       value: PlayerDialogueBox
@@ -18233,6 +18244,10 @@ PrefabInstance:
     - target: {fileID: 5408351937760996776, guid: 1451f9873e5781e4882a1b57fe6673e5, type: 3}
       propertyPath: m_Name
       value: Toolbar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408351937760996780, guid: 1451f9873e5781e4882a1b57fe6673e5, type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5408351937760996783, guid: 1451f9873e5781e4882a1b57fe6673e5, type: 3}
       propertyPath: m_Pivot.x

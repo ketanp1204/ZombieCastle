@@ -42,6 +42,8 @@ public class LoadSceneOnEnter : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                AudioManager.PlaySoundOnce(AudioManager.Sound.DoorOpen);
+
                 new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
                 LevelManager.LoadSceneByName(sceneName);
             }

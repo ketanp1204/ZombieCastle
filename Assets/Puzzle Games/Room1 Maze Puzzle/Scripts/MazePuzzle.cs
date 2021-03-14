@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 using Cinemachine;
 
 public class MazePuzzle : MonoBehaviour
@@ -18,6 +19,11 @@ public class MazePuzzle : MonoBehaviour
     private Image mazeSwitch1;
     private Image mazeSwitch2;
     private TextMeshProUGUI mazeCountdownTimerText;
+    private Button interactButton;
+    private TextMeshProUGUI interactText;
+    private GameObject mazePuzzleGO;                            // Maze Puzzle GameObject 
+    private Collider2D switch1Collider;                         // Switch 1 collider
+    private Collider2D switch2Collider;                         // Switch 2 collider
     private CanvasGroup playerHealthBarCanvasGroup;
 
     // Public Cached References
@@ -30,18 +36,19 @@ public class MazePuzzle : MonoBehaviour
     private TimeSpan timerTimeSpan;                             // To format time into string
     private float timerCurrentTime = 0f;                        // Current time of the timer
     private float puzzleTime = 20f;                             // Time allowed to complete the puzzle
-    private float bonusTime = 5f;                               // Bonus time added after 2nd switch is hit
+    private float bonusTime = 5f;                               // Bonus time added after each switch is hit
 
-    private Task timerTask;                                // Task class variable for starting the countdown timer
-    private Task timerStopTask;                                 // Task class variable for stopping the countdown timer
+    private Task timerTask;                                     // Task class variable for starting the countdown timer
 
     // Public Variables
+    [HideInInspector]
+    public bool firstSwitchHitFlag = false;                       // Set after 1st switch is hit
     [HideInInspector]
     public bool timerStarted = false;                           // Timer starts after 1st switch in the maze is hit
 
     // private bool checkForInput = false;
 
-    private GameObject mazePuzzleGO;                            // Maze Puzzle GameObject 
+    
 
     private void Awake()
     {
@@ -61,12 +68,17 @@ public class MazePuzzle : MonoBehaviour
     void SetReferences()
     {
         mazePuzzleGO = transform.GetChild(0).gameObject;
+        switch1Collider = mazePuzzleGO.transform.Find("Switch1Collider").GetComponent<BoxCollider2D>();
+        switch2Collider = mazePuzzleGO.transform.Find("Switch2Collider").GetComponent<BoxCollider2D>();
 
         uiReferences = GameSession.instance.uiReferences;
         mazeUICanvasGroup = uiReferences.mazeUICanvasGroup;
         mazeSwitch1 = uiReferences.mazeSwitch1;
         mazeSwitch2 = uiReferences.mazeSwitch2;
         mazeCountdownTimerText = uiReferences.mazeCountdownTimerText;
+        interactButton = uiReferences.interactButton;
+        interactText = uiReferences.interactText;
+
         playerHealthBarCanvasGroup = uiReferences.playerHealthBarCanvasGroup;
 
         boxCollider = GetComponent<BoxCollider2D>();
@@ -80,8 +92,9 @@ public class MazePuzzle : MonoBehaviour
         mazeUICanvasGroup.alpha = 0f;
         mazeUICanvasGroup.interactable = false;
         mazeUICanvasGroup.blocksRaycasts = false;
-    }
 
+        interactButton.onClick.AddListener(() => StartMazePuzzle());
+    }
 
     // TODO: Figure out how to call this function after combat with zombies is over and player moves from left to right to go back
     public void EnablePortraitCollider()
@@ -94,16 +107,52 @@ public class MazePuzzle : MonoBehaviour
         boxCollider.enabled = false;
     }
 
-    public void ChangeSwitchSpriteToClosed(MazeSwitch.SwitchIndex switchIndex)
+    public static void LoadMazePuzzleUI()
     {
-        if (switchIndex == MazeSwitch.SwitchIndex.First)
-        {
-            mazeSwitch1.sprite = GameAssets.instance.switchClosedSprite;
-        }
-        else
-        {
-            mazeSwitch2.sprite = GameAssets.instance.switchClosedSprite;
-        }
+        instance.StartCoroutine(instance.LoadPuzzleUI());
+    }
+
+    private IEnumerator LoadPuzzleUI()
+    {
+        LevelManager.FadeScreenInAndOut();
+
+        // Hide player health bar
+        new Task(UIAnimation.FadeCanvasGroupAfterDelay(playerHealthBarCanvasGroup, 1f, 0f, 0f, 0.5f));
+
+        yield return new WaitForSeconds(0.5f);
+
+        // Show cursor
+        Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
+        Cursor.lockState = CursorLockMode.None;                                                 // Unlock mouse cursor
+
+        // Stop Player movement
+        Player.StopMovement();
+
+        // Maze puzzle is active
+        isActive = true;
+
+        // Show maze puzzle UI
+        new Task(UIAnimation.FadeCanvasGroupAfterDelay(mazeUICanvasGroup, 0f, 1f, 0f, 0.2f));
+        mazeUICanvasGroup.interactable = true;
+        mazeUICanvasGroup.blocksRaycasts = true;
+
+        // Set maze puzzle gameobject to active
+        mazePuzzleGO.SetActive(true);
+
+        // Set cinemachine camera priority
+        cinemachineCamera.Priority = 15;
+
+        // Set maze player start position
+        MazePlayer.SetStartPosition();
+    }
+
+    public void StartMazePuzzle()
+    {
+        // Start movement of maze player
+        MazePlayer.StartPuzzle();
+
+        // Start puzzle timer
+        StartPuzzleTimer();
     }
 
     public void StartPuzzleTimer()
@@ -121,7 +170,7 @@ public class MazePuzzle : MonoBehaviour
 
     private IEnumerator UpdateTimer()
     {
-        while(timerCurrentTime > 0)
+        while (timerCurrentTime > 0)
         {
             timerCurrentTime -= Time.deltaTime;
             timerTimeSpan = TimeSpan.FromSeconds(timerCurrentTime);
@@ -131,13 +180,13 @@ public class MazePuzzle : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        // Puzzle failure
         if (!puzzleSuccess)
         {
             // Retry puzzle game
             Debug.Log("puzzle failure");
 
-            // Temporary
-            CloseMazePuzzle();
+            ResetPuzzle();
         }
     }
 
@@ -146,8 +195,9 @@ public class MazePuzzle : MonoBehaviour
         // Add bonus time to timer
         timerCurrentTime += bonusTime;
 
-        // Enable exit door
-        MazeExitDoor.instance.EnableExit();
+        // Enable exit door if 2nd switch hit
+        if (firstSwitchHitFlag)
+            MazeExitDoor.instance.EnableExit();
     }
 
     public void StopTimerOnPuzzleSuccess()
@@ -162,44 +212,17 @@ public class MazePuzzle : MonoBehaviour
         CloseMazePuzzle();
     }
 
-    public void StartMazePuzzle()
+
+    public void ChangeSwitchSpriteToOn(MazeSwitch.SwitchIndex switchIndex)
     {
-        // Transition to puzzle game
-        StartCoroutine(LoadPuzzleGame());
-
-        // Stop Player mvovement
-        Player.StopMovement();
-    }
-
-    private IEnumerator LoadPuzzleGame()
-    {
-        LevelManager.FadeScreenInAndOut();
-
-        // Hide player health bar
-        new Task(UIAnimation.FadeCanvasGroupAfterDelay(playerHealthBarCanvasGroup, 1f, 0f, 0f, 0.5f));
-
-        yield return new WaitForSeconds(0.5f);
-
-        // Show cursor
-        Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
-        Cursor.lockState = CursorLockMode.None;                                                 // Unlock mouse cursor
-
-        // Maze puzzle is active
-        isActive = true;
-
-        // Show maze puzzle UI
-        new Task(UIAnimation.FadeCanvasGroupAfterDelay(mazeUICanvasGroup, 0f, 1f, 0f, 0.2f));
-        mazeUICanvasGroup.interactable = true;
-        mazeUICanvasGroup.blocksRaycasts = true;
-
-        // Set maze puzzle gameobject to active
-        mazePuzzleGO.SetActive(true);
-
-        // Set cinemachine camera priority
-        cinemachineCamera.Priority = 15;
-
-        // Start movement of maze player
-        MazePlayer.StartPuzzle();
+        if (switchIndex == MazeSwitch.SwitchIndex.First)
+        {
+            mazeSwitch1.sprite = GameAssets.instance.switchOnSprite;
+        }
+        else
+        {
+            mazeSwitch2.sprite = GameAssets.instance.switchOnSprite;
+        }
     }
 
     // TODO: add exit behavior
@@ -237,8 +260,6 @@ public class MazePuzzle : MonoBehaviour
 
         // Stop movement of maze player
         MazePlayer.EndPuzzle();
-        
-        
     }
 
     public static bool IsActive()
@@ -246,9 +267,31 @@ public class MazePuzzle : MonoBehaviour
         return instance.isActive;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ResetPuzzle()
     {
-        
+        EventSystem.current.SetSelectedGameObject(null);
+
+        // Stop maze player movement
+        MazePlayer.EndPuzzle();
+
+        // Reset puzzle sprites
+        ResetSprites();
+
+        // Enable switch colliders
+        switch1Collider.enabled = true;
+        switch2Collider.enabled = true;
+
+        // Unset first switch hit flag
+        firstSwitchHitFlag = false;
+
+        // Show retry button text
+        interactText.text = "Retry";
+    }
+
+    private void ResetSprites()
+    {
+        mazeSwitch1.sprite = GameAssets.instance.switchOffSprite;
+        mazeSwitch2.sprite = GameAssets.instance.switchOffSprite;
+        MazeExitDoor.instance.EnableDoorSprite();
     }
 }

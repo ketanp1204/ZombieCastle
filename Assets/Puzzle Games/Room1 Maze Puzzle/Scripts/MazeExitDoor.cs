@@ -31,7 +31,12 @@ public class MazeExitDoor : MonoBehaviour
         boxCollider.isTrigger = true;
 
         // TODO: change to door open sprite
-        doorSR.sprite = null;
+        doorSR.enabled = false;
+    }
+
+    public void EnableDoorSprite()
+    {
+        doorSR.enabled = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

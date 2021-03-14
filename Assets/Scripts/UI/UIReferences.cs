@@ -36,6 +36,8 @@ public class UIReferences : MonoBehaviour
     public Image mazeSwitch1;
     public Image mazeSwitch2;
     public TextMeshProUGUI mazeCountdownTimerText;
+    public Button interactButton;
+    public TextMeshProUGUI interactText;
 
     [Header("Text Popup")]
     public TextMeshProUGUI popupTextUI;

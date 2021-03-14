@@ -6,6 +6,9 @@ using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
+    // Instance
+    public static InventoryManager instance;
+
     // Public Cached References
     public GameObject weaponGridSlotPrefab;
     public GameObject itemGridSlotPrefab;
@@ -22,6 +25,14 @@ public class InventoryManager : MonoBehaviour
     // Private variables
     private bool isInventoryOpen = false;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +47,11 @@ public class InventoryManager : MonoBehaviour
         {
             LoadInventory(PlayerTopDown.GetInventory());
         }
+
+        // Hide inventory on start
+        inventoryCanvasGroup.alpha = 0f;
+        inventoryCanvasGroup.interactable = false;
+        inventoryCanvasGroup.blocksRaycasts = false;
 
         // Fill default inventory slots
         FillInventorySlots();
@@ -79,17 +95,17 @@ public class InventoryManager : MonoBehaviour
         inventory = _inventory;
     }
 
-    public void ShowInventory()
+    public static void ShowInventory()
     {
-        if (!isInventoryOpen)
+        if (!instance.isInventoryOpen)
         {
-            isInventoryOpen = true;
+            instance.isInventoryOpen = true;
 
             // Show inventory display
-            new Task(UIAnimation.FadeCanvasGroupAfterDelay(inventoryCanvasGroup, 0f, 1f, 0f, 0.3f));
+            new Task(UIAnimation.FadeCanvasGroupAfterDelay(instance.inventoryCanvasGroup, 0f, 1f, 0f, 0.3f));
             // Enable mouse interaction
-            inventoryCanvasGroup.interactable = true;
-            inventoryCanvasGroup.blocksRaycasts = true;
+            instance.inventoryCanvasGroup.interactable = true;
+            instance.inventoryCanvasGroup.blocksRaycasts = true;
 
             // Unlock mouse cursor
             Cursor.lockState = CursorLockMode.Locked;
@@ -106,22 +122,21 @@ public class InventoryManager : MonoBehaviour
             }
 
             // Disable opening pause menu on pressing escape key
-            // GameSession.instance.CanPauseGame = false;
             PauseMenu.instance.CanPauseGame = false;
         }
     }
 
-    public void HideInventory()
+    public static void HideInventory()
     {
-        if (isInventoryOpen)
+        if (instance.isInventoryOpen)
         {
-            isInventoryOpen = false;
+            instance.isInventoryOpen = false;
 
             // Hide inventory display
-            new Task(UIAnimation.FadeCanvasGroupAfterDelay(inventoryCanvasGroup, inventoryCanvasGroup.alpha, 0f, 0f, 0.3f));
+            new Task(UIAnimation.FadeCanvasGroupAfterDelay(instance.inventoryCanvasGroup, 1f, 0f, 0f, 0.3f));
             // Prevent mouse interaction
-            inventoryCanvasGroup.interactable = false;
-            inventoryCanvasGroup.blocksRaycasts = false;
+            instance.inventoryCanvasGroup.interactable = false;
+            instance.inventoryCanvasGroup.blocksRaycasts = false;
 
             // Lock mouse cursor
             Cursor.lockState = CursorLockMode.Locked;
@@ -137,8 +152,7 @@ public class InventoryManager : MonoBehaviour
             }
 
             // Enable opening pause menu on pressing escape key
-            // StartCoroutine(GameSession.EnableCanPauseGameBoolAfterDelay(0.1f));
-            StartCoroutine(PauseMenu.EnableCanPauseGameBoolAfterDelay(0.1f));
+            instance.StartCoroutine(PauseMenu.EnableCanPauseGameBoolAfterDelay(0.1f));
         }
     }
 
@@ -195,31 +209,9 @@ public class InventoryManager : MonoBehaviour
                 // Add to local item slots list
                 itemSlots.Add(itemSlot);
 
-                // Get ItemIcon image component
-                Image itemIcon = itemSlot.transform.Find("ItemIcon").GetComponent<Image>();
-
-                // Set ItemIcon image sprite from ScriptableObject 
-                itemIcon.sprite = inventory.Container[i].item.inventorySprite;
-
-                // Set ItemIcon image component's alpha to 1
-                Color c = itemIcon.color;
-                c.a = 1f;
-                itemIcon.color = c;
-
-                // Get AmountText TextMeshProUGUI component
-                TextMeshProUGUI amountText = itemSlot.transform.Find("AmountText").GetComponent<TextMeshProUGUI>();
-
-                // Set AmountText text if quantity is greater than 1
-                if (inventory.Container[i].amount > 1)
-                {
-                    amountText.text = inventory.Container[i].amount.ToString();
-                }
-
-                // Get NameText TextMeshProUGUI component
-                TextMeshProUGUI nameText = itemSlot.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
-
-                // Set NameText 
-                nameText.text = inventory.Container[i].item.itemName;
+                // Populate slot with scriptable object data
+                ItemSlotInteraction itemSlotInteraction = itemSlot.GetComponent<ItemSlotInteraction>();
+                itemSlotInteraction.PopulateItemSlot(inventory.Container[i].item, inventory.Container[i].amount);
             }
         }
     }

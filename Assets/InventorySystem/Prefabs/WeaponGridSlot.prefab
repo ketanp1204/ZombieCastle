@@ -142,8 +142,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 95b4db3800aab4a42bf38e033774ee8f, type: 2}
-  m_sharedMaterial: {fileID: -233519735266989834, guid: 95b4db3800aab4a42bf38e033774ee8f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7e016783f6bcda944a445f4658832686, type: 2}
+  m_sharedMaterial: {fileID: 9033350098051320672, guid: 7e016783f6bcda944a445f4658832686, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -336,6 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47f53dcd89a18c4f97bff1a0558a664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponType: 0
 --- !u!1 &8597519271304302039
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,8 +404,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 95b4db3800aab4a42bf38e033774ee8f, type: 2}
-  m_sharedMaterial: {fileID: -233519735266989834, guid: 95b4db3800aab4a42bf38e033774ee8f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7e016783f6bcda944a445f4658832686, type: 2}
+  m_sharedMaterial: {fileID: 9033350098051320672, guid: 7e016783f6bcda944a445f4658832686, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

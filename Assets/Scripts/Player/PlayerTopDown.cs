@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -165,6 +166,11 @@ public class PlayerTopDown : MonoBehaviour
         animator.SetFloat("Magnitude", movement.magnitude);
     }
 
+    public void PlayFootStepSound()
+    {
+        AudioManager.PlaySoundOnce(AudioManager.Sound.PlayerFootStep);
+    }
+
     private void FlipPlayerDirection()
     {
         float horizontal = movement.x;
@@ -272,6 +278,13 @@ public class PlayerTopDown : MonoBehaviour
     // Sets the AxeDrawn animation parameter to true
     public static void EquipAxe()
     {
+        instance.StartCoroutine(instance.EquipAxeAfterDelay());
+    }
+
+    private IEnumerator EquipAxeAfterDelay()
+    {
+        yield return new WaitForSeconds(0.3f);
+
         if (instance != null)
         {
             instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Axe] = true;
@@ -286,6 +299,13 @@ public class PlayerTopDown : MonoBehaviour
     // Sets the AxeDrawn animation parameter to false
     public static void UnequipAxe()
     {
+        instance.StartCoroutine(instance.UnequipAxeAfterDelay());
+    }
+
+    private IEnumerator UnequipAxeAfterDelay()
+    {
+        yield return new WaitForSeconds(0.3f);
+
         if (instance != null)
         {
             instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Axe] = false;
@@ -296,6 +316,13 @@ public class PlayerTopDown : MonoBehaviour
     // Sets the KnifeDrawn animation parameter to true
     public static void EquipKnife()
     {
+        instance.StartCoroutine(instance.EquipKnifeAfterDelay());
+    }
+
+    private IEnumerator EquipKnifeAfterDelay()
+    {
+        yield return new WaitForSeconds(0.3f);
+
         if (instance != null)
         {
             instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Knife] = true;
@@ -310,6 +337,13 @@ public class PlayerTopDown : MonoBehaviour
     // Sets the KnifeDrawn animation parameter to false
     public static void UnequipKnife()
     {
+        instance.StartCoroutine(instance.UnequipKnifeAfterDelay());
+    }
+
+    private IEnumerator UnequipKnifeAfterDelay()
+    {
+        yield return new WaitForSeconds(0.3f);
+
         if (instance != null)
         {
             instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Knife] = false;

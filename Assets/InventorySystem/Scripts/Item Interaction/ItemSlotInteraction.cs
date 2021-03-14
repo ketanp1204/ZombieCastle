@@ -1,16 +1,46 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 
-public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
+    [HideInInspector]
+    public ItemObject itemScriptableObject;
+
+    // Private Cached References
+    private Image itemIcon;
+    private TextMeshProUGUI amountText;
     private TextMeshProUGUI nameText;
 
-    private void Start()
+    // private bool draggingItem = false;
+
+    public void Awake()
     {
+        itemIcon = transform.Find("ItemIcon").GetComponent<Image>();
+        amountText = transform.Find("AmountText").GetComponent<TextMeshProUGUI>();
         nameText = transform.Find("NameText").GetComponent<TextMeshProUGUI>();
+    }
+
+    public void PopulateItemSlot(ItemObject scriptableObject, int amount)
+    {
+        itemIcon.sprite = scriptableObject.inventorySprite;
+
+        // Set ItemIcon image component's alpha to 1
+        Color c = itemIcon.color;
+        c.a = 1f;
+        itemIcon.color = c;
+
+        // Set AmountText text if quantity is greater than 1
+        if (amount > 1)
+        {
+            amountText.text = amount.ToString();
+        }
+
+        // Set NameText 
+        nameText.text = scriptableObject.itemName;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -25,8 +55,23 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
         new Task(UIAnimation.FadeTMProTextAfterDelay(nameText, nameText.alpha, 0f, 0f, 0.1f));
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        // Handle interaction
+        Debug.Log("clicked on item");
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        Debug.Log("dragging item");
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        Debug.Log("begin dragging");
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        Debug.Log("end dragging");
     }
 }

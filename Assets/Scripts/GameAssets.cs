@@ -28,10 +28,6 @@ public class GameAssets : MonoBehaviour
         public SoundData soundData;
     }
 
-    [Header("UI Objects")]
-    public GameObject interactKeyPrefab;
-    public GameObject objectNamePrefab;
-
     [Header("Treasure Box Sprites")]
     public Sprite treasureBoxOpenSprite;
     public Sprite treasureBoxClosedSprite;
@@ -39,11 +35,8 @@ public class GameAssets : MonoBehaviour
     [Header("ParticleSystem Prefabs")]
     public GameObject bloodParticles;
 
-    [Header("Other GameObjects")]
-    public GameObject mazePuzzleColliderGO;
-
     [Header("Maze Puzzle Sprites")]
-    public Sprite switchOpenSprite;
-    public Sprite switchClosedSprite;
+    public Sprite switchOffSprite;
+    public Sprite switchOnSprite;
     
 }

@@ -178,8 +178,8 @@ MonoBehaviour:
     and more recently with desktop publishing software like Aldus PageMaker including
     versions of Lorem Ipsum.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 95b4db3800aab4a42bf38e033774ee8f, type: 2}
-  m_sharedMaterial: {fileID: -233519735266989834, guid: 95b4db3800aab4a42bf38e033774ee8f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7e016783f6bcda944a445f4658832686, type: 2}
+  m_sharedMaterial: {fileID: 9033350098051320672, guid: 7e016783f6bcda944a445f4658832686, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -438,8 +438,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 95b4db3800aab4a42bf38e033774ee8f, type: 2}
-  m_sharedMaterial: {fileID: -233519735266989834, guid: 95b4db3800aab4a42bf38e033774ee8f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7e016783f6bcda944a445f4658832686, type: 2}
+  m_sharedMaterial: {fileID: 9033350098051320672, guid: 7e016783f6bcda944a445f4658832686, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -573,7 +573,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 95b4db3800aab4a42bf38e033774ee8f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7e016783f6bcda944a445f4658832686, type: 2}
   m_sharedMaterial: {fileID: -7544543679715103909, guid: 678d0205ab33e084fb083762faf1df77, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

@@ -115,13 +115,11 @@ public class PlayerCombat : MonoBehaviour
                 // Animate hitbox
                 if (facingRight)
                 {
-                    // axeHitbox_R.SetActive(true);
                     axeHitboxAnimator_R.enabled = true;
                     axeHitboxAnimator_R.SetTrigger("Attack");
                 }
                 else
                 {
-                    // axeHitbox_L.SetActive(true);
                     axeHitboxAnimator_L.enabled = true;
                     axeHitboxAnimator_L.SetTrigger("Attack");
                 }
@@ -130,16 +128,6 @@ public class PlayerCombat : MonoBehaviour
                 yield return new WaitForSeconds(axeAttackRepeatTime);
             }
             isAttacking_Axe = false;
-            /*
-            if (facingRight)
-            {
-                axeHitbox_R.SetActive(false);
-            }
-            else
-            {
-                axeHitbox_L.SetActive(false);
-            }
-            */
         }
         else
         {
@@ -153,16 +141,14 @@ public class PlayerCombat : MonoBehaviour
                     yield break;
                 }
 
-                // Enable hitbox
+                // Animate hitbox
                 if (facingRight)
                 {
-                    // axeHitbox_R.SetActive(true);
                     axeHitboxAnimator_R.enabled = true;
                     axeHitboxAnimator_R.SetTrigger("Attack");
                 }
                 else
                 {
-                    // axeHitbox_L.SetActive(true);
                     axeHitboxAnimator_L.enabled = true;
                     axeHitboxAnimator_L.SetTrigger("Attack");
                 }
@@ -171,17 +157,13 @@ public class PlayerCombat : MonoBehaviour
                 yield return new WaitForSeconds(axeAttackRepeatTime);
             }
             isAttacking_Axe = false;
-            /*
-            if (facingRight)
-            {
-                axeHitbox_R.SetActive(false);
-            }
-            else
-            {
-                axeHitbox_L.SetActive(false);
-            }
-            */
         }
+    }
+
+    public void PlayAxeAttackSound()
+    {
+        // Play axe hit sound
+        AudioManager.PlaySoundOnce(AudioManager.Sound.PlayerAxeAttack);
     }
 
     private IEnumerator AttackKnife()
@@ -268,6 +250,12 @@ public class PlayerCombat : MonoBehaviour
             }
             */
         }
+    }
+
+    public void PlayKnifeAttackSound()
+    {
+        // Play axe hit sound
+        AudioManager.PlaySoundOnce(AudioManager.Sound.PlayerKnifeAttack);
     }
 
     public void TakeDamage(Transform enemyPos, int damage)

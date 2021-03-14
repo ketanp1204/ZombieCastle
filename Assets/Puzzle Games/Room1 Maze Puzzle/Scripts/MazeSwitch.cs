@@ -19,12 +19,13 @@ public class MazeSwitch : MonoBehaviour
         GetComponent<BoxCollider2D>().enabled = false;
 
         // Switch Sprite to closed switch
-        MazePuzzle.instance.ChangeSwitchSpriteToClosed(switchIndex);
+        MazePuzzle.instance.ChangeSwitchSpriteToOn(switchIndex);
 
-        // Start puzzle timer if this collision was the first, otherwise add bonus time
-        if (MazePuzzle.instance.timerStarted)
-            MazePuzzle.instance.AddBonusTime();
-        else
-            MazePuzzle.instance.StartPuzzleTimer();
+        // Add bonus time
+        MazePuzzle.instance.AddBonusTime();
+
+        // Set first switch hit flag on puzzle script
+        if (!MazePuzzle.instance.firstSwitchHitFlag)
+            MazePuzzle.instance.firstSwitchHitFlag = true;
     }
 }

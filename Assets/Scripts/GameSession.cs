@@ -47,7 +47,7 @@ public class GameSession : MonoBehaviour
     void HandleSceneChanges()
     {
         AudioManager.Initialize();
-        // AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
+        // AudioManager.PlayNewSoundLooping(AudioManager.Sound.BackgroundTrack);
     }
 
     public static void ResetPlayerStats()

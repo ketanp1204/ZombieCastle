@@ -32,6 +32,9 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        // Close Inventory Box
+        InventoryManager.HideInventory();
+
         // Check whether weapon is equipped
         if (weaponType == PlayerCombat.WeaponTypes.Knife)
         {
@@ -92,4 +95,5 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
             }
         }
     }
+
 }

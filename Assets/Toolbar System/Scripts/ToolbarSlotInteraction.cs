@@ -57,13 +57,11 @@ public class ToolbarSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
         if (toolbarSlotType == ToolbarSlotType.Inventory)
         {
             // Open inventory
-            inventoryManager.ShowInventory();
+            InventoryManager.ShowInventory();
         }
         else if(toolbarSlotType == ToolbarSlotType.Settings)
         {
             Debug.Log("open settings");
         }
-
-        
     }
 }

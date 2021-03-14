@@ -7,14 +7,19 @@ public class MazePlayer : MonoBehaviour
     // Instance
     public static MazePlayer instance;
 
+    // Public variables
     public float moveSpeed;
     [HideInInspector]
-    public bool movePlayer;                         // Bool - Player can move
+    public bool movePlayer;                                             // Bool - Player can move
+
+    // Private variables
     private Vector2 movement;
+    private float startPositionX = -6.6f;                              // From inspector
+    private float startPositionY = -3.279f;                              // From inspector
 
     // Private Cached References
-    private PlayerInput playerInput;                // Reference To The PlayerInput Class
-    private Rigidbody2D rb;                         // Reference To The Player's Rigidbody Component
+    private PlayerInput playerInput;                                    // Reference To The PlayerInput Class
+    private Rigidbody2D rb;                                             // Reference To The Player's Rigidbody Component
 
     private void Awake()
     {
@@ -35,21 +40,18 @@ public class MazePlayer : MonoBehaviour
 
     public static void StartPuzzle()
     {
-        Player.StopMovement();
-        instance.StartCoroutine(instance.EnableMovementAfterDelay(1.5f));
+        instance.movePlayer = true;
     }
 
     public static void EndPuzzle()
     {
+        SetStartPosition();
         instance.movePlayer = false;
-        Player.EnableMovement();
     }
 
-    private IEnumerator EnableMovementAfterDelay(float delay)
+    public static void SetStartPosition()
     {
-        yield return new WaitForSeconds(delay);
-
-        movePlayer = true;
+        instance.transform.position = new Vector3(instance.startPositionX, instance.startPositionY, 0f);
     }
 
     void FixedUpdate()

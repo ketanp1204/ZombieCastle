@@ -37,8 +37,11 @@ public class PlayerSelection : MonoBehaviour
             {
                 // dialogue stuff before starting maze
 
-                // Start maze puzzle game (TODO: have to refactor this to where the dialogue ends)
-                MazePuzzle.instance.StartMazePuzzle();
+                // Start maze puzzle game (TODO: have to refactor this to where the dialogue ends or to a button on the maze puzzle UI)
+                // MazePuzzle.instance.StartMazePuzzle();
+
+                // Load maze puzzle UI
+                MazePuzzle.LoadMazePuzzleUI();
 
                 triggerStay = false;
             }
