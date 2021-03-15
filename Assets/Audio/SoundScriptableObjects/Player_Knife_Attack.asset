@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 258f440286c1f594ea7302689d6ebd1d, type: 3}
   m_Name: Player_Knife_Attack
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 0726774c9a2394844bfffffb9e0e66fd, type: 3}
+  audioClip: {fileID: 8300000, guid: 85624cd10e592c945beebfb83607285e, type: 3}
   loopSound: 0
-  volume: 1
+  volume: 0.5

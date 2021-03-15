@@ -21,21 +21,19 @@ public static class AudioManager
         Zombie3Roar,
         Zombie4GettingHit,
         Zombie4Roar,
-        ZombieDeath
+        ZombieDeath,
+        TitleScreenTrack
     }
 
-    private static Dictionary<Sound, float> soundTimerDictionary;
-    private static GameObject oneShotGameObject;
-    private static AudioSource oneShotAudioSource;
-    private static Dictionary<Sound, GameObject> oneShotGameObjects;
+    // private static Dictionary<Sound, float> soundTimerDictionary;
+    public static Dictionary<Sound, GameObject> playSoundOnceGameObjects;
+    public static Dictionary<Sound, GameObject> loopingSoundGameObjects;
 
     public static void Initialize()
     {
-        soundTimerDictionary = new Dictionary<Sound, float>();
-        soundTimerDictionary[Sound.PlayerAxeAttack] = 0f;
-        soundTimerDictionary[Sound.PlayerFootStep] = 0f;
-
-        oneShotGameObjects = new Dictionary<Sound, GameObject>();
+        // soundTimerDictionary = new Dictionary<Sound, float>();
+        playSoundOnceGameObjects = new Dictionary<Sound, GameObject>();
+        loopingSoundGameObjects = new Dictionary<Sound, GameObject>();
     }
 
     public static void PlaySoundAtPosition(Sound sound, Vector3 position)
@@ -54,20 +52,20 @@ public static class AudioManager
 
     public static void PlaySoundOnce(Sound sound)
     {
-        if (CanPlaySound(sound) && !IsSoundPlaying(sound))
+        if (CanPlaySound(sound))
         {
-            if (oneShotGameObjects.ContainsKey(sound))
+            if (playSoundOnceGameObjects.ContainsKey(sound))
             {
-                oneShotGameObjects[sound].GetComponent<AudioSource>().Play();
+                playSoundOnceGameObjects[sound].GetComponent<AudioSource>().Play();
             }
             else
             {
-                GameObject oneShotGO = new GameObject("OneShotSound");
-                oneShotGO.AddComponent<DontDestroyGameObjectOnLoad>();
-                AudioSource audioSource = oneShotGO.AddComponent<AudioSource>();
+                GameObject playSoundOnceGO = new GameObject("OneShotSound");
+                playSoundOnceGO.AddComponent<DontDestroyGameObjectOnLoad>();
+                AudioSource audioSource = playSoundOnceGO.AddComponent<AudioSource>();
 
                 // Add gameobject to dictionary
-                oneShotGameObjects.Add(sound, oneShotGO);
+                playSoundOnceGameObjects.Add(sound, playSoundOnceGO);
 
                 // Get sound data scriptable object
                 SoundData soundData = GetSoundData(sound);
@@ -81,32 +79,51 @@ public static class AudioManager
         }
     }
 
-    public static void PlayNewSoundLooping(Sound sound)
+    public static void PlaySoundLooping(Sound sound)
     {
         if (CanPlaySound(sound))
         {
-            GameObject soundGameObject = new GameObject("Sound");
-            soundGameObject.AddComponent<DontDestroyGameObjectOnLoad>();
+            if (loopingSoundGameObjects.ContainsKey(sound))
+            {
+                // Get AudioSource
+                AudioSource audioSource = loopingSoundGameObjects[sound].GetComponent<AudioSource>();
 
-            AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+                // If not already playing, play it
+                if (!audioSource.isPlaying)
+                {
+                    audioSource.Play();
+                }
+            }
+            else
+            {
+                // Create new GameObject for the sound
+                GameObject loopingSoundGO = new GameObject("LoopingSound");
+                loopingSoundGO.AddComponent<DontDestroyGameObjectOnLoad>();
 
-            // Get sound data scriptable object
-            SoundData soundData = GetSoundData(sound);
+                // Create AudioSource
+                AudioSource audioSource = loopingSoundGO.AddComponent<AudioSource>();
 
-            // Set sound properties in AudioSource
-            audioSource.clip = soundData.audioClip;
-            audioSource.loop = soundData.loopSound;
-            audioSource.volume = soundData.volume;
+                // Add gameobject to dictionary
+                loopingSoundGameObjects.Add(sound, loopingSoundGO);
 
-            audioSource.Play();
+                // Get sound data scriptable object
+                SoundData soundData = GetSoundData(sound);
+
+                // Set sound properties in AudioSource
+                audioSource.clip = soundData.audioClip;
+                audioSource.loop = soundData.loopSound;
+                audioSource.volume = soundData.volume;
+
+                audioSource.Play();
+            }
         }
     }
 
     private static bool IsSoundPlaying(Sound sound)
     {
-        if (oneShotGameObjects.ContainsKey(sound))
+        if (playSoundOnceGameObjects.ContainsKey(sound))
         {
-            if (oneShotGameObjects[sound].GetComponent<AudioSource>().isPlaying)
+            if (playSoundOnceGameObjects[sound].GetComponent<AudioSource>().isPlaying)
             {
                 return true;
             }
@@ -120,7 +137,7 @@ public static class AudioManager
         {
             default:
                 return true;
-
+                /*
             case Sound.PlayerAxeAttack:
                 if (soundTimerDictionary.ContainsKey(sound))
                 {
@@ -140,6 +157,7 @@ public static class AudioManager
                 {
                     return true;
                 }
+                */
         }
     }
 

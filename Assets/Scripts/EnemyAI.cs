@@ -9,6 +9,30 @@ using System;
 [RequireComponent(typeof(EnemyCombat))]
 public class EnemyAI : MonoBehaviour
 { 
+    public enum EnemyState
+    {
+        Idle,
+        Chasing,
+        Attacking,
+        TakingDamage,
+        Dead
+    }
+
+    // Private Cached References
+    private Transform target;
+    private Seeker seeker;
+    private Rigidbody2D rb;
+    private Animator animator;
+    private EnemyCombat enemyCombat;
+
+    // Public Variables
+    public float attackStartDistance;
+    [HideInInspector]
+    public bool isAttacking;
+    private float distanceToPlayer;
+    [HideInInspector]
+    public bool facingRight = true;
+
     [Header("Pathfinding")]
     public float pathUpdateSeconds;
     [HideInInspector]
@@ -22,20 +46,8 @@ public class EnemyAI : MonoBehaviour
     public float nextWaypointDistance = 3f;
     public float moveForceMultiplier = 19f;
 
-    // Cached References
-    private Transform target;
-    private Seeker seeker;
-    private Rigidbody2D rb;
-    private Animator animator;
-    private EnemyCombat enemyCombat;
-
-    // Variables
-    public float attackStartDistance;
     [HideInInspector]
-    public bool isAttacking;
-    private float distanceToPlayer;
-    [HideInInspector]
-    public bool facingRight = true;
+    public EnemyState enemyState;
 
     // Start is called before the first frame update
     void Start()
@@ -44,13 +56,22 @@ public class EnemyAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         enemyCombat = GetComponent<EnemyCombat>();
         animator = GetComponent<Animator>();
-        followPath = true;
+        followPath = false;
         isAttacking = false;
 
-        // Ignore enemy collisions with other enemies   TODO: remove if it looks bad
-        Physics2D.IgnoreLayerCollision(gameObject.layer, 11);
+        enemyState = EnemyState.Idle;
 
-        InvokeRepeating("UpdatePath", 3f, pathUpdateSeconds);
+        // Ignore enemy collisions with other enemies   TODO: remove if it looks bad
+        // Physics2D.IgnoreLayerCollision(gameObject.layer, 11);
+
+        // InvokeRepeating("UpdatePath", 3f, pathUpdateSeconds);
+    }
+
+    public void StartChasingPlayer()
+    {
+        enemyState = EnemyState.Chasing;
+        followPath = true;
+        InvokeRepeating("UpdatePath", 0f, pathUpdateSeconds);
     }
 
     void UpdatePath()
@@ -68,7 +89,7 @@ public class EnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(followPath && !enemyCombat.IsDead && !PlayerStats.IsDead)
+        if(followPath && !enemyCombat.IsDead && !PlayerStats.IsDead && enemyState != EnemyState.TakingDamage)
             FollowPath();
 
         if (PlayerStats.IsDead)
@@ -93,6 +114,8 @@ public class EnemyAI : MonoBehaviour
             followPath = false;
             isAttacking = true;
             movement = Vector2.zero;
+
+            enemyState = EnemyState.Attacking;
             enemyCombat.InvokeAttack();
             StartCoroutine(WaitForPlayerToMoveAway());
         } 

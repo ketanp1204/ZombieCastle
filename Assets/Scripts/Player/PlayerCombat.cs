@@ -13,22 +13,19 @@ public class PlayerCombat : MonoBehaviour
     public enum WeaponTypes
     {
         Knife,
-        Axe
+        Axe,
+        Sword
     }
     
     [Header("Axe Attack")]
     public int axeDamage = 20;                                                          // Float - Damage caused to enemy
     public float axeAttackRepeatTime = 1f;                                              // Float - Delay between successive attacks
-    public GameObject axeHitbox_L;                                                      // Reference - Axe left hitbox
-    public GameObject axeHitbox_R;                                                      // Reference - Axe right hitbox 
     public Animator axeHitboxAnimator_L;                                                // Reference - Left hitbox animator
     public Animator axeHitboxAnimator_R;                                                // Reference - Right hitbox animator
 
     [Header("Knife Attack")]
     public int knifeDamage = 10;                                                        // Float - Damage caused to enemy
     public float knifeAttackRepeatTime = 1f;                                            // Float - Delay between successive attacks
-    public GameObject knifeHitbox_L;                                                    // Reference - Knife left hitbox
-    public GameObject knifeHitbox_R;                                                    // Reference - Knife left hitbox
     public Animator knifeHitboxAnimator_L;                                              // Reference - Left hitbox animator
     public Animator knifeHitboxAnimator_R;                                              // Reference - Right hitbox animator
 
@@ -162,7 +159,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void PlayAxeAttackSound()
     {
-        // Play axe hit sound
+        // Play axe attack sound
         AudioManager.PlaySoundOnce(AudioManager.Sound.PlayerAxeAttack);
     }
 
@@ -180,16 +177,14 @@ public class PlayerCombat : MonoBehaviour
                     yield break;
                 }
 
-                // Enable hitbox and play animation
+                // Animate hitbox
                 if (facingRight)
                 {
-                    // knifeHitbox_R.SetActive(true);
                     knifeHitboxAnimator_R.enabled = true;
                     knifeHitboxAnimator_R.SetTrigger("Attack");
                 }
                 else
                 {
-                    // knifeHitbox_L.SetActive(true);
                     knifeHitboxAnimator_L.enabled = true;
                     knifeHitboxAnimator_L.SetTrigger("Attack");
                 }
@@ -198,16 +193,6 @@ public class PlayerCombat : MonoBehaviour
                 yield return new WaitForSeconds(knifeAttackRepeatTime);
             }
             isAttacking_Knife = false;
-            /*
-            if (facingRight)
-            {
-                knifeHitbox_R.SetActive(false);
-            }
-            else
-            {
-                knifeHitbox_L.SetActive(false);
-            }
-            */
         }
         else
         {
@@ -221,16 +206,14 @@ public class PlayerCombat : MonoBehaviour
                     yield break;
                 }
 
-                // Enable hitbox and play animation
+                // Animate hitbox
                 if (facingRight)
                 {
-                    // knifeHitbox_R.SetActive(true);
                     knifeHitboxAnimator_R.enabled = true;
                     knifeHitboxAnimator_R.SetTrigger("Attack");
                 }
                 else
                 {
-                    // knifeHitbox_L.SetActive(true);
                     knifeHitboxAnimator_L.enabled = true;
                     knifeHitboxAnimator_L.SetTrigger("Attack");
                 }
@@ -239,22 +222,12 @@ public class PlayerCombat : MonoBehaviour
                 yield return new WaitForSeconds(knifeAttackRepeatTime);
             }
             isAttacking_Knife = false;
-            /*
-            if (facingRight)
-            {
-                knifeHitbox_R.SetActive(false);
-            }
-            else
-            {
-                knifeHitbox_L.SetActive(false);
-            }
-            */
         }
     }
 
     public void PlayKnifeAttackSound()
     {
-        // Play axe hit sound
+        // Play knife attack sound
         AudioManager.PlaySoundOnce(AudioManager.Sound.PlayerKnifeAttack);
     }
 

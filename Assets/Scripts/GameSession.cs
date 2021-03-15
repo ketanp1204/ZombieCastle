@@ -22,6 +22,9 @@ public class GameSession : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
+
+        AudioManager.Initialize();
+        AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
     }
 
     void OnEnable()
@@ -46,8 +49,7 @@ public class GameSession : MonoBehaviour
 
     void HandleSceneChanges()
     {
-        AudioManager.Initialize();
-        // AudioManager.PlayNewSoundLooping(AudioManager.Sound.BackgroundTrack);
+        // Time.timeScale = 0.2f;           // Testing
     }
 
     public static void ResetPlayerStats()

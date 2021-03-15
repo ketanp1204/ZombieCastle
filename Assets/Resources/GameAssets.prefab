@@ -76,11 +76,10 @@ MonoBehaviour:
     soundData: {fileID: 11400000, guid: fd62f0f0505dc0647a048f18b0e98aad, type: 2}
   - sound: 15
     soundData: {fileID: 11400000, guid: cec6035f4f6cc054ab63e3fc500e2304, type: 2}
-  interactKeyPrefab: {fileID: 5030435721837794955, guid: d7848a704facc624bb5076b8feef56ce, type: 3}
-  objectNamePrefab: {fileID: 5873620021101757153, guid: fe5bbaa9084d4c949a10f07027549676, type: 3}
+  - sound: 16
+    soundData: {fileID: 11400000, guid: 97fe6011d1fc8f84da08ed0077259662, type: 2}
   treasureBoxOpenSprite: {fileID: 21300000, guid: fcf983593b0d1b443b76767648faae7d, type: 3}
   treasureBoxClosedSprite: {fileID: 21300000, guid: 23bf4929c984bc8429d0721ec6325e3b, type: 3}
   bloodParticles: {fileID: 3095269012409172603, guid: 6f7d3f8ada96d264899aff44f820f75e, type: 3}
-  mazePuzzleColliderGO: {fileID: 5223764528705910568, guid: b0bb2759917dcb940acabace54a24ad7, type: 3}
   switchOffSprite: {fileID: 21300000, guid: e11e73cf26046da40b6ae0bd627a2405, type: 3}
   switchOnSprite: {fileID: 21300000, guid: 0e9120d96ae3dc1429e7d4f9b9198a02, type: 3}

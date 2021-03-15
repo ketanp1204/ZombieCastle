@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventorySprite: {fileID: 21300000, guid: 0603207e0943f8f40836b8d89f0e9641, type: 3}
   itemName: Knife
-  itemDescription: A typical hunting knife
-  type: 0
+  itemDescription: A typical hunting knife.
+  itemType: 0
+  weaponType: 0

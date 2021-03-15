@@ -4,30 +4,32 @@ using UnityEngine;
 
 public class DamageTheEnemy : MonoBehaviour
 {
-    public enum AttackWeapon
-    {
-        Axe,
-        Knife
-    }
-
-    public AttackWeapon attackWeapon;
+    public PlayerCombat.WeaponTypes attackWeapon;
     private int damageAmount;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (attackWeapon == AttackWeapon.Axe)
+        if (attackWeapon == PlayerCombat.WeaponTypes.Knife)
+        {
+            damageAmount = PlayerCombat.instance.knifeDamage;
+        }
+
+        if (attackWeapon == PlayerCombat.WeaponTypes.Axe)
         {
             damageAmount = PlayerCombat.instance.axeDamage;
         }
-        if (attackWeapon == AttackWeapon.Knife)
+        
+        if (attackWeapon == PlayerCombat.WeaponTypes.Sword)
         {
-            damageAmount = PlayerCombat.instance.knifeDamage;
+            // TODO: add sword damage int when ready
         }
 
         if (collision.CompareTag("Enemy"))
         {
             collision.GetComponentInParent<EnemyCombat>().TakeDamage(transform.parent.transform, damageAmount);
-            // EnemyCombat.instance.TakeDamage(transform.parent.transform, damageAmount);
+            
+            if (collision.GetComponentInParent<EnemyCombat>().IsDead)
+                collision.enabled = false;
         }
     }
 }

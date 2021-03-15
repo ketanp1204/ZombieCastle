@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
 
-    public float transitionTime = 0.5f;             // Time for which the transition fade animation runs
+    public float transitionTime = 1f;               // Time for which the transition fade animation runs
     public Animator animator;                       // Reference to CrossFade animator
     private string sceneToLoad;                     // Scene to which the transition will go to
 
@@ -44,14 +44,14 @@ public class LevelManager : MonoBehaviour
     {
         instance.animator.SetTrigger("CrossFade_Start");
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(transitionTime);
 
         instance.animator.SetTrigger("CrossFade_End");
     }
 
     private IEnumerator WaitForSceneToLoad()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(transitionTime);
 
         if(!animator.GetCurrentAnimatorStateInfo(0).IsName("CrossFade_End"))
         {
@@ -86,5 +86,11 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quitting Game...");
+        Application.Quit();
     }
 }

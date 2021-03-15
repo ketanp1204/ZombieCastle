@@ -39,7 +39,7 @@ public class EnemyCombat : MonoBehaviour
     // Public variables exposed to Inspector
     [Header("Enemy Attributes")]
     public int maxHealth;
-    public float destroyDelayAfterDeath = 7f;
+    public float destroyDelayAfterDeath = 3f;
     public float pushDistanceOnHit;
 
     // Public variables hidden from Inspector
@@ -95,7 +95,8 @@ public class EnemyCombat : MonoBehaviour
             // Play attack animation
             animator.SetTrigger("Attack");
             attackHitboxAnimator.enabled = true;
-            attackHitboxAnimator.SetTrigger("Attack");
+            //attackHitboxAnimator.SetTrigger("Attack");
+            attackHitboxAnimator.SetBool("IsAttacking", true);
             yield return new WaitForSeconds(attackRepeatTime);
         }
         isAttacking = false;
@@ -133,7 +134,8 @@ public class EnemyCombat : MonoBehaviour
             animator.SetTrigger("Hurt");
 
             // Stop attack hitbox animation if running
-            attackHitboxAnimator.enabled = false;
+            // attackHitboxAnimator.enabled = false;
+            attackHitboxAnimator.SetBool("IsAttacking", false);
 
             // Die if health is less than 0
             if (currentHealth <= 0)
@@ -146,6 +148,7 @@ public class EnemyCombat : MonoBehaviour
     private IEnumerator PushEnemyInHitDirection(Transform playerPos)
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        enemyAI.enemyState = EnemyAI.EnemyState.TakingDamage;
 
         if (playerPos.position.x < transform.position.x)
         {
@@ -161,6 +164,8 @@ public class EnemyCombat : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             takingDamage = false;
         }
+
+        enemyAI.enemyState = EnemyAI.EnemyState.Attacking;
     }
 
     void Die()
@@ -187,7 +192,7 @@ public class EnemyCombat : MonoBehaviour
         // Disable Health Bar
         healthBar.gameObject.SetActive(false);
 
-        // Invoke("Respawn", 4);
+        enemyAI.enemyState = EnemyAI.EnemyState.Dead;
 
         StartCoroutine(DestroyGameObjectAfterDelay(gameObject, destroyDelayAfterDeath));
     }
