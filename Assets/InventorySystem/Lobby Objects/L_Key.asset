@@ -18,5 +18,5 @@ MonoBehaviour:
   sceneName: Lobby
   hasPlayerComment: 1
   playerComments:
-  - Haven't seen one of these since ages! This key is almost as big as my hand!
+  - I don't know what this key could open, but i'll keep it with me anyway.
   inventorySprite: {fileID: 21300000, guid: 00f49f62ba179204ba2d4c6d07f134cf, type: 3}

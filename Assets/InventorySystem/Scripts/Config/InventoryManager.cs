@@ -99,6 +99,8 @@ public class InventoryManager : MonoBehaviour
     {
         if (!instance.isInventoryOpen)
         {
+            Time.timeScale = 0f;
+
             instance.isInventoryOpen = true;
 
             // Show inventory display
@@ -130,6 +132,8 @@ public class InventoryManager : MonoBehaviour
     {
         if (instance.isInventoryOpen)
         {
+            Time.timeScale = 1f;
+
             instance.isInventoryOpen = false;
 
             // Hide inventory display
@@ -156,6 +160,59 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void AddInventoryItem(ItemObject item)
+    {
+        if (item.itemType == ItemType.Weapon)
+        {
+            // Cast item to WeaponObject
+            WeaponObject weaponToAdd = (WeaponObject)item;
+
+            // Instantiate weapon grid slot
+            GameObject weaponSlot = Instantiate(weaponGridSlotPrefab, weaponGridContainer);
+
+            // Add to local weapon slots list
+            weaponSlots.Add(weaponSlot);
+
+            // Get WeaponSlotInteraction script component
+            WeaponSlotInteraction interactionScript = weaponSlot.GetComponent<WeaponSlotInteraction>();
+
+            // Set the weapon type on the interaction script
+            interactionScript.weaponType = weaponToAdd.weaponType;
+
+            // Get ItemIcon image component
+            Image weaponIcon = weaponSlot.transform.Find("ItemIcon").GetComponent<Image>();
+
+            // Set ItemIcon image sprite from ScriptableObject
+            weaponIcon.sprite = weaponToAdd.inventorySprite;
+
+            // Set ItemIcon image component's alpha to 1
+            Color c = weaponIcon.color;
+            c.a = 1f;
+            weaponIcon.color = c;
+
+            // Get AmountText TextMeshProUGUI component
+            TextMeshProUGUI amountText = weaponSlot.transform.Find("AmountText").GetComponent<TextMeshProUGUI>();
+
+            // Get NameText TextMeshProUGUI component
+            TextMeshProUGUI nameText = weaponSlot.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
+
+            // Set NameText 
+            nameText.text = weaponToAdd.itemName;
+        }
+        else
+        {
+            // Instantiate item grid slot
+            GameObject itemSlot = Instantiate(itemGridSlotPrefab, itemGridContainer);
+
+            // Add to local item slots list
+            itemSlots.Add(itemSlot);
+
+            // Populate slot with scriptable object data
+            ItemSlotInteraction itemSlotInteraction = itemSlot.GetComponent<ItemSlotInteraction>();
+            itemSlotInteraction.PopulateItemSlot(item);
+        }
+    }
+
     private void FillInventorySlots()
     {
         for (int i = 0; i < inventory.Container.Count; i++)
@@ -163,6 +220,9 @@ public class InventoryManager : MonoBehaviour
             // Check type of item : Add to weapon grid if weapon otherwise into item grid
             if (inventory.Container[i].item.itemType == ItemType.Weapon)
             {
+                // Cast item to WeaponObject
+                WeaponObject weaponItem = (WeaponObject)inventory.Container[i].item;
+
                 // Instantiate weapon grid slot
                 GameObject weaponSlot = Instantiate(weaponGridSlotPrefab, weaponGridContainer);
 
@@ -171,9 +231,6 @@ public class InventoryManager : MonoBehaviour
 
                 // Get WeaponSlotInteraction script component
                 WeaponSlotInteraction interactionScript = weaponSlot.GetComponent<WeaponSlotInteraction>();
-
-                // Cast to WeaponObject
-                WeaponObject weaponItem = (WeaponObject)inventory.Container[i].item;
 
                 // Set the weapon type on the interaction script
                 interactionScript.weaponType = weaponItem.weaponType;
@@ -188,15 +245,6 @@ public class InventoryManager : MonoBehaviour
                 Color c = weaponIcon.color;
                 c.a = 1f;
                 weaponIcon.color = c;
-
-                // Get AmountText TextMeshProUGUI component
-                TextMeshProUGUI amountText = weaponSlot.transform.Find("AmountText").GetComponent<TextMeshProUGUI>();
-
-                // Set AmountText if quantity is greater than 1
-                if (inventory.Container[i].amount > 1)
-                {
-                    amountText.text = inventory.Container[i].amount.ToString();
-                }
 
                 // Get NameText TextMeshProUGUI component
                 TextMeshProUGUI nameText = weaponSlot.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
@@ -214,7 +262,7 @@ public class InventoryManager : MonoBehaviour
 
                 // Populate slot with scriptable object data
                 ItemSlotInteraction itemSlotInteraction = itemSlot.GetComponent<ItemSlotInteraction>();
-                itemSlotInteraction.PopulateItemSlot(inventory.Container[i].item, inventory.Container[i].amount);
+                itemSlotInteraction.PopulateItemSlot(inventory.Container[i].item);
             }
         }
     }

@@ -22,7 +22,11 @@ public static class AudioManager
         Zombie4GettingHit,
         Zombie4Roar,
         ZombieDeath,
-        TitleScreenTrack
+        TitleScreenTrack,
+        IntroSequenceBackground,
+        IntroSequenceBlackout,
+        IntroSequenceCharacterGrassWalk,
+        TextAutoTypingSound
     }
 
     // private static Dictionary<Sound, float> soundTimerDictionary;

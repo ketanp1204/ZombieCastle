@@ -22,17 +22,20 @@ public class DialogueBox : MonoBehaviour
 
     public float typingSpeed = 0.025f;                                                                  // Float - Text auto-type speed in seconds
     public float dialogueDisplayDelay = 0.1f;                                                           // Float - Delay time before displaying the dialogue box
-    public float textTypingDelay = 0.1f;                                                                // Float - Delay time before starting auto typing of text
+    
 
     // Private variables
     private string[] sentences;                                                                         // String array - Sentence array to be displayed
     private bool skipAutoTyping = false;                                                                // Bool - To stop auto typing of current dialogue box text
     private bool skippedCurrentDialogue = false;                                                        // Bool - Player skipped current auto-typing dialogue
     private int dialogueIndex = 0;                                                                      // Int -  Current sentence index
+    private float textTypingDelay;                                                                      // Float - Delay time before starting auto typing of text
 
+    // For events after dialogue box display
     private bool addToInventoryAfterDialogue = false;                                                   // Bool - Object goes to inventory after dialogue display
     private bool showNoteAfterDisplay = false;                                                          // Bool - Object has note box display after dialogue display
     private bool room1MazePuzzleAfterDialogue = false;                                                  // Bool - Portrait object in room1 that contains maze puzzle
+    private bool room1ZombieDiscovery = false;                                                          // Bool - Player finds a zombie in room1
 
     private ItemObject currentItem = null;                                                              // ItemObject - The current ItemObject which has the player comment response
 
@@ -79,6 +82,9 @@ public class DialogueBox : MonoBehaviour
 
     public void StartDialogueDisplay()
     {
+        Player.StopMovement();
+        PlayerTopDown.StopMovement();
+
         Cursor.lockState = CursorLockMode.Locked;                                                   // Center and lock mouse cursor
         Cursor.lockState = CursorLockMode.None;                                                     // Unlock mouse cursor
 
@@ -86,6 +92,8 @@ public class DialogueBox : MonoBehaviour
         new Task(UIAnimation.FadeCanvasGroupAfterDelay(dialogueBoxCG, 0f, 1f, dialogueDisplayDelay));
         dialogueBoxCG.interactable = true;
         dialogueBoxCG.blocksRaycasts = true;
+
+        textTypingDelay = dialogueDisplayDelay + 0.2f;
 
         StartCoroutine(TypeText(textTypingDelay));
     }
@@ -137,7 +145,11 @@ public class DialogueBox : MonoBehaviour
 
             if (addToInventoryAfterDialogue)
             {
-                // Send data to inventory system and open and show newly added item
+                // TODO: Open inventory box or flash inventory bag in toolbar (preferably latter) to indicate newly added item
+                if (InventoryManager.instance)
+                {
+                    InventoryManager.instance.AddInventoryItem(currentItem);
+                }
             }
 
             if (showNoteAfterDisplay)
@@ -152,6 +164,14 @@ public class DialogueBox : MonoBehaviour
                 // Load maze puzzle UI
                 MazePuzzle.LoadMazePuzzleUI();
             }
+
+            if (room1ZombieDiscovery)
+            {
+                R1_CombatStartBehaviour.instance.ShowInventoryAfterKnifeOpenDialogue();
+            }
+
+            Player.EnableMovement();
+            PlayerTopDown.EnableMovement();
 
             ResetValues();
         }
@@ -172,6 +192,11 @@ public class DialogueBox : MonoBehaviour
         room1MazePuzzleAfterDialogue = true;
     }
 
+    public void SetRoom1ZombieDiscoveryFlag()
+    {
+        room1ZombieDiscovery = true;
+    }
+
     private void ResetValues()
     {
         dialogueIndex = 0;
@@ -184,9 +209,11 @@ public class DialogueBox : MonoBehaviour
         dialogueBoxCG.interactable = false;                                                         // Prevent UI elements from being clickable
         dialogueBoxCG.blocksRaycasts = false;
 
+        // Reset event bools
         addToInventoryAfterDialogue = false;
         showNoteAfterDisplay = false;
         room1MazePuzzleAfterDialogue = false;
+        room1ZombieDiscovery = false;
 
         currentItem = null;
     }

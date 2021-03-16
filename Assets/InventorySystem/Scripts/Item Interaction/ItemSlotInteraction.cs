@@ -12,7 +12,6 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
 
     // Private Cached References
     private Image itemIcon;
-    private TextMeshProUGUI amountText;
     private TextMeshProUGUI nameText;
 
     // private bool draggingItem = false;
@@ -20,11 +19,10 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
     public void Awake()
     {
         itemIcon = transform.Find("ItemIcon").GetComponent<Image>();
-        amountText = transform.Find("AmountText").GetComponent<TextMeshProUGUI>();
         nameText = transform.Find("NameText").GetComponent<TextMeshProUGUI>();
     }
 
-    public void PopulateItemSlot(ItemObject scriptableObject, int amount)
+    public void PopulateItemSlot(ItemObject scriptableObject)
     {
         if (scriptableObject.itemType == ItemType.PC_Then_Inventory)
         {
@@ -36,12 +34,6 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
             Color c = itemIcon.color;
             c.a = 1f;
             itemIcon.color = c;
-
-            // Set AmountText text if quantity is greater than 1
-            if (amount > 1)
-            {
-                amountText.text = amount.ToString();
-            }
 
             // Set NameText 
             nameText.text = pc_Then_Inventory_Object.itemName;

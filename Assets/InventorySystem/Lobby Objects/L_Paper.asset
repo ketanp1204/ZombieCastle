@@ -20,6 +20,11 @@ MonoBehaviour:
   playerComments:
   - 'There seems to be something written on it. '
   hasNote: 1
-  noteText: Mark, this is your friend Luke. Please rescue me from this evil zombie!!
+  largeNote: 0
+  noteText: 'Servants must ensure all the chests are protected at all costs. Pay
+    with your blood if you have to. Slay anyone who comes in your way. '
   hasResponseAfterNote: 1
-  responseText: Damn, I need to find him fast.
+  responseTexts:
+  - Servants?
+  - Chests?
+  - Damn, what kind of place have I stumbled into?

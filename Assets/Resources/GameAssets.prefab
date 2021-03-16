@@ -78,8 +78,18 @@ MonoBehaviour:
     soundData: {fileID: 11400000, guid: cec6035f4f6cc054ab63e3fc500e2304, type: 2}
   - sound: 16
     soundData: {fileID: 11400000, guid: 97fe6011d1fc8f84da08ed0077259662, type: 2}
+  - sound: 17
+    soundData: {fileID: 11400000, guid: 9370d6c05acfc914ba8d38c84a1abeb7, type: 2}
+  - sound: 18
+    soundData: {fileID: 11400000, guid: 38dbf2115ba679f4e9bd2e300bc7ec9e, type: 2}
+  - sound: 19
+    soundData: {fileID: 11400000, guid: 263c6c39822fffd458d7a5bfc0e14ff3, type: 2}
+  - sound: 20
+    soundData: {fileID: 11400000, guid: ed52572293efedd4eaa875098d258b1f, type: 2}
   treasureBoxOpenSprite: {fileID: 21300000, guid: fcf983593b0d1b443b76767648faae7d, type: 3}
   treasureBoxClosedSprite: {fileID: 21300000, guid: 23bf4929c984bc8429d0721ec6325e3b, type: 3}
   bloodParticles: {fileID: 3095269012409172603, guid: 6f7d3f8ada96d264899aff44f820f75e, type: 3}
   switchOffSprite: {fileID: 21300000, guid: e11e73cf26046da40b6ae0bd627a2405, type: 3}
   switchOnSprite: {fileID: 21300000, guid: 0e9120d96ae3dc1429e7d4f9b9198a02, type: 3}
+  noteBoxLarge: {fileID: 21300000, guid: 700e3d782f5e0194397def910f1e66ae, type: 3}
+  noteBoxSmall: {fileID: 21300000, guid: b857fdae3b634b246bcb94af4c1dbaa9, type: 3}

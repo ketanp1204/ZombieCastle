@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 9d7fe4d0cfe05c347a8db299a17d66fb
   - enabled: 1
+    path: Assets/Scenes/IntroSequence.unity
+    guid: 891af3b8e09498f4c857f78548138d0e
+  - enabled: 1
     path: Assets/Scenes/CastleLobby.unity
     guid: 3d51248c10b81c649b35be2bc6ced990
   - enabled: 1

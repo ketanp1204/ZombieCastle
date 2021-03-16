@@ -18,6 +18,7 @@ MonoBehaviour:
   sceneName: Lobby
   hasPlayerComment: 1
   playerComments:
-  - Nothing special. Just a stick of wood wrapped with a cotton cloth. I'll need
-    some oil to light it up.
+  - Hm, a torch wrapped with a cotton cloth. This might just replace my flashlight
+    that I lost outside.
+  - Although I need to find some oil to light it up.
   inventorySprite: {fileID: 21300000, guid: 7cc79d002443153439f83675c895a4d1, type: 3}

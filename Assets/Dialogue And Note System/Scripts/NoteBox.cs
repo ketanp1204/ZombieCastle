@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.UI;
 using TMPro;
 
 public class NoteBox : MonoBehaviour
@@ -11,6 +11,7 @@ public class NoteBox : MonoBehaviour
 
     // Private References
     private CanvasGroup noteBoxCG;
+    private Image backgroundImage;
 
     // Public References
     public TextMeshProUGUI noteText;
@@ -46,6 +47,7 @@ public class NoteBox : MonoBehaviour
     private void SetReferences()
     {
         noteBoxCG = GetComponent<CanvasGroup>();
+        backgroundImage = transform.Find("NoteBackground").GetComponent<Image>();
     }
 
     private void Initialize()
@@ -78,10 +80,35 @@ public class NoteBox : MonoBehaviour
 
     public void ShowNoteBox()
     {
+        Player.StopMovement();
+        PlayerTopDown.StopMovement();
+
         Cursor.lockState = CursorLockMode.Locked;                                                   // Center and lock mouse cursor
         Cursor.lockState = CursorLockMode.None;                                                     // Unlock mouse cursor
 
         isActive = true;
+
+        if (currentItem != null)
+        {
+            if (currentItem.itemType == ItemType.PC_Then_Note)
+            {
+                // Set UI element positions based on size of note
+                if (((PC_Then_Note_Object)currentItem).largeNote)
+                {
+                    backgroundImage.sprite = GameAssets.instance.noteBoxLarge;
+                    backgroundImage.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(702.5f, 900f);
+                    noteText.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(600f, 700f);
+                    continueButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(209f, -387f);
+                }
+                else
+                {
+                    backgroundImage.sprite = GameAssets.instance.noteBoxSmall;
+                    backgroundImage.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(750f, 596.27f);
+                    noteText.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(600f, 450f);
+                    continueButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(209f, -223f);
+                }
+            }
+        }
 
         // Fade in note box
         new Task(UIAnimation.FadeCanvasGroupAfterDelay(noteBoxCG, 0f, 1f, noteDisplayDelay));
@@ -113,7 +140,7 @@ public class NoteBox : MonoBehaviour
                     if (DialogueBox.instance)
                     {
                         DialogueBox.instance.SetCurrentItem(obj);
-                        DialogueBox.instance.FillSentences(new string[] { obj.responseText });
+                        DialogueBox.instance.FillSentences(obj.responseTexts);
                         DialogueBox.instance.StartDialogueDisplay();
                     }
                 }
@@ -127,12 +154,15 @@ public class NoteBox : MonoBehaviour
                     if (DialogueBox.instance)
                     {
                         DialogueBox.instance.SetCurrentItem(obj);
-                        DialogueBox.instance.FillSentences(new string[] { obj.responseText });
+                        DialogueBox.instance.FillSentences(obj.responseTexts);
                         DialogueBox.instance.StartDialogueDisplay();
                     }
                 }
             }
         }
+
+        Player.EnableMovement();
+        PlayerTopDown.EnableMovement();
 
         ResetValues();
     }

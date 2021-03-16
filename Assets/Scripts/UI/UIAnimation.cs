@@ -10,13 +10,13 @@ public static class UIAnimation
     {
         yield return new WaitForSeconds(delay);
 
-        float _timeStartedLerping = Time.time;
+        float _timeStartedLerping = Time.unscaledTime;
         float timeSinceStarted;
         float percentageComplete;
 
         while (true)
         {
-            timeSinceStarted = Time.time - _timeStartedLerping;
+            timeSinceStarted = Time.unscaledTime - _timeStartedLerping;
             percentageComplete = timeSinceStarted / lerpTime;
 
             float currentValue = Mathf.Lerp(startAlpha, endAlpha, percentageComplete);
@@ -39,13 +39,13 @@ public static class UIAnimation
     {
         yield return new WaitForSeconds(delay);
 
-        float _timeStartedLerping = Time.time;
+        float _timeStartedLerping = Time.unscaledTime;
         float timeSinceStarted;
         float percentageComplete;
 
         while (true)
         {
-            timeSinceStarted = Time.time - _timeStartedLerping;
+            timeSinceStarted = Time.unscaledTime - _timeStartedLerping;
             percentageComplete = timeSinceStarted / lerpTime;
 
             float currentValue = Mathf.Lerp(startAlpha, endAlpha, percentageComplete);

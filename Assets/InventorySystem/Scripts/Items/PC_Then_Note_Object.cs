@@ -10,18 +10,21 @@ public class PC_Then_Note_Object : ItemObject
         itemType = ItemType.PC_Then_Note;
     }
 
-    public string sceneName;                // String - Name of the scene in which the item is present
+    public string sceneName;                        // String - Name of the scene in which the item is present
 
     [Header("Player Comment")]
-    public bool hasPlayerComment;           // Bool - Object has player comment
+    public bool hasPlayerComment;                   // Bool - Object has player comment
     [TextArea(4, 10)]
-    public string[] playerComments;         // String array - Comments of the player on interaction
+    public string[] playerComments;                 // String array - Comments of the player on interaction
 
     [Header("Note Display")]
-    public bool hasNote;                    // Object has a note associated with it
-    public string noteText;                 // Note text
+    public bool hasNote;                            // Object has a note associated with it
+    public bool largeNote;                          // Bool - 1 if large note display or 0 for small note display
+    [TextArea(4, 10)]
+    public string noteText;                         // Note text
 
     [Header("Response After Note Display")]
-    public bool hasResponseAfterNote;       // If player responds after reading the note
-    public string responseText;             // Response text after reading note
+    public bool hasResponseAfterNote;               // If player responds after reading the note
+    [TextArea(4, 10)]
+    public string[] responseTexts;                  // Response text after reading note
 }

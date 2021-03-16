@@ -38,5 +38,9 @@ public class GameAssets : MonoBehaviour
     [Header("Maze Puzzle Sprites")]
     public Sprite switchOffSprite;
     public Sprite switchOnSprite;
+
+    [Header("Note Box Sprites")]
+    public Sprite noteBoxLarge;
+    public Sprite noteBoxSmall;
     
 }

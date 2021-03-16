@@ -15220,7 +15220,7 @@ GameObject:
   - component: {fileID: 1643232458}
   - component: {fileID: 1643232459}
   m_Layer: 0
-  m_Name: Note
+  m_Name: Paper
   m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15304,7 +15304,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.110052526, y: 0.0040011406}
+  m_Offset: {x: -0.07606614, y: -0.07971579}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -15315,7 +15315,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7446437, y: 0.7135706}
+  m_Size: {x: 2.967982, y: 1.2946662}
   m_EdgeRadius: 0
 --- !u!114 &1643232458
 MonoBehaviour:
