@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 258f440286c1f594ea7302689d6ebd1d, type: 3}
   m_Name: TextAutoTypingSound
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: dcb8e8d93596b89449bef89903dd2ace, type: 3}
+  audioClip: {fileID: 8300000, guid: da55fb431917bb64dae9699c1262d08c, type: 3}
   loopSound: 0
-  volume: 0.1
+  volume: 0.05

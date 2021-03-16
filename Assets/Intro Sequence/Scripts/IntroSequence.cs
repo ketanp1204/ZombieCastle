@@ -69,6 +69,11 @@ public class IntroSequence : MonoBehaviour
     public TextMeshProUGUI outroTMPro;
     public string outroText;
 
+    public float textSoundEffectPlayInterval = 0.09f;                                                    // Float - Interval between each text type sound effect
+
+    // Private variables
+    private bool isTyping = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -427,11 +432,26 @@ public class IntroSequence : MonoBehaviour
 
         textMeshProText.text = "";
 
+        isTyping = true;
+
+        new Task(PlayTextTypeSoundEffect());
+
         foreach (char letter in sentence.ToCharArray())
         {
             AudioManager.PlaySoundOnce(AudioManager.Sound.TextAutoTypingSound);
             textMeshProText.text += letter;                                                                                 // Auto-typing text              
             yield return new WaitForSeconds(typingSpeed);
+        }
+
+        isTyping = false;
+    }
+
+    private IEnumerator PlayTextTypeSoundEffect()
+    {
+        while (isTyping)
+        {
+            AudioManager.PlayOneShotSound(AudioManager.Sound.TextAutoTypingSound);
+            yield return new WaitForSeconds(textSoundEffectPlayInterval);
         }
     }
 

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using TMPro;
 
 public class DialogueBox : MonoBehaviour
@@ -22,7 +21,7 @@ public class DialogueBox : MonoBehaviour
 
     public float typingSpeed = 0.025f;                                                                  // Float - Text auto-type speed in seconds
     public float dialogueDisplayDelay = 0.1f;                                                           // Float - Delay time before displaying the dialogue box
-    
+    public float textSoundEffectPlayInterval = 0.09f;                                                    // Float - Interval between each text type sound effect
 
     // Private variables
     private string[] sentences;                                                                         // String array - Sentence array to be displayed
@@ -38,9 +37,6 @@ public class DialogueBox : MonoBehaviour
     private bool room1ZombieDiscovery = false;                                                          // Bool - Player finds a zombie in room1
 
     private ItemObject currentItem = null;                                                              // ItemObject - The current ItemObject which has the player comment response
-
-    // Dialogue complete and close button hit event
-    public UnityEvent onDialogueBoxClose;
 
     private void Awake()
     {
@@ -104,6 +100,8 @@ public class DialogueBox : MonoBehaviour
 
         isTyping = true;
 
+        new Task(PlayTextTypeSoundEffect());
+
         foreach (char letter in sentences[dialogueIndex].ToCharArray())
         {
             if (skipAutoTyping)
@@ -120,6 +118,15 @@ public class DialogueBox : MonoBehaviour
         }
 
         isTyping = false;
+    }
+
+    private IEnumerator PlayTextTypeSoundEffect()
+    {
+        while (isTyping)
+        {
+            AudioManager.PlayOneShotSound(AudioManager.Sound.TextAutoTypingSound);
+            yield return new WaitForSeconds(textSoundEffectPlayInterval);
+        }
     }
 
     public void NextDialogueSentence()
