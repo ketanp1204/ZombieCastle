@@ -32,23 +32,105 @@ public class PlayerSelection : MonoBehaviour
             // Hide object name text popup
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
 
-            Debug.Log("interact");
             if (isMazePuzzleCollider)
             {
-                // dialogue stuff before starting maze
+                // Show dialogue before starting maze
+                ObjectProperties objectProperties = collidedObject.GetComponent<ObjectProperties>();
 
-                // Start maze puzzle game (TODO: have to refactor this to where the dialogue ends or to a button on the maze puzzle UI)
-                // MazePuzzle.instance.StartMazePuzzle();
+                if (objectProperties.objectData != null)
+                {
+                    PlayerCommentOnlyObject obj = (PlayerCommentOnlyObject)objectProperties.objectData;
 
-                // Load maze puzzle UI
-                MazePuzzle.LoadMazePuzzleUI();
+                    string[] sentenceArray = obj.playerComments;
+
+                    if (DialogueBox.instance)
+                    {
+                        DialogueBox.instance.SetCurrentItem(obj);
+                        DialogueBox.instance.SetMazePuzzleFlag();
+                        DialogueBox.instance.FillSentences(sentenceArray);
+                        DialogueBox.instance.StartDialogueDisplay();
+                    }
+                    else
+                    {
+                        Debug.Log("Dialogue box not found");
+                    }
+                }
+                else
+                {
+                    Debug.Log("No scriptable object set in object properties");
+                }
 
                 triggerStay = false;
             }
             else
             {
-                // normal "Object" tag interaction
+                // Normal "Object" tag interaction
+                ObjectProperties objectProperties = collidedObject.GetComponent<ObjectProperties>();
 
+                if (objectProperties.objectData != null)
+                {
+                    ItemObject itemScriptableObject = objectProperties.objectData;
+
+                    if (itemScriptableObject.itemType == ItemType.PC_Only)
+                    {
+                        PlayerCommentOnlyObject pc_Only_Object = (PlayerCommentOnlyObject)itemScriptableObject;
+
+                        string[] sentenceArray = pc_Only_Object.playerComments;
+
+                        if (DialogueBox.instance)
+                        {
+                            DialogueBox.instance.SetCurrentItem(pc_Only_Object);
+                            DialogueBox.instance.FillSentences(sentenceArray);
+                            DialogueBox.instance.StartDialogueDisplay();
+                        }
+                        else
+                        {
+                            Debug.Log("Dialogue box not found");
+                        }
+                    }
+                    else if (itemScriptableObject.itemType == ItemType.PC_Then_Inventory)
+                    {
+                        PC_Then_Inventory_Object pc_Then_Inventory_Object = (PC_Then_Inventory_Object)itemScriptableObject;
+
+                        string[] sentenceArray = pc_Then_Inventory_Object.playerComments;
+
+                        if (DialogueBox.instance)
+                        {
+                            DialogueBox.instance.SetCurrentItem(pc_Then_Inventory_Object);
+                            DialogueBox.instance.FillSentences(sentenceArray);
+                            DialogueBox.instance.SetInventoryAfterDialogueFlag();
+                            DialogueBox.instance.StartDialogueDisplay();
+                        }
+                        else
+                        {
+                            Debug.Log("Dialogue box not found");
+                        }
+                    }
+                    else if (itemScriptableObject.itemType == ItemType.PC_Then_Note)
+                    {
+                        PC_Then_Note_Object pc_Then_Note_Object = (PC_Then_Note_Object)itemScriptableObject;
+
+                        string[] sentenceArray = pc_Then_Note_Object.playerComments;
+
+                        if (DialogueBox.instance)
+                        {
+                            DialogueBox.instance.SetCurrentItem(pc_Then_Note_Object);
+                            DialogueBox.instance.FillSentences(sentenceArray);
+                            DialogueBox.instance.SetNoteAfterDialogueFlag();
+                            DialogueBox.instance.StartDialogueDisplay();
+                        }
+                        else
+                        {
+                            Debug.Log("Dialogue box not found");
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.Log("No scriptable object set in object properties");
+                }
+
+                triggerStay = false;
             }
         }
     }
@@ -58,6 +140,9 @@ public class PlayerSelection : MonoBehaviour
         if (collision.CompareTag("Object"))
         {
             triggerStay = true;
+
+            // Store collided object
+            collidedObject = collision;
 
             // Enable Object Glow
             collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
@@ -71,10 +156,13 @@ public class PlayerSelection : MonoBehaviour
         {
             triggerStay = true;
 
+            // Store collided object
+            collidedObject = collision;
+
             // Set flag bool
             isMazePuzzleCollider = true;
 
-            // Enable Object Glow
+            // Enable object glow
             collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
 
             // Show object name text popup
@@ -89,7 +177,7 @@ public class PlayerSelection : MonoBehaviour
         {
             triggerStay = false;
 
-            // Disable Glow
+            // Disable object glow
             collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = false;
 
             // Hide object name text popup
@@ -103,7 +191,7 @@ public class PlayerSelection : MonoBehaviour
             // Unset flag bool
             isMazePuzzleCollider = false;
 
-            // Disable Glow
+            // Disable object glow
             collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = false;
 
             // Hide object name text popup

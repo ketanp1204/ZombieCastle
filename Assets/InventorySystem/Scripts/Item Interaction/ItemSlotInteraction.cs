@@ -26,21 +26,26 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void PopulateItemSlot(ItemObject scriptableObject, int amount)
     {
-        itemIcon.sprite = scriptableObject.inventorySprite;
-
-        // Set ItemIcon image component's alpha to 1
-        Color c = itemIcon.color;
-        c.a = 1f;
-        itemIcon.color = c;
-
-        // Set AmountText text if quantity is greater than 1
-        if (amount > 1)
+        if (scriptableObject.itemType == ItemType.PC_Then_Inventory)
         {
-            amountText.text = amount.ToString();
-        }
+            PC_Then_Inventory_Object pc_Then_Inventory_Object = (PC_Then_Inventory_Object)scriptableObject;
 
-        // Set NameText 
-        nameText.text = scriptableObject.itemName;
+            itemIcon.sprite = pc_Then_Inventory_Object.inventorySprite;
+
+            // Set ItemIcon image component's alpha to 1
+            Color c = itemIcon.color;
+            c.a = 1f;
+            itemIcon.color = c;
+
+            // Set AmountText text if quantity is greater than 1
+            if (amount > 1)
+            {
+                amountText.text = amount.ToString();
+            }
+
+            // Set NameText 
+            nameText.text = pc_Then_Inventory_Object.itemName;
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)

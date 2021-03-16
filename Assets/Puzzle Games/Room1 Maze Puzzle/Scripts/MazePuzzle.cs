@@ -48,8 +48,6 @@ public class MazePuzzle : MonoBehaviour
 
     // private bool checkForInput = false;
 
-    
-
     private void Awake()
     {
         if (instance == null)

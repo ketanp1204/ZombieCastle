@@ -353,7 +353,7 @@ MonoBehaviour:
   m_text: Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7e016783f6bcda944a445f4658832686, type: 2}
-  m_sharedMaterial: {fileID: -7544543679715103909, guid: 678d0205ab33e084fb083762faf1df77, type: 2}
+  m_sharedMaterial: {fileID: 9033350098051320672, guid: 7e016783f6bcda944a445f4658832686, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -462,8 +462,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+      - m_Target: {fileID: 7114105636619867788}
+        m_TargetAssemblyTypeName: DialogueBox, Assembly-CSharp
         m_MethodName: NextDialogueSentence
         m_Mode: 1
         m_Arguments:
@@ -559,6 +559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254770587353563771}
   - component: {fileID: 1254770587353563770}
+  - component: {fileID: 7114105636619867788}
   m_Layer: 5
   m_Name: PlayerDialogueBox
   m_TagString: Untagged
@@ -599,6 +600,39 @@ CanvasGroup:
   m_GameObject: {fileID: 1254770587353563748}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &7114105636619867788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254770587353563748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d09674a4e19494bbe5fa1c1752cd02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 1254770585700548322}
+  continueButton: {fileID: 1254770585905870987}
+  isTyping: 0
+  typingSpeed: 0.025
+  dialogueDisplayDelay: 0.1
+  textTypingDelay: 0.1
+  onDialogueBoxClose:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: NoteBox, Assembly-CSharp
+        m_MethodName: ShowNoteAfterDialogue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

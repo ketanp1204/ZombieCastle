@@ -172,14 +172,17 @@ public class InventoryManager : MonoBehaviour
                 // Get WeaponSlotInteraction script component
                 WeaponSlotInteraction interactionScript = weaponSlot.GetComponent<WeaponSlotInteraction>();
 
+                // Cast to WeaponObject
+                WeaponObject weaponItem = (WeaponObject)inventory.Container[i].item;
+
                 // Set the weapon type on the interaction script
-                interactionScript.weaponType = ((WeaponObject)inventory.Container[i].item).weaponType;
+                interactionScript.weaponType = weaponItem.weaponType;
 
                 // Get ItemIcon image component
                 Image weaponIcon = weaponSlot.transform.Find("ItemIcon").GetComponent<Image>();
 
                 // Set ItemIcon image sprite from ScriptableObject
-                weaponIcon.sprite = inventory.Container[i].item.inventorySprite;
+                weaponIcon.sprite = weaponItem.inventorySprite;
 
                 // Set ItemIcon image component's alpha to 1
                 Color c = weaponIcon.color;

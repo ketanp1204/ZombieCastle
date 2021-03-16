@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2573393571305659994}
   - component: {fileID: 2573393571305659995}
+  - component: {fileID: 1463332476257879474}
   m_Layer: 5
   m_Name: NoteBox
   m_TagString: Untagged
@@ -49,9 +50,26 @@ CanvasGroup:
   m_GameObject: {fileID: 2573393571305659993}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &1463332476257879474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2573393571305659993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a483ef23c3d55ca4085d6b0eacab639e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noteText: {fileID: 2573393571626778633}
+  continueButton: {fileID: 2573393571824396059}
+  isActive: 0
+  noteDisplayDelay: 0.3
+  noteResponseDisplayDelay: 0.3
 --- !u!1 &2573393571626778631
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,9 +384,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-        m_MethodName: NextNoteText
+      - m_Target: {fileID: 1463332476257879474}
+        m_TargetAssemblyTypeName: NoteBox, Assembly-CSharp
+        m_MethodName: ShowNextNotePage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

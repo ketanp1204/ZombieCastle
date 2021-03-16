@@ -37,17 +37,18 @@ public class PlayerObjectSelection : MonoBehaviour
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
 
             dialogue = FindObjectOfType<Dialogue>();
-
+            /*
             if (!dialogue.IsActive())                                                   
             {
                 ObjectProperties objectProperties = collidedObject.GetComponent<ObjectProperties>();
                 sentenceArray = new string[] { objectProperties.objectData.playerComment };
 
-                // Fill response
+                
                 bool hasNote = objectProperties.objectData.hasNote;
                 bool hasResponseAfterNote = objectProperties.objectData.hasResponseAfterNote;
                 bool hasBook = objectProperties.objectData.hasBookDisplay;
 
+                // Fill further arrays
                 if (hasNote)
                 {
                     noteTextsArray = new string[] { objectProperties.objectData.noteText };
@@ -67,6 +68,7 @@ public class PlayerObjectSelection : MonoBehaviour
                 dialogue.FillSentences(sentenceArray);
                 dialogue.StartDialogue(hasNote, hasResponseAfterNote, hasBook);
             }
+            */
         }
     }
 

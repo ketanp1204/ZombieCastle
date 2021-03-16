@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectProperties : MonoBehaviour
 {
     public string objectName;
-    public DefaultItem objectData;
+    public ItemObject objectData;
 
     private SpriteGlow.SpriteGlowEffect spriteGlowEffectComponent;
 

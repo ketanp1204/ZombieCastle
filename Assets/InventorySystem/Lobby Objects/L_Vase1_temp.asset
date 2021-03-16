@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c094fbe420ba234393937749a6bc256, type: 3}
-  m_Name: L_Vase2
+  m_Name: L_Vase1_temp
   m_EditorClassIdentifier: 
   itemName: Vase
-  itemDescription: An upright vase.
-  sceneName: 
-  playerComment: Quite heavy I must say.
+  itemDescription: A vase lying on the floor
+  itemType: 1
+  sceneName: Lobby
+  playerComment: Something must have knocked this one down.
   hasNote: 0
   noteText: 
   hasResponseAfterNote: 0
   responseText: 
   hasBookDisplay: 0
   bookTexts: []
-  inventorySprite: {fileID: 21300000, guid: 0f256b5b0670d4a4b850c1319566bf5c, type: 3}

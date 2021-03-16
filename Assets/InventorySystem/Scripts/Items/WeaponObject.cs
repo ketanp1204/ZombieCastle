@@ -10,5 +10,6 @@ public class WeaponObject : ItemObject
         itemType = ItemType.Weapon;
     }
 
+    public Sprite inventorySprite;
     public PlayerCombat.WeaponTypes weaponType;
 }

@@ -214,9 +214,9 @@ public class Dialogue : MonoBehaviour
         yield return new WaitForSeconds(delay);                                                     // Wait before displaying dialogue box
 
         // Fade in dialogue box
+        new Task(UIAnimation.FadeCanvasGroupAfterDelay(dialogueBoxCG, 0f, 1f, 0f));
         dialogueBoxCG.interactable = true;
         dialogueBoxCG.blocksRaycasts = true;
-        new Task(UIAnimation.FadeCanvasGroupAfterDelay(dialogueBoxCG, 0f, 1f, dialogueDisplayDelay));   
 
         foreach (char letter in dialogueTexts[dialogueIndex].ToCharArray())
         {

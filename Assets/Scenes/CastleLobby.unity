@@ -1465,7 +1465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectName: Torch
-  objectData: {fileID: 11400000, guid: df2bce18a88460140a6a4fed5721aeb9, type: 2}
+  objectData: {fileID: 11400000, guid: adc6aec29cf096440969df6eb9e9a925, type: 2}
 --- !u!114 &436451930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13144,7 +13144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectName: Key
-  objectData: {fileID: 11400000, guid: dffacb5d3bd39f0459c05e917124a177, type: 2}
+  objectData: {fileID: 11400000, guid: 8a17bdd09cd0d0247888b46023ed744c, type: 2}
 --- !u!114 &931555054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13327,10 +13327,6 @@ PrefabInstance:
     - target: {fileID: 5461778991519988497, guid: 0c6b23f1d5309a04a81a2755d5bf88f8, type: 3}
       propertyPath: m_Name
       value: InventoryBox
-      objectReference: {fileID: 0}
-    - target: {fileID: 5461778991519988499, guid: 0c6b23f1d5309a04a81a2755d5bf88f8, type: 3}
-      propertyPath: m_Alpha
-      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5461778992305295965, guid: 0c6b23f1d5309a04a81a2755d5bf88f8, type: 3}
       propertyPath: m_AnchorMax.y
@@ -14029,7 +14025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1193666774
 Transform:
   m_ObjectHideFlags: 0
@@ -15333,8 +15329,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a3a58e62498a9459496436bf5d2bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: Note
-  objectData: {fileID: 11400000, guid: bca685d9beeefd940b4a76e658b75608, type: 2}
+  objectName: Paper
+  objectData: {fileID: 11400000, guid: e8989788119954f4ca8b9fe9b8cc244e, type: 2}
 --- !u!114 &1643232459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17429,21 +17425,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 866864833}
     m_Modifications:
-    - target: {fileID: 1254770585905870985, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1193666775}
-    - target: {fileID: 1254770585905870987, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 1254770585905870984, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1254770587353563748, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
       propertyPath: m_Name
-      value: PlayerDialogueBox
-      objectReference: {fileID: 0}
-    - target: {fileID: 1254770587353563770, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
-      propertyPath: m_Alpha
-      value: 0
+      value: DialogueBox
       objectReference: {fileID: 0}
     - target: {fileID: 1254770587353563771, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
       propertyPath: m_Pivot.x
@@ -17529,6 +17517,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7114105636619867788, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
+      propertyPath: onDialogueBoxClose.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2573393572604824113}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
 --- !u!224 &1460681342149677409
@@ -17969,12 +17961,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2573393571824396061, guid: 7427e580a977f2747bc03ada428a1633, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1193666775}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7427e580a977f2747bc03ada428a1633, type: 3}
+--- !u!114 &2573393572604824113 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1463332476257879474, guid: 7427e580a977f2747bc03ada428a1633, type: 3}
+  m_PrefabInstance: {fileID: 2573393572604824112}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a483ef23c3d55ca4085d6b0eacab639e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5315404191188028952
 PrefabInstance:
   m_ObjectHideFlags: 0
