@@ -30,7 +30,10 @@ public static class AudioManager
         InventoryOpen,
         InventoryClose,
         InventoryMouseHover,
-        IntroScareSound
+        IntroScareSound,
+        ContinueButton,
+        CandleBurning,
+        PaperPickup
     }
 
     // private static Dictionary<Sound, float> soundTimerDictionary;
@@ -89,7 +92,7 @@ public static class AudioManager
         }
     }
 
-    public static void PlaySoundOnce(Sound sound)
+    public static void PlaySoundOnceOnPersistentObject(Sound sound)
     {
         if (CanPlaySound(sound))
         {
@@ -99,8 +102,36 @@ public static class AudioManager
             }
             else
             {
-                GameObject playSoundOnceGO = new GameObject("PlayOnceSound");
+                GameObject playSoundOnceGO = new GameObject("PlayOnceSoundPersistent");
                 playSoundOnceGO.AddComponent<DontDestroyGameObjectOnLoad>();
+                AudioSource audioSource = playSoundOnceGO.AddComponent<AudioSource>();
+
+                // Add gameobject to dictionary
+                playSoundOnceGameObjects.Add(sound, playSoundOnceGO);
+
+                // Get sound data scriptable object
+                SoundData soundData = GetSoundData(sound);
+
+                // Set sound properties in AudioSource
+                audioSource.clip = soundData.audioClip;
+                audioSource.loop = soundData.loopSound;
+                audioSource.volume = soundData.volume;
+                audioSource.Play();
+            }
+        }
+    }
+
+    public static void PlaySoundOnceOnNonPersistentObject(Sound sound)
+    {
+        if (CanPlaySound(sound))
+        {
+            if (playSoundOnceGameObjects.ContainsKey(sound))
+            {
+                playSoundOnceGameObjects[sound].GetComponent<AudioSource>().Play();
+            }
+            else
+            {
+                GameObject playSoundOnceGO = new GameObject("PlayOnceSoundNonPersistent");
                 AudioSource audioSource = playSoundOnceGO.AddComponent<AudioSource>();
 
                 // Add gameobject to dictionary

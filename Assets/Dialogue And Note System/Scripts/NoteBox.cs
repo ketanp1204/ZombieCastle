@@ -86,6 +86,9 @@ public class NoteBox : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;                                                   // Center and lock mouse cursor
         Cursor.lockState = CursorLockMode.None;                                                     // Unlock mouse cursor
 
+        // Play paper pickup sound
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PaperPickup);
+
         isActive = true;
 
         if (currentItem != null)
@@ -120,7 +123,10 @@ public class NoteBox : MonoBehaviour
     }
 
     public void ShowNextNotePage()
-    {                                                                                  
+    {
+        // Play continue button sound
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ContinueButton);
+
         Cursor.lockState = CursorLockMode.Locked;                                                   // Center and lock mouse cursor
         isActive = false;                                                                           // Set note box to inactive
         continueButton.SetActive(false);                                                            // Hide the note box continue button

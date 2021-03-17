@@ -131,6 +131,9 @@ public class DialogueBox : MonoBehaviour
 
     public void NextDialogueSentence()
     {
+        // Play continue button sound
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ContinueButton);
+
         continueButton.SetActive(false);                                                            // Hide dialogue box continue button
 
         if (dialogueIndex < sentences.Length - 1)                                                   // More dialogue texts left to display

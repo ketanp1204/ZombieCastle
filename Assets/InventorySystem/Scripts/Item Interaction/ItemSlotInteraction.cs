@@ -46,7 +46,7 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
         new Task(UIAnimation.FadeTMProTextAfterDelay(nameText, 0f, 1f, 0f, 0.1f));
 
         // Play hover sound
-        AudioManager.PlaySoundOnce(AudioManager.Sound.InventoryMouseHover);
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryMouseHover);
     }
 
     public void OnPointerExit(PointerEventData eventData)

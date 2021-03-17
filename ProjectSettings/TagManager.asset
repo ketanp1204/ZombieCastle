@@ -58,3 +58,6 @@ TagManager:
   - name: Player
     uniqueID: 2311545409
     locked: 0
+  - name: MouseCursor
+    uniqueID: 1330352155
+    locked: 0

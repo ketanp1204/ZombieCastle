@@ -104,7 +104,7 @@ public class InventoryManager : MonoBehaviour
             instance.isInventoryOpen = true;
 
             // Play inventory open sound
-            AudioManager.PlaySoundOnce(AudioManager.Sound.InventoryOpen);
+            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryOpen);
 
             // Show inventory display
             new Task(UIAnimation.FadeCanvasGroupAfterDelay(instance.inventoryCanvasGroup, 0f, 1f, 0f, 0.3f));
@@ -140,7 +140,7 @@ public class InventoryManager : MonoBehaviour
             instance.isInventoryOpen = false;
 
             // Play inventory close sound
-            AudioManager.PlaySoundOnce(AudioManager.Sound.InventoryClose);
+            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryClose);
 
             // Hide inventory display
             new Task(UIAnimation.FadeCanvasGroupAfterDelay(instance.inventoryCanvasGroup, 1f, 0f, 0f, 0.3f));

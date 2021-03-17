@@ -30,7 +30,6 @@ public class MazeExitDoor : MonoBehaviour
     {
         boxCollider.isTrigger = true;
 
-        // TODO: change to door open sprite
         doorSR.enabled = false;
     }
 
