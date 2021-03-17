@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
@@ -23,6 +24,7 @@ public class GameSession : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
+        PlayerStats.Initialize();
         AudioManager.Initialize();
         AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
     }
@@ -36,8 +38,8 @@ public class GameSession : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         SetReferences();
-        HandleSceneChanges();
-
+        HandleSceneChanges(scene);
+        
         // Time.timeScale = 0.2f;          // Testing
     }
 
@@ -47,14 +49,36 @@ public class GameSession : MonoBehaviour
         uiReferences = FindObjectOfType<UIReferences>();
     }
 
-    void HandleSceneChanges()
+    void HandleSceneChanges(Scene scene)
     {
         // Time.timeScale = 0.2f;           // Testing
+        
+        if (scene.name == "CastleLobby" && PlayerStats.isFirstScene)
+        {
+            StartCoroutine(PlayIntroDialogue());
+        }
     }
 
     public static void ResetPlayerStats()
     {
         PlayerStats.isFirstScene = true;
         PlayerStats.IsDead = false;
+    }
+
+    private IEnumerator PlayIntroDialogue()
+    {
+        yield return new WaitForSeconds(3f);
+
+        // Play start dialogue
+        if (DialogueBox.instance)
+        {
+            DialogueBox.instance.FillSentences(GameAssets.instance.gameStartDialogue);
+            DialogueBox.instance.StartDialogueDisplay();
+        }
+
+        yield return new WaitForSeconds(4f);
+
+        // Reset LevelManager animation speed
+        LevelManager.SetAnimatorSpeed(1f);
     }
 }

@@ -1919,6 +1919,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &554785914 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3736767665891185551, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
+  m_PrefabInstance: {fileID: 3736767666015565396}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &557817100
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,7 +2048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectName: Barrel
-  objectData: {fileID: 0}
+  objectData: {fileID: 11400000, guid: 37c58e93a604ce545bb0be87c15be717, type: 2}
 --- !u!114 &557817105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2380,7 +2385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736930040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.13, y: -0.8000003, z: -10}
+  m_LocalPosition: {x: 2.625949, y: 0.83588314, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3000,7 +3005,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1828006511}
+  m_Follow: {fileID: 554785914}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -3024,7 +3029,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829335294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.13, y: -0.90999997, z: -10}
+  m_LocalPosition: {x: 10.03, y: 1.5799999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1506756609}
@@ -3389,6 +3394,8 @@ MonoBehaviour:
   maxHealth: 100
   destroyDelayAfterDeath: 5
   pushDistanceOnHit: 2
+  damageMultiplier: 0.25
+  zombieType: 0
   IsDead: 0
   takingDamage: 0
 --- !u!114 &985694134
@@ -4348,7 +4355,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132710440}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -5256,6 +5263,8 @@ MonoBehaviour:
   maxHealth: 100
   destroyDelayAfterDeath: 5
   pushDistanceOnHit: 2
+  damageMultiplier: 0.25
+  zombieType: 0
   IsDead: 0
   takingDamage: 0
 --- !u!114 &1465528656
@@ -7109,7 +7118,7 @@ GameObject:
   - component: {fileID: 1828006512}
   - component: {fileID: 1828006513}
   m_Layer: 9
-  m_Name: ZombieVisibleTrigger
+  m_Name: CombatStartTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7392,6 +7401,8 @@ MonoBehaviour:
   maxHealth: 100
   destroyDelayAfterDeath: 5
   pushDistanceOnHit: 2
+  damageMultiplier: 0.25
+  zombieType: 0
   IsDead: 0
   takingDamage: 0
 --- !u!114 &1856631325
@@ -7526,6 +7537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1862817826}
+  - component: {fileID: 1862817827}
   m_Layer: 0
   m_Name: Zombies
   m_TagString: Untagged
@@ -7551,6 +7563,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1862817827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862817825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4e072f31a9d1041b758e7a1e4a646b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allZombiesDead:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2014791527}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 557817103}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1132710443}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &1867129965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7922,6 +7985,8 @@ MonoBehaviour:
   maxHealth: 100
   destroyDelayAfterDeath: 5
   pushDistanceOnHit: 2
+  damageMultiplier: 0.25
+  zombieType: 0
   IsDead: 0
   takingDamage: 0
 --- !u!1 &1875592066
@@ -8583,7 +8648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2014791526
 Transform:
   m_ObjectHideFlags: 0
@@ -8605,7 +8670,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014791525}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -9430,11 +9495,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736767665891185551, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.07
+      value: 10.03
       objectReference: {fileID: 0}
     - target: {fileID: 3736767665891185551, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.02
+      value: -0.34
       objectReference: {fileID: 0}
     - target: {fileID: 3736767665891185551, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_LocalPosition.z

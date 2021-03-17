@@ -20,8 +20,8 @@ public class DialogueBox : MonoBehaviour
     public bool isTyping = false;                                                                       // Bool - Dialogue box active and typing status
 
     public float typingSpeed = 0.025f;                                                                  // Float - Text auto-type speed in seconds
-    public float dialogueDisplayDelay = 0.1f;                                                           // Float - Delay time before displaying the dialogue box
-    public float textSoundEffectPlayInterval = 0.09f;                                                    // Float - Interval between each text type sound effect
+    public float dialogueDisplayDelay = 0.2f;                                                           // Float - Delay time before displaying the dialogue box
+    public float textSoundEffectPlayInterval = 0.09f;                                                   // Float - Interval between each text type sound effect
 
     // Private variables
     private string[] sentences;                                                                         // String array - Sentence array to be displayed
@@ -215,6 +215,8 @@ public class DialogueBox : MonoBehaviour
 
         dialogueBoxCG.interactable = false;                                                         // Prevent UI elements from being clickable
         dialogueBoxCG.blocksRaycasts = false;
+
+        dialogueDisplayDelay = 0.2f;
 
         // Reset event bools
         addToInventoryAfterDialogue = false;

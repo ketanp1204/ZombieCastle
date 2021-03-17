@@ -344,7 +344,10 @@ public class PlayerCombat : MonoBehaviour
         if (Player.instance != null)
             Player.StopMovement();
         else
+        {
             PlayerTopDown.StopMovement();
+        }
+            
         
 
         // Play die animation
@@ -371,6 +374,6 @@ public class PlayerCombat : MonoBehaviour
         Destroy(player);
 
         GameSession.ResetPlayerStats();
-        SceneManager.LoadScene("Room1");        // for testing, change later
+        SceneManager.LoadScene("CastleLobby");        // for testing, change later
     }
 }

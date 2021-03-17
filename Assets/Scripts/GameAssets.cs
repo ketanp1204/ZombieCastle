@@ -42,5 +42,9 @@ public class GameAssets : MonoBehaviour
     [Header("Note Box Sprites")]
     public Sprite noteBoxLarge;
     public Sprite noteBoxSmall;
+
+    [Header("Castle Lobby first start dialogue")]
+    [TextArea(4, 10)]
+    public string[] gameStartDialogue;
     
 }

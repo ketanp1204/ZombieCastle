@@ -6883,11 +6883,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axeDamage: 20
-  axeAttackRepeatTime: 1
+  axeAttackRepeatTime: 2.5
   axeHitboxAnimator_L: {fileID: 748450606}
   axeHitboxAnimator_R: {fileID: 1587514159}
   knifeDamage: 10
-  knifeAttackRepeatTime: 1
+  knifeAttackRepeatTime: 2
   knifeHitboxAnimator_L: {fileID: 1709866675}
   knifeHitboxAnimator_R: {fileID: 1711348097}
   enemyLayers:
@@ -13832,13 +13832,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.8268603, y: -0.30484104}
+    - - {x: -0.8378904, y: -0.1751616}
       - {x: -0.9711619, y: -0.4438964}
       - {x: -0.8668494, y: -0.6235366}
       - {x: 0.56577826, y: -0.74052215}
       - {x: 0.57046986, y: -1.2035592}
       - {x: 1.0198451, y: -1.1984789}
-      - {x: 0.9687488, y: -0.44817358}
+      - {x: 1.0239267, y: -0.3074637}
 --- !u!1 &1127749344
 GameObject:
   m_ObjectHideFlags: 0
@@ -14835,7 +14835,7 @@ GameObject:
   - component: {fileID: 1550530908}
   m_Layer: 0
   m_Name: Vase1
-  m_TagString: Object
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14912,10 +14912,10 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550530903}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.093141556, y: 0.000000059604645}
@@ -15079,7 +15079,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591111499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.65, y: -0.98, z: 0}
+  m_LocalPosition: {x: 1.35, y: -0.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5329329}
@@ -15434,7 +15434,7 @@ GameObject:
   - component: {fileID: 1671061834}
   - component: {fileID: 1671061833}
   m_Layer: 0
-  m_Name: Room_4_Trigger
+  m_Name: Room_5_Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15466,7 +15466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13c73e968eef6a4697f707234ea1835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Room4
+  sceneName: Room5
 --- !u!212 &1671061834
 SpriteRenderer:
   m_ObjectHideFlags: 0

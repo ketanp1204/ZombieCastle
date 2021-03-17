@@ -94,12 +94,6 @@ public class MazePuzzle : MonoBehaviour
         interactButton.onClick.AddListener(() => StartMazePuzzle());
     }
 
-    // TODO: Figure out how to call this function after combat with zombies is over and player moves from left to right to go back
-    public void EnablePortraitCollider()
-    {
-        boxCollider.enabled = true;
-    }
-
     public void DisablePortraitCollider()
     {
         boxCollider.enabled = false;
@@ -228,6 +222,12 @@ public class MazePuzzle : MonoBehaviour
     {
         // Hide cinemachine camera for maze puzzle
         StartCoroutine(ClosePuzzleGame());
+
+        // Set cinemachine camera priority
+        cinemachineCamera.Priority = 5;
+
+        // Disable portrait collider
+        DisablePortraitCollider();
     }
 
     private IEnumerator ClosePuzzleGame()

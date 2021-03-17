@@ -9,6 +9,14 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyCombat))]
 public class EnemyCombat : MonoBehaviour
 {
+    public enum ZombieTypes
+    {
+        Zombie1,
+        Zombie2,
+        Zombie3,
+        Zombie4
+    }
+
     [Header("Attack 1 Attributes")]
     [HideInInspector]
     public bool attack1Trigger;
@@ -21,9 +29,10 @@ public class EnemyCombat : MonoBehaviour
     public int attack1Damage = 20;      // Damage caused to enemy
     public float attackRepeatTime;      // Attack rate of enemy
 
-    // Cached References
+    // Private References
     private Animator animator;
     private EnemyAI enemyAI;
+
     [Header("References")]
     public LayerMask playerLayerMask;
     public HealthBar healthBar;
@@ -41,6 +50,9 @@ public class EnemyCombat : MonoBehaviour
     public int maxHealth;
     public float destroyDelayAfterDeath = 3f;
     public float pushDistanceOnHit;
+    public float damageMultiplier = 1f;
+
+    public ZombieTypes zombieType;
 
     // Public variables hidden from Inspector
     [HideInInspector]
@@ -121,8 +133,17 @@ public class EnemyCombat : MonoBehaviour
             // Set enemy taking damage bool to true to stop attacks
             takingDamage = true;
 
+            if (Player.KnifeDrawn() && zombieType != ZombieTypes.Zombie1)
+            {
+                damageMultiplier = 0.05f;
+            }
+            else if (Player.AxeDrawn())
+            {
+                damageMultiplier = 0.8f;
+            }
+
             // Reduce health
-            currentHealth -= damage;
+            currentHealth -= (int)Mathf.Floor(damage * damageMultiplier);
 
             // Update Health Bar
             healthBar.SetHealth(currentHealth);
@@ -191,6 +212,9 @@ public class EnemyCombat : MonoBehaviour
 
         // Disable Health Bar
         healthBar.gameObject.SetActive(false);
+
+        // Send a notification to the multiple zombies death behaviour script
+        MultipleZombiesDeathBehaviour.instance.AddDeadZombie();
 
         enemyAI.enemyState = EnemyAI.EnemyState.Dead;
 

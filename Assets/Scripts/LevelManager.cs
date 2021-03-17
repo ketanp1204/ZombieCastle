@@ -49,22 +49,31 @@ public class LevelManager : MonoBehaviour
         if (scene.name == "StartScene")
         {
             animatorSpeed = 0.3f;
-            animator.speed = animatorSpeed;
         }
         else if (scene.name == "IntroSequence")
         {
             animatorSpeed = 0.1f;
-            animator.speed = animatorSpeed;
         }
         else if (scene.name == "CastleLobby")
         {
-            animatorSpeed = 0.15f;
-            animator.speed = animatorSpeed;
+            if (PlayerStats.isFirstScene)
+            {
+                animatorSpeed = 0.15f;
+            }
+            else
+            {
+                animatorSpeed = 1f;
+            }
+        }
+        else
+        {
+            animatorSpeed = 1f;
         }
     }
 
     private void UpdateAnimationClipTimes()
     {
+        instance.animator.speed = instance.animatorSpeed;
         AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
         crossfadeEndAnimLength = clips[0].length / animatorSpeed; 
         crossfadeStartAnimLength = clips[1].length / animatorSpeed;
@@ -73,17 +82,18 @@ public class LevelManager : MonoBehaviour
     public static void SetAnimatorSpeed(float speed)
     {
         instance.animatorSpeed = speed;
-        instance.animator.speed = instance.animatorSpeed;
         instance.UpdateAnimationClipTimes();
     }
 
     public static void FadeScreenInAndOut()
     {
+        instance.UpdateAnimationClipTimes();
         instance.StartCoroutine(instance.FadeInOutScreen());
     }
 
     private IEnumerator FadeInOutScreen()
     {
+        instance.UpdateAnimationClipTimes();
         instance.animator.SetTrigger("CrossFade_Start");
 
         yield return new WaitForSeconds(crossfadeStartAnimLength);
@@ -93,22 +103,26 @@ public class LevelManager : MonoBehaviour
 
     public static void FadeOutScreen()
     {
+        instance.UpdateAnimationClipTimes();
         instance.animator.SetTrigger("CrossFade_Start");
     }
 
     public static void FadeInScreen()
     {
+        instance.UpdateAnimationClipTimes();
         instance.animator.SetTrigger("CrossFade_End");
     }
 
     public static void LoadNextLevel()
     {
+        instance.UpdateAnimationClipTimes();
         int sceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
         instance.StartCoroutine(instance.LoadLevel(sceneToLoad));
     }
 
     public static void LoadSceneByName(string name)
     {
+        instance.UpdateAnimationClipTimes();
         instance.StartCoroutine(instance.LoadLevel(name));
     }
 
@@ -125,7 +139,7 @@ public class LevelManager : MonoBehaviour
     {
         animator.SetTrigger("CrossFade_Start");
 
-        yield return new WaitForSeconds(transitionTime);
+        yield return new WaitForSeconds(crossfadeStartAnimLength);
 
         SceneManager.LoadScene(sceneName);
     }

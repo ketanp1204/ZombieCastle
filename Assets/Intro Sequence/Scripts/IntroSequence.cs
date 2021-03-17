@@ -187,11 +187,12 @@ public class IntroSequence : MonoBehaviour
         // Zoom in and out cinemachine camera
         new Task(InterpolateCinemachineCameraSize(4.2f, 5.35f, 0f, 5f));
 
-        yield return new WaitForSeconds(2f);
-
-        // Play animal sound
-
         yield return new WaitForSeconds(1f);
+
+        // Play intro scare sound
+        AudioManager.PlaySoundOnce(AudioManager.Sound.IntroScareSound);
+
+        yield return new WaitForSeconds(2f);
 
         // Show player box and dialogue
         new Task(UIAnimation.FadeCanvasGroupAfterDelay(img3_PlayerBox, 0f, 1f, 0.4f, 0.5f));
@@ -302,6 +303,12 @@ public class IntroSequence : MonoBehaviour
         // Play blackout music
         AudioManager.PlaySoundOnce(AudioManager.Sound.IntroSequenceBlackout);
 
+        // Get background music AudioSource
+        AudioSource backgroundMusicAudioSource = AudioManager.loopingSoundGameObjects[AudioManager.Sound.IntroSequenceBackground].GetComponent<AudioSource>();
+
+        // Fade out title screen music
+        new Task(AudioFadeUtils.StartSingleAudioSourceFade(backgroundMusicAudioSource, 1f, 0f));
+
         // Start zooming in the cinemachine camera
         new Task(InterpolateCinemachineCameraSize(5.35f, 3.8f, 0f, 6f));
 
@@ -355,12 +362,6 @@ public class IntroSequence : MonoBehaviour
         new Task(UIAnimation.FadeTMProTextAfterDelay(outroTMPro, 1f, 0f, 0f, 0.4f));
 
         yield return new WaitForSeconds(2.5f);
-
-        // Get background music AudioSource
-        AudioSource backgroundMusicAudioSource = AudioManager.loopingSoundGameObjects[AudioManager.Sound.IntroSequenceBackground].GetComponent<AudioSource>();
-
-        // Fade out title screen music
-        new Task(AudioFadeUtils.StartSingleAudioSourceFade(backgroundMusicAudioSource, 1f, 0f));
 
         LevelManager.SetAnimatorSpeed(0.3f);
         LevelManager.LoadNextLevel();

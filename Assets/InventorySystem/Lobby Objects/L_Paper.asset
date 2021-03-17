@@ -18,7 +18,7 @@ MonoBehaviour:
   sceneName: Lobby
   hasPlayerComment: 1
   playerComments:
-  - 'There seems to be something written on it. '
+  - What's this?
   hasNote: 1
   largeNote: 0
   noteText: 'Servants must ensure all the chests are protected at all costs. Pay

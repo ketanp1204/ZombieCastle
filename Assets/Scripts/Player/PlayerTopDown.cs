@@ -66,7 +66,12 @@ public class PlayerTopDown : MonoBehaviour
         }
 
         SetReferences();
-        Initialization();
+        Initialize();
+
+        if (PlayerStats.isFirstScene)
+        {
+            StopMovement();
+        }
     }
 
     void OnEnable()
@@ -88,7 +93,7 @@ public class PlayerTopDown : MonoBehaviour
     }
 
     // Default Values
-    private void Initialization()
+    public void Initialize()
     {
         // Movement
         facingRight = true;
@@ -108,7 +113,7 @@ public class PlayerTopDown : MonoBehaviour
             currentHealth = maxHealth;
             PlayerStats.currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
-            PlayerStats.isFirstScene = false;
+            // PlayerStats.isFirstScene = false;
         }
         else
         {
@@ -195,7 +200,15 @@ public class PlayerTopDown : MonoBehaviour
     {
         if (weaponEquippedDict[PlayerCombat.WeaponTypes.Axe])
         {
+            /*
             if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Hurt") && !PlayerStats.IsDead)
+            {
+                playerCombat.InvokeAxeAttack();
+                animator.SetTrigger("AxeAttack");
+                rb.velocity = Vector2.zero;
+            }
+            */
+            if (playerInput.leftMousePressed && !playerCombat.isAttacking_Axe && !takingDamage && !PlayerStats.IsDead)
             {
                 playerCombat.InvokeAxeAttack();
                 animator.SetTrigger("AxeAttack");
@@ -205,7 +218,16 @@ public class PlayerTopDown : MonoBehaviour
 
         if (weaponEquippedDict[PlayerCombat.WeaponTypes.Knife])
         {
+            /*
             if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Hurt") && !PlayerStats.IsDead)
+            {
+                playerCombat.InvokeKnifeAttack();
+                animator.SetTrigger("KnifeAttack");
+                rb.velocity = Vector2.zero;
+            }
+            */
+
+            if (playerInput.leftMousePressed && !playerCombat.isAttacking_Knife && !takingDamage && !PlayerStats.IsDead)
             {
                 playerCombat.InvokeKnifeAttack();
                 animator.SetTrigger("KnifeAttack");

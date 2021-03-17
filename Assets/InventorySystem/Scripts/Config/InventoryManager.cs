@@ -103,6 +103,9 @@ public class InventoryManager : MonoBehaviour
 
             instance.isInventoryOpen = true;
 
+            // Play inventory open sound
+            AudioManager.PlaySoundOnce(AudioManager.Sound.InventoryOpen);
+
             // Show inventory display
             new Task(UIAnimation.FadeCanvasGroupAfterDelay(instance.inventoryCanvasGroup, 0f, 1f, 0f, 0.3f));
             // Enable mouse interaction
@@ -135,6 +138,9 @@ public class InventoryManager : MonoBehaviour
             Time.timeScale = 1f;
 
             instance.isInventoryOpen = false;
+
+            // Play inventory close sound
+            AudioManager.PlaySoundOnce(AudioManager.Sound.InventoryClose);
 
             // Hide inventory display
             new Task(UIAnimation.FadeCanvasGroupAfterDelay(instance.inventoryCanvasGroup, 1f, 0f, 0f, 0.3f));

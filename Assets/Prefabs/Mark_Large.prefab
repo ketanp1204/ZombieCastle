@@ -238,16 +238,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c38d43a7344f440b5ff71d0b68e59a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axeDamage: 20
-  axeAttackRepeatTime: 0.9
-  axeHitbox_L: {fileID: 2505154482405184505}
-  axeHitbox_R: {fileID: 8205501202262020541}
+  axeDamage: 50
+  axeAttackRepeatTime: 0.97
   axeHitboxAnimator_L: {fileID: 5079447134803724496}
   axeHitboxAnimator_R: {fileID: 2437771053754895001}
-  knifeDamage: 10
-  knifeAttackRepeatTime: 0.9
-  knifeHitbox_L: {fileID: 8324158004891966449}
-  knifeHitbox_R: {fileID: 672229162577518537}
+  knifeDamage: 5
+  knifeAttackRepeatTime: 1.3
   knifeHitboxAnimator_L: {fileID: 2430838785247921643}
   knifeHitboxAnimator_R: {fileID: 8495685439208976738}
   enemyLayers:
@@ -416,7 +412,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.762963, y: 4.459259}
+  m_Size: {x: 2.1555555, y: 4.548148}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0

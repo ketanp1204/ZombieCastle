@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 41ed50966eff7ca418c00be4e04ba693, type: 3}
   loopSound: 0
-  volume: 0.2
+  volume: 0.11

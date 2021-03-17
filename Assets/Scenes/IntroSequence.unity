@@ -2261,7 +2261,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 348284644}
+  m_Follow: {fileID: 1280236685}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5.35
@@ -2285,7 +2285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 731122845}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 88.07001, y: 0, z: -10}
+  m_LocalPosition: {x: 0.020004734, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 169862461}
@@ -2306,7 +2306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 648913959}
+  m_BoundingShape2D: {fileID: 2056564732}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!1 &787044095
@@ -2888,9 +2888,9 @@ MonoBehaviour:
   img1_FriendText: {fileID: 1074685605}
   img1_PlayerBox: {fileID: 144096385}
   img1_FriendBox: {fileID: 631374337}
-  img1_PlayerDialogue: Come on! Don't be scared. Let's check it out.
+  img1_PlayerDialogue: Come on Betty! Don't be scared. Let's check it out.
   img1_FriendDialogues:
-  - I'm not sure we should do this.
+  - Mark, I'm not sure we should do this.
   - Last time I was here, I heard some mysterious sounds coming from within.
   img2_PlayerText: {fileID: 956326382}
   img2_FriendText: {fileID: 392566886}
@@ -2930,6 +2930,7 @@ MonoBehaviour:
   img5_FriendDialogue: What the hell is happening?
   outroTMPro: {fileID: 1578735758}
   outroText: A few hours later...
+  textSoundEffectPlayInterval: 0.09
 --- !u!1 &952956020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3596,7 +3597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280236684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.23, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 517399642}
@@ -3901,7 +3902,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472837912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 88.07001, y: 0, z: -10}
+  m_LocalPosition: {x: 0.020004734, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4447,7 +4448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597531601}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -0.57, z: 0}
+  m_LocalPosition: {x: -2.9, y: -0.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 113346086}
@@ -4493,7 +4494,7 @@ SpriteRenderer:
   m_SortingLayerID: 1352661663
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2d2ca815c571d0e49ac792928f84ba55, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6c6a4fa32e92a6c408d66ab7926ac530, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
