@@ -85,8 +85,7 @@ public class DialogueBox : MonoBehaviour
         Player.StopMovement();
         PlayerTopDown.StopMovement();
 
-        Cursor.lockState = CursorLockMode.Locked;                                                   // Center and lock mouse cursor
-        Cursor.lockState = CursorLockMode.None;                                                     // Unlock mouse cursor
+        
 
         // Fade in dialogue box
         new Task(UIAnimation.FadeCanvasGroupAfterDelay(dialogueBoxCG, 0f, 1f, dialogueDisplayDelay));
@@ -151,7 +150,7 @@ public class DialogueBox : MonoBehaviour
         {                                                                                           
             dialogueText.text = "";                                                                 // No more dialogue texts left to display
 
-            Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
+            Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock cursor
             isTyping = false;                                                                       // Text is not being typed in the dialogue box
 
             // Fade out the dialogue box
@@ -255,12 +254,19 @@ public class DialogueBox : MonoBehaviour
             {
                 continueButton.SetActive(true);                                                     // Show dialogue box continue button after auto-typing is finished
                 new Task(SetContinueButtonEnabledFlagToTrueAfterDelay());
+
+                Cursor.lockState = CursorLockMode.Locked;                                           // Center and lock mouse cursor
+                Cursor.lockState = CursorLockMode.None;                                             // Unlock mouse cursor
             }
 
             if (Input.GetKeyDown(KeyCode.Space) && !skippedCurrentDialogue)
             {
                 continueButton.SetActive(true);                                                     // Show dialogue box continue button if player skips the dialogue by pressing space
                 new Task(SetContinueButtonEnabledFlagToTrueAfterDelay());
+
+                Cursor.lockState = CursorLockMode.Locked;                                           // Center and lock mouse cursor
+                Cursor.lockState = CursorLockMode.None;                                             // Unlock mouse cursor
+
                 skipAutoTyping = true;
                 skippedCurrentDialogue = true;
             }

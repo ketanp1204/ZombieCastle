@@ -18,12 +18,10 @@ public class DescriptionBox : MonoBehaviour
 
     // Public Variables
     [HideInInspector]
-    public bool isActive;
+    public bool isActive;                                                                                           // Bool - If enabled, pressing escape will close description box
 
     // Private Variables
     private ItemObject currentItem = null;                                                                          // ItemObject - The current ItemObject which has the note box display
-
-    private bool isDescBoxOpen = false;                                                                             // Bool - If enabled, pressing escape will close description box
 
     private void Awake()
     {
@@ -86,11 +84,11 @@ public class DescriptionBox : MonoBehaviour
 
     public void ShowDescriptionBox(ItemObject item)
     {
-        if (!instance.isDescBoxOpen)
+        if (!instance.isActive)
         {
             SetCurrentItem(item);
 
-            isDescBoxOpen = true;
+            isActive = true;
 
             // Prevent escape key from closing inventory box
             InventoryManager.instance.SetDescBoxOpenFlag();
@@ -108,7 +106,7 @@ public class DescriptionBox : MonoBehaviour
 
     public void CloseDescriptionBox()
     {
-        if (instance.isDescBoxOpen)
+        if (instance.isActive)
         {
             // Play paper pickup sound
             AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PaperPickup);
@@ -128,7 +126,7 @@ public class DescriptionBox : MonoBehaviour
 
     private void ResetValues()
     {
-        isDescBoxOpen = false;
+        isActive = false;
         descBoxCG.interactable = false;
         descBoxCG.blocksRaycasts = false; 
         currentItem = null;
@@ -137,7 +135,7 @@ public class DescriptionBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDescBoxOpen)
+        if (isActive)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {

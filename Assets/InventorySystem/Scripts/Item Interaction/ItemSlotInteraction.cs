@@ -11,16 +11,13 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
     public ItemObject itemScriptableObject;
 
     // Private Cached References
-    private Image itemIcon;
-    private TextMeshProUGUI nameText;
+    public Image slotSelectedBackground;
+    public Image itemIcon;
+    public TextMeshProUGUI nameText;
 
+    // Private variables
     // private bool draggingItem = false;
-
-    public void Awake()
-    {
-        itemIcon = transform.Find("ItemIcon").GetComponent<Image>();
-        nameText = transform.Find("NameText").GetComponent<TextMeshProUGUI>();
-    }
+    private bool slotSelected = false;
 
     public void PopulateItemSlot(ItemObject scriptableObject)
     {
@@ -50,16 +47,41 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
 
         // Play hover sound
         AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryMouseHover);
+
+        // Partially fade in slot selected background if not selected
+        if (!slotSelected)
+        {
+            Color c = slotSelectedBackground.color;
+            c.a = 0.4f;
+            slotSelectedBackground.color = c;
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         // Fade out item name
         new Task(UIAnimation.FadeTMProTextAfterDelay(nameText, nameText.alpha, 0f, 0f, 0.1f));
+
+        // Hide slot selected background if not selected
+        if (!slotSelected)
+        {
+            Color c = slotSelectedBackground.color;
+            c.a = 0f;
+            slotSelectedBackground.color = c;
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        // Set slot selected bool and show background
+        if (!slotSelected)
+        {
+            slotSelected = true;
+            Color c = slotSelectedBackground.color;
+            c.a = 1f;
+            slotSelectedBackground.color = c;
+        }
+
         if (DescriptionBox.instance)
         {
             DescriptionBox.instance.ShowDescriptionBox(itemScriptableObject);
@@ -79,5 +101,27 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("end dragging");
+    }
+
+    void Update()
+    {
+        if (slotSelected)
+        {
+            if (!DescriptionBox.instance.isActive)
+            {
+                DeselectSlot();
+            }
+        }
+    }
+
+    private void DeselectSlot()
+    {
+        if (slotSelected)
+        {
+            slotSelected = false;
+            Color c = slotSelectedBackground.color;
+            c.a = 0f;
+            slotSelectedBackground.color = c;
+        }
     }
 }

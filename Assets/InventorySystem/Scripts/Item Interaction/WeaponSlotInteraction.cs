@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     // Private references
-    private TextMeshProUGUI nameText;
+    public Image slotSelectedBackground;
+    public TextMeshProUGUI nameText;
 
     // Public variables
     [HideInInspector]
     public PlayerCombat.WeaponTypes weaponType;
 
-    private void Start()
-    {
-        nameText = transform.Find("NameText").GetComponent<TextMeshProUGUI>();
-    }
+    // Private variables
+    private bool slotSelected = false;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -25,18 +25,50 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
 
         // Play hover sound
         AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryMouseHover);
+
+        // Partially fade in slot selected background
+        if (!slotSelected)
+        {
+            Color c = slotSelectedBackground.color;
+            c.a = 0.4f;
+            slotSelectedBackground.color = c;
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         // Fade out item name
         new Task(UIAnimation.FadeTMProTextAfterDelay(nameText, nameText.alpha, 0f, 0f, 0.1f));
+
+        // Hide slot selected background if not selected
+        if (!slotSelected)
+        {
+            Color c = slotSelectedBackground.color;
+            c.a = 0f;
+            slotSelectedBackground.color = c;
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         // Close Inventory Box
         InventoryManager.HideInventory();
+
+        // Set/unset slot selected bool and show/hide background
+        if (!slotSelected)
+        {
+            slotSelected = true;
+            Color c = slotSelectedBackground.color;
+            c.a = 1f;
+            slotSelectedBackground.color = c;
+        }
+        else
+        {
+            slotSelected = false;
+            Color c = slotSelectedBackground.color;
+            c.a = 0f;
+            slotSelectedBackground.color = c;
+        }
 
         // Check whether weapon is equipped
         if (weaponType == PlayerCombat.WeaponTypes.Knife)
