@@ -84,7 +84,7 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
 
         if (DescriptionBox.instance)
         {
-            DescriptionBox.instance.ShowDescriptionBox(itemScriptableObject);
+            DescriptionBox.instance.ShowDescBoxFromInventory(itemScriptableObject);
         }
     }
 

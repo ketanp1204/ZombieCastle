@@ -21,30 +21,31 @@ public class MazePuzzle : MonoBehaviour
     private TextMeshProUGUI mazeCountdownTimerText;
     private Button interactButton;
     private TextMeshProUGUI interactText;
-    private GameObject mazePuzzleGO;                            // Maze Puzzle GameObject 
-    private Collider2D switch1Collider;                         // Switch 1 collider
-    private Collider2D switch2Collider;                         // Switch 2 collider
+    private GameObject mazePuzzleGO;                                    // Maze Puzzle GameObject 
+    private Collider2D switch1Collider;                                 // Switch 1 collider
+    private Collider2D switch2Collider;                                 // Switch 2 collider
     private CanvasGroup playerHealthBarCanvasGroup;
 
     // Public Cached References
-    public CinemachineVirtualCamera cinemachineCamera;          // Cinemachine Camera that targets the Maze Puzzle GameObject
+    public CinemachineVirtualCamera cinemachineCamera;                  // Cinemachine Camera that targets the Maze Puzzle GameObject
+    public PC_Then_Inventory_Object keyRewardScriptableObject;          // Key reward received after successful puzzle completion
 
     // Private Variables
     private bool isActive;
     private bool puzzleSuccess = false;
 
-    private TimeSpan timerTimeSpan;                             // To format time into string
-    private float timerCurrentTime = 0f;                        // Current time of the timer
-    private float puzzleTime = 20f;                             // Time allowed to complete the puzzle
-    private float bonusTime = 5f;                               // Bonus time added after each switch is hit
-
-    private Task timerTask;                                     // Task class variable for starting the countdown timer
+    private TimeSpan timerTimeSpan;                                     // To format time into string
+    private float timerCurrentTime = 0f;                                // Current time of the timer
+    private Task timerTask;                                             // Task class variable for starting the countdown timer
 
     // Public Variables
     [HideInInspector]
-    public bool firstSwitchHitFlag = false;                       // Set after 1st switch is hit
+    public bool firstSwitchHitFlag = false;                             // Set after 1st switch is hit
     [HideInInspector]
-    public bool timerStarted = false;                           // Timer starts after 1st switch in the maze is hit
+    public bool timerStarted = false;                                   // Timer starts after 1st switch in the maze is hit
+    
+    public float puzzleTime = 20f;                                      // Time allowed to complete the puzzle
+    public float bonusTime = 5f;                                        // Bonus time added after each switch is hit
 
     // private bool checkForInput = false;
 
@@ -149,15 +150,11 @@ public class MazePuzzle : MonoBehaviour
 
     public void StartPuzzleTimer()
     {
-        Debug.Log("puzzle timer started");
         timerStarted = true;
         timerCurrentTime = puzzleTime;
 
         // Start updating the timer
         timerTask = new Task(UpdateTimer());
-
-        // Start a coroutine to stop the timer after intial time given to complete the puzzle
-        // timerStopTask = new Task(StopTimerAfterSeconds(puzzleTime));
     }
 
     private IEnumerator UpdateTimer()
@@ -176,8 +173,6 @@ public class MazePuzzle : MonoBehaviour
         if (!puzzleSuccess)
         {
             // Retry puzzle game
-            Debug.Log("puzzle failure");
-
             ResetPuzzle();
         }
     }
@@ -197,9 +192,6 @@ public class MazePuzzle : MonoBehaviour
         // Stop timer stop task
         timerTask.Stop();
 
-        // Show reward 
-        Debug.Log("puzzle success");
-
         // Exit
         CloseMazePuzzle();
     }
@@ -217,17 +209,25 @@ public class MazePuzzle : MonoBehaviour
         }
     }
 
-    // TODO: add exit behavior
     public void CloseMazePuzzle()
     {
         // Hide cinemachine camera for maze puzzle
         StartCoroutine(ClosePuzzleGame());
 
-        // Set cinemachine camera priority
-        cinemachineCamera.Priority = 5;
-
         // Disable portrait collider
         DisablePortraitCollider();
+
+        // Show key reward 
+        if (DescriptionBox.instance)
+        {
+            DescriptionBox.instance.ShowDescBoxAfterReward(keyRewardScriptableObject);
+        }
+
+        // Add key reward to inventory
+        if (InventoryManager.instance)
+        {
+            InventoryManager.instance.AddInventoryItem(keyRewardScriptableObject);
+        }
     }
 
     private IEnumerator ClosePuzzleGame()
@@ -242,13 +242,8 @@ public class MazePuzzle : MonoBehaviour
         // Hide cursor
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
 
-        // Maze puzzle is active
+        // Maze puzzle is inactive
         isActive = false;
-
-        // Hide maze puzzle UI
-        new Task(UIAnimation.FadeCanvasGroupAfterDelay(mazeUICanvasGroup, 1f, 0f, 0f, 0.2f));
-        mazeUICanvasGroup.interactable = false;
-        mazeUICanvasGroup.blocksRaycasts = false;
 
         // Hide maze puzzle gameobject
         mazePuzzleGO.SetActive(false);
@@ -258,6 +253,14 @@ public class MazePuzzle : MonoBehaviour
 
         // Stop movement of maze player
         MazePlayer.EndPuzzle();
+
+        // Hide maze puzzle UI
+        new Task(UIAnimation.FadeCanvasGroupAfterDelay(mazeUICanvasGroup, 1f, 0f, 0f, 0f));
+        mazeUICanvasGroup.interactable = false;
+        mazeUICanvasGroup.blocksRaycasts = false;
+
+        // Set cinemachine camera priority
+        cinemachineCamera.Priority = 5;
     }
 
     public static bool IsActive()

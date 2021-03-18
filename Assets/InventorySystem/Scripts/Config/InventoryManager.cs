@@ -22,8 +22,11 @@ public class InventoryManager : MonoBehaviour
     private Transform weaponGridContainer;
     private Transform itemGridContainer;
 
+    // Public variables
+    [HideInInspector]
+    public bool isInventoryOpen = false;
+
     // Private variables
-    private bool isInventoryOpen = false;
     private bool isDescBoxOpen = false;
 
     private void Awake()

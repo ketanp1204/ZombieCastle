@@ -6,6 +6,13 @@ using TMPro;
 
 public class DescriptionBox : MonoBehaviour
 {
+    public enum DescBoxOpenLocations
+    {
+        Null,
+        Inventory,
+        AfterReward
+    }
+
     // Singleton
     public static DescriptionBox instance;
 
@@ -13,6 +20,7 @@ public class DescriptionBox : MonoBehaviour
     private CanvasGroup descBoxCG;
 
     // Public References
+    public TextMeshProUGUI newItemDiscoveredText;
     public TextMeshProUGUI descText;
     public Image iconImage;
 
@@ -22,6 +30,7 @@ public class DescriptionBox : MonoBehaviour
 
     // Private Variables
     private ItemObject currentItem = null;                                                                          // ItemObject - The current ItemObject which has the note box display
+    private DescBoxOpenLocations descBoxOpenLocation = DescBoxOpenLocations.Null;                                   // For different behaviour of desc box
 
     private void Awake()
     {
@@ -82,7 +91,7 @@ public class DescriptionBox : MonoBehaviour
         }
     }
 
-    public void ShowDescriptionBox(ItemObject item)
+    public void ShowDescBoxFromInventory(ItemObject item)
     {
         if (!instance.isActive)
         {
@@ -90,17 +99,45 @@ public class DescriptionBox : MonoBehaviour
 
             isActive = true;
 
+            descBoxOpenLocation = DescBoxOpenLocations.Inventory;
+
             // Prevent escape key from closing inventory box
             InventoryManager.instance.SetDescBoxOpenFlag();
+            
+            // Play paper pickup sound
+            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PaperPickup);
+
+            // Fade in description box
+            new Task(UIAnimation.FadeCanvasGroupAfterDelay(descBoxCG, 0f, 1f, 0f));
+            descBoxCG.interactable = true;
+            descBoxCG.blocksRaycasts = true;
+        }
+    }
+
+    // When receiving a new item from a treasure box or a puzzle
+    public void ShowDescBoxAfterReward(ItemObject item)
+    {
+        if (!instance.isActive)
+        {
+            SetCurrentItem(item);
+
+            isActive = true;
+
+            descBoxOpenLocation = DescBoxOpenLocations.AfterReward;
+
+            // Fade in new item discovered text:
+            new Task(UIAnimation.FadeTMProTextAfterDelay(newItemDiscoveredText, 0f, 1f, 0f));
 
             // Play paper pickup sound
             AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PaperPickup);
 
             // Fade in description box
-            //descBoxCG.alpha = 1f;
-            new Task(UIAnimation.FadeCanvasGroupAfterDelay(descBoxCG, 0f, 1f, 0f));
+            new Task(UIAnimation.FadeCanvasGroupAfterDelay(descBoxCG, 0f, 1f, 0.5f));       // TODO: tweak delay value
             descBoxCG.interactable = true;
             descBoxCG.blocksRaycasts = true;
+
+            // Disable opening pause menu on pressing escape key
+            PauseMenu.instance.CanPauseGame = false;
         }
     }
 
@@ -117,7 +154,18 @@ public class DescriptionBox : MonoBehaviour
             descBoxCG.blocksRaycasts = false;
 
             // Enable escape key to close inventory box
-            InventoryManager.instance.UnsetDescBoxOpenFlag();
+            if (descBoxOpenLocation == DescBoxOpenLocations.AfterReward)
+            {
+                // Fade in new item discovered text:
+                new Task(UIAnimation.FadeTMProTextAfterDelay(newItemDiscoveredText, 1f, 0f, 0f));
+
+                // Enable opening pause menu on pressing escape key
+                instance.StartCoroutine(PauseMenu.EnableCanPauseGameBoolAfterDelay(0.1f));
+            }
+            else if (descBoxOpenLocation == DescBoxOpenLocations.Inventory)
+            {
+                InventoryManager.instance.UnsetDescBoxOpenFlag();
+            }
 
             // Reset local values
             ResetValues();
