@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: L_Torch
   m_EditorClassIdentifier: 
   itemName: Torch
-  itemDescription: A wooden torch.
+  itemDescription: A wooden torch with a cotton cloth. Needs oil to light up.
   itemType: 2
   sceneName: Lobby
   hasPlayerComment: 1

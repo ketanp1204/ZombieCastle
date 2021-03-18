@@ -24,6 +24,7 @@ public class InventoryManager : MonoBehaviour
 
     // Private variables
     private bool isInventoryOpen = false;
+    private bool isDescBoxOpen = false;
 
     private void Awake()
     {
@@ -83,11 +84,28 @@ public class InventoryManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isInventoryOpen)
+            if (isInventoryOpen && !isDescBoxOpen)
             {
                 HideInventory();
             }
         }
+    }
+
+    public void SetDescBoxOpenFlag()
+    {
+        isDescBoxOpen = true;
+    }
+
+    public void UnsetDescBoxOpenFlag()
+    {
+        new Task(UnsetDescBoxOpenFlagAfterDelay());
+    }
+
+    private IEnumerator UnsetDescBoxOpenFlagAfterDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        isDescBoxOpen = false;
     }
 
     private void LoadInventory(InventoryObject _inventory)
@@ -99,8 +117,6 @@ public class InventoryManager : MonoBehaviour
     {
         if (!instance.isInventoryOpen)
         {
-            Time.timeScale = 0f;
-
             instance.isInventoryOpen = true;
 
             // Play inventory open sound
@@ -135,8 +151,6 @@ public class InventoryManager : MonoBehaviour
     {
         if (instance.isInventoryOpen)
         {
-            Time.timeScale = 1f;
-
             instance.isInventoryOpen = false;
 
             // Play inventory close sound

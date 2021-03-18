@@ -10,6 +10,10 @@ public class PauseMenu : MonoBehaviour
     // Singleton
     public static PauseMenu instance;
 
+    // Public references
+    public Button resumeButton;
+    public Button quitButton;
+
     // Public static variables
     [HideInInspector]
     public static bool GameIsPaused;                                // Is true when the game is paused
@@ -21,6 +25,8 @@ public class PauseMenu : MonoBehaviour
     // Private cached references
     private Animator animator;
     private CinemachineVirtualCamera cinemachineCamera;             // Reference to the current CinemachineCamera
+
+    private Button currentlySelectedButton = null;
 
     // Start is called before the first frame update
     void Start()
@@ -66,6 +72,47 @@ public class PauseMenu : MonoBehaviour
             else
             {
                 Pause();
+            }
+        }
+
+        if (GameIsPaused)
+        {
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                if (currentlySelectedButton == null)
+                {
+                    currentlySelectedButton = resumeButton;
+                    EventSystem.current.SetSelectedGameObject(resumeButton.gameObject);
+                }
+                else if (currentlySelectedButton == resumeButton)
+                {
+                    currentlySelectedButton = quitButton;
+                    EventSystem.current.SetSelectedGameObject(quitButton.gameObject);
+                }
+                else if (currentlySelectedButton == quitButton)
+                {
+                    currentlySelectedButton = resumeButton;
+                    EventSystem.current.SetSelectedGameObject(resumeButton.gameObject);
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                if (currentlySelectedButton == null)
+                {
+                    currentlySelectedButton = quitButton;
+                    EventSystem.current.SetSelectedGameObject(quitButton.gameObject);
+                }
+                else if (currentlySelectedButton == quitButton)
+                {
+                    currentlySelectedButton = resumeButton;
+                    EventSystem.current.SetSelectedGameObject(resumeButton.gameObject);
+                }
+                else if (currentlySelectedButton == resumeButton)
+                {
+                    currentlySelectedButton = quitButton;
+                    EventSystem.current.SetSelectedGameObject(quitButton.gameObject);
+                }
             }
         }
     }

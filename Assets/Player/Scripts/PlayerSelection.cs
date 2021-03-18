@@ -96,6 +96,7 @@ public class PlayerSelection : MonoBehaviour
 
                         if (DialogueBox.instance)
                         {
+                            DialogueBox.instance.SetPCThenInventoryGameObject(collidedObject.gameObject);
                             DialogueBox.instance.SetCurrentItem(pc_Then_Inventory_Object);
                             DialogueBox.instance.FillSentences(sentenceArray);
                             DialogueBox.instance.SetInventoryAfterDialogueFlag();

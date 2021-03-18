@@ -682,4 +682,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da8406dbcf9937418b09bd9dd933195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resumeButton: {fileID: 6737800667233908269}
+  quitButton: {fileID: 6737800667254474348}
   CanPauseGame: 0

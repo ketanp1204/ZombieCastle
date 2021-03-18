@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class DialogueBox : MonoBehaviour
@@ -17,26 +18,29 @@ public class DialogueBox : MonoBehaviour
 
     // Public variables
     [HideInInspector]
-    public bool isTyping = false;                                                                       // Bool - Dialogue box active and typing status
+    public bool isTyping = false;                                       // Bool - Dialogue box active and typing status
 
-    public float typingSpeed = 0.025f;                                                                  // Float - Text auto-type speed in seconds
-    public float dialogueDisplayDelay = 0.2f;                                                           // Float - Delay time before displaying the dialogue box
-    public float textSoundEffectPlayInterval = 0.09f;                                                   // Float - Interval between each text type sound effect
+    public float typingSpeed = 0.025f;                                  // Float - Text auto-type speed in seconds
+    public float dialogueDisplayDelay = 0.2f;                           // Float - Delay time before displaying the dialogue box
+    public float textSoundEffectPlayInterval = 0.09f;                   // Float - Interval between each text type sound effect
 
     // Private variables
-    private string[] sentences;                                                                         // String array - Sentence array to be displayed
-    private bool skipAutoTyping = false;                                                                // Bool - To stop auto typing of current dialogue box text
-    private bool skippedCurrentDialogue = false;                                                        // Bool - Player skipped current auto-typing dialogue
-    private int dialogueIndex = 0;                                                                      // Int -  Current sentence index
-    private float textTypingDelay;                                                                      // Float - Delay time before starting auto typing of text
+    private string[] sentences;                                         // String array - Sentence array to be displayed
+    private bool skipAutoTyping = false;                                // Bool - To stop auto typing of current dialogue box text
+    private bool skippedCurrentDialogue = false;                        // Bool - Player skipped current auto-typing dialogue
+    private int dialogueIndex = 0;                                      // Int -  Current sentence index
+    private float textTypingDelay;                                      // Float - Delay time before starting auto typing of text
+    private bool continueButtonEnabled = false;                         // Bool - If enabled, player can press space bar to press the continue button
 
     // For events after dialogue box display
-    private bool addToInventoryAfterDialogue = false;                                                   // Bool - Object goes to inventory after dialogue display
-    private bool showNoteAfterDisplay = false;                                                          // Bool - Object has note box display after dialogue display
-    private bool room1MazePuzzleAfterDialogue = false;                                                  // Bool - Portrait object in room1 that contains maze puzzle
-    private bool room1ZombieDiscovery = false;                                                          // Bool - Player finds a zombie in room1
+    private bool addToInventoryAfterDialogue = false;                   // Bool - Object goes to inventory after dialogue display
+    private bool showNoteAfterDisplay = false;                          // Bool - Object has note box display after dialogue display
+    private bool room1MazePuzzleAfterDialogue = false;                  // Bool - Portrait object in room1 that contains maze puzzle
+    private bool room1ZombieDiscovery = false;                          // Bool - Player finds a zombie in room1
 
-    private ItemObject currentItem = null;                                                              // ItemObject - The current ItemObject which has the player comment response
+    private ItemObject currentItem = null;                              // ItemObject - The current ItemObject which has the player comment response
+
+    private GameObject pcThenInventoryGO = null;                        // GameObject - For PC_Then_Inventory objects, this will be used to remove the object from the scene after the dialogue is over
 
     private void Awake()
     {
@@ -135,6 +139,7 @@ public class DialogueBox : MonoBehaviour
         AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ContinueButton);
 
         continueButton.SetActive(false);                                                            // Hide dialogue box continue button
+        continueButtonEnabled = false;
 
         if (dialogueIndex < sentences.Length - 1)                                                   // More dialogue texts left to display
         {
@@ -148,7 +153,6 @@ public class DialogueBox : MonoBehaviour
 
             Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
             isTyping = false;                                                                       // Text is not being typed in the dialogue box
-            continueButton.SetActive(false);                                                        // Hide dialogue box continue button
 
             // Fade out the dialogue box
             new Task(UIAnimation.FadeCanvasGroupAfterDelay(dialogueBoxCG, 1f, 0f, 0f));
@@ -160,6 +164,13 @@ public class DialogueBox : MonoBehaviour
                 {
                     InventoryManager.instance.AddInventoryItem(currentItem);
                 }
+
+                // Remove the object from the scene
+                if (pcThenInventoryGO != null)
+                {
+                    Destroy(pcThenInventoryGO);
+                }
+
             }
 
             if (showNoteAfterDisplay)
@@ -185,6 +196,11 @@ public class DialogueBox : MonoBehaviour
 
             ResetValues();
         }
+    }
+
+    public void SetPCThenInventoryGameObject(GameObject pcThenInv)
+    {
+        pcThenInventoryGO = pcThenInv;
     }
 
     public void SetInventoryAfterDialogueFlag()
@@ -238,14 +254,32 @@ public class DialogueBox : MonoBehaviour
             if (dialogueText.text == sentences[dialogueIndex])
             {
                 continueButton.SetActive(true);                                                     // Show dialogue box continue button after auto-typing is finished
+                new Task(SetContinueButtonEnabledFlagToTrueAfterDelay());
             }
 
             if (Input.GetKeyDown(KeyCode.Space) && !skippedCurrentDialogue)
             {
                 continueButton.SetActive(true);                                                     // Show dialogue box continue button if player skips the dialogue by pressing space
+                new Task(SetContinueButtonEnabledFlagToTrueAfterDelay());
                 skipAutoTyping = true;
                 skippedCurrentDialogue = true;
             }
         }
+
+        if (continueButtonEnabled)
+        {
+            // Click continue button by pressing space
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                continueButton.GetComponent<Button>().onClick.Invoke();
+            }
+        }
+    }
+
+    private IEnumerator SetContinueButtonEnabledFlagToTrueAfterDelay()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        continueButtonEnabled = true;
     }
 }

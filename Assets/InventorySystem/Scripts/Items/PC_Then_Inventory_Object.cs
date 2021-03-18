@@ -17,5 +17,5 @@ public class PC_Then_Inventory_Object : ItemObject
     [TextArea(4, 10)]
     public string[] playerComments;         // String array - Comments of the player on interaction
 
-    public Sprite inventorySprite;          // Sprite - Sprite for the object in the inventory;
+    public Sprite inventorySprite;          // Sprite - Sprite for the object in the inventory
 }

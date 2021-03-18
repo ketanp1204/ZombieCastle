@@ -37,6 +37,9 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
 
             // Set NameText 
             nameText.text = pc_Then_Inventory_Object.itemName;
+
+            // Set itemScriptableObject
+            itemScriptableObject = scriptableObject;
         }
     }
 
@@ -57,7 +60,10 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("clicked on item");
+        if (DescriptionBox.instance)
+        {
+            DescriptionBox.instance.ShowDescriptionBox(itemScriptableObject);
+        }
     }
 
     public void OnDrag(PointerEventData eventData)

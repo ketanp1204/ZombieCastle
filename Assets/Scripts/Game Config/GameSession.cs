@@ -51,15 +51,18 @@ public class GameSession : MonoBehaviour
 
     void HandleSceneChanges(Scene scene)
     {
-        // Time.timeScale = 0.2f;           // Testing
-        
         if (scene.name == "CastleLobby" && PlayerStats.isFirstScene)
         {
             // Play candle burning sound
             AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.CandleBurning);
 
+            // Hide cursor
+            Cursor.lockState = CursorLockMode.Locked;
+
             if (PlayerStats.isFirstScene)
+            {
                 StartCoroutine(PlayIntroDialogue());
+            }
         }
     }
 

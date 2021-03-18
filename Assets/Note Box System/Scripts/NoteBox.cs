@@ -26,7 +26,8 @@ public class NoteBox : MonoBehaviour
 
     // Private Variables
     private string notePageText;                                                                                // String - Note page text
-    
+    private bool continueButtonEnabled = false;                                                                 // Bool - If enabled, player can press space bar to press the continue button
+
     private ItemObject currentItem = null;                                                                      // ItemObject - The current ItemObject which has the note box display
 
     private void Awake()
@@ -120,6 +121,7 @@ public class NoteBox : MonoBehaviour
 
         noteText.text = notePageText;                                                               // Fill first page text
         continueButton.SetActive(true);                                                             // Show note box continue button
+        new Task(SetContinueButtonEnabledFlagToTrueAfterDelay());
     }
 
     public void ShowNextNotePage()
@@ -184,6 +186,20 @@ public class NoteBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (continueButtonEnabled)
+        {
+            // Click continue button by pressing space
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                continueButton.GetComponent<Button>().onClick.Invoke();
+            }
+        }
+    }
+
+    private IEnumerator SetContinueButtonEnabledFlagToTrueAfterDelay()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        continueButtonEnabled = true;
     }
 }
