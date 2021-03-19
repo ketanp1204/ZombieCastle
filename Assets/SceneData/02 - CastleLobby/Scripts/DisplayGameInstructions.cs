@@ -176,7 +176,7 @@ public class DisplayGameInstructions : MonoBehaviour
         // Show inventory box instruction
         if (!hasSeenInventoryBoxInstruction && canShowInventoryBoxInstruction)
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1.5f);
 
             popupTextUI.text = inventoryBoxInstructionText;
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f));

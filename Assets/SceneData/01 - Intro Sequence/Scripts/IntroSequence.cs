@@ -8,6 +8,8 @@ public class IntroSequence : MonoBehaviour
 {
     [Header("General Config")]
     public float typingSpeed = 0.045f;                                                                  // Float - Text auto-type speed in seconds
+    public TextMeshProUGUI skipIntroText;
+    public float skipIntroKeyHoldTime;
 
     [Header("Background Images and Camera")]
     public Transform img1_CamStartPos;
@@ -73,14 +75,115 @@ public class IntroSequence : MonoBehaviour
 
     // Private variables
     private bool isTyping = false;
+    private bool isActive = false;
+    private bool skipIntroHoldOver = false;
+    private bool checkForSpacePress = false;
+    private bool checkForSpaceHold = false;
+    private bool spaceKeyDown = false;
+    private bool spaceKeyHold = false;
+
+    private float _timeSinceStartedHoldingSpace;
+    private float timeSinceStartedHoldingSpace;
+    private float percentageComplete;
+
+    private Task task;
 
     // Start is called before the first frame update
     void Start()
     {
         AudioManager.Initialize();
-        StartCoroutine(LoadIntroSequence());
+        isActive = true;
+        task = new Task(LoadIntroSequence());
+        StartCoroutine(SkipIntroCheck());
 
-        Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
+        // Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
+    }
+
+    private void Update()
+    {
+        if (checkForSpacePress)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                spaceKeyDown = true;
+            }
+        }
+
+        if (checkForSpaceHold)
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                spaceKeyHold = true;
+            }
+            else
+            {
+                spaceKeyHold = false;
+            }
+        }
+    }
+
+    private IEnumerator SkipIntroCheck()
+    {
+        while (!skipIntroHoldOver && isActive)
+        {
+            checkForSpacePress = true;
+            while (true)
+            {                
+                if (spaceKeyDown)
+                {
+                    // Store space key down time
+                    _timeSinceStartedHoldingSpace = Time.time;
+
+                    // Stop checking for space down
+                    checkForSpacePress = false;
+
+                    // Start checking for space hold
+                    checkForSpaceHold = true;
+
+                    // Unset spaceKeyDown bool
+                    spaceKeyDown = false;
+
+                    // Show skip intro text
+                    new Task(UIAnimation.FadeTMProTextAfterDelay(skipIntroText, 0f, 1f, 0f));
+
+                    // Hide skip intro text after hold time
+                    new Task(UIAnimation.FadeTMProTextAfterDelay(skipIntroText, 1f, 0f, skipIntroKeyHoldTime));
+
+                    break;
+                }
+                yield return new WaitForEndOfFrame();
+            }
+
+            yield return new WaitForEndOfFrame();
+
+            while (spaceKeyHold)
+            {
+                timeSinceStartedHoldingSpace = Time.time - _timeSinceStartedHoldingSpace;
+                percentageComplete = timeSinceStartedHoldingSpace / skipIntroKeyHoldTime;
+
+                if (percentageComplete >= 1)
+                {
+                    // Stop checking for space hold
+                    checkForSpaceHold = false;
+
+                    // Unset spaceKeyHold bool
+                    spaceKeyHold = false;
+
+                    // Set skip hold success flag
+                    skipIntroHoldOver = true;
+
+                    break;
+                }
+
+                yield return new WaitForEndOfFrame();
+            }
+        }
+
+        // Stop intro animation task
+        task.Stop();
+
+        // Load castle lobby scene
+        LevelManager.LoadNextLevel();
     }
 
     private IEnumerator LoadIntroSequence()
@@ -395,7 +498,6 @@ public class IntroSequence : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
     }
-
 
     private IEnumerator MoveCameraFollowTargetX(Transform target, float startX, float endX, float delay, float lerpTime = 0.3f)
     {

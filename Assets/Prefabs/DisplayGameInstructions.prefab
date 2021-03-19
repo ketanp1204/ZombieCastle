@@ -45,8 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementInstructionText: Use W/S/A/D to move around.
   toolbarInstructionText: Press 'T' to open the toolbar.
-  inventoryBoxInstructionText: You can also use the shortcut 'Q' to open the inventory
-    box.
+  inventoryBoxInstructionText: You can also press 'Q' to open/close the inventory
+    box
   objectAndDoorInteractionInstructionText: Press 'E' to interact with objects in
     the game and open doors.
   hasSeenMovementInstruction: 0
