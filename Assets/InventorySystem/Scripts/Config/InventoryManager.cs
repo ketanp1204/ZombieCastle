@@ -73,6 +73,11 @@ public class InventoryManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            if (DisplayGameInstructions.instance)
+            {
+                DisplayGameInstructions.instance.UnsetCanShowInventoryBoxInstruction();
+            }
+
             if (!isInventoryOpen)
                 ShowInventory();
             else if (isInventoryOpen)
@@ -125,7 +130,6 @@ public class InventoryManager : MonoBehaviour
             // Show instructions if opening for the first time
             if (DisplayGameInstructions.instance)
             {
-                DisplayGameInstructions.instance.SetCanShowInventoryBoxInstruction();
                 DisplayGameInstructions.instance.StartInstructionsDisplay();
             }
 

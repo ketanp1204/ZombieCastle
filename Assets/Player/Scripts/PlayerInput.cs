@@ -28,6 +28,8 @@ public class PlayerInput : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
+        ResetLeftMouseDownBool();
+
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
             walkFastInput = true;
@@ -79,5 +81,10 @@ public class PlayerInput : MonoBehaviour
         {
             interactKey = false;
         }
+    }
+
+    private void ResetLeftMouseDownBool()
+    {
+        leftMousePressed = false;
     }
 }

@@ -70,6 +70,7 @@ public class EnemyAI : MonoBehaviour
     public void StartChasingPlayer()
     {
         enemyState = EnemyState.Chasing;
+        
         followPath = true;
         InvokeRepeating("UpdatePath", 0f, pathUpdateSeconds);
     }
@@ -79,6 +80,7 @@ public class EnemyAI : MonoBehaviour
         if (followPath && !enemyCombat.IsDead && !PlayerStats.IsDead)
         {
             target = Player.instance.pathfindingTarget;
+
             if (seeker.IsDone())
             {
                 enemyCombat.StopAttack();

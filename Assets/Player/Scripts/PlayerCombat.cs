@@ -109,8 +109,6 @@ public class PlayerCombat : MonoBehaviour
                     yield break;
                 }
 
-                PlayerStats.playerState = PlayerStats.PlayerState.Attacking;
-
                 // Animate hitbox
                 if (facingRight)
                 {
@@ -127,7 +125,6 @@ public class PlayerCombat : MonoBehaviour
                 yield return new WaitForSeconds(axeAttackRepeatTime);
             }
             isAttacking_Axe = false;
-            PlayerStats.playerState = PlayerStats.PlayerState.Idle;
         }
         else
         {
@@ -141,8 +138,6 @@ public class PlayerCombat : MonoBehaviour
                     yield break;
                 }
 
-                PlayerStats.playerState = PlayerStats.PlayerState.Attacking;
-
                 // Animate hitbox
                 if (facingRight)
                 {
@@ -159,7 +154,6 @@ public class PlayerCombat : MonoBehaviour
                 yield return new WaitForSeconds(axeAttackRepeatTime);
             }
             isAttacking_Axe = false;
-            PlayerStats.playerState = PlayerStats.PlayerState.Idle;
         }
     }
 
@@ -183,8 +177,6 @@ public class PlayerCombat : MonoBehaviour
                     yield break;
                 }
 
-                PlayerStats.playerState = PlayerStats.PlayerState.Attacking;
-
                 // Animate hitbox
                 if (facingRight)
                 {
@@ -201,7 +193,6 @@ public class PlayerCombat : MonoBehaviour
                 yield return new WaitForSeconds(knifeAttackRepeatTime);
             }
             isAttacking_Knife = false;
-            PlayerStats.playerState = PlayerStats.PlayerState.Idle;
         }
         else
         {
@@ -215,8 +206,6 @@ public class PlayerCombat : MonoBehaviour
                     yield break;
                 }
 
-                PlayerStats.playerState = PlayerStats.PlayerState.Attacking;
-
                 // Animate hitbox
                 if (facingRight)
                 {
@@ -233,7 +222,6 @@ public class PlayerCombat : MonoBehaviour
                 yield return new WaitForSeconds(knifeAttackRepeatTime);
             }
             isAttacking_Knife = false;
-            PlayerStats.playerState = PlayerStats.PlayerState.Idle;
         }
     }
 
@@ -290,7 +278,7 @@ public class PlayerCombat : MonoBehaviour
             // Push player in direction of hit
             StartCoroutine(PushPlayerInHitDirection(enemyPos));
 
-            // Update Health Bar
+            // Update Health Bar and display it
             healthBar.SetHealth(PlayerStats.currentHealth);
 
             // Play hurt animation

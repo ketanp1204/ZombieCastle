@@ -89,10 +89,9 @@ public class R1_CombatStartBehaviour : MonoBehaviour
         {
             gameObject.GetComponent<EnemyAI>().StartChasingPlayer();
         }
+
+        Player.SetCombatState();
     }
 
-    public void ShowDialogueAfterCombat()
-    {
-
-    }
+    
 }

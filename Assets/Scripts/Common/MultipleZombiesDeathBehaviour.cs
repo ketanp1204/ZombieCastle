@@ -8,8 +8,12 @@ public class MultipleZombiesDeathBehaviour : MonoBehaviour
     // Singleton
     public static MultipleZombiesDeathBehaviour instance;
 
+    // Public variables
     public UnityEvent allZombiesDead;
+    [TextArea(3,6)]
+    public string[] dialogueAfterCombat;
 
+    // Private variables
     private int numberOfZombies;
     private int currentNumberOfDeadZombies = 0;
 
@@ -33,6 +37,24 @@ public class MultipleZombiesDeathBehaviour : MonoBehaviour
         if (currentNumberOfDeadZombies == numberOfZombies)
         {
             allZombiesDead.Invoke();
+            Player.SetIdleState();
+        }
+    }
+
+    public void ShowDialogueAfterCombat()
+    {
+        Player.StopMovement();
+        new Task(ShowDialogueAfterDelay());   
+    }
+
+    private IEnumerator ShowDialogueAfterDelay()
+    {
+        yield return new WaitForSeconds(2f);
+
+        if (DialogueBox.instance)
+        {
+            DialogueBox.instance.FillSentences(dialogueAfterCombat);
+            DialogueBox.instance.StartDialogueDisplay();
         }
     }
 }

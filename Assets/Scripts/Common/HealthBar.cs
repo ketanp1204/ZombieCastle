@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     // Cached References
+    public CanvasGroup healthBarCG;
     public Slider slider;
     public Gradient gradient;
     public Image fill;
+    
 
     public void SetMaxHealth(int maxHealth)
     {
@@ -22,5 +24,18 @@ public class HealthBar : MonoBehaviour
         slider.value = health;
 
         fill.color = gradient.Evaluate(slider.normalizedValue);
+    }
+
+    public void HideHealthBarAfterDelay(float delay)
+    {
+        new Task(UIAnimation.FadeCanvasGroupAfterDelay(healthBarCG, 1f, 0f, delay));
+    }
+
+    public void ShowHealthBarAfterDelay(float delay)
+    {
+        if (healthBarCG.alpha == 0f)
+        {
+            new Task(UIAnimation.FadeCanvasGroupAfterDelay(healthBarCG, 0f, 1f, delay, 0.1f));
+        }
     }
 }

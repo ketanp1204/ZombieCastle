@@ -244,7 +244,7 @@ MonoBehaviour:
   axeHitboxAnimator_L: {fileID: 5079447134803724496}
   axeHitboxAnimator_R: {fileID: 2437771053754895001}
   knifeDamage: 5
-  knifeAttackRepeatTime: 1.3
+  knifeAttackRepeatTime: 0.8
   knifeHitboxAnimator_L: {fileID: 2430838785247921643}
   knifeHitboxAnimator_R: {fileID: 8495685439208976738}
   enemyLayers:

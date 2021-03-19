@@ -196,7 +196,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8307750074897309127}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -300,6 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 926a0bb47f4afc945819c74b0188c9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarCG: {fileID: 1037001696}
   slider: {fileID: 8307750075651439712}
   gradient:
     serializedVersion: 2

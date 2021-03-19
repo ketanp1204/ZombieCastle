@@ -315,6 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 926a0bb47f4afc945819c74b0188c9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarCG: {fileID: 0}
   slider: {fileID: 57588783}
   gradient:
     serializedVersion: 2
@@ -1276,6 +1277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 926a0bb47f4afc945819c74b0188c9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarCG: {fileID: 0}
   slider: {fileID: 345487653}
   gradient:
     serializedVersion: 2
@@ -1837,6 +1839,22 @@ PrefabInstance:
     - target: {fileID: 4594425147082384550, guid: 734794c0810e9694ebd2b0e762f31697, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594425147082384551, guid: 734794c0810e9694ebd2b0e762f31697, type: 3}
+      propertyPath: canShowToolbarInstruction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594425147082384551, guid: 734794c0810e9694ebd2b0e762f31697, type: 3}
+      propertyPath: canShowMovementInstruction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594425147082384551, guid: 734794c0810e9694ebd2b0e762f31697, type: 3}
+      propertyPath: canShowInteractionInstruction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594425147082384551, guid: 734794c0810e9694ebd2b0e762f31697, type: 3}
+      propertyPath: canShowInventoryBoxInstruction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 734794c0810e9694ebd2b0e762f31697, type: 3}
@@ -6246,6 +6264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 926a0bb47f4afc945819c74b0188c9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarCG: {fileID: 0}
   slider: {fileID: 1738266925}
   gradient:
     serializedVersion: 2
@@ -7463,6 +7482,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1862817827}
+        m_TargetAssemblyTypeName: MultipleZombiesDeathBehaviour, Assembly-CSharp
+        m_MethodName: ShowDialogueAfterCombat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  dialogueAfterCombat:
+  - There must be more of them here.
+  - I need to find Betty fast.
 --- !u!1001 &1867129965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8063,6 +8097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 926a0bb47f4afc945819c74b0188c9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarCG: {fileID: 0}
   slider: {fileID: 1922185908}
   gradient:
     serializedVersion: 2

@@ -4,9 +4,7 @@ public static class PlayerStats
     public enum PlayerState
     {
         Idle,
-        Combat,
-        Attacking,
-        TakingDamage
+        Combat
     }
 
     public static int initialHealth;

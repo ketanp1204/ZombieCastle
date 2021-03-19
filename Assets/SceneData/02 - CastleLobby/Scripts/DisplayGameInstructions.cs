@@ -40,12 +40,18 @@ public class DisplayGameInstructions : MonoBehaviour
     public bool canShowInventoryBoxInstruction;
     public bool canShowToolbarInstruction;
 
-    private void Awake()
+    void Awake()
     {
         if (instance == null)
         {
             instance = this;
         }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
     }
 
     // Start is called before the first frame update

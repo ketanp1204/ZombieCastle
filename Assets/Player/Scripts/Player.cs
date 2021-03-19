@@ -112,12 +112,16 @@ public class Player : MonoBehaviour
             currentHealth = maxHealth;
             PlayerStats.currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
+            healthBar.ShowHealthBarAfterDelay(0f);
+            healthBar.HideHealthBarAfterDelay(3f);
         }
         else
         {
             currentHealth = PlayerStats.currentHealth;
             healthBar.SetMaxHealth(maxHealth);
             healthBar.SetHealth(currentHealth);
+            healthBar.ShowHealthBarAfterDelay(0f);
+            healthBar.HideHealthBarAfterDelay(3f);
         }
 
         // Ignore player collisions with dead zombies
@@ -217,14 +221,6 @@ public class Player : MonoBehaviour
     {
         if(weaponEquippedDict[PlayerCombat.WeaponTypes.Axe])
         {
-            /*
-            if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Hurt") && !PlayerStats.IsDead)
-            {
-                playerCombat.InvokeAxeAttack();
-                animator.SetTrigger("AxeAttack");
-                rb.velocity = Vector2.zero;
-            }
-            */
             if (playerInput.leftMousePressed && !playerCombat.isAttacking_Axe && !takingDamage && !PlayerStats.IsDead)
             {
                 playerCombat.InvokeAxeAttack();
@@ -250,6 +246,21 @@ public class Player : MonoBehaviour
                 animator.SetTrigger("KnifeAttack");
                 rb.velocity = Vector2.zero;
             }
+        }
+    }
+
+    public static void SetIdleState()
+    {
+        PlayerStats.playerState = PlayerStats.PlayerState.Idle;
+        instance.healthBar.HideHealthBarAfterDelay(5f);
+    }
+
+    public static void SetCombatState()
+    {
+        if (PlayerStats.playerState != PlayerStats.PlayerState.Combat)
+        {
+            PlayerStats.playerState = PlayerStats.PlayerState.Combat;
+            instance.healthBar.ShowHealthBarAfterDelay(3f);
         }
     }
 
