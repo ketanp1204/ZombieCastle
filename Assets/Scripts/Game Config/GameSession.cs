@@ -80,6 +80,7 @@ public class GameSession : MonoBehaviour
         if (DialogueBox.instance)
         {
             DialogueBox.instance.FillSentences(GameAssets.instance.gameStartDialogue);
+            DialogueBox.instance.SetGameStartDialogueFlag();
             DialogueBox.instance.StartDialogueDisplay();
         }
 

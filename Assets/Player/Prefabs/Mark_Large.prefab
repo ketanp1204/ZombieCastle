@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathfindingTarget: {fileID: 1650394991450003453}
+  selectionArea: {fileID: 7872109580119205088}
   movePlayer: 0
   isClimbingLadder: 0
   movementSpeed: 7

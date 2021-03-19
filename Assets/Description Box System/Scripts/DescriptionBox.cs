@@ -9,7 +9,7 @@ public class DescriptionBox : MonoBehaviour
     public enum DescBoxOpenLocations
     {
         Null,
-        Inventory,
+        ItemFromInventory,
         AfterReward
     }
 
@@ -99,7 +99,7 @@ public class DescriptionBox : MonoBehaviour
 
             isActive = true;
 
-            descBoxOpenLocation = DescBoxOpenLocations.Inventory;
+            descBoxOpenLocation = DescBoxOpenLocations.ItemFromInventory;
 
             // Prevent escape key from closing inventory box
             InventoryManager.instance.SetDescBoxOpenFlag();
@@ -162,7 +162,7 @@ public class DescriptionBox : MonoBehaviour
                 // Enable opening pause menu on pressing escape key
                 instance.StartCoroutine(PauseMenu.EnableCanPauseGameBoolAfterDelay(0.1f));
             }
-            else if (descBoxOpenLocation == DescBoxOpenLocations.Inventory)
+            else if (descBoxOpenLocation == DescBoxOpenLocations.ItemFromInventory)
             {
                 InventoryManager.instance.UnsetDescBoxOpenFlag();
             }

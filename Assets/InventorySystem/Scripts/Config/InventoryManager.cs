@@ -71,7 +71,7 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             if (!isInventoryOpen)
                 ShowInventory();
@@ -121,6 +121,13 @@ public class InventoryManager : MonoBehaviour
         if (!instance.isInventoryOpen)
         {
             instance.isInventoryOpen = true;
+
+            // Show instructions if opening for the first time
+            if (DisplayGameInstructions.instance)
+            {
+                DisplayGameInstructions.instance.SetCanShowInventoryBoxInstruction();
+                DisplayGameInstructions.instance.StartInstructionsDisplay();
+            }
 
             // Play inventory open sound
             AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryOpen);

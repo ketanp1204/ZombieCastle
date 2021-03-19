@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     // Singleton
     public static Player instance;
 
-    // Private Cached References
+    // Private References
     private UIReferences uiReferences;                                              // Reference - Current UIReferences script in the scene
 
     private PlayerInput playerInput;                                                // Reference - PlayerInput class
@@ -29,8 +29,9 @@ public class Player : MonoBehaviour
 
     private InventoryObject inventory;                                              // Reference - Inventory ScriptableObject
 
-    // Public Cached References
+    // Public References
     public Transform pathfindingTarget;                                             // Reference - Pathfinding target
+    public GameObject selectionArea;                                                // Reference - Player selection area - Used to prevent selection during game instructions display
 
 
     // Public Variables
@@ -111,7 +112,6 @@ public class Player : MonoBehaviour
             currentHealth = maxHealth;
             PlayerStats.currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
-            // PlayerStats.isFirstScene = false;
         }
         else
         {
@@ -136,6 +136,16 @@ public class Player : MonoBehaviour
         animator.SetBool("IsDead", false);          // Not dead
         animator.SetBool("AxeDrawn", false);        // Axe unequipped
         animator.SetBool("KnifeDrawn", false);      // Knife unequipped
+    }
+
+    public void DisableSelectionCollider()
+    {
+        selectionArea.SetActive(false);
+    }
+
+    public void EnableSelectionCollider()
+    {
+        selectionArea.SetActive(true);
     }
 
     void FixedUpdate()

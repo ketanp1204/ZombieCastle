@@ -37,6 +37,7 @@ public class DialogueBox : MonoBehaviour
     private bool showNoteAfterDisplay = false;                          // Bool - Object has note box display after dialogue display
     private bool room1MazePuzzleAfterDialogue = false;                  // Bool - Portrait object in room1 that contains maze puzzle
     private bool room1ZombieDiscovery = false;                          // Bool - Player finds a zombie in room1
+    private bool isGameStartDialogue = false;                           // Bool - To start instructions display after game start dialogue
 
     private ItemObject currentItem = null;                              // ItemObject - The current ItemObject which has the player comment response
 
@@ -190,6 +191,14 @@ public class DialogueBox : MonoBehaviour
                 R1_CombatStartBehaviour.instance.ShowInventoryAfterKnifeOpenDialogue();
             }
 
+            if (isGameStartDialogue)
+            {
+                if (DisplayGameInstructions.instance)
+                {
+                    DisplayGameInstructions.instance.StartInstructionsDisplay();
+                }
+            }
+
             Player.EnableMovement();
             PlayerTopDown.EnableMovement();
 
@@ -222,6 +231,11 @@ public class DialogueBox : MonoBehaviour
         room1ZombieDiscovery = true;
     }
 
+    public void SetGameStartDialogueFlag()
+    {
+        isGameStartDialogue = true;
+    }
+
     private void ResetValues()
     {
         dialogueIndex = 0;
@@ -241,6 +255,7 @@ public class DialogueBox : MonoBehaviour
         showNoteAfterDisplay = false;
         room1MazePuzzleAfterDialogue = false;
         room1ZombieDiscovery = false;
+        isGameStartDialogue = false;
 
         currentItem = null;
     }

@@ -145,7 +145,7 @@ public class PlayerSelection : MonoBehaviour
             // Store collided object
             collidedObject = collision;
 
-            // Enable Object Glow
+            // Enable object glow
             collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
 
             // Show object name text popup
