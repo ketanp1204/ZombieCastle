@@ -125,27 +125,17 @@ public static class AudioManager
     {
         if (CanPlaySound(sound))
         {
-            if (playSoundOnceGameObjects.ContainsKey(sound))
-            {
-                playSoundOnceGameObjects[sound].GetComponent<AudioSource>().Play();
-            }
-            else
-            {
-                GameObject playSoundOnceGO = new GameObject("PlayOnceSoundNonPersistent");
-                AudioSource audioSource = playSoundOnceGO.AddComponent<AudioSource>();
+            GameObject playSoundOnceGO = new GameObject("PlayOnceSoundNonPersistent");
+            AudioSource audioSource = playSoundOnceGO.AddComponent<AudioSource>();
 
-                // Add gameobject to dictionary
-                playSoundOnceGameObjects.Add(sound, playSoundOnceGO);
+            // Get sound data scriptable object
+            SoundData soundData = GetSoundData(sound);
 
-                // Get sound data scriptable object
-                SoundData soundData = GetSoundData(sound);
-
-                // Set sound properties in AudioSource
-                audioSource.clip = soundData.audioClip;
-                audioSource.loop = soundData.loopSound;
-                audioSource.volume = soundData.volume;
-                audioSource.Play();
-            }
+            // Set sound properties in AudioSource
+            audioSource.clip = soundData.audioClip;
+            audioSource.loop = soundData.loopSound;
+            audioSource.volume = soundData.volume;
+            audioSource.Play();
         }
     }
 

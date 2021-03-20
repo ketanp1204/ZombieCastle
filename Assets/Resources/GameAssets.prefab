@@ -112,3 +112,4 @@ MonoBehaviour:
   - How did I get inside?
   - Betty....?
   - I need to find her quickly and get out of this place.
+  playerStartInventory: {fileID: 11400000, guid: 2b3398ac389869d4e923b3387c76be84, type: 2}

@@ -46,5 +46,8 @@ public class GameAssets : MonoBehaviour
     [Header("Castle Lobby first start dialogue")]
     [TextArea(4, 10)]
     public string[] gameStartDialogue;
+
+    [Header("Player start inventory")]
+    public InventoryObject playerStartInventory;
     
 }

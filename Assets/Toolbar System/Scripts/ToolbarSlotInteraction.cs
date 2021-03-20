@@ -17,8 +17,6 @@ public class ToolbarSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
 
     // Private references
     private UIReferences uiReferences;
-    private InventoryManager inventoryManager;
-    private ToolbarManager toolbarManager;
     private TextMeshProUGUI nameText;
     
 
@@ -31,9 +29,6 @@ public class ToolbarSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
     private void SetReferences()
     {
         uiReferences = GameSession.instance.uiReferences;
-        inventoryManager = uiReferences.inventoryManager;
-
-        toolbarManager = transform.parent.GetComponent<ToolbarManager>();
         nameText = transform.Find("NameText").GetComponent<TextMeshProUGUI>();
     }
 
@@ -51,8 +46,8 @@ public class ToolbarSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        // Hide the toolbar
-        toolbarManager.HideToolbar();
+        // Hide toolbar
+        ToolbarManager.instance.HideToolbar();
 
         if (toolbarSlotType == ToolbarSlotType.Inventory)
         {
@@ -61,7 +56,13 @@ public class ToolbarSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoin
         }
         else if(toolbarSlotType == ToolbarSlotType.Settings)
         {
-            Debug.Log("open settings");
+            // Play paper pickup sound
+            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PaperPickup);
+
+            if (SettingsMenu.instance)
+            {
+                SettingsMenu.instance.ShowSettingsMenu();
+            }
         }
     }
 }

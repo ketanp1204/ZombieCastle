@@ -27,7 +27,8 @@ public class Player : MonoBehaviour
 
     private HealthBar healthBar;                                                    // Reference - Health bar 
 
-    private InventoryObject inventory;                                              // Reference - Inventory ScriptableObject
+    private GameObject room3TorchLight;                                             // Reference - Torch 2D light gameobject in room3
+
 
     // Public References
     public Transform pathfindingTarget;                                             // Reference - Pathfinding target
@@ -61,6 +62,8 @@ public class Player : MonoBehaviour
 
     private Vector2 movement;                                                       // Vector2 - Movement vector
 
+    private bool isInRoom3 = false;                                                 // Bool - If player is in room3 then this is used to flip the torchlight direction while moving
+
 
     private void Awake()
     {
@@ -69,14 +72,15 @@ public class Player : MonoBehaviour
             instance = this;
         }
 
-        SetReferences();
+        if (!GameData.isInitialized)
+        {
+            GameData.Initialize();
+        }
     }
 
     void OnEnable()
     {
-        SetReferences();
-        Initialize();
-        ResetAnimatorParameters();
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     // Store References
@@ -84,7 +88,6 @@ public class Player : MonoBehaviour
     {
         uiReferences = FindObjectOfType<UIReferences>();
         healthBar = uiReferences.playerHealthBar;
-        inventory = uiReferences.playerInventory;
 
         playerInput = GetComponent<PlayerInput>();
         playerCombat = GetComponent<PlayerCombat>();
@@ -95,10 +98,9 @@ public class Player : MonoBehaviour
     // Default Values
     public void Initialize()
     {
-        facingRight = false;
+        
         movePlayer = true;
         movementSpeed = walkSpeed;
-        animator.SetFloat("FaceDir", -1f);
 
         // Combat
         takingDamage = false;
@@ -136,10 +138,45 @@ public class Player : MonoBehaviour
         animator.SetFloat("Horizontal", 0f);        // No keyboard input
         animator.SetFloat("Vertical", 0f);          // No keyboard input
         animator.SetFloat("Magnitude", 0f);         // No keyboard input
-        animator.SetFloat("FaceDir", -1f);          // Facing left
+        
         animator.SetBool("IsDead", false);          // Not dead
         animator.SetBool("AxeDrawn", false);        // Axe unequipped
         animator.SetBool("KnifeDrawn", false);      // Knife unequipped
+    }
+
+    // Handle events after a new scene is loaded
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        SetReferences();
+        Initialize();
+        ResetAnimatorParameters();
+        SetPlayerFaceDirection(scene);
+
+        if (scene.name == "Room3")
+        {
+            room3TorchLight = transform.Find("Torch").gameObject;
+            isInRoom3 = true;
+        }
+        else
+        {
+            isInRoom3 = false;
+        }
+    }
+
+    private void SetPlayerFaceDirection(Scene scene)
+    {
+        if (scene.name == "Room1" || scene.name == "Room2")
+        {
+            // Facing left
+            facingRight = false;
+            animator.SetFloat("FaceDir", -1f);          
+        }
+        else
+        {
+            // Facing right
+            facingRight = true;
+            animator.SetFloat("FaceDir", 1f);
+        }
     }
 
     public void DisableSelectionCollider()
@@ -214,7 +251,17 @@ public class Player : MonoBehaviour
                 // Set animation parameter
                 animator.SetFloat("FaceDir", -1f);
             }
+
+            if (isInRoom3)
+            {
+                FlipTorchLightDirection();
+            }
         }
+    }
+
+    private void FlipTorchLightDirection()
+    {
+        room3TorchLight.transform.localPosition = new Vector3(room3TorchLight.transform.localPosition.x * -1f, room3TorchLight.transform.localPosition.y, room3TorchLight.transform.localPosition.z);
     }
 
     private void HandleAttacks()
@@ -295,12 +342,6 @@ public class Player : MonoBehaviour
         {
             instance.movePlayer = true;
         }
-    }
-
-    // Returns the inventory scriptable object attached to this player
-    public static InventoryObject GetInventory()
-    {
-        return instance.inventory;
     }
 
     // Returns true if axe is equipped

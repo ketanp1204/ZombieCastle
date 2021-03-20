@@ -28,8 +28,6 @@ public class PlayerTopDown : MonoBehaviour
 
     private HealthBar healthBar;                                                    // Reference - Health bar 
 
-    private InventoryObject inventory;                                              // Reference - Inventory ScriptableObject
-
 
     // Public References
     public GameObject selectionArea;                                                // Reference - Player selection area - Used to prevent selection during game instructions display
@@ -88,8 +86,7 @@ public class PlayerTopDown : MonoBehaviour
     {
         uiReferences = FindObjectOfType<UIReferences>();
         healthBar = uiReferences.playerHealthBar;
-        inventory = uiReferences.playerInventory;
-
+        
         playerInput = GetComponent<PlayerInput>();
         playerCombat = GetComponent<PlayerCombat>();
         rb = GetComponent<Rigidbody2D>();
@@ -280,12 +277,6 @@ public class PlayerTopDown : MonoBehaviour
         {
             instance.movePlayer = true;
         }
-    }
-
-    // Returns the inventory scriptable object attached to this player
-    public static InventoryObject GetInventory()
-    {
-        return instance.inventory;
     }
 
     // Returns true if axe is equipped

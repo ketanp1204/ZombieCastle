@@ -23,7 +23,6 @@ public class UIReferences : MonoBehaviour
     public GameObject bookContinueButton;
 
     [Header("Inventory System")]
-    public InventoryObject playerInventory;
     public InventoryManager inventoryManager;
 
     [Header("Player Health Bar")]

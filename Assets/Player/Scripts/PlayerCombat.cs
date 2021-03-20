@@ -65,7 +65,6 @@ public class PlayerCombat : MonoBehaviour
 
         uiReferences = FindObjectOfType<UIReferences>();
         healthBar = uiReferences.playerHealthBar;
-
         animator = GetComponent<Animator>();
     }
 
@@ -330,14 +329,14 @@ public class PlayerCombat : MonoBehaviour
     {
         PlayerStats.IsDead = true;
         if (Player.instance != null)
+        {
             Player.StopMovement();
+        }
         else
         {
             PlayerTopDown.StopMovement();
         }
             
-        
-
         // Play die animation
         animator.SetBool("IsDead", true);
 

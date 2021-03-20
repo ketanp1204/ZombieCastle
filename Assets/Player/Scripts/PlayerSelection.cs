@@ -92,6 +92,8 @@ public class PlayerSelection : MonoBehaviour
                     {
                         PC_Then_Inventory_Object pc_Then_Inventory_Object = (PC_Then_Inventory_Object)itemScriptableObject;
 
+                        objectProperties.UpdateGameDataForPCThenInventoryObject(pc_Then_Inventory_Object);
+
                         string[] sentenceArray = pc_Then_Inventory_Object.playerComments;
 
                         if (DialogueBox.instance)
@@ -149,7 +151,7 @@ public class PlayerSelection : MonoBehaviour
             collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
 
             // Show object name text popup
-            popupTextUI.text = collision.GetComponent<ObjectProperties>().objectName;
+            popupTextUI.text = collision.GetComponent<ObjectProperties>().objectData.itemName;
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
         }
 
@@ -167,7 +169,7 @@ public class PlayerSelection : MonoBehaviour
             collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
 
             // Show object name text popup
-            popupTextUI.text = collision.GetComponent<ObjectProperties>().objectName;
+            popupTextUI.text = collision.GetComponent<ObjectProperties>().objectData.itemName;
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
         }
     }

@@ -81,7 +81,7 @@ public class PlayerObjectSelection : MonoBehaviour
             collidedObject = collision;
 
             // Show object name text popup
-            popupTextUI.text = collision.GetComponent<ObjectProperties>().objectName;
+            popupTextUI.text = "";
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
         }
     }

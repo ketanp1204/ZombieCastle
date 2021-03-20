@@ -14,7 +14,6 @@ public class InventoryManager : MonoBehaviour
     public GameObject itemGridSlotPrefab;
 
     // Private Cached References
-    private InventoryObject inventory;
     private List<GameObject> weaponSlots = new List<GameObject>();
     private List<GameObject> itemSlots = new List<GameObject>();
     private CanvasGroup inventoryCanvasGroup;
@@ -42,23 +41,13 @@ public class InventoryManager : MonoBehaviour
     {
         SetReferences();
 
-        // Get inventory scriptable object from player
-        if (Player.instance)
-        {
-            LoadInventory(Player.GetInventory());
-        }
-        else if(PlayerTopDown.instance)
-        {
-            LoadInventory(PlayerTopDown.GetInventory());
-        }
+        // Fill inventory slots
+        FillInventorySlots();
 
         // Hide inventory on start
         inventoryCanvasGroup.alpha = 0f;
         inventoryCanvasGroup.interactable = false;
         inventoryCanvasGroup.blocksRaycasts = false;
-
-        // Fill default inventory slots
-        FillInventorySlots();
     }
 
     private void SetReferences()
@@ -114,11 +103,6 @@ public class InventoryManager : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
 
         isDescBoxOpen = false;
-    }
-
-    private void LoadInventory(InventoryObject _inventory)
-    {
-        inventory = _inventory;
     }
 
     public static void ShowInventory()
@@ -224,9 +208,6 @@ public class InventoryManager : MonoBehaviour
             c.a = 1f;
             weaponIcon.color = c;
 
-            // Get AmountText TextMeshProUGUI component
-            TextMeshProUGUI amountText = weaponSlot.transform.Find("AmountText").GetComponent<TextMeshProUGUI>();
-
             // Get NameText TextMeshProUGUI component
             TextMeshProUGUI nameText = weaponSlot.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
 
@@ -245,17 +226,20 @@ public class InventoryManager : MonoBehaviour
             ItemSlotInteraction itemSlotInteraction = itemSlot.GetComponent<ItemSlotInteraction>();
             itemSlotInteraction.PopulateItemSlot(item);
         }
+
+        // Add to inventory scriptable object
+        GameData.currentPlayerInventory.AddItem(item, 1);
     }
 
     private void FillInventorySlots()
     {
-        for (int i = 0; i < inventory.Container.Count; i++)
+        for (int i = 0; i < GameData.currentPlayerInventory.Container.Count; i++)
         {
             // Check type of item : Add to weapon grid if weapon otherwise into item grid
-            if (inventory.Container[i].item.itemType == ItemType.Weapon)
+            if (GameData.currentPlayerInventory.Container[i].item.itemType == ItemType.Weapon)
             {
                 // Cast item to WeaponObject
-                WeaponObject weaponItem = (WeaponObject)inventory.Container[i].item;
+                WeaponObject weaponItem = (WeaponObject)GameData.currentPlayerInventory.Container[i].item;
 
                 // Instantiate weapon grid slot
                 GameObject weaponSlot = Instantiate(weaponGridSlotPrefab, weaponGridContainer);
@@ -284,7 +268,7 @@ public class InventoryManager : MonoBehaviour
                 TextMeshProUGUI nameText = weaponSlot.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
 
                 // Set NameText 
-                nameText.text = inventory.Container[i].item.itemName;
+                nameText.text = GameData.currentPlayerInventory.Container[i].item.itemName;
             }
             else
             {
@@ -296,7 +280,7 @@ public class InventoryManager : MonoBehaviour
 
                 // Populate slot with scriptable object data
                 ItemSlotInteraction itemSlotInteraction = itemSlot.GetComponent<ItemSlotInteraction>();
-                itemSlotInteraction.PopulateItemSlot(inventory.Container[i].item);
+                itemSlotInteraction.PopulateItemSlot(GameData.currentPlayerInventory.Container[i].item);
             }
         }
     }

@@ -51,17 +51,33 @@ public class GameSession : MonoBehaviour
 
     void HandleSceneChanges(Scene scene)
     {
-        if (scene.name == "CastleLobby" && PlayerStats.isFirstScene)
+        if (scene.name == "CastleLobby")
         {
+            // Handle first scene events
+            if (PlayerStats.isFirstScene)
+            {
+                // Initialize Game Data
+                GameData.Initialize();
+
+                // Play intro dialogue
+                StartCoroutine(PlayIntroDialogue());
+            }
+
             // Play candle burning sound
             AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.CandleBurning);
 
             // Hide cursor
             Cursor.lockState = CursorLockMode.Locked;
 
-            if (PlayerStats.isFirstScene)
+            // Destroy key and torch gameobjects if already collected
+            if (GameData.lobby_keyCollected)
             {
-                StartCoroutine(PlayIntroDialogue());
+                Destroy(GameObject.Find("Key"));
+            }
+
+            if (GameData.lobby_torchCollected)
+            {
+                Destroy(GameObject.Find("Torch"));
             }
         }
     }
