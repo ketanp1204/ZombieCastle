@@ -49,6 +49,28 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
         }
     }
 
+    public void SetSlotSelected()
+    {
+        if (!slotSelected)
+        {
+            slotSelected = true;
+            Color c = slotSelectedBackground.color;
+            c.a = 1f;
+            slotSelectedBackground.color = c;
+        }
+    }
+
+    public void UnsetSlotSelected()
+    {
+        if (slotSelected)
+        {
+            slotSelected = false;
+            Color c = slotSelectedBackground.color;
+            c.a = 0f;
+            slotSelectedBackground.color = c;
+        }
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         // Close Inventory Box
@@ -57,17 +79,20 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
         // Set/unset slot selected bool and show/hide background
         if (!slotSelected)
         {
-            slotSelected = true;
-            Color c = slotSelectedBackground.color;
-            c.a = 1f;
-            slotSelectedBackground.color = c;
+            SetSlotSelected();
+
+            // Unset selected bool of other weapon slots
+            foreach (Transform child in transform.parent)
+            {
+                if (child.gameObject != gameObject)
+                {
+                    child.GetComponent<WeaponSlotInteraction>().UnsetSlotSelected();
+                }
+            }
         }
         else
         {
-            slotSelected = false;
-            Color c = slotSelectedBackground.color;
-            c.a = 0f;
-            slotSelectedBackground.color = c;
+            UnsetSlotSelected();
         }
 
         // Check whether weapon is equipped

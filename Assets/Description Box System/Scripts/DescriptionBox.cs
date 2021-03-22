@@ -77,6 +77,10 @@ public class DescriptionBox : MonoBehaviour
             {
                 iconImage.sprite = ((PC_Then_Inventory_Object)currentItem).inventorySprite;
             }
+            else if (currentItem.itemType == ItemType.Weapon)
+            {
+                iconImage.sprite = ((WeaponObject)currentItem).inventorySprite;
+            }
         }
     }
 
@@ -87,6 +91,10 @@ public class DescriptionBox : MonoBehaviour
             if (currentItem.itemType == ItemType.PC_Then_Inventory)
             {
                 descText.text = ((PC_Then_Inventory_Object)currentItem).itemDescription;
+            }
+            else if (currentItem.itemType == ItemType.Weapon)
+            {
+                descText.text = ((WeaponObject)currentItem).itemDescription;
             }
         }
     }

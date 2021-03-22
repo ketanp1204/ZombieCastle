@@ -16,6 +16,7 @@ public class PlayerSelection : MonoBehaviour
     private bool triggerStay = false;
 
     private bool isMazePuzzleCollider = false;
+    private bool isDiffPuzzleCollider = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +33,13 @@ public class PlayerSelection : MonoBehaviour
             // Hide object name text popup
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
 
+            triggerStay = false;
+
             if (isMazePuzzleCollider)
             {
-                // Show dialogue before starting maze
                 ObjectProperties objectProperties = collidedObject.GetComponent<ObjectProperties>();
 
+                // Show dialogue before starting maze puzzle
                 if (objectProperties.objectData != null)
                 {
                     PlayerCommentOnlyObject obj = (PlayerCommentOnlyObject)objectProperties.objectData;
@@ -59,8 +62,31 @@ public class PlayerSelection : MonoBehaviour
                 {
                     Debug.Log("No scriptable object set in object properties");
                 }
+            }
+            else if (isDiffPuzzleCollider)
+            {
+                
+                ObjectProperties objectProperties = collidedObject.GetComponent<ObjectProperties>();
 
-                triggerStay = false;
+                // Show dialogue before starting diff puzzle
+                if (objectProperties.objectData != null)
+                {
+                    PlayerCommentOnlyObject obj = (PlayerCommentOnlyObject)objectProperties.objectData;
+
+                    string[] sentenceArray = obj.playerComments;
+
+                    if (DialogueBox.instance)
+                    {
+                        DialogueBox.instance.SetCurrentItem(obj);
+                        DialogueBox.instance.SetDiffPuzzleFlag();
+                        DialogueBox.instance.FillSentences(sentenceArray);
+                        DialogueBox.instance.StartDialogueDisplay();
+                    }
+                    else
+                    {
+                        Debug.Log("Dialogue box not found");
+                    }
+                }
             }
             else
             {
@@ -132,8 +158,6 @@ public class PlayerSelection : MonoBehaviour
                 {
                     Debug.Log("No scriptable object set in object properties");
                 }
-
-                triggerStay = false;
             }
         }
     }
@@ -154,19 +178,35 @@ public class PlayerSelection : MonoBehaviour
             popupTextUI.text = collision.GetComponent<ObjectProperties>().objectData.itemName;
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
         }
-
-        if (collision.CompareTag("R1_MazePuzzle"))
+        else if (collision.CompareTag("R1_MazePuzzle"))
         {
             triggerStay = true;
 
             // Store collided object
             collidedObject = collision;
 
+            // Enable object glow
+            collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
+
             // Set flag bool
             isMazePuzzleCollider = true;
 
+            // Show object name text popup
+            popupTextUI.text = collision.GetComponent<ObjectProperties>().objectData.itemName;
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
+        }
+        else if (collision.CompareTag("R3_DiffPuzzle"))
+        {
+            triggerStay = true;
+
+            // Store collided object
+            collidedObject = collision;
+
             // Enable object glow
             collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
+
+            // Set flag bool
+            isDiffPuzzleCollider = true;
 
             // Show object name text popup
             popupTextUI.text = collision.GetComponent<ObjectProperties>().objectData.itemName;
@@ -176,6 +216,7 @@ public class PlayerSelection : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+
         if (collision.CompareTag("Object"))
         {
             triggerStay = false;
@@ -186,19 +227,31 @@ public class PlayerSelection : MonoBehaviour
             // Hide object name text popup
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
         }
-
-        if (collision.CompareTag("R1_MazePuzzle"))
+        else if (collision.CompareTag("R1_MazePuzzle"))
         {
             triggerStay = false;
-
-            // Unset flag bool
-            isMazePuzzleCollider = false;
 
             // Disable object glow
             collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = false;
 
             // Hide object name text popup
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
+
+            // Unset flag bool
+            isMazePuzzleCollider = false;
+        }
+        else if (collision.CompareTag("R3_DiffPuzzle"))
+        {
+            triggerStay = false;
+
+            // Disable object glow
+            collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = false;
+
+            // Hide object name text popup
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
+
+            // Unset flag bool
+            isDiffPuzzleCollider = false;
         }
     }
 }

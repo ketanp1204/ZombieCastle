@@ -36,6 +36,7 @@ public class DialogueBox : MonoBehaviour
     private bool addToInventoryAfterDialogue = false;                   // Bool - Object goes to inventory after dialogue display
     private bool showNoteAfterDisplay = false;                          // Bool - Object has note box display after dialogue display
     private bool room1MazePuzzleAfterDialogue = false;                  // Bool - Portrait object in room1 that contains maze puzzle
+    private bool room3DiffPuzzleAfterDialogue = false;                  // Bool - Cupboard object in room3 that contains differences puzzle
     private bool room1ZombieDiscovery = false;                          // Bool - Player finds a zombie in room1
     private bool isGameStartDialogue = false;                           // Bool - To start instructions display after game start dialogue
 
@@ -85,8 +86,6 @@ public class DialogueBox : MonoBehaviour
     {
         Player.StopMovement();
         PlayerTopDown.StopMovement();
-
-        
 
         // Fade in dialogue box
         new Task(UIAnimation.FadeCanvasGroupAfterDelay(dialogueBoxCG, 0f, 1f, dialogueDisplayDelay));
@@ -186,6 +185,12 @@ public class DialogueBox : MonoBehaviour
                 MazePuzzle.LoadMazePuzzleUI();
             }
 
+            if (room3DiffPuzzleAfterDialogue)
+            {
+                // Load diff puzzle UI
+                SpotDifferencesPuzzle.LoadDiffPuzzleUI();
+            }
+
             if (room1ZombieDiscovery)
             {
                 R1_CombatStartBehaviour.instance.ShowInventoryAfterKnifeOpenDialogue();
@@ -226,6 +231,11 @@ public class DialogueBox : MonoBehaviour
         room1MazePuzzleAfterDialogue = true;
     }
 
+    public void SetDiffPuzzleFlag()
+    {
+        room3DiffPuzzleAfterDialogue = true;
+    }
+
     public void SetRoom1ZombieDiscoveryFlag()
     {
         room1ZombieDiscovery = true;
@@ -254,6 +264,7 @@ public class DialogueBox : MonoBehaviour
         addToInventoryAfterDialogue = false;
         showNoteAfterDisplay = false;
         room1MazePuzzleAfterDialogue = false;
+        room3DiffPuzzleAfterDialogue = false;
         room1ZombieDiscovery = false;
         isGameStartDialogue = false;
 

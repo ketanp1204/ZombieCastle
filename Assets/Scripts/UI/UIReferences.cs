@@ -16,15 +16,6 @@ public class UIReferences : MonoBehaviour
     public TextMeshProUGUI noteText;
     public GameObject noteContinueButton;
 
-    [Header("Book Display")]
-    public CanvasGroup bookCanvasGroup;
-    public TextMeshProUGUI bookTextPage1;
-    public TextMeshProUGUI bookTextPage2;
-    public GameObject bookContinueButton;
-
-    [Header("Inventory System")]
-    public InventoryManager inventoryManager;
-
     [Header("Player Health Bar")]
     public CanvasGroup playerHealthBarCanvasGroup;
     public HealthBar playerHealthBar;
@@ -35,8 +26,14 @@ public class UIReferences : MonoBehaviour
     public Image mazeSwitch1;
     public Image mazeSwitch2;
     public TextMeshProUGUI mazeCountdownTimerText;
-    public Button interactButton;
-    public TextMeshProUGUI interactText;
+    public Button mazePuzzleInteractButton;
+    public TextMeshProUGUI mazePuzzleInteractText;
+
+    [Header("Spot the Differences Puzzle")]
+    public CanvasGroup differencePuzzleCanvasGroup;
+    public TextMeshProUGUI diffPuzzleCountdownTimerText;
+    public Button diffPuzzleInteractButton;
+    public TextMeshProUGUI diffPuzzleInteractText;
 
     [Header("Text Popup")]
     public TextMeshProUGUI popupTextUI;

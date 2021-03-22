@@ -9,7 +9,7 @@ using Cinemachine;
 
 public class MazePuzzle : MonoBehaviour
 {
-    // Instance
+    // Singleton
     public static MazePuzzle instance;
 
     // Private Cached References
@@ -18,13 +18,12 @@ public class MazePuzzle : MonoBehaviour
     private CanvasGroup mazeUICanvasGroup;
     private Image mazeSwitch1;
     private Image mazeSwitch2;
-    private TextMeshProUGUI mazeCountdownTimerText;
+    private TextMeshProUGUI countdownTimerText;
     private Button interactButton;
     private TextMeshProUGUI interactText;
     private GameObject mazePuzzleGO;                                    // Maze Puzzle GameObject 
     private Collider2D switch1Collider;                                 // Switch 1 collider
     private Collider2D switch2Collider;                                 // Switch 2 collider
-    private CanvasGroup playerHealthBarCanvasGroup;
 
     // Public Cached References
     public CinemachineVirtualCamera cinemachineCamera;                  // Cinemachine Camera that targets the Maze Puzzle GameObject
@@ -74,11 +73,9 @@ public class MazePuzzle : MonoBehaviour
         mazeUICanvasGroup = uiReferences.mazeUICanvasGroup;
         mazeSwitch1 = uiReferences.mazeSwitch1;
         mazeSwitch2 = uiReferences.mazeSwitch2;
-        mazeCountdownTimerText = uiReferences.mazeCountdownTimerText;
-        interactButton = uiReferences.interactButton;
-        interactText = uiReferences.interactText;
-
-        playerHealthBarCanvasGroup = uiReferences.playerHealthBarCanvasGroup;
+        countdownTimerText = uiReferences.mazeCountdownTimerText;
+        interactButton = uiReferences.mazePuzzleInteractButton;
+        interactText = uiReferences.mazePuzzleInteractText;
 
         boxCollider = GetComponent<BoxCollider2D>();
     }
@@ -87,7 +84,6 @@ public class MazePuzzle : MonoBehaviour
     {
         isActive = false;
         mazePuzzleGO.SetActive(false);
-        // boxCollider.enabled = false;
         mazeUICanvasGroup.alpha = 0f;
         mazeUICanvasGroup.interactable = false;
         mazeUICanvasGroup.blocksRaycasts = false;
@@ -108,9 +104,6 @@ public class MazePuzzle : MonoBehaviour
     private IEnumerator LoadPuzzleUI()
     {
         LevelManager.FadeScreenInAndOut();
-
-        // Hide player health bar
-        new Task(UIAnimation.FadeCanvasGroupAfterDelay(playerHealthBarCanvasGroup, 1f, 0f, 0f, 0.5f));
 
         yield return new WaitForSeconds(0.5f);
 
@@ -164,7 +157,7 @@ public class MazePuzzle : MonoBehaviour
             timerCurrentTime -= Time.deltaTime;
             timerTimeSpan = TimeSpan.FromSeconds(timerCurrentTime);
             string currentTimeString = timerTimeSpan.ToString("mm':'ss");
-            mazeCountdownTimerText.text = currentTimeString;
+            countdownTimerText.text = currentTimeString;
 
             yield return new WaitForEndOfFrame();
         }
@@ -235,9 +228,6 @@ public class MazePuzzle : MonoBehaviour
         LevelManager.FadeScreenInAndOut();
 
         yield return new WaitForSeconds(0.5f);
-
-        // Show player health bar
-        new Task(UIAnimation.FadeCanvasGroupAfterDelay(playerHealthBarCanvasGroup, 0f, 1f, 0f, 0.5f));
 
         // Hide cursor
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
