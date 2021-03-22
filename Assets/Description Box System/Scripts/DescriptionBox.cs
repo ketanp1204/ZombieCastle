@@ -31,6 +31,7 @@ public class DescriptionBox : MonoBehaviour
     // Private Variables
     private ItemObject currentItem = null;                                                                          // ItemObject - The current ItemObject which has the note box display
     private DescBoxOpenLocations descBoxOpenLocation = DescBoxOpenLocations.Null;                                   // For different behaviour of desc box
+    private string[] dialogueAfterReceivingReward = null;                                                           // String array - Dialogue (if any) after receiving reward on the desc box
 
     private void Awake()
     {
@@ -123,11 +124,16 @@ public class DescriptionBox : MonoBehaviour
     }
 
     // When receiving a new item from a treasure box or a puzzle
-    public void ShowDescBoxAfterReward(ItemObject item)
+    public void ShowDescBoxAfterReward(ItemObject item, string[] dialogueAfterReward)
     {
         if (!instance.isActive)
         {
             SetCurrentItem(item);
+
+            if (dialogueAfterReward != null)
+            {
+                dialogueAfterReceivingReward = dialogueAfterReward;
+            }
 
             isActive = true;
 
@@ -164,7 +170,17 @@ public class DescriptionBox : MonoBehaviour
             // Enable escape key to close inventory box
             if (descBoxOpenLocation == DescBoxOpenLocations.AfterReward)
             {
-                // Fade in new item discovered text:
+                if (dialogueAfterReceivingReward != null)
+                {
+                    if (DialogueBox.instance)
+                    {
+                        // Show dialogue after reward
+                        DialogueBox.instance.FillSentences(dialogueAfterReceivingReward);
+                        DialogueBox.instance.StartDialogueDisplay();
+                    }
+                }
+
+                // Fade out new item discovered text:
                 new Task(UIAnimation.FadeTMProTextAfterDelay(newItemDiscoveredText, 1f, 0f, 0f));
 
                 // Enable opening pause menu on pressing escape key

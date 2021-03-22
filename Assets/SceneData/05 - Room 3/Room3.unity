@@ -2655,7 +2655,7 @@ GameObject:
   - component: {fileID: 829335296}
   - component: {fileID: 829335295}
   m_Layer: 0
-  m_Name: CM_Camera
+  m_Name: CM_R3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3406,7 +3406,7 @@ GameObject:
   - component: {fileID: 1092715229}
   - component: {fileID: 1092715230}
   m_Layer: 0
-  m_Name: CM_Puzzle
+  m_Name: CM_SpotDifferencesPuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

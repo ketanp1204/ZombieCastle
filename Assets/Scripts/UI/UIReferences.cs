@@ -21,7 +21,6 @@ public class UIReferences : MonoBehaviour
     public HealthBar playerHealthBar;
 
     [Header("Maze Puzzle")]
-    public CanvasGroup mazeCloseButtonCanvasGroup;
     public CanvasGroup mazeUICanvasGroup;
     public Image mazeSwitch1;
     public Image mazeSwitch2;

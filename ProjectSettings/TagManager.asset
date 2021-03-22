@@ -10,6 +10,7 @@ TagManager:
   - PlayerSelectionArea
   - R1_MazePuzzle
   - R3_DiffPuzzle
+  - R2_JigsawPuzzle
   layers:
   - Default
   - TransparentFX

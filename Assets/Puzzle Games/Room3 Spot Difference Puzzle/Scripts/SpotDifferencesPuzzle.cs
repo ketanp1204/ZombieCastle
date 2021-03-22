@@ -207,7 +207,7 @@ public class SpotDifferencesPuzzle : MonoBehaviour
         // Show key reward 
         if (DescriptionBox.instance)
         {
-            DescriptionBox.instance.ShowDescBoxAfterReward(swordReward);
+            DescriptionBox.instance.ShowDescBoxAfterReward(swordReward, null);
         }
 
         // Add key reward to inventory

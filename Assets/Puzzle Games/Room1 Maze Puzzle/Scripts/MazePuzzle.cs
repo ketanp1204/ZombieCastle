@@ -27,7 +27,7 @@ public class MazePuzzle : MonoBehaviour
 
     // Public Cached References
     public CinemachineVirtualCamera cinemachineCamera;                  // Cinemachine Camera that targets the Maze Puzzle GameObject
-    public PC_Then_Inventory_Object keyRewardScriptableObject;          // Key reward received after successful puzzle completion
+    public PC_Then_Inventory_Object keyRewardScriptableObject;          // Key reward received after successful puzzle completion    
 
     // Private Variables
     private bool isActive;
@@ -42,7 +42,8 @@ public class MazePuzzle : MonoBehaviour
     public bool firstSwitchHitFlag = false;                             // Set after 1st switch is hit
     [HideInInspector]
     public bool timerStarted = false;                                   // Timer starts after 1st switch in the maze is hit
-    
+    [TextArea(3,6)]
+    public string[] keyRewardReceivedDialogue;                          // String array - Dialogue after receiving key reward on successful puzzle completion
     public float puzzleTime = 20f;                                      // Time allowed to complete the puzzle
     public float bonusTime = 5f;                                        // Bonus time added after each switch is hit
 
@@ -213,7 +214,7 @@ public class MazePuzzle : MonoBehaviour
         // Show key reward 
         if (DescriptionBox.instance)
         {
-            DescriptionBox.instance.ShowDescBoxAfterReward(keyRewardScriptableObject);
+            DescriptionBox.instance.ShowDescBoxAfterReward(keyRewardScriptableObject, keyRewardReceivedDialogue);
         }
 
         // Add key reward to inventory

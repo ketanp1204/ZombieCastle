@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823bf85605654ca48a06552dc97e8b28, type: 3}
+  m_Name: R2_Portrait
+  m_EditorClassIdentifier: 
+  itemName: Portrait
+  itemDescription: A portrait.
+  itemType: 1
+  sceneName: Room2
+  hasPlayerComment: 1
+  playerComments:
+  - A strange painting.
