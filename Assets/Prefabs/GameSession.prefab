@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba753c2e0c687d04785405cc593a3ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiReferences: {fileID: 0}
+  knifeInventoryObject: {fileID: 11400000, guid: 633cac347e6a8044ab8d1909852a247d, type: 2}

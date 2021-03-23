@@ -10,7 +10,10 @@ public class GameSession : MonoBehaviour
     // Public cached references
     [HideInInspector]
     public UIReferences uiReferences;                               // Global reference for the UIReferences script in the current scene
-    
+
+    // REMOVE BEFORE RELEASING GAME
+    public WeaponObject knifeInventoryObject;                       // Temporary - Used to re add the knife to the default player inventory after exiting play in the unity editor
+
     void Awake()
     {
         if (instance == null)
@@ -73,11 +76,13 @@ public class GameSession : MonoBehaviour
             if (GameData.lobby_keyCollected)
             {
                 Destroy(GameObject.Find("Key"));
+                Destroy(GameObject.Find("Key_Image"));
             }
 
             if (GameData.lobby_torchCollected)
             {
                 Destroy(GameObject.Find("Torch"));
+                Destroy(GameObject.Find("Torch_Image"));
             }
         }
     }
@@ -104,5 +109,12 @@ public class GameSession : MonoBehaviour
 
         // Reset LevelManager animation speed
         LevelManager.SetAnimatorSpeed(1f);
+    }
+
+    // REMOVE BEFORE RELEASING GAME
+    private void OnApplicationQuit()
+    {
+        GameData.currentPlayerInventory.Container.Clear();
+        GameData.currentPlayerInventory.AddItem(knifeInventoryObject, 1);
     }
 }

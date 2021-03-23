@@ -19,12 +19,13 @@ public class SpotDifferencesPuzzle : MonoBehaviour
     private TextMeshProUGUI countdownTimerText;
     private Button interactButton;
     private TextMeshProUGUI interactText;
-    private GameObject puzzleGO;
-    private GameObject diffCollidersContainer;
+    
     private List<DifferenceFound> differenceFoundScripts;
 
     // Public Cached References
     public CinemachineVirtualCamera cinemachineCamera;                  // Cinemachine Camera that targets the Maze Puzzle GameObject
+    public GameObject puzzleGO;
+    public GameObject diffCollidersContainer;
     public WeaponObject swordReward;                                    // Sword reward received after successful puzzle completion
 
     // Private Variables
@@ -60,9 +61,6 @@ public class SpotDifferencesPuzzle : MonoBehaviour
 
     private void SetReferences()
     {
-        puzzleGO = transform.GetChild(0).gameObject;
-        diffCollidersContainer = puzzleGO.transform.Find("DifferencesColliders").gameObject;
-
         uiReferences = GameSession.instance.uiReferences;
         puzzleUICanvasGroup = uiReferences.differencePuzzleCanvasGroup;
         countdownTimerText = uiReferences.diffPuzzleCountdownTimerText;
@@ -134,6 +132,11 @@ public class SpotDifferencesPuzzle : MonoBehaviour
 
     public void StartDiffPuzzle()
     {
+        // Disable interact button
+        interactButton.interactable = false;
+
+        EventSystem.current.SetSelectedGameObject(null);
+
         foreach (DifferenceFound script in differenceFoundScripts)
         {
             script.EnableCollider();
@@ -260,6 +263,9 @@ public class SpotDifferencesPuzzle : MonoBehaviour
         {
             script.Reset();
         }
+
+        // Enable interact button
+        interactButton.interactable = true;
 
         // Show retry button text
         interactText.text = "Retry";

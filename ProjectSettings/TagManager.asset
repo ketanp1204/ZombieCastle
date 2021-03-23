@@ -11,6 +11,8 @@ TagManager:
   - R1_MazePuzzle
   - R3_DiffPuzzle
   - R2_JigsawPuzzle
+  - JigsawPuzzleDraggablePiece
+  - JigsawPuzzleFinalPiece
   layers:
   - Default
   - TransparentFX

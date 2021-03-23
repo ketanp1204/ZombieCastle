@@ -14,6 +14,8 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
     // Public variables
     [HideInInspector]
     public PlayerCombat.WeaponTypes weaponType;
+    [HideInInspector]
+    public WeaponObject scriptableObject;
 
     // Private variables
     private bool slotSelected = false;

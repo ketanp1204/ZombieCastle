@@ -21,6 +21,7 @@ public enum ItemType
     PC_Then_Inventory,
     PC_Then_Note,
     NoteOnly,
+    DescBox_Then_Dialogue,
     Default
 }
 

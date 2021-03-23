@@ -33,7 +33,8 @@ public static class AudioManager
         IntroScareSound,
         ContinueButton,
         CandleBurning,
-        PaperPickup
+        PaperPickup,
+        R2_DrawerOpen
     }
 
     // private static Dictionary<Sound, float> soundTimerDictionary;

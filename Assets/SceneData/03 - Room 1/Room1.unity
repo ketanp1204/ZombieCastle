@@ -2130,7 +2130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736930040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.625949, y: 0.83588314, z: -10}
+  m_LocalPosition: {x: 0.04, y: 0.20999992, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2517,27 +2517,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1254770587353563771, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
   m_PrefabInstance: {fileID: 775666983}
   m_PrefabAsset: {fileID: 0}
---- !u!225 &775666985 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 1254770587353563770, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
-  m_PrefabInstance: {fileID: 775666983}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &775666986 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1254770585905870987, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
-  m_PrefabInstance: {fileID: 775666983}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &775666987 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1254770585700548322, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
-  m_PrefabInstance: {fileID: 775666983}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &781198284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2774,7 +2753,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829335294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.03, y: 1.5799999, z: -10}
+  m_LocalPosition: {x: 0.04, y: 0.20999992, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1506756609}
@@ -3082,11 +3061,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.845809, y: 1}
   m_EdgeRadius: 0
---- !u!225 &980763572 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 1037001696, guid: 748be4979f8a2ce48b04afa7e11365a1, type: 3}
-  m_PrefabInstance: {fileID: 478968348}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &985694132
 GameObject:
   m_ObjectHideFlags: 0
@@ -3991,6 +3965,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineCamera: {fileID: 1322628431}
+  mazePuzzleGO: {fileID: 520915952}
+  switch1Collider: {fileID: 392222310}
+  switch2Collider: {fileID: 550629447}
   keyRewardScriptableObject: {fileID: 11400000, guid: 821fce0b07dfeaf4d88fed329f907fed, type: 2}
   firstSwitchHitFlag: 0
   timerStarted: 0
@@ -5638,27 +5615,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2573393571305659994, guid: 7427e580a977f2747bc03ada428a1633, type: 3}
   m_PrefabInstance: {fileID: 1650150090}
   m_PrefabAsset: {fileID: 0}
---- !u!225 &1650150092 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 2573393571305659995, guid: 7427e580a977f2747bc03ada428a1633, type: 3}
-  m_PrefabInstance: {fileID: 1650150090}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1650150093 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2573393571824396059, guid: 7427e580a977f2747bc03ada428a1633, type: 3}
-  m_PrefabInstance: {fileID: 1650150090}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1650150094 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2573393571626778633, guid: 7427e580a977f2747bc03ada428a1633, type: 3}
-  m_PrefabInstance: {fileID: 1650150090}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1651756615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5939,21 +5895,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea4e76fd2e50c34387b636e9764b565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBoxCanvasGroup: {fileID: 775666985}
-  dialogueText: {fileID: 775666987}
-  dBoxContinueButton: {fileID: 775666986}
-  noteBoxCanvasGroup: {fileID: 1650150092}
-  noteText: {fileID: 1650150094}
-  noteContinueButton: {fileID: 1650150093}
-  playerHealthBarCanvasGroup: {fileID: 980763572}
   playerHealthBar: {fileID: 478968349}
-  mazeCloseButtonCanvasGroup: {fileID: 0}
   mazeUICanvasGroup: {fileID: 1960276367}
   mazeSwitch1: {fileID: 1126431961}
   mazeSwitch2: {fileID: 762534445}
   mazeCountdownTimerText: {fileID: 1915927084}
   mazePuzzleInteractButton: {fileID: 1785572151}
   mazePuzzleInteractText: {fileID: 1555207101}
+  jigsawPuzzleCanvasGroup: {fileID: 0}
+  jigsawPuzzleCountdownTimerText: {fileID: 0}
+  jigsawPuzzleInteractButton: {fileID: 0}
+  jigsawPuzzleInteractText: {fileID: 0}
   differencePuzzleCanvasGroup: {fileID: 0}
   diffPuzzleCountdownTimerText: {fileID: 0}
   diffPuzzleInteractButton: {fileID: 0}
@@ -6599,7 +6551,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.57254905}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.49019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8734,11 +8686,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736767665891185551, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.03
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 3736767665891185551, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.34
+      value: -1.71
       objectReference: {fileID: 0}
     - target: {fileID: 3736767665891185551, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_LocalPosition.z

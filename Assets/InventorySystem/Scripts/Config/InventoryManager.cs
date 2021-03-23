@@ -42,7 +42,7 @@ public class InventoryManager : MonoBehaviour
         SetReferences();
 
         // Fill inventory slots
-        FillInventorySlots();
+        UpdateInventorySlots();
 
         // Hide inventory on start
         inventoryCanvasGroup.alpha = 0f;
@@ -180,6 +180,7 @@ public class InventoryManager : MonoBehaviour
 
     public void AddInventoryItem(ItemObject item)
     {
+        /*
         if (item.itemType == ItemType.Weapon)
         {
             // Cast item to WeaponObject
@@ -226,12 +227,16 @@ public class InventoryManager : MonoBehaviour
             ItemSlotInteraction itemSlotInteraction = itemSlot.GetComponent<ItemSlotInteraction>();
             itemSlotInteraction.PopulateItemSlot(item);
         }
+        */
 
         // Add to inventory scriptable object
         GameData.currentPlayerInventory.AddItem(item, 1);
+
+        // Update inventory slots
+        UpdateInventorySlots();
     }
 
-    private void FillInventorySlots()
+    private void UpdateInventorySlots()
     {
         for (int i = 0; i < GameData.currentPlayerInventory.Container.Count; i++)
         {
@@ -241,46 +246,80 @@ public class InventoryManager : MonoBehaviour
                 // Cast item to WeaponObject
                 WeaponObject weaponItem = (WeaponObject)GameData.currentPlayerInventory.Container[i].item;
 
-                // Instantiate weapon grid slot
-                GameObject weaponSlot = Instantiate(weaponGridSlotPrefab, weaponGridContainer);
+                // Check if weapon already exists
+                bool weaponAlreadyExists = false;
+                foreach (Transform child in weaponGridContainer.transform)
+                {
+                    WeaponSlotInteraction instance = child.GetComponent<WeaponSlotInteraction>();
 
-                // Add to local weapon slots list
-                weaponSlots.Add(weaponSlot);
+                    if (instance.scriptableObject == weaponItem)
+                    {
+                        weaponAlreadyExists = true;
+                    }
+                }
 
-                // Get WeaponSlotInteraction script component
-                WeaponSlotInteraction interactionScript = weaponSlot.GetComponent<WeaponSlotInteraction>();
+                if (!weaponAlreadyExists)
+                {
+                    // Instantiate weapon grid slot
+                    GameObject weaponSlot = Instantiate(weaponGridSlotPrefab, weaponGridContainer);
 
-                // Set the weapon type on the interaction script
-                interactionScript.weaponType = weaponItem.weaponType;
+                    // Add to local weapon slots list
+                    weaponSlots.Add(weaponSlot);
 
-                // Get ItemIcon image component
-                Image weaponIcon = weaponSlot.transform.Find("ItemIcon").GetComponent<Image>();
+                    // Get WeaponSlotInteraction script component
+                    WeaponSlotInteraction interactionScript = weaponSlot.GetComponent<WeaponSlotInteraction>();
 
-                // Set ItemIcon image sprite from ScriptableObject
-                weaponIcon.sprite = weaponItem.inventorySprite;
+                    // Set the weapon type and scriptable object on the interaction script
+                    interactionScript.weaponType = weaponItem.weaponType;
+                    interactionScript.scriptableObject = weaponItem;
 
-                // Set ItemIcon image component's alpha to 1
-                Color c = weaponIcon.color;
-                c.a = 1f;
-                weaponIcon.color = c;
+                    // Get ItemIcon image component
+                    Image weaponIcon = weaponSlot.transform.Find("ItemIcon").GetComponent<Image>();
 
-                // Get NameText TextMeshProUGUI component
-                TextMeshProUGUI nameText = weaponSlot.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
+                    // Set ItemIcon image sprite from ScriptableObject
+                    weaponIcon.sprite = weaponItem.inventorySprite;
 
-                // Set NameText 
-                nameText.text = GameData.currentPlayerInventory.Container[i].item.itemName;
+                    // Set ItemIcon image component's alpha to 1
+                    Color c = weaponIcon.color;
+                    c.a = 1f;
+                    weaponIcon.color = c;
+
+                    // Get NameText TextMeshProUGUI component
+                    TextMeshProUGUI nameText = weaponSlot.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
+
+                    // Set NameText 
+                    nameText.text = GameData.currentPlayerInventory.Container[i].item.itemName;
+                }
             }
             else
             {
-                // Instantiate item grid slot
-                GameObject itemSlot = Instantiate(itemGridSlotPrefab, itemGridContainer);
+                // Load the ItemObject                
+                ItemObject item = GameData.currentPlayerInventory.Container[i].item;
 
-                // Add to local item slots list
-                itemSlots.Add(itemSlot);
+                // Check if item already exists
+                bool itemAlreadyExists = false;
+                foreach (Transform child in itemGridContainer.transform)
+                {
+                    ItemSlotInteraction instance = child.GetComponent<ItemSlotInteraction>();
 
-                // Populate slot with scriptable object data
-                ItemSlotInteraction itemSlotInteraction = itemSlot.GetComponent<ItemSlotInteraction>();
-                itemSlotInteraction.PopulateItemSlot(GameData.currentPlayerInventory.Container[i].item);
+                    if (instance.itemScriptableObject == item)
+                    {
+                        itemAlreadyExists = true;
+                    }
+                }
+
+                if (!itemAlreadyExists)
+                {
+                    // Instantiate item grid slot
+                    GameObject itemSlot = Instantiate(itemGridSlotPrefab, itemGridContainer);
+
+                    // Add to local item slots list
+                    itemSlots.Add(itemSlot);
+
+                    // Populate slot with scriptable object data
+                    ItemSlotInteraction itemSlotInteraction = itemSlot.GetComponent<ItemSlotInteraction>();
+                    itemSlotInteraction.PopulateItemSlot(GameData.currentPlayerInventory.Container[i].item);
+                }
             }
         }
     }

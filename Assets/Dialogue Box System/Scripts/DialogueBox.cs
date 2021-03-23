@@ -43,7 +43,8 @@ public class DialogueBox : MonoBehaviour
 
     private ItemObject currentItem = null;                              // ItemObject - The current ItemObject which has the player comment response
 
-    private GameObject pcThenInventoryGO = null;                        // GameObject - For PC_Then_Inventory objects, this will be used to remove the object from the scene after the dialogue is over
+    private GameObject pcThenInventoryGO = null;                        // GameObject - For PC_Then_Inventory objects, this will be used to remove the object from the scene after dialogue is over
+    private GameObject imageDisplayGO = null;                           // GameObject - For PC_Then_Inventory_objects, this will be used to remove the image display from the scene after dialogue is over
 
     private void Awake()
     {
@@ -169,6 +170,7 @@ public class DialogueBox : MonoBehaviour
                 if (pcThenInventoryGO != null)
                 {
                     Destroy(pcThenInventoryGO);
+                    Destroy(imageDisplayGO);
                 }
 
             }
@@ -188,8 +190,8 @@ public class DialogueBox : MonoBehaviour
 
             if (room2JigsawPuzzleAfterDialogue)
             {
-                // TODO: Load jigsaw puzzle UI
-
+                // Load jigsaw puzzle UI
+                JigsawPuzzle.LoadJigsawPuzzleUI();
             }
 
             if (room3DiffPuzzleAfterDialogue)
@@ -218,9 +220,10 @@ public class DialogueBox : MonoBehaviour
         }
     }
 
-    public void SetPCThenInventoryGameObject(GameObject pcThenInv)
+    public void SetPCThenInventoryGameObject(GameObject pcThenInv, GameObject displayGO)
     {
         pcThenInventoryGO = pcThenInv;
+        imageDisplayGO = displayGO;
     }
 
     public void SetInventoryAfterDialogueFlag()

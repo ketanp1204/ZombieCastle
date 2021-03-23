@@ -6,18 +6,7 @@ using TMPro;
 
 public class UIReferences : MonoBehaviour
 {
-    [Header("Dialogue Box")]
-    public CanvasGroup dialogueBoxCanvasGroup;
-    public TextMeshProUGUI dialogueText;
-    public GameObject dBoxContinueButton;
-
-    [Header("Note Box")]
-    public CanvasGroup noteBoxCanvasGroup;
-    public TextMeshProUGUI noteText;
-    public GameObject noteContinueButton;
-
     [Header("Player Health Bar")]
-    public CanvasGroup playerHealthBarCanvasGroup;
     public HealthBar playerHealthBar;
 
     [Header("Maze Puzzle")]
@@ -27,6 +16,12 @@ public class UIReferences : MonoBehaviour
     public TextMeshProUGUI mazeCountdownTimerText;
     public Button mazePuzzleInteractButton;
     public TextMeshProUGUI mazePuzzleInteractText;
+
+    [Header("Jigsaw Puzzle")]
+    public CanvasGroup jigsawPuzzleCanvasGroup;
+    public TextMeshProUGUI jigsawPuzzleCountdownTimerText;
+    public Button jigsawPuzzleInteractButton;
+    public TextMeshProUGUI jigsawPuzzleInteractText;
 
     [Header("Spot the Differences Puzzle")]
     public CanvasGroup differencePuzzleCanvasGroup;

@@ -21,16 +21,16 @@ public class MazePuzzle : MonoBehaviour
     private TextMeshProUGUI countdownTimerText;
     private Button interactButton;
     private TextMeshProUGUI interactText;
-    private GameObject mazePuzzleGO;                                    // Maze Puzzle GameObject 
-    private Collider2D switch1Collider;                                 // Switch 1 collider
-    private Collider2D switch2Collider;                                 // Switch 2 collider
+    
 
     // Public Cached References
     public CinemachineVirtualCamera cinemachineCamera;                  // Cinemachine Camera that targets the Maze Puzzle GameObject
+    public GameObject mazePuzzleGO;                                     // Maze Puzzle GameObject 
+    public Collider2D switch1Collider;                                  // Switch 1 collider
+    public Collider2D switch2Collider;                                  // Switch 2 collider
     public PC_Then_Inventory_Object keyRewardScriptableObject;          // Key reward received after successful puzzle completion    
 
     // Private Variables
-    private bool isActive;
     private bool puzzleSuccess = false;
 
     private TimeSpan timerTimeSpan;                                     // To format time into string
@@ -46,8 +46,6 @@ public class MazePuzzle : MonoBehaviour
     public string[] keyRewardReceivedDialogue;                          // String array - Dialogue after receiving key reward on successful puzzle completion
     public float puzzleTime = 20f;                                      // Time allowed to complete the puzzle
     public float bonusTime = 5f;                                        // Bonus time added after each switch is hit
-
-    // private bool checkForInput = false;
 
     private void Awake()
     {
@@ -66,10 +64,6 @@ public class MazePuzzle : MonoBehaviour
 
     void SetReferences()
     {
-        mazePuzzleGO = transform.GetChild(0).gameObject;
-        switch1Collider = mazePuzzleGO.transform.Find("Switch1Collider").GetComponent<BoxCollider2D>();
-        switch2Collider = mazePuzzleGO.transform.Find("Switch2Collider").GetComponent<BoxCollider2D>();
-
         uiReferences = GameSession.instance.uiReferences;
         mazeUICanvasGroup = uiReferences.mazeUICanvasGroup;
         mazeSwitch1 = uiReferences.mazeSwitch1;
@@ -83,7 +77,6 @@ public class MazePuzzle : MonoBehaviour
 
     void Initialization()
     {
-        isActive = false;
         mazePuzzleGO.SetActive(false);
         mazeUICanvasGroup.alpha = 0f;
         mazeUICanvasGroup.interactable = false;
@@ -115,9 +108,6 @@ public class MazePuzzle : MonoBehaviour
         // Stop Player movement
         Player.StopMovement();
 
-        // Maze puzzle is active
-        isActive = true;
-
         // Show maze puzzle UI
         new Task(UIAnimation.FadeCanvasGroupAfterDelay(mazeUICanvasGroup, 0f, 1f, 0f, 0.2f));
         mazeUICanvasGroup.interactable = true;
@@ -144,6 +134,11 @@ public class MazePuzzle : MonoBehaviour
 
     public void StartPuzzleTimer()
     {
+        // Disable interact button
+        interactButton.interactable = false;
+
+        EventSystem.current.SetSelectedGameObject(null);
+
         timerStarted = true;
         timerCurrentTime = puzzleTime;
 
@@ -205,8 +200,8 @@ public class MazePuzzle : MonoBehaviour
 
     public void CloseMazePuzzle()
     {
-        // Hide cinemachine camera for maze puzzle
-        StartCoroutine(ClosePuzzleGame());
+        // Go back to game
+        StartCoroutine(ExitPuzzleGame());
 
         // Disable portrait collider
         DisablePortraitCollider();
@@ -216,15 +211,9 @@ public class MazePuzzle : MonoBehaviour
         {
             DescriptionBox.instance.ShowDescBoxAfterReward(keyRewardScriptableObject, keyRewardReceivedDialogue);
         }
-
-        // Add key reward to inventory
-        if (InventoryManager.instance)
-        {
-            InventoryManager.instance.AddInventoryItem(keyRewardScriptableObject);
-        }
     }
 
-    private IEnumerator ClosePuzzleGame()
+    private IEnumerator ExitPuzzleGame()
     {
         LevelManager.FadeScreenInAndOut();
 
@@ -232,9 +221,6 @@ public class MazePuzzle : MonoBehaviour
 
         // Hide cursor
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
-
-        // Maze puzzle is inactive
-        isActive = false;
 
         // Hide maze puzzle gameobject
         mazePuzzleGO.SetActive(false);
@@ -254,11 +240,6 @@ public class MazePuzzle : MonoBehaviour
         cinemachineCamera.Priority = 5;
     }
 
-    public static bool IsActive()
-    {
-        return instance.isActive;
-    }
-
     private void ResetPuzzle()
     {
         EventSystem.current.SetSelectedGameObject(null);
@@ -275,6 +256,9 @@ public class MazePuzzle : MonoBehaviour
 
         // Unset first switch hit flag
         firstSwitchHitFlag = false;
+
+        // Enable interact button
+        interactButton.interactable = true;
 
         // Show retry button text
         interactText.text = "Retry";

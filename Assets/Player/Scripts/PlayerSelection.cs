@@ -153,7 +153,7 @@ public class PlayerSelection : MonoBehaviour
 
                         if (DialogueBox.instance)
                         {
-                            DialogueBox.instance.SetPCThenInventoryGameObject(collidedObject.gameObject);
+                            DialogueBox.instance.SetPCThenInventoryGameObject(collidedObject.gameObject, objectProperties.imageDisplayGO);
                             DialogueBox.instance.SetCurrentItem(pc_Then_Inventory_Object);
                             DialogueBox.instance.FillSentences(sentenceArray);
                             DialogueBox.instance.SetInventoryAfterDialogueFlag();
@@ -180,6 +180,21 @@ public class PlayerSelection : MonoBehaviour
                         else
                         {
                             Debug.Log("Dialogue box not found");
+                        }
+                    }
+                    else if (itemScriptableObject.itemType == ItemType.DescBox_Then_Dialogue)
+                    {
+                        DescBox_Then_Dialogue_Object descBox_Then_Dialogue_Object = (DescBox_Then_Dialogue_Object)itemScriptableObject;
+
+                        string[] sentenceArray = descBox_Then_Dialogue_Object.playerComments;
+
+                        if (DescriptionBox.instance)
+                        {
+                            DescriptionBox.instance.ShowDescBoxAfterReward(descBox_Then_Dialogue_Object, sentenceArray);
+                        }
+                        else
+                        {
+                            Debug.Log("Description box not found");
                         }
                     }
                 }

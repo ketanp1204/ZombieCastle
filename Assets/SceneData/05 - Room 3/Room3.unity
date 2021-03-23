@@ -768,27 +768,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1254770587353563771, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
   m_PrefabInstance: {fileID: 210643317}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &210643319 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1254770585905870987, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
-  m_PrefabInstance: {fileID: 210643317}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &210643320 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1254770585700548322, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
-  m_PrefabInstance: {fileID: 210643317}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!225 &210643321 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 1254770587353563770, guid: 16bc8b00e2e85ad4b9fc5b31b9a32d72, type: 3}
-  m_PrefabInstance: {fileID: 210643317}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &217803392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,27 +2224,6 @@ PrefabInstance:
 --- !u!224 &747138853 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2573393571305659994, guid: 7427e580a977f2747bc03ada428a1633, type: 3}
-  m_PrefabInstance: {fileID: 747138852}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &747138854 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2573393571824396059, guid: 7427e580a977f2747bc03ada428a1633, type: 3}
-  m_PrefabInstance: {fileID: 747138852}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &747138855 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2573393571626778633, guid: 7427e580a977f2747bc03ada428a1633, type: 3}
-  m_PrefabInstance: {fileID: 747138852}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!225 &747138856 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 2573393571305659995, guid: 7427e580a977f2747bc03ada428a1633, type: 3}
   m_PrefabInstance: {fileID: 747138852}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &774142446
@@ -5175,6 +5133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineCamera: {fileID: 1092715230}
+  puzzleGO: {fileID: 379689719}
+  diffCollidersContainer: {fileID: 774142446}
   swordReward: {fileID: 11400000, guid: f8f663202a659d74d86be428ab7dbe22, type: 2}
   timerStarted: 0
   puzzleTime: 20
@@ -6020,21 +5980,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea4e76fd2e50c34387b636e9764b565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBoxCanvasGroup: {fileID: 210643321}
-  dialogueText: {fileID: 210643320}
-  dBoxContinueButton: {fileID: 210643319}
-  noteBoxCanvasGroup: {fileID: 747138856}
-  noteText: {fileID: 747138855}
-  noteContinueButton: {fileID: 747138854}
-  playerHealthBarCanvasGroup: {fileID: 0}
   playerHealthBar: {fileID: 1314805444}
-  mazeCloseButtonCanvasGroup: {fileID: 0}
   mazeUICanvasGroup: {fileID: 0}
   mazeSwitch1: {fileID: 0}
   mazeSwitch2: {fileID: 0}
   mazeCountdownTimerText: {fileID: 0}
   mazePuzzleInteractButton: {fileID: 0}
   mazePuzzleInteractText: {fileID: 0}
+  jigsawPuzzleCanvasGroup: {fileID: 0}
+  jigsawPuzzleCountdownTimerText: {fileID: 0}
+  jigsawPuzzleInteractButton: {fileID: 0}
+  jigsawPuzzleInteractText: {fileID: 0}
   differencePuzzleCanvasGroup: {fileID: 224654206}
   diffPuzzleCountdownTimerText: {fileID: 40471138}
   diffPuzzleInteractButton: {fileID: 1454411471}

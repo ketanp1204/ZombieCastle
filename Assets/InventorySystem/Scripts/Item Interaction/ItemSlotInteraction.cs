@@ -38,6 +38,23 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
             // Set itemScriptableObject
             itemScriptableObject = scriptableObject;
         }
+        else if (scriptableObject.itemType == ItemType.DescBox_Then_Dialogue)
+        {
+            DescBox_Then_Dialogue_Object descBox_Then_Dialogue_Object = (DescBox_Then_Dialogue_Object)scriptableObject;
+
+            itemIcon.sprite = descBox_Then_Dialogue_Object.inventorySprite;
+
+            // Set ItemIcon image component's alpha to 1
+            Color c = itemIcon.color;
+            c.a = 1f;
+            itemIcon.color = c;
+
+            // Set NameText 
+            nameText.text = descBox_Then_Dialogue_Object.inventoryItemName;
+
+            // Set itemScriptableObject
+            itemScriptableObject = scriptableObject;
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)

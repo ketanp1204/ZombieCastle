@@ -155,10 +155,12 @@ public class Player : MonoBehaviour
         if (scene.name == "Room3")
         {
             room3TorchLight = transform.Find("Torch").gameObject;
+            animator.SetBool("HoldingTorch", true);
             isInRoom3 = true;
         }
         else
         {
+            animator.SetBool("HoldingTorch", false);
             isInRoom3 = false;
         }
     }

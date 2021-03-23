@@ -82,6 +82,10 @@ public class DescriptionBox : MonoBehaviour
             {
                 iconImage.sprite = ((WeaponObject)currentItem).inventorySprite;
             }
+            else if (currentItem.itemType == ItemType.DescBox_Then_Dialogue)
+            {
+                iconImage.sprite = ((DescBox_Then_Dialogue_Object)currentItem).inventorySprite;
+            }
         }
     }
 
@@ -96,6 +100,10 @@ public class DescriptionBox : MonoBehaviour
             else if (currentItem.itemType == ItemType.Weapon)
             {
                 descText.text = ((WeaponObject)currentItem).itemDescription;
+            }
+            else if (currentItem.itemType == ItemType.DescBox_Then_Dialogue)
+            {
+                descText.text = ((DescBox_Then_Dialogue_Object)currentItem).itemDescription;
             }
         }
     }
@@ -138,6 +146,12 @@ public class DescriptionBox : MonoBehaviour
             isActive = true;
 
             descBoxOpenLocation = DescBoxOpenLocations.AfterReward;
+
+            // Add key reward to inventory
+            if (InventoryManager.instance)
+            {
+                InventoryManager.instance.AddInventoryItem(item);
+            }
 
             // Fade in new item discovered text:
             new Task(UIAnimation.FadeTMProTextAfterDelay(newItemDiscoveredText, 0f, 1f, 0f));

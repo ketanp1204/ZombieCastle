@@ -11,6 +11,7 @@ public class ObjectProperties : MonoBehaviour
     }
 
     public ItemObject objectData;
+    public GameObject imageDisplayGO;
     private SpriteGlow.SpriteGlowEffect spriteGlowEffectComponent;
 
     // Start is called before the first frame update
