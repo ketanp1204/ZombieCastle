@@ -242,6 +242,7 @@ public class JigsawPuzzle : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
+        drawerGameObject.GetComponent<BoxCollider2D>().enabled = true;
         SpriteGlow.SpriteGlowEffect glowEffect = drawerGameObject.GetComponent<SpriteGlow.SpriteGlowEffect>();
 
         glowEffect.enabled = true;

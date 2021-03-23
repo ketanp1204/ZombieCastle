@@ -196,6 +196,8 @@ public class PlayerSelection : MonoBehaviour
                         {
                             Debug.Log("Description box not found");
                         }
+
+                        collidedObject.GetComponent<BoxCollider2D>().enabled = false;
                     }
                 }
                 else

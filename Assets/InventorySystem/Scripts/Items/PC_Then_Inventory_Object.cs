@@ -12,6 +12,8 @@ public class PC_Then_Inventory_Object : ItemObject
 
     public string sceneName;                // String - Name of the scene in which the item is present
 
+    public string inventoryItemName;        // String - Name to be used in the inventory box
+
     [Header("Player Comment")]
     public bool hasPlayerComment;           // Bool - Object has player comment
     [TextArea(4, 10)]

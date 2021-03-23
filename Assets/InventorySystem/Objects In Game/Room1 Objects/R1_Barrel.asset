@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: R1_Barrel
   m_EditorClassIdentifier: 
   itemName: Barrel
-  itemDescription: A barrel filled with oil
+  itemDescription: Some oil that I collected.
   itemType: 2
   sceneName: Room1
+  inventoryItemName: Oil
   hasPlayerComment: 1
   playerComments:
   - There is some oil in it.
-  inventorySprite: {fileID: 0}
+  inventorySprite: {fileID: 21300000, guid: b048663e29d70874f9cee42cb6e9ac7e, type: 3}
