@@ -13,13 +13,13 @@ public class ObjectProperties : MonoBehaviour
     public ItemObject objectData;
     public GameObject imageDisplayGO;
     private SpriteGlow.SpriteGlowEffect spriteGlowEffectComponent;
+    public AudioManager.Sound descBoxItemReceivedSound;
 
     // Start is called before the first frame update
     void Start()
     {
         spriteGlowEffectComponent = GetComponent<SpriteGlow.SpriteGlowEffect>();
-        if (spriteGlowEffectComponent)
-            spriteGlowEffectComponent.enabled = false;
+        spriteGlowEffectComponent.enabled = false;
     }
 
     public void UpdateGameDataForPCThenInventoryObject(PC_Then_Inventory_Object item)

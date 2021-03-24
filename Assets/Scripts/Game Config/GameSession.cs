@@ -13,6 +13,7 @@ public class GameSession : MonoBehaviour
 
     // REMOVE BEFORE RELEASING GAME
     public WeaponObject knifeInventoryObject;                       // Temporary - Used to re add the knife to the default player inventory after exiting play in the unity editor
+    public PC_Then_Inventory_Object lobbyKeyInventoryObject;        // Temporary - Used to re add the lobby key to the default player inventory after exiting play in the unity editor
 
     void Awake()
     {
@@ -29,7 +30,7 @@ public class GameSession : MonoBehaviour
 
         PlayerStats.Initialize();
         AudioManager.Initialize();
-        AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
+        // AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
     }
 
     void OnEnable()
@@ -116,5 +117,6 @@ public class GameSession : MonoBehaviour
     {
         GameData.currentPlayerInventory.Container.Clear();
         GameData.currentPlayerInventory.AddItem(knifeInventoryObject, 1);
+        GameData.currentPlayerInventory.AddItem(lobbyKeyInventoryObject, 1);
     }
 }

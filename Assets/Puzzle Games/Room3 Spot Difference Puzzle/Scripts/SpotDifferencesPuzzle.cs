@@ -210,7 +210,7 @@ public class SpotDifferencesPuzzle : MonoBehaviour
         // Show key reward 
         if (DescriptionBox.instance)
         {
-            DescriptionBox.instance.ShowDescBoxAfterReward(swordReward, null);
+            DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(1f, swordReward, null, AudioManager.Sound.Null);           // TODO: add sword receive sound
         }
 
         // Add key reward to inventory

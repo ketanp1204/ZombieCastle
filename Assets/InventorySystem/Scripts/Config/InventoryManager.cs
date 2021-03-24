@@ -15,7 +15,9 @@ public class InventoryManager : MonoBehaviour
 
     // Private Cached References
     private List<GameObject> weaponSlots = new List<GameObject>();
+    private List<WeaponSlotInteraction> weaponSlotInteractionScriptInstances = new List<WeaponSlotInteraction>();
     private List<GameObject> itemSlots = new List<GameObject>();
+    private List<ItemSlotInteraction> itemSlotInteractionScriptInstances = new List<ItemSlotInteraction>();
     private CanvasGroup inventoryCanvasGroup;
 
     private Transform weaponGridContainer;
@@ -180,55 +182,6 @@ public class InventoryManager : MonoBehaviour
 
     public void AddInventoryItem(ItemObject item)
     {
-        /*
-        if (item.itemType == ItemType.Weapon)
-        {
-            // Cast item to WeaponObject
-            WeaponObject weaponToAdd = (WeaponObject)item;
-
-            // Instantiate weapon grid slot
-            GameObject weaponSlot = Instantiate(weaponGridSlotPrefab, weaponGridContainer);
-
-            // Add to local weapon slots list
-            weaponSlots.Add(weaponSlot);
-
-            // Get WeaponSlotInteraction script component
-            WeaponSlotInteraction interactionScript = weaponSlot.GetComponent<WeaponSlotInteraction>();
-
-            // Set the weapon type on the interaction script
-            interactionScript.weaponType = weaponToAdd.weaponType;
-
-            // Get ItemIcon image component
-            Image weaponIcon = weaponSlot.transform.Find("ItemIcon").GetComponent<Image>();
-
-            // Set ItemIcon image sprite from ScriptableObject
-            weaponIcon.sprite = weaponToAdd.inventorySprite;
-
-            // Set ItemIcon image component's alpha to 1
-            Color c = weaponIcon.color;
-            c.a = 1f;
-            weaponIcon.color = c;
-
-            // Get NameText TextMeshProUGUI component
-            TextMeshProUGUI nameText = weaponSlot.transform.Find("NameText").GetComponent<TextMeshProUGUI>();
-
-            // Set NameText 
-            nameText.text = weaponToAdd.itemName;
-        }
-        else
-        {
-            // Instantiate item grid slot
-            GameObject itemSlot = Instantiate(itemGridSlotPrefab, itemGridContainer);
-
-            // Add to local item slots list
-            itemSlots.Add(itemSlot);
-
-            // Populate slot with scriptable object data
-            ItemSlotInteraction itemSlotInteraction = itemSlot.GetComponent<ItemSlotInteraction>();
-            itemSlotInteraction.PopulateItemSlot(item);
-        }
-        */
-
         // Add to inventory scriptable object
         GameData.currentPlayerInventory.AddItem(item, 1);
 
@@ -236,8 +189,212 @@ public class InventoryManager : MonoBehaviour
         UpdateInventorySlots();
     }
 
+    public void DeleteInventoryItem(ItemObject item)
+    {
+        // Remove from inventory scriptable object
+        GameData.currentPlayerInventory.RemoveItem(item);
+
+        // Update inventory slots
+        UpdateInventorySlots();
+    }
+
+    public bool ContainsItem(ItemObject item)
+    {
+        bool itemAlreadyExists = false;
+
+        if (item.itemType == ItemType.Weapon)
+        {
+            foreach (Transform child in weaponGridContainer.transform)
+            {
+                WeaponSlotInteraction instance = child.GetComponent<WeaponSlotInteraction>();
+
+                if (instance.scriptableObject == item)
+                {
+                    itemAlreadyExists = true;
+                }
+            }
+        }
+        else
+        {
+            foreach (Transform child in itemGridContainer.transform)
+            {
+                ItemSlotInteraction instance = child.GetComponent<ItemSlotInteraction>();
+
+                if (instance.itemScriptableObject == item)
+                {
+                    itemAlreadyExists = true;
+                }
+            }
+        }
+
+        return itemAlreadyExists;
+    }
+
+    public void HighlightItemOnTreasureBoxInteraction(ItemObject item, TreasureBoxInteraction scriptInstance)
+    {
+        bool itemFound = false;
+
+        foreach (Transform child in weaponGridContainer.transform)
+        {
+            WeaponSlotInteraction instance = child.GetComponent<WeaponSlotInteraction>();
+
+            if (instance.scriptableObject == item)
+            {
+                itemFound = true;
+
+                instance.Highlight();
+                instance.SetTreasureBoxInteractionFlag();
+                instance.SetTreasureBoxInteractionScriptInstance(scriptInstance);
+                instance.EnableInteraction();
+            }
+            else
+            {
+                instance.HideSelectedBackground();
+                instance.DisableInteraction();
+            }
+        }
+
+        // If item not found in weapon slots, look inside item slots
+        if (!itemFound)
+        {
+            foreach (Transform child in itemGridContainer.transform)
+            {
+                ItemSlotInteraction instance = child.GetComponent<ItemSlotInteraction>();
+
+                if (instance.itemScriptableObject == item)
+                {
+                    itemFound = true;
+
+                    instance.Highlight();
+                    instance.SetTreasureBoxInteractionFlag();
+                    instance.SetTreasureBoxInteractionScriptInstance(scriptInstance);
+                    instance.EnableInteraction();
+                }
+                else
+                {
+                    instance.HideSelectedBackground();
+                    instance.DisableInteraction();
+                }
+            }
+        }
+
+        // Re-enable interaction of other slots if item not found in inventory
+        if (!itemFound)
+        {
+            Debug.Log("Item not found in inventory");
+            EnableInteractionForAllWeaponSlots();
+            EnableInteractionForAllItemSlots();
+        }
+    }
+
+    public void EnableInteractionForAllWeaponSlots()
+    {
+        foreach (Transform child in weaponGridContainer.transform)
+        {
+            WeaponSlotInteraction instance = child.GetComponent<WeaponSlotInteraction>();
+            instance.EnableInteraction();
+        }
+        
+    }
+
+    public void EnableInteractionForAllItemSlots()
+    {
+        foreach (Transform child in itemGridContainer.transform)
+        {
+            ItemSlotInteraction instance = child.GetComponent<ItemSlotInteraction>();
+            instance.EnableInteraction();
+        }
+    }
+
+    public void DisableInteractionOfAllSlots()
+    {
+        foreach (Transform child in weaponGridContainer.transform)
+        {
+            WeaponSlotInteraction instance = child.GetComponent<WeaponSlotInteraction>();
+            instance.HideSelectedBackground();
+            instance.DisableInteraction();
+        }
+        foreach (Transform child in itemGridContainer.transform)
+        {
+            ItemSlotInteraction instance = child.GetComponent<ItemSlotInteraction>();
+            instance.HideSelectedBackground();
+            instance.DisableInteraction();
+        }
+    }
+
     private void UpdateInventorySlots()
     {
+        // Check and remove already deleted slots
+        if (weaponSlots.Count != 0)
+        {
+            Dictionary<int, bool> slotExistsList = new Dictionary<int, bool>();
+
+            for (int i = 0; i < weaponSlots.Count; i++)
+            {
+                slotExistsList[i] = false;
+            }
+
+            foreach (WeaponSlotInteraction script in weaponSlotInteractionScriptInstances)
+            {
+                for (int i = 0; i < GameData.currentPlayerInventory.Container.Count; i++)
+                {
+                    ItemObject inventoryItem = GameData.currentPlayerInventory.Container[i].item;
+
+                    if (script.scriptableObject == inventoryItem)
+                    {
+                        slotExistsList[i] = true;
+                        break;
+                    }
+                }
+            }
+
+            for (int i = 0; i < slotExistsList.Count; i++)
+            {
+                if (slotExistsList[i] == false)
+                {
+                    Destroy(weaponSlots[i]);
+                    weaponSlots.RemoveAt(i);
+                    weaponSlotInteractionScriptInstances.RemoveAt(i);
+                }
+            }
+        }
+
+        if (itemSlots.Count != 0)
+        {
+            Dictionary<int, bool> slotExistsList = new Dictionary<int, bool>();
+
+            for (int i = 0; i < itemSlots.Count; i++)
+            {
+                slotExistsList[i] = false;
+            }
+
+            foreach (ItemSlotInteraction script in itemSlotInteractionScriptInstances)
+            {
+                for (int i = 0; i < GameData.currentPlayerInventory.Container.Count; i++)
+                {
+                    ItemObject inventoryItem = GameData.currentPlayerInventory.Container[i].item;
+
+                    if (script.itemScriptableObject == inventoryItem)
+                    {
+                        slotExistsList[i] = true;
+                        break;
+                    }
+                }
+            }
+
+            for (int i = 0; i < slotExistsList.Count; i++)
+            {
+                if (slotExistsList[i] == false)
+                {
+                    Destroy(itemSlots[i]);
+                    itemSlots.RemoveAt(i);
+                    itemSlotInteractionScriptInstances.RemoveAt(i);
+                }
+            }
+        }
+        
+
+        // Update existing slots
         for (int i = 0; i < GameData.currentPlayerInventory.Container.Count; i++)
         {
             // Check type of item : Add to weapon grid if weapon otherwise into item grid
@@ -246,19 +403,8 @@ public class InventoryManager : MonoBehaviour
                 // Cast item to WeaponObject
                 WeaponObject weaponItem = (WeaponObject)GameData.currentPlayerInventory.Container[i].item;
 
-                // Check if weapon already exists
-                bool weaponAlreadyExists = false;
-                foreach (Transform child in weaponGridContainer.transform)
-                {
-                    WeaponSlotInteraction instance = child.GetComponent<WeaponSlotInteraction>();
-
-                    if (instance.scriptableObject == weaponItem)
-                    {
-                        weaponAlreadyExists = true;
-                    }
-                }
-
-                if (!weaponAlreadyExists)
+                // Add weapon if it does not already exist in inventory
+                if (ContainsItem(weaponItem) == false)
                 {
                     // Instantiate weapon grid slot
                     GameObject weaponSlot = Instantiate(weaponGridSlotPrefab, weaponGridContainer);
@@ -268,6 +414,9 @@ public class InventoryManager : MonoBehaviour
 
                     // Get WeaponSlotInteraction script component
                     WeaponSlotInteraction interactionScript = weaponSlot.GetComponent<WeaponSlotInteraction>();
+
+                    // Add to local weapon slot interaction script instances list
+                    weaponSlotInteractionScriptInstances.Add(interactionScript);
 
                     // Set the weapon type and scriptable object on the interaction script
                     interactionScript.weaponType = weaponItem.weaponType;
@@ -296,19 +445,8 @@ public class InventoryManager : MonoBehaviour
                 // Load the ItemObject                
                 ItemObject item = GameData.currentPlayerInventory.Container[i].item;
 
-                // Check if item already exists
-                bool itemAlreadyExists = false;
-                foreach (Transform child in itemGridContainer.transform)
-                {
-                    ItemSlotInteraction instance = child.GetComponent<ItemSlotInteraction>();
-
-                    if (instance.itemScriptableObject == item)
-                    {
-                        itemAlreadyExists = true;
-                    }
-                }
-
-                if (!itemAlreadyExists)
+                // Add item if it does not already exist in inventory
+                if (ContainsItem(item) == false)
                 {
                     // Instantiate item grid slot
                     GameObject itemSlot = Instantiate(itemGridSlotPrefab, itemGridContainer);
@@ -318,6 +456,10 @@ public class InventoryManager : MonoBehaviour
 
                     // Populate slot with scriptable object data
                     ItemSlotInteraction itemSlotInteraction = itemSlot.GetComponent<ItemSlotInteraction>();
+
+                    // Add to local item slot interaction script instances list
+                    itemSlotInteractionScriptInstances.Add(itemSlotInteraction);
+
                     itemSlotInteraction.PopulateItemSlot(GameData.currentPlayerInventory.Container[i].item);
                 }
             }

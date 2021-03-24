@@ -13,6 +13,7 @@ TagManager:
   - R2_JigsawPuzzle
   - JigsawPuzzleDraggablePiece
   - JigsawPuzzleFinalPiece
+  - TreasureBox
   layers:
   - Default
   - TransparentFX

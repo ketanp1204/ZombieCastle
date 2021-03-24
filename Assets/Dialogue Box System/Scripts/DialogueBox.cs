@@ -33,6 +33,9 @@ public class DialogueBox : MonoBehaviour
     private bool continueButtonEnabled = false;                         // Bool - If enabled, player can press space bar to press the continue button
 
     // For events after dialogue box display
+    private bool isTreasureBox = false;                                 // Bool - For events after treasure box dialogue
+    // private bool room2TreasureBox = false;                              // Bool - After treasure box dialogue of room2
+    // private bool room3TreasureBox = false;                              // Bool - After treasure box dialogue of room3
     private bool addToInventoryAfterDialogue = false;                   // Bool - Object goes to inventory after dialogue display
     private bool showNoteAfterDisplay = false;                          // Bool - Object has note box display after dialogue display
     private bool room1MazePuzzleAfterDialogue = false;                  // Bool - Portrait object in room1 that contains maze puzzle
@@ -40,6 +43,8 @@ public class DialogueBox : MonoBehaviour
     private bool room3DiffPuzzleAfterDialogue = false;                  // Bool - Cupboard object in room3 that contains differences puzzle
     private bool room1ZombieDiscovery = false;                          // Bool - Player finds a zombie in room1
     private bool isGameStartDialogue = false;                           // Bool - To start instructions display after game start dialogue
+
+    private TreasureBoxInteraction treasureBoxInstance = null;          // TreasureBoxInteraction script for current treasure box instance
 
     private ItemObject currentItem = null;                              // ItemObject - The current ItemObject which has the player comment response
 
@@ -158,6 +163,31 @@ public class DialogueBox : MonoBehaviour
             // Fade out the dialogue box
             new Task(UIAnimation.FadeCanvasGroupAfterDelay(dialogueBoxCG, 1f, 0f, 0f));
 
+            if (isTreasureBox)
+            {
+                // Start behaviour after dialogue over
+                if (treasureBoxInstance != null)
+                {
+                    treasureBoxInstance.BehaviourAfterDialogue();
+                }
+                else
+                {
+                    Debug.Log("Treasure box interaction script not set");
+                }
+            }
+
+            /*
+            if (room2TreasureBox)
+            {
+                // TODO: add logic
+            }
+
+            if (room3TreasureBox)
+            {
+                // TODO: add logic
+            }
+            */
+
             if (addToInventoryAfterDialogue)
             {
                 // TODO: Open inventory box or flash inventory bag in toolbar (preferably latter) to indicate newly added item
@@ -226,6 +256,28 @@ public class DialogueBox : MonoBehaviour
         imageDisplayGO = displayGO;
     }
 
+    public void SetRoom1TreasureBoxScript(TreasureBoxInteraction script)
+    {
+        treasureBoxInstance = script;
+    }
+
+    public void SetTreasureBoxFlag()
+    {
+        isTreasureBox = true;
+    }
+
+    /*
+     * public void SetRoom2TreasureBoxFlag()
+    {
+        room2TreasureBox = true;
+    }
+
+    public void SetRoom3TreasureBoxFlag()
+    {
+        room3TreasureBox = true;
+    }
+    */
+
     public void SetInventoryAfterDialogueFlag()
     {
         addToInventoryAfterDialogue = true;
@@ -276,6 +328,10 @@ public class DialogueBox : MonoBehaviour
         dialogueDisplayDelay = 0.2f;
 
         // Reset event bools
+        treasureBoxInstance = null;
+        isTreasureBox = false;
+        // room2TreasureBox = false;
+        // room3TreasureBox = false;
         addToInventoryAfterDialogue = false;
         showNoteAfterDisplay = false;
         room1MazePuzzleAfterDialogue = false;

@@ -132,7 +132,7 @@ public class DescriptionBox : MonoBehaviour
     }
 
     // When receiving a new item from a treasure box or a puzzle
-    public void ShowDescBoxAfterReward(ItemObject item, string[] dialogueAfterReward)
+    public void ShowRewardInDescBoxAfterDelay(float delay, ItemObject item, string[] dialogueAfterReward, AudioManager.Sound itemReceivedSound)
     {
         if (!instance.isActive)
         {
@@ -146,6 +146,16 @@ public class DescriptionBox : MonoBehaviour
             isActive = true;
 
             descBoxOpenLocation = DescBoxOpenLocations.AfterReward;
+
+            // Play item received sound
+            if (itemReceivedSound != AudioManager.Sound.Null)
+            {
+                AudioManager.PlaySoundOnceOnNonPersistentObject(itemReceivedSound);
+            }
+
+            // Unlock mouse cursor
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.None;
 
             // Add key reward to inventory
             if (InventoryManager.instance)
@@ -193,6 +203,9 @@ public class DescriptionBox : MonoBehaviour
                         DialogueBox.instance.StartDialogueDisplay();
                     }
                 }
+
+                // Lock mouse cursor
+                Cursor.lockState = CursorLockMode.Locked;
 
                 // Fade out new item discovered text:
                 new Task(UIAnimation.FadeTMProTextAfterDelay(newItemDiscoveredText, 1f, 0f, 0f));

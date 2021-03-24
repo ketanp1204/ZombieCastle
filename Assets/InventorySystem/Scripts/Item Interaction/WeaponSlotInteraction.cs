@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     // Private references
     public Image slotSelectedBackground;
@@ -16,42 +16,28 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
     public PlayerCombat.WeaponTypes weaponType;
     [HideInInspector]
     public WeaponObject scriptableObject;
+    [HideInInspector]
+    public bool canInteract = true;
 
     // Private variables
     private bool slotSelected = false;
+    private bool weaponWasHighlighted = false;
 
-    public void OnPointerEnter(PointerEventData eventData)
+    // Treasure box interaction
+    private bool isTreasureBoxInteraction = false;
+    private TreasureBoxInteraction treasureBoxInteractionScript = null;
+
+    public void DisableInteraction()
     {
-        // Fade in item name
-        new Task(UIAnimation.FadeTMProTextAfterDelay(nameText, 0f, 1f, 0f, 0.1f));
-
-        // Play hover sound
-        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryMouseHover);
-
-        // Partially fade in slot selected background
-        if (!slotSelected)
-        {
-            Color c = slotSelectedBackground.color;
-            c.a = 0.4f;
-            slotSelectedBackground.color = c;
-        }
+        canInteract = false;
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void EnableInteraction()
     {
-        // Fade out item name
-        new Task(UIAnimation.FadeTMProTextAfterDelay(nameText, nameText.alpha, 0f, 0f, 0.1f));
-
-        // Hide slot selected background if not selected
-        if (!slotSelected)
-        {
-            Color c = slotSelectedBackground.color;
-            c.a = 0f;
-            slotSelectedBackground.color = c;
-        }
+        canInteract = true;
     }
 
-    public void SetSlotSelected()
+    public void SetWeaponToSelected()
     {
         if (!slotSelected)
         {
@@ -62,7 +48,7 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
         }
     }
 
-    public void UnsetSlotSelected()
+    public void UnselectWeapon()
     {
         if (slotSelected)
         {
@@ -73,30 +59,119 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
         }
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void Highlight()
     {
-        // Close Inventory Box
-        InventoryManager.HideInventory();
+        weaponWasHighlighted = true;
+        Color c = slotSelectedBackground.color;
+        c.a = 0.4f;
+        slotSelectedBackground.color = c;
+    }
 
-        // Set/unset slot selected bool and show/hide background
-        if (!slotSelected)
+    public void HideSelectedBackground()
+    {
+        Color c = slotSelectedBackground.color;
+        c.a = 0f;
+        slotSelectedBackground.color = c;
+    }
+
+    public void SetTreasureBoxInteractionFlag()
+    {
+        isTreasureBoxInteraction = true;
+    }
+
+    public void SetTreasureBoxInteractionScriptInstance(TreasureBoxInteraction instance)
+    {
+        treasureBoxInteractionScript = instance;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (canInteract)
         {
-            SetSlotSelected();
+            // Fade in item name
+            new Task(UIAnimation.FadeTMProTextAfterDelay(nameText, 0f, 1f, 0f, 0.1f));
 
-            // Unset selected bool of other weapon slots
-            foreach (Transform child in transform.parent)
+            // Play hover sound
+            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryMouseHover);
+
+            // Partially fade in slot selected background
+            if (!slotSelected)
             {
-                if (child.gameObject != gameObject)
-                {
-                    child.GetComponent<WeaponSlotInteraction>().UnsetSlotSelected();
-                }
+                Color c = slotSelectedBackground.color;
+                c.a = 0.4f;
+                slotSelectedBackground.color = c;
             }
         }
-        else
-        {
-            UnsetSlotSelected();
-        }
+    }
 
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (canInteract)
+        {
+            // Fade out item name
+            new Task(UIAnimation.FadeTMProTextAfterDelay(nameText, nameText.alpha, 0f, 0f, 0.1f));
+
+            // Hide slot selected background if not selected
+            if (!slotSelected)
+            {
+                Color c = slotSelectedBackground.color;
+                c.a = 0f;
+                slotSelectedBackground.color = c;
+            }
+        }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (canInteract)
+        {
+            if (isTreasureBoxInteraction && weaponWasHighlighted)
+            {
+                // Hide inventory box
+                InventoryManager.HideInventory();
+
+                // Treasure box interaction behaviour
+                treasureBoxInteractionScript.BehaviourAfterInventoryItemSelected();
+
+                // Re-enable interaction of all other disabled slots
+                InventoryManager.instance.EnableInteractionForAllWeaponSlots();
+                InventoryManager.instance.EnableInteractionForAllItemSlots();
+
+                // Reset treasure box interaction bools
+                weaponWasHighlighted = false;
+                isTreasureBoxInteraction = false;
+            }
+            else
+            {
+                // Close Inventory Box
+                InventoryManager.HideInventory();
+
+                // Set/unset slot selected bool and show/hide background
+                if (!slotSelected)
+                {
+                    SetWeaponToSelected();
+
+                    // Unset selected bool of other weapon slots
+                    foreach (Transform child in transform.parent)
+                    {
+                        if (child.gameObject != gameObject)
+                        {
+                            child.GetComponent<WeaponSlotInteraction>().UnselectWeapon();
+                        }
+                    }
+                }
+                else
+                {
+                    UnselectWeapon();
+                }
+
+                EquipSelectedWeapon();
+            }
+        }
+    }
+
+    private void EquipSelectedWeapon()
+    {
         // Check whether weapon is equipped
         if (weaponType == PlayerCombat.WeaponTypes.Knife)
         {
@@ -157,5 +232,4 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
             }
         }
     }
-
 }

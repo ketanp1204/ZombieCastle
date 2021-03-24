@@ -7,14 +7,13 @@ public class PlayerSelection : MonoBehaviour
 {
     // Private Cached References
     private UIReferences uiReferences;
-
     private TextMeshProUGUI popupTextUI;
 
-    private Collider2D collidedObject;
-
     // Private variables
+    private Collider2D collidedObject;
     private bool triggerStay = false;
 
+    private bool isTreasureBoxCollider = false;
     private bool isMazePuzzleCollider = false;
     private bool isJigsawPuzzleCollider = false;
     private bool isDiffPuzzleCollider = false;
@@ -36,7 +35,12 @@ public class PlayerSelection : MonoBehaviour
 
             triggerStay = false;
 
-            if (isMazePuzzleCollider)
+            if (isTreasureBoxCollider)
+            {
+                TreasureBoxInteraction instance = collidedObject.GetComponent<TreasureBoxInteraction>();
+                instance.StartInteractionBehaviour();
+            }
+            else if (isMazePuzzleCollider)
             {
                 ObjectProperties objectProperties = collidedObject.GetComponent<ObjectProperties>();
 
@@ -190,7 +194,7 @@ public class PlayerSelection : MonoBehaviour
 
                         if (DescriptionBox.instance)
                         {
-                            DescriptionBox.instance.ShowDescBoxAfterReward(descBox_Then_Dialogue_Object, sentenceArray);
+                            DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(0.2f, descBox_Then_Dialogue_Object, sentenceArray, objectProperties.descBoxItemReceivedSound);
                         }
                         else
                         {
@@ -223,6 +227,23 @@ public class PlayerSelection : MonoBehaviour
             // Show object name text popup
             popupTextUI.text = collision.GetComponent<ObjectProperties>().objectData.itemName;
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
+        }
+        else if (collision.CompareTag("TreasureBox"))
+        {
+            triggerStay = true;
+
+            // Store collided object
+            collidedObject = collision;
+
+            // Enable object glow
+            collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
+
+            // Show object name text popup
+            popupTextUI.text = "Box";
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
+
+            // Set flag bool
+            isTreasureBoxCollider = true;
         }
         else if (collision.CompareTag("R1_MazePuzzle"))
         {
@@ -289,6 +310,19 @@ public class PlayerSelection : MonoBehaviour
 
             // Hide object name text popup
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
+        }
+        else if (collision.CompareTag("TreasureBox"))
+        {
+            triggerStay = false;
+
+            // Disable Object Glow
+            collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = false;
+
+            // Hide object name text popup
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
+
+            // Unset flag bool
+            isTreasureBoxCollider = false;
         }
         else if (collision.CompareTag("R1_MazePuzzle"))
         {

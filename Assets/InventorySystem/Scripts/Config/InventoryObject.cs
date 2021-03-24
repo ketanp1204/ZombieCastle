@@ -25,6 +25,29 @@ public class InventoryObject : ScriptableObject
             Container.Add(new InventorySlot(_item, _amount));
         }
     }
+
+    public void RemoveItem(ItemObject _item)
+    {
+        bool hasItem = false;
+        int removePos = 0;
+        for (int i = 0; i < Container.Count; i++)
+        {
+            if (Container[i].item == _item)
+            {
+                hasItem = true;
+                removePos = i;
+                break;
+            }
+        }
+        if (hasItem)
+        {
+            Container.RemoveAt(removePos);
+        }
+        else
+        {
+            Debug.Log("item not found");
+        }
+    }
 }
 
 [System.Serializable]

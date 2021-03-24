@@ -209,7 +209,7 @@ public class MazePuzzle : MonoBehaviour
         // Show key reward 
         if (DescriptionBox.instance)
         {
-            DescriptionBox.instance.ShowDescBoxAfterReward(keyRewardScriptableObject, keyRewardReceivedDialogue);
+            DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(1f, keyRewardScriptableObject, keyRewardReceivedDialogue, AudioManager.Sound.KeyCollect);
         }
     }
 

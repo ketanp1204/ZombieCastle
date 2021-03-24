@@ -263,7 +263,15 @@ public class Player : MonoBehaviour
 
     private void FlipTorchLightDirection()
     {
-        room3TorchLight.transform.localPosition = new Vector3(room3TorchLight.transform.localPosition.x * -1f, room3TorchLight.transform.localPosition.y, room3TorchLight.transform.localPosition.z);
+        if (room3TorchLight.transform.localPosition.x == 1.181f)
+        {
+            room3TorchLight.transform.localPosition = new Vector3(-0.625f, room3TorchLight.transform.localPosition.y, room3TorchLight.transform.localPosition.z);
+        }
+        else
+        {
+            room3TorchLight.transform.localPosition = new Vector3(1.181f, room3TorchLight.transform.localPosition.y, room3TorchLight.transform.localPosition.z);
+        }
+        
     }
 
     private void HandleAttacks()
@@ -329,6 +337,7 @@ public class Player : MonoBehaviour
         if (instance != null)
         {
             instance.movePlayer = false;
+            instance.rb.velocity = Vector2.zero;
 
             // Reset movement animation parameters
             instance.animator.SetFloat("Horizontal", 0f);

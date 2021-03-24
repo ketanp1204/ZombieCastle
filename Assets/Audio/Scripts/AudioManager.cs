@@ -6,6 +6,7 @@ public static class AudioManager
 {
     public enum Sound
     {
+        Null,
         BackgroundTrack,
         DoorOpen,
         PlayerFootStep,
@@ -34,7 +35,9 @@ public static class AudioManager
         ContinueButton,
         CandleBurning,
         PaperPickup,
-        R2_DrawerOpen
+        R2_DrawerOpen,
+        R1_Box_Axe_Received,
+        KeyCollect
     }
 
     // private static Dictionary<Sound, float> soundTimerDictionary;
