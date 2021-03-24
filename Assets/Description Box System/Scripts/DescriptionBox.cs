@@ -134,6 +134,15 @@ public class DescriptionBox : MonoBehaviour
     // When receiving a new item from a treasure box or a puzzle
     public void ShowRewardInDescBoxAfterDelay(float delay, ItemObject item, string[] dialogueAfterReward, AudioManager.Sound itemReceivedSound)
     {
+        Player.StopMovement();
+
+        new Task(ShowDescBoxRewardAfterDelay(delay, item, dialogueAfterReward, itemReceivedSound));
+    }
+
+    private IEnumerator ShowDescBoxRewardAfterDelay(float delay, ItemObject item, string[] dialogueAfterReward, AudioManager.Sound itemReceivedSound)
+    {
+        yield return new WaitForSeconds(delay);
+
         if (!instance.isActive)
         {
             SetCurrentItem(item);
@@ -190,6 +199,8 @@ public class DescriptionBox : MonoBehaviour
             new Task(UIAnimation.FadeCanvasGroupAfterDelay(descBoxCG, 1f, 0f, 0f));
             descBoxCG.interactable = false;
             descBoxCG.blocksRaycasts = false;
+
+            Player.EnableMovement();
 
             // Enable escape key to close inventory box
             if (descBoxOpenLocation == DescBoxOpenLocations.AfterReward)

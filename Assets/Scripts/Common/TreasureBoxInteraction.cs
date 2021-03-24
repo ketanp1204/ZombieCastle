@@ -91,7 +91,7 @@ public class TreasureBoxInteraction : MonoBehaviour
             // Show axe received on description box and dialogue afterwards
             if (DescriptionBox.instance)
             {
-                DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(0.5f, axeScriptableObject, axeReceivedDialogue, AudioManager.Sound.R1_Box_Axe_Received);
+                DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(0.3f, axeScriptableObject, axeReceivedDialogue, AudioManager.Sound.R1_Box_Axe_Received);
             }
 
             InventoryManager.instance.DeleteInventoryItem(lobbyKeyScriptableObject);

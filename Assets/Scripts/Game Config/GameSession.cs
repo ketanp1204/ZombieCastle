@@ -117,6 +117,6 @@ public class GameSession : MonoBehaviour
     {
         GameData.currentPlayerInventory.Container.Clear();
         GameData.currentPlayerInventory.AddItem(knifeInventoryObject, 1);
-        GameData.currentPlayerInventory.AddItem(lobbyKeyInventoryObject, 1);
+        // GameData.currentPlayerInventory.AddItem(lobbyKeyInventoryObject, 1);
     }
 }
