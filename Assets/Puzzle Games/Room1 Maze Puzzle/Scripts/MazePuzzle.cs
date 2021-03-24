@@ -126,19 +126,22 @@ public class MazePuzzle : MonoBehaviour
         // Start movement of maze player
         MazePlayer.StartPuzzle();
 
+        // Disable interact button
+        interactButton.interactable = false;
+
+        EventSystem.current.SetSelectedGameObject(null);
+
         // Start puzzle timer
         StartPuzzleTimer();
     }
 
     public void StartPuzzleTimer()
     {
-        // Disable interact button
-        interactButton.interactable = false;
-
-        EventSystem.current.SetSelectedGameObject(null);
-
         timerStarted = true;
         timerCurrentTime = puzzleTime;
+
+        // Start playing clock ticking sound
+        AudioManager.PlaySoundLooping(AudioManager.Sound.PuzzleClock);
 
         // Start updating the timer
         timerTask = new Task(UpdateTimer());
@@ -155,6 +158,9 @@ public class MazePuzzle : MonoBehaviour
 
             yield return new WaitForEndOfFrame();
         }
+
+        // Stop clock ticking sound
+        AudioManager.StopLoopingSound(AudioManager.Sound.PuzzleClock);
 
         // Puzzle failure
         if (!puzzleSuccess)
@@ -178,6 +184,9 @@ public class MazePuzzle : MonoBehaviour
     {
         // Stop timer stop task
         timerTask.Stop();
+
+        // Play success sound
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.MazeSuccess);
 
         // Exit
         CloseMazePuzzle();

@@ -37,7 +37,13 @@ public static class AudioManager
         PaperPickup,
         R2_DrawerOpen,
         R1_Box_Axe_Received,
-        KeyCollect
+        KeyCollect,
+        MazePlayerMovement,
+        MazeSwitchEnable,
+        MazeSuccess,
+        PuzzleClock,
+        HealthPotionCollect,
+        MagicPotionCollect
     }
 
     // private static Dictionary<Sound, float> soundTimerDictionary;
@@ -183,16 +189,19 @@ public static class AudioManager
         }
     }
 
-    private static bool IsSoundPlaying(Sound sound)
+    public static void StopLoopingSound(Sound sound)
     {
-        if (playSoundOnceGameObjects.ContainsKey(sound))
+        if (loopingSoundGameObjects.ContainsKey(sound))
         {
-            if (playSoundOnceGameObjects[sound].GetComponent<AudioSource>().isPlaying)
-            {
-                return true;
-            }
+            // Get AudioSource
+            AudioSource audioSource = loopingSoundGameObjects[sound].GetComponent<AudioSource>();
+
+            audioSource.Stop();
         }
-        return false;
+        else
+        {
+            Debug.Log("Sound not playing");
+        }
     }
 
     private static bool CanPlaySound(Sound sound)

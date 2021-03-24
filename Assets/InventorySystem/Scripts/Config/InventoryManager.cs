@@ -23,12 +23,10 @@ public class InventoryManager : MonoBehaviour
     private Transform weaponGridContainer;
     private Transform itemGridContainer;
 
-    // Public variables
-    [HideInInspector]
-    public bool isInventoryOpen = false;
-
     // Private variables
-    private bool isDescBoxOpen = false;
+    private bool canOpenInventory;
+    private bool isInventoryOpen;
+    private bool isDescBoxOpen;
 
     private void Awake()
     {
@@ -42,14 +40,10 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         SetReferences();
+        Initialize();
 
         // Fill inventory slots
         UpdateInventorySlots();
-
-        // Hide inventory on start
-        inventoryCanvasGroup.alpha = 0f;
-        inventoryCanvasGroup.interactable = false;
-        inventoryCanvasGroup.blocksRaycasts = false;
     }
 
     private void SetReferences()
@@ -59,16 +53,23 @@ public class InventoryManager : MonoBehaviour
         inventoryCanvasGroup = GetComponent<CanvasGroup>();
     }
 
+    private void Initialize()
+    {
+        canOpenInventory = false;
+        isInventoryOpen = false;
+        isDescBoxOpen = false;
+
+        // Hide inventory on start
+        inventoryCanvasGroup.alpha = 0f;
+        inventoryCanvasGroup.interactable = false;
+        inventoryCanvasGroup.blocksRaycasts = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (DisplayGameInstructions.instance)
-            {
-                DisplayGameInstructions.instance.UnsetCanShowInventoryBoxInstruction();
-            }
-
             if (!isInventoryOpen)
                 ShowInventory();
             else if (isInventoryOpen)
@@ -90,6 +91,16 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public static void DisableInventoryOpen()
+    {
+        instance.canOpenInventory = false;
+    }
+
+    public static void EnableInventoryOpen()
+    {
+        instance.canOpenInventory = true;
+    }
+
     public void SetDescBoxOpenFlag()
     {
         isDescBoxOpen = true;
@@ -109,41 +120,38 @@ public class InventoryManager : MonoBehaviour
 
     public static void ShowInventory()
     {
-        if (!instance.isInventoryOpen)
+        if (instance.canOpenInventory)
         {
-            instance.isInventoryOpen = true;
-
-            // Show instructions if opening for the first time
-            if (DisplayGameInstructions.instance)
+            if (!instance.isInventoryOpen)
             {
-                DisplayGameInstructions.instance.StartInstructionsDisplay();
+                instance.isInventoryOpen = true;
+
+                // Play inventory open sound
+                AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryOpen);
+
+                // Show inventory display
+                new Task(UIAnimation.FadeCanvasGroupAfterDelay(instance.inventoryCanvasGroup, 0f, 1f, 0f, 0.3f));
+                // Enable mouse interaction
+                instance.inventoryCanvasGroup.interactable = true;
+                instance.inventoryCanvasGroup.blocksRaycasts = true;
+
+                // Unlock mouse cursor
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.lockState = CursorLockMode.None;
+
+                // Stop player movement
+                if (Player.instance)
+                {
+                    Player.StopMovement();
+                }
+                else if (PlayerTopDown.instance)
+                {
+                    PlayerTopDown.StopMovement();
+                }
+
+                // Disable opening pause menu on pressing escape key
+                PauseMenu.instance.CanPauseGame = false;
             }
-
-            // Play inventory open sound
-            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryOpen);
-
-            // Show inventory display
-            new Task(UIAnimation.FadeCanvasGroupAfterDelay(instance.inventoryCanvasGroup, 0f, 1f, 0f, 0.3f));
-            // Enable mouse interaction
-            instance.inventoryCanvasGroup.interactable = true;
-            instance.inventoryCanvasGroup.blocksRaycasts = true;
-
-            // Unlock mouse cursor
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.lockState = CursorLockMode.None;
-
-            // Stop player movement
-            if (Player.instance)
-            {
-                Player.StopMovement();
-            }
-            else if (PlayerTopDown.instance)
-            {
-                PlayerTopDown.StopMovement();
-            }
-
-            // Disable opening pause menu on pressing escape key
-            PauseMenu.instance.CanPauseGame = false;
         }
     }
 
@@ -334,13 +342,13 @@ public class InventoryManager : MonoBehaviour
                 slotExistsList[i] = false;
             }
 
-            foreach (WeaponSlotInteraction script in weaponSlotInteractionScriptInstances)
+            for (int i = 0; i < weaponSlotInteractionScriptInstances.Count; i++)
             {
-                for (int i = 0; i < GameData.currentPlayerInventory.Container.Count; i++)
+                for (int j = 0; j < GameData.currentPlayerInventory.Container.Count; j++)
                 {
-                    ItemObject inventoryItem = GameData.currentPlayerInventory.Container[i].item;
+                    ItemObject inventoryItem = GameData.currentPlayerInventory.Container[j].item;
 
-                    if (script.scriptableObject == inventoryItem)
+                    if (weaponSlotInteractionScriptInstances[i].scriptableObject == inventoryItem)
                     {
                         slotExistsList[i] = true;
                         break;
@@ -368,13 +376,13 @@ public class InventoryManager : MonoBehaviour
                 slotExistsList[i] = false;
             }
 
-            foreach (ItemSlotInteraction script in itemSlotInteractionScriptInstances)
+            for (int i = 0; i < itemSlotInteractionScriptInstances.Count; i++)
             {
-                for (int i = 0; i < GameData.currentPlayerInventory.Container.Count; i++)
+                for (int j = 0; j < GameData.currentPlayerInventory.Container.Count; j++)
                 {
-                    ItemObject inventoryItem = GameData.currentPlayerInventory.Container[i].item;
+                    ItemObject inventoryItem = GameData.currentPlayerInventory.Container[j].item;
 
-                    if (script.itemScriptableObject == inventoryItem)
+                    if (itemSlotInteractionScriptInstances[i].itemScriptableObject == inventoryItem)
                     {
                         slotExistsList[i] = true;
                         break;

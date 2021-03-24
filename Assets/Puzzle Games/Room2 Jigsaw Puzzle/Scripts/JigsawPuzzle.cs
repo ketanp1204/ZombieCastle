@@ -164,6 +164,9 @@ public class JigsawPuzzle : MonoBehaviour
         timerStarted = true;
         timerCurrentTime = puzzleTime;
 
+        // Start playing clock ticking sound
+        AudioManager.PlaySoundLooping(AudioManager.Sound.PuzzleClock);
+
         // Start updating the timer
         timerTask = new Task(UpdateTimer());
     }
@@ -179,6 +182,9 @@ public class JigsawPuzzle : MonoBehaviour
 
             yield return new WaitForEndOfFrame();
         }
+
+        // Stop clock ticking sound
+        AudioManager.StopLoopingSound(AudioManager.Sound.PuzzleClock);
 
         // Puzzle failure
         if (!puzzleSuccess)

@@ -29,6 +29,7 @@ public class DescriptionBox : MonoBehaviour
     public bool isActive;                                                                                           // Bool - If enabled, pressing escape will close description box
 
     // Private Variables
+    private bool isOpen = false;                                                                                    // Bool - Desc box is open
     private ItemObject currentItem = null;                                                                          // ItemObject - The current ItemObject which has the note box display
     private DescBoxOpenLocations descBoxOpenLocation = DescBoxOpenLocations.Null;                                   // For different behaviour of desc box
     private string[] dialogueAfterReceivingReward = null;                                                           // String array - Dialogue (if any) after receiving reward on the desc box
@@ -59,6 +60,11 @@ public class DescriptionBox : MonoBehaviour
         descBoxCG.alpha = 0f;
         descBoxCG.interactable = false;
         descBoxCG.blocksRaycasts = false;
+    }
+
+    public static bool IsOpen()
+    {
+        return instance.isOpen;
     }
 
     private void SetCurrentItem(ItemObject item)
@@ -128,6 +134,8 @@ public class DescriptionBox : MonoBehaviour
             new Task(UIAnimation.FadeCanvasGroupAfterDelay(descBoxCG, 0f, 1f, 0f));
             descBoxCG.interactable = true;
             descBoxCG.blocksRaycasts = true;
+
+            isOpen = true;
         }
     }
 
@@ -183,6 +191,8 @@ public class DescriptionBox : MonoBehaviour
             descBoxCG.interactable = true;
             descBoxCG.blocksRaycasts = true;
 
+            isOpen = true;
+
             // Disable opening pause menu on pressing escape key
             PauseMenu.instance.CanPauseGame = false;
         }
@@ -199,6 +209,8 @@ public class DescriptionBox : MonoBehaviour
             new Task(UIAnimation.FadeCanvasGroupAfterDelay(descBoxCG, 1f, 0f, 0f));
             descBoxCG.interactable = false;
             descBoxCG.blocksRaycasts = false;
+
+            isOpen = false;
 
             Player.EnableMovement();
 

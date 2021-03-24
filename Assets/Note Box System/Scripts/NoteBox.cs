@@ -25,6 +25,7 @@ public class NoteBox : MonoBehaviour
     public float noteResponseDisplayDelay = 0.3f;                                                               // Float - Delay time before displaying the response dialogue after note
 
     // Private Variables
+    private bool isOpen = false;                                                                                // Bool - Note box is open
     private string notePageText;                                                                                // String - Note page text
     private bool continueButtonEnabled = false;                                                                 // Bool - If enabled, player can press space bar to press the continue button
 
@@ -59,6 +60,11 @@ public class NoteBox : MonoBehaviour
         noteBoxCG.blocksRaycasts = false;
     }
 
+    public static bool IsOpen()
+    {
+        return instance.isOpen;
+    }
+
     public void FillNotePageText()
     {
         if (currentItem != null)
@@ -90,6 +96,10 @@ public class NoteBox : MonoBehaviour
         // Play paper pickup sound
         AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PaperPickup);
 
+        // Prevent inventory and toolbar open
+        InventoryManager.DisableInventoryOpen();
+        ToolbarManager.DisableToolbarOpen();
+
         isActive = true;
 
         if (currentItem != null)
@@ -119,12 +129,14 @@ public class NoteBox : MonoBehaviour
         noteBoxCG.interactable = true;
         noteBoxCG.blocksRaycasts = true;
 
+        isOpen = true;
+
         noteText.text = notePageText;                                                               // Fill first page text
         continueButton.SetActive(true);                                                             // Show note box continue button
         new Task(SetContinueButtonEnabledFlagToTrueAfterDelay());
     }
 
-    public void ShowNextNotePage()
+    public void CloseNoteBox()
     {
         // Play continue button sound
         AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ContinueButton);
@@ -135,6 +147,12 @@ public class NoteBox : MonoBehaviour
 
         // Fade out note box
         new Task(UIAnimation.FadeCanvasGroupAfterDelay(noteBoxCG, noteBoxCG.alpha, 0f, 0f));
+
+        isOpen = false;
+
+        // Allow inventory and toolbar to open
+        InventoryManager.EnableInventoryOpen();
+        ToolbarManager.EnableToolbarOpen();
 
         // Showing response after note if it exists
         if (currentItem != null)

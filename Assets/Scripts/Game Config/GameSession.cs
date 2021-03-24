@@ -11,8 +11,9 @@ public class GameSession : MonoBehaviour
     [HideInInspector]
     public UIReferences uiReferences;                               // Global reference for the UIReferences script in the current scene
 
+    public WeaponObject knifeInventoryObject;
+
     // REMOVE BEFORE RELEASING GAME
-    public WeaponObject knifeInventoryObject;                       // Temporary - Used to re add the knife to the default player inventory after exiting play in the unity editor
     public PC_Then_Inventory_Object lobbyKeyInventoryObject;        // Temporary - Used to re add the lobby key to the default player inventory after exiting play in the unity editor
 
     void Awake()
@@ -112,7 +113,6 @@ public class GameSession : MonoBehaviour
         LevelManager.SetAnimatorSpeed(1f);
     }
 
-    // REMOVE BEFORE RELEASING GAME
     private void OnApplicationQuit()
     {
         GameData.currentPlayerInventory.Container.Clear();

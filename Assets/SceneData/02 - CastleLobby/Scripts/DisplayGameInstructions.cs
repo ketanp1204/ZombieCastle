@@ -20,25 +20,9 @@ public class DisplayGameInstructions : MonoBehaviour
     [TextArea(2, 5)]
     public string inventoryBoxInstructionText;
     [TextArea(2, 5)]
-    public string objectAndDoorInteractionInstructionText;
-
-    // Public Variables
-
-    // HasSeen bools - player has seen a particular instruction
-    [HideInInspector]
-    public bool hasSeenMovementInstruction = false;
-    [HideInInspector]
-    public bool hasSeenInteractionInstruction = false;
-    [HideInInspector]
-    public bool hasSeenInventoryBoxInstruction = false;
-    [HideInInspector]
-    public bool hasSeenToolbarInstruction = false;
-
-    // CanShow bools - to enable display of a particular instruction
-    public bool canShowMovementInstruction;
-    public bool canShowInteractionInstruction;
-    public bool canShowInventoryBoxInstruction;
-    public bool canShowToolbarInstruction;
+    public string interactionInstructionText;
+    [TextArea(2, 5)]
+    public string moreControlsRedirectText;
 
     void Awake()
     {
@@ -46,12 +30,6 @@ public class DisplayGameInstructions : MonoBehaviour
         {
             instance = this;
         }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-        DontDestroyOnLoad(gameObject);
     }
 
     // Start is called before the first frame update
@@ -59,60 +37,6 @@ public class DisplayGameInstructions : MonoBehaviour
     {
         uiReferences = GameSession.instance.uiReferences;
         popupTextUI = uiReferences.popupTextUI;
-    }
-
-    public void UnsetCanShowBools()
-    {
-        canShowMovementInstruction = false;
-        canShowInteractionInstruction = false;
-        canShowToolbarInstruction = false;
-        canShowInventoryBoxInstruction = false;
-    }
-
-    /// <summary>
-    /// Set CanShow bools to true
-    /// </summary>
-    public void SetCanShowMovementInstruction()
-    {
-        canShowMovementInstruction = true;
-    }
-
-    public void SetCanShowInteractionInstruction()
-    {
-        canShowInteractionInstruction = true;
-    }
-
-    public void SetCanShowToolbarInstruction()
-    {
-        canShowToolbarInstruction = true;
-    }
-
-    /// <summary>
-    /// Set CanShow bools to false
-    /// </summary>
-    public void SetCanShowInventoryBoxInstruction()
-    {
-        canShowInventoryBoxInstruction = true;
-    }
-
-    public void UnsetCanShowMovementInstruction()
-    {
-        canShowMovementInstruction = false;
-    }
-
-    public void UnsetCanShowInteractionInstruction()
-    {
-        canShowInteractionInstruction = false;
-    }
-
-    public void UnsetCanShowToolbarInstruction()
-    {
-        canShowToolbarInstruction = false;
-    }
-
-    public void UnsetCanShowInventoryBoxInstruction()
-    {
-        canShowInventoryBoxInstruction = false;
     }
 
     /// <summary>
@@ -135,66 +59,73 @@ public class DisplayGameInstructions : MonoBehaviour
             Player.instance.DisableSelectionCollider();
         }
 
+        // Disable toolbar and inventory open
+        ToolbarManager.DisableToolbarOpen();
+        InventoryManager.DisableInventoryOpen();
+
         yield return new WaitForSeconds(2f);
 
+
         // Show movement instruction
-        if (!hasSeenMovementInstruction && canShowMovementInstruction)
-        {
-            popupTextUI.text = movementInstructionText;
-            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f));
+        popupTextUI.text = movementInstructionText;
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f));
 
-            // Hide instruction text
-            yield return new WaitForSeconds(4f);
-            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f));
-            yield return new WaitForSeconds(0.6f);
+        // Hide instruction text
+        yield return new WaitForSeconds(4f);
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f));
+        yield return new WaitForSeconds(0.6f);
 
-            hasSeenMovementInstruction = true;
-        }
 
-        // Show object interaction instructions
-        if (!hasSeenInteractionInstruction && canShowInteractionInstruction)
-        {
-            popupTextUI.text = objectAndDoorInteractionInstructionText;
-            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f));
 
-            // Hide instruction text
-            yield return new WaitForSeconds(4f);
-            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f));
-            yield return new WaitForSeconds(0.6f);
+        // Show interaction instruction
+        popupTextUI.text = interactionInstructionText;
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f));
 
-            hasSeenInteractionInstruction = true;
-        }
+        // Hide instruction text
+        yield return new WaitForSeconds(4f);
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f));
+        yield return new WaitForSeconds(0.6f);
+
+
 
         // Show toolbar instruction
-        if (!hasSeenToolbarInstruction && canShowToolbarInstruction)
-        {
-            popupTextUI.text = toolbarInstructionText;
-            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f));
+        popupTextUI.text = toolbarInstructionText;
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f));
 
-            // Hide instruction text
-            yield return new WaitForSeconds(4f);
-            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f));
-            yield return new WaitForSeconds(0.6f);
+        // Allow inventory and toolbar to open 
+        ToolbarManager.EnableToolbarOpen();
+        InventoryManager.EnableInventoryOpen();
 
-            hasSeenToolbarInstruction = true;
-        }
+        // Hide instruction text
+        yield return new WaitForSeconds(4f);
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f));
+        yield return new WaitForSeconds(0.6f);
+
+
 
         // Show inventory box instruction
-        if (!hasSeenInventoryBoxInstruction && canShowInventoryBoxInstruction)
-        {
-            yield return new WaitForSeconds(1.5f);
+        popupTextUI.text = inventoryBoxInstructionText;
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f));
 
-            popupTextUI.text = inventoryBoxInstructionText;
-            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f));
+        // Hide instruction text
+        yield return new WaitForSeconds(4f);
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f));
+        yield return new WaitForSeconds(0.6f);
 
-            // Hide instruction text
-            yield return new WaitForSeconds(4f);
-            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f));
-            yield return new WaitForSeconds(0.6f);
 
-            hasSeenInventoryBoxInstruction = true;
-        }
-        
+
+        // Show more controls redirect instruction
+        popupTextUI.text = moreControlsRedirectText;
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f));
+
+        // Hide instruction text
+        yield return new WaitForSeconds(4f);
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f));
+        yield return new WaitForSeconds(0.6f);
+
+
+
+
         // Enable player selection
         if (PlayerTopDown.instance)
         {
@@ -204,5 +135,7 @@ public class DisplayGameInstructions : MonoBehaviour
         {
             Player.instance.EnableSelectionCollider();
         }
+
+        Destroy(gameObject);
     }
 }

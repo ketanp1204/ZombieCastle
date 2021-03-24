@@ -17,14 +17,13 @@ public class DialogueBox : MonoBehaviour
     public GameObject continueButton;
 
     // Public variables
-    [HideInInspector]
-    public bool isTyping = false;                                       // Bool - Dialogue box active and typing status
-
     public float typingSpeed = 0.025f;                                  // Float - Text auto-type speed in seconds
     public float dialogueDisplayDelay = 0.2f;                           // Float - Delay time before displaying the dialogue box
     public float textSoundEffectPlayInterval = 0.09f;                   // Float - Interval between each text type sound effect
 
     // Private variables
+    private bool isOpen = false;                                        // Bool - Dialogue box is open
+    private bool isTyping = false;                                      // Bool - Dialogue box text typing status
     private string[] sentences;                                         // String array - Sentence array to be displayed
     private bool skipAutoTyping = false;                                // Bool - To stop auto typing of current dialogue box text
     private bool skippedCurrentDialogue = false;                        // Bool - Player skipped current auto-typing dialogue
@@ -34,8 +33,6 @@ public class DialogueBox : MonoBehaviour
 
     // For events after dialogue box display
     private bool isTreasureBox = false;                                 // Bool - For events after treasure box dialogue
-    // private bool room2TreasureBox = false;                              // Bool - After treasure box dialogue of room2
-    // private bool room3TreasureBox = false;                              // Bool - After treasure box dialogue of room3
     private bool addToInventoryAfterDialogue = false;                   // Bool - Object goes to inventory after dialogue display
     private bool showNoteAfterDisplay = false;                          // Bool - Object has note box display after dialogue display
     private bool room1MazePuzzleAfterDialogue = false;                  // Bool - Portrait object in room1 that contains maze puzzle
@@ -79,6 +76,11 @@ public class DialogueBox : MonoBehaviour
         dialogueBoxCG.blocksRaycasts = false;
     }
 
+    public static bool IsOpen()
+    {
+        return instance.isOpen;
+    }
+
     public void FillSentences(string[] _sentences)
     {
         sentences = _sentences;
@@ -94,10 +96,15 @@ public class DialogueBox : MonoBehaviour
         Player.StopMovement();
         PlayerTopDown.StopMovement();
 
+        InventoryManager.DisableInventoryOpen();
+        ToolbarManager.DisableToolbarOpen();
+
         // Fade in dialogue box
         new Task(UIAnimation.FadeCanvasGroupAfterDelay(dialogueBoxCG, 0f, 1f, dialogueDisplayDelay));
         dialogueBoxCG.interactable = true;
         dialogueBoxCG.blocksRaycasts = true;
+
+        isOpen = true;
 
         textTypingDelay = dialogueDisplayDelay + 0.2f;
 
@@ -160,8 +167,13 @@ public class DialogueBox : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock cursor
             isTyping = false;                                                                       // Text is not being typed in the dialogue box
 
+            InventoryManager.EnableInventoryOpen();
+            ToolbarManager.EnableToolbarOpen();
+
             // Fade out the dialogue box
             new Task(UIAnimation.FadeCanvasGroupAfterDelay(dialogueBoxCG, 1f, 0f, 0f));
+
+            isOpen = false;
 
             if (isTreasureBox)
             {
@@ -175,18 +187,6 @@ public class DialogueBox : MonoBehaviour
                     Debug.Log("Treasure box interaction script not set");
                 }
             }
-
-            /*
-            if (room2TreasureBox)
-            {
-                // TODO: add logic
-            }
-
-            if (room3TreasureBox)
-            {
-                // TODO: add logic
-            }
-            */
 
             if (addToInventoryAfterDialogue)
             {
@@ -256,7 +256,7 @@ public class DialogueBox : MonoBehaviour
         imageDisplayGO = displayGO;
     }
 
-    public void SetRoom1TreasureBoxScript(TreasureBoxInteraction script)
+    public void SetTreasureBoxScript(TreasureBoxInteraction script)
     {
         treasureBoxInstance = script;
     }
@@ -265,18 +265,6 @@ public class DialogueBox : MonoBehaviour
     {
         isTreasureBox = true;
     }
-
-    /*
-     * public void SetRoom2TreasureBoxFlag()
-    {
-        room2TreasureBox = true;
-    }
-
-    public void SetRoom3TreasureBoxFlag()
-    {
-        room3TreasureBox = true;
-    }
-    */
 
     public void SetInventoryAfterDialogueFlag()
     {
@@ -330,8 +318,6 @@ public class DialogueBox : MonoBehaviour
         // Reset event bools
         treasureBoxInstance = null;
         isTreasureBox = false;
-        // room2TreasureBox = false;
-        // room3TreasureBox = false;
         addToInventoryAfterDialogue = false;
         showNoteAfterDisplay = false;
         room1MazePuzzleAfterDialogue = false;

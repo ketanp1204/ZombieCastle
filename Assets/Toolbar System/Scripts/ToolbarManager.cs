@@ -11,7 +11,9 @@ public class ToolbarManager : MonoBehaviour
     private CanvasGroup toolbarCanvasGroup;
 
     // Private variables
-    private bool isToolbarOpen = false;
+    private bool canOpenToolbar;
+    private bool isToolbarOpen;
+    
 
     private void Awake()
     {
@@ -25,11 +27,32 @@ public class ToolbarManager : MonoBehaviour
     void Start()
     {
         SetReferences();
+        Initialize();
     }
 
     private void SetReferences()
     {
         toolbarCanvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    private void Initialize()
+    {
+        canOpenToolbar = false;
+        isToolbarOpen = false;
+
+        toolbarCanvasGroup.alpha = 0f;
+        toolbarCanvasGroup.interactable = false;
+        toolbarCanvasGroup.blocksRaycasts = false;
+    }
+
+    public static void DisableToolbarOpen()
+    {
+        instance.canOpenToolbar = false;
+    }
+
+    public static void EnableToolbarOpen()
+    {
+        instance.canOpenToolbar = true;
     }
 
     // Update is called once per frame
@@ -51,16 +74,19 @@ public class ToolbarManager : MonoBehaviour
 
     public void ShowToolbar()
     {
-        isToolbarOpen = true;
+        if (canOpenToolbar)
+        {
+            isToolbarOpen = true;
 
-        // Show toolbar display
-        new Task(UIAnimation.FadeCanvasGroupAfterDelay(toolbarCanvasGroup, 0f, 1f, 0f, 0.3f));
-        toolbarCanvasGroup.interactable = true;
-        toolbarCanvasGroup.blocksRaycasts = true;
+            // Show toolbar display
+            new Task(UIAnimation.FadeCanvasGroupAfterDelay(toolbarCanvasGroup, 0f, 1f, 0f, 0.3f));
+            toolbarCanvasGroup.interactable = true;
+            toolbarCanvasGroup.blocksRaycasts = true;
 
-        // Unlock mouse cursor
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.lockState = CursorLockMode.None;
+            // Unlock mouse cursor
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     public void HideToolbar()

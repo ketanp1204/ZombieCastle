@@ -43,17 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8c75a727d8198f45afd6e6bcbd17b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementInstructionText: Use W/S/A/D to move around.
-  toolbarInstructionText: Press 'T' to open the toolbar.
-  inventoryBoxInstructionText: You can also press 'Q' to open/close the inventory
-    box
-  objectAndDoorInteractionInstructionText: Press 'E' to interact with objects in
-    the game and open doors.
-  hasSeenMovementInstruction: 0
-  hasSeenInteractionInstruction: 0
-  hasSeenInventoryBoxInstruction: 0
-  hasSeenToolbarInstruction: 0
-  canShowMovementInstruction: 1
-  canShowInteractionInstruction: 1
-  canShowInventoryBoxInstruction: 0
-  canShowToolbarInstruction: 1
+  movementInstructionText: W/S/A/D - Move Around.
+  toolbarInstructionText: T - Open and Close Toolbar.
+  inventoryBoxInstructionText: Q - Open and Close Inventory Box.
+  interactionInstructionText: E - Interact with objects and doors.
+  moreControlsRedirectText: For more controls, open the settings menu in the toolbar.

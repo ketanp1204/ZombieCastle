@@ -18,7 +18,10 @@ public class MazeSwitch : MonoBehaviour
         // Disable collider
         GetComponent<BoxCollider2D>().enabled = false;
 
-        // Switch Sprite to closed switch
+        // Play switch enable sound
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.MazeSwitchEnable);
+
+        // Switch Sprite to enabled switch
         MazePuzzle.instance.ChangeSwitchSpriteToOn(switchIndex);
 
         // Add bonus time

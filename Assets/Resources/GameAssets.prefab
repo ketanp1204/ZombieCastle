@@ -108,6 +108,18 @@ MonoBehaviour:
     soundData: {fileID: 11400000, guid: b9f580fac2d29c044b7aeeaa49aabb50, type: 2}
   - sound: 31
     soundData: {fileID: 11400000, guid: e9ca3f41ffd16b84e83db269f46aac31, type: 2}
+  - sound: 32
+    soundData: {fileID: 11400000, guid: 702d4169091da9e46b4fa5855d2e70d6, type: 2}
+  - sound: 33
+    soundData: {fileID: 11400000, guid: a630ac1bfd9478a45a0c54ff5a2446c7, type: 2}
+  - sound: 34
+    soundData: {fileID: 11400000, guid: e29798a71052bbc459be748d5b38cd4f, type: 2}
+  - sound: 35
+    soundData: {fileID: 11400000, guid: 090cafc5b1f1501448c43a22813b6498, type: 2}
+  - sound: 36
+    soundData: {fileID: 11400000, guid: d45fdb2836aec784dbb37f6e08319cd3, type: 2}
+  - sound: 37
+    soundData: {fileID: 11400000, guid: 33710758693f7b241bb7843b00f2008a, type: 2}
   treasureBoxOpenSprite: {fileID: 21300000, guid: fcf983593b0d1b443b76767648faae7d, type: 3}
   treasureBoxClosedSprite: {fileID: 21300000, guid: 23bf4929c984bc8429d0721ec6325e3b, type: 3}
   bloodParticles: {fileID: 3095269012409172603, guid: 6f7d3f8ada96d264899aff44f820f75e, type: 3}

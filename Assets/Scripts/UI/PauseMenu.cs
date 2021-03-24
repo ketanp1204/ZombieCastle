@@ -127,7 +127,9 @@ public class PauseMenu : MonoBehaviour
 
         if (GameIsPaused)
         {
-            Cursor.lockState = CursorLockMode.Locked;                           // Center and lock mouse cursor
+            if (!DialogueBox.IsOpen() && !NoteBox.IsOpen())                                          
+                Cursor.lockState = CursorLockMode.Locked;                       // Center and lock mouse cursor
+
             instance.GetComponent<Animator>().SetTrigger("Resume");
             Time.timeScale = 1f;
             GameIsPaused = false;
