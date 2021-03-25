@@ -185,6 +185,8 @@ public class PlayerSelection : MonoBehaviour
                         {
                             Debug.Log("Dialogue box not found");
                         }
+
+                        collidedObject.enabled = false;
                     }
                     else if (itemScriptableObject.itemType == ItemType.DescBox_Then_Dialogue)
                     {

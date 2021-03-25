@@ -16,6 +16,7 @@ MonoBehaviour:
   itemDescription: An old key.
   itemType: 2
   sceneName: Lobby
+  inventoryItemName: Key
   hasPlayerComment: 1
   playerComments:
   - I don't know what this key could open, but i'll keep it with me anyway.

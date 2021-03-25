@@ -16,6 +16,7 @@ MonoBehaviour:
   itemDescription: A wooden torch with a cotton cloth. Needs oil to light up.
   itemType: 2
   sceneName: Lobby
+  inventoryItemName: Torch
   hasPlayerComment: 1
   playerComments:
   - Hm, a torch wrapped with a cotton cloth. This might just replace my flashlight

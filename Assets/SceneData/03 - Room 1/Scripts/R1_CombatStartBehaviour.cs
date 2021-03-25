@@ -12,6 +12,7 @@ public class R1_CombatStartBehaviour : MonoBehaviour
     public GameObject zombieGameObjectsContainer;
     public CinemachineVirtualCamera cinemachineCamera;
     public Transform temporaryCameraTarget;
+    public BoxCollider2D combatBlockRightWall;
 
     // Private References
     private List<GameObject> zombieGameObjects;
@@ -38,6 +39,7 @@ public class R1_CombatStartBehaviour : MonoBehaviour
         {
             zombieGameObjects.Add(child.gameObject);
         }
+        combatBlockRightWall.enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -83,6 +85,8 @@ public class R1_CombatStartBehaviour : MonoBehaviour
     private IEnumerator WaitForTimeScaleToReset()
     {
         yield return new WaitForSeconds(0.1f);
+
+        combatBlockRightWall.enabled = true;
 
         // Start chasing by the zombies after knife selected by player in the inventory box
         foreach (GameObject gameObject in zombieGameObjects)

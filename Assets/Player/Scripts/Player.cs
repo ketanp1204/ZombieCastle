@@ -267,33 +267,41 @@ public class Player : MonoBehaviour
         AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PlayerFootStep);
     }
 
+    public void PlayLadderFootStepSound()
+    {
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.LadderFootStep);
+    }
+
     private void FlipPlayerDirection()
     {
-        float horizontal = movement.x;
-        if (horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
+        if (!(PlayerStats.playerState == PlayerStats.PlayerState.Combat))
         {
-            facingRight = !facingRight;
-
-            if (facingRight)
+            float horizontal = movement.x;
+            if (horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
             {
-                // Set animation parameter
-                animator.SetFloat("FaceDir", 1f);
+                facingRight = !facingRight;
 
-                if (isInRoom3)
+                if (facingRight)
                 {
-                    // Set torch animator parameter
-                    torchAnimator.SetFloat("FaceDir", 1f);
+                    // Set animation parameter
+                    animator.SetFloat("FaceDir", 1f);
+
+                    if (isInRoom3)
+                    {
+                        // Set torch animator parameter
+                        torchAnimator.SetFloat("FaceDir", 1f);
+                    }
                 }
-            }
-            else
-            {
-                // Set animation parameter
-                animator.SetFloat("FaceDir", -1f);
-
-                if (isInRoom3)
+                else
                 {
-                    // Set torch animator parameter
-                    torchAnimator.SetFloat("FaceDir", -1f);
+                    // Set animation parameter
+                    animator.SetFloat("FaceDir", -1f);
+
+                    if (isInRoom3)
+                    {
+                        // Set torch animator parameter
+                        torchAnimator.SetFloat("FaceDir", -1f);
+                    }
                 }
             }
         }
@@ -313,15 +321,6 @@ public class Player : MonoBehaviour
 
         if (weaponEquippedDict[PlayerCombat.WeaponTypes.Knife])
         {
-            /*
-            if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Hurt") && !PlayerStats.IsDead)
-            {
-                playerCombat.InvokeKnifeAttack();
-                animator.SetTrigger("KnifeAttack");
-                rb.velocity = Vector2.zero;
-            }
-            */
-
             if (playerInput.leftMousePressed && !playerCombat.isAttacking_Knife && !takingDamage && !PlayerStats.IsDead)
             {
                 playerCombat.InvokeKnifeAttack();

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2b1597313a7ae74690e46e77c65350b, type: 3}
+  m_Name: R3_Drawer_Note
+  m_EditorClassIdentifier: 
+  itemName: Drawer
+  itemDescription: An old scroll with some text written on it.
+  itemType: 3
+  sceneName: Room3
+  hasPlayerComment: 1
+  playerComments:
+  - There is a scroll in here.
+  hasNote: 1
+  largeNote: 1
+  noteText: "King Arthur was a master of the Eternal Fire. He had trained his entire
+    army in the ways of battle using the sacred fire. In the war with the Bronad
+    kingdom, they burned all their enemies to death and won the war. No other kingdom
+    has ever dared to face King Arthur and his army since then. Only by obtaining
+    the Eternal Fire can one have some hope of standing against him.\r"
+  hasResponseAfterNote: 1
+  responseTexts:
+  - "I sure hope this King isn\u2019t still here like the zombies I found earlier."

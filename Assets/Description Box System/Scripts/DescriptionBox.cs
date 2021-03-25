@@ -21,6 +21,7 @@ public class DescriptionBox : MonoBehaviour
 
     // Public References
     public TextMeshProUGUI newItemDiscoveredText;
+    public TextMeshProUGUI objectNameText;
     public TextMeshProUGUI descText;
     public Image iconImage;
 
@@ -73,6 +74,8 @@ public class DescriptionBox : MonoBehaviour
 
         SetIcon();
 
+        SetItemNameText();
+
         SetDescriptionText();
     }
 
@@ -91,6 +94,25 @@ public class DescriptionBox : MonoBehaviour
             else if (currentItem.itemType == ItemType.DescBox_Then_Dialogue)
             {
                 iconImage.sprite = ((DescBox_Then_Dialogue_Object)currentItem).inventorySprite;
+            }
+        }
+    }
+
+    private void SetItemNameText()
+    {
+        if (currentItem != null)
+        {
+            if (currentItem.itemType == ItemType.PC_Then_Inventory)
+            {
+                objectNameText.text = ((PC_Then_Inventory_Object)currentItem).inventoryItemName;
+            }
+            else if (currentItem.itemType == ItemType.Weapon)
+            {
+                objectNameText.text = currentItem.itemName;
+            }
+            else if (currentItem.itemType == ItemType.DescBox_Then_Dialogue)
+            {
+                objectNameText.text = ((DescBox_Then_Dialogue_Object)currentItem).inventoryItemName;
             }
         }
     }

@@ -120,6 +120,8 @@ MonoBehaviour:
     soundData: {fileID: 11400000, guid: d45fdb2836aec784dbb37f6e08319cd3, type: 2}
   - sound: 37
     soundData: {fileID: 11400000, guid: 33710758693f7b241bb7843b00f2008a, type: 2}
+  - sound: 38
+    soundData: {fileID: 11400000, guid: ec41c027fed3d5b418a0e4237446a752, type: 2}
   treasureBoxOpenSprite: {fileID: 21300000, guid: fcf983593b0d1b443b76767648faae7d, type: 3}
   treasureBoxClosedSprite: {fileID: 21300000, guid: 23bf4929c984bc8429d0721ec6325e3b, type: 3}
   bloodParticles: {fileID: 3095269012409172603, guid: 6f7d3f8ada96d264899aff44f820f75e, type: 3}

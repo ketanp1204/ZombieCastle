@@ -39,7 +39,12 @@ public class TreasureBoxInteraction : MonoBehaviour
     public string[] dialogueIfKeyFromMazeCollected;
     [TextArea(3, 6)]
     public string[] dialogueIfKeyFromMazeNotCollected;
-    
+
+    // Room 3
+    [Header("Room 3")]
+    public DescBox_Then_Dialogue_Object fireElementScriptableObject;
+    [TextArea(3, 6)]
+    public string[] dialogueBeforeReceivingFireElement;
 
 
 
@@ -105,6 +110,16 @@ public class TreasureBoxInteraction : MonoBehaviour
                 }
             }
         }
+        else if (roomIndex == RoomIndex.Room3)
+        {
+            if (DialogueBox.instance)
+            {
+                DialogueBox.instance.FillSentences(dialogueBeforeReceivingFireElement);
+                DialogueBox.instance.SetTreasureBoxFlag();
+                DialogueBox.instance.SetTreasureBoxScript(this);
+                DialogueBox.instance.StartDialogueDisplay();
+            }
+        }
     }
 
     public void BehaviourAfterDialogue()
@@ -120,6 +135,15 @@ public class TreasureBoxInteraction : MonoBehaviour
             // Open inventory to select key
             InventoryManager.ShowInventory();
             InventoryManager.instance.HighlightItemOnTreasureBoxInteraction(room2TreasureBoxKeyScriptableObject, this);
+        }
+        else if (roomIndex == RoomIndex.Room3)
+        {
+            // Show fire element description box
+            if (DescriptionBox.instance)
+            {
+                // TODO: change to fire element received sound
+                DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(0.3f, fireElementScriptableObject, fireElementScriptableObject.playerComments, AudioManager.Sound.Null);
+            }
         }
     }
 

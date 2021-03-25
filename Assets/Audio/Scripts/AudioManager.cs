@@ -43,7 +43,8 @@ public static class AudioManager
         MazeSuccess,
         PuzzleClock,
         HealthPotionCollect,
-        MagicPotionCollect
+        MagicPotionCollect,
+        LadderFootStep
     }
 
     // private static Dictionary<Sound, float> soundTimerDictionary;
