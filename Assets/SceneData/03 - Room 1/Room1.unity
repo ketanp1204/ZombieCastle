@@ -540,6 +540,10 @@ MonoBehaviour:
   - I'll need to find a key for it.
   axeReceivedDialogue:
   - This is much better than my rusty old knife.
+  room2TreasureBoxKeyScriptableObject: {fileID: 0}
+  magicPotionScriptableObject: {fileID: 0}
+  dialogueIfKeyFromMazeCollected: []
+  dialogueIfKeyFromMazeNotCollected: []
   roomIndex: 0
 --- !u!114 &63636537
 MonoBehaviour:

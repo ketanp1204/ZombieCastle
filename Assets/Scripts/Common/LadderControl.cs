@@ -23,6 +23,8 @@ public class LadderControl : MonoBehaviour
 
     private bool triggerStay = false;
 
+    private bool climbingLadder = false;
+
     private GameObject playerGameObject;
 
     private Animator playerAnimator;
@@ -45,7 +47,15 @@ public class LadderControl : MonoBehaviour
 
             playerAnimator = playerGameObject.GetComponent<Animator>();
 
-            popupTextUI.text = "F - Use Ladder";
+            if (triggerLocation == TriggerLocation.Top)
+            {
+                popupTextUI.text = "F - Climb Down Ladder";
+            }
+            else
+            {
+                popupTextUI.text = "F - Climb Up Ladder";
+            }
+            
             new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
         }
     }
@@ -56,7 +66,10 @@ public class LadderControl : MonoBehaviour
         {
             triggerStay = false;
 
-            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
+            if (!climbingLadder)
+            {
+                new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
+            }
         }
     }
 
@@ -74,7 +87,7 @@ public class LadderControl : MonoBehaviour
                 playerAnimator.SetBool("LadderClimbDown", true);
 
                 Rigidbody2D rb = playerGameObject.GetComponent<Rigidbody2D>();
-                StartCoroutine(MovePlayerRigidBody(triggerLocation, rb, rb.position.y - 1.5f, rb.position.y - 10.5f, 0f));
+                StartCoroutine(MovePlayerRigidBody(triggerLocation, rb, rb.position.y, rb.position.y - 10.5f, 0f));
             }
             else
             {
@@ -90,12 +103,15 @@ public class LadderControl : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-
         if (triggerLocation == TriggerLocation.Top)
         {
+            climbingLadder = true;
+
             float _timeStartedLerping = Time.time;
             float timeSinceStarted;
             float percentageComplete;
+
+            Player.instance.SetClimbingLadderDown();
 
             while (true)
             {
@@ -112,7 +128,9 @@ public class LadderControl : MonoBehaviour
                 if (percentageComplete >= 1)
                 {
                     playerAnimator.SetBool("LadderClimbDown", false);
+                    Player.instance.UnsetClimbingLadderDown();
                     Player.EnableMovement();
+                    climbingLadder = false;
                     break;
                 }
 
@@ -121,9 +139,13 @@ public class LadderControl : MonoBehaviour
         }
         else if (triggerLocation == TriggerLocation.Bottom)
         {
+            climbingLadder = true;
+
             float _timeStartedLerping = Time.time;
             float timeSinceStarted;
             float percentageComplete;
+
+            Player.instance.SetClimbingLadderUp();
 
             while (true)
             {
@@ -141,42 +163,14 @@ public class LadderControl : MonoBehaviour
                 {
                     ladderBoxCollider.enabled = true;
                     playerAnimator.SetBool("LadderClimbUp", false);
+                    Player.instance.UnsetClimbingLadderUp();
                     Player.EnableMovement();
+                    climbingLadder = false;
                     break;
                 }
 
                 yield return new WaitForEndOfFrame();
             }
-
-            /*
-            lerpTime = 0.05f;
-            _timeStartedLerping = Time.time;
-
-            float startX = rb.position.x;
-            float endX = rb.position.x - 2f;
-
-            while (true)
-            {
-                timeSinceStarted = Time.time - _timeStartedLerping;
-                percentageComplete = timeSinceStarted / lerpTime;
-
-                float currentValue = Mathf.Lerp(startX, endX, percentageComplete);
-
-                if (rb != null)
-                {
-                    rb.MovePosition(new Vector2(currentValue, rb.position.y));
-                }
-
-                if (percentageComplete >= 1)
-                {
-                    ladderBoxCollider.enabled = true;
-                    Player.EnableMovement();
-                    break;
-                }
-
-                yield return new WaitForEndOfFrame();
-            }
-            */
         }
     }
 }

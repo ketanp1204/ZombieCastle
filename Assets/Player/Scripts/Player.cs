@@ -27,13 +27,13 @@ public class Player : MonoBehaviour
 
     private HealthBar healthBar;                                                    // Reference - Health bar 
 
-    private GameObject room3TorchLight;                                             // Reference - Torch 2D light gameobject in room3
+    private Animator torchAnimator;                                                 // Reference - Torch object's animator
 
 
     // Public References
     public Transform pathfindingTarget;                                             // Reference - Pathfinding target
     public GameObject selectionArea;                                                // Reference - Player selection area - Used to prevent selection during game instructions display
-
+    public GameObject torchGO;                                                      // Reference - Torch for room3
 
     // Public Variables
     [HideInInspector]
@@ -150,19 +150,22 @@ public class Player : MonoBehaviour
         SetReferences();
         Initialize();
         ResetAnimatorParameters();
-        SetPlayerFaceDirection(scene);
-
+        
         if (scene.name == "Room3")
         {
-            room3TorchLight = transform.Find("Torch").gameObject;
+            torchGO.SetActive(true);
+            torchAnimator = transform.Find("Torch").GetComponent<Animator>();
             animator.SetBool("HoldingTorch", true);
             isInRoom3 = true;
         }
         else
         {
+            torchGO.SetActive(false);
             animator.SetBool("HoldingTorch", false);
             isInRoom3 = false;
         }
+
+        SetPlayerFaceDirection(scene);
     }
 
     private void SetPlayerFaceDirection(Scene scene)
@@ -178,6 +181,11 @@ public class Player : MonoBehaviour
             // Facing right
             facingRight = true;
             animator.SetFloat("FaceDir", 1f);
+
+            if (isInRoom3)
+            {
+                torchAnimator.SetFloat("FaceDir", 1f);
+            }
         }
     }
 
@@ -189,6 +197,30 @@ public class Player : MonoBehaviour
     public void EnableSelectionCollider()
     {
         selectionArea.SetActive(true);
+    }
+
+    public void SetClimbingLadderDown()
+    {
+        isClimbingLadder = true;
+        torchAnimator.SetBool("LadderClimbDown", true);
+    }
+
+    public void UnsetClimbingLadderDown()
+    {
+        isClimbingLadder = false;
+        torchAnimator.SetBool("LadderClimbDown", false);
+    }
+
+    public void SetClimbingLadderUp()
+    {
+        isClimbingLadder = true;
+        torchAnimator.SetBool("LadderClimbUp", true);
+    }
+
+    public void UnsetClimbingLadderUp()
+    {
+        isClimbingLadder = false;
+        torchAnimator.SetBool("LadderClimbUp", false);
     }
 
     void FixedUpdate()
@@ -211,17 +243,11 @@ public class Player : MonoBehaviour
 
     private void HandleMovement()
     {
-        float horizontal, vertical;
+        float horizontal;
         horizontal = playerInput.horizontalInput;
 
         movement.x = horizontal;
         movement.y = 0f;
-
-        if (isClimbingLadder)
-        {
-            vertical = playerInput.verticalInput;
-            movement.y = vertical;
-        }
 
         movement.Normalize();
         rb.velocity = new Vector2(movement.x * movementSpeed * Time.deltaTime, rb.velocity.y);
@@ -229,6 +255,11 @@ public class Player : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Magnitude", movement.magnitude);
+
+        if (isInRoom3)
+        {
+            torchAnimator.SetFloat("Magnitude", movement.magnitude);
+        }
     }
 
     public void PlayFootStepSound()
@@ -247,31 +278,25 @@ public class Player : MonoBehaviour
             {
                 // Set animation parameter
                 animator.SetFloat("FaceDir", 1f);
+
+                if (isInRoom3)
+                {
+                    // Set torch animator parameter
+                    torchAnimator.SetFloat("FaceDir", 1f);
+                }
             }
             else
             {
                 // Set animation parameter
                 animator.SetFloat("FaceDir", -1f);
-            }
 
-            if (isInRoom3)
-            {
-                FlipTorchLightDirection();
+                if (isInRoom3)
+                {
+                    // Set torch animator parameter
+                    torchAnimator.SetFloat("FaceDir", -1f);
+                }
             }
         }
-    }
-
-    private void FlipTorchLightDirection()
-    {
-        if (room3TorchLight.transform.localPosition.x == 1.181f)
-        {
-            room3TorchLight.transform.localPosition = new Vector3(-0.625f, room3TorchLight.transform.localPosition.y, room3TorchLight.transform.localPosition.z);
-        }
-        else
-        {
-            room3TorchLight.transform.localPosition = new Vector3(1.181f, room3TorchLight.transform.localPosition.y, room3TorchLight.transform.localPosition.z);
-        }
-        
     }
 
     private void HandleAttacks()
