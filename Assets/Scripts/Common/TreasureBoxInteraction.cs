@@ -143,6 +143,9 @@ public class TreasureBoxInteraction : MonoBehaviour
             {
                 // TODO: change to fire element received sound
                 DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(0.3f, fireElementScriptableObject, fireElementScriptableObject.playerComments, AudioManager.Sound.Null);
+
+                // Disable the treasure box's collider
+                DisableCollider();
             }
         }
     }

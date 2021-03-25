@@ -18,5 +18,5 @@ MonoBehaviour:
   sceneName: Room3
   hasPlayerComment: 1
   playerComments:
-  - It's secured using a mechanism.
-  - I'll need to solve it.
+  - Another riddle.
+  - "I\u2019ll need to solve it to open this cupboard."

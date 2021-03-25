@@ -181,6 +181,10 @@ public class DescriptionBox : MonoBehaviour
             {
                 dialogueAfterReceivingReward = dialogueAfterReward;
             }
+            else
+            {
+                dialogueAfterReceivingReward = null;
+            }
 
             isActive = true;
 
@@ -196,7 +200,7 @@ public class DescriptionBox : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.lockState = CursorLockMode.None;
 
-            // Add key reward to inventory
+            // Add reward to inventory
             if (InventoryManager.instance)
             {
                 InventoryManager.instance.AddInventoryItem(item);
