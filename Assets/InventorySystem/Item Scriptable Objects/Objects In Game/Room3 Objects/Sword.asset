@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ec2e29989e32de4fba927079098f341, type: 3}
+  m_Name: Sword
+  m_EditorClassIdentifier: 
+  itemName: Sword
+  itemDescription: "King Arthur\u2019s legendary sword. He could add special powers
+    to make it even more deadlier."
+  itemType: 0
+  weaponType: 2
+  inventorySprite: {fileID: 21300000, guid: 738c70eab70146e478ce5b81774888fc, type: 3}
+  canCombineWithAdditionalItem1: 1
+  additionalItem1: {fileID: 11400000, guid: d6c78382f8e26a2489b666236a582d65, type: 2}
+  combinedObject1: {fileID: 0}
+  canCombineWithAdditionalItem2: 1
+  additionalItem2: {fileID: 11400000, guid: 679dc582091c5434eaa94e98d02fe237, type: 2}
+  combinedObject2: {fileID: 0}

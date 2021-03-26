@@ -13,8 +13,13 @@ public class GameSession : MonoBehaviour
 
     public WeaponObject knifeInventoryObject;
 
-    // REMOVE BEFORE RELEASING GAME
-    public PC_Then_Inventory_Object lobbyKeyInventoryObject;        // Temporary - Used to re add the lobby key to the default player inventory after exiting play in the unity editor
+    // REMOVE BEFORE RELEASING GAME - Temporary - Used to re add the scriptable objects to the default player inventory after exiting play in the unity editor
+    public PC_Then_Inventory_Object lobbyKeyInventoryObject;        
+    public PC_Then_Inventory_Object lobbyTorchInventoryObject;
+    public PC_Then_Inventory_Object r1_oil_barrel;
+    public DescBox_Then_Dialogue_Object fireElement;
+    public DescBox_Then_Dialogue_Object magicPotion;
+    public WeaponObject sword;
 
     void Awake()
     {
@@ -117,6 +122,11 @@ public class GameSession : MonoBehaviour
     {
         GameData.currentPlayerInventory.Container.Clear();
         GameData.currentPlayerInventory.AddItem(knifeInventoryObject, 1);
-        // GameData.currentPlayerInventory.AddItem(lobbyKeyInventoryObject, 1);
+        GameData.currentPlayerInventory.AddItem(lobbyKeyInventoryObject, 1);
+        GameData.currentPlayerInventory.AddItem(lobbyTorchInventoryObject, 1);
+        GameData.currentPlayerInventory.AddItem(r1_oil_barrel, 1);
+        GameData.currentPlayerInventory.AddItem(fireElement, 1);
+        GameData.currentPlayerInventory.AddItem(magicPotion, 1);
+        GameData.currentPlayerInventory.AddItem(sword, 1);
     }
 }

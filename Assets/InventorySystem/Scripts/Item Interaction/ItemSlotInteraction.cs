@@ -18,11 +18,18 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
     [HideInInspector]
     public bool canInteract = true;
 
+    // For inventory drag and drop
+    [HideInInspector]
+    public bool itemOverAdditionalSlot = false;                                         // Bool - Item is hovering over item which can be combined with this item
+    [HideInInspector]
+    public ItemObject additionalItemScriptableObjectUnderDraggingItem = null;           // ItemObject - ItemObject below this item that can be combined with this item
+
 
     // Private variables
     // private bool draggingItem = false;
     private bool slotSelected = false;
     private bool itemWasHighlighted = false;
+    private bool thisItemBeingDragged = false;
 
     private bool isTreasureBoxInteraction = false;
     private TreasureBoxInteraction treasureBoxInteractionScript = null;
@@ -63,30 +70,185 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
         treasureBoxInteractionScript = instance;
     }
 
+    public void ResetDraggingAdditionalItemData()
+    {
+        itemOverAdditionalSlot = false;
+        additionalItemScriptableObjectUnderDraggingItem = null;
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (canInteract)
+        if (InventoryManager.instance.isDraggingItem)
         {
-            // Fade in item name
-            new Task(UIAnimation.FadeTMProTextAfterDelay(nameText, 0f, 1f, 0f, 0.1f));
-
-            // Play hover sound
-            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryMouseHover);
-
-            // Partially fade in slot selected background if not selected
-            if (!slotSelected)
+            if (!thisItemBeingDragged)
             {
-                Color c = slotSelectedBackground.color;
-                c.a = 0.4f;
-                slotSelectedBackground.color = c;
+                if (itemScriptableObject.itemType == ItemType.PC_Then_Inventory)
+                {
+                    PC_Then_Inventory_Object obj = (PC_Then_Inventory_Object)itemScriptableObject;
+
+                    if (obj.canCombineWithAdditionalItem1)
+                    {
+                        ItemSlotInteraction script = InventoryManager.instance.draggingItemSlotScript;
+
+                        if (script.itemScriptableObject == obj.additionalItem1)
+                        {
+                            ShowItemNameAndPlaySoundOnHover();
+                            script.itemOverAdditionalSlot = true;
+                            script.additionalItemScriptableObjectUnderDraggingItem = itemScriptableObject;
+                        }
+                        else
+                        {
+                            if (obj.canCombineWithAdditionalItem2)
+                            {
+                                if (script == obj.additionalItem2)
+                                {
+                                    ShowItemNameAndPlaySoundOnHover();
+                                    script.itemOverAdditionalSlot = true;
+                                    script.additionalItemScriptableObjectUnderDraggingItem = itemScriptableObject;
+                                }
+                            }
+                        }
+                    }
+                }
+                else if (itemScriptableObject.itemType == ItemType.DescBox_Then_Dialogue)
+                {
+                    DescBox_Then_Dialogue_Object obj = (DescBox_Then_Dialogue_Object)itemScriptableObject;
+
+                    if (obj.canCombineWithAdditionalItem1)
+                    {
+                        ItemSlotInteraction script = InventoryManager.instance.draggingItemSlotScript;
+
+                        if (script.itemScriptableObject == obj.additionalItem1)
+                        {
+                            ShowItemNameAndPlaySoundOnHover();
+                            script.itemOverAdditionalSlot = true;
+                            script.additionalItemScriptableObjectUnderDraggingItem = itemScriptableObject;
+                        }
+                        else
+                        {
+                            if (obj.canCombineWithAdditionalItem2)
+                            {
+                                if (script.itemScriptableObject == obj.additionalItem2)
+                                {
+                                    ShowItemNameAndPlaySoundOnHover();
+                                    script.itemOverAdditionalSlot = true;
+                                    script.additionalItemScriptableObjectUnderDraggingItem = itemScriptableObject;
+                                }
+                            }
+                        }
+                    }
+                }
             }
+        }
+        else if (InventoryManager.instance.isDraggingWeapon)
+        {
+            if (itemScriptableObject.itemType == ItemType.PC_Then_Inventory)
+            {
+                PC_Then_Inventory_Object obj = (PC_Then_Inventory_Object)itemScriptableObject;
+
+                if (obj.canCombineWithAdditionalItem1)
+                {
+                    WeaponSlotInteraction script = InventoryManager.instance.draggingWeaponSlotScript;
+
+                    if (script.scriptableObject == obj.additionalItem1)
+                    {
+                        ShowItemNameAndPlaySoundOnHover();
+                        script.weaponOverAdditionalSlot = true;
+                        script.additionalItemScriptableObjectUnderDraggingWeapon = itemScriptableObject;
+                    }
+                    else
+                    {
+                        if (obj.canCombineWithAdditionalItem2)
+                        {
+                            if (script.scriptableObject == obj.additionalItem2)
+                            {
+                                ShowItemNameAndPlaySoundOnHover();
+                                script.weaponOverAdditionalSlot = true;
+                                script.additionalItemScriptableObjectUnderDraggingWeapon = itemScriptableObject;
+                            }
+                        }
+                    }
+                }
+            }
+            else if (itemScriptableObject.itemType == ItemType.DescBox_Then_Dialogue)
+            {
+                DescBox_Then_Dialogue_Object obj = (DescBox_Then_Dialogue_Object)itemScriptableObject;
+
+                if (obj.canCombineWithAdditionalItem1)
+                {
+                    WeaponSlotInteraction script = InventoryManager.instance.draggingWeaponSlotScript;
+
+                    if (script.scriptableObject == obj.additionalItem1)
+                    {
+                        ShowItemNameAndPlaySoundOnHover();
+                        script.weaponOverAdditionalSlot = true;
+                        script.additionalItemScriptableObjectUnderDraggingWeapon = itemScriptableObject;
+                    }
+                    else
+                    {
+                        if (obj.canCombineWithAdditionalItem2)
+                        {
+                            if (script.scriptableObject == obj.additionalItem2)
+                            {
+                                ShowItemNameAndPlaySoundOnHover();
+                                script.weaponOverAdditionalSlot = true;
+                                script.additionalItemScriptableObjectUnderDraggingWeapon = itemScriptableObject;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (canInteract)
+            {
+                ShowItemNameAndPlaySoundOnHover();
+            }
+        }
+    }
+
+    private void ShowItemNameAndPlaySoundOnHover()
+    {
+        // Fade in item name
+        new Task(UIAnimation.FadeTMProTextAfterDelay(nameText, 0f, 1f, 0f, 0.1f));
+
+        // Play hover sound
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryMouseHover);
+
+        // Partially fade in slot selected background if not selected
+        if (!slotSelected)
+        {
+            Color c = slotSelectedBackground.color;
+            c.a = 0.4f;
+            slotSelectedBackground.color = c;
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (canInteract)
+        if (InventoryManager.instance.isDraggingItem)
         {
+            if (!thisItemBeingDragged)
+            {
+                InventoryManager.instance.draggingItemSlotScript.ResetDraggingAdditionalItemData();
+
+                // Fade out item name
+                new Task(UIAnimation.FadeTMProTextAfterDelay(nameText, nameText.alpha, 0f, 0f, 0.1f));
+
+                // Hide slot selected background if not selected
+                if (!slotSelected)
+                {
+                    Color c = slotSelectedBackground.color;
+                    c.a = 0f;
+                    slotSelectedBackground.color = c;
+                }
+            }
+        }
+        else if (InventoryManager.instance.isDraggingWeapon)
+        {
+            InventoryManager.instance.draggingWeaponSlotScript.ResetDraggingAdditionalItemData();
+
             // Fade out item name
             new Task(UIAnimation.FadeTMProTextAfterDelay(nameText, nameText.alpha, 0f, 0f, 0.1f));
 
@@ -98,44 +260,63 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
                 slotSelectedBackground.color = c;
             }
         }
+        else
+        {
+            if (canInteract)
+            {
+                // Fade out item name
+                new Task(UIAnimation.FadeTMProTextAfterDelay(nameText, nameText.alpha, 0f, 0f, 0.1f));
+
+                // Hide slot selected background if not selected
+                if (!slotSelected)
+                {
+                    Color c = slotSelectedBackground.color;
+                    c.a = 0f;
+                    slotSelectedBackground.color = c;
+                }
+            }
+        }
+        
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (canInteract)
+        if (!InventoryManager.instance.isDraggingItem && !InventoryManager.instance.isDraggingWeapon)
         {
-            if (isTreasureBoxInteraction && itemWasHighlighted)
+            if (canInteract)
             {
-                // Hide inventory box
-                InventoryManager.HideInventory();
-
-                // Treasure box interaction behaviour
-                treasureBoxInteractionScript.BehaviourAfterInventoryItemSelected();
-
-                // Re-enable interaction of all other disabled slots
-                InventoryManager.instance.EnableInteractionForAllWeaponSlots();
-                InventoryManager.instance.EnableInteractionForAllItemSlots();
-
-                // Reset treasure box interaction bools
-                itemWasHighlighted = false;
-                isTreasureBoxInteraction = false;
-            }
-            else
-            {
-                // Set slot selected bool and show background
-                if (!slotSelected)
+                if (isTreasureBoxInteraction && itemWasHighlighted)
                 {
-                    slotSelected = true;
-                    Color c = slotSelectedBackground.color;
-                    c.a = 1f;
-                    slotSelectedBackground.color = c;
+                    // Hide inventory box
+                    InventoryManager.HideInventory();
 
-                    new Task(UnselectSlotAfterDelay(0.5f));
+                    // Treasure box interaction behaviour
+                    treasureBoxInteractionScript.BehaviourAfterInventoryItemSelected();
+
+                    // Re-enable interaction of all other disabled slots
+                    InventoryManager.instance.EnableInteractionOfAllSlots();
+
+                    // Reset treasure box interaction bools
+                    itemWasHighlighted = false;
+                    isTreasureBoxInteraction = false;
                 }
-
-                if (DescriptionBox.instance)
+                else
                 {
-                    DescriptionBox.instance.ShowDescBoxFromInventory(itemScriptableObject);
+                    // Set slot selected bool and show background
+                    if (!slotSelected)
+                    {
+                        slotSelected = true;
+                        Color c = slotSelectedBackground.color;
+                        c.a = 1f;
+                        slotSelectedBackground.color = c;
+
+                        new Task(UnselectSlotAfterDelay(0.5f));
+                    }
+
+                    if (DescriptionBox.instance)
+                    {
+                        DescriptionBox.instance.ShowDescBoxFromInventory(itemScriptableObject);
+                    }
                 }
             }
         }
@@ -155,7 +336,12 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         if (canInteract)
         {
-            Debug.Log("dragging item");
+            // Debug.Log("dragging item");
+
+            if (InventoryManager.instance.isDraggingItem)
+            {
+                itemIcon.gameObject.transform.position = Input.mousePosition;
+            }
         }
     }
 
@@ -163,17 +349,136 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         if (canInteract)
         {
-            Debug.Log("begin dragging");
+            bool itemIsDraggable = false;
+
+            // Check if item can be combined with another
+            if (itemScriptableObject.itemType == ItemType.PC_Then_Inventory)
+            {
+                PC_Then_Inventory_Object obj = (PC_Then_Inventory_Object)itemScriptableObject;
+
+                if (obj.canCombineWithAdditionalItem1)
+                {
+                    // If working on the game some time in the long future, remove these hard coded dependencies
+                    if (obj.additionalItem1.itemType != ItemType.Weapon && obj.inventoryItemName != "Oil")
+                    {
+                        itemIsDraggable = true;
+                    }
+                }
+            }
+            else if (itemScriptableObject.itemType == ItemType.DescBox_Then_Dialogue)
+            {
+                DescBox_Then_Dialogue_Object obj = (DescBox_Then_Dialogue_Object)itemScriptableObject;
+
+                if (obj.canCombineWithAdditionalItem1)
+                {
+                    if (obj.additionalItem1.itemType != ItemType.Weapon)
+                    {
+                        itemIsDraggable = true;
+                    }
+                }
+            }
+
+            if (itemIsDraggable)
+            {
+                thisItemBeingDragged = true;
+                InventoryManager.instance.isDraggingItem = true;
+                InventoryManager.instance.draggingItemSlotScript = this;
+            }
         }
-        
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (canInteract)
+        if (!itemOverAdditionalSlot)
         {
-            Debug.Log("end dragging");
-        }   
+            // Nothing under the dragging item, reset inventory dragging bool and script and restore dragging item icon position to its own slot
+            StopItemDragAndReset();
+        }
+        else
+        {
+            // Can combine with either of the two additionalItems of this item
+            if (additionalItemScriptableObjectUnderDraggingItem)
+            {
+                if (itemScriptableObject.itemType == ItemType.PC_Then_Inventory)
+                {
+                    PC_Then_Inventory_Object obj = (PC_Then_Inventory_Object)itemScriptableObject;
+
+                    if (additionalItemScriptableObjectUnderDraggingItem == obj.additionalItem1)
+                    {
+                        Debug.Log("item combined with additionalItem1");
+                        StopItemDragAndReset();
+
+                        // Remove this item and additionalItem1 from inventory
+                        GameData.currentPlayerInventory.RemoveItem(obj);
+                        GameData.currentPlayerInventory.RemoveItem(obj.additionalItem1);
+
+                        // Add combinedObject1 to inventory
+                        GameData.currentPlayerInventory.AddItem(obj.combinedObject1, 1);
+
+                        // Update inventory
+                        InventoryManager.instance.UpdateInventorySlots();
+                    }
+                    else if (additionalItemScriptableObjectUnderDraggingItem == obj.additionalItem2)
+                    {
+                        Debug.Log("item combined with additionalItem2");
+                        StopItemDragAndReset();
+
+                        // Remove this item and additionalItem2 from inventory
+                        GameData.currentPlayerInventory.RemoveItem(obj);
+                        GameData.currentPlayerInventory.RemoveItem(obj.additionalItem2);
+
+                        // Add combinedObject2 to inventory
+                        GameData.currentPlayerInventory.AddItem(obj.combinedObject2, 1);
+
+                        // Update inventory
+                        InventoryManager.instance.UpdateInventorySlots();
+                    }
+                }
+                else if (itemScriptableObject.itemType == ItemType.DescBox_Then_Dialogue)
+                {
+                    DescBox_Then_Dialogue_Object obj = (DescBox_Then_Dialogue_Object)itemScriptableObject;
+
+                    if (additionalItemScriptableObjectUnderDraggingItem == obj.additionalItem1)
+                    {
+                        Debug.Log("item combined with additionalItem1");
+                        StopItemDragAndReset();
+
+                        // Remove this item and additionalItem1 from inventory
+                        GameData.currentPlayerInventory.RemoveItem(obj);
+                        GameData.currentPlayerInventory.RemoveItem(obj.additionalItem1);
+
+                        // Add combinedObject1 to inventory
+                        GameData.currentPlayerInventory.AddItem(obj.combinedObject1, 1);
+
+                        // Update inventory
+                        InventoryManager.instance.UpdateInventorySlots();
+                    }
+                    else if (additionalItemScriptableObjectUnderDraggingItem == obj.additionalItem2)
+                    {
+                        Debug.Log("item combined with additionalItem2");
+                        StopItemDragAndReset();
+
+                        // Remove this item and additionalItem2 from inventory
+                        GameData.currentPlayerInventory.RemoveItem(obj);
+                        GameData.currentPlayerInventory.RemoveItem(obj.additionalItem2);
+
+                        // Add combinedObject2 to inventory
+                        GameData.currentPlayerInventory.AddItem(obj.combinedObject2, 1);
+
+                        // Update inventory
+                        InventoryManager.instance.UpdateInventorySlots();
+                    }
+                }
+            }
+        }
+    }
+
+    private void StopItemDragAndReset()
+    {
+        thisItemBeingDragged = false;
+        InventoryManager.instance.isDraggingItem = false;
+        InventoryManager.instance.draggingItemSlotScript = null;
+        itemIcon.gameObject.transform.localPosition = Vector3.zero;
     }
 
     public void PopulateItemSlot(ItemObject scriptableObject)

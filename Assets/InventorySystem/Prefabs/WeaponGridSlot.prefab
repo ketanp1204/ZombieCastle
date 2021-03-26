@@ -202,8 +202,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotSelectedBackground: {fileID: 2408031341446507031}
+  itemIcon: {fileID: 2408031341588384551}
   nameText: {fileID: 4682766253325523490}
   weaponType: 0
+  scriptableObject: {fileID: 0}
+  canInteract: 1
 --- !u!1 &8597519271304302039
 GameObject:
   m_ObjectHideFlags: 0

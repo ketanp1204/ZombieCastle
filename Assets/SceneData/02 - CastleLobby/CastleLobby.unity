@@ -829,7 +829,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1352661663
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7548421d77144a94a8b058e89bace212, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13372,7 +13372,7 @@ PolygonCollider2D:
       - {x: 0.56577826, y: -0.74052215}
       - {x: 0.57046986, y: -1.2035592}
       - {x: 1.0198451, y: -1.1984789}
-      - {x: 1.0239267, y: -0.3074637}
+      - {x: 1.0390835, y: -0.24178559}
 --- !u!1 &1196177628
 GameObject:
   m_ObjectHideFlags: 0

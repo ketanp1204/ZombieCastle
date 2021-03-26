@@ -544,6 +544,8 @@ MonoBehaviour:
   magicPotionScriptableObject: {fileID: 0}
   dialogueIfKeyFromMazeCollected: []
   dialogueIfKeyFromMazeNotCollected: []
+  fireElementScriptableObject: {fileID: 0}
+  dialogueBeforeReceivingFireElement: []
   roomIndex: 0
 --- !u!114 &63636537
 MonoBehaviour:
@@ -3173,11 +3175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc497633a5bc80b45a8c2a7bb83602de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack1Trigger: 0
   canAttack: 0
   isAttacking: 0
-  attack1Point: {fileID: 1437078393}
-  attack1Range: 0.3
   attack1Damage: 1
   attackRepeatTime: 1
   playerLayerMask:
@@ -4903,11 +4902,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc497633a5bc80b45a8c2a7bb83602de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack1Trigger: 0
   canAttack: 0
   isAttacking: 0
-  attack1Point: {fileID: 1767613698}
-  attack1Range: 0.3
   attack1Damage: 1
   attackRepeatTime: 1
   playerLayerMask:
@@ -5787,6 +5783,10 @@ PrefabInstance:
     - target: {fileID: 5461778991519988497, guid: 0c6b23f1d5309a04a81a2755d5bf88f8, type: 3}
       propertyPath: m_Name
       value: InventoryBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461778991519988499, guid: 0c6b23f1d5309a04a81a2755d5bf88f8, type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5461778992305295965, guid: 0c6b23f1d5309a04a81a2755d5bf88f8, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6879,6 +6879,7 @@ MonoBehaviour:
   cinemachineCamera: {fileID: 829335296}
   temporaryCameraTarget: {fileID: 1342187800}
   combatBlockRightWall: {fileID: 1653253753}
+  knifeScriptableObject: {fileID: 11400000, guid: 633cac347e6a8044ab8d1909852a247d, type: 2}
   playerResponseOnFindingZombies:
   - Is that what I think it is?
   - A..... a.... zombie?
@@ -7082,11 +7083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc497633a5bc80b45a8c2a7bb83602de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack1Trigger: 0
   canAttack: 0
   isAttacking: 0
-  attack1Point: {fileID: 1349520092}
-  attack1Range: 0.3
   attack1Damage: 1
   attackRepeatTime: 1
   playerLayerMask:
@@ -7705,11 +7703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc497633a5bc80b45a8c2a7bb83602de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack1Trigger: 0
   canAttack: 0
   isAttacking: 0
-  attack1Point: {fileID: 1839617345}
-  attack1Range: 0.3
   attack1Damage: 1
   attackRepeatTime: 1
   playerLayerMask:
@@ -8822,6 +8817,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3865222938020772526, guid: af34ae09eed9cbe40b9afeea9dab701c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865222938020772526, guid: af34ae09eed9cbe40b9afeea9dab701c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865222938020772526, guid: af34ae09eed9cbe40b9afeea9dab701c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865222938020772526, guid: af34ae09eed9cbe40b9afeea9dab701c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af34ae09eed9cbe40b9afeea9dab701c, type: 3}
 --- !u!224 &2116606794 stripped
@@ -8839,6 +8850,22 @@ PrefabInstance:
     - target: {fileID: 1116275029338010979, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_Name
       value: Mark_Large
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162534629170683288, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
+      propertyPath: m_Size.x
+      value: 5.152727
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162534629170683288, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
+      propertyPath: m_Size.y
+      value: 6.8727274
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162534629170683288, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678587066136459780, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3736767665891185551, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_RootOrder

@@ -13,6 +13,7 @@ public class R1_CombatStartBehaviour : MonoBehaviour
     public CinemachineVirtualCamera cinemachineCamera;
     public Transform temporaryCameraTarget;
     public BoxCollider2D combatBlockRightWall;
+    public WeaponObject knifeScriptableObject;
 
     // Private References
     private List<GameObject> zombieGameObjects;
@@ -66,8 +67,9 @@ public class R1_CombatStartBehaviour : MonoBehaviour
     {
         StartCoroutine(WaitForTimeScaleToReset());
 
-        // Open inventory box
+        // Open inventory box and highlight knife
         InventoryManager.ShowInventory();
+        InventoryManager.instance.HighlightWeaponBeforeCombatStart(knifeScriptableObject);
     }
 
     private IEnumerator ChangeCameraTargetAfterDelay(float delay)
@@ -95,7 +97,9 @@ public class R1_CombatStartBehaviour : MonoBehaviour
         }
 
         Player.SetCombatState();
-    }
 
-    
+        // Set player camera to combat camera position
+        Player.instance.UpdateCombatCameraPosition(zombieGameObjects[0].transform);
+        cinemachineCamera.Follow = Player.instance.combatCameraPosition;
+    }
 }

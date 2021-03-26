@@ -28,6 +28,16 @@ public class InventoryManager : MonoBehaviour
     private bool isInventoryOpen;
     private bool isDescBoxOpen;
 
+    // Public variables
+    [HideInInspector]
+    public bool isDraggingItem = false;
+    [HideInInspector]
+    public bool isDraggingWeapon = false;
+
+    [HideInInspector]
+    public ItemSlotInteraction draggingItemSlotScript;
+    public WeaponSlotInteraction draggingWeaponSlotScript;
+
     private void Awake()
     {
         if (instance == null)
@@ -55,7 +65,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Initialize()
     {
-        canOpenInventory = false;
+        canOpenInventory = true;
         isInventoryOpen = false;
         isDescBoxOpen = false;
 
@@ -238,6 +248,34 @@ public class InventoryManager : MonoBehaviour
         return itemAlreadyExists;
     }
 
+    public void HighlightWeaponBeforeCombatStart(ItemObject item)
+    {
+        DisableInteractionOfAllSlots();
+
+        bool itemFound = false;
+
+        foreach (Transform child in weaponGridContainer.transform)
+        {
+            WeaponSlotInteraction instance = child.GetComponent<WeaponSlotInteraction>();
+
+            if (instance.scriptableObject == item)
+            {
+                itemFound = true;
+
+                instance.Highlight();
+                instance.SetWeaponHighlightBeforeCombatStartFlag();
+                instance.EnableInteraction();
+                break;
+            }
+        }
+
+        if (!itemFound)
+        {
+            Debug.Log("Weapon not found");
+            EnableInteractionOfAllSlots();
+        }
+    }
+
     public void HighlightItemOnTreasureBoxInteraction(ItemObject item, TreasureBoxInteraction scriptInstance)
     {
         bool itemFound = false;
@@ -290,23 +328,17 @@ public class InventoryManager : MonoBehaviour
         if (!itemFound)
         {
             Debug.Log("Item not found in inventory");
-            EnableInteractionForAllWeaponSlots();
-            EnableInteractionForAllItemSlots();
+            EnableInteractionOfAllSlots();
         }
     }
 
-    public void EnableInteractionForAllWeaponSlots()
+    public void EnableInteractionOfAllSlots()
     {
         foreach (Transform child in weaponGridContainer.transform)
         {
             WeaponSlotInteraction instance = child.GetComponent<WeaponSlotInteraction>();
             instance.EnableInteraction();
         }
-        
-    }
-
-    public void EnableInteractionForAllItemSlots()
-    {
         foreach (Transform child in itemGridContainer.transform)
         {
             ItemSlotInteraction instance = child.GetComponent<ItemSlotInteraction>();
@@ -330,7 +362,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    private void UpdateInventorySlots()
+    public void UpdateInventorySlots()
     {
         // Check and remove already deleted slots
         if (weaponSlots.Count != 0)

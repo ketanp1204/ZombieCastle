@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
     public Transform pathfindingTarget;                                             // Reference - Pathfinding target
     public GameObject selectionArea;                                                // Reference - Player selection area - Used to prevent selection during game instructions display
     public GameObject torchGO;                                                      // Reference - Torch for room3
+    public Transform combatCameraPosition;                                          // Reference - Transform that the player camera should follow when in combat
+
 
     // Public Variables
     [HideInInspector]
@@ -221,6 +223,20 @@ public class Player : MonoBehaviour
     {
         isClimbingLadder = false;
         torchAnimator.SetBool("LadderClimbUp", false);
+    }
+
+    public void UpdateCombatCameraPosition(Transform enemy)
+    {
+        // Enemy is to the right of the player
+        if (enemy.position.x > transform.position.x)
+        {
+            combatCameraPosition.localPosition = new Vector3(1f * combatCameraPosition.localPosition.x, combatCameraPosition.localPosition.y, combatCameraPosition.localPosition.z);
+        }
+        else
+        {
+            // Enemy is to the left of the player
+            combatCameraPosition.localPosition = new Vector3(-1f * combatCameraPosition.localPosition.x, combatCameraPosition.localPosition.y, combatCameraPosition.localPosition.z);
+        }
     }
 
     void FixedUpdate()

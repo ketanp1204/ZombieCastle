@@ -18,7 +18,7 @@ public class EnemyAI : MonoBehaviour
         Dead
     }
 
-    // Private Cached References
+    // Private References
     private Transform target;
     private Seeker seeker;
     private Rigidbody2D rb;
@@ -29,18 +29,13 @@ public class EnemyAI : MonoBehaviour
     public float attackStartDistance;
     [HideInInspector]
     public bool isAttacking;
-    private float distanceToPlayer;
     [HideInInspector]
     public bool facingRight = true;
-
     [Header("Pathfinding")]
     public float pathUpdateSeconds;
     [HideInInspector]
     public bool followPath;
-    private Path path;
-    private int currentWaypoint = 0;
-    // private bool reachedEndOfPath = false;
-
+    
     [Header("Physics")]
     public float speed = 60f;
     public float nextWaypointDistance = 3f;
@@ -49,22 +44,33 @@ public class EnemyAI : MonoBehaviour
     [HideInInspector]
     public EnemyState enemyState;
 
+    // Private variables
+    private float distanceToPlayer;
+    private Path path;
+    private int currentWaypoint = 0;
+
+
     // Start is called before the first frame update
     void Start()
+    {
+        SetReferences();
+        Initialize();
+    }
+
+    private void SetReferences()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         enemyCombat = GetComponent<EnemyCombat>();
         animator = GetComponent<Animator>();
+    }
+
+    private void Initialize()
+    {
         followPath = false;
         isAttacking = false;
 
         enemyState = EnemyState.Idle;
-
-        // Ignore enemy collisions with other enemies   TODO: remove if it looks bad
-        // Physics2D.IgnoreLayerCollision(gameObject.layer, 11);
-
-        // InvokeRepeating("UpdatePath", 3f, pathUpdateSeconds);
     }
 
     public void StartChasingPlayer()
@@ -86,6 +92,15 @@ public class EnemyAI : MonoBehaviour
                 enemyCombat.StopAttack();
                 seeker.StartPath(rb.position, target.position, OnPathComplete);
             }
+        }
+    }
+
+    void OnPathComplete(Path p)
+    {
+        if (!p.error)
+        {
+            path = p;
+            currentWaypoint = 0;
         }
     }
 
@@ -121,11 +136,10 @@ public class EnemyAI : MonoBehaviour
             enemyCombat.InvokeAttack();
             StartCoroutine(WaitForPlayerToMoveAway());
         } 
-        else
+        else // Chasing
         {
             direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
 
-            //movement.x = direction.x * moveForceMultiplier;
             movement.x = direction.x;
             movement.y = 0f;
 
@@ -142,50 +156,25 @@ public class EnemyAI : MonoBehaviour
                 currentWaypoint++;
             }
 
-            // Update facing direction of enemy
-            if (movement.x >= 0.01f)
+            UpdateFaceDirection();
+        }
+    }
+
+    public void UpdateFaceDirection()
+    {
+        if (target != null)
+        {
+            if ((target.position.x > transform.position.x) && !facingRight)
             {
-                UpdateFaceDirection(true);
-                facingRight = true;
+                transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
-            else if (movement.x <= -0.01f)
+            else if ((target.position.x < transform.position.x) && facingRight)
             {
-                UpdateFaceDirection(false);
-                facingRight = false;
+                transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
         }
-
-        // Set movement animation parameters
-        SetMovementAnimationParameters(movement);
     }
-
-    public void UpdateFaceDirection(bool isFacingRight)
-    {
-        if (isFacingRight)
-        {
-            transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
-        else
-        {
-            transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
-    }
-
-    void SetMovementAnimationParameters(Vector2 movement)
-    {
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Magnitude", movement.magnitude);
-    }
-
-    void OnPathComplete(Path p)
-    {
-        if (!p.error)
-        {
-            path = p;
-            currentWaypoint = 0;
-        }
-    }
-
+    
     public void StopMovement()
     {
         rb.velocity = Vector2.zero;

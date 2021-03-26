@@ -6,7 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(EnemyAI))]
-[RequireComponent(typeof(EnemyCombat))]
 public class EnemyCombat : MonoBehaviour
 {
     public enum ZombieTypes
@@ -19,13 +18,9 @@ public class EnemyCombat : MonoBehaviour
 
     [Header("Attack 1 Attributes")]
     [HideInInspector]
-    public bool attack1Trigger;
-    [HideInInspector]
     public bool canAttack = false;
     [HideInInspector]
     public bool isAttacking = false;
-    public Transform attack1Point;      // Location of point which registers attack
-    public float attack1Range;          // Range at which attack is enabled
     public int attack1Damage = 20;      // Damage caused to enemy
     public float attackRepeatTime;      // Attack rate of enemy
 
@@ -42,10 +37,9 @@ public class EnemyCombat : MonoBehaviour
     public Transform bloodParticlesStartPosition;
 
     // Private Variables
-    private UnityEngine.Object enemyReference;
     private int currentHealth;
 
-    // Public variables exposed to Inspector
+    // Public variables
     [Header("Enemy Attributes")]
     public int maxHealth;
     public float destroyDelayAfterDeath = 3f;
@@ -65,13 +59,21 @@ public class EnemyCombat : MonoBehaviour
 
     private void Start()
     {
+        SetReferences();
+        Initialize();
+    }
+
+    private void SetReferences()
+    {
         enemyAI = GetComponent<EnemyAI>();
-        enemyReference = Resources.Load(gameObject.name.Substring(0, 7));
         animator = GetComponent<Animator>();
+    }
+
+    private void Initialize()
+    {
         currentHealth = maxHealth;
         healthBar.gameObject.SetActive(true);
         healthBar.SetMaxHealth(maxHealth);
-        // attackHitbox.SetActive(false);
     }
 
     public void StopAttack()
@@ -120,6 +122,7 @@ public class EnemyCombat : MonoBehaviour
         {
             // Create blood particles
             GameObject bloodParticles = Instantiate(GameAssets.instance.bloodParticles, bloodParticlesStartPosition);
+
             if (enemyAI.facingRight)
             {
                 bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
@@ -221,11 +224,7 @@ public class EnemyCombat : MonoBehaviour
         StartCoroutine(DestroyGameObjectAfterDelay(gameObject, destroyDelayAfterDeath));
     }
 
-    void Respawn()
-    {
-        GameObject enemyClone = (GameObject)Instantiate(enemyReference);
-        enemyClone.transform.position = transform.position;
-    }
+    // Utilities
 
     private IEnumerator DestroyGameObjectAfterDelay(GameObject gameObject, float delay)
     {
