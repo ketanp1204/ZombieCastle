@@ -44,7 +44,8 @@ public static class AudioManager
         PuzzleClock,
         HealthPotionCollect,
         MagicPotionCollect,
-        LadderFootStep
+        LadderFootStep,
+        PlayerLowHealthBreathing
     }
 
     // private static Dictionary<Sound, float> soundTimerDictionary;
@@ -202,6 +203,22 @@ public static class AudioManager
         else
         {
             Debug.Log("Sound not playing");
+        }
+    }
+
+    public static void PlayPersistentSingleSoundIfNotAlreadyPlaying(Sound sound)
+    {
+        if (playSoundOnceGameObjects.ContainsKey(sound))
+        {
+            AudioSource audioSource = playSoundOnceGameObjects[sound].GetComponent<AudioSource>();
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            PlaySoundOnceOnPersistentObject(sound);
         }
     }
 

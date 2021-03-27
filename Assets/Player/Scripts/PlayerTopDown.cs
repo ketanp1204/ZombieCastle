@@ -82,7 +82,6 @@ public class PlayerTopDown : MonoBehaviour
         {
             HandleSceneChanges();
         }
-        
     }
 
     // Store References
@@ -212,7 +211,10 @@ public class PlayerTopDown : MonoBehaviour
 
     public void PlayLowHealthBreathingSound()
     {
-        // TODO: add low health breathing sound
+        if (PlayerStats.currentHealth < 30)
+        {
+            AudioManager.PlayPersistentSingleSoundIfNotAlreadyPlaying(AudioManager.Sound.PlayerLowHealthBreathing);
+        }
     }
 
     private void FlipPlayerDirection()

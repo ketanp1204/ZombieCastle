@@ -16,6 +16,13 @@ public class PlayerCombat : MonoBehaviour
         Axe,
         Sword
     }
+
+    public enum SwordAttackTypes
+    {
+        Normal,
+        Fire,
+        Magic
+    }
     
     [Header("Axe Attack")]
     public int axeDamage = 20;                                                          // Int - Damage amount inflicted on enemy
@@ -29,13 +36,18 @@ public class PlayerCombat : MonoBehaviour
     public Animator knifeHitboxAnimator_L;                                              // Reference - Left hitbox animator
     public Animator knifeHitboxAnimator_R;                                              // Reference - Right hitbox animator
 
+    [HideInInspector]
+    public SwordAttackTypes swordAttackType = SwordAttackTypes.Normal;
+
     [Header("Sword Magic Attack")]
     public int swordMagicDamage = 10;                                                   // Int - Damage amount inflicted on enemy
     public float swordMagicAttackRepeatTime = 1f;                                       // Float - Delay between successive attacks
 
-    [Header("Sword Fire Attack")]
-    public int swordFireDamage = 10;                                                    // Int - Damage amount inflicted on enemy
-    public float swordFireAttackRepeatTime = 1f;                                        // Float - Delay between successive attacks
+    [Header("Sword Normal (using fire anim) Attack")]
+    public int swordNormalDamage = 10;                                                  // Int - Damage amount inflicted on enemy
+    public float swordNormalAttackRepeatTime = 1f;                                      // Float - Delay between successive attacks
+    public Animator swordFireHitboxAnimator_L;                                          // Reference - Left hitbox animator
+    public Animator swordFireHitboxAnimator_R;                                          // Reference - Right hitbox animator
 
 
     [Header("Common Attributes")]
@@ -50,10 +62,13 @@ public class PlayerCombat : MonoBehaviour
     public bool isAttacking_Knife = false;                                              // Bool - Knife attack status
 
     [HideInInspector]
-    public bool isAttackSwordMagic = false;                                             // Bool - Sword magic attack status
+    public bool isAttacking_SwordNormal = false;                                        // Bool - Sword normal attack status
 
     [HideInInspector]
-    public bool isAttackSwordFire = false;                                              // Bool - Sword fire attack status
+    public bool isAttacking_SwordMagic = false;                                             // Bool - Sword magic attack status
+
+    [HideInInspector]
+    public bool isAttacking_SwordFire = false;                                              // Bool - Sword fire attack status
 
     [HideInInspector]
     public bool canAttack = false;                                                      // Bool - Player allowed to attack
@@ -98,16 +113,28 @@ public class PlayerCombat : MonoBehaviour
                 attackTask = null;
             }
 
+            ResetHitboxes();
             ResetAttackingBools();
         }
+    }
+
+    private void ResetHitboxes()
+    {
+        axeHitboxAnimator_L.enabled = false;
+        axeHitboxAnimator_R.enabled = false;
+        knifeHitboxAnimator_L.enabled = false;
+        knifeHitboxAnimator_R.enabled = false;
+        swordFireHitboxAnimator_L.enabled = false;
+        swordFireHitboxAnimator_R.enabled = false;
     }
 
     private void ResetAttackingBools()
     {
         isAttacking_Axe = false;
         isAttacking_Knife = false;
-        isAttackSwordFire = false;
-        isAttackSwordMagic = false;
+        isAttacking_SwordNormal = false;
+        isAttacking_SwordFire = false;
+        isAttacking_SwordMagic = false;
     }
 
     public void InvokeAxeAttack()
@@ -129,74 +156,37 @@ public class PlayerCombat : MonoBehaviour
     // TODO: Debug: Every second axe attack does not move the hitbox
     private IEnumerator AttackAxe()
     {
-        if (Player.instance)
+        bool facingRight = Player.PlayerFacingRight();
+        if (canAttack && !Player.instance.takingDamage)
         {
-            bool facingRight = Player.PlayerFacingRight();
-            if (canAttack && !Player.instance.takingDamage)
+            if (PlayerStats.IsDead)
             {
-                if (PlayerStats.IsDead)
-                {
-                    canAttack = false;
-                    isAttacking_Axe = false;
-                    yield break;
-                }
-
-                isAttacking_Axe = true;
-
-                // Play player axe attack animation
-                animator.SetTrigger("AxeAttack");
-
-                // Animate hitbox
-                if (facingRight)
-                {
-                    axeHitboxAnimator_R.enabled = true;
-                    axeHitboxAnimator_R.SetTrigger("Attack");
-                }
-                else
-                {
-                    axeHitboxAnimator_L.enabled = true;
-                    axeHitboxAnimator_L.SetTrigger("Attack");
-                }
-
-                // Wait for attack to end
-                yield return new WaitForSeconds(axeAttackRepeatTime);
+                canAttack = false;
+                isAttacking_Axe = false;
+                yield break;
             }
-            isAttacking_Axe = false;
-        }
-        else
-        {
-            bool facingRight = PlayerTopDown.PlayerFacingRight();
-            if (canAttack && !PlayerTopDown.instance.takingDamage)
+
+            isAttacking_Axe = true;
+
+            // Play player axe attack animation
+            animator.SetTrigger("AxeAttack");
+
+            // Animate hitbox
+            if (facingRight)
             {
-                if (PlayerStats.IsDead)
-                {
-                    canAttack = false;
-                    isAttacking_Axe = false;
-                    yield break;
-                }
-
-                isAttacking_Axe = true;
-
-                // Play player axe attack animation
-                animator.SetTrigger("AxeAttack");
-
-                // Animate hitbox
-                if (facingRight)
-                {
-                    axeHitboxAnimator_R.enabled = true;
-                    axeHitboxAnimator_R.SetTrigger("Attack");
-                }
-                else
-                {
-                    axeHitboxAnimator_L.enabled = true;
-                    axeHitboxAnimator_L.SetTrigger("Attack");
-                }
-
-                // Wait for attack to end
-                yield return new WaitForSeconds(axeAttackRepeatTime);
+                axeHitboxAnimator_R.enabled = true;
+                axeHitboxAnimator_R.SetTrigger("Attack");
             }
-            isAttacking_Axe = false;
+            else
+            {
+                axeHitboxAnimator_L.enabled = true;
+                axeHitboxAnimator_L.SetTrigger("Attack");
+            }
+
+            // Wait for attack to end
+            yield return new WaitForSeconds(axeAttackRepeatTime);
         }
+        isAttacking_Axe = false;
     }
 
     public void PlayAxeAttackSound()
@@ -223,80 +213,108 @@ public class PlayerCombat : MonoBehaviour
 
     private IEnumerator AttackKnife()
     {
-        if (Player.instance != null)
+        bool facingRight = Player.PlayerFacingRight();
+        if (canAttack && !Player.instance.takingDamage)
         {
-            bool facingRight = Player.PlayerFacingRight();
-            if (canAttack && !Player.instance.takingDamage)
+            if (PlayerStats.IsDead)
             {
-                if (PlayerStats.IsDead)
-                {
-                    canAttack = false;
-                    isAttacking_Knife = false;
-                    yield break;
-                }
-
-                isAttacking_Knife = true;
-
-                // Play player knife attack animation
-                animator.SetTrigger("KnifeAttack");
-
-                // Animate hitbox
-                if (facingRight)
-                {
-                    knifeHitboxAnimator_R.enabled = true;
-                    knifeHitboxAnimator_R.SetTrigger("Attack");
-                }
-                else
-                {
-                    knifeHitboxAnimator_L.enabled = true;
-                    knifeHitboxAnimator_L.SetTrigger("Attack");
-                }
-
-                // Wait for attack to end
-                yield return new WaitForSeconds(knifeAttackRepeatTime);
+                canAttack = false;
+                isAttacking_Knife = false;
+                yield break;
             }
-            isAttacking_Knife = false;
-        }
-        else
-        {
-            bool facingRight = PlayerTopDown.PlayerFacingRight();
-            if (canAttack && !PlayerTopDown.instance.takingDamage)
+
+            isAttacking_Knife = true;
+
+            // Play player knife attack animation
+            animator.SetTrigger("KnifeAttack");
+
+            // Animate hitbox
+            if (facingRight)
             {
-                if (PlayerStats.IsDead)
-                {
-                    canAttack = false;
-                    isAttacking_Knife = false;
-                    yield break;
-                }
-
-                isAttacking_Knife = true;
-
-                // Play player knife attack animation
-                animator.SetTrigger("KnifeAttack");
-
-                // Animate hitbox
-                if (facingRight)
-                {
-                    knifeHitboxAnimator_R.enabled = true;
-                    knifeHitboxAnimator_R.SetTrigger("Attack");
-                }
-                else
-                {
-                    knifeHitboxAnimator_L.enabled = true;
-                    knifeHitboxAnimator_L.SetTrigger("Attack");
-                }
-
-                // Wait for attack to end
-                yield return new WaitForSeconds(knifeAttackRepeatTime);
+                knifeHitboxAnimator_R.enabled = true;
+                knifeHitboxAnimator_R.SetTrigger("Attack");
             }
-            isAttacking_Knife = false;
+            else
+            {
+                knifeHitboxAnimator_L.enabled = true;
+                knifeHitboxAnimator_L.SetTrigger("Attack");
+            }
+
+            // Wait for attack to end
+            yield return new WaitForSeconds(knifeAttackRepeatTime);
         }
+        isAttacking_Knife = false;
     }
 
     public void PlayKnifeAttackSound()
     {
         // Play knife attack sound
         AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PlayerKnifeAttack);
+    }
+
+    public void InvokeSwordNormalAttack()
+    {
+        canAttack = true;
+
+        if (!isAttacking_SwordNormal && !PlayerStats.IsDead)
+        {
+            if (attackTask != null)
+            {
+                attackTask.Stop();
+                attackTask = null;
+            }
+
+            attackTask = new Task(AttackSwordNormal());
+        }
+    }
+
+    private IEnumerator AttackSwordNormal()
+    {
+        bool facingRight = Player.PlayerFacingRight();
+        if (canAttack && !Player.instance.takingDamage)
+        {
+            if (PlayerStats.IsDead)
+            {
+                canAttack = false;
+                isAttacking_SwordNormal = false;
+                yield break;
+            }
+
+            isAttacking_SwordNormal = true;
+
+            // Play player sword fire attack animation
+            animator.SetTrigger("SwordFireAttack");
+
+            if (facingRight)
+            {
+                swordFireHitboxAnimator_R.enabled = true;
+                swordFireHitboxAnimator_R.SetTrigger("Attack");
+            }
+            else
+            {
+                swordFireHitboxAnimator_L.enabled = true;
+                swordFireHitboxAnimator_L.SetTrigger("Attack");
+            }
+
+            // Wait for attack to end
+            yield return new WaitForSeconds(swordNormalAttackRepeatTime);
+        }
+        isAttacking_SwordNormal = false;
+    }
+
+    public void PlaySwordNormalAttackSound()
+    {
+
+    }
+
+    public void InvokeSwordFireAttack()
+    {
+
+    }
+
+    public void InvokeSwordMagicAttack()
+    {
+
     }
 
     public void TakeDamage(Transform enemyPos, int damageAmount)

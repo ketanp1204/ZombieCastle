@@ -98,6 +98,7 @@ public class Player : MonoBehaviour
         playerCombat = GetComponent<PlayerCombat>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        torchAnimator = transform.Find("Torch").GetComponent<Animator>();
     }
 
     // Default Values
@@ -176,7 +177,6 @@ public class Player : MonoBehaviour
             GameData.sceneName = LevelManager.SceneNames.Room3;
 
             torchGO.SetActive(true);
-            torchAnimator = transform.Find("Torch").GetComponent<Animator>();
             animator.SetBool("HoldingTorch", true);
             isInRoom3 = true;
         }    
@@ -310,6 +310,19 @@ public class Player : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
             {
                 // TODO: different behavior for magic potion + sword, fire elem + sword and sword without any powers
+                if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Normal)
+                {
+                    playerCombat.InvokeSwordNormalAttack();
+                    rb.velocity = Vector2.zero;
+                }
+                else if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Fire)
+                {
+                    
+                }
+                else if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Magic)
+                {
+
+                }
             }
         }
     }
@@ -375,7 +388,10 @@ public class Player : MonoBehaviour
 
     public void PlayLowHealthBreathingSound()
     {
-        // TODO: add low health breathing sound
+        if (PlayerStats.currentHealth < 30)
+        {
+            AudioManager.PlayPersistentSingleSoundIfNotAlreadyPlaying(AudioManager.Sound.PlayerLowHealthBreathing);
+        }
     }
 
     public static void SetIdleState()

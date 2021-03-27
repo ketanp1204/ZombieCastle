@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Cinemachine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class IntroSequence : MonoBehaviour
 {
@@ -66,6 +67,9 @@ public class IntroSequence : MonoBehaviour
     public CanvasGroup img5_FriendBox;
     public string[] img5_PlayerDialogues = { "", "" };
     public string img5_FriendDialogue = "";
+    public GameObject img5_fogGameObject;
+    public Light2D pumpkinLight2D;
+    public SpriteRenderer colorImage;
 
     [Header("Outro Text")]
     public TextMeshProUGUI outroTMPro;
@@ -193,7 +197,7 @@ public class IntroSequence : MonoBehaviour
 
         // Play background music
         AudioManager.PlaySoundLooping(AudioManager.Sound.IntroSequenceBackground);
-
+        
         // Set camera to first image
         cinemachineCamera.Follow = img1_CamStartPos;
         cinemachineCamera.GetComponent<CinemachineConfiner>().m_BoundingShape2D = img1_Bounds;
@@ -400,8 +404,11 @@ public class IntroSequence : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
 
-        // TODO: add increasing light from inside door/pumpking etc
+        // Start fading in color image
+        new Task(FadeSpriteRendererAfterDelay(colorImage, 0f, 0.9f, 0f, 5f));
 
+        // Start increasing pumpkins light intensity
+        new Task(InterpolateLight2DIntensity(pumpkinLight2D, pumpkinLight2D.intensity, 15f, 0f, 2f));
 
         // Play blackout music
         AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.IntroSequenceBlackout);
@@ -440,6 +447,15 @@ public class IntroSequence : MonoBehaviour
 
         // Fade out screen
         LevelManager.FadeOutScreen();
+
+        // Hide color image
+        new Task(FadeSpriteRendererAfterDelay(colorImage, 0.9f, 0f, 1f, 0.1f));
+
+        // Hide pumpkin light
+        pumpkinLight2D.intensity = 0f;
+
+        // Remove fog 
+        Destroy(img5_fogGameObject);
 
         yield return new WaitForSeconds(1f);
 
@@ -518,6 +534,35 @@ public class IntroSequence : MonoBehaviour
             {
                 float deltaX = currentValue - target.position.x;
                 target.position = new Vector3(target.position.x + deltaX, target.position.y, target.position.z);
+            }
+
+            if (percentageComplete >= 1)
+            {
+                break;
+            }
+
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    private IEnumerator InterpolateLight2DIntensity(Light2D light, float startIntensity, float endIntensity, float delay, float lerpTime = 4f)
+    {
+        yield return new WaitForSeconds(delay);
+
+        float _timeStartedLerping = Time.time;
+        float timeSinceStarted;
+        float percentageComplete;
+
+        while (true)
+        {
+            timeSinceStarted = Time.time - _timeStartedLerping;
+            percentageComplete = timeSinceStarted / lerpTime;
+
+            float currentValue = Mathf.Lerp(startIntensity, endIntensity, percentageComplete);
+
+            if (light != null)
+            {
+                light.intensity = currentValue;
             }
 
             if (percentageComplete >= 1)

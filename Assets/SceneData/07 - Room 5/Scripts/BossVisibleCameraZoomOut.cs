@@ -8,31 +8,15 @@ public class BossVisibleCameraZoomOut : MonoBehaviour
 
     public CinemachineVirtualCamera bossCamera;
 
-    private bool cameraZoomedOut = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (cameraZoomedOut)
+        if (transform.position.x < collision.transform.position.x)
         {
-            bossCamera.Priority = 5;
-            cameraZoomedOut = false;
+            bossCamera.Priority = 15;
         }
         else
         {
-            bossCamera.Priority = 15;
-            cameraZoomedOut = true;
+            bossCamera.Priority = 5;
         }
     }
 }
