@@ -122,11 +122,13 @@ public class GameSession : MonoBehaviour
     {
         GameData.currentPlayerInventory.Container.Clear();
         GameData.currentPlayerInventory.AddItem(knifeInventoryObject, 1);
+        /*
         GameData.currentPlayerInventory.AddItem(lobbyKeyInventoryObject, 1);
         GameData.currentPlayerInventory.AddItem(lobbyTorchInventoryObject, 1);
         GameData.currentPlayerInventory.AddItem(r1_oil_barrel, 1);
         GameData.currentPlayerInventory.AddItem(fireElement, 1);
         GameData.currentPlayerInventory.AddItem(magicPotion, 1);
         GameData.currentPlayerInventory.AddItem(sword, 1);
+        */
     }
 }

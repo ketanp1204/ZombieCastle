@@ -1608,10 +1608,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 505371212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d13c73e968eef6a4697f707234ea1835, type: 3}
+  m_Script: {fileID: 11500000, guid: b452479a7bbd59a48bfb6d607ecf5298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Room3
+  dialogueIfTorchNotAddedToInventory:
+  - "This room looks too dark inside, I can\u2019t see without some kind of a light."
+  dialogueIfTorchAddedButNotOiled:
+  - This room is too dark, I need to find something to light up the torch that I
+    found.
+  dialogueIfOiledTorchAvailable:
+  - I can use my lighter to burn the torch.
+  lobbyTorchObject: {fileID: 11400000, guid: adc6aec29cf096440969df6eb9e9a925, type: 2}
+  torchWithOilObject: {fileID: 11400000, guid: 60468a23cff269242ab526235cd8fa84, type: 2}
 --- !u!212 &505371215
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6834,12 +6843,18 @@ MonoBehaviour:
   knifeAttackRepeatTime: 2
   knifeHitboxAnimator_L: {fileID: 1709866675}
   knifeHitboxAnimator_R: {fileID: 1711348097}
+  swordMagicDamage: 10
+  swordMagicAttackRepeatTime: 1
+  swordFireDamage: 10
+  swordFireAttackRepeatTime: 1
   enemyLayers:
     serializedVersion: 2
     m_Bits: 2048
   pushDistanceOnHit: 3
   isAttacking_Axe: 0
   isAttacking_Knife: 0
+  isAttackSwordMagic: 0
+  isAttackSwordFire: 0
   canAttack: 0
   bloodParticlesStartPosition: {fileID: 1789967350}
 --- !u!1 &721609105

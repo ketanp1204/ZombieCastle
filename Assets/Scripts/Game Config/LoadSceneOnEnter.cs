@@ -6,11 +6,17 @@ using TMPro;
 
 public class LoadSceneOnEnter : MonoBehaviour
 {
-    public string sceneName;
-    private bool checkForInput = false;
+    // Private references
     private UIReferences uiReferences;
     private TextMeshProUGUI popupTextUI;
     private SpriteGlow.SpriteGlowEffect glowEffect;
+
+    // Public variables
+    public string sceneName;
+
+    // Private variables
+    private bool checkForInput = false;
+    
 
     void Start()
     {

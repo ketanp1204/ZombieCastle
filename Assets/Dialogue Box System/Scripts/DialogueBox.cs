@@ -35,6 +35,7 @@ public class DialogueBox : MonoBehaviour
     private bool isTreasureBox = false;                                 // Bool - For events after treasure box dialogue
     private bool addToInventoryAfterDialogue = false;                   // Bool - Object goes to inventory after dialogue display
     private bool showNoteAfterDisplay = false;                          // Bool - Object has note box display after dialogue display
+    private bool lobbyBeforeEnteringRoom3 = false;                      // Bool - Events after trying to enter room3 from lobby
     private bool room1MazePuzzleAfterDialogue = false;                  // Bool - Portrait object in room1 that contains maze puzzle
     private bool room2JigsawPuzzleAfterDialogue = false;                // Bool - Portrait object in room2 that contains jigsaw puzzle
     private bool room3DiffPuzzleAfterDialogue = false;                  // Bool - Cupboard object in room3 that contains differences puzzle
@@ -212,6 +213,14 @@ public class DialogueBox : MonoBehaviour
                 NoteBox.instance.ShowNoteBox();
             }
 
+            if (lobbyBeforeEnteringRoom3)
+            {
+                if (Room3AccessBehaviour.instance)
+                {
+                    Room3AccessBehaviour.instance.BehaviourAfterDialogue();
+                }
+            }
+
             if (room1MazePuzzleAfterDialogue)
             {
                 // Load maze puzzle UI
@@ -276,6 +285,11 @@ public class DialogueBox : MonoBehaviour
         showNoteAfterDisplay = true;
     }
 
+    public void SetLobbyRoom3DoorOpenFlag()
+    {
+        lobbyBeforeEnteringRoom3 = true;
+    }
+
     public void SetMazePuzzleFlag()
     {
         room1MazePuzzleAfterDialogue = true;
@@ -320,6 +334,7 @@ public class DialogueBox : MonoBehaviour
         isTreasureBox = false;
         addToInventoryAfterDialogue = false;
         showNoteAfterDisplay = false;
+        lobbyBeforeEnteringRoom3 = false;
         room1MazePuzzleAfterDialogue = false;
         room2JigsawPuzzleAfterDialogue = false;
         room3DiffPuzzleAfterDialogue = false;
