@@ -100,7 +100,7 @@ public class EnemyAI : MonoBehaviour
 
                 if (seeker.IsDone())
                 {
-                    // rangedEnemyCombat.StopAttack();
+                    // enemyCombat.StopAttack();
                     seeker.StartPath(rb.position, target.position, OnPathComplete);
                 }
 

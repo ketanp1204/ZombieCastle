@@ -67,7 +67,6 @@ public class RangedEnemyAI : MonoBehaviour
     private void Initialize()
     {
         followPath = false;
-
         enemyState = EnemyState.Idle;
     }
 
@@ -99,7 +98,7 @@ public class RangedEnemyAI : MonoBehaviour
 
                 if (seeker.IsDone())
                 {
-                    // rangedEnemyCombat.StopAttack();
+                    rangedEnemyCombat.StopAttack();
                     seeker.StartPath(rb.position, target.position, OnPathComplete);
                 }
 
