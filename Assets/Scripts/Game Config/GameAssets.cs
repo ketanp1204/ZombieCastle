@@ -49,5 +49,8 @@ public class GameAssets : MonoBehaviour
 
     [Header("Player start inventory")]
     public InventoryObject playerStartInventory;
+
+    [Header("Room 1")]
+    public PC_Then_Inventory_Object r1_barrel_oil_collectable;
     
 }

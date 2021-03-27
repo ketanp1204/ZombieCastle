@@ -341,15 +341,21 @@ MonoBehaviour:
   axeHitboxAnimator_L: {fileID: 5079447134803724496}
   axeHitboxAnimator_R: {fileID: 2437771053754895001}
   knifeDamage: 5
-  knifeAttackRepeatTime: 0.8
+  knifeAttackRepeatTime: 0.6
   knifeHitboxAnimator_L: {fileID: 2430838785247921643}
   knifeHitboxAnimator_R: {fileID: 8495685439208976738}
+  swordMagicDamage: 10
+  swordMagicAttackRepeatTime: 1
+  swordFireDamage: 10
+  swordFireAttackRepeatTime: 1
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
   pushDistanceOnHit: 2
   isAttacking_Axe: 0
   isAttacking_Knife: 0
+  isAttackSwordMagic: 0
+  isAttackSwordFire: 0
   canAttack: 0
   bloodParticlesStartPosition: {fileID: 6857449585409242103}
 --- !u!1 &1737880160185760527
@@ -510,7 +516,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.1555555, y: 4.548148}
+  m_Size: {x: 2.0962963, y: 4.540741}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -649,7 +655,7 @@ GameObject:
   - component: {fileID: 1675571739287648731}
   m_Layer: 12
   m_Name: DamageArea
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -44,7 +44,7 @@ public class RangedEnemyCombat : MonoBehaviour
     public float destroyDelayAfterDeath = 3f;
     public float pushDistanceOnHit;
     public float damageMultiplier = 1f;
-    public ZombieTypes zombieIndex;
+    public ZombieTypes zombieType;
 
     // Death Event
     public event Action<RangedEnemyCombat> OnDeath;
@@ -79,6 +79,7 @@ public class RangedEnemyCombat : MonoBehaviour
             if (attackTask != null)
             {
                 attackTask.Stop();
+                attackTask = null;
             }
         }
     }
@@ -86,7 +87,6 @@ public class RangedEnemyCombat : MonoBehaviour
     public void InvokeAttack()
     {
         canAttack = true;
-
         animator = GetComponent<Animator>();
 
         if (rangedEnemyAI.enemyState != RangedEnemyAI.EnemyState.Attacking && rangedEnemyAI.enemyState != RangedEnemyAI.EnemyState.Dead)
@@ -112,7 +112,6 @@ public class RangedEnemyCombat : MonoBehaviour
             if (rangedEnemyAI.enemyState == RangedEnemyAI.EnemyState.Dead)
             {
                 canAttack = false;
-                rangedEnemyAI.enemyState = RangedEnemyAI.EnemyState.Dead;
                 yield break;
             }
 
@@ -152,6 +151,13 @@ public class RangedEnemyCombat : MonoBehaviour
             // Push enemy in hit direction
             StartCoroutine(PushEnemyInHitDirection(playerPosition));
 
+            // Stop attack task
+            if (attackTask != null)
+            {
+                attackTask.Stop();
+                attackTask = null;
+            }
+
             // Play hurt animation
             animator.SetTrigger("Hurt");
 
@@ -166,7 +172,7 @@ public class RangedEnemyCombat : MonoBehaviour
 
     private IEnumerator PushEnemyInHitDirection(Transform playerPos)
     {
-        // Get enemy rigidbody
+        // Get rigidbody
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
 
         // Set enemy state to taking damage
@@ -193,6 +199,13 @@ public class RangedEnemyCombat : MonoBehaviour
     {
         // Set enemy state to dead
         rangedEnemyAI.enemyState = RangedEnemyAI.EnemyState.Dead;
+
+        // Stop attack task
+        if (attackTask != null)
+        {
+            attackTask.Stop();
+            attackTask = null;
+        }
 
         // Set die animation parameter
         animator.SetBool("IsDead", true);

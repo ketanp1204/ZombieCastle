@@ -21,6 +21,7 @@ MonoBehaviour:
   - Hm, a torch wrapped with a cotton cloth. This might just replace my flashlight
     that I lost outside.
   - Although I need to find some oil to light it up.
+  destroyFromSceneAfterAddingToInventory: 1
   inventoryItemName: Torch
   inventorySprite: {fileID: 21300000, guid: 7cc79d002443153439f83675c895a4d1, type: 3}
   canCombineWithAdditionalItem1: 1

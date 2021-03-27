@@ -253,10 +253,10 @@ public class Player : MonoBehaviour
 
                 // Flip the player direction depending on where he is facing
                 FlipPlayerDirection();
-
-                // Player attacks enemies
-                HandleAttacks();
             }
+
+            // Handle attack input
+            HandleAttacks();
         }
     }
 
@@ -335,27 +335,23 @@ public class Player : MonoBehaviour
     {
         if(weaponEquippedDict[PlayerCombat.WeaponTypes.Axe])
         {
-            if (playerInput.leftMousePressed && !takingDamage && !PlayerStats.IsDead)
+            if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
             {
                 playerCombat.InvokeAxeAttack();
-                animator.SetTrigger("AxeAttack");
                 rb.velocity = Vector2.zero;
             }
         }
-
-        if (weaponEquippedDict[PlayerCombat.WeaponTypes.Knife])
+        else if (weaponEquippedDict[PlayerCombat.WeaponTypes.Knife])
         {
-            if (playerInput.leftMousePressed && !takingDamage && !PlayerStats.IsDead)
+            if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
             {
                 playerCombat.InvokeKnifeAttack();
-                animator.SetTrigger("KnifeAttack");
                 rb.velocity = Vector2.zero;
             }
         }
-
-        if (weaponEquippedDict[PlayerCombat.WeaponTypes.Sword])
+        else if (weaponEquippedDict[PlayerCombat.WeaponTypes.Sword])
         {
-            if (playerInput.leftMousePressed && !takingDamage && !PlayerStats.IsDead)
+            if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
             {
                 // TODO: different behavior for magic potion + sword, fire elem + sword and sword without any powers
             }

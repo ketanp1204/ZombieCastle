@@ -33,7 +33,6 @@ public class PlayerCombat : MonoBehaviour
     public int swordMagicDamage = 10;                                                   // Int - Damage amount inflicted on enemy
     public float swordMagicAttackRepeatTime = 1f;                                       // Float - Delay between successive attacks
 
-
     [Header("Sword Fire Attack")]
     public int swordFireDamage = 10;                                                    // Int - Damage amount inflicted on enemy
     public float swordFireAttackRepeatTime = 1f;                                        // Float - Delay between successive attacks
@@ -61,6 +60,9 @@ public class PlayerCombat : MonoBehaviour
 
     public event Action<PlayerCombat> OnDeath;                                          // Death Event
 
+    // Private variables
+    private Task attackTask = null;
+
     // Private Cached References
     private UIReferences uiReferences;                                                  // Reference - Current UIReferences script in the scene
 
@@ -86,26 +88,41 @@ public class PlayerCombat : MonoBehaviour
 
     public void StopAttack()
     {
-        canAttack = false;
+        if (canAttack == true)
+        {
+            canAttack = false;
+
+            if (attackTask != null)
+            {
+                attackTask.Stop();
+                attackTask = null;
+            }
+
+            ResetAttackingBools();
+        }
+    }
+
+    private void ResetAttackingBools()
+    {
+        isAttacking_Axe = false;
+        isAttacking_Knife = false;
+        isAttackSwordFire = false;
+        isAttackSwordMagic = false;
     }
 
     public void InvokeAxeAttack()
     {
         canAttack = true;
+
         if (!isAttacking_Axe && !PlayerStats.IsDead)
         {
-            isAttacking_Axe = true;
-            StartCoroutine(AttackAxe());
-        }
-    }
+            if (attackTask != null)
+            {
+                attackTask.Stop();
+                attackTask = null;
+            }
 
-    public void InvokeKnifeAttack()
-    {
-        canAttack = true;
-        if (!isAttacking_Knife && !PlayerStats.IsDead)
-        {
-            isAttacking_Knife = true;
-            StartCoroutine(AttackKnife());
+            attackTask = new Task(AttackAxe());
         }
     }
 
@@ -123,6 +140,11 @@ public class PlayerCombat : MonoBehaviour
                     isAttacking_Axe = false;
                     yield break;
                 }
+
+                isAttacking_Axe = true;
+
+                // Play player axe attack animation
+                animator.SetTrigger("AxeAttack");
 
                 // Animate hitbox
                 if (facingRight)
@@ -152,6 +174,11 @@ public class PlayerCombat : MonoBehaviour
                     isAttacking_Axe = false;
                     yield break;
                 }
+
+                isAttacking_Axe = true;
+
+                // Play player axe attack animation
+                animator.SetTrigger("AxeAttack");
 
                 // Animate hitbox
                 if (facingRight)
@@ -178,6 +205,24 @@ public class PlayerCombat : MonoBehaviour
         AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PlayerAxeAttack);
     }
 
+    public void InvokeKnifeAttack()
+    {
+        canAttack = true;
+
+        if (!isAttacking_Knife && !PlayerStats.IsDead)
+        {
+            if (attackTask != null)
+            {
+                attackTask.Stop();
+                attackTask = null;
+            }
+
+            Debug.Log("invoke knife attack");
+
+            attackTask = new Task(AttackKnife());
+        }
+    }
+
     private IEnumerator AttackKnife()
     {
         if (Player.instance != null)
@@ -191,6 +236,11 @@ public class PlayerCombat : MonoBehaviour
                     isAttacking_Knife = false;
                     yield break;
                 }
+
+                isAttacking_Knife = true;
+
+                // Play player knife attack animation
+                animator.SetTrigger("KnifeAttack");
 
                 // Animate hitbox
                 if (facingRight)
@@ -221,6 +271,11 @@ public class PlayerCombat : MonoBehaviour
                     yield break;
                 }
 
+                isAttacking_Knife = true;
+
+                // Play player knife attack animation
+                animator.SetTrigger("KnifeAttack");
+
                 // Animate hitbox
                 if (facingRight)
                 {
@@ -246,7 +301,7 @@ public class PlayerCombat : MonoBehaviour
         AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PlayerKnifeAttack);
     }
 
-    public void TakeDamage(Transform enemyPos, int damage)
+    public void TakeDamage(Transform enemyPos, int damageAmount)
     {
         if (!PlayerStats.IsDead)
         {
@@ -284,11 +339,11 @@ public class PlayerCombat : MonoBehaviour
             
             StartCoroutine(DestroyGameObjectAfterDelay(bloodParticles, 5f));
 
-            // Prevent player attack
-            canAttack = false;
+            // Stop attack task
+            StopAttack();
 
             // Reduce health
-            PlayerStats.currentHealth -= damage;
+            PlayerStats.currentHealth -= damageAmount;
 
             // Push player in direction of hit
             StartCoroutine(PushPlayerInHitDirection(enemyPos));
@@ -298,12 +353,6 @@ public class PlayerCombat : MonoBehaviour
 
             // Play hurt animation
             animator.SetTrigger("Hurt");
-
-            // Stop attack hitbox animation
-            axeHitboxAnimator_L.enabled = false;
-            axeHitboxAnimator_R.enabled = false;
-            knifeHitboxAnimator_L.enabled = false;
-            knifeHitboxAnimator_R.enabled = false;
 
             // Die if health is less than 0
             if (PlayerStats.currentHealth <= 0)
@@ -352,8 +401,11 @@ public class PlayerCombat : MonoBehaviour
         {
             PlayerTopDown.StopMovement();
         }
-            
-        // Play die animation
+
+        // Stop attack task
+        StopAttack();
+
+        // Set die animation parameter
         animator.SetBool("IsDead", true);
 
         // Invoke Death Event

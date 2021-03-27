@@ -130,6 +130,14 @@ public class PlayerSelection : MonoBehaviour
                 {
                     ItemObject itemScriptableObject = objectProperties.objectData;
 
+                    // IF you work on the game in the future, try to remove this hard coded dependency
+                    // Change the barrel object to collectable one once room3 door has been interacted with
+                    if (itemScriptableObject.itemName == "Barrel" && GameData.lobby_tried_opening_r3_door_with_torch)
+                    {
+                        objectProperties.objectData = GameAssets.instance.r1_barrel_oil_collectable;
+                        itemScriptableObject = objectProperties.objectData;
+                    }
+
                     if (itemScriptableObject.itemType == ItemType.PC_Only)
                     {
                         PlayerCommentOnlyObject pc_Only_Object = (PlayerCommentOnlyObject)itemScriptableObject;
@@ -157,7 +165,7 @@ public class PlayerSelection : MonoBehaviour
 
                         if (DialogueBox.instance)
                         {
-                            DialogueBox.instance.SetPCThenInventoryGameObject(collidedObject.gameObject, objectProperties.imageDisplayGO);
+                            DialogueBox.instance.SetPCThenInventoryGameObject(collidedObject.gameObject, objectProperties.imageDisplayGO, pc_Then_Inventory_Object.destroyFromSceneAfterAddingToInventory);
                             DialogueBox.instance.SetCurrentItem(pc_Then_Inventory_Object);
                             DialogueBox.instance.FillSentences(sentenceArray);
                             DialogueBox.instance.SetInventoryAfterDialogueFlag();
@@ -167,6 +175,8 @@ public class PlayerSelection : MonoBehaviour
                         {
                             Debug.Log("Dialogue box not found");
                         }
+
+                        collidedObject.enabled = false;
                     }
                     else if (itemScriptableObject.itemType == ItemType.PC_Then_Note)
                     {

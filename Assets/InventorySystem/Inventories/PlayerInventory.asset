@@ -15,13 +15,3 @@ MonoBehaviour:
   Container:
   - item: {fileID: 11400000, guid: 633cac347e6a8044ab8d1909852a247d, type: 2}
     amount: 1
-  - item: {fileID: 11400000, guid: adc6aec29cf096440969df6eb9e9a925, type: 2}
-    amount: 1
-  - item: {fileID: 11400000, guid: 37c58e93a604ce545bb0be87c15be717, type: 2}
-    amount: 1
-  - item: {fileID: 11400000, guid: d6c78382f8e26a2489b666236a582d65, type: 2}
-    amount: 1
-  - item: {fileID: 11400000, guid: 679dc582091c5434eaa94e98d02fe237, type: 2}
-    amount: 1
-  - item: {fileID: 11400000, guid: f8f663202a659d74d86be428ab7dbe22, type: 2}
-    amount: 1

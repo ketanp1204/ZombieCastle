@@ -1947,7 +1947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a3a58e62498a9459496436bf5d2bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectData: {fileID: 11400000, guid: 37c58e93a604ce545bb0be87c15be717, type: 2}
+  objectData: {fileID: 11400000, guid: cc33cf80b24545248bdbe3a650d9e9ab, type: 2}
   imageDisplayGO: {fileID: 0}
   descBoxItemReceivedSound: 0
 --- !u!114 &557817105
@@ -3175,25 +3175,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc497633a5bc80b45a8c2a7bb83602de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canAttack: 0
-  isAttacking: 0
-  attack1Damage: 1
+  attackDamage: 2
   attackRepeatTime: 1
+  canAttack: 0
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 4096
   healthBar: {fileID: 57588781}
+  bloodParticlesStartPosition: {fileID: 855262723}
   attackHitboxAnimator: {fileID: 1437078392}
   attackHitbox: {fileID: 1437078389}
   hitboxCollider: {fileID: 1437078390}
-  bloodParticlesStartPosition: {fileID: 855262723}
   maxHealth: 100
   destroyDelayAfterDeath: 5
   pushDistanceOnHit: 2
   damageMultiplier: 0.25
   zombieType: 0
-  IsDead: 0
-  takingDamage: 0
 --- !u!114 &985694134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3207,7 +3204,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackStartDistance: 1.2
-  isAttacking: 0
   facingRight: 1
   pathUpdateSeconds: 0.5
   followPath: 0
@@ -4902,25 +4898,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc497633a5bc80b45a8c2a7bb83602de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canAttack: 0
-  isAttacking: 0
-  attack1Damage: 1
+  attackDamage: 2
   attackRepeatTime: 1
+  canAttack: 0
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 4096
   healthBar: {fileID: 1922185906}
+  bloodParticlesStartPosition: {fileID: 1428165385}
   attackHitboxAnimator: {fileID: 1767613697}
   attackHitbox: {fileID: 1767613694}
   hitboxCollider: {fileID: 1767613695}
-  bloodParticlesStartPosition: {fileID: 1428165385}
   maxHealth: 100
   destroyDelayAfterDeath: 5
   pushDistanceOnHit: 2
   damageMultiplier: 0.25
   zombieType: 0
-  IsDead: 0
-  takingDamage: 0
 --- !u!114 &1465528656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4934,7 +4927,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackStartDistance: 1.2
-  isAttacking: 0
   facingRight: 1
   pathUpdateSeconds: 0.5
   followPath: 0
@@ -5851,7 +5843,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653253752}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -5998,8 +5990,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 1.6659594, y: -1.546335}
-      - {x: -1.86, y: -1.5463346}
-      - {x: -0.1, y: 0.24982297}
+      - {x: -2.13, y: -1.5463346}
+      - {x: 0.18, y: 0.24982297}
       - {x: 1.6768289, y: 0.2513043}
 --- !u!1 &1718763708
 GameObject:
@@ -7083,25 +7075,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc497633a5bc80b45a8c2a7bb83602de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canAttack: 0
-  isAttacking: 0
-  attack1Damage: 1
+  attackDamage: 2
   attackRepeatTime: 1
+  canAttack: 0
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 4096
   healthBar: {fileID: 1738266923}
+  bloodParticlesStartPosition: {fileID: 1450572371}
   attackHitboxAnimator: {fileID: 1349520091}
   attackHitbox: {fileID: 1349520088}
   hitboxCollider: {fileID: 1349520089}
-  bloodParticlesStartPosition: {fileID: 1450572371}
   maxHealth: 100
   destroyDelayAfterDeath: 5
   pushDistanceOnHit: 2
   damageMultiplier: 0.25
   zombieType: 0
-  IsDead: 0
-  takingDamage: 0
 --- !u!114 &1856631325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7115,7 +7104,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackStartDistance: 1.2
-  isAttacking: 0
   facingRight: 1
   pathUpdateSeconds: 0.5
   followPath: 0
@@ -7655,7 +7643,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackStartDistance: 1.2
-  isAttacking: 0
   facingRight: 1
   pathUpdateSeconds: 0.5
   followPath: 0
@@ -7703,25 +7690,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc497633a5bc80b45a8c2a7bb83602de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canAttack: 0
-  isAttacking: 0
-  attack1Damage: 1
+  attackDamage: 2
   attackRepeatTime: 1
+  canAttack: 0
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 4096
   healthBar: {fileID: 345487652}
+  bloodParticlesStartPosition: {fileID: 1797338852}
   attackHitboxAnimator: {fileID: 1839617347}
   attackHitbox: {fileID: 1839617344}
   hitboxCollider: {fileID: 1839617346}
-  bloodParticlesStartPosition: {fileID: 1797338852}
   maxHealth: 100
   destroyDelayAfterDeath: 5
   pushDistanceOnHit: 2
   damageMultiplier: 0.25
   zombieType: 0
-  IsDead: 0
-  takingDamage: 0
 --- !u!1 &1875592066
 GameObject:
   m_ObjectHideFlags: 0
@@ -8853,15 +8837,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2162534629170683288, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_Size.x
-      value: 2.0962963
+      value: 2.651852
       objectReference: {fileID: 0}
     - target: {fileID: 2162534629170683288, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_Size.y
-      value: 4.540741
+      value: 4.6518517
       objectReference: {fileID: 0}
     - target: {fileID: 2162534629170683288, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578229857420202208, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
+      propertyPath: axeAttackRepeatTime
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3736767665891185551, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_RootOrder

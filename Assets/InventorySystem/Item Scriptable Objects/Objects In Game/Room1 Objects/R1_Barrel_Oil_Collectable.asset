@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a51e6454ae2d64ca8d0cf60f9bd7f8, type: 3}
-  m_Name: R1_Barrel
+  m_Name: R1_Barrel_Oil_Collectable
   m_EditorClassIdentifier: 
   itemName: Barrel
   itemDescription: Some oil that I collected.
@@ -18,7 +18,7 @@ MonoBehaviour:
   sceneName: Room1
   hasPlayerComment: 1
   playerComments:
-  - There is some oil in it.
+  - I can collect some oil and soak the torch in it and light it up.
   inventoryItemName: Oil
   inventorySprite: {fileID: 21300000, guid: b048663e29d70874f9cee42cb6e9ac7e, type: 3}
   canCombineWithAdditionalItem1: 1

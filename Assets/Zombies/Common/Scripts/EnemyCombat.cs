@@ -16,43 +16,38 @@ public class EnemyCombat : MonoBehaviour
         Zombie4
     }
 
-    [Header("Attack 1 Attributes")]
+    // Public attack variables
+    [Header("Attack Attributes")]
+    public int attackDamage;     
+    public float attackRepeatTime;      
+
     [HideInInspector]
     public bool canAttack = false;
-    [HideInInspector]
-    public bool isAttacking = false;
-    public int attack1Damage = 20;      // Damage caused to enemy
-    public float attackRepeatTime;      // Attack rate of enemy
 
-    // Private References
+    // Private references
     private Animator animator;
     private EnemyAI enemyAI;
 
+    // Public references
     [Header("References")]
     public LayerMask playerLayerMask;
     public HealthBar healthBar;
+    public Transform bloodParticlesStartPosition;
     public Animator attackHitboxAnimator;
     public GameObject attackHitbox;
     public BoxCollider2D hitboxCollider;
-    public Transform bloodParticlesStartPosition;
 
-    // Private Variables
+    // Private general variables
     private int currentHealth;
+    private Task attackTask = null;
 
-    // Public variables
+    // Public general variables
     [Header("Enemy Attributes")]
     public int maxHealth;
     public float destroyDelayAfterDeath = 3f;
     public float pushDistanceOnHit;
     public float damageMultiplier = 1f;
-
     public ZombieTypes zombieType;
-
-    // Public variables hidden from Inspector
-    [HideInInspector]
-    public bool IsDead = false;
-    [HideInInspector]
-    public bool takingDamage = false;
 
     // Death Event
     public event Action<EnemyCombat> OnDeath;
@@ -78,7 +73,16 @@ public class EnemyCombat : MonoBehaviour
 
     public void StopAttack()
     {
-        canAttack = false;
+        if (canAttack == true)
+        {
+            canAttack = false;
+
+            if (attackTask != null)
+            {
+                attackTask.Stop();
+                attackTask = null;
+            }
+        }
     }
 
     public void InvokeAttack()
@@ -86,10 +90,15 @@ public class EnemyCombat : MonoBehaviour
         canAttack = true;
         animator = GetComponent<Animator>();
 
-        if (!isAttacking && !IsDead)
+        if (enemyAI.enemyState != EnemyAI.EnemyState.Attacking && enemyAI.enemyState != EnemyAI.EnemyState.Dead)
         {
-            isAttacking = true;
-            StartCoroutine(Attack());
+            if (attackTask != null)
+            {
+                attackTask.Stop();
+                attackTask = null;
+            }
+
+            attackTask = new Task(Attack());
         }
     }
 
@@ -99,26 +108,27 @@ public class EnemyCombat : MonoBehaviour
 
         while (canAttack && healthWhenAttackStarted == currentHealth)
         {
-            if (IsDead)
+            enemyAI.enemyState = EnemyAI.EnemyState.Attacking;
+
+            if (enemyAI.enemyState == EnemyAI.EnemyState.Dead)
             {
                 canAttack = false;
-                isAttacking = false;
                 yield break;
             }
 
             // Play attack animation
             animator.SetTrigger("Attack");
             attackHitboxAnimator.enabled = true;
-            //attackHitboxAnimator.SetTrigger("Attack");
             attackHitboxAnimator.SetBool("IsAttacking", true);
+
             yield return new WaitForSeconds(attackRepeatTime);
         }
-        isAttacking = false;
+        enemyAI.enemyState = EnemyAI.EnemyState.Chasing;
     }
 
-    public void TakeDamage(Transform playerPos, int damage)
+    public void TakeDamage(Transform playerPos, int damageAmount)
     {
-        if (!IsDead)
+        if (enemyAI.enemyState != EnemyAI.EnemyState.Dead)
         {
             // Create blood particles
             GameObject bloodParticles = Instantiate(GameAssets.instance.bloodParticles, bloodParticlesStartPosition);
@@ -133,9 +143,7 @@ public class EnemyCombat : MonoBehaviour
             }
             StartCoroutine(DestroyGameObjectAfterDelay(bloodParticles, 5f));
 
-            // Set enemy taking damage bool to true to stop attacks
-            takingDamage = true;
-
+            // Set damage multiplier
             if (Player.KnifeDrawn() && zombieType != ZombieTypes.Zombie1)
             {
                 damageMultiplier = 0.05f;
@@ -146,13 +154,16 @@ public class EnemyCombat : MonoBehaviour
             }
 
             // Reduce health
-            currentHealth -= (int)Mathf.Floor(damage * damageMultiplier);
+            currentHealth -= (int)Mathf.Floor(damageAmount * damageMultiplier);
 
             // Update Health Bar
             healthBar.SetHealth(currentHealth);
 
             // Push enemy in hit direction
             StartCoroutine(PushEnemyInHitDirection(playerPos));
+
+            // Stop attack task
+            StopAttack();
 
             // Play hurt animation
             animator.SetTrigger("Hurt");
@@ -171,7 +182,10 @@ public class EnemyCombat : MonoBehaviour
 
     private IEnumerator PushEnemyInHitDirection(Transform playerPos)
     {
+        // Get rigidbody
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        // Set enemy state to taking damage
         enemyAI.enemyState = EnemyAI.EnemyState.TakingDamage;
 
         if (playerPos.position.x < transform.position.x)
@@ -179,28 +193,30 @@ public class EnemyCombat : MonoBehaviour
             // Push enemy to the right
             rb.velocity = new Vector2(pushDistanceOnHit, rb.velocity.y);
             yield return new WaitForSeconds(0.5f);
-            takingDamage = false;
         }
         else
         {
             // Push enemy to the left
             rb.velocity = new Vector2(-pushDistanceOnHit, rb.velocity.y);
             yield return new WaitForSeconds(0.5f);
-            takingDamage = false;
         }
 
-        enemyAI.enemyState = EnemyAI.EnemyState.Attacking;
+        // Set enemy state to chasing
+        enemyAI.enemyState = EnemyAI.EnemyState.Chasing;
     }
 
     void Die()
     {
-        IsDead = true;
+        // Set enemy state to dead
+        enemyAI.enemyState = EnemyAI.EnemyState.Dead;
 
-        // Play die animation
+        // Stop attack task
+        StopAttack();
+
+        // Set die animation parameter
         animator.SetBool("IsDead", true);
 
         // Stop pathfinding
-        EnemyAI enemyAI = GetComponent<EnemyAI>();
         enemyAI.followPath = false;
         enemyAI.StopMovement();
 
@@ -221,6 +237,7 @@ public class EnemyCombat : MonoBehaviour
 
         enemyAI.enemyState = EnemyAI.EnemyState.Dead;
 
+        // Destroy enemy after delay
         StartCoroutine(DestroyGameObjectAfterDelay(gameObject, destroyDelayAfterDeath));
     }
 

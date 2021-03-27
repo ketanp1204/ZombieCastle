@@ -14,7 +14,7 @@ public class DamageThePlayer : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            PlayerCombat.instance.TakeDamage(transform.parent.transform, transform.GetComponentInParent<EnemyCombat>().attack1Damage);
+            PlayerCombat.instance.TakeDamage(transform.parent.transform, transform.GetComponentInParent<EnemyCombat>().attackDamage);
 
             if (PlayerStats.IsDead)
                 collision.enabled = false;

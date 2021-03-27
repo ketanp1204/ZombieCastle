@@ -18,6 +18,7 @@ public class PC_Then_Inventory_Object : ItemObject
     public string[] playerComments;                                 // String array - Comments of the player on interaction
 
     [Header("Inventory Configuration")]
+    public bool destroyFromSceneAfterAddingToInventory;             // Bool - Used to remove the display of the object from scene after interaction
     public string inventoryItemName;                                // String - Name to be used in the inventory box
     public Sprite inventorySprite;                                  // Sprite - Sprite for the object in the inventory
     public bool canCombineWithAdditionalItem1;                      // Bool - Whether this item can be combined with additionalItem1

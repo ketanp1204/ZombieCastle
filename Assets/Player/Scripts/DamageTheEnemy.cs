@@ -18,17 +18,12 @@ public class DamageTheEnemy : MonoBehaviour
         {
             damageAmount = PlayerCombat.instance.axeDamage;
         }
-        
-        if (attackWeapon == PlayerCombat.WeaponTypes.Sword)
-        {
-            // TODO: add sword damage int when ready
-        }
 
         if (collision.CompareTag("Enemy"))
         {
             collision.GetComponentInParent<EnemyCombat>().TakeDamage(transform.parent.transform, damageAmount);
             
-            if (collision.GetComponentInParent<EnemyCombat>().IsDead)
+            if (collision.GetComponentInParent<EnemyAI>().enemyState == EnemyAI.EnemyState.Dead)
                 collision.enabled = false;
         }
     }

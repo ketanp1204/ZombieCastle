@@ -43,9 +43,9 @@ public class RangedEnemyAI : MonoBehaviour
 
 
     // Private variables
+    private float distanceToPlayer;
     private Path path;
     private int currentWaypoint = 0;
-    private float distanceToPlayer;
     private Task pathUpdateTask = null;
 
 
@@ -152,7 +152,10 @@ public class RangedEnemyAI : MonoBehaviour
 
             animator.SetBool("ChasingPlayer", false);
 
-            rangedEnemyCombat.InvokeAttack();
+            if (enemyState != EnemyState.Dead)
+            {
+                rangedEnemyCombat.InvokeAttack();
+            }
             StartCoroutine(WaitForPlayerToMoveAway());
         }
         else // Chasing

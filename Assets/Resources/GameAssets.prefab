@@ -135,3 +135,4 @@ MonoBehaviour:
   - Betty....?
   - I need to find her quickly and get out of this place.
   playerStartInventory: {fileID: 11400000, guid: 2b3398ac389869d4e923b3387c76be84, type: 2}
+  r1_barrel_oil_collectable: {fileID: 11400000, guid: 37c58e93a604ce545bb0be87c15be717, type: 2}

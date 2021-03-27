@@ -93,6 +93,9 @@ public class Room3AccessBehaviour : MonoBehaviour
                             DialogueBox.instance.FillSentences(dialogueIfTorchAddedButNotOiled);
                             DialogueBox.instance.SetLobbyRoom3DoorOpenFlag();
                             DialogueBox.instance.StartDialogueDisplay();
+
+                            // Unlock barrel oil collection
+                            GameData.lobby_tried_opening_r3_door_with_torch = true;
                         }
                         else
                         {

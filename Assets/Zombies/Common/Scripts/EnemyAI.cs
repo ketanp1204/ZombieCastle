@@ -28,9 +28,8 @@ public class EnemyAI : MonoBehaviour
     // Public Variables
     public float attackStartDistance;
     [HideInInspector]
-    public bool isAttacking;
-    [HideInInspector]
     public bool facingRight = true;
+
     [Header("Pathfinding")]
     public float pathUpdateSeconds;
     [HideInInspector]
@@ -39,15 +38,16 @@ public class EnemyAI : MonoBehaviour
     [Header("Physics")]
     public float speed = 60f;
     public float nextWaypointDistance = 3f;
-    public float moveForceMultiplier = 19f;
-
-    [HideInInspector]
+    public float moveForceMultiplier = 2.5f;
+    
     public EnemyState enemyState;
+
 
     // Private variables
     private float distanceToPlayer;
     private Path path;
     private int currentWaypoint = 0;
+    private Task pathUpdateTask = null;
 
 
     // Start is called before the first frame update
@@ -68,29 +68,47 @@ public class EnemyAI : MonoBehaviour
     private void Initialize()
     {
         followPath = false;
-        isAttacking = false;
 
         enemyState = EnemyState.Idle;
     }
 
     public void StartChasingPlayer()
     {
-        enemyState = EnemyState.Chasing;
-        
+        if (pathUpdateTask != null)
+        {
+            pathUpdateTask.Stop();
+            pathUpdateTask = null;
+        }
+
         followPath = true;
-        InvokeRepeating("UpdatePath", 0f, pathUpdateSeconds);
+
+        pathUpdateTask = new Task(UpdatePathfindingPath());
     }
 
-    void UpdatePath()
+    private IEnumerator UpdatePathfindingPath()
     {
-        if (followPath && !enemyCombat.IsDead && !PlayerStats.IsDead)
+        while (true)
         {
-            target = Player.instance.pathfindingTarget;
-
-            if (seeker.IsDone())
+            if (followPath && enemyState != EnemyState.Dead && enemyState != EnemyState.TakingDamage && !PlayerStats.IsDead)
             {
-                enemyCombat.StopAttack();
-                seeker.StartPath(rb.position, target.position, OnPathComplete);
+                // Get player pathfinding target transform
+                target = Player.instance.pathfindingTarget;
+
+                enemyState = EnemyState.Chasing;
+
+                animator.SetBool("ChasingPlayer", true);
+
+                if (seeker.IsDone())
+                {
+                    // rangedEnemyCombat.StopAttack();
+                    seeker.StartPath(rb.position, target.position, OnPathComplete);
+                }
+
+                yield return new WaitForSeconds(pathUpdateSeconds);
+            }
+            else
+            {
+                break;
             }
         }
     }
@@ -106,7 +124,7 @@ public class EnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(followPath && !enemyCombat.IsDead && !PlayerStats.IsDead && enemyState != EnemyState.TakingDamage)
+        if(followPath && enemyState != EnemyState.Dead && enemyState != EnemyState.TakingDamage && !PlayerStats.IsDead)
             FollowPath();
 
         if (PlayerStats.IsDead)
@@ -118,33 +136,40 @@ public class EnemyAI : MonoBehaviour
     private void FollowPath()
     {
         if (path == null)
+        {
             return;
+        }
 
         Vector2 direction;
         Vector2 movement;
 
-        float distanceToPlayer = Vector2.Distance(transform.position, target.position);
+        distanceToPlayer = Vector2.Distance(transform.position, target.position);
 
         // Reached end of path
         if (currentWaypoint >= path.vectorPath.Count || distanceToPlayer < attackStartDistance)
         {
             followPath = false;
-            isAttacking = true;
             movement = Vector2.zero;
 
-            enemyState = EnemyState.Attacking;
-            enemyCombat.InvokeAttack();
+            animator.SetBool("ChasingPlayer", false);
+
+            if (enemyState != EnemyState.Dead)
+            {
+                enemyCombat.InvokeAttack();
+            }
             StartCoroutine(WaitForPlayerToMoveAway());
         } 
         else // Chasing
         {
+            enemyCombat.StopAttack();
+
             direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
 
             movement.x = direction.x;
             movement.y = 0f;
 
             // Move the enemy
-            if (!enemyCombat.takingDamage)
+            if (enemyState != EnemyState.TakingDamage)
             {
                 rb.velocity = new Vector2(movement.x * speed * Time.deltaTime, rb.velocity.y);
             }
@@ -191,6 +216,6 @@ public class EnemyAI : MonoBehaviour
             distanceToPlayer = Vector2.Distance(transform.position, target.position);
         }
 
-        followPath = true;
+        StartChasingPlayer();
     }
 }

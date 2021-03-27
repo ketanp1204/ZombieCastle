@@ -47,7 +47,8 @@ public class DialogueBox : MonoBehaviour
     private ItemObject currentItem = null;                              // ItemObject - The current ItemObject which has the player comment response
 
     private GameObject pcThenInventoryGO = null;                        // GameObject - For PC_Then_Inventory objects, this will be used to remove the object from the scene after dialogue is over
-    private GameObject imageDisplayGO = null;                           // GameObject - For PC_Then_Inventory_objects, this will be used to remove the image display from the scene after dialogue is over
+    private GameObject imageDisplayGO = null;                           // GameObject - For PC_Then_Inventory objects, this will be used to remove the image display from the scene after dialogue is over
+    private bool destroyPCThenInvObjAfterAdd = false;                   // Bool - For PC_Then_Inventory objects, whether to destroy the display or not
 
     private void Awake()
     {
@@ -200,8 +201,15 @@ public class DialogueBox : MonoBehaviour
                 // Remove the object from the scene
                 if (pcThenInventoryGO != null)
                 {
-                    Destroy(pcThenInventoryGO);
-                    Destroy(imageDisplayGO);
+                    if (destroyPCThenInvObjAfterAdd)
+                    {
+                        Destroy(pcThenInventoryGO);
+                        Destroy(imageDisplayGO);
+
+                        pcThenInventoryGO = null;
+                        imageDisplayGO = null;
+                        destroyPCThenInvObjAfterAdd = false;
+                    }
                 }
 
             }
@@ -259,10 +267,11 @@ public class DialogueBox : MonoBehaviour
         }
     }
 
-    public void SetPCThenInventoryGameObject(GameObject pcThenInv, GameObject displayGO)
+    public void SetPCThenInventoryGameObject(GameObject pcThenInv, GameObject displayGO, bool deleteObjectAfterAdd)
     {
         pcThenInventoryGO = pcThenInv;
         imageDisplayGO = displayGO;
+        destroyPCThenInvObjAfterAdd = deleteObjectAfterAdd;
     }
 
     public void SetTreasureBoxScript(TreasureBoxInteraction script)
