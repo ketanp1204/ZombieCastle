@@ -66,19 +66,23 @@ public class PlayerTopDown : MonoBehaviour
         {
             instance = this;
         }
+    }
 
+    private void Start()
+    {
         SetReferences();
         Initialize();
+        ResetAnimatorParameters();
 
         if (PlayerStats.isFirstScene)
         {
             StopMovement();
         }
-    }
-
-    void OnEnable()
-    {
-        ResetAnimatorParameters();
+        else
+        {
+            HandleSceneChanges();
+        }
+        
     }
 
     // Store References
@@ -131,10 +135,27 @@ public class PlayerTopDown : MonoBehaviour
         animator.SetFloat("Magnitude", 0f);         // No keyboard input
         animator.SetFloat("FaceDir", 1f);           // Facing right
         animator.SetBool("IsDead", false);          // Not dead
-        animator.SetBool("AxeDrawn", false);        // Axe unequipped
-        animator.SetBool("KnifeDrawn", false);      // Knife unequipped
-        animator.SetBool("SwordDrawn", false);      // Sword unequipped
-        animator.SetBool("HoldingTorch", false);    // Not holding torch
+    }
+
+    private void HandleSceneChanges()
+    {
+        if (GameData.sceneName == LevelManager.SceneNames.Room1)
+        {
+            transform.position = new Vector3(-5.34f, -3.91f, 0f);
+        }
+        else if (GameData.sceneName == LevelManager.SceneNames.Room2)
+        {
+            transform.position = new Vector3(-2.71f, -1.88f, 0f);
+        }
+        else if (GameData.sceneName == LevelManager.SceneNames.Room3)
+        {
+            transform.position = new Vector3(2.84f, -2.01f, 0f);
+        }
+        else if (GameData.sceneName == LevelManager.SceneNames.Room5)
+        {
+            // TODO: remove later 
+            transform.position = new Vector3(5.54f, -3.97f, 0f);
+        }
     }
 
     public void DisableSelectionCollider()

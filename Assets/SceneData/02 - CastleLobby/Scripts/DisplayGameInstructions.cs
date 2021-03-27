@@ -18,7 +18,9 @@ public class DisplayGameInstructions : MonoBehaviour
     [TextArea(2, 5)]
     public string toolbarInstructionText;
     [TextArea(2, 5)]
-    public string inventoryBoxInstructionText;
+    public string inventoryInstruction1;
+    [TextArea(2, 5)]
+    public string inventoryInstruction2;
     [TextArea(2, 5)]
     public string interactionInstructionText;
     [TextArea(2, 5)]
@@ -103,8 +105,19 @@ public class DisplayGameInstructions : MonoBehaviour
 
 
 
-        // Show inventory box instruction
-        popupTextUI.text = inventoryBoxInstructionText;
+        // Show inventory box instruction 1
+        popupTextUI.text = inventoryInstruction1;
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f));
+
+        // Hide instruction text
+        yield return new WaitForSeconds(4f);
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f));
+        yield return new WaitForSeconds(0.6f);
+
+
+
+        // Show inventory box instruction 2
+        popupTextUI.text = inventoryInstruction2;
         new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f));
 
         // Hide instruction text

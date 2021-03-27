@@ -13976,7 +13976,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementInstructionText: W/S/A/D - Move Around
   toolbarInstructionText: T - Open and Close Toolbar
-  inventoryBoxInstructionText: Q - Open and Close Inventory Box
+  inventoryInstruction1: Q - Open and Close Inventory Box
+  inventoryInstruction2: You can drag and drop certain items and weapons in the Inventory
+    to combine them.
   interactionInstructionText: E - Interact with Objects and Doors
   moreControlsRedirectText: For more controls, open the Settings Menu from the Toolbar
 --- !u!4 &1532250947
@@ -17129,11 +17131,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1708810881528424787, guid: 1f50c491800617b41b67ecf3d6634099, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1500
+      value: 900
       objectReference: {fileID: 0}
     - target: {fileID: 1708810881528424787, guid: 1f50c491800617b41b67ecf3d6634099, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 1708810881528424787, guid: 1f50c491800617b41b67ecf3d6634099, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17165,11 +17167,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1708810881528424787, guid: 1f50c491800617b41b67ecf3d6634099, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -827
+      value: -493
       objectReference: {fileID: 0}
     - target: {fileID: 1708810881528424787, guid: 1f50c491800617b41b67ecf3d6634099, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 82
+      value: 91
       objectReference: {fileID: 0}
     - target: {fileID: 1708810881528424787, guid: 1f50c491800617b41b67ecf3d6634099, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

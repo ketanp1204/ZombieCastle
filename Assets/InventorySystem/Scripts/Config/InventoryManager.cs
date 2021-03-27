@@ -351,13 +351,20 @@ public class InventoryManager : MonoBehaviour
         foreach (Transform child in weaponGridContainer.transform)
         {
             WeaponSlotInteraction instance = child.GetComponent<WeaponSlotInteraction>();
-            instance.HideSelectedBackground();
             instance.DisableInteraction();
         }
         foreach (Transform child in itemGridContainer.transform)
         {
             ItemSlotInteraction instance = child.GetComponent<ItemSlotInteraction>();
-            instance.HideSelectedBackground();
+            instance.DisableInteraction();
+        }
+    }
+
+    public void DisableAllWeaponInteractions()
+    {
+        foreach (Transform child in weaponGridContainer.transform)
+        {
+            WeaponSlotInteraction instance = child.GetComponent<WeaponSlotInteraction>();
             instance.DisableInteraction();
         }
     }

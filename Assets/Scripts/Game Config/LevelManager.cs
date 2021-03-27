@@ -5,6 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public enum SceneNames
+    {
+        Lobby,
+        Room1,
+        Room2,
+        Room3,
+        Room5
+    }
+
     public static LevelManager instance;
 
     public float transitionTime = 1f;               // Time for which the transition fade animation runs

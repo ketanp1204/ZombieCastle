@@ -30,53 +30,43 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
     private bool slotSelected = false;
     private bool weaponWasHighlighted = false;
 
+    // To highlight weapon before combat starts in room 1
     private bool highlightWeaponBeforeCombatStartFlag = false;
-
-    
-
 
     // Treasure box interaction
     private bool isTreasureBoxInteraction = false;
     private TreasureBoxInteraction treasureBoxInteractionScript = null;
 
+    /// <summary>
+    /// Slot interaction control
+    /// </summary>
+
+
     public void DisableInteraction()
     {
         canInteract = false;
+
+        // Hide selected background
+        HideSelectedBackground();
+
+        // Partially show image icon
+        PartiallyShowImageIcon();
     }
 
     public void EnableInteraction()
     {
         canInteract = true;
+
+        FullyShowImageIcon();
     }
 
-    public void SetWeaponToSelected()
-    {
-        if (!slotSelected)
-        {
-            slotSelected = true;
-            Color c = slotSelectedBackground.color;
-            c.a = 1f;
-            slotSelectedBackground.color = c;
-        }
-    }
-
-    public void UnselectWeapon()
-    {
-        if (slotSelected)
-        {
-            slotSelected = false;
-            Color c = slotSelectedBackground.color;
-            c.a = 0f;
-            slotSelectedBackground.color = c;
-        }
-    }
-
+    /// <summary>
+    /// UI Utilities
+    /// </summary>
     public void Highlight()
     {
         weaponWasHighlighted = true;
-        Color c = slotSelectedBackground.color;
-        c.a = 0.4f;
-        slotSelectedBackground.color = c;
+        PartiallyShowSelectedBackground();
     }
 
     public void HideSelectedBackground()
@@ -85,6 +75,39 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
         c.a = 0f;
         slotSelectedBackground.color = c;
     }
+
+    public void PartiallyShowSelectedBackground()
+    {
+        Color c = slotSelectedBackground.color;
+        c.a = 0.4f;
+        slotSelectedBackground.color = c;
+    }
+
+    public void FullyShowSelectedBackground()
+    {
+        Color c = slotSelectedBackground.color;
+        c.a = 1f;
+        slotSelectedBackground.color = c;
+    }
+
+    public void PartiallyShowImageIcon()
+    {
+        Color c = itemIcon.color;
+        c.a = 0.3f;
+        itemIcon.color = c;
+    }
+
+    public void FullyShowImageIcon()
+    {
+        Color c = itemIcon.color;
+        c.a = 1f;
+        itemIcon.color = c;
+    }
+
+    
+    /// <summary>
+    /// Special interaction behaviour
+    /// </summary>
 
     public void SetTreasureBoxInteractionFlag()
     {
@@ -107,6 +130,11 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
         additionalItemScriptableObjectUnderDraggingWeapon = null;
     }
 
+
+    /// <summary>
+    /// Mouse interaction of weapon slot
+    /// </summary>
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!InventoryManager.instance.isDraggingItem && !InventoryManager.instance.isDraggingWeapon)
@@ -119,12 +147,10 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
                 // Play hover sound
                 AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryMouseHover);
 
-                // Partially fade in slot selected background
+                // Partially show slot selected background
                 if (!slotSelected)
                 {
-                    Color c = slotSelectedBackground.color;
-                    c.a = 0.4f;
-                    slotSelectedBackground.color = c;
+                    PartiallyShowSelectedBackground();
                 }
             }
         }
@@ -142,9 +168,7 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
                 // Hide slot selected background if not selected
                 if (!slotSelected)
                 {
-                    Color c = slotSelectedBackground.color;
-                    c.a = 0f;
-                    slotSelectedBackground.color = c;
+                    HideSelectedBackground();
                 }
             }
         }
@@ -236,6 +260,11 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
         }
     }
 
+
+    /// <summary>
+    /// Drag and drop behaviour
+    /// </summary>
+
     public void OnDrag(PointerEventData eventData)
     {
         if (canInteract)
@@ -303,6 +332,10 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
         InventoryManager.instance.draggingWeaponSlotScript = null;
         itemIcon.gameObject.transform.localPosition = Vector3.zero;
     }
+
+    /// <summary>
+    /// Weapon equip/unequip
+    /// </summary>
 
     private void EquipSelectedWeapon()
     {
@@ -393,6 +426,24 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
                     PlayerTopDown.EquipSword();
                 }
             }
+        }
+    }
+
+    public void SetWeaponToSelected()
+    {
+        if (!slotSelected)
+        {
+            slotSelected = true;
+            FullyShowSelectedBackground();
+        }
+    }
+
+    public void UnselectWeapon()
+    {
+        if (slotSelected)
+        {
+            slotSelected = false;
+            HideSelectedBackground();
         }
     }
 }

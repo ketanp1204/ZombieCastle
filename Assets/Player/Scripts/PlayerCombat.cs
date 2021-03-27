@@ -217,8 +217,6 @@ public class PlayerCombat : MonoBehaviour
                 attackTask = null;
             }
 
-            Debug.Log("invoke knife attack");
-
             attackTask = new Task(AttackKnife());
         }
     }

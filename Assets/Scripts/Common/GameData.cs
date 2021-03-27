@@ -37,11 +37,15 @@ public static class GameData
     // Room 5
     public static bool r5_zombie3CombatCompleted;
 
+    // Scene loading
+    public static LevelManager.SceneNames sceneName;
+
     public static void Initialize()
     {
         currentPlayerInventory = GameAssets.instance.playerStartInventory;
         UnsetBools();
         isInitialized = true;
+        sceneName = LevelManager.SceneNames.Lobby;
     }
 
     public static void ResetData()
@@ -50,6 +54,7 @@ public static class GameData
         {
             isInitialized = false;
             currentPlayerInventory = null;
+            sceneName = LevelManager.SceneNames.Lobby;
             UnsetBools();
         }
     }
@@ -60,7 +65,7 @@ public static class GameData
         lobby_keyCollected = false;
         lobby_paperRead = false;
         lobby_r5_stairsUnlocked = false;
-        lobby_tried_opening_r3_door_with_torch = true;
+        lobby_tried_opening_r3_door_with_torch = false;
 
         r1_combatCompleted = false;
         r1_mazePuzzleCompleted = false;

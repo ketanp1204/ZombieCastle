@@ -80,9 +80,12 @@ public class Player : MonoBehaviour
         }
     }
 
-    void OnEnable()
+    private void Start()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        SetReferences();
+        Initialize();
+        ResetAnimatorParameters();
+        HandleSceneChanges();
     }
 
     // Store References
@@ -100,7 +103,6 @@ public class Player : MonoBehaviour
     // Default Values
     public void Initialize()
     {
-        
         movePlayer = true;
         movementSpeed = walkSpeed;
 
@@ -149,22 +151,39 @@ public class Player : MonoBehaviour
         animator.SetBool("HoldingTorch", false);    // Not holding torch
     }
 
-    // Handle events after a new scene is loaded
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private void HandleSceneChanges()
     {
-        SetReferences();
-        Initialize();
-        ResetAnimatorParameters();
-        
-        if (scene.name == "Room3")
+        Scene scene = SceneManager.GetActiveScene();
+
+        if (scene.name == "Room1")
         {
+            GameData.sceneName = LevelManager.SceneNames.Room1;
+
+            torchGO.SetActive(false);
+            animator.SetBool("HoldingTorch", false);
+            isInRoom3 = false;
+        }
+        else if (scene.name == "Room2")
+        {
+            GameData.sceneName = LevelManager.SceneNames.Room2;
+
+            torchGO.SetActive(false);
+            animator.SetBool("HoldingTorch", false);
+            isInRoom3 = false;
+        }
+        else if (scene.name == "Room3")
+        {
+            GameData.sceneName = LevelManager.SceneNames.Room3;
+
             torchGO.SetActive(true);
             torchAnimator = transform.Find("Torch").GetComponent<Animator>();
             animator.SetBool("HoldingTorch", true);
             isInRoom3 = true;
-        }
-        else
+        }    
+        else if (scene.name == "Room5")
         {
+            GameData.sceneName = LevelManager.SceneNames.Room5;
+
             torchGO.SetActive(false);
             animator.SetBool("HoldingTorch", false);
             isInRoom3 = false;
@@ -193,6 +212,108 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    void FixedUpdate()
+    {
+        // Player movement
+        if (movePlayer)
+        {
+            if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && !takingDamage)
+            {
+                HandleMovement();
+
+                // Flip the player direction depending on where he is facing
+                FlipPlayerDirection();
+            }
+
+            // Handle attack input
+            HandleAttacks();
+        }
+    }
+
+    private void HandleMovement()
+    {
+        float horizontal;
+        horizontal = playerInput.horizontalInput;
+
+        movement.x = horizontal;
+        movement.y = 0f;
+
+        movement.Normalize();
+        rb.velocity = new Vector2(movement.x * movementSpeed * Time.deltaTime, rb.velocity.y);
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Magnitude", movement.magnitude);
+
+        if (isInRoom3)
+        {
+            torchAnimator.SetFloat("Magnitude", movement.magnitude);
+        }
+    }
+
+    private void FlipPlayerDirection()
+    {
+        if (!(PlayerStats.playerState == PlayerStats.PlayerState.Combat))
+        {
+            float horizontal = movement.x;
+            if (horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
+            {
+                facingRight = !facingRight;
+
+                if (facingRight)
+                {
+                    // Set animation parameter
+                    animator.SetFloat("FaceDir", 1f);
+
+                    if (isInRoom3)
+                    {
+                        // Set torch animator parameter
+                        torchAnimator.SetFloat("FaceDir", 1f);
+                    }
+                }
+                else
+                {
+                    // Set animation parameter
+                    animator.SetFloat("FaceDir", -1f);
+
+                    if (isInRoom3)
+                    {
+                        // Set torch animator parameter
+                        torchAnimator.SetFloat("FaceDir", -1f);
+                    }
+                }
+            }
+        }
+    }
+
+    private void HandleAttacks()
+    {
+        if (weaponEquippedDict[PlayerCombat.WeaponTypes.Axe])
+        {
+            if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
+            {
+                playerCombat.InvokeAxeAttack();
+                rb.velocity = Vector2.zero;
+            }
+        }
+        else if (weaponEquippedDict[PlayerCombat.WeaponTypes.Knife])
+        {
+            if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
+            {
+                playerCombat.InvokeKnifeAttack();
+                rb.velocity = Vector2.zero;
+            }
+        }
+        else if (weaponEquippedDict[PlayerCombat.WeaponTypes.Sword])
+        {
+            if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
+            {
+                // TODO: different behavior for magic potion + sword, fire elem + sword and sword without any powers
+            }
+        }
+    }
+
 
     public void DisableSelectionCollider()
     {
@@ -242,45 +363,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        // Player movement
-        if (movePlayer)
-        {
-            if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && !takingDamage)
-            {
-                HandleMovement();
-
-                // Flip the player direction depending on where he is facing
-                FlipPlayerDirection();
-            }
-
-            // Handle attack input
-            HandleAttacks();
-        }
-    }
-
-    private void HandleMovement()
-    {
-        float horizontal;
-        horizontal = playerInput.horizontalInput;
-
-        movement.x = horizontal;
-        movement.y = 0f;
-
-        movement.Normalize();
-        rb.velocity = new Vector2(movement.x * movementSpeed * Time.deltaTime, rb.velocity.y);
-        
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Magnitude", movement.magnitude);
-
-        if (isInRoom3)
-        {
-            torchAnimator.SetFloat("Magnitude", movement.magnitude);
-        }
-    }
-
     public void PlayFootStepSound()
     {
         AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PlayerFootStep);
@@ -294,68 +376,6 @@ public class Player : MonoBehaviour
     public void PlayLowHealthBreathingSound()
     {
         // TODO: add low health breathing sound
-    }
-
-    private void FlipPlayerDirection()
-    {
-        if (!(PlayerStats.playerState == PlayerStats.PlayerState.Combat))
-        {
-            float horizontal = movement.x;
-            if (horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
-            {
-                facingRight = !facingRight;
-
-                if (facingRight)
-                {
-                    // Set animation parameter
-                    animator.SetFloat("FaceDir", 1f);
-
-                    if (isInRoom3)
-                    {
-                        // Set torch animator parameter
-                        torchAnimator.SetFloat("FaceDir", 1f);
-                    }
-                }
-                else
-                {
-                    // Set animation parameter
-                    animator.SetFloat("FaceDir", -1f);
-
-                    if (isInRoom3)
-                    {
-                        // Set torch animator parameter
-                        torchAnimator.SetFloat("FaceDir", -1f);
-                    }
-                }
-            }
-        }
-    }
-
-    private void HandleAttacks()
-    {
-        if(weaponEquippedDict[PlayerCombat.WeaponTypes.Axe])
-        {
-            if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
-            {
-                playerCombat.InvokeAxeAttack();
-                rb.velocity = Vector2.zero;
-            }
-        }
-        else if (weaponEquippedDict[PlayerCombat.WeaponTypes.Knife])
-        {
-            if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
-            {
-                playerCombat.InvokeKnifeAttack();
-                rb.velocity = Vector2.zero;
-            }
-        }
-        else if (weaponEquippedDict[PlayerCombat.WeaponTypes.Sword])
-        {
-            if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
-            {
-                // TODO: different behavior for magic potion + sword, fire elem + sword and sword without any powers
-            }
-        }
     }
 
     public static void SetIdleState()

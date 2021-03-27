@@ -91,6 +91,8 @@ public class GameSession : MonoBehaviour
                 Destroy(GameObject.Find("Torch"));
                 Destroy(GameObject.Find("Torch_Image"));
             }
+
+            new Task(DisableInventoryWeaponInteractionAfterDelay(1f));
         }
     }
 
@@ -116,6 +118,16 @@ public class GameSession : MonoBehaviour
 
         // Reset LevelManager animation speed
         LevelManager.SetAnimatorSpeed(1f);
+    }
+
+    private IEnumerator DisableInventoryWeaponInteractionAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (InventoryManager.instance)
+        {
+            InventoryManager.instance.DisableAllWeaponInteractions();
+        }
     }
 
     private void OnApplicationQuit()
