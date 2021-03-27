@@ -11,6 +11,8 @@ public class R2_Combat : MonoBehaviour
     // Public References
     public GameObject zombieGameObjectsContainer;
 
+    public CinemachineVirtualCamera cinemachineCamera;
+
     // Private References
     private List<GameObject> zombieGameObjects;
 
@@ -36,6 +38,13 @@ public class R2_Combat : MonoBehaviour
     {
         // Disable this collider
         GetComponent<BoxCollider2D>().enabled = false;
+
+        // Set player camera to combat camera position
+        Player.instance.UpdateCombatCameraPosition(zombieGameObjects[0].transform);
+        cinemachineCamera.Follow = Player.instance.combatCameraPosition;
+
+        // Set player combat status
+        Player.SetCombatState();
 
         // Start chasing by the zombies after knife selected by player in the inventory box
         foreach (GameObject gameObject in zombieGameObjects)

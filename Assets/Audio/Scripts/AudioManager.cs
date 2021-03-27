@@ -211,27 +211,6 @@ public static class AudioManager
         {
             default:
                 return true;
-                /*
-            case Sound.PlayerAxeAttack:
-                if (soundTimerDictionary.ContainsKey(sound))
-                {
-                    float lastTimePlayed = soundTimerDictionary[sound];
-                    float playerAxeHitTimerMax = 0.1f;
-                    if (lastTimePlayed + playerAxeHitTimerMax < Time.time)
-                    {
-                        soundTimerDictionary[sound] = Time.time;
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                    return true;
-                }
-                */
         }
     }
 

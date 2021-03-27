@@ -79,41 +79,48 @@ public class Room3AccessBehaviour : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                // Hide door glow
-                glowEffect.enabled = false;
+                if (!GameData.lobby_opened_r3_door_with_torch)
+                {
+                    // Hide door glow
+                    glowEffect.enabled = false;
 
-                new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
+                    new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
 
-                if (DialogueBox.instance)
-                { 
-                    if (InventoryManager.instance)
+                    if (DialogueBox.instance)
                     {
-                        if (InventoryManager.instance.ContainsItem(lobbyTorchObject))
+                        if (InventoryManager.instance)
                         {
-                            DialogueBox.instance.FillSentences(dialogueIfTorchAddedButNotOiled);
-                            DialogueBox.instance.SetLobbyRoom3DoorOpenFlag();
-                            DialogueBox.instance.StartDialogueDisplay();
-
-                            // Unlock barrel oil collection
-                            GameData.lobby_tried_opening_r3_door_with_torch = true;
-                        }
-                        else
-                        {
-                            if (InventoryManager.instance.ContainsItem(torchWithOilObject))
+                            if (InventoryManager.instance.ContainsItem(lobbyTorchObject))
                             {
-                                torchWithOilAvailable = true;
-                                DialogueBox.instance.FillSentences(dialogueIfOiledTorchAvailable);
+                                DialogueBox.instance.FillSentences(dialogueIfTorchAddedButNotOiled);
                                 DialogueBox.instance.SetLobbyRoom3DoorOpenFlag();
                                 DialogueBox.instance.StartDialogueDisplay();
+
+                                // Unlock barrel oil collection
+                                GameData.lobby_tried_opening_r3_door_with_torch = true;
                             }
                             else
                             {
-                                DialogueBox.instance.FillSentences(dialogueIfTorchNotAddedToInventory);
-                                DialogueBox.instance.SetLobbyRoom3DoorOpenFlag();
-                                DialogueBox.instance.StartDialogueDisplay();
+                                if (InventoryManager.instance.ContainsItem(torchWithOilObject))
+                                {
+                                    torchWithOilAvailable = true;
+                                    DialogueBox.instance.FillSentences(dialogueIfOiledTorchAvailable);
+                                    DialogueBox.instance.SetLobbyRoom3DoorOpenFlag();
+                                    DialogueBox.instance.StartDialogueDisplay();
+                                }
+                                else
+                                {
+                                    DialogueBox.instance.FillSentences(dialogueIfTorchNotAddedToInventory);
+                                    DialogueBox.instance.SetLobbyRoom3DoorOpenFlag();
+                                    DialogueBox.instance.StartDialogueDisplay();
+                                }
                             }
                         }
                     }
+                }
+                else
+                {
+                    LoadRoom3();
                 }
             }
         }
@@ -123,14 +130,21 @@ public class Room3AccessBehaviour : MonoBehaviour
     {
         if (torchWithOilAvailable)
         {
-            // Hide door glow
-            glowEffect.enabled = false;
+            // Update this completed interaction in the GameData class
+            GameData.lobby_opened_r3_door_with_torch = true;
 
-            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.DoorOpen);
-
-            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
-            LevelManager.LoadSceneByName(sceneName);
+            LoadRoom3();
         }
     }
 
+    private void LoadRoom3()
+    {
+        // Hide door glow
+        glowEffect.enabled = false;
+
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.DoorOpen);
+
+        new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
+        LevelManager.LoadSceneByName(sceneName);
+    }
 }

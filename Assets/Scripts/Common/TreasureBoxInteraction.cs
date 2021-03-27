@@ -59,6 +59,35 @@ public class TreasureBoxInteraction : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         glowEffect = GetComponent<SpriteGlow.SpriteGlowEffect>();
         glowEffect.enabled = false;
+
+        // Check if treasure box has been already interacted with
+        if (roomIndex == RoomIndex.Room1)
+        {
+            if (GameData.r1_treasureBoxAxeCollected)
+            {
+                SetTreasureBoxSpriteToOpenAndDisableCollider();
+            }
+        }
+        else if (roomIndex == RoomIndex.Room2)
+        {
+            if (GameData.r2_treasureBoxMagicPotionCollected)
+            {
+                SetTreasureBoxSpriteToOpenAndDisableCollider();
+            }
+        }
+        else if (roomIndex == RoomIndex.Room3)
+        {
+            if (GameData.r3_treasureBoxFireElementCollected)
+            {
+                SetTreasureBoxSpriteToOpenAndDisableCollider();
+            }
+        }
+    }
+
+    private void SetTreasureBoxSpriteToOpenAndDisableCollider()
+    {
+        imageDisplayGO.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.treasureBoxOpenSprite;
+        DisableCollider();
     }
 
     public void StartInteractionBehaviour()
@@ -144,6 +173,9 @@ public class TreasureBoxInteraction : MonoBehaviour
                 // TODO: change to fire element received sound
                 DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(0.3f, fireElementScriptableObject, fireElementScriptableObject.playerComments, AudioManager.Sound.Null);
 
+                // Update this completed interaction in the GameData class
+                GameData.r3_treasureBoxFireElementCollected = true;
+
                 // Disable the treasure box's collider
                 DisableCollider();
             }
@@ -166,6 +198,9 @@ public class TreasureBoxInteraction : MonoBehaviour
             // Delete key from inventory
             InventoryManager.instance.DeleteInventoryItem(lobbyKeyScriptableObject);
 
+            // Update this completed interaction in the GameData class
+            GameData.r1_treasureBoxAxeCollected = true;
+
             // Disable the treasure box's collider
             DisableCollider();
         }
@@ -183,6 +218,9 @@ public class TreasureBoxInteraction : MonoBehaviour
 
             // Delete key from inventory
             InventoryManager.instance.DeleteInventoryItem(room2TreasureBoxKeyScriptableObject);
+
+            // Update this completed interaction in the GameData class
+            GameData.r2_treasureBoxMagicPotionCollected = true;
 
             // Disable the treasure box's collider
             DisableCollider();

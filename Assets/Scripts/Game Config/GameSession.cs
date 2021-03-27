@@ -79,19 +79,6 @@ public class GameSession : MonoBehaviour
             // Hide cursor
             Cursor.lockState = CursorLockMode.Locked;
 
-            // Destroy key and torch gameobjects if already collected
-            if (GameData.lobby_keyCollected)
-            {
-                Destroy(GameObject.Find("Key"));
-                Destroy(GameObject.Find("Key_Image"));
-            }
-
-            if (GameData.lobby_torchCollected)
-            {
-                Destroy(GameObject.Find("Torch"));
-                Destroy(GameObject.Find("Torch_Image"));
-            }
-
             new Task(DisableInventoryWeaponInteractionAfterDelay(1f));
         }
     }

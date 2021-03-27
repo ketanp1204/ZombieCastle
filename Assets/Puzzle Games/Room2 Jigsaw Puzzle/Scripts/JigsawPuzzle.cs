@@ -60,6 +60,20 @@ public class JigsawPuzzle : MonoBehaviour
     {
         SetReferences();
         Initialization();
+
+        // Check if puzzle already completed
+        if (GameData.r2_jigsawPuzzleCompleted)
+        {
+            DisablePortraitCollider();
+        }
+
+        /*
+        // Check if drawer magic potion already collected
+        if (GameData.r2_drawerHealthPotionCollected)
+        {
+            drawerGameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
+        */
     }
 
     void SetReferences()
@@ -183,9 +197,6 @@ public class JigsawPuzzle : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        // Stop clock ticking sound
-        AudioManager.StopLoopingSound(AudioManager.Sound.PuzzleClock);
-
         // Puzzle failure
         if (!puzzleSuccess)
         {
@@ -209,6 +220,9 @@ public class JigsawPuzzle : MonoBehaviour
         // Stop timer stop task
         timerTask.Stop();
 
+        // Stop clock ticking sound
+        AudioManager.StopLoopingSound(AudioManager.Sound.PuzzleClock);
+
         // Exit
         CloseJigsawPuzzle();
     }
@@ -217,6 +231,9 @@ public class JigsawPuzzle : MonoBehaviour
     {
         // Hide cinemachine camera for jigsaw puzzle
         StartCoroutine(ExitPuzzleGame());
+
+        // Update this completed interaction in the GameData class
+        GameData.r2_jigsawPuzzleCompleted = true;
 
         // Disable portrait collider
         DisablePortraitCollider();
@@ -299,6 +316,9 @@ public class JigsawPuzzle : MonoBehaviour
 
         // Reset number of pieces solved variable
         numberOfPiecesSolved = 0;
+
+        // Stop clock ticking sound
+        AudioManager.StopLoopingSound(AudioManager.Sound.PuzzleClock);
 
         // Reset all draggable pieces to their start positions and show them
         foreach (DraggablePiece instance in draggablePieceInstances)

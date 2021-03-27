@@ -16,6 +16,7 @@ public static class GameData
     public static bool lobby_paperRead;
     public static bool lobby_r5_stairsUnlocked;
     public static bool lobby_tried_opening_r3_door_with_torch;
+    public static bool lobby_opened_r3_door_with_torch;
 
     // Room 1
     public static bool r1_combatCompleted;
@@ -66,6 +67,7 @@ public static class GameData
         lobby_paperRead = false;
         lobby_r5_stairsUnlocked = false;
         lobby_tried_opening_r3_door_with_torch = false;
+        lobby_opened_r3_door_with_torch = false;
 
         r1_combatCompleted = false;
         r1_mazePuzzleCompleted = false;

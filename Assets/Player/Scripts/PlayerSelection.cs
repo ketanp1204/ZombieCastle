@@ -159,7 +159,7 @@ public class PlayerSelection : MonoBehaviour
                     {
                         PC_Then_Inventory_Object pc_Then_Inventory_Object = (PC_Then_Inventory_Object)itemScriptableObject;
 
-                        objectProperties.UpdateGameDataForPCThenInventoryObject(pc_Then_Inventory_Object);
+                        objectProperties.UpdateGameDataForPCThenInventoryObject();
 
                         string[] sentenceArray = pc_Then_Inventory_Object.playerComments;
 
@@ -182,6 +182,8 @@ public class PlayerSelection : MonoBehaviour
                     {
                         PC_Then_Note_Object pc_Then_Note_Object = (PC_Then_Note_Object)itemScriptableObject;
 
+                        objectProperties.UpdateGameDataForPCThenNoteObject();
+
                         string[] sentenceArray = pc_Then_Note_Object.playerComments;
 
                         if (DialogueBox.instance)
@@ -201,6 +203,8 @@ public class PlayerSelection : MonoBehaviour
                     else if (itemScriptableObject.itemType == ItemType.DescBox_Then_Dialogue)
                     {
                         DescBox_Then_Dialogue_Object descBox_Then_Dialogue_Object = (DescBox_Then_Dialogue_Object)itemScriptableObject;
+
+                        objectProperties.UpdateGameDataForDescBoxThenDialogueObject();
 
                         string[] sentenceArray = descBox_Then_Dialogue_Object.playerComments;
 

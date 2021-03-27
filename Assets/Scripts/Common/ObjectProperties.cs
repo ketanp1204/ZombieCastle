@@ -10,6 +10,17 @@ public class ObjectProperties : MonoBehaviour
         Lobby_Torch
     }
 
+    private enum Desc_Box_Then_Dialogue_Objects
+    {
+        Room2_Drawer
+    }
+
+    private enum PC_Then_Note_Objects
+    {
+        Lobby_Paper,
+        Room3_Drawer
+    }
+
     public ItemObject objectData;
     public GameObject imageDisplayGO;
     private SpriteGlow.SpriteGlowEffect spriteGlowEffectComponent;
@@ -20,11 +31,77 @@ public class ObjectProperties : MonoBehaviour
     {
         spriteGlowEffectComponent = GetComponent<SpriteGlow.SpriteGlowEffect>();
         spriteGlowEffectComponent.enabled = false;
+
+        CheckIfAlreadyInteractedWithObject();
     }
 
-    public void UpdateGameDataForPCThenInventoryObject(PC_Then_Inventory_Object item)
+    private void CheckIfAlreadyInteractedWithObject()
     {
-        string itemName = item.sceneName + "_" + item.itemName;
+        if (objectData.itemType == ItemType.PC_Then_Inventory)
+        {
+            PC_Then_Inventory_Object obj = (PC_Then_Inventory_Object)objectData;
+
+            string itemName = obj.sceneName + "_" + obj.itemName;
+
+            if (itemName == PC_Then_Inventory_Objects.Lobby_Key.ToString())
+            {
+                if (GameData.lobby_keyCollected)
+                {
+                    Destroy(gameObject);
+                    Destroy(imageDisplayGO);
+                }
+            }
+            else if (itemName == PC_Then_Inventory_Objects.Lobby_Torch.ToString())
+            {
+                if (GameData.lobby_torchCollected)
+                {
+                    Destroy(gameObject);
+                    Destroy(imageDisplayGO);
+                }
+            }
+        }
+        else if(objectData.itemType == ItemType.DescBox_Then_Dialogue)
+        {
+            DescBox_Then_Dialogue_Object obj = (DescBox_Then_Dialogue_Object)objectData;
+
+            string itemName = obj.sceneName + "_" + obj.itemName;
+
+            if (itemName == Desc_Box_Then_Dialogue_Objects.Room2_Drawer.ToString())
+            {
+                if (GameData.r2_drawerHealthPotionCollected)
+                {
+                    GetComponent<BoxCollider2D>().enabled = false;
+                }
+            }
+        }
+        else if(objectData.itemType == ItemType.PC_Then_Note)
+        {
+            PC_Then_Note_Object obj = (PC_Then_Note_Object)objectData;
+
+            string itemName = obj.sceneName + "_" + obj.itemName;
+
+            if (itemName == PC_Then_Note_Objects.Lobby_Paper.ToString())
+            {
+                if (GameData.lobby_paperRead)
+                {
+                    GetComponent<BoxCollider2D>().enabled = false;
+                }
+            }
+            else if (itemName == PC_Then_Note_Objects.Room3_Drawer.ToString())
+            {
+                if (GameData.r3_drawerNoteRead)
+                {
+                    GetComponent<BoxCollider2D>().enabled = false;
+                }
+            }
+        }
+    }
+
+    public void UpdateGameDataForPCThenInventoryObject()
+    {
+        PC_Then_Inventory_Object obj = (PC_Then_Inventory_Object)objectData;
+
+        string itemName = obj.sceneName + "_" + obj.itemName;
 
         if (itemName == PC_Then_Inventory_Objects.Lobby_Torch.ToString())
         {
@@ -33,6 +110,34 @@ public class ObjectProperties : MonoBehaviour
         else if (itemName == PC_Then_Inventory_Objects.Lobby_Key.ToString())
         {
             GameData.lobby_keyCollected = true;
+        }
+    }
+
+    public void UpdateGameDataForDescBoxThenDialogueObject()
+    {
+        DescBox_Then_Dialogue_Object obj = (DescBox_Then_Dialogue_Object)objectData;
+
+        string itemName = obj.sceneName + "_" + obj.itemName;
+
+        if (itemName == Desc_Box_Then_Dialogue_Objects.Room2_Drawer.ToString())
+        {
+            GameData.r2_drawerHealthPotionCollected = true;
+        }
+    }
+
+    public void UpdateGameDataForPCThenNoteObject()
+    {
+        PC_Then_Note_Object obj = (PC_Then_Note_Object)objectData;
+
+        string itemName = obj.sceneName + "_" + obj.itemName;
+
+        if (itemName == PC_Then_Note_Objects.Lobby_Paper.ToString())
+        {
+            GameData.lobby_paperRead = true;
+        }
+        else if (itemName == PC_Then_Note_Objects.Room3_Drawer.ToString())
+        {
+            GameData.r3_drawerNoteRead = true;
         }
     }
 }
