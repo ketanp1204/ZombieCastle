@@ -107,6 +107,7 @@ public class PlayerTopDown : MonoBehaviour
         weaponEquippedDict = new Dictionary<PlayerCombat.WeaponTypes, bool>();
         weaponEquippedDict[PlayerCombat.WeaponTypes.Knife] = false;
         weaponEquippedDict[PlayerCombat.WeaponTypes.Axe] = false;
+        weaponEquippedDict[PlayerCombat.WeaponTypes.Sword] = false;
 
         // Health
         if (PlayerStats.isFirstScene)
@@ -132,6 +133,8 @@ public class PlayerTopDown : MonoBehaviour
         animator.SetBool("IsDead", false);          // Not dead
         animator.SetBool("AxeDrawn", false);        // Axe unequipped
         animator.SetBool("KnifeDrawn", false);      // Knife unequipped
+        animator.SetBool("SwordDrawn", false);      // Sword unequipped
+        animator.SetBool("HoldingTorch", false);    // Not holding torch
     }
 
     public void DisableSelectionCollider()
@@ -186,6 +189,11 @@ public class PlayerTopDown : MonoBehaviour
         AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PlayerFootStep);
     }
 
+    public void PlayLowHealthBreathingSound()
+    {
+        // TODO: add low health breathing sound
+    }
+
     private void FlipPlayerDirection()
     {
         float horizontal = movement.x;
@@ -228,20 +236,19 @@ public class PlayerTopDown : MonoBehaviour
 
         if (weaponEquippedDict[PlayerCombat.WeaponTypes.Knife])
         {
-            /*
-            if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Hurt") && !PlayerStats.IsDead)
-            {
-                playerCombat.InvokeKnifeAttack();
-                animator.SetTrigger("KnifeAttack");
-                rb.velocity = Vector2.zero;
-            }
-            */
-
             if (playerInput.leftMousePressed && !playerCombat.isAttacking_Knife && !takingDamage && !PlayerStats.IsDead)
             {
                 playerCombat.InvokeKnifeAttack();
                 animator.SetTrigger("KnifeAttack");
                 rb.velocity = Vector2.zero;
+            }
+        }
+
+        if (weaponEquippedDict[PlayerCombat.WeaponTypes.Sword])
+        {
+            if (playerInput.leftMousePressed && !takingDamage && !PlayerStats.IsDead)
+            {
+                // TODO: different behavior for magic potion + sword, fire elem + sword and sword without any powers
             }
         }
     }
@@ -279,6 +286,12 @@ public class PlayerTopDown : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Weapons equip/unequip
+    /// </summary>
+    /// <returns></returns>
+
+
     // Returns true if axe is equipped
     public static bool AxeDrawn()
     {
@@ -301,6 +314,17 @@ public class PlayerTopDown : MonoBehaviour
             return false;
     }
 
+    // Returns true if sword is equipped
+    public static bool SwordDrawn()
+    {
+        if (instance != null)
+        {
+            return instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Sword];
+        }
+        else
+            return false;
+    }
+
     // Sets the AxeDrawn animation parameter to true
     public static void EquipAxe()
     {
@@ -318,7 +342,9 @@ public class PlayerTopDown : MonoBehaviour
 
             // Set other weapon bools to false
             instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Knife] = false;
+            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Sword] = false;
             instance.animator.SetBool("KnifeDrawn", false);
+            instance.animator.SetBool("SwordDrawn", false);
         }
     }
 
@@ -356,7 +382,9 @@ public class PlayerTopDown : MonoBehaviour
 
             // Set other weapon equipped bools to false
             instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Axe] = false;
+            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Sword] = false;
             instance.animator.SetBool("AxeDrawn", false);
+            instance.animator.SetBool("SwordDrawn", false);
         }
     }
 
@@ -374,6 +402,46 @@ public class PlayerTopDown : MonoBehaviour
         {
             instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Knife] = false;
             instance.animator.SetBool("KnifeDrawn", false);
+        }
+    }
+
+    // Sets the SwordDrawn animation parameter to true
+    public static void EquipSword()
+    {
+        instance.StartCoroutine(instance.EquipSwordAfterDelay());
+    }
+
+    private IEnumerator EquipSwordAfterDelay()
+    {
+        yield return new WaitForSeconds(0.3f);
+
+        if (instance != null)
+        {
+            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Sword] = true;
+            instance.animator.SetBool("SwordDrawn", true);
+
+            // Set other weapon bools to false
+            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Knife] = false;
+            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Axe] = false;
+            instance.animator.SetBool("KnifeDrawn", false);
+            instance.animator.SetBool("AxeDrawn", false);
+        }
+    }
+
+    // Sets the SwordDrawn animation parameter to false
+    public static void UnequipSword()
+    {
+        instance.StartCoroutine(instance.UnequipSwordAfterDelay());
+    }
+
+    private IEnumerator UnequipSwordAfterDelay()
+    {
+        yield return new WaitForSeconds(0.3f);
+
+        if (instance != null)
+        {
+            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Sword] = false;
+            instance.animator.SetBool("SwordDrawn", false);
         }
     }
 }

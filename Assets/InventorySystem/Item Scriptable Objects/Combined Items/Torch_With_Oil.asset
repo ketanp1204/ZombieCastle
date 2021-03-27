@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Torch_With_Oil
   m_EditorClassIdentifier: 
   itemName: Torch with oil
-  itemDescription: Torch that is ready to burn.
+  itemDescription: Ready to burn.
   itemType: 2
   sceneName: 
   hasPlayerComment: 0
   playerComments: []
   inventoryItemName: Torch with Oil
-  inventorySprite: {fileID: 0}
-  canCombineWithOtherItem: 0
-  combineWithItem: {fileID: 0}
-  combinedObject: {fileID: 0}
+  inventorySprite: {fileID: 21300000, guid: cb3c891d8177a2c4eab7ac073ea9e4bb, type: 3}
+  canCombineWithAdditionalItem1: 0
+  additionalItem1: {fileID: 0}
+  combinedObject1: {fileID: 0}
+  canCombineWithAdditionalItem2: 0
+  additionalItem2: {fileID: 0}
+  combinedObject2: {fileID: 0}

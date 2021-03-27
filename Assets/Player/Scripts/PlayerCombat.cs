@@ -18,16 +18,26 @@ public class PlayerCombat : MonoBehaviour
     }
     
     [Header("Axe Attack")]
-    public int axeDamage = 20;                                                          // Float - Damage caused to enemy
+    public int axeDamage = 20;                                                          // Int - Damage amount inflicted on enemy
     public float axeAttackRepeatTime = 1f;                                              // Float - Delay between successive attacks
     public Animator axeHitboxAnimator_L;                                                // Reference - Left hitbox animator
     public Animator axeHitboxAnimator_R;                                                // Reference - Right hitbox animator
 
     [Header("Knife Attack")]
-    public int knifeDamage = 10;                                                        // Float - Damage caused to enemy
+    public int knifeDamage = 10;                                                        // Int - Damage amount inflicted on enemy
     public float knifeAttackRepeatTime = 1f;                                            // Float - Delay between successive attacks
     public Animator knifeHitboxAnimator_L;                                              // Reference - Left hitbox animator
     public Animator knifeHitboxAnimator_R;                                              // Reference - Right hitbox animator
+
+    [Header("Sword Magic Attack")]
+    public int swordMagicDamage = 10;                                                   // Int - Damage amount inflicted on enemy
+    public float swordMagicAttackRepeatTime = 1f;                                       // Float - Delay between successive attacks
+
+
+    [Header("Sword Fire Attack")]
+    public int swordFireDamage = 10;                                                    // Int - Damage amount inflicted on enemy
+    public float swordFireAttackRepeatTime = 1f;                                        // Float - Delay between successive attacks
+
 
     [Header("Common Attributes")]
     public LayerMask enemyLayers;                                                       // LayerMask - Enemies
@@ -39,6 +49,12 @@ public class PlayerCombat : MonoBehaviour
 
     [HideInInspector]
     public bool isAttacking_Knife = false;                                              // Bool - Knife attack status
+
+    [HideInInspector]
+    public bool isAttackSwordMagic = false;                                             // Bool - Sword magic attack status
+
+    [HideInInspector]
+    public bool isAttackSwordFire = false;                                              // Bool - Sword fire attack status
 
     [HideInInspector]
     public bool canAttack = false;                                                      // Bool - Player allowed to attack

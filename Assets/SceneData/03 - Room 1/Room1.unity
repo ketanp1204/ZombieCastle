@@ -8853,16 +8853,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2162534629170683288, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_Size.x
-      value: 5.152727
+      value: 2.0962963
       objectReference: {fileID: 0}
     - target: {fileID: 2162534629170683288, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_Size.y
-      value: 6.8727274
+      value: 4.540741
       objectReference: {fileID: 0}
     - target: {fileID: 2162534629170683288, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3678587066136459780, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 477a39c407e9f1a44abcf347eed31072, type: 3}
     - target: {fileID: 3678587066136459780, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_Enabled
       value: 1

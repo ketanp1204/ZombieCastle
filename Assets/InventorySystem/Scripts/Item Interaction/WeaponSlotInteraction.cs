@@ -365,5 +365,34 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
                 }
             }
         }
+        else if (weaponType == PlayerCombat.WeaponTypes.Sword)
+        {
+            if (Player.instance != null)
+            {
+                if (Player.SwordDrawn())
+                {
+                    // Unequip
+                    Player.UnequipSword();
+                }
+                else
+                {
+                    // Equip
+                    Player.EquipSword();
+                }
+            }
+            else
+            {
+                if (PlayerTopDown.SwordDrawn())
+                {
+                    // Unequip
+                    PlayerTopDown.UnequipSword();
+                }
+                else
+                {
+                    // Equip
+                    PlayerTopDown.EquipSword();
+                }
+            }
+        }
     }
 }
