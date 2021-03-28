@@ -65,10 +65,13 @@ public class PlayerCombat : MonoBehaviour
     public bool isAttacking_SwordNormal = false;                                        // Bool - Sword normal attack status
 
     [HideInInspector]
-    public bool isAttacking_SwordMagic = false;                                             // Bool - Sword magic attack status
+    public bool isBlocking_Sword = false;                                               // Bool - Block using sword status
 
     [HideInInspector]
-    public bool isAttacking_SwordFire = false;                                              // Bool - Sword fire attack status
+    public bool isAttacking_SwordMagic = false;                                         // Bool - Sword magic attack status
+
+    [HideInInspector]
+    public bool isAttacking_SwordFire = false;                                          // Bool - Sword fire attack status
 
     [HideInInspector]
     public bool canAttack = false;                                                      // Bool - Player allowed to attack
@@ -307,6 +310,44 @@ public class PlayerCombat : MonoBehaviour
 
     }
 
+    public void InvokeSwordBlock()
+    {
+        if (!isBlocking_Sword)
+        {
+            StopAttack();
+
+            if (attackTask != null)
+            {
+                attackTask.Stop();
+                attackTask = null;
+            }
+
+            attackTask = new Task(SwordBlock());
+        }
+    }
+
+    private IEnumerator SwordBlock()
+    {
+        if (PlayerStats.IsDead)
+        {
+            isBlocking_Sword = false;
+            yield break;
+        }
+
+        Player.StopMovement();
+
+        isBlocking_Sword = true;
+
+        // Play player sword block animation
+        animator.SetTrigger("SwordBlock");
+
+        yield return new WaitForSeconds(0.5f);
+
+        isBlocking_Sword = false;
+
+        Player.EnableMovement();
+    }
+
     public void InvokeSwordFireAttack()
     {
 
@@ -319,7 +360,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void TakeDamage(Transform enemyPos, int damageAmount)
     {
-        if (!PlayerStats.IsDead)
+        if (!PlayerStats.IsDead && !isBlocking_Sword)
         {
             // Create blood particles
             GameObject bloodParticles = Instantiate(GameAssets.instance.bloodParticles, bloodParticlesStartPosition);
@@ -332,6 +373,9 @@ public class PlayerCombat : MonoBehaviour
             {
                 bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
+
+            // Play hurt sound
+            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PlayerGettingHit);
 
             // Set player taking damage bool on Player script to stop keybaord movement
             Player.instance.takingDamage = true;

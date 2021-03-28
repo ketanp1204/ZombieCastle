@@ -3343,6 +3343,15 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: IsDead
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: KnifeDrawn
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: AxeDrawn
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: SwordDrawn
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4601444118225843922}
   m_Solo: 0

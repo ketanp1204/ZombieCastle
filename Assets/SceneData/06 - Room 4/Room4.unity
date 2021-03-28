@@ -333,6 +333,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 859078755}
     m_Modifications:
+    - target: {fileID: 2691388463079626970, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691388463079626970, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691388463079626970, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691388463079626970, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4069682288195184172, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -579,7 +595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736767665891185551, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3736767665891185551, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2572,6 +2588,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3865222938020772526, guid: af34ae09eed9cbe40b9afeea9dab701c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865222938020772526, guid: af34ae09eed9cbe40b9afeea9dab701c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865222938020772526, guid: af34ae09eed9cbe40b9afeea9dab701c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865222938020772526, guid: af34ae09eed9cbe40b9afeea9dab701c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af34ae09eed9cbe40b9afeea9dab701c, type: 3}
 --- !u!224 &1508270838 stripped
@@ -3156,6 +3188,7 @@ MonoBehaviour:
   jigsawPuzzleInteractButton: {fileID: 0}
   jigsawPuzzleInteractText: {fileID: 0}
   differencePuzzleCanvasGroup: {fileID: 0}
+  numberOfDifferencesFoundText: {fileID: 0}
   diffPuzzleCountdownTimerText: {fileID: 0}
   diffPuzzleInteractButton: {fileID: 0}
   diffPuzzleInteractText: {fileID: 0}
@@ -3722,58 +3755,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.44, y: 19.49}
   m_EdgeRadius: 0
---- !u!1 &2129683340
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2129683342}
-  - component: {fileID: 2129683341}
-  m_Layer: 0
-  m_Name: DialogueManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2129683341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129683340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff7da12c3bc17a445babbfafcd80347c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueTexts: []
-  noteTexts: []
-  noteResponseTexts: []
-  bookTexts: []
-  typingSpeed: 0
-  dialogueDisplayDelay: 0.1
-  noteDisplayDelay: 0.3
-  noteResponseDisplayDelay: 0.3
-  bookDisplayDelay: 0.3
---- !u!4 &2129683342
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129683340}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2130337214
 GameObject:
   m_ObjectHideFlags: 0
@@ -3860,7 +3841,7 @@ Transform:
   - {fileID: 1858767359342780643}
   - {fileID: 1858767360541486699}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1858767359294732670
 GameObject:

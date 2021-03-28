@@ -33,6 +33,7 @@ public class RangedEnemyCombat : MonoBehaviour
     public LayerMask playerLayerMask;
     public HealthBar healthBar;
     public Transform bloodParticlesStartPosition;
+    public Transform attackParticleSpawnLocation;
 
     // Private general variables
     private int currentHealth;

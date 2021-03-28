@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/SceneData/00 - Title Screen/TitleScreen.unity
     guid: 9d7fe4d0cfe05c347a8db299a17d66fb
@@ -27,9 +24,9 @@ EditorBuildSettings:
     path: Assets/SceneData/05 - Room 3/Room3.unity
     guid: 67713958aa5edf2419bfe98787c77c2c
   - enabled: 1
-    path: Assets/SceneData/06 - Room 4/Room4.unity
-    guid: 7f1ac316c628ced49b5327561506ba6d
-  - enabled: 1
     path: Assets/SceneData/07 - Room 5/Room5.unity
     guid: d9e917aeab608e642a1a37fc858e6b4a
+  - enabled: 1
+    path: Assets/SceneData/08 - Game Over Screen/GameOver.unity
+    guid: 7a144ee57dc2f8c49bc9c671f321d241
   m_configObjects: {}

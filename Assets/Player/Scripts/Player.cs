@@ -276,7 +276,7 @@ public class Player : MonoBehaviour
 
     private void FlipPlayerDirection()
     {
-        if (!(PlayerStats.playerState == PlayerStats.PlayerState.Combat))
+        if (PlayerStats.playerState != PlayerStats.PlayerState.Combat)
         {
             float horizontal = movement.x;
             if (horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
@@ -345,6 +345,12 @@ public class Player : MonoBehaviour
                 {
 
                 }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space) && !PlayerStats.IsDead)
+            {
+                playerCombat.InvokeSwordBlock();
+                rb.velocity = Vector2.zero;
             }
         }
     }
