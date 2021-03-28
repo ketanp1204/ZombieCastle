@@ -46,7 +46,9 @@ public static class AudioManager
         MagicPotionCollect,
         LadderFootStep,
         PlayerLowHealthBreathing,
-        GameOver
+        GameOver,
+        PlayerDeath,
+        FireElement
     }
 
     // private static Dictionary<Sound, float> soundTimerDictionary;

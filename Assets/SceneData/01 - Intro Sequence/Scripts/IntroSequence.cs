@@ -183,6 +183,12 @@ public class IntroSequence : MonoBehaviour
             }
         }
 
+        // Get background music AudioSource
+        AudioSource backgroundMusicAudioSource = AudioManager.loopingSoundGameObjects[AudioManager.Sound.IntroSequenceBackground].GetComponent<AudioSource>();
+
+        // Fade out title screen music
+        new Task(AudioFadeUtils.StartSingleAudioSourceFade(backgroundMusicAudioSource, 1f, 0f));
+
         // Stop intro animation task
         task.Stop();
 

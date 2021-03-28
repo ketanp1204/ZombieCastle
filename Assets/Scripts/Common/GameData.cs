@@ -65,7 +65,7 @@ public static class GameData
     
     private static void UnsetBools()
     {
-        lobby_introDialogueSeen = true;
+        lobby_introDialogueSeen = false;
         lobby_instructionsSeen = false;
         lobby_torchCollected = false;
         lobby_keyCollected = false;

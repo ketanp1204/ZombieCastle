@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 258f440286c1f594ea7302689d6ebd1d, type: 3}
-  m_Name: SD_M_Knife_Attack
+  m_Name: SD_Fire_Element
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 85624cd10e592c945beebfb83607285e, type: 3}
+  audioClip: {fileID: 8300000, guid: 6305c12cb15f27342897fef97fed84ce, type: 3}
   loopSound: 0
-  volume: 0.8
+  volume: 0.3
