@@ -10,8 +10,8 @@ public class R2_Combat : MonoBehaviour
 
     // Public References
     public GameObject zombieGameObjectsContainer;
-
     public CinemachineVirtualCamera cinemachineCamera;
+    public GameObject combatBlockWall;
 
     // Private References
     private List<GameObject> zombieGameObjects;
@@ -32,6 +32,7 @@ public class R2_Combat : MonoBehaviour
         {
             zombieGameObjects.Add(child.gameObject);
         }
+        combatBlockWall.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,6 +46,9 @@ public class R2_Combat : MonoBehaviour
 
         // Set player combat status
         Player.SetCombatState();
+
+        // Block the player in the combat area
+        combatBlockWall.SetActive(true);
 
         // Start chasing by the zombies after knife selected by player in the inventory box
         foreach (GameObject gameObject in zombieGameObjects)

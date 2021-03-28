@@ -25,6 +25,7 @@ public class UIReferences : MonoBehaviour
 
     [Header("Spot the Differences Puzzle")]
     public CanvasGroup differencePuzzleCanvasGroup;
+    public TextMeshProUGUI numberOfDifferencesFoundText;
     public TextMeshProUGUI diffPuzzleCountdownTimerText;
     public Button diffPuzzleInteractButton;
     public TextMeshProUGUI diffPuzzleInteractText;

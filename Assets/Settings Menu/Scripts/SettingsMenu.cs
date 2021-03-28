@@ -88,6 +88,13 @@ public class SettingsMenu : MonoBehaviour
         StartCoroutine(PauseMenu.EnableCanPauseGameBoolAfterDelay(0.1f));
     }
 
+    public void LoadLastCheckpoint()
+    {
+        GameOverScreen.LoadLastCheckpoint();
+
+        HideSettingsMenu();
+    }
+
     public void SetControlsDisplayOpenFlag()
     {
         isControlsDisplayOpen = true;

@@ -37,7 +37,11 @@ public class ToolbarManager : MonoBehaviour
 
     private void Initialize()
     {
-        canOpenToolbar = false;
+        if (GameData.lobby_introDialogueSeen)
+            canOpenToolbar = true;
+        else
+            canOpenToolbar = false;
+
         isToolbarOpen = false;
 
         toolbarCanvasGroup.alpha = 0f;

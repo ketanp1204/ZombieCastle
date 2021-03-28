@@ -1089,6 +1089,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 866864833}
     m_Modifications:
+    - target: {fileID: 2691388463079626970, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691388463079626970, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691388463079626970, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691388463079626970, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4069682288195184172, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6690,7 +6706,6 @@ GameObject:
   - component: {fileID: 670594836}
   - component: {fileID: 670594837}
   - component: {fileID: 670594838}
-  - component: {fileID: 670594840}
   - component: {fileID: 670594839}
   m_Layer: 10
   m_Name: Mark_Small
@@ -6817,46 +6832,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectionArea: {fileID: 1105666880}
   movePlayer: 0
-  IsDead: 0
   movementSpeed: 3
   currentHealth: 0
-  takingDamage: 0
   walkSpeed: 2
   maxHealth: 100
---- !u!114 &670594840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670594832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22c38d43a7344f440b5ff71d0b68e59a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axeDamage: 20
-  axeAttackRepeatTime: 2.5
-  axeHitboxAnimator_L: {fileID: 748450606}
-  axeHitboxAnimator_R: {fileID: 1587514159}
-  knifeDamage: 10
-  knifeAttackRepeatTime: 2
-  knifeHitboxAnimator_L: {fileID: 1709866675}
-  knifeHitboxAnimator_R: {fileID: 1711348097}
-  swordMagicDamage: 10
-  swordMagicAttackRepeatTime: 1
-  swordFireDamage: 10
-  swordFireAttackRepeatTime: 1
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 2048
-  pushDistanceOnHit: 3
-  isAttacking_Axe: 0
-  isAttacking_Knife: 0
-  isAttackSwordMagic: 0
-  isAttackSwordFire: 0
-  canAttack: 0
-  bloodParticlesStartPosition: {fileID: 1789967350}
 --- !u!1 &721609105
 GameObject:
   m_ObjectHideFlags: 0
@@ -13961,7 +13940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1532250946
 MonoBehaviour:
   m_ObjectHideFlags: 0

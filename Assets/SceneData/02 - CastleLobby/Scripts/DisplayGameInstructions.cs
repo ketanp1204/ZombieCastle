@@ -46,7 +46,10 @@ public class DisplayGameInstructions : MonoBehaviour
     /// </summary>
     public void StartInstructionsDisplay()
     {
-        new Task(DisplayInstructions());
+        if (!GameData.lobby_instructionsSeen)
+        {
+            new Task(DisplayInstructions());
+        }
     }
 
     private IEnumerator DisplayInstructions()
@@ -137,7 +140,7 @@ public class DisplayGameInstructions : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
 
 
-
+        GameData.lobby_instructionsSeen = true;
 
         // Enable player selection
         if (PlayerTopDown.instance)

@@ -13,13 +13,13 @@ public class BossVisibleCameraZoomOut : MonoBehaviour
     {
         if (transform.position.x < collision.transform.position.x)
         {
-            // bossCamera.Priority = 15;
-            bossAI.StartChasingPlayer();
+            bossCamera.Priority = 15;
+            // bossAI.StartChasingPlayer();
         }
         else
         {
-            // bossCamera.Priority = 5;
-            bossAI.StopMovement();
+            bossCamera.Priority = 5;
+            // bossAI.StopMovement();
         }
     }
 }

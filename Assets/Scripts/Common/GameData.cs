@@ -11,6 +11,8 @@ public static class GameData
     public static InventoryObject currentPlayerInventory;
 
     // Castle Lobby
+    public static bool lobby_introDialogueSeen;
+    public static bool lobby_instructionsSeen;
     public static bool lobby_torchCollected;
     public static bool lobby_keyCollected;
     public static bool lobby_paperRead;
@@ -40,6 +42,7 @@ public static class GameData
 
     // Scene loading
     public static LevelManager.SceneNames sceneName;
+    public static bool loadingCheckpointFromGameOver;
 
     public static void Initialize()
     {
@@ -62,6 +65,8 @@ public static class GameData
     
     private static void UnsetBools()
     {
+        lobby_introDialogueSeen = false;
+        lobby_instructionsSeen = false;
         lobby_torchCollected = false;
         lobby_keyCollected = false;
         lobby_paperRead = false;
@@ -84,5 +89,7 @@ public static class GameData
         r3_treasureBoxFireElementCollected = false;
 
         r5_zombie3CombatCompleted = false;
+
+        loadingCheckpointFromGameOver = false;
     }
 }

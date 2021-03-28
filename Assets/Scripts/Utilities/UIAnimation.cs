@@ -63,4 +63,33 @@ public static class UIAnimation
             yield return new WaitForEndOfFrame();
         }
     }
+
+    public static IEnumerator InterpolateTMProTextSizeAfterDelay(TextMeshProUGUI text, float startSize, float endSize, float delay, float lerpTime = 0.3f)
+    {
+        yield return new WaitForSeconds(delay);
+
+        float _timeStartedLerping = Time.unscaledTime;
+        float timeSinceStarted;
+        float percentageComplete;
+
+        while (true)
+        {
+            timeSinceStarted = Time.unscaledTime - _timeStartedLerping;
+            percentageComplete = timeSinceStarted / lerpTime;
+
+            float currentValue = Mathf.Lerp(startSize, endSize, percentageComplete);
+
+            if (text != null)
+            {
+                text.fontSize = currentValue;
+            }
+
+            if (percentageComplete >= 1)
+            {
+                break;
+            }
+
+            yield return new WaitForEndOfFrame();
+        }
+    }
 }

@@ -16,6 +16,7 @@ public class SpotDifferencesPuzzle : MonoBehaviour
     private UIReferences uiReferences;
     private Collider2D cupboardBoxCollider;
     private CanvasGroup puzzleUICanvasGroup;
+    private TextMeshProUGUI numberOfDifferencesFoundText;
     private TextMeshProUGUI countdownTimerText;
     private Button interactButton;
     private TextMeshProUGUI interactText;
@@ -63,6 +64,7 @@ public class SpotDifferencesPuzzle : MonoBehaviour
     {
         uiReferences = GameSession.instance.uiReferences;
         puzzleUICanvasGroup = uiReferences.differencePuzzleCanvasGroup;
+        numberOfDifferencesFoundText = uiReferences.numberOfDifferencesFoundText;
         countdownTimerText = uiReferences.diffPuzzleCountdownTimerText;
         interactButton = uiReferences.diffPuzzleInteractButton;
         interactText = uiReferences.diffPuzzleInteractText;
@@ -151,6 +153,9 @@ public class SpotDifferencesPuzzle : MonoBehaviour
         timerStarted = true;
         timerCurrentTime = puzzleTime;
 
+        // Start playing clock ticking sound
+        AudioManager.PlaySoundLooping(AudioManager.Sound.PuzzleClock);
+
         // Start updating the timer
         timerTask = new Task(UpdateTimer());
     }
@@ -179,6 +184,11 @@ public class SpotDifferencesPuzzle : MonoBehaviour
     {
         numberOfDifferencesFound += 1;
 
+        char[] numberText = numberOfDifferencesFoundText.text.ToCharArray();
+        char currentNumber = numberOfDifferencesFound.ToString()[0];
+        numberText[0] = currentNumber;
+        numberOfDifferencesFoundText.text = new string(numberText);
+
         if (numberOfDifferencesFound == 12)
         {
             StopTimerOnPuzzleSuccess();
@@ -194,6 +204,9 @@ public class SpotDifferencesPuzzle : MonoBehaviour
     {
         // Stop timer stop task
         timerTask.Stop();
+
+        // Stop clock ticking sound
+        AudioManager.StopLoopingSound(AudioManager.Sound.PuzzleClock);
 
         // Exit
         CloseDiffPuzzle();
@@ -256,24 +269,23 @@ public class SpotDifferencesPuzzle : MonoBehaviour
     {
         EventSystem.current.SetSelectedGameObject(null);
 
-        numberOfDifferencesFound = 0;
-
         // Reset all difference collider sprite outlines
         foreach (DifferenceFound script in differenceFoundScripts)
         {
             script.Reset();
         }
 
+        // Reset number of differences
+        numberOfDifferencesFound = 0;
+        numberOfDifferencesFoundText.text = "0 of 12";
+
+        // Stop clock ticking sound
+        AudioManager.StopLoopingSound(AudioManager.Sound.PuzzleClock);
+
         // Enable interact button
         interactButton.interactable = true;
 
         // Show retry button text
         interactText.text = "Retry";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -13,17 +13,26 @@ public class DescriptionBox : MonoBehaviour
         AfterReward
     }
 
+    public enum UsableItems
+    {
+        Aspirin
+    }
+
     // Singleton
     public static DescriptionBox instance;
 
     // Private References
+    private UIReferences uIReferences;
     private CanvasGroup descBoxCG;
+    private Button useButton;
+    private HealthBar playerHealthBar;
 
     // Public References
     public TextMeshProUGUI newItemDiscoveredText;
     public TextMeshProUGUI objectNameText;
     public TextMeshProUGUI descText;
     public Image iconImage;
+    public GameObject useButtonGO;
 
     // Public Variables
     [HideInInspector]
@@ -52,7 +61,10 @@ public class DescriptionBox : MonoBehaviour
 
     private void SetReferences()
     {
+        uIReferences = GameSession.instance.uiReferences;
         descBoxCG = GetComponent<CanvasGroup>();
+        useButton = useButtonGO.GetComponent<Button>();
+        playerHealthBar = uIReferences.playerHealthBar;
     }
 
     private void Initialize()
@@ -77,6 +89,8 @@ public class DescriptionBox : MonoBehaviour
         SetItemNameText();
 
         SetDescriptionText();
+
+        SetUsableButton();
     }
 
     private void SetIcon()
@@ -136,15 +150,34 @@ public class DescriptionBox : MonoBehaviour
         }
     }
 
+    private void SetUsableButton()
+    {
+        if (descBoxOpenLocation != DescBoxOpenLocations.AfterReward)
+        {
+            if (currentItem.itemType == ItemType.DescBox_Then_Dialogue)
+            {
+                DescBox_Then_Dialogue_Object obj = (DescBox_Then_Dialogue_Object)currentItem;
+
+                if (obj.inventoryItemName == UsableItems.Aspirin.ToString())
+                {
+                    // Set usable button for health potion
+                    useButtonGO.SetActive(true);
+                    useButton.onClick.AddListener(() => playerHealthBar.UseHealthPotion());
+                }
+            }
+        }
+    }
+
+
     public void ShowDescBoxFromInventory(ItemObject item)
     {
         if (!instance.isActive)
         {
+            descBoxOpenLocation = DescBoxOpenLocations.ItemFromInventory;
+
             SetCurrentItem(item);
 
             isActive = true;
-
-            descBoxOpenLocation = DescBoxOpenLocations.ItemFromInventory;
 
             // Prevent escape key from closing inventory box
             InventoryManager.instance.SetDescBoxOpenFlag();
@@ -175,6 +208,8 @@ public class DescriptionBox : MonoBehaviour
 
         if (!instance.isActive)
         {
+            descBoxOpenLocation = DescBoxOpenLocations.AfterReward;
+
             SetCurrentItem(item);
 
             if (dialogueAfterReward != null)
@@ -187,8 +222,6 @@ public class DescriptionBox : MonoBehaviour
             }
 
             isActive = true;
-
-            descBoxOpenLocation = DescBoxOpenLocations.AfterReward;
 
             // Play item received sound
             if (itemReceivedSound != AudioManager.Sound.Null)
@@ -236,8 +269,6 @@ public class DescriptionBox : MonoBehaviour
             descBoxCG.interactable = false;
             descBoxCG.blocksRaycasts = false;
 
-            isOpen = false;
-
             Player.EnableMovement();
 
             // Enable escape key to close inventory box
@@ -275,9 +306,12 @@ public class DescriptionBox : MonoBehaviour
     private void ResetValues()
     {
         isActive = false;
+        isOpen = false;
         descBoxCG.interactable = false;
         descBoxCG.blocksRaycasts = false; 
         currentItem = null;
+        useButton.onClick.RemoveAllListeners();
+        useButtonGO.SetActive(false);
     }
 
     // Update is called once per frame

@@ -106,6 +106,7 @@ public class Player : MonoBehaviour
     {
         movePlayer = true;
         movementSpeed = walkSpeed;
+        PlayerStats.playerState = PlayerStats.PlayerState.Idle;
 
         // Combat
         takingDamage = false;
@@ -179,6 +180,12 @@ public class Player : MonoBehaviour
             torchGO.SetActive(true);
             animator.SetBool("HoldingTorch", true);
             isInRoom3 = true;
+
+            // Prevent weapon interactions
+            if (InventoryManager.instance)
+            {
+                InventoryManager.instance.DisableAllWeaponInteractions();
+            }
         }    
         else if (scene.name == "Room5")
         {
@@ -187,8 +194,23 @@ public class Player : MonoBehaviour
             torchGO.SetActive(false);
             animator.SetBool("HoldingTorch", false);
             isInRoom3 = false;
+
+            if (GameData.loadingCheckpointFromGameOver)
+            {
+                if (GameData.r5_zombie3CombatCompleted)
+                {
+                    // Set player position to middle floor 
+                    transform.position = new Vector3(18.5f, -2.61f, 0f);
+                }
+                else
+                {
+                    // Set player position to room 5 door
+                    transform.position = new Vector3(-22.12f, 7.58f, 0f);
+                }
+            }
         }
 
+        GameData.loadingCheckpointFromGameOver = false;
         SetPlayerFaceDirection(scene);
     }
 
@@ -341,25 +363,29 @@ public class Player : MonoBehaviour
     public void SetClimbingLadderDown()
     {
         isClimbingLadder = true;
-        torchAnimator.SetBool("LadderClimbDown", true);
+        if (isInRoom3)
+            torchAnimator.SetBool("LadderClimbDown", true);
     }
 
     public void UnsetClimbingLadderDown()
     {
         isClimbingLadder = false;
-        torchAnimator.SetBool("LadderClimbDown", false);
+        if (isInRoom3)
+            torchAnimator.SetBool("LadderClimbDown", false);
     }
 
     public void SetClimbingLadderUp()
     {
         isClimbingLadder = true;
-        torchAnimator.SetBool("LadderClimbUp", true);
+        if (isInRoom3)
+            torchAnimator.SetBool("LadderClimbUp", true);
     }
 
     public void UnsetClimbingLadderUp()
     {
         isClimbingLadder = false;
-        torchAnimator.SetBool("LadderClimbUp", false);
+        if(isInRoom3)
+            torchAnimator.SetBool("LadderClimbUp", false);
     }
 
     public void UpdateCombatCameraPosition(Transform enemy)

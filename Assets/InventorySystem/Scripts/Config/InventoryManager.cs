@@ -65,7 +65,11 @@ public class InventoryManager : MonoBehaviour
 
     private void Initialize()
     {
-        canOpenInventory = true;
+        if (GameData.lobby_introDialogueSeen)
+            canOpenInventory = true;
+        else
+            canOpenInventory = false;
+
         isInventoryOpen = false;
         isDescBoxOpen = false;
 
@@ -82,7 +86,7 @@ public class InventoryManager : MonoBehaviour
         {
             if (!isInventoryOpen)
                 ShowInventory();
-            else if (isInventoryOpen)
+            else if (isInventoryOpen && !isDescBoxOpen)
                 HideInventory();
         }
 

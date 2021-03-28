@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(PlayerInput))]
-[RequireComponent(typeof(PlayerCombat))]
-
 public class PlayerTopDown : MonoBehaviour
 {
     // Singleton
@@ -19,8 +17,6 @@ public class PlayerTopDown : MonoBehaviour
     private UIReferences uiReferences;                                              // Reference - Current UIReferences script in the scene
 
     private PlayerInput playerInput;                                                // Reference - PlayerInput class
-
-    private PlayerCombat playerCombat;                                              // Reference - PlayerCombat class
 
     private Rigidbody2D rb;                                                         // Reference - Rigidbody component
 
@@ -38,18 +34,10 @@ public class PlayerTopDown : MonoBehaviour
     public bool movePlayer;                                                         // Bool - Player can move
 
     [HideInInspector]
-    public bool IsDead = false;                                                     // Bool - Player dead
-
-    [HideInInspector]
     public float movementSpeed;                                                     // Float - Current movement speed;
 
     [HideInInspector]
     public int currentHealth;                                                       // Int - Current health
-
-    [HideInInspector]
-    public bool takingDamage;                                                       // Bool - Currently taking damage
-
-    public Dictionary<PlayerCombat.WeaponTypes, bool> weaponEquippedDict;           // Dictionary - Weapons and their equipped status
 
     public float walkSpeed;                                                         // Float - Walk speed
 
@@ -76,7 +64,8 @@ public class PlayerTopDown : MonoBehaviour
 
         if (PlayerStats.isFirstScene)
         {
-            StopMovement();
+            if (!GameData.lobby_introDialogueSeen)
+                StopMovement();
         }
         else
         {
@@ -91,7 +80,6 @@ public class PlayerTopDown : MonoBehaviour
         healthBar = uiReferences.playerHealthBar;
         
         playerInput = GetComponent<PlayerInput>();
-        playerCombat = GetComponent<PlayerCombat>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -104,13 +92,6 @@ public class PlayerTopDown : MonoBehaviour
         movePlayer = true;
         movementSpeed = walkSpeed;
         animator.SetFloat("FaceDir", 1f);
-
-        // Combat
-        takingDamage = false;
-        weaponEquippedDict = new Dictionary<PlayerCombat.WeaponTypes, bool>();
-        weaponEquippedDict[PlayerCombat.WeaponTypes.Knife] = false;
-        weaponEquippedDict[PlayerCombat.WeaponTypes.Axe] = false;
-        weaponEquippedDict[PlayerCombat.WeaponTypes.Sword] = false;
 
         // Health
         if (PlayerStats.isFirstScene)
@@ -133,7 +114,6 @@ public class PlayerTopDown : MonoBehaviour
         animator.SetFloat("Vertical", 0f);          // No keyboard input
         animator.SetFloat("Magnitude", 0f);         // No keyboard input
         animator.SetFloat("FaceDir", 1f);           // Facing right
-        animator.SetBool("IsDead", false);          // Not dead
     }
 
     private void HandleSceneChanges()
@@ -150,11 +130,8 @@ public class PlayerTopDown : MonoBehaviour
         {
             transform.position = new Vector3(2.84f, -2.01f, 0f);
         }
-        else if (GameData.sceneName == LevelManager.SceneNames.Room5)
-        {
-            // TODO: remove later 
-            transform.position = new Vector3(5.54f, -3.97f, 0f);
-        }
+
+        GameData.sceneName = LevelManager.SceneNames.Lobby;
     }
 
     public void DisableSelectionCollider()
@@ -172,16 +149,10 @@ public class PlayerTopDown : MonoBehaviour
         // Player movement
         if (movePlayer)
         {
-            if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && !takingDamage)
-            {
-                HandleMovement();
+            HandleMovement();
 
-                // Flip the player direction depending on where he is facing
-                FlipPlayerDirection();
-
-                // Player attacks enemies
-                HandleAttacks();
-            }
+            // Flip the player direction depending on where he is facing
+            FlipPlayerDirection();
         }
     }
 
@@ -194,27 +165,11 @@ public class PlayerTopDown : MonoBehaviour
         movement.y = vertical;
         movement.Normalize();
 
-        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
-        {
-            rb.MovePosition((Vector2)transform.position + (movement * movementSpeed * Time.deltaTime));
-        }
+        rb.MovePosition((Vector2)transform.position + (movement * movementSpeed * Time.deltaTime));
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Magnitude", movement.magnitude);
-    }
-
-    public void PlayFootStepSound()
-    {
-        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PlayerFootStep);
-    }
-
-    public void PlayLowHealthBreathingSound()
-    {
-        if (PlayerStats.currentHealth < 30)
-        {
-            AudioManager.PlayPersistentSingleSoundIfNotAlreadyPlaying(AudioManager.Sound.PlayerLowHealthBreathing);
-        }
     }
 
     private void FlipPlayerDirection()
@@ -237,42 +192,16 @@ public class PlayerTopDown : MonoBehaviour
         }
     }
 
-    private void HandleAttacks()
+    public void PlayFootStepSound()
     {
-        if (weaponEquippedDict[PlayerCombat.WeaponTypes.Axe])
-        {
-            /*
-            if (playerInput.leftMousePressed && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Hurt") && !PlayerStats.IsDead)
-            {
-                playerCombat.InvokeAxeAttack();
-                animator.SetTrigger("AxeAttack");
-                rb.velocity = Vector2.zero;
-            }
-            */
-            if (playerInput.leftMousePressed && !playerCombat.isAttacking_Axe && !takingDamage && !PlayerStats.IsDead)
-            {
-                playerCombat.InvokeAxeAttack();
-                animator.SetTrigger("AxeAttack");
-                rb.velocity = Vector2.zero;
-            }
-        }
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PlayerFootStep);
+    }
 
-        if (weaponEquippedDict[PlayerCombat.WeaponTypes.Knife])
+    public void PlayLowHealthBreathingSound()
+    {
+        if (PlayerStats.currentHealth < 30)
         {
-            if (playerInput.leftMousePressed && !playerCombat.isAttacking_Knife && !takingDamage && !PlayerStats.IsDead)
-            {
-                playerCombat.InvokeKnifeAttack();
-                animator.SetTrigger("KnifeAttack");
-                rb.velocity = Vector2.zero;
-            }
-        }
-
-        if (weaponEquippedDict[PlayerCombat.WeaponTypes.Sword])
-        {
-            if (playerInput.leftMousePressed && !takingDamage && !PlayerStats.IsDead)
-            {
-                // TODO: different behavior for magic potion + sword, fire elem + sword and sword without any powers
-            }
+            AudioManager.PlayPersistentSingleSoundIfNotAlreadyPlaying(AudioManager.Sound.PlayerLowHealthBreathing);
         }
     }
 
@@ -306,165 +235,6 @@ public class PlayerTopDown : MonoBehaviour
         if (instance != null)
         {
             instance.movePlayer = true;
-        }
-    }
-
-    /// <summary>
-    /// Weapons equip/unequip
-    /// </summary>
-    /// <returns></returns>
-
-
-    // Returns true if axe is equipped
-    public static bool AxeDrawn()
-    {
-        if (instance != null)
-        {
-            return instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Axe];
-        }
-        else
-            return false;
-    }
-
-    // Returns true if knife is equipped
-    public static bool KnifeDrawn()
-    {
-        if (instance != null)
-        {
-            return instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Knife];
-        }
-        else
-            return false;
-    }
-
-    // Returns true if sword is equipped
-    public static bool SwordDrawn()
-    {
-        if (instance != null)
-        {
-            return instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Sword];
-        }
-        else
-            return false;
-    }
-
-    // Sets the AxeDrawn animation parameter to true
-    public static void EquipAxe()
-    {
-        instance.StartCoroutine(instance.EquipAxeAfterDelay());
-    }
-
-    private IEnumerator EquipAxeAfterDelay()
-    {
-        yield return new WaitForSeconds(0.3f);
-
-        if (instance != null)
-        {
-            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Axe] = true;
-            instance.animator.SetBool("AxeDrawn", true);
-
-            // Set other weapon bools to false
-            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Knife] = false;
-            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Sword] = false;
-            instance.animator.SetBool("KnifeDrawn", false);
-            instance.animator.SetBool("SwordDrawn", false);
-        }
-    }
-
-    // Sets the AxeDrawn animation parameter to false
-    public static void UnequipAxe()
-    {
-        instance.StartCoroutine(instance.UnequipAxeAfterDelay());
-    }
-
-    private IEnumerator UnequipAxeAfterDelay()
-    {
-        yield return new WaitForSeconds(0.3f);
-
-        if (instance != null)
-        {
-            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Axe] = false;
-            instance.animator.SetBool("AxeDrawn", false);
-        }
-    }
-
-    // Sets the KnifeDrawn animation parameter to true
-    public static void EquipKnife()
-    {
-        instance.StartCoroutine(instance.EquipKnifeAfterDelay());
-    }
-
-    private IEnumerator EquipKnifeAfterDelay()
-    {
-        yield return new WaitForSeconds(0.3f);
-
-        if (instance != null)
-        {
-            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Knife] = true;
-            instance.animator.SetBool("KnifeDrawn", true);
-
-            // Set other weapon equipped bools to false
-            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Axe] = false;
-            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Sword] = false;
-            instance.animator.SetBool("AxeDrawn", false);
-            instance.animator.SetBool("SwordDrawn", false);
-        }
-    }
-
-    // Sets the KnifeDrawn animation parameter to false
-    public static void UnequipKnife()
-    {
-        instance.StartCoroutine(instance.UnequipKnifeAfterDelay());
-    }
-
-    private IEnumerator UnequipKnifeAfterDelay()
-    {
-        yield return new WaitForSeconds(0.3f);
-
-        if (instance != null)
-        {
-            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Knife] = false;
-            instance.animator.SetBool("KnifeDrawn", false);
-        }
-    }
-
-    // Sets the SwordDrawn animation parameter to true
-    public static void EquipSword()
-    {
-        instance.StartCoroutine(instance.EquipSwordAfterDelay());
-    }
-
-    private IEnumerator EquipSwordAfterDelay()
-    {
-        yield return new WaitForSeconds(0.3f);
-
-        if (instance != null)
-        {
-            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Sword] = true;
-            instance.animator.SetBool("SwordDrawn", true);
-
-            // Set other weapon bools to false
-            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Knife] = false;
-            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Axe] = false;
-            instance.animator.SetBool("KnifeDrawn", false);
-            instance.animator.SetBool("AxeDrawn", false);
-        }
-    }
-
-    // Sets the SwordDrawn animation parameter to false
-    public static void UnequipSword()
-    {
-        instance.StartCoroutine(instance.UnequipSwordAfterDelay());
-    }
-
-    private IEnumerator UnequipSwordAfterDelay()
-    {
-        yield return new WaitForSeconds(0.3f);
-
-        if (instance != null)
-        {
-            instance.weaponEquippedDict[PlayerCombat.WeaponTypes.Sword] = false;
-            instance.animator.SetBool("SwordDrawn", false);
         }
     }
 }

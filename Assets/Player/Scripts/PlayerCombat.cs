@@ -324,34 +324,17 @@ public class PlayerCombat : MonoBehaviour
             // Create blood particles
             GameObject bloodParticles = Instantiate(GameAssets.instance.bloodParticles, bloodParticlesStartPosition);
 
-            if (Player.instance != null)
+            if (Player.PlayerFacingRight())
             {
-                if (Player.PlayerFacingRight())
-                {
-                    bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-                }
-                else
-                {
-                    bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-                }
-
-                // Set player taking damage bool on Player script to stop keybaord movement
-                Player.instance.takingDamage = true;
+                bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             else
             {
-                if (PlayerTopDown.PlayerFacingRight())
-                {
-                    bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-                }
-                else
-                {
-                    bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-                }
-
-                // Set player taking damage bool on Player script to stop keybaord movement
-                PlayerTopDown.instance.takingDamage = true;
+                bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
+
+            // Set player taking damage bool on Player script to stop keybaord movement
+            Player.instance.takingDamage = true;
             
             StartCoroutine(DestroyGameObjectAfterDelay(bloodParticles, 5f));
 
@@ -387,10 +370,7 @@ public class PlayerCombat : MonoBehaviour
             // Push push to the right
             rb.velocity = new Vector2(pushDistanceOnHit, 0);
             yield return new WaitForSeconds(0.5f);
-            if (Player.instance != null)
-                Player.instance.takingDamage = false;
-            else
-                PlayerTopDown.instance.takingDamage = false;
+            Player.instance.takingDamage = false;
             canAttack = true;
         }
         else
@@ -398,10 +378,7 @@ public class PlayerCombat : MonoBehaviour
             // Push player to the left
             rb.velocity = new Vector2(-pushDistanceOnHit, 0);
             yield return new WaitForSeconds(0.5f);
-            if (Player.instance != null)
-                Player.instance.takingDamage = false;
-            else
-                PlayerTopDown.instance.takingDamage = false;
+            Player.instance.takingDamage = false;
             canAttack = true;
         }
     }
@@ -409,14 +386,7 @@ public class PlayerCombat : MonoBehaviour
     void Die()
     {
         PlayerStats.IsDead = true;
-        if (Player.instance != null)
-        {
-            Player.StopMovement();
-        }
-        else
-        {
-            PlayerTopDown.StopMovement();
-        }
+        Player.StopMovement();
 
         // Stop attack task
         StopAttack();

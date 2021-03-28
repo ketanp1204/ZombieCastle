@@ -1403,6 +1403,7 @@ Transform:
   - {fileID: 750236061}
   - {fileID: 737310582}
   - {fileID: 1454664411932041477}
+  - {fileID: 1810857874}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2733,6 +2734,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 581334338}
     m_Modifications:
+    - target: {fileID: 2691388463079626970, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691388463079626970, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691388463079626970, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691388463079626970, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4069682288195184172, guid: 9c4af77c8eabb994ea32a481375004fc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6872,6 +6889,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1810857875}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   dialogueAfterCombat: []
 --- !u!1 &1344453199
 GameObject:
@@ -9104,6 +9133,7 @@ MonoBehaviour:
   jigsawPuzzleInteractButton: {fileID: 1759878483}
   jigsawPuzzleInteractText: {fileID: 644149676}
   differencePuzzleCanvasGroup: {fileID: 0}
+  numberOfDifferencesFoundText: {fileID: 0}
   diffPuzzleCountdownTimerText: {fileID: 0}
   diffPuzzleInteractButton: {fileID: 0}
   diffPuzzleInteractText: {fileID: 0}
@@ -9766,6 +9796,73 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5461778991519988496, guid: 0c6b23f1d5309a04a81a2755d5bf88f8, type: 3}
   m_PrefabInstance: {fileID: 1794103944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1810857873
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 217803393}
+    m_Modifications:
+    - target: {fileID: 3701445895263451337, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701445895263451337, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701445895263451337, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701445895263451337, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701445895263451337, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701445895263451337, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701445895263451337, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701445895263451337, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701445895263451337, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701445895263451337, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701445895263451337, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701445895263451339, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+      propertyPath: m_Name
+      value: CombatBlockWall
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+--- !u!4 &1810857874 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3701445895263451337, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+  m_PrefabInstance: {fileID: 1810857873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1810857875 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3701445895263451339, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+  m_PrefabInstance: {fileID: 1810857873}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1818948638
 PrefabInstance:
@@ -21490,6 +21587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombieGameObjectsContainer: {fileID: 1331913332}
   cinemachineCamera: {fileID: 829335296}
+  combatBlockWall: {fileID: 1810857875}
 --- !u!61 &1454664411932041498
 BoxCollider2D:
   m_ObjectHideFlags: 0

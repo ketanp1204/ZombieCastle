@@ -67,10 +67,12 @@ public class GameSession : MonoBehaviour
             if (PlayerStats.isFirstScene)
             {
                 // Initialize Game Data
-                GameData.Initialize();
+                if(!GameData.isInitialized)
+                    GameData.Initialize();
 
-                // Play intro dialogue
-                StartCoroutine(PlayIntroDialogue());
+                // Play intro dialogue 
+                if (!GameData.lobby_introDialogueSeen)
+                    StartCoroutine(PlayIntroDialogue());
             }
 
             // Play candle burning sound
@@ -100,6 +102,8 @@ public class GameSession : MonoBehaviour
             DialogueBox.instance.SetGameStartDialogueFlag();
             DialogueBox.instance.StartDialogueDisplay();
         }
+
+        GameData.lobby_introDialogueSeen = true;
 
         yield return new WaitForSeconds(4f);
 

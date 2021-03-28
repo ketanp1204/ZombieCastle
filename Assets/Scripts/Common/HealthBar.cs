@@ -38,4 +38,13 @@ public class HealthBar : MonoBehaviour
             new Task(UIAnimation.FadeCanvasGroupAfterDelay(healthBarCG, 0f, 1f, delay, 0.1f));
         }
     }
+
+    public void UseHealthPotion()
+    {
+        Debug.Log("health restored");
+
+        slider.value = 100f;
+
+        fill.color = gradient.Evaluate(slider.normalizedValue);
+    }
 }

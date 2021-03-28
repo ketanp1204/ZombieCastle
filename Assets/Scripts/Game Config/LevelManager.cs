@@ -67,7 +67,10 @@ public class LevelManager : MonoBehaviour
         {
             if (PlayerStats.isFirstScene)
             {
-                animatorSpeed = 0.15f;
+                if (GameData.lobby_introDialogueSeen)
+                    animatorSpeed = 1f;
+                else
+                    animatorSpeed = 0.15f;
             }
             else
             {

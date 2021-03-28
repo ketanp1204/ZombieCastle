@@ -342,89 +342,41 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
         // Check whether weapon is equipped
         if (weaponType == PlayerCombat.WeaponTypes.Knife)
         {
-            if (Player.instance != null)
+            if (Player.KnifeDrawn())
             {
-                if (Player.KnifeDrawn())
-                {
-                    // Unequip
-                    Player.UnequipKnife();
-                }
-                else
-                {
-                    // Equip
-                    Player.EquipKnife();
-                }
+                // Unequip
+                Player.UnequipKnife();
             }
             else
             {
-                if (PlayerTopDown.KnifeDrawn())
-                {
-                    // Unequip
-                    PlayerTopDown.UnequipKnife();
-                }
-                else
-                {
-                    // Equip
-                    PlayerTopDown.EquipKnife();
-                }
+                // Equip
+                Player.EquipKnife();
             }
         }
         else if (weaponType == PlayerCombat.WeaponTypes.Axe)
         {
-            if (Player.instance != null)
+            if (Player.AxeDrawn())
             {
-                if (Player.AxeDrawn())
-                {
-                    // Unequip
-                    Player.UnequipAxe();
-                }
-                else
-                {
-                    // Equip
-                    Player.EquipAxe();
-                }
+                // Unequip
+                Player.UnequipAxe();
             }
             else
             {
-                if (PlayerTopDown.AxeDrawn())
-                {
-                    // Unequip
-                    PlayerTopDown.UnequipAxe();
-                }
-                else
-                {
-                    // Equip
-                    PlayerTopDown.EquipAxe();
-                }
+                // Equip
+                Player.EquipAxe();
             }
         }
         else if (weaponType == PlayerCombat.WeaponTypes.Sword)
         {
-            if (Player.instance != null)
+            if (Player.SwordDrawn())
             {
-                if (Player.SwordDrawn())
-                {
-                    // Unequip
-                    Player.UnequipSword();
-                }
-                else
-                {
-                    // Equip
-                    Player.EquipSword();
-                }
+                // Unequip
+                Player.UnequipSword();
             }
             else
             {
-                if (PlayerTopDown.SwordDrawn())
-                {
-                    // Unequip
-                    PlayerTopDown.UnequipSword();
-                }
-                else
-                {
-                    // Equip
-                    PlayerTopDown.EquipSword();
-                }
+                // Equip
+                Player.EquipSword();
             }
         }
     }
