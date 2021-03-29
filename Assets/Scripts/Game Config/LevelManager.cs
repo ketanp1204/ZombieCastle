@@ -77,6 +77,10 @@ public class LevelManager : MonoBehaviour
                 animatorSpeed = 1f;
             }
         }
+        else if (scene.name == "GameEndScene")
+        {
+            animatorSpeed = 0.3f;
+        }
         else
         {
             animatorSpeed = 1f;
@@ -95,6 +99,11 @@ public class LevelManager : MonoBehaviour
     {
         instance.animatorSpeed = speed;
         instance.UpdateAnimationClipTimes();
+    }
+    
+    public static float GetCrossFadeStartAnimLength()
+    {
+        return instance.crossfadeStartAnimLength;
     }
 
     public static void FadeScreenInAndOut()

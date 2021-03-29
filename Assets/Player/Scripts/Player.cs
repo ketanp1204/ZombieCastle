@@ -451,6 +451,12 @@ public class Player : MonoBehaviour
             return false;
     }
 
+    public void MakePlayerFaceLeft()
+    {
+        facingRight = false;
+        animator.SetFloat("FaceDir", -1f);
+    }
+
     // Stop input for movement
     public static void StopMovement()
     {

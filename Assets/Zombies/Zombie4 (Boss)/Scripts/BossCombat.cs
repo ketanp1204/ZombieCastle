@@ -189,7 +189,7 @@ public class BossCombat : MonoBehaviour
         bossAI.state = BossAI.BossState.Chasing;
     }
 
-    void Die()
+    public void Die()
     {
         // Set boss state to dead
         bossAI.state = BossAI.BossState.Dead;
@@ -217,13 +217,8 @@ public class BossCombat : MonoBehaviour
         // Disable Health Bar
         healthBar.gameObject.SetActive(false);
 
-        // Send a notification to the multiple zombies death behaviour script
-        MultipleZombiesDeathBehaviour.instance.AddDeadZombie();
-
-        // Destroy enemy after delay
-        StartCoroutine(DestroyGameObjectAfterDelay(gameObject, destroyDelayAfterDeath));
-
-        // TODO: send a notification to a script which starts game ending dialogue and other events
+        // Notification to game ending script
+        GameObject.Find("BehaviourAfterBossDefeated").GetComponent<BehaviourAfterBossDefeated>().StartGameEndBehaviour();
     }
 
     private IEnumerator DestroyGameObjectAfterDelay(GameObject gameObject, float delay)

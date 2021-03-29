@@ -214,7 +214,7 @@ public class IntroSequence : MonoBehaviour
         yield return new WaitForSeconds(4f);
 
         // Play character grass walk sound
-        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.IntroSequenceCharacterGrassWalk);
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.IntroSequenceCharacterGrassWalk);
 
         // Show player and friend approaching
         new Task(FadeSpriteRendererAfterDelay(img1_PlayerSR, 0f, 1f, 0f, 4.519f));
@@ -261,7 +261,7 @@ public class IntroSequence : MonoBehaviour
         new Task(MoveCameraFollowTargetX(img2_CamStartPos, img2_CamStartPos.position.x, img2_CamStartPos.position.x + 3.44f, 0f, 6f));
 
         // Play character grass walk sound
-        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.IntroSequenceCharacterGrassWalk);
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.IntroSequenceCharacterGrassWalk);
 
         yield return new WaitForSeconds(2f);
 
@@ -303,7 +303,7 @@ public class IntroSequence : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         // Play intro scare sound
-        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.IntroScareSound);
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.IntroScareSound);
 
         yield return new WaitForSeconds(2f);
 
@@ -417,7 +417,7 @@ public class IntroSequence : MonoBehaviour
         new Task(InterpolateLight2DIntensity(pumpkinLight2D, pumpkinLight2D.intensity, 15f, 0f, 2f));
 
         // Play blackout music
-        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.IntroSequenceBlackout);
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.IntroSequenceBlackout);
 
         // Get background music AudioSource
         AudioSource backgroundMusicAudioSource = AudioManager.loopingSoundGameObjects[AudioManager.Sound.IntroSequenceBackground].GetComponent<AudioSource>();
