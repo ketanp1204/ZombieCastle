@@ -52,6 +52,8 @@ public class GameOverScreen : MonoBehaviour
     {
         GameData.loadingCheckpointFromGameOver = true;
 
+        PlayerStats.IsDead = false;
+
         if (GameData.sceneName == LevelManager.SceneNames.Lobby)
         {
             LevelManager.LoadSceneByName("CastleLobby");

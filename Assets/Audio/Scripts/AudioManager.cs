@@ -48,7 +48,9 @@ public static class AudioManager
         PlayerLowHealthBreathing,
         GameOver,
         PlayerDeath,
-        FireElement
+        FireElement,
+        PlayerMagicSpellSpawn,
+        FireballSpawn
     }
 
     // private static Dictionary<Sound, float> soundTimerDictionary;

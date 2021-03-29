@@ -56,7 +56,7 @@ public class BehaviourAfterBossDefeated : MonoBehaviour
         Player.instance.transform.position = new Vector3(-8.59f, -13.32f, 0f);
 
         // Show dialogue camera
-        gameEndDialogueCamera.Priority = 15;
+        gameEndDialogueCamera.Priority = 20;
 
         yield return new WaitForSeconds(3f);
 

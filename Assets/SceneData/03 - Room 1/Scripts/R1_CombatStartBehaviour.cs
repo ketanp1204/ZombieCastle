@@ -12,11 +12,13 @@ public class R1_CombatStartBehaviour : MonoBehaviour
     public GameObject zombieGameObjectsContainer;
     public CinemachineVirtualCamera cinemachineCamera;
     public Transform temporaryCameraTarget;
-    public GameObject combatBlockRightWall;
+    public GameObject leftWallCollider;
+    public GameObject combatBlockWall;
     public WeaponObject knifeScriptableObject;
 
     // Private References
     private List<GameObject> zombieGameObjects;
+    private BoxCollider2D combatStartCollider;
 
     // Private variables
     [TextArea(4, 10)]
@@ -35,31 +37,54 @@ public class R1_CombatStartBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        combatStartCollider = GetComponent<BoxCollider2D>();
         zombieGameObjects = new List<GameObject>();
         foreach (Transform child in zombieGameObjectsContainer.transform)
         {
             zombieGameObjects.Add(child.gameObject);
         }
-        combatBlockRightWall.SetActive(false);
+        combatBlockWall.SetActive(false);
+
+        // Check if combat already completed
+        if (GameData.r1_combatCompleted)
+        {
+            foreach (GameObject zombie in zombieGameObjects)
+            {
+                Destroy(zombie);
+            }
+            combatStartCollider.enabled = false;
+            leftWallCollider.SetActive(true);
+        }
+        else
+        {
+            combatStartCollider.enabled = true;
+            leftWallCollider.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Disable this collider
-        GetComponent<BoxCollider2D>().enabled = false;
-
-        // Move camera to show zombie
-        Camera.main.gameObject.GetComponent<CinemachineBrain>().m_IgnoreTimeScale = true;
-        cinemachineCamera.Follow = temporaryCameraTarget;
-
-        // Show player dialogue about using knife
-        if (DialogueBox.instance)
+        if (collision.CompareTag("Player"))
         {
-            StartCoroutine(ChangeCameraTargetAfterDelay(dialogueDisplayDelay));
-            DialogueBox.instance.dialogueDisplayDelay = dialogueDisplayDelay;
-            DialogueBox.instance.SetRoom1ZombieDiscoveryFlag();
-            DialogueBox.instance.FillSentences(playerResponseOnFindingZombies);
-            DialogueBox.instance.StartDialogueDisplay();
+            // Disable this collider
+            combatStartCollider.enabled = false;
+
+            // Move camera to show zombie
+            Camera.main.gameObject.GetComponent<CinemachineBrain>().m_IgnoreTimeScale = true;
+            cinemachineCamera.Follow = temporaryCameraTarget;
+
+            // Play zombie 1 roar
+            AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie1Roar);
+
+            // Show player dialogue about using knife
+            if (DialogueBox.instance)
+            {
+                StartCoroutine(ChangeCameraTargetAfterDelay(dialogueDisplayDelay));
+                DialogueBox.instance.dialogueDisplayDelay = dialogueDisplayDelay;
+                DialogueBox.instance.SetRoom1ZombieDiscoveryFlag();
+                DialogueBox.instance.FillSentences(playerResponseOnFindingZombies);
+                DialogueBox.instance.StartDialogueDisplay();
+            }
         }
     }
 
@@ -89,7 +114,7 @@ public class R1_CombatStartBehaviour : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
 
         // Block the player in the combat area
-        combatBlockRightWall.SetActive(true);
+        combatBlockWall.SetActive(true);
 
         // Start chasing by the zombies after knife selected by player in the inventory box
         foreach (GameObject gameObject in zombieGameObjects)

@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class DamageThePlayer : MonoBehaviour
 {
-
-    public void StopAttackHitboxAnimation()
-    {
-        GetComponent<Animator>().SetBool("IsAttacking", false);
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

@@ -50,7 +50,7 @@ public class GameSession : MonoBehaviour
         SetReferences();
         HandleSceneChanges(scene);
         
-        // Time.timeScale = 0.5f;          // Testing
+        Time.timeScale = 0.4f;          // Testing
     }
 
     // Initialize cached references

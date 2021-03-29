@@ -12,8 +12,6 @@ public class EnemyAI : MonoBehaviour
     public enum EnemyState
     {
         Idle,
-        Chasing,
-        Attacking,
         TakingDamage,
         Dead
     }
@@ -89,27 +87,28 @@ public class EnemyAI : MonoBehaviour
     {
         while (true)
         {
-            if (followPath && enemyState != EnemyState.Dead && enemyState != EnemyState.TakingDamage && !PlayerStats.IsDead)
-            {
-                // Get player pathfinding target transform
-                target = Player.instance.pathfindingTarget;
-
-                enemyState = EnemyState.Chasing;
-
-                animator.SetBool("ChasingPlayer", true);
-
-                if (seeker.IsDone())
-                {
-                    // enemyCombat.StopAttack();
-                    seeker.StartPath(rb.position, target.position, OnPathComplete);
-                }
-
-                yield return new WaitForSeconds(pathUpdateSeconds);
-            }
-            else
-            {
+            if (!followPath)
                 break;
+
+            if (enemyState == EnemyState.Dead)
+                break;
+
+            if (enemyState == EnemyState.TakingDamage)
+                break;
+
+            if (PlayerStats.IsDead)
+                break;
+
+            // Get player pathfinding target transform
+            target = Player.instance.pathfindingTarget;
+
+            if (seeker.IsDone())
+            {
+                // enemyCombat.StopAttack();
+                seeker.StartPath(rb.position, target.position, OnPathComplete);
             }
+
+            yield return new WaitForSeconds(pathUpdateSeconds);
         }
     }
 
@@ -124,8 +123,7 @@ public class EnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(followPath && enemyState != EnemyState.Dead && enemyState != EnemyState.TakingDamage && !PlayerStats.IsDead)
-            FollowPath();
+        FollowPath();
 
         if (PlayerStats.IsDead)
         {
@@ -140,6 +138,18 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
+        if (!followPath)
+            return;
+
+        if (enemyState == EnemyState.Dead)
+            return;
+
+        if (enemyState == EnemyState.TakingDamage)
+            return;
+
+        if (PlayerStats.IsDead)
+            return;
+
         Vector2 direction;
         Vector2 movement;
 
@@ -153,15 +163,18 @@ public class EnemyAI : MonoBehaviour
 
             animator.SetBool("ChasingPlayer", false);
 
-            if (enemyState != EnemyState.Dead)
+            if (!enemyCombat.isAttacking)
             {
                 enemyCombat.InvokeAttack();
             }
+
             StartCoroutine(WaitForPlayerToMoveAway());
         } 
         else // Chasing
         {
             enemyCombat.StopAttack();
+
+            animator.SetBool("ChasingPlayer", true);
 
             direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
 
@@ -212,7 +225,11 @@ public class EnemyAI : MonoBehaviour
 
         while (distanceToPlayer < attackStartDistance)
         {
-            yield return new WaitForSeconds(pathUpdateSeconds);
+            if (!enemyCombat.isAttacking)
+            {
+                enemyCombat.InvokeAttack();
+            }
+            yield return new WaitForSeconds(enemyCombat.attackRepeatTime);
             distanceToPlayer = Vector2.Distance(transform.position, target.position);
         }
 

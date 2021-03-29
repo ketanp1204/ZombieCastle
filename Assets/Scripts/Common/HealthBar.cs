@@ -33,10 +33,7 @@ public class HealthBar : MonoBehaviour
 
     public void ShowHealthBarAfterDelay(float delay)
     {
-        if (healthBarCG.alpha == 0f)
-        {
-            new Task(UIAnimation.FadeCanvasGroupAfterDelay(healthBarCG, 0f, 1f, delay, 0.1f));
-        }
+        new Task(UIAnimation.FadeCanvasGroupAfterDelay(healthBarCG, 0f, 1f, delay, 0.1f));
     }
 
     public void UseHealthPotion()

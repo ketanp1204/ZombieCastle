@@ -8,18 +8,11 @@ using UnityEngine;
 [RequireComponent(typeof(RangedEnemyAI))]
 public class RangedEnemyCombat : MonoBehaviour
 {
-    public enum ZombieTypes
-    {
-        Zombie1,
-        Zombie2,
-        Zombie3,
-        Zombie4
-    }
-
     // Public attack variables
-    [Header("Attack Attributes")]
-    public int attackDamage;
-    public float attackRepeatTime;
+    [Header("Magic Attack")]
+    public float magicAttackRepeatTime = 0.8f;                                          // Float - Delay between successive attacks
+    public Transform magicParticlesSpawnLocation;                                       // Transform - Position from which to spawn the magic spell particles
+    public GameObject magicParticlePrefab;                                              // GameObject - Prefab of the zombie3 magic spell moving particle
 
     [HideInInspector]
     public bool canAttack = false;
@@ -27,17 +20,17 @@ public class RangedEnemyCombat : MonoBehaviour
     // Private references
     private Animator animator;
     private RangedEnemyAI rangedEnemyAI;
+    private BoxCollider2D damageCollider;
 
     // Public references
     [Header("References")]
-    public LayerMask playerLayerMask;
     public HealthBar healthBar;
     public Transform bloodParticlesStartPosition;
-    public Transform attackParticleSpawnLocation;
 
     // Private general variables
     private int currentHealth;
     private Task attackTask = null;
+    private float healthWhenAttackStarted;
 
     // Public general variables
     [Header("Enemy Attributes")]
@@ -45,7 +38,9 @@ public class RangedEnemyCombat : MonoBehaviour
     public float destroyDelayAfterDeath = 3f;
     public float pushDistanceOnHit;
     public float damageMultiplier = 1f;
-    public ZombieTypes zombieType;
+
+    [HideInInspector]
+    public bool isAttacking = false;
 
     // Death Event
     public event Action<RangedEnemyCombat> OnDeath;
@@ -62,6 +57,7 @@ public class RangedEnemyCombat : MonoBehaviour
     {
         rangedEnemyAI = GetComponent<RangedEnemyAI>();
         animator = GetComponent<Animator>();
+        damageCollider = transform.Find("DamageArea").GetComponent<BoxCollider2D>();
     }
 
     private void Initialize()
@@ -82,6 +78,8 @@ public class RangedEnemyCombat : MonoBehaviour
                 attackTask.Stop();
                 attackTask = null;
             }
+
+            isAttacking = false;
         }
     }
 
@@ -90,84 +88,110 @@ public class RangedEnemyCombat : MonoBehaviour
         canAttack = true;
         animator = GetComponent<Animator>();
 
-        if (rangedEnemyAI.enemyState != RangedEnemyAI.EnemyState.Attacking && rangedEnemyAI.enemyState != RangedEnemyAI.EnemyState.Dead)
-        {
-            if (attackTask != null)
-            {
-                attackTask.Stop();
-                attackTask = null;
-            }
+        if (rangedEnemyAI.enemyState == RangedEnemyAI.EnemyState.Attacking)
+            return;
 
-            attackTask = new Task(Attack());
+        if (rangedEnemyAI.enemyState == RangedEnemyAI.EnemyState.Dead)
+            return;
+
+
+        if (attackTask != null)
+        {
+            attackTask.Stop();
+            attackTask = null;
         }
+
+        healthWhenAttackStarted = currentHealth;
+
+        attackTask = new Task(Attack());
     }
 
     private IEnumerator Attack()
     {
-        float healthWhenAttackStarted = currentHealth;
-
         while (canAttack && healthWhenAttackStarted == currentHealth)
         {
-            rangedEnemyAI.enemyState = RangedEnemyAI.EnemyState.Attacking;
-
             if (rangedEnemyAI.enemyState == RangedEnemyAI.EnemyState.Dead)
             {
                 canAttack = false;
+                isAttacking = false;
                 yield break;
             }
+
+            rangedEnemyAI.enemyState = RangedEnemyAI.EnemyState.Attacking;
+
+            isAttacking = true;
 
             // Play attack animation
             animator.SetTrigger("Attack");
 
-            yield return new WaitForSeconds(attackRepeatTime);
+            // Spawn magic particles
+            new Task(SpawnMagicParticles());
+
+            yield return new WaitForSeconds(magicAttackRepeatTime);
         }
+        isAttacking = false;
         rangedEnemyAI.enemyState = RangedEnemyAI.EnemyState.Chasing;
+    }
+
+    private IEnumerator SpawnMagicParticles()
+    {
+        // Wait for anim to reach magic particle spawn location
+        yield return new WaitForSeconds(0.2f);
+
+        // Spawn magic particles
+        Instantiate(magicParticlePrefab, magicParticlesSpawnLocation.position, magicParticlesSpawnLocation.localRotation);
+
+        yield return new WaitForSeconds(0.1f);
+
+        Instantiate(magicParticlePrefab, magicParticlesSpawnLocation.position, magicParticlesSpawnLocation.localRotation);
     }
 
     public void TakeDamage(Transform playerPosition, int damageAmount)
     {
-        if (rangedEnemyAI.enemyState != RangedEnemyAI.EnemyState.Dead)
+        if (rangedEnemyAI.enemyState == RangedEnemyAI.EnemyState.Dead)
+            return;
+
+        // Create blood particles
+        GameObject bloodParticles = Instantiate(GameAssets.instance.bloodParticles, bloodParticlesStartPosition);
+
+        if (rangedEnemyAI.facingRight)
         {
-            // Create blood particles
-            GameObject bloodParticles = Instantiate(GameAssets.instance.bloodParticles, bloodParticlesStartPosition);
+            bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else
+        {
+            bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        StartCoroutine(DestroyGameObjectAfterDelay(bloodParticles, 5f));
 
-            if (rangedEnemyAI.facingRight)
-            {
-                bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            }
-            else
-            {
-                bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            }
-            StartCoroutine(DestroyGameObjectAfterDelay(bloodParticles, 5f));
+        // Play zombie 3 getting hurt audio
+        AudioManager.PlayOneShotSound(AudioManager.Sound.Zombie3GettingHit);
 
-            // TODO: set damage multiplier
+        // Reduce health
+        currentHealth -= (int)Mathf.Floor(damageAmount * damageMultiplier);
 
-            // Reduce health
-            currentHealth -= (int)Mathf.Floor(damageAmount * damageMultiplier);
+        // Update Health Bar
+        healthBar.SetHealth(currentHealth);
 
-            // Update Health Bar
-            healthBar.SetHealth(currentHealth);
+        // Push enemy in hit direction
+        StartCoroutine(PushEnemyInHitDirection(playerPosition));
 
-            // Push enemy in hit direction
-            StartCoroutine(PushEnemyInHitDirection(playerPosition));
+        // Stop attack task
+        if (attackTask != null)
+        {
+            attackTask.Stop();
+            attackTask = null;
+        }
 
-            // Stop attack task
-            if (attackTask != null)
-            {
-                attackTask.Stop();
-                attackTask = null;
-            }
+        StopAttack();
 
-            // Play hurt animation
-            animator.SetTrigger("Hurt");
+        // Play hurt animation
+        animator.SetTrigger("Hurt");
 
-            // Die if health is less than 0
-            if (currentHealth <= 0)
-            {
-                Die();
-            }
-
+        // Die if health is less than 0
+        if (currentHealth <= 0)
+        {
+            Die();
         }
     }
 
@@ -208,8 +232,14 @@ public class RangedEnemyCombat : MonoBehaviour
             attackTask = null;
         }
 
+        // Disable damage collider
+        damageCollider.enabled = false;
+
         // Set die animation parameter
         animator.SetBool("IsDead", true);
+
+        // Play zombie death sound (TODO: if changed for z3)
+        // AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ZombieDeath);
 
         // Stop pathfinding
         rangedEnemyAI.followPath = false;

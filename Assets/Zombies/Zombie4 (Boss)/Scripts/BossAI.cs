@@ -40,7 +40,6 @@ public class BossAI : MonoBehaviour
 
     public BossState state;
 
-
     // Private variables
     private float distanceToPlayer;
     private Path path;
@@ -86,27 +85,32 @@ public class BossAI : MonoBehaviour
     {
         while (true)
         {
-            if (followPath && state != BossState.Dead && state != BossState.TakingDamage && !PlayerStats.IsDead)
-            {
-                // Get player pathfinding target transform
-                target = Player.instance.pathfindingTarget;
-
-                state = BossState.Chasing;
-
-                animator.SetBool("ChasingPlayer", true);
-
-                if (seeker.IsDone())
-                {
-                    // rangedEnemyCombat.StopAttack();
-                    seeker.StartPath(rb.position, target.position, OnPathComplete);
-                }
-
-                yield return new WaitForSeconds(pathUpdateSeconds);
-            }
-            else
-            {
+            if (!followPath)
                 break;
+
+            if (state == BossState.Dead)
+                break;
+
+            if (state == BossState.KneelDown)
+                break;
+
+            if (state == BossState.TakingDamage)
+                break;
+
+            if (PlayerStats.IsDead)
+                break;
+
+
+            // Get player pathfinding target transform
+            target = Player.instance.pathfindingTarget;
+
+            if (seeker.IsDone())
+            {
+                bossCombat.StopAttack();
+                seeker.StartPath(rb.position, target.position, OnPathComplete);
             }
+
+            yield return new WaitForSeconds(pathUpdateSeconds);
         }
     }
 
@@ -122,21 +126,33 @@ public class BossAI : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (followPath && state != BossState.Dead && state != BossState.TakingDamage && !PlayerStats.IsDead)
-            FollowPath();
+        FollowPath();
 
         if (PlayerStats.IsDead)
         {
-            // bossCombat.StopAttack();
+            bossCombat.StopAttack();
         }
     }
 
     private void FollowPath()
     {
         if (path == null)
-        {
             return;
-        }
+
+        if (!followPath)
+            return;
+
+        if (state == BossState.Dead)
+            return;
+
+        if (state == BossState.KneelDown)
+            return;
+
+        if (state == BossState.TakingDamage)
+            return;
+
+        if (PlayerStats.IsDead)
+            return;
 
         Vector2 direction;
         Vector2 movement;
@@ -151,32 +167,36 @@ public class BossAI : MonoBehaviour
 
             animator.SetBool("ChasingPlayer", false);
 
-            if (state != BossState.Dead)
-            {
-                // bossCombat.InvokeAttack();
-            }
             StartCoroutine(WaitForPlayerToMoveAway());
         }
         else // Chasing
         {
-            // bossCombat.StopAttack();
+            bossCombat.StopAttack();
 
-            direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-
-            movement.x = direction.x;
-            movement.y = 0f;
-
-            // Move the enemy
-            if (state != BossState.TakingDamage)
+            if (state != BossState.KneelDown)
             {
-                rb.velocity = new Vector2(movement.x * speed * Time.deltaTime, rb.velocity.y);
-            }
+                // Debug.Log("changing here");
+                state = BossState.Chasing;
 
-            // Next Waypoint
-            float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
-            if (distance < nextWaypointDistance)
-            {
-                currentWaypoint++;
+                animator.SetBool("ChasingPlayer", true);
+
+                direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+
+                movement.x = direction.x;
+                movement.y = 0f;
+
+                // Move the enemy
+                if (!bossCombat.isBeingPushed)
+                {
+                    rb.velocity = new Vector2(movement.x * speed * Time.deltaTime, rb.velocity.y);
+                }
+
+                // Next Waypoint
+                float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+                if (distance < nextWaypointDistance)
+                {
+                    currentWaypoint++;
+                }
             }
         }
     }
@@ -193,7 +213,32 @@ public class BossAI : MonoBehaviour
 
         while (distanceToPlayer < attackStartDistance)
         {
-            yield return new WaitForSeconds(pathUpdateSeconds);
+            if (state != BossState.Dead && state != BossState.KneelDown)
+            {
+                if (bossCombat.currentAttackType == BossCombat.AttackTypes.Attack1)
+                {
+                    if (!bossCombat.Attack1Active)
+                    {
+                        bossCombat.InvokeAttack1();
+                    }
+
+                    yield return new WaitForSeconds(bossCombat.attack1RepeatTime + 0.1f);
+                }
+                else
+                {
+                    if (!bossCombat.Attack2Active)
+                    {
+                        bossCombat.InvokeAttack2();
+                    }
+
+                    yield return new WaitForSeconds(bossCombat.attack2RepeatTime + 0.1f);
+                }
+            }
+            else
+            {
+                yield return new WaitForSeconds(pathUpdateSeconds);
+            }
+            
             distanceToPlayer = Vector2.Distance(transform.position, target.position);
         }
 

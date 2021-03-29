@@ -40,8 +40,14 @@ public class PlayerCombat : MonoBehaviour
     public SwordAttackTypes swordAttackType = SwordAttackTypes.Normal;
 
     [Header("Sword Magic Attack")]
-    public int swordMagicDamage = 10;                                                   // Int - Damage amount inflicted on enemy
-    public float swordMagicAttackRepeatTime = 1f;                                       // Float - Delay between successive attacks
+    public float swordMagicAttackRepeatTime = 0.8f;                                     // Float - Delay between successive attacks
+    public Transform magicParticlesSpawnLocation;                                       // Transform - Position from which to spawn the magic spell particles
+    public GameObject magicParticlePrefab;                                              // GameObject - Prefab of the player magic spell moving particle
+
+    [Header("Sword Fire Attack")]
+    public float swordFireAttackRepeatTime = 0.8f;                                      // Float - Delay between successive attacks
+    public GameObject fireParticlesSpawnLocations;                                      // GameObject - Container for positions from which to spawn the fire particles
+    public GameObject fireballPrefab;                                                   // GameObject - Prefab of the player fireball moving particle
 
     [Header("Sword Normal (using fire anim) Attack")]
     public int swordNormalDamage = 10;                                                  // Int - Damage amount inflicted on enemy
@@ -156,7 +162,6 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    // TODO: Debug: Every second axe attack does not move the hitbox
     private IEnumerator AttackAxe()
     {
         bool facingRight = Player.PlayerFacingRight();
@@ -307,7 +312,130 @@ public class PlayerCombat : MonoBehaviour
 
     public void PlaySwordNormalAttackSound()
     {
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PlayerSwordAttack);
+    }
 
+    public void InvokeSwordMagicAttack()
+    {
+        canAttack = true;
+
+        if (!isAttacking_SwordMagic && !PlayerStats.IsDead)
+        {
+            if (attackTask != null)
+            {
+                attackTask.Stop();
+                attackTask = null;
+            }
+
+            attackTask = new Task(AttackSwordMagic());
+        }
+    }
+
+    private IEnumerator AttackSwordMagic()
+    {
+        if (canAttack && !Player.instance.takingDamage)
+        {
+            if (PlayerStats.IsDead)
+            {
+                canAttack = false;
+                isAttacking_SwordMagic = false;
+                yield break;
+            }
+
+            isAttacking_SwordMagic = true;
+
+            // Play player sword magic attack animation
+            animator.SetTrigger("SwordMagicAttack");
+
+            // Spawn magic particles
+            new Task(SpawnMagicParticles());
+
+            // Wait for attack to end
+            yield return new WaitForSeconds(swordMagicAttackRepeatTime);
+        }
+        isAttacking_SwordMagic = false;
+    }
+
+    private IEnumerator SpawnMagicParticles()
+    {
+        yield return new WaitForSeconds(0.15f);
+
+        // Play magic particles spawn sound
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.PlayerMagicSpellSpawn);
+
+        // Wait for anim to reach magic particle spawn location
+        yield return new WaitForSeconds(0.30f);
+
+        // Spawn magic particles
+        Instantiate(magicParticlePrefab, magicParticlesSpawnLocation.position, magicParticlesSpawnLocation.localRotation);
+
+        yield return new WaitForSeconds(0.1f);
+
+        Instantiate(magicParticlePrefab, magicParticlesSpawnLocation.position, magicParticlesSpawnLocation.localRotation);
+
+        yield return new WaitForSeconds(0.3f);
+
+        Instantiate(magicParticlePrefab, magicParticlesSpawnLocation.position, magicParticlesSpawnLocation.localRotation);
+    }
+
+    public void InvokeSwordFireAttack()
+    {
+        canAttack = true;
+
+        if (!isAttacking_SwordFire && !PlayerStats.IsDead)
+        {
+            if (attackTask != null)
+            {
+                attackTask.Stop();
+                attackTask = null;
+            }
+
+            attackTask = new Task(AttackSwordFire());
+        }
+    }
+
+    private IEnumerator AttackSwordFire()
+    {
+        if (canAttack && !Player.instance.takingDamage)
+        {
+            if (PlayerStats.IsDead)
+            {
+                canAttack = false;
+                isAttacking_SwordFire = false;
+                yield break;
+            }
+
+            isAttacking_SwordFire = true;
+
+            // Play player sword fire attack animation
+            animator.SetTrigger("SwordFireAttack");
+
+            // Spawn magic particles
+            new Task(SpawnFireParticles());
+
+            // Wait for attack to end
+            yield return new WaitForSeconds(swordFireAttackRepeatTime);
+        }
+        isAttacking_SwordFire = false;
+    }
+
+    private IEnumerator SpawnFireParticles()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        // Wait for anim to reach fire particle spawn location
+        yield return new WaitForSeconds(0.4f);
+
+        // Spawn fire particles
+        foreach (Transform child in fireParticlesSpawnLocations.transform)
+        {
+            // Play fireball spawn sound
+            AudioManager.PlayOneShotSound(AudioManager.Sound.FireballSpawn);
+
+            Instantiate(fireballPrefab, child.position, child.parent.localRotation);
+
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
     public void InvokeSwordBlock()
@@ -348,16 +476,6 @@ public class PlayerCombat : MonoBehaviour
         Player.EnableMovement();
     }
 
-    public void InvokeSwordFireAttack()
-    {
-
-    }
-
-    public void InvokeSwordMagicAttack()
-    {
-
-    }
-
     public void TakeDamage(Transform enemyPos, int damageAmount)
     {
         if (!PlayerStats.IsDead && !isBlocking_Sword)
@@ -375,7 +493,7 @@ public class PlayerCombat : MonoBehaviour
             }
 
             // Play hurt sound
-            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PlayerGettingHit);
+            AudioManager.PlayPersistentSingleSoundIfNotAlreadyPlaying(AudioManager.Sound.PlayerGettingHit);
 
             // Set player taking damage bool on Player script to stop keybaord movement
             Player.instance.takingDamage = true;
@@ -431,9 +549,13 @@ public class PlayerCombat : MonoBehaviour
     {
         PlayerStats.IsDead = true;
         Player.StopMovement();
+        PlayerStats.playerState = PlayerStats.PlayerState.Idle;
 
         // Stop attack task
         StopAttack();
+
+        // Play death audio
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.PlayerDeath);
 
         // Set die animation parameter
         animator.SetBool("IsDead", true);
@@ -442,9 +564,10 @@ public class PlayerCombat : MonoBehaviour
         OnDeath?.Invoke(this);
 
         // Disable Health Bar
-        // healthBar.gameObject.SetActive(false);
+        healthBar.gameObject.SetActive(false);
 
-        StartCoroutine(DestroyPlayerAndReturnToLobby(gameObject, 5f));
+        // Load game over screen after delay
+        new Task(LoadGameOverScreenAfterDelay(3f));
     }
 
     private IEnumerator DestroyGameObjectAfterDelay(GameObject gameObject, float delay)
@@ -453,12 +576,11 @@ public class PlayerCombat : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private IEnumerator DestroyPlayerAndReturnToLobby(GameObject player, float delay)
+    private IEnumerator LoadGameOverScreenAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        Destroy(player);
 
-        GameSession.ResetPlayerStats();
-        SceneManager.LoadScene("CastleLobby");        // for testing, change later
+        LevelManager.SetAnimatorSpeed(0.4f);
+        LevelManager.LoadSceneByName("GameOver");
     }
 }

@@ -33,6 +33,7 @@ public class EnemyCombat : MonoBehaviour
     public LayerMask playerLayerMask;
     public HealthBar healthBar;
     public Transform bloodParticlesStartPosition;
+    public BoxCollider2D damageAreaCollider;
     public Animator attackHitboxAnimator;
     public GameObject attackHitbox;
     public BoxCollider2D hitboxCollider;
@@ -40,6 +41,7 @@ public class EnemyCombat : MonoBehaviour
     // Private general variables
     private int currentHealth;
     private Task attackTask = null;
+    private float healthWhenAttackStarted;
 
     // Public general variables
     [Header("Enemy Attributes")]
@@ -48,6 +50,9 @@ public class EnemyCombat : MonoBehaviour
     public float pushDistanceOnHit;
     public float damageMultiplier = 1f;
     public ZombieTypes zombieType;
+
+    [HideInInspector]
+    public bool isAttacking = false;
 
     // Death Event
     public event Action<EnemyCombat> OnDeath;
@@ -82,6 +87,9 @@ public class EnemyCombat : MonoBehaviour
                 attackTask.Stop();
                 attackTask = null;
             }
+
+            attackHitboxAnimator.SetBool("IsAttacking", false);
+            isAttacking = false;
         }
     }
 
@@ -90,93 +98,112 @@ public class EnemyCombat : MonoBehaviour
         canAttack = true;
         animator = GetComponent<Animator>();
 
-        if (enemyAI.enemyState != EnemyAI.EnemyState.Attacking && enemyAI.enemyState != EnemyAI.EnemyState.Dead)
-        {
-            if (attackTask != null)
-            {
-                attackTask.Stop();
-                attackTask = null;
-            }
+        if (isAttacking)
+            return;
 
-            attackTask = new Task(Attack());
+        if (enemyAI.enemyState == EnemyAI.EnemyState.Dead)
+            return;
+
+        if (PlayerStats.IsDead)
+            return;
+
+        if (attackTask != null)
+        {
+            attackTask.Stop();
+            attackTask = null;
+            attackHitboxAnimator.SetBool("IsAttacking", false);
         }
+
+        healthWhenAttackStarted = currentHealth;
+
+        attackTask = new Task(Attack());
     }
 
     private IEnumerator Attack()
     {
-        float healthWhenAttackStarted = currentHealth;
-
-        while (canAttack && healthWhenAttackStarted == currentHealth)
+        if (enemyAI.enemyState == EnemyAI.EnemyState.Dead)
         {
-            enemyAI.enemyState = EnemyAI.EnemyState.Attacking;
-
-            if (enemyAI.enemyState == EnemyAI.EnemyState.Dead)
-            {
-                canAttack = false;
-                yield break;
-            }
-
-            // Play attack animation
-            animator.SetTrigger("Attack");
-            attackHitboxAnimator.enabled = true;
-            attackHitboxAnimator.SetBool("IsAttacking", true);
-
-            yield return new WaitForSeconds(attackRepeatTime);
+            canAttack = false;
+            isAttacking = false;
+            yield break;
         }
-        enemyAI.enemyState = EnemyAI.EnemyState.Chasing;
+
+        isAttacking = true;
+
+        // Play attack animation
+        animator.SetTrigger("Attack");
+        attackHitboxAnimator.SetBool("IsAttacking", true);
+
+        yield return new WaitForSeconds(attackRepeatTime);
+
+        attackHitboxAnimator.SetBool("IsAttacking", false);
+        isAttacking = false;
     }
 
     public void TakeDamage(Transform playerPos, int damageAmount)
     {
-        if (enemyAI.enemyState != EnemyAI.EnemyState.Dead)
+        if (enemyAI.enemyState == EnemyAI.EnemyState.Dead)
+            return;
+
+        // Create blood particles
+        GameObject bloodParticles = Instantiate(GameAssets.instance.bloodParticles, bloodParticlesStartPosition);
+
+        if (enemyAI.facingRight)
         {
-            // Create blood particles
-            GameObject bloodParticles = Instantiate(GameAssets.instance.bloodParticles, bloodParticlesStartPosition);
+            bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else
+        {
+            bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        StartCoroutine(DestroyGameObjectAfterDelay(bloodParticles, 5f));
 
-            if (enemyAI.facingRight)
-            {
-                bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            }
-            else
-            {
-                bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            }
-            StartCoroutine(DestroyGameObjectAfterDelay(bloodParticles, 5f));
+        // Set damage multiplier
+        if (Player.KnifeDrawn() && zombieType != ZombieTypes.Zombie1)
+        {
+            damageMultiplier = 0.05f;
+        }
+        else if (Player.AxeDrawn())
+        {
+            damageMultiplier = 0.8f;
+        }
 
-            // Set damage multiplier
-            if (Player.KnifeDrawn() && zombieType != ZombieTypes.Zombie1)
-            {
-                damageMultiplier = 0.05f;
-            }
-            else if (Player.AxeDrawn())
-            {
-                damageMultiplier = 0.8f;
-            }
+        if (zombieType == ZombieTypes.Zombie1)
+        {
+            // Play zombie 1 getting hurt audio
+            AudioManager.PlayOneShotSound(AudioManager.Sound.Zombie1GettingHit);
+        }
+        else if (zombieType == ZombieTypes.Zombie2)
+        {
+            // Play zombie 2 getting hurt audio
+            AudioManager.PlayOneShotSound(AudioManager.Sound.Zombie2GettingHit);
+        }
 
-            // Reduce health
-            currentHealth -= (int)Mathf.Floor(damageAmount * damageMultiplier);
+        // Reduce health
+        currentHealth -= (int)Mathf.Floor(damageAmount * damageMultiplier);
 
-            // Update Health Bar
-            healthBar.SetHealth(currentHealth);
+        // Update Health Bar
+        healthBar.SetHealth(currentHealth);
 
-            // Push enemy in hit direction
-            StartCoroutine(PushEnemyInHitDirection(playerPos));
+        // Push enemy in hit direction
+        StartCoroutine(PushEnemyInHitDirection(playerPos));
 
-            // Stop attack task
-            StopAttack();
+        if (attackTask != null)
+        {
+            attackTask.Stop();
+            attackTask = null;
+        }
 
-            // Play hurt animation
-            animator.SetTrigger("Hurt");
+        // Stop attack task
+        StopAttack();
 
-            // Stop attack hitbox animation if running
-            // attackHitboxAnimator.enabled = false;
-            attackHitboxAnimator.SetBool("IsAttacking", false);
+        // Play hurt animation
+        animator.SetTrigger("Hurt");
 
-            // Die if health is less than 0
-            if (currentHealth <= 0)
-            {
-                Die();
-            }
+        // Die if health is less than 0
+        if (currentHealth <= 0)
+        {
+            Die();
         }
     }
 
@@ -202,7 +229,7 @@ public class EnemyCombat : MonoBehaviour
         }
 
         // Set enemy state to chasing
-        enemyAI.enemyState = EnemyAI.EnemyState.Chasing;
+        enemyAI.enemyState = EnemyAI.EnemyState.Idle;
     }
 
     void Die()
@@ -211,10 +238,26 @@ public class EnemyCombat : MonoBehaviour
         enemyAI.enemyState = EnemyAI.EnemyState.Dead;
 
         // Stop attack task
+        if (attackTask != null)
+        {
+            attackTask.Stop();
+            attackTask = null;
+        }
+
+        // Stop attack task
         StopAttack();
+
+        // Disable damage area collider
+        damageAreaCollider.enabled = false;
+
+        // Disable the hitbox collider
+        hitboxCollider.enabled = false;
 
         // Set die animation parameter
         animator.SetBool("IsDead", true);
+
+        // Play zombie death sound
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ZombieDeath);
 
         // Stop pathfinding
         enemyAI.followPath = false;
@@ -223,11 +266,12 @@ public class EnemyCombat : MonoBehaviour
         // Invoke Death Event
         OnDeath?.Invoke(this);
 
+        // Destroy attack hitbox
+        attackHitboxAnimator.enabled = false;
+        Destroy(attackHitbox);
+
         // Set the enemy to layer 13 (DeadZombie) to prevent collision with player
         gameObject.layer = 13;
-
-        // Disable the hitbox collider
-        hitboxCollider.enabled = false;
 
         // Disable Health Bar
         healthBar.gameObject.SetActive(false);

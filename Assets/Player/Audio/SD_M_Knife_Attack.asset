@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SD_M_Knife_Attack
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 59e30e822f483674eb6c5e3a902ce7dd, type: 3}
-  loopSound: 1
+  loopSound: 0
   volume: 0.3

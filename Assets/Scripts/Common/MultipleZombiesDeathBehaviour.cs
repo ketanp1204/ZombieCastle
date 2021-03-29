@@ -57,4 +57,14 @@ public class MultipleZombiesDeathBehaviour : MonoBehaviour
             DialogueBox.instance.StartDialogueDisplay();
         }
     }
+
+    public void SetRoom1CombatCompletedBool()
+    {
+        GameData.r1_combatCompleted = true;
+    }
+
+    public void SetRoom5CombatCompleteBool()
+    {
+        GameData.r5_zombie3CombatCompleted = true;
+    }
 }

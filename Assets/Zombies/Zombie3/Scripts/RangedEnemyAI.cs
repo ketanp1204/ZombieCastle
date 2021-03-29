@@ -87,27 +87,28 @@ public class RangedEnemyAI : MonoBehaviour
     {
         while (true)
         {
-            if (followPath && enemyState != EnemyState.Dead && enemyState != EnemyState.TakingDamage && !PlayerStats.IsDead)
-            {
-                // Get player pathfinding target transform
-                target = Player.instance.pathfindingTarget;
-
-                enemyState = EnemyState.Chasing;
-
-                animator.SetBool("ChasingPlayer", true);
-
-                if (seeker.IsDone())
-                {
-                    rangedEnemyCombat.StopAttack();
-                    seeker.StartPath(rb.position, target.position, OnPathComplete);
-                }
-
-                yield return new WaitForSeconds(pathUpdateSeconds);
-            }
-            else
-            {
+            if (!followPath)
                 break;
+
+            if (enemyState == EnemyState.Dead)
+                break;
+
+            if (enemyState == EnemyState.TakingDamage)
+                break;
+
+            if (PlayerStats.IsDead)
+                break;
+
+            // Get player pathfinding target transform
+            target = Player.instance.pathfindingTarget;
+
+            if (seeker.IsDone())
+            {
+                rangedEnemyCombat.StopAttack();
+                seeker.StartPath(rb.position, target.position, OnPathComplete);
             }
+
+            yield return new WaitForSeconds(pathUpdateSeconds);
         }
     }
 
@@ -122,8 +123,7 @@ public class RangedEnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (followPath && enemyState != EnemyState.Dead && enemyState != EnemyState.TakingDamage && !PlayerStats.IsDead)
-            FollowPath();
+        FollowPath();
 
         if (PlayerStats.IsDead)
         {
@@ -138,6 +138,18 @@ public class RangedEnemyAI : MonoBehaviour
             return;
         }
 
+        if (!followPath)
+            return;
+
+        if (enemyState == EnemyState.Dead)
+            return;
+
+        if (enemyState == EnemyState.TakingDamage)
+            return;
+
+        if (PlayerStats.IsDead)
+            return;
+
         Vector2 direction;
         Vector2 movement; 
 
@@ -151,15 +163,15 @@ public class RangedEnemyAI : MonoBehaviour
 
             animator.SetBool("ChasingPlayer", false);
 
-            if (enemyState != EnemyState.Dead)
-            {
-                rangedEnemyCombat.InvokeAttack();
-            }
             StartCoroutine(WaitForPlayerToMoveAway());
         }
         else // Chasing
         {
             rangedEnemyCombat.StopAttack();
+
+            enemyState = EnemyState.Chasing;
+
+            animator.SetBool("ChasingPlayer", true);
 
             direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
 
@@ -189,11 +201,11 @@ public class RangedEnemyAI : MonoBehaviour
         {
             if ((target.position.x > transform.position.x) && !facingRight)
             {
-                transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             else if ((target.position.x < transform.position.x) && facingRight)
             {
-                transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
         }
     }
@@ -210,7 +222,12 @@ public class RangedEnemyAI : MonoBehaviour
 
         while (distanceToPlayer < attackStartDistance)
         {
-            yield return new WaitForSeconds(pathUpdateSeconds);
+            if (!rangedEnemyCombat.isAttacking)
+            {
+                rangedEnemyCombat.InvokeAttack();
+            }
+
+            yield return new WaitForSeconds(rangedEnemyCombat.magicAttackRepeatTime + 0.1f);
             distanceToPlayer = Vector2.Distance(transform.position, target.position);
         }
 

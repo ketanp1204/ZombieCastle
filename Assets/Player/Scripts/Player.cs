@@ -29,6 +29,10 @@ public class Player : MonoBehaviour
 
     private Animator torchAnimator;                                                 // Reference - Torch object's animator
 
+    private Transform magicParticlesSpawnLocation;                                  // Reference - Sword magic attack particles spawn location
+
+    private Transform fireballSpawnLocations;                                       // Reference - Fireball attack particles spawn location container
+
 
     // Public References
     public Transform pathfindingTarget;                                             // Reference - Pathfinding target
@@ -99,6 +103,8 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         torchAnimator = transform.Find("Torch").GetComponent<Animator>();
+        magicParticlesSpawnLocation = transform.Find("MagicParticlesSpawnLocation");
+        fireballSpawnLocations = transform.Find("FireballSpawnLocations");
     }
 
     // Default Values
@@ -114,6 +120,9 @@ public class Player : MonoBehaviour
         weaponEquippedDict[PlayerCombat.WeaponTypes.Knife] = false;
         weaponEquippedDict[PlayerCombat.WeaponTypes.Axe] = false;
         weaponEquippedDict[PlayerCombat.WeaponTypes.Sword] = false;
+
+        // testing
+        playerCombat.swordAttackType = PlayerCombat.SwordAttackTypes.Fire;
 
         // Health
         if (PlayerStats.isFirstScene)
@@ -247,7 +256,13 @@ public class Player : MonoBehaviour
                 // Flip the player direction depending on where he is facing
                 FlipPlayerDirection();
             }
+        }
+    }
 
+    private void Update()
+    {
+        if (movePlayer)
+        {
             // Handle attack input
             HandleAttacks();
         }
@@ -288,6 +303,24 @@ public class Player : MonoBehaviour
                     // Set animation parameter
                     animator.SetFloat("FaceDir", 1f);
 
+                    // Set sword particle spawn locations direction
+                    if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Magic)
+                    {
+                        if (magicParticlesSpawnLocation.transform.localPosition.x < 0)
+                        {
+                            magicParticlesSpawnLocation.eulerAngles = new Vector3(0f, 0f, 0f);
+                            magicParticlesSpawnLocation.localPosition = new Vector3(-1f * magicParticlesSpawnLocation.localPosition.x, magicParticlesSpawnLocation.localPosition.y, magicParticlesSpawnLocation.localPosition.z);
+                        }
+                    }
+                    else if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Fire)
+                    {
+                        if (fireballSpawnLocations.transform.localPosition.x < 0)
+                        {
+                            fireballSpawnLocations.eulerAngles = new Vector3(0f, 0f, 0f);
+                            fireballSpawnLocations.localPosition = new Vector3(-1f * fireballSpawnLocations.localPosition.x, fireballSpawnLocations.localPosition.y, fireballSpawnLocations.localPosition.z);
+                        }
+                    }
+
                     if (isInRoom3)
                     {
                         // Set torch animator parameter
@@ -298,6 +331,23 @@ public class Player : MonoBehaviour
                 {
                     // Set animation parameter
                     animator.SetFloat("FaceDir", -1f);
+
+                    if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Magic)
+                    {
+                        if (magicParticlesSpawnLocation.transform.localPosition.x > 0)
+                        {
+                            magicParticlesSpawnLocation.eulerAngles = new Vector3(0f, 180f, 0f);
+                            magicParticlesSpawnLocation.localPosition = new Vector3(-1f * magicParticlesSpawnLocation.localPosition.x, magicParticlesSpawnLocation.localPosition.y, magicParticlesSpawnLocation.localPosition.z);
+                        }
+                    }
+                    else if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Fire)
+                    {
+                        if (fireballSpawnLocations.transform.localPosition.x > 0)
+                        {
+                            fireballSpawnLocations.eulerAngles = new Vector3(0f, 180f, 0f);
+                            fireballSpawnLocations.localPosition = new Vector3(-1f * fireballSpawnLocations.localPosition.x, fireballSpawnLocations.localPosition.y, fireballSpawnLocations.localPosition.z);
+                        }
+                    }
 
                     if (isInRoom3)
                     {
@@ -339,11 +389,13 @@ public class Player : MonoBehaviour
                 }
                 else if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Fire)
                 {
-                    
+                    playerCombat.InvokeSwordFireAttack();
+                    rb.velocity = Vector2.zero;
                 }
                 else if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Magic)
                 {
-
+                    playerCombat.InvokeSwordMagicAttack();
+                    rb.velocity = Vector2.zero;
                 }
             }
 
@@ -429,7 +481,7 @@ public class Player : MonoBehaviour
     public static void SetIdleState()
     {
         PlayerStats.playerState = PlayerStats.PlayerState.Idle;
-        instance.healthBar.HideHealthBarAfterDelay(5f);
+        instance.healthBar.HideHealthBarAfterDelay(2.5f);
     }
 
     public static void SetCombatState()
@@ -437,7 +489,7 @@ public class Player : MonoBehaviour
         if (PlayerStats.playerState != PlayerStats.PlayerState.Combat)
         {
             PlayerStats.playerState = PlayerStats.PlayerState.Combat;
-            instance.healthBar.ShowHealthBarAfterDelay(3f);
+            instance.healthBar.ShowHealthBarAfterDelay(1.5f);
         }
     }
 

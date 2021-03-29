@@ -50,7 +50,10 @@ public class R2_Combat : MonoBehaviour
         // Block the player in the combat area
         combatBlockWall.SetActive(true);
 
-        // Start chasing by the zombies after knife selected by player in the inventory box
+        // Play zombie 2 roar
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie2Roar);
+
+        // Start chasing by the zombies
         foreach (GameObject gameObject in zombieGameObjects)
         {
             gameObject.GetComponent<EnemyAI>().StartChasingPlayer();

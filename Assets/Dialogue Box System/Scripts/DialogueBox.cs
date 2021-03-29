@@ -41,6 +41,7 @@ public class DialogueBox : MonoBehaviour
     private bool room3DiffPuzzleAfterDialogue = false;                  // Bool - Cupboard object in room3 that contains differences puzzle
     private bool room1ZombieDiscovery = false;                          // Bool - Player finds a zombie in room1
     private bool isGameStartDialogue = false;                           // Bool - To start instructions display after game start dialogue
+    private bool room5BossBattleAfterDialogue = false;                  // Bool - To start boss battle after dialogue
 
     private TreasureBoxInteraction treasureBoxInstance = null;          // TreasureBoxInteraction script for current treasure box instance
 
@@ -260,6 +261,12 @@ public class DialogueBox : MonoBehaviour
                 }
             }
 
+            if (room5BossBattleAfterDialogue)
+            {
+                GameData.r5_bossDialogueSeen = true;
+                BossVisibleCameraZoomOut.instance.StartBossBatlle();
+            }
+
             Player.EnableMovement();
             PlayerTopDown.EnableMovement();
 
@@ -324,6 +331,11 @@ public class DialogueBox : MonoBehaviour
         isGameStartDialogue = true;
     }
 
+    public void SetRoom5BossBattleFlag()
+    {
+        room5BossBattleAfterDialogue = true;
+    }
+
     private void ResetValues()
     {
         dialogueIndex = 0;
@@ -349,6 +361,7 @@ public class DialogueBox : MonoBehaviour
         room3DiffPuzzleAfterDialogue = false;
         room1ZombieDiscovery = false;
         isGameStartDialogue = false;
+        room5BossBattleAfterDialogue = false;
 
         currentItem = null;
     }

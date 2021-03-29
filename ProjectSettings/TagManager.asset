@@ -14,6 +14,7 @@ TagManager:
   - JigsawPuzzleDraggablePiece
   - JigsawPuzzleFinalPiece
   - TreasureBox
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -30,8 +31,8 @@ TagManager:
   - PlayerDamageArea
   - DeadZombie
   - MazeCollider
-  - 
-  - 
+  - CombatBlockWall
+  - SpellProjectile
   - 
   - 
   - 
