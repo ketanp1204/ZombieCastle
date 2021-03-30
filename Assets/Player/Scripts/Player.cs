@@ -46,6 +46,9 @@ public class Player : MonoBehaviour
     public bool movePlayer;                                                         // Bool - Player can move
 
     [HideInInspector]
+    public bool canAttack;                                                          // Bool - Player can attack
+
+    [HideInInspector]
     public bool isClimbingLadder = false;                                           // Bool - Player climbing a ladder
 
     [HideInInspector]
@@ -111,6 +114,7 @@ public class Player : MonoBehaviour
     public void Initialize()
     {
         movePlayer = true;
+        canAttack = true;
         movementSpeed = walkSpeed;
         PlayerStats.playerState = PlayerStats.PlayerState.Idle;
 
@@ -301,21 +305,16 @@ public class Player : MonoBehaviour
                     animator.SetFloat("FaceDir", 1f);
 
                     // Set sword particle spawn locations direction
-                    if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Magic)
+                    if (magicParticlesSpawnLocation.transform.localPosition.x < 0)
                     {
-                        if (magicParticlesSpawnLocation.transform.localPosition.x < 0)
-                        {
-                            magicParticlesSpawnLocation.eulerAngles = new Vector3(0f, 0f, 0f);
-                            magicParticlesSpawnLocation.localPosition = new Vector3(-1f * magicParticlesSpawnLocation.localPosition.x, magicParticlesSpawnLocation.localPosition.y, magicParticlesSpawnLocation.localPosition.z);
-                        }
+                        magicParticlesSpawnLocation.eulerAngles = new Vector3(0f, 0f, 0f);
+                        magicParticlesSpawnLocation.localPosition = new Vector3(-1f * magicParticlesSpawnLocation.localPosition.x, magicParticlesSpawnLocation.localPosition.y, magicParticlesSpawnLocation.localPosition.z);
                     }
-                    else if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Fire)
+
+                    if (fireballSpawnLocations.transform.localPosition.x < 0)
                     {
-                        if (fireballSpawnLocations.transform.localPosition.x < 0)
-                        {
-                            fireballSpawnLocations.eulerAngles = new Vector3(0f, 0f, 0f);
-                            fireballSpawnLocations.localPosition = new Vector3(-1f * fireballSpawnLocations.localPosition.x, fireballSpawnLocations.localPosition.y, fireballSpawnLocations.localPosition.z);
-                        }
+                        fireballSpawnLocations.eulerAngles = new Vector3(0f, 0f, 0f);
+                        fireballSpawnLocations.localPosition = new Vector3(-1f * fireballSpawnLocations.localPosition.x, fireballSpawnLocations.localPosition.y, fireballSpawnLocations.localPosition.z);
                     }
 
                     if (isInRoom3)
@@ -329,21 +328,17 @@ public class Player : MonoBehaviour
                     // Set animation parameter
                     animator.SetFloat("FaceDir", -1f);
 
-                    if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Magic)
+                    // Set sword particle spawn locations direction
+                    if (magicParticlesSpawnLocation.transform.localPosition.x > 0)
                     {
-                        if (magicParticlesSpawnLocation.transform.localPosition.x > 0)
-                        {
-                            magicParticlesSpawnLocation.eulerAngles = new Vector3(0f, 180f, 0f);
-                            magicParticlesSpawnLocation.localPosition = new Vector3(-1f * magicParticlesSpawnLocation.localPosition.x, magicParticlesSpawnLocation.localPosition.y, magicParticlesSpawnLocation.localPosition.z);
-                        }
+                        magicParticlesSpawnLocation.eulerAngles = new Vector3(0f, 180f, 0f);
+                        magicParticlesSpawnLocation.localPosition = new Vector3(-1f * magicParticlesSpawnLocation.localPosition.x, magicParticlesSpawnLocation.localPosition.y, magicParticlesSpawnLocation.localPosition.z);
                     }
-                    else if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Fire)
+
+                    if (fireballSpawnLocations.transform.localPosition.x > 0)
                     {
-                        if (fireballSpawnLocations.transform.localPosition.x > 0)
-                        {
-                            fireballSpawnLocations.eulerAngles = new Vector3(0f, 180f, 0f);
-                            fireballSpawnLocations.localPosition = new Vector3(-1f * fireballSpawnLocations.localPosition.x, fireballSpawnLocations.localPosition.y, fireballSpawnLocations.localPosition.z);
-                        }
+                        fireballSpawnLocations.eulerAngles = new Vector3(0f, 180f, 0f);
+                        fireballSpawnLocations.localPosition = new Vector3(-1f * fireballSpawnLocations.localPosition.x, fireballSpawnLocations.localPosition.y, fireballSpawnLocations.localPosition.z);
                     }
 
                     if (isInRoom3)
@@ -358,52 +353,57 @@ public class Player : MonoBehaviour
 
     private void HandleAttacks()
     {
-        if (weaponEquippedDict[PlayerCombat.WeaponTypes.Axe])
+        if (canAttack)
         {
-            if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
+            if (weaponEquippedDict[PlayerCombat.WeaponTypes.Axe])
             {
-                playerCombat.InvokeAxeAttack();
-                rb.velocity = Vector2.zero;
-            }
-        }
-        else if (weaponEquippedDict[PlayerCombat.WeaponTypes.Knife])
-        {
-            if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
-            {
-                playerCombat.InvokeKnifeAttack();
-                rb.velocity = Vector2.zero;
-            }
-        }
-        else if (weaponEquippedDict[PlayerCombat.WeaponTypes.Sword])
-        {
-            if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
-            {
-                // TODO: different behavior for magic potion + sword, fire elem + sword and sword without any powers
-                if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Normal)
+                if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
                 {
-                    playerCombat.InvokeSwordNormalAttack();
-                    rb.velocity = Vector2.zero;
-                }
-                else if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Fire)
-                {
-                    playerCombat.InvokeSwordFireAttack();
-                    rb.velocity = Vector2.zero;
-                }
-                else if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Magic)
-                {
-                    playerCombat.InvokeSwordMagicAttack();
+                    playerCombat.InvokeAxeAttack();
                     rb.velocity = Vector2.zero;
                 }
             }
+            else if (weaponEquippedDict[PlayerCombat.WeaponTypes.Knife])
+            {
+               
+                if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
+                {
+                    playerCombat.InvokeKnifeAttack();
+                    rb.velocity = Vector2.zero;
+                }
+            }
+            else if (weaponEquippedDict[PlayerCombat.WeaponTypes.Sword])
+            {
+                if (Input.GetMouseButtonDown(0) && !takingDamage && !PlayerStats.IsDead)
+                {
+                    // TODO: different behavior for magic potion + sword, fire elem + sword and sword without any powers
+                    if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Normal)
+                    {
+                        playerCombat.InvokeSwordNormalAttack();
+                        rb.velocity = Vector2.zero;
+                    }
+                    else if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Fire)
+                    {
+                        playerCombat.InvokeSwordFireAttack();
+                        rb.velocity = Vector2.zero;
+                    }
+                    else if (playerCombat.swordAttackType == PlayerCombat.SwordAttackTypes.Magic)
+                    {
+                        playerCombat.InvokeSwordMagicAttack();
+                        rb.velocity = Vector2.zero;
+                    }
+                }
 
-            if (Input.GetKeyDown(KeyCode.Space) && !PlayerStats.IsDead)
-            {
-                playerCombat.InvokeSwordBlock();
-                rb.velocity = Vector2.zero;
+                if (Input.GetKeyDown(KeyCode.Space) && !PlayerStats.IsDead)
+                {
+                    playerCombat.InvokeSwordBlock();
+                    rb.velocity = Vector2.zero;
+                }
             }
         }
     }
 
+    
 
     public void DisableSelectionCollider()
     {
@@ -530,11 +530,35 @@ public class Player : MonoBehaviour
         }
     }
 
+    public static void DisableAttackInput()
+    {
+        if (instance != null)
+        {
+            instance.canAttack = false;
+        }
+    }
+
+    // Enable input for attack after delay
+    public static void EnableAttackInputAfterDelay()
+    {
+        if (instance != null)
+        {
+            new Task(instance.EnableAttackAfterDelay(0.3f));
+        }
+    }
+
+    private IEnumerator EnableAttackAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        canAttack = true;
+    }
+
     /// <summary>
     /// Weapons equip/unequip
     /// </summary>
     /// <returns></returns>
-    
+
 
     // Returns true if axe is equipped
     public static bool AxeDrawn()

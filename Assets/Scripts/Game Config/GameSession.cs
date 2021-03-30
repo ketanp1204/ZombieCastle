@@ -12,6 +12,7 @@ public class GameSession : MonoBehaviour
     public UIReferences uiReferences;                               // Global reference for the UIReferences script in the current scene
 
     public WeaponObject knifeInventoryObject;
+    public WeaponObject axeInventoryObject;
 
     // REMOVE BEFORE RELEASING GAME - Temporary - Used to re add the scriptable objects to the default player inventory after exiting play in the unity editor
     public PC_Then_Inventory_Object lobbyKeyInventoryObject;        
@@ -36,7 +37,7 @@ public class GameSession : MonoBehaviour
 
         PlayerStats.Initialize();
         AudioManager.Initialize();
-        // AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
+        AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
     }
 
     void OnEnable()
@@ -63,6 +64,12 @@ public class GameSession : MonoBehaviour
     {
         if (scene.name == "CastleLobby")
         {
+            // Play background track
+            AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
+
+            // Stop room 3 background track
+            AudioManager.StopLoopingSound(AudioManager.Sound.Room3Background);
+
             // Handle first scene events
             if (PlayerStats.isFirstScene)
             {
@@ -82,6 +89,22 @@ public class GameSession : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
 
             new Task(DisableInventoryWeaponInteractionAfterDelay(1f));
+        }
+        else if (scene.name == "Room3")
+        {
+            // Play room3 background sound
+            AudioManager.PlaySoundLooping(AudioManager.Sound.Room3Background);
+
+            // Stop game background sound
+            AudioManager.StopLoopingSound(AudioManager.Sound.BackgroundTrack);
+        }
+        else
+        {
+            // Play background track
+            AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
+
+            // Stop room 3 background track
+            AudioManager.StopLoopingSound(AudioManager.Sound.Room3Background);
         }
     }
 
@@ -125,13 +148,13 @@ public class GameSession : MonoBehaviour
     {
         GameData.currentPlayerInventory.Container.Clear();
         GameData.currentPlayerInventory.AddItem(knifeInventoryObject, 1);
-        // GameData.currentPlayerInventory.AddItem(sword, 1);
+        // GameData.currentPlayerInventory.AddItem(axeInventoryObject, 1);
+        GameData.currentPlayerInventory.AddItem(sword, 1);
         
-        // GameData.currentPlayerInventory.AddItem(lobbyKeyInventoryObject, 1);
-        GameData.currentPlayerInventory.AddItem(lobbyTorchInventoryObject, 1);
-        GameData.currentPlayerInventory.AddItem(r1_oil_barrel, 1);
+        GameData.currentPlayerInventory.AddItem(lobbyKeyInventoryObject, 1);
+        // GameData.currentPlayerInventory.AddItem(lobbyTorchInventoryObject, 1);
+        // GameData.currentPlayerInventory.AddItem(r1_oil_barrel, 1);
         // GameData.currentPlayerInventory.AddItem(fireElement, 1);
-        // GameData.currentPlayerInventory.AddItem(magicPotion, 1);
-        
+        GameData.currentPlayerInventory.AddItem(magicPotion, 1);
     }
 }

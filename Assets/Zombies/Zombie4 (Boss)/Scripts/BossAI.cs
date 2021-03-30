@@ -70,6 +70,9 @@ public class BossAI : MonoBehaviour
 
     public void StartChasingPlayer()
     {
+        // Play boss roar sound
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie4Roar);
+
         if (pathUpdateTask != null)
         {
             pathUpdateTask.Stop();

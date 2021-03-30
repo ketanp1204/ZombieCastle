@@ -53,6 +53,7 @@ public class GameOverScreen : MonoBehaviour
         GameData.loadingCheckpointFromGameOver = true;
 
         PlayerStats.IsDead = false;
+        PlayerStats.currentHealth = 100;
 
         if (GameData.sceneName == LevelManager.SceneNames.Lobby)
         {

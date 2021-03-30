@@ -621,16 +621,14 @@ MonoBehaviour:
   axeAttackRepeatTime: 0.7
   axeHitboxAnimator_L: {fileID: 5079447134803724496}
   axeHitboxAnimator_R: {fileID: 2437771053754895001}
-  knifeDamage: 5
+  knifeDamage: 4
   knifeAttackRepeatTime: 0.6
   knifeHitboxAnimator_L: {fileID: 2430838785247921643}
   knifeHitboxAnimator_R: {fileID: 8495685439208976738}
   swordAttackType: 0
-  swordMagicDamage: 10
   swordMagicAttackRepeatTime: 1
   magicParticlesSpawnLocation: {fileID: 331140646555190849}
   magicParticlePrefab: {fileID: 112066826128384001, guid: 24c34b261f395ea41b23ed10b5f112ff, type: 3}
-  swordFireDamage: 10
   swordFireAttackRepeatTime: 0.8
   fireParticlesSpawnLocations: {fileID: 5474750}
   fireballPrefab: {fileID: 8480083588607420986, guid: abbfd3fd155a29742b6584f9c4b53617, type: 3}
@@ -979,7 +977,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06206107, y: 2.28}
+  m_Offset: {x: 0.06206107, y: 2.412176}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -990,7 +988,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.78, y: 2.24}
+  m_Size: {x: 0.78, y: 2.504352}
   m_EdgeRadius: 0
 --- !u!1 &5522281079751824995
 GameObject:

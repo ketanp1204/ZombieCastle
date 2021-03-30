@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiReferences: {fileID: 0}
   knifeInventoryObject: {fileID: 11400000, guid: 633cac347e6a8044ab8d1909852a247d, type: 2}
+  axeInventoryObject: {fileID: 11400000, guid: 991c22c9e231aa64eae7588e8e1ca9eb, type: 2}
   lobbyKeyInventoryObject: {fileID: 11400000, guid: 8a17bdd09cd0d0247888b46023ed744c, type: 2}
   lobbyTorchInventoryObject: {fileID: 11400000, guid: adc6aec29cf096440969df6eb9e9a925, type: 2}
   r1_oil_barrel: {fileID: 11400000, guid: 37c58e93a604ce545bb0be87c15be717, type: 2}

@@ -51,7 +51,17 @@ public static class AudioManager
         FireElement,
         PlayerMagicSpellSpawn,
         FireballSpawn,
-        InventoryDragAndDrop
+        InventoryDragAndDrop,
+        Room3Background,
+        Zombie4Attack1,
+        Zombie4Attack2,
+        Zombie4Death,
+        Zombie1Death,
+        Zombie2Death,
+        Zombie3Death,
+        Zombie3Attack,
+        Zombie2Attack,
+        Zombie1Attack
     }
 
     // private static Dictionary<Sound, float> soundTimerDictionary;
@@ -205,10 +215,6 @@ public static class AudioManager
             AudioSource audioSource = loopingSoundGameObjects[sound].GetComponent<AudioSource>();
 
             audioSource.Stop();
-        }
-        else
-        {
-            Debug.Log("Sound not playing");
         }
     }
 

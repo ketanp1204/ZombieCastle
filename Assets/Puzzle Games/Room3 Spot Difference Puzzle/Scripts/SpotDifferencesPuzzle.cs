@@ -87,6 +87,12 @@ public class SpotDifferencesPuzzle : MonoBehaviour
         }
 
         interactButton.onClick.AddListener(() => StartDiffPuzzle());
+
+        // Prevent puzzle if already completed
+        if (GameData.r3_spotDifferencePuzzleCompleted)
+        {
+            DisableCupboardCollider();
+        }
     }
 
     public void DisableCupboardCollider()
@@ -111,6 +117,7 @@ public class SpotDifferencesPuzzle : MonoBehaviour
 
         // Stop Player movement
         Player.StopMovement();
+        Player.DisableAttackInput();
 
         // Diff puzzle is active
         isActive = true;
@@ -257,6 +264,9 @@ public class SpotDifferencesPuzzle : MonoBehaviour
         // Hide cursor
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
 
+        // Update this completed interaction in the GameData class
+        GameData.r3_spotDifferencePuzzleCompleted = true;
+
         // Diff puzzle is inactive
         isActive = false;
 
@@ -268,6 +278,7 @@ public class SpotDifferencesPuzzle : MonoBehaviour
 
         // Enable Player movement
         Player.EnableMovement();
+        Player.EnableAttackInputAfterDelay();
 
         // Hide maze puzzle UI
         new Task(UIAnimation.FadeCanvasGroupAfterDelay(puzzleUICanvasGroup, 1f, 0f, 0f, 0f));

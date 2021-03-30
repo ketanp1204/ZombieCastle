@@ -21,10 +21,20 @@ public class DamageTheEnemy : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponentInParent<EnemyCombat>().TakeDamage(transform.parent.transform, damageAmount);
-            
-            if (collision.GetComponentInParent<EnemyAI>().enemyState == EnemyAI.EnemyState.Dead)
-                collision.enabled = false;
+            if (attackWeapon == PlayerCombat.WeaponTypes.Sword)
+            {
+                collision.GetComponentInParent<RangedEnemyCombat>().TakeDamage(transform.parent.transform, damageAmount);
+
+                if (collision.GetComponentInParent<RangedEnemyAI>().enemyState == RangedEnemyAI.EnemyState.Dead)
+                    collision.enabled = false;
+            }
+            else
+            {
+                collision.GetComponentInParent<EnemyCombat>().TakeDamage(transform.parent.transform, damageAmount);
+
+                if (collision.GetComponentInParent<EnemyAI>().enemyState == EnemyAI.EnemyState.Dead)
+                    collision.enabled = false;
+            }
         }
     }
 }

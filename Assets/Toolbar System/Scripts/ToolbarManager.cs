@@ -122,7 +122,15 @@ public class ToolbarManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        ShowToolbar();
+        if (canOpenToolbar)
+        {
+            isToolbarOpen = true;
+
+            // Show toolbar display
+            new Task(UIAnimation.FadeCanvasGroupAfterDelay(toolbarCanvasGroup, 0f, 1f, 0f, 0.3f));
+            toolbarCanvasGroup.interactable = true;
+            toolbarCanvasGroup.blocksRaycasts = true;
+        }
 
         yield return new WaitForSeconds(0.4f);
 
@@ -132,6 +140,11 @@ public class ToolbarManager : MonoBehaviour
 
         new Task(UIAnimation.FadeUIImageAfteDelay(inventoryBagHighlight, 1f, 0f, 0f, 0.1f));
 
-        HideToolbar();
+        isToolbarOpen = false;
+
+        // Hide Toolbar display
+        new Task(UIAnimation.FadeCanvasGroupAfterDelay(toolbarCanvasGroup, 1f, 0f, 0f, 0.3f));
+        toolbarCanvasGroup.interactable = false;
+        toolbarCanvasGroup.blocksRaycasts = false;
     }
 }

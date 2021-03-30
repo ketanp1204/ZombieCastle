@@ -133,12 +133,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1006d6349c1943949a7c700afbf20b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 15
+  projectileSpeed: 19
   travelTrajectory: 0
   parabolicAngle: 0
   hasImpactEffect: 1
   impactEffectPrefab: {fileID: 5757771110049638929, guid: a1c7de1e1fb748347b9cabe5977363a4, type: 3}
-  spellDamage: 20
+  spellDamage: 6
   character: 1
 --- !u!50 &-4442510714792072764
 Rigidbody2D:

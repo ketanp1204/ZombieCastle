@@ -109,24 +109,31 @@ public class RangedEnemyCombat : MonoBehaviour
 
     private IEnumerator Attack()
     {
-        if (rangedEnemyAI.enemyState == RangedEnemyAI.EnemyState.Dead)
+        if (canAttack)
         {
-            canAttack = false;
+            if (rangedEnemyAI.enemyState == RangedEnemyAI.EnemyState.Dead)
+            {
+                StopAttack();
+                canAttack = false;
+                isAttacking = false;
+                yield break;
+            }
+
+            isAttacking = true;
+
+            // Play attack sound
+            AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie3Attack);
+
+            // Play attack animation
+            animator.SetTrigger("Attack");
+
+            // Spawn magic particles
+            new Task(SpawnMagicParticles());
+
+            yield return new WaitForSeconds(magicAttackRepeatTime);
+
             isAttacking = false;
-            yield break;
         }
-
-        isAttacking = true;
-
-        // Play attack animation
-        animator.SetTrigger("Attack");
-
-        // Spawn magic particles
-        new Task(SpawnMagicParticles());
-
-        yield return new WaitForSeconds(magicAttackRepeatTime);
-        
-        isAttacking = false;
     }
 
     private IEnumerator SpawnMagicParticles()
@@ -148,6 +155,9 @@ public class RangedEnemyCombat : MonoBehaviour
     public void TakeDamage(Transform playerPosition, int damageAmount)
     {
         if (rangedEnemyAI.enemyState == RangedEnemyAI.EnemyState.Dead)
+            return;
+
+        if (!rangedEnemyAI.combatStarted)
             return;
 
         // Create blood particles
@@ -216,11 +226,16 @@ public class RangedEnemyCombat : MonoBehaviour
         }
 
         // Set enemy state to idle
-        rangedEnemyAI.enemyState = RangedEnemyAI.EnemyState.Idle;
+        if (rangedEnemyAI.enemyState != RangedEnemyAI.EnemyState.Dead)
+            rangedEnemyAI.enemyState = RangedEnemyAI.EnemyState.Idle;
     }
 
     void Die()
     {
+        // Stop pathfinding
+        rangedEnemyAI.followPath = false;
+        rangedEnemyAI.StopMovement();
+
         // Set enemy state to dead
         rangedEnemyAI.enemyState = RangedEnemyAI.EnemyState.Dead;
 
@@ -239,12 +254,8 @@ public class RangedEnemyCombat : MonoBehaviour
         // Set die animation parameter
         animator.SetBool("IsDead", true);
 
-        // Play zombie death sound (TODO: if changed for z3)
-        // AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ZombieDeath);
-
-        // Stop pathfinding
-        rangedEnemyAI.followPath = false;
-        rangedEnemyAI.StopMovement();
+        // Play zombie 3 death sound
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.Zombie3Death);
 
         // Invoke Death Event
         OnDeath?.Invoke(this);

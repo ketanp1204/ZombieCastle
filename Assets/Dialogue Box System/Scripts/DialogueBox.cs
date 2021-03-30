@@ -20,9 +20,10 @@ public class DialogueBox : MonoBehaviour
     public float typingSpeed = 0.025f;                                  // Float - Text auto-type speed in seconds
     public float dialogueDisplayDelay = 0.2f;                           // Float - Delay time before displaying the dialogue box
     public float textSoundEffectPlayInterval = 0.09f;                   // Float - Interval between each text type sound effect
-
+    [HideInInspector]
+    public bool isOpen = false;                                         // Bool - Dialogue box is open
+    
     // Private variables
-    private bool isOpen = false;                                        // Bool - Dialogue box is open
     private bool isTyping = false;                                      // Bool - Dialogue box text typing status
     private string[] sentences;                                         // String array - Sentence array to be displayed
     private bool skipAutoTyping = false;                                // Bool - To stop auto typing of current dialogue box text
@@ -97,6 +98,7 @@ public class DialogueBox : MonoBehaviour
     public void StartDialogueDisplay()
     {
         Player.StopMovement();
+        Player.DisableAttackInput();
         PlayerTopDown.StopMovement();
 
         InventoryManager.DisableInventoryOpen();
@@ -218,7 +220,6 @@ public class DialogueBox : MonoBehaviour
                         destroyPCThenInvObjAfterAdd = false;
                     }
                 }
-
             }
 
             if (showNoteAfterDisplay)
@@ -274,6 +275,7 @@ public class DialogueBox : MonoBehaviour
             }
 
             Player.EnableMovement();
+            Player.EnableAttackInputAfterDelay();
             PlayerTopDown.EnableMovement();
 
             ResetValues();

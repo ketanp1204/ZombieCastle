@@ -173,10 +173,11 @@ public class InventoryManager : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.lockState = CursorLockMode.None;
 
-                // Stop player movement
+                // Stop player movement and attacks
                 if (Player.instance)
                 {
                     Player.StopMovement();
+                    Player.DisableAttackInput();
                 }
                 else if (PlayerTopDown.instance)
                 {
@@ -210,6 +211,9 @@ public class InventoryManager : MonoBehaviour
 
             // Lock mouse cursor
             Cursor.lockState = CursorLockMode.Locked;
+
+            // Resume player attack input after delay
+            Player.EnableAttackInputAfterDelay();
 
             // Resume player movement after delay
             new Task(instance.ResumePlayerMovementAfterDelay(0.6f));

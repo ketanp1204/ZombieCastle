@@ -85,7 +85,8 @@ public class EnemyCombat : MonoBehaviour
                 attackTask = null;
             }
 
-            attackHitboxAnimator.SetBool("IsAttacking", false);
+            attackHitbox.SetActive(false);
+            // attackHitboxAnimator.SetBool("IsAttacking", false);
             isAttacking = false;
         }
     }
@@ -108,7 +109,7 @@ public class EnemyCombat : MonoBehaviour
         {
             attackTask.Stop();
             attackTask = null;
-            attackHitboxAnimator.SetBool("IsAttacking", false);
+            attackHitbox.SetActive(false);
         }
 
         attackTask = new Task(Attack());
@@ -125,13 +126,22 @@ public class EnemyCombat : MonoBehaviour
 
         isAttacking = true;
 
+        // Play attack sound if zombie 2 is attacking
+        if (zombieType == ZombieTypes.Zombie2)
+        {
+            AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie2Attack);
+        }
+
         // Play attack animation
         animator.SetTrigger("Attack");
-        attackHitboxAnimator.SetBool("IsAttacking", true);
+        attackHitbox.SetActive(true);
+        //attackHitboxAnimator.SetBool("IsAttacking", true);
 
         yield return new WaitForSeconds(attackRepeatTime);
 
+        attackHitbox.SetActive(false);
         attackHitboxAnimator.SetBool("IsAttacking", false);
+        
         isAttacking = false;
     }
 
@@ -154,13 +164,16 @@ public class EnemyCombat : MonoBehaviour
         StartCoroutine(DestroyGameObjectAfterDelay(bloodParticles, 5f));
 
         // Set damage multiplier
-        if (Player.KnifeDrawn() && zombieType != ZombieTypes.Zombie1)
+        if (zombieType == ZombieTypes.Zombie2)
         {
-            damageMultiplier = 0.05f;
-        }
-        else if (Player.AxeDrawn())
-        {
-            damageMultiplier = 0.8f;
+            if (Player.KnifeDrawn())
+            {
+                damageMultiplier = 0.05f;
+            }
+            else if (Player.AxeDrawn())
+            {
+                damageMultiplier = 3f;
+            }
         }
 
         if (zombieType == ZombieTypes.Zombie1)
@@ -191,6 +204,9 @@ public class EnemyCombat : MonoBehaviour
         }
 
         StopAttack();
+
+        // Disable attack hitbox
+        attackHitbox.SetActive(false);
 
         // Play hurt animation
         animator.SetTrigger("Hurt");
@@ -224,7 +240,8 @@ public class EnemyCombat : MonoBehaviour
         }
 
         // Set enemy state to idle
-        enemyAI.enemyState = EnemyAI.EnemyState.Idle;
+        if (enemyAI.enemyState != EnemyAI.EnemyState.Dead)
+            enemyAI.enemyState = EnemyAI.EnemyState.Idle;
     }
 
     void Die()
@@ -251,7 +268,16 @@ public class EnemyCombat : MonoBehaviour
         animator.SetBool("IsDead", true);
 
         // Play zombie death sound
-        // AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ZombieDeath);
+        if (zombieType == ZombieTypes.Zombie1)
+        {
+            // Play zombie 1 getting hurt audio
+            AudioManager.PlayOneShotSound(AudioManager.Sound.Zombie1Death);
+        }
+        else if (zombieType == ZombieTypes.Zombie2)
+        {
+            // Play zombie 2 getting hurt audio
+            AudioManager.PlayOneShotSound(AudioManager.Sound.Zombie2Death);
+        }
 
         // Stop pathfinding
         enemyAI.followPath = false;

@@ -81,6 +81,11 @@ public class MazePuzzle : MonoBehaviour
         mazeUICanvasGroup.blocksRaycasts = false;
 
         interactButton.onClick.AddListener(() => StartMazePuzzle());
+
+        if (GameData.r1_mazePuzzleCompleted)
+        {
+            DisablePortraitCollider();
+        }
     }
 
     public void DisablePortraitCollider()
@@ -105,6 +110,7 @@ public class MazePuzzle : MonoBehaviour
 
         // Stop Player movement
         Player.StopMovement();
+        Player.DisableAttackInput();
 
         // Show maze puzzle UI
         new Task(UIAnimation.FadeCanvasGroupAfterDelay(mazeUICanvasGroup, 0f, 1f, 0f, 0.2f));
@@ -210,6 +216,9 @@ public class MazePuzzle : MonoBehaviour
         // Go back to game
         StartCoroutine(ExitPuzzleGame());
 
+        // Update this completed interaction in the GameData class
+        GameData.r1_mazePuzzleCompleted = true;
+
         // Disable portrait collider
         DisablePortraitCollider();
 
@@ -234,6 +243,7 @@ public class MazePuzzle : MonoBehaviour
 
         // Enable Player movement
         Player.EnableMovement();
+        Player.EnableAttackInputAfterDelay();
 
         // Stop movement of maze player
         MazePlayer.EndPuzzle();

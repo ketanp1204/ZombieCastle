@@ -88,6 +88,7 @@ public class NoteBox : MonoBehaviour
     public void ShowNoteBox()
     {
         Player.StopMovement();
+        Player.DisableAttackInput();
         PlayerTopDown.StopMovement();
 
         Cursor.lockState = CursorLockMode.Locked;                                                   // Center and lock mouse cursor
@@ -188,6 +189,7 @@ public class NoteBox : MonoBehaviour
         }
 
         Player.EnableMovement();
+        Player.EnableAttackInputAfterDelay();
         PlayerTopDown.EnableMovement();
 
         ResetValues();

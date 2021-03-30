@@ -130,6 +130,7 @@ public class JigsawPuzzle : MonoBehaviour
 
         // Stop Player movement
         Player.StopMovement();
+        Player.DisableAttackInput();
 
         // Show jigsaw puzzle UI
         new Task(UIAnimation.FadeCanvasGroupAfterDelay(jigsawpuzzleUICanvasGroup, 0f, 1f, 0f, 0.2f));
@@ -298,9 +299,6 @@ public class JigsawPuzzle : MonoBehaviour
 
         // Hide jigsaw puzzle gameobject
         jigsawPuzzleGO.SetActive(false);
-
-        // Disable Player movement
-        Player.StopMovement();
 
         // Hide jigsaw puzzle UI
         new Task(UIAnimation.FadeCanvasGroupAfterDelay(jigsawpuzzleUICanvasGroup, 1f, 0f, 0f, 0f));

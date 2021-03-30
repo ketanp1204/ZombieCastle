@@ -347,6 +347,8 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
                                 // Equip
                                 Player.EquipSword();
                             }
+
+                            new Task(HideInventoryAfterDelay(1f));
                         }
                         else
                         {
@@ -356,6 +358,8 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
 
                             // Reset to normal sword
                             PlayerCombat.instance.swordAttackType = PlayerCombat.SwordAttackTypes.Normal;
+
+                            new Task(HideInventoryAfterDelay(1f));
                         }
                     }
                 }
@@ -398,6 +402,8 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
                                 // Equip
                                 Player.EquipSword();
                             }
+
+                            new Task(HideInventoryAfterDelay(1f));
                         }
                         else
                         {
@@ -407,11 +413,20 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
 
                             // Reset to normal sword
                             PlayerCombat.instance.swordAttackType = PlayerCombat.SwordAttackTypes.Normal;
+
+                            new Task(HideInventoryAfterDelay(1f));
                         }
                     }
                 }
             }    
         }
+    }
+
+    private IEnumerator HideInventoryAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        InventoryManager.HideInventory();
     }
 
     private void StopWeaponDragAndReset()

@@ -617,7 +617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1254770585700548322}
   continueButton: {fileID: 1254770585905870987}
-  isTyping: 0
   typingSpeed: 0.025
   dialogueDisplayDelay: 0.1
   textSoundEffectPlayInterval: 0.09
+  isOpen: 0

@@ -63,6 +63,11 @@ public class MultipleZombiesDeathBehaviour : MonoBehaviour
         GameData.r1_combatCompleted = true;
     }
 
+    public void SetRoom2CombatCompletedBool()
+    {
+        GameData.r2_combatCompleted = true;
+    }
+
     public void SetRoom5CombatCompleteBool()
     {
         GameData.r5_zombie3CombatCompleted = true;

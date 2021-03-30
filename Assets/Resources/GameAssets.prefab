@@ -136,6 +136,26 @@ MonoBehaviour:
     soundData: {fileID: 11400000, guid: 07e8a88eee2106d498f7302e4515c943, type: 2}
   - sound: 45
     soundData: {fileID: 11400000, guid: 26262c38e14c05a448f847db692d2a9a, type: 2}
+  - sound: 46
+    soundData: {fileID: 11400000, guid: a30015e1779d09149b549c2697e52230, type: 2}
+  - sound: 47
+    soundData: {fileID: 11400000, guid: 7a821d5c599dea34484b51ba46362904, type: 2}
+  - sound: 48
+    soundData: {fileID: 11400000, guid: 16e24122ffafefb42a737f86e99c1a4e, type: 2}
+  - sound: 49
+    soundData: {fileID: 11400000, guid: 8696b55eff6fa77419ec2c75bc108c1a, type: 2}
+  - sound: 50
+    soundData: {fileID: 11400000, guid: f0037dbcd4e553b41883b34d7e389d68, type: 2}
+  - sound: 51
+    soundData: {fileID: 11400000, guid: 33cc7c87f713c8447948d5b806b68b6d, type: 2}
+  - sound: 52
+    soundData: {fileID: 11400000, guid: c8dfae1db5ecdcf4189562ef1f1d0cb7, type: 2}
+  - sound: 53
+    soundData: {fileID: 11400000, guid: 38e423c282200be4694729fe62b0214c, type: 2}
+  - sound: 54
+    soundData: {fileID: 11400000, guid: 77d9a3a343c14c84ca945eb321d80ee7, type: 2}
+  - sound: 55
+    soundData: {fileID: 11400000, guid: d487e2fe1c7d0c34389aa848bed75ca7, type: 2}
   treasureBoxOpenSprite: {fileID: 21300000, guid: fcf983593b0d1b443b76767648faae7d, type: 3}
   treasureBoxClosedSprite: {fileID: 21300000, guid: 23bf4929c984bc8429d0721ec6325e3b, type: 3}
   bloodParticles: {fileID: 3095269012409172603, guid: 6f7d3f8ada96d264899aff44f820f75e, type: 3}

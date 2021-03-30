@@ -10,6 +10,9 @@ public class BehaviourAfterBossDefeated : MonoBehaviour
     // Dialogue camera
     public CinemachineVirtualCamera gameEndDialogueCamera;
 
+    // Boss health bar canvas group
+    public CanvasGroup bossHealthBarCG;
+
     // Dialogue boxes UI
     public TextMeshProUGUI playerText;
     public TextMeshProUGUI friendText;
@@ -34,6 +37,9 @@ public class BehaviourAfterBossDefeated : MonoBehaviour
 
     private IEnumerator GameEndBehaviour()
     {
+        // Hide boss health bar
+        bossHealthBarCG.alpha = 0f;
+
         // Disable player movement and make him face Betty
         Player.instance.MakePlayerFaceLeft();
         Player.StopMovement();

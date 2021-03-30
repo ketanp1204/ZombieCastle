@@ -22,7 +22,7 @@ public class BossCombat : MonoBehaviour
     [Header("Attack 2 Attributes")]
     public int attack2Damage;
     public float attack2RepeatTime;
-    public Transform attack2_ParticleSpawnLocation;
+    public GameObject attack2SpawnLocations;
     public GameObject attack2_ParticlePrefab;
 
     [HideInInspector]
@@ -141,6 +141,9 @@ public class BossCombat : MonoBehaviour
 
             Attack1Active = true;
 
+            // Play attack 1 sound
+            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.Zombie4Attack1);
+
             // Play attack 1 animation
             animator.SetTrigger("Attack1");
 
@@ -159,7 +162,6 @@ public class BossCombat : MonoBehaviour
 
         Vector3 vectorToPlayer = PlayerCombat.instance.bloodParticlesStartPosition.position - attack1_ParticleSpawnLocation.position;
         Vector3 rotatedVectorToPlayer = Quaternion.Euler(0f, 0f, 90f) * vectorToPlayer;
-
         Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, rotatedVectorToPlayer);
 
         attack1_ParticleSpawnLocation.localRotation = Quaternion.RotateTowards(attack1_ParticleSpawnLocation.localRotation, targetRotation, 100f);
@@ -211,6 +213,9 @@ public class BossCombat : MonoBehaviour
 
             Attack2Active = true;
 
+            // Play attack 2 sound
+            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.Zombie4Attack2);
+
             // Play attack 2 animation
             animator.SetTrigger("Attack2");
 
@@ -227,16 +232,20 @@ public class BossCombat : MonoBehaviour
         // Wait for anim to reach particle spawn location
         yield return new WaitForSeconds(0.25f);
 
-        // Spawn particles
-        Instantiate(attack2_ParticlePrefab, attack2_ParticleSpawnLocation.position, attack2_ParticleSpawnLocation.localRotation);
+        Vector3 vectorToPlayer;
+        Vector3 rotatedVectorToPlayer;
+        Quaternion targetRotation;
 
-        yield return new WaitForSeconds(0.1f);
+        foreach (Transform child in attack2SpawnLocations.transform)
+        {
+            vectorToPlayer = PlayerCombat.instance.bloodParticlesStartPosition.position - child.position;
+            rotatedVectorToPlayer = Quaternion.Euler(0f, 0f, 90f) * vectorToPlayer;
+            targetRotation = Quaternion.LookRotation(Vector3.forward, rotatedVectorToPlayer);
+            child.localRotation = Quaternion.RotateTowards(child.localRotation, targetRotation, 100f);
 
-        Instantiate(attack2_ParticlePrefab, attack2_ParticleSpawnLocation.position, attack2_ParticleSpawnLocation.localRotation);
-
-        yield return new WaitForSeconds(0.1f);
-
-        Instantiate(attack2_ParticlePrefab, attack2_ParticleSpawnLocation.position, attack2_ParticleSpawnLocation.localRotation);
+            // Spawn particle
+            Instantiate(attack2_ParticlePrefab, child.position, child.localRotation);
+        }
     }
 
     public void TakeDamage(int damageAmount)
@@ -255,6 +264,9 @@ public class BossCombat : MonoBehaviour
 
         if (bossAI.state == BossAI.BossState.KneelDown)
             return;
+
+        // Play getting hit sound
+        AudioManager.PlayOneShotSound(AudioManager.Sound.Zombie4GettingHit);
 
         // Create blood particles
         GameObject bloodParticles = Instantiate(GameAssets.instance.bloodParticles, bloodParticlesStartPosition);
@@ -388,7 +400,6 @@ public class BossCombat : MonoBehaviour
 
             if (percentageComplete >= 1)
             {
-                Debug.Log(bossAI.state);
                 // Go back to idle anim
                 animator.SetBool("KneelDown", false);
                 bossAI.state = BossAI.BossState.Chasing;
@@ -463,8 +474,6 @@ public class BossCombat : MonoBehaviour
 
     private IEnumerator PushBossInHitDirection()
     {
-        Debug.Log(bossAI.state);
-
         // Get rigidbody
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
 
@@ -495,6 +504,9 @@ public class BossCombat : MonoBehaviour
             attackTask.Stop();
             attackTask = null;
         }
+
+        // Play death sound
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie4Death);
 
         // Set die animation parameter
         animator.SetBool("IsDead", true);

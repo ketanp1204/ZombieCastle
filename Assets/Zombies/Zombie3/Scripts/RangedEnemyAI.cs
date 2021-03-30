@@ -26,6 +26,8 @@ public class RangedEnemyAI : MonoBehaviour
     public float attackStartDistance;
     [HideInInspector]
     public bool facingRight = true;
+    [HideInInspector]
+    public bool combatStarted = false;
 
     [Header("Pathfinding")]
     public float pathUpdateSeconds;
@@ -38,7 +40,6 @@ public class RangedEnemyAI : MonoBehaviour
     public float moveForceMultiplier = 2.5f;
 
     public EnemyState enemyState;
-
 
     // Private variables
     private float distanceToPlayer;
@@ -70,6 +71,12 @@ public class RangedEnemyAI : MonoBehaviour
 
     public void StartChasingPlayer()
     {
+        // Play roar sound
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie3Roar);
+
+        if (!combatStarted)
+            combatStarted = true;
+
         if (pathUpdateTask != null)
         {
             pathUpdateTask.Stop();
@@ -227,7 +234,7 @@ public class RangedEnemyAI : MonoBehaviour
             {
                 rangedEnemyCombat.InvokeAttack();
             }
-            yield return new WaitForSeconds(rangedEnemyCombat.magicAttackRepeatTime);
+            yield return new WaitForSeconds(rangedEnemyCombat.magicAttackRepeatTime + 0.1f);
             distanceToPlayer = Vector2.Distance(transform.position, target.position);
         }
 

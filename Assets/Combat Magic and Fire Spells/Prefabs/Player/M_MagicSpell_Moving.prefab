@@ -157,7 +157,7 @@ MonoBehaviour:
   projectileSpeed: 20
   travelTrajectory: 0
   parabolicAngle: 0
-  hasImpactEffect: 0
-  impactEffectPrefab: {fileID: 0}
-  spellDamage: 3
+  hasImpactEffect: 1
+  impactEffectPrefab: {fileID: 8802653464151841848, guid: 6d8449c3203e36043af5a6dd8c1816c7, type: 3}
+  spellDamage: 5
   character: 0
