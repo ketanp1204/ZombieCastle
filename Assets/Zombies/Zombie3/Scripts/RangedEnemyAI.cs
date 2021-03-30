@@ -11,8 +11,6 @@ public class RangedEnemyAI : MonoBehaviour
     public enum EnemyState
     {
         Idle,
-        Chasing,
-        Attacking,
         TakingDamage,
         Dead
     }
@@ -163,13 +161,16 @@ public class RangedEnemyAI : MonoBehaviour
 
             animator.SetBool("ChasingPlayer", false);
 
+            if (!rangedEnemyCombat.isAttacking)
+            {
+                rangedEnemyCombat.InvokeAttack();
+            }
+
             StartCoroutine(WaitForPlayerToMoveAway());
         }
         else // Chasing
         {
             rangedEnemyCombat.StopAttack();
-
-            enemyState = EnemyState.Chasing;
 
             animator.SetBool("ChasingPlayer", true);
 
@@ -226,8 +227,7 @@ public class RangedEnemyAI : MonoBehaviour
             {
                 rangedEnemyCombat.InvokeAttack();
             }
-
-            yield return new WaitForSeconds(rangedEnemyCombat.magicAttackRepeatTime + 0.1f);
+            yield return new WaitForSeconds(rangedEnemyCombat.magicAttackRepeatTime);
             distanceToPlayer = Vector2.Distance(transform.position, target.position);
         }
 

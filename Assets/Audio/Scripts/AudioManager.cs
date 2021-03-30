@@ -50,7 +50,8 @@ public static class AudioManager
         PlayerDeath,
         FireElement,
         PlayerMagicSpellSpawn,
-        FireballSpawn
+        FireballSpawn,
+        InventoryDragAndDrop
     }
 
     // private static Dictionary<Sound, float> soundTimerDictionary;

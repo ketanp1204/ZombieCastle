@@ -17,6 +17,7 @@ public class PlayerSelection : MonoBehaviour
     private bool isMazePuzzleCollider = false;
     private bool isJigsawPuzzleCollider = false;
     private bool isDiffPuzzleCollider = false;
+    private bool isLobbyStairsCollider = false;
 
     // Start is called before the first frame update
     void Start()
@@ -120,6 +121,11 @@ public class PlayerSelection : MonoBehaviour
                         Debug.Log("Dialogue box not found");
                     }
                 }
+            }
+            else if (isLobbyStairsCollider)
+            {
+                LobbyStairsBlock script = collidedObject.GetComponent<LobbyStairsBlock>();
+                script.UnblockStairs();
             }
             else
             {
@@ -312,6 +318,23 @@ public class PlayerSelection : MonoBehaviour
             // Set flag bool
             isDiffPuzzleCollider = true;
         }
+        else if (collision.CompareTag("LobbyStairsBlockTrigger"))
+        {
+            triggerStay = true;
+
+            // Store collided object
+            collidedObject = collision;
+
+            // Enable object glow
+            collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = true;
+
+            // Show unblock stairs text popup
+            popupTextUI.text = "Unblock Stairs";
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 0f, 1f, 0f, 0.1f));
+
+            // Set flag bool
+            isLobbyStairsCollider = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -378,6 +401,19 @@ public class PlayerSelection : MonoBehaviour
 
             // Unset flag bool
             isDiffPuzzleCollider = false;
+        }
+        else if (collision.CompareTag("LobbyStairsBlockTrigger"))
+        {
+            triggerStay = false;
+
+            // Disable object glow
+            collision.GetComponent<SpriteGlow.SpriteGlowEffect>().enabled = false;
+
+            // Hide object name text popup
+            new Task(UIAnimation.FadeTMProTextAfterDelay(popupTextUI, 1f, 0f, 0f, 0.1f));
+
+            // Unset flag bool
+            isLobbyStairsCollider = false;
         }
     }
 }

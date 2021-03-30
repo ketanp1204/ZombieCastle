@@ -38,10 +38,20 @@ public class HealthBar : MonoBehaviour
 
     public void UseHealthPotion()
     {
-        Debug.Log("health restored");
+        // Play health potion sound
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.HealthPotionCollect);
 
         slider.value = 100f;
 
         fill.color = gradient.Evaluate(slider.normalizedValue);
+
+        string text = "Health restored";
+        InventoryManager.instance.ShowTextOnHighlightText(text, 0f, 2f);
+
+        InventoryManager.instance.DeleteInventoryItem(GameAssets.instance.healthPotion);
+
+        ShowHealthBarAfterDelay(0f);
+
+        HideHealthBarAfterDelay(3f);
     }
 }

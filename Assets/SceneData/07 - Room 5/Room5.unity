@@ -376,11 +376,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736767665891185551, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.03
+      value: -6.84
       objectReference: {fileID: 0}
     - target: {fileID: 3736767665891185551, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.27
+      value: 7.65
       objectReference: {fileID: 0}
     - target: {fileID: 3736767665891185551, guid: b1a23d4ee7b1f0045ae9e93cc00ca437, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1011,6 +1011,7 @@ MonoBehaviour:
   destroyDelayAfterDeath: 5
   pushDistanceOnHit: 2
   damageMultiplier: 1
+  isBeingPushed: 0
   Attack1Active: 0
   Attack2Active: 0
   firstRegenerationComplete: 0
@@ -2471,7 +2472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736930040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.030001, y: -10.4, z: -10}
+  m_LocalPosition: {x: -6.84, y: 10.360001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3256,7 +3257,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829335294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.03, y: -10.56, z: -10}
+  m_LocalPosition: {x: -6.84, y: 10.360001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1506756609}
@@ -4351,7 +4352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1194170878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21639,7 +21640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &3701445894315976556
 GameObject:
   m_ObjectHideFlags: 0

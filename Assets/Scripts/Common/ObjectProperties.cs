@@ -21,16 +21,17 @@ public class ObjectProperties : MonoBehaviour
         Room3_Drawer
     }
 
+    private SpriteGlow.SpriteGlowEffect glowEffect;
+
     public ItemObject objectData;
     public GameObject imageDisplayGO;
-    private SpriteGlow.SpriteGlowEffect spriteGlowEffectComponent;
     public AudioManager.Sound descBoxItemReceivedSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        spriteGlowEffectComponent = GetComponent<SpriteGlow.SpriteGlowEffect>();
-        spriteGlowEffectComponent.enabled = false;
+        glowEffect = GetComponent<SpriteGlow.SpriteGlowEffect>();
+        glowEffect.enabled = false;
 
         CheckIfAlreadyInteractedWithObject();
     }

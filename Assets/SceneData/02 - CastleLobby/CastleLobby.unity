@@ -1036,7 +1036,7 @@ GameObject:
   - component: {fileID: 226817840}
   - component: {fileID: 226817841}
   m_Layer: 0
-  m_Name: StairsBlocker
+  m_Name: StairsBlockCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1330,6 +1330,7 @@ Transform:
   - {fileID: 1784036222}
   - {fileID: 2005212315}
   - {fileID: 941134122}
+  - {fileID: 1398067446}
   m_Father: {fileID: 1099808231}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7222,7 +7223,7 @@ SpriteRenderer:
   m_SortingLayerID: -1983421887
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5709576592382579540, guid: 99e67063777164f41a995e6b5f873b99, type: 3}
+  m_Sprite: {fileID: -840539795054043157, guid: 75e1758c8744148ae9365fc8d2f47635, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7475,7 +7476,7 @@ SpriteRenderer:
   m_Size: {x: 0.992, y: 2.468}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &844062056
@@ -13693,6 +13694,78 @@ Transform:
   m_Father: {fileID: 876580057}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1398067445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1398067446}
+  - component: {fileID: 1398067448}
+  - component: {fileID: 1398067447}
+  m_Layer: 9
+  m_Name: StairsReblockCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1398067446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398067445}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.028, y: 1.728, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 377161419}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1398067447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398067445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1964e68bdf7244eacc8b3369b71b89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stairsBlockCollider: {fileID: 226817841}
+  stairsBlockDisplayGO: {fileID: 1698728082}
+--- !u!61 &1398067448
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398067445}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4, y: 0.58}
+  m_EdgeRadius: 0
 --- !u!224 &1468401972 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5408351937760996783, guid: 1451f9873e5781e4882a1b57fe6673e5, type: 3}
@@ -13739,6 +13812,7 @@ MonoBehaviour:
   jigsawPuzzleInteractButton: {fileID: 0}
   jigsawPuzzleInteractText: {fileID: 0}
   differencePuzzleCanvasGroup: {fileID: 0}
+  numberOfDifferencesFoundText: {fileID: 0}
   diffPuzzleCountdownTimerText: {fileID: 0}
   diffPuzzleInteractButton: {fileID: 0}
   diffPuzzleInteractText: {fileID: 0}
@@ -13940,7 +14014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1532250946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16098,9 +16172,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2038800063}
   - component: {fileID: 2038800064}
+  - component: {fileID: 2038800066}
+  - component: {fileID: 2038800065}
+  - component: {fileID: 2038800067}
   m_Layer: 0
   m_Name: Wood_Lock
-  m_TagString: Untagged
+  m_TagString: LobbyStairsBlockTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16138,7 +16215,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16170,6 +16247,65 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2038800065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038800062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cebb864fd5531244b275180442fc8ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stairsBlockCollider: {fileID: 226817841}
+  stairsBlockDisplayGO: {fileID: 0}
+  topFloorCamera: {fileID: 1196177631}
+--- !u!61 &2038800066
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038800062}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.3019395, y: -0.432005}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.685, y: 2.725}
+    newSize: {x: 4.685, y: 2.725}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.2601948, y: 1.5451151}
+  m_EdgeRadius: 0
+--- !u!114 &2038800067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038800062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f6d3c6e4250e84192f5b34ce9e71bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowColor: {r: 1, g: 0.504717, b: 0.504717, a: 1}
+  glowBrightness: 3.83
+  outlineWidth: 1
+  alphaThreshold: 0.327
+  drawOutside: 1
+  enableInstancing: 0
 --- !u!1 &2131875821
 GameObject:
   m_ObjectHideFlags: 0
@@ -16331,7 +16467,7 @@ SpriteRenderer:
   m_Size: {x: 1.304, y: 2.604}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1254770585675151403

@@ -60,15 +60,17 @@ public class PlayerTopDown : MonoBehaviour
     {
         SetReferences();
         Initialize();
-        ResetAnimatorParameters();
+        ResetAnimatorMovementParameters();
 
         if (PlayerStats.isFirstScene)
         {
+            animator.SetBool("IsFirstScene", true);
             if (!GameData.lobby_introDialogueSeen)
                 StopMovement();
         }
         else
         {
+            animator.SetBool("IsFirstScene", false);
             HandleSceneChanges();
         }
     }
@@ -88,10 +90,10 @@ public class PlayerTopDown : MonoBehaviour
     public void Initialize()
     {
         // Movement
-        facingRight = true;
+        facingRight = false;
         movePlayer = true;
         movementSpeed = walkSpeed;
-        animator.SetFloat("FaceDir", 1f);
+        animator.SetFloat("FaceDir", -1f);
 
         // Health
         if (PlayerStats.isFirstScene)
@@ -108,12 +110,12 @@ public class PlayerTopDown : MonoBehaviour
         }
     }
 
-    private void ResetAnimatorParameters()
+    private void ResetAnimatorMovementParameters()
     {
         animator.SetFloat("Horizontal", 0f);        // No keyboard input
         animator.SetFloat("Vertical", 0f);          // No keyboard input
         animator.SetFloat("Magnitude", 0f);         // No keyboard input
-        animator.SetFloat("FaceDir", 1f);           // Facing right
+        animator.SetFloat("FaceDir", -1f);          // Facing left
     }
 
     private void HandleSceneChanges()

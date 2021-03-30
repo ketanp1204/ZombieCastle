@@ -5732,9 +5732,6 @@ MonoBehaviour:
   attackDamage: 12
   attackRepeatTime: 1.15
   canAttack: 0
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
   healthBar: {fileID: 648585164}
   bloodParticlesStartPosition: {fileID: 1581612700}
   damageAreaCollider: {fileID: 0}
@@ -8881,9 +8878,6 @@ MonoBehaviour:
   attackDamage: 12
   attackRepeatTime: 1.15
   canAttack: 0
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
   healthBar: {fileID: 996043036}
   bloodParticlesStartPosition: {fileID: 972315436}
   damageAreaCollider: {fileID: 0}
@@ -9816,6 +9810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CombatBlockWall
       objectReference: {fileID: 0}
+    - target: {fileID: 3701445895263451339, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1e97ecd2057dfd409d66feddc4e2859, type: 3}
 --- !u!4 &1810857874 stripped
@@ -10357,9 +10355,6 @@ MonoBehaviour:
   attackDamage: 12
   attackRepeatTime: 1.15
   canAttack: 0
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
   healthBar: {fileID: 856377807}
   bloodParticlesStartPosition: {fileID: 2041015794}
   damageAreaCollider: {fileID: 0}
@@ -22256,9 +22251,6 @@ MonoBehaviour:
   attackDamage: 12
   attackRepeatTime: 1.15
   canAttack: 0
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
   healthBar: {fileID: 3491329364390101684}
   bloodParticlesStartPosition: {fileID: 3491329365523451252}
   damageAreaCollider: {fileID: 0}

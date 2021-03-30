@@ -223,6 +223,9 @@ public class DescriptionBox : MonoBehaviour
 
             isActive = true;
 
+            // Prevent escape key from closing inventory box
+            InventoryManager.instance.SetDescBoxOpenFlag();
+
             // Play item received sound
             if (itemReceivedSound != AudioManager.Sound.Null)
             {
@@ -237,6 +240,12 @@ public class DescriptionBox : MonoBehaviour
             if (InventoryManager.instance)
             {
                 InventoryManager.instance.AddInventoryItem(item);
+            }
+
+            // Highlight inventory bag in toolbar
+            if (ToolbarManager.instance)
+            {
+                ToolbarManager.instance.HighlightInventoryBag();
             }
 
             // Fade in new item discovered text:
@@ -289,6 +298,8 @@ public class DescriptionBox : MonoBehaviour
 
                 // Fade out new item discovered text:
                 new Task(UIAnimation.FadeTMProTextAfterDelay(newItemDiscoveredText, 1f, 0f, 0f));
+
+                InventoryManager.instance.UnsetDescBoxOpenFlag();
 
                 // Enable opening pause menu on pressing escape key
                 instance.StartCoroutine(PauseMenu.EnableCanPauseGameBoolAfterDelay(0.1f));

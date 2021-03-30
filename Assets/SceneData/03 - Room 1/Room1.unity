@@ -784,9 +784,6 @@ MonoBehaviour:
   attackDamage: 2
   attackRepeatTime: 1
   canAttack: 0
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
   healthBar: {fileID: 44948682}
   bloodParticlesStartPosition: {fileID: 489626926}
   damageAreaCollider: {fileID: 476090058}
@@ -1304,9 +1301,6 @@ MonoBehaviour:
   attackDamage: 2
   attackRepeatTime: 1
   canAttack: 0
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
   healthBar: {fileID: 134804303}
   bloodParticlesStartPosition: {fileID: 1455039924}
   damageAreaCollider: {fileID: 418019600}
@@ -3869,9 +3863,6 @@ MonoBehaviour:
   attackDamage: 2
   attackRepeatTime: 1
   canAttack: 0
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
   healthBar: {fileID: 999514950}
   bloodParticlesStartPosition: {fileID: 1531904221}
   damageAreaCollider: {fileID: 1599430955}
@@ -7730,9 +7721,6 @@ MonoBehaviour:
   attackDamage: 2
   attackRepeatTime: 1
   canAttack: 0
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
   healthBar: {fileID: 345487652}
   bloodParticlesStartPosition: {fileID: 1797338852}
   damageAreaCollider: {fileID: 1560486546}

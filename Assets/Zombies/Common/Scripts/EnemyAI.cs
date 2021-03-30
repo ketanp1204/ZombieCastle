@@ -66,7 +66,6 @@ public class EnemyAI : MonoBehaviour
     private void Initialize()
     {
         followPath = false;
-
         enemyState = EnemyState.Idle;
     }
 

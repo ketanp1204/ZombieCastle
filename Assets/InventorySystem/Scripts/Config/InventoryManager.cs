@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class InventoryManager : MonoBehaviour
     // Public Cached References
     public GameObject weaponGridSlotPrefab;
     public GameObject itemGridSlotPrefab;
+    public TextMeshProUGUI highlightText;
 
     // Private Cached References
     private List<GameObject> weaponSlots = new List<GameObject>();
@@ -36,6 +38,7 @@ public class InventoryManager : MonoBehaviour
 
     [HideInInspector]
     public ItemSlotInteraction draggingItemSlotScript;
+    [HideInInspector]
     public WeaponSlotInteraction draggingWeaponSlotScript;
 
     private void Awake()
@@ -84,7 +87,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (!isInventoryOpen)
+            if (!isInventoryOpen && !isDescBoxOpen)
                 ShowInventory();
             else if (isInventoryOpen && !isDescBoxOpen)
                 HideInventory();
@@ -130,6 +133,23 @@ public class InventoryManager : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
 
         isDescBoxOpen = false;
+    }
+
+    public void ShowTextOnHighlightText(string text, float displayDelay, float hideDelay)
+    {
+        highlightText.text = text;
+        new Task(ShowText(displayDelay, hideDelay));
+    }
+
+    private IEnumerator ShowText(float displayDelay, float hideDelay)
+    {
+        yield return new WaitForSeconds(displayDelay);
+
+        new Task(UIAnimation.FadeTMProTextAfterDelay(highlightText, 0f, 1f, 0f));
+
+        yield return new WaitForSeconds(hideDelay);
+
+        new Task(UIAnimation.FadeTMProTextAfterDelay(highlightText, 1f, 0f, 0f));
     }
 
     public static void ShowInventory()
@@ -184,21 +204,33 @@ public class InventoryManager : MonoBehaviour
             instance.inventoryCanvasGroup.interactable = false;
             instance.inventoryCanvasGroup.blocksRaycasts = false;
 
+            // Hide highlight text 
+            instance.highlightText.text = "";
+            instance.highlightText.alpha = 0f;
+
             // Lock mouse cursor
             Cursor.lockState = CursorLockMode.Locked;
 
-            // Resume player movement
-            if (Player.instance)
-            {
-                Player.EnableMovement();
-            }
-            else if (PlayerTopDown.instance)
-            {
-                PlayerTopDown.EnableMovement();
-            }
+            // Resume player movement after delay
+            new Task(instance.ResumePlayerMovementAfterDelay(0.6f));
 
             // Enable opening pause menu on pressing escape key
             instance.StartCoroutine(PauseMenu.EnableCanPauseGameBoolAfterDelay(0.1f));
+        }
+    }
+
+    private IEnumerator ResumePlayerMovementAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // Resume player movement
+        if (Player.instance)
+        {
+            Player.EnableMovement();
+        }
+        else if (PlayerTopDown.instance)
+        {
+            PlayerTopDown.EnableMovement();
         }
     }
 
@@ -209,6 +241,11 @@ public class InventoryManager : MonoBehaviour
 
         // Update inventory slots
         UpdateInventorySlots();
+
+        if (SceneManager.GetActiveScene().name == "Room3")
+        {
+            DisableAllWeaponInteractions();
+        }
     }
 
     public void DeleteInventoryItem(ItemObject item)
@@ -269,6 +306,9 @@ public class InventoryManager : MonoBehaviour
                 instance.Highlight();
                 instance.SetWeaponHighlightBeforeCombatStartFlag();
                 instance.EnableInteraction();
+                string selectWeaponText = "Select " + item.itemName;
+                highlightText.text = selectWeaponText;
+                highlightText.alpha = 1f;
                 break;
             }
         }
@@ -284,11 +324,21 @@ public class InventoryManager : MonoBehaviour
     {
         bool itemFound = false;
 
+        // Disable weapon slot interaction
         foreach (Transform child in weaponGridContainer.transform)
         {
             WeaponSlotInteraction instance = child.GetComponent<WeaponSlotInteraction>();
 
-            if (instance.scriptableObject == item)
+            instance.HideSelectedBackground();
+            instance.DisableInteraction();
+        }
+
+        // Look for item inside item slots
+        foreach (Transform child in itemGridContainer.transform)
+        {
+            ItemSlotInteraction instance = child.GetComponent<ItemSlotInteraction>();
+
+            if (instance.itemScriptableObject == item)
             {
                 itemFound = true;
 
@@ -296,35 +346,18 @@ public class InventoryManager : MonoBehaviour
                 instance.SetTreasureBoxInteractionFlag();
                 instance.SetTreasureBoxInteractionScriptInstance(scriptInstance);
                 instance.EnableInteraction();
+
+                // In the future, remove this hard coded dependency
+                PC_Then_Inventory_Object keyObject = (PC_Then_Inventory_Object)item;
+
+                string selectKeyText = "Select " + keyObject.inventoryItemName;
+                highlightText.text = selectKeyText;
+                highlightText.alpha = 1f;
             }
             else
             {
                 instance.HideSelectedBackground();
                 instance.DisableInteraction();
-            }
-        }
-
-        // If item not found in weapon slots, look inside item slots
-        if (!itemFound)
-        {
-            foreach (Transform child in itemGridContainer.transform)
-            {
-                ItemSlotInteraction instance = child.GetComponent<ItemSlotInteraction>();
-
-                if (instance.itemScriptableObject == item)
-                {
-                    itemFound = true;
-
-                    instance.Highlight();
-                    instance.SetTreasureBoxInteractionFlag();
-                    instance.SetTreasureBoxInteractionScriptInstance(scriptInstance);
-                    instance.EnableInteraction();
-                }
-                else
-                {
-                    instance.HideSelectedBackground();
-                    instance.DisableInteraction();
-                }
             }
         }
 

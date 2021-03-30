@@ -16,7 +16,14 @@ MonoBehaviour:
   itemDescription: A key for the treasure box in the second room.
   itemType: 2
   sceneName: Room1
-  inventoryItemName: Key
   hasPlayerComment: 0
   playerComments: []
+  destroyFromSceneAfterAddingToInventory: 0
+  inventoryItemName: Room2 Box Key
   inventorySprite: {fileID: 21300000, guid: 00f49f62ba179204ba2d4c6d07f134cf, type: 3}
+  canCombineWithAdditionalItem1: 0
+  additionalItem1: {fileID: 0}
+  combinedObject1: {fileID: 0}
+  canCombineWithAdditionalItem2: 0
+  additionalItem2: {fileID: 0}
+  combinedObject2: {fileID: 0}

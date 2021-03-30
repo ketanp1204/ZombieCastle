@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: TreasureBox_MagicPotion
   m_EditorClassIdentifier: 
   itemName: Magic Potion
-  itemDescription: The Elixirium. A potion that adds special powers to legendary
-    weapons.
+  itemDescription: A potion that adds special powers to legendary weapons.
   itemType: 5
   sceneName: Room2
   hasPlayerComment: 1
   playerComments:
   - I wonder what a 'Legendary Weapon' is.
-  inventoryItemName: Magic Potion
+  inventoryItemName: Elixirium
   inventorySprite: {fileID: 21300000, guid: 4b34927f6a9102a4e80efc4c702a7b6a, type: 3}
+  usableItem: 0
   canCombineWithAdditionalItem1: 1
   additionalItem1: {fileID: 11400000, guid: f8f663202a659d74d86be428ab7dbe22, type: 2}
   combinedObject1: {fileID: 0}

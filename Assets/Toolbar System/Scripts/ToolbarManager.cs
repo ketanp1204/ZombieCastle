@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ToolbarManager : MonoBehaviour
 {
     // Singleton
     public static ToolbarManager instance;
 
-    // Private Cached References
+    // Public references
+    public Image inventoryBagHighlight;
+
+    // Private references
     private CanvasGroup toolbarCanvasGroup;
 
     // Private variables
@@ -107,5 +111,27 @@ public class ToolbarManager : MonoBehaviour
             // Lock mouse cursor
             Cursor.lockState = CursorLockMode.Locked;
         }
+    }
+
+    public void HighlightInventoryBag()
+    {
+        new Task(ShowHighlightOnInvBag());
+    }
+
+    private IEnumerator ShowHighlightOnInvBag()
+    {
+        yield return new WaitForSeconds(1f);
+
+        ShowToolbar();
+
+        yield return new WaitForSeconds(0.4f);
+
+        new Task(UIAnimation.FadeUIImageAfteDelay(inventoryBagHighlight, 0f, 1f, 0f, 0.3f));
+
+        yield return new WaitForSeconds(2f);
+
+        new Task(UIAnimation.FadeUIImageAfteDelay(inventoryBagHighlight, 1f, 0f, 0f, 0.1f));
+
+        HideToolbar();
     }
 }

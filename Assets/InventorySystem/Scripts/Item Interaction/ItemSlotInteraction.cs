@@ -336,8 +336,6 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         if (canInteract)
         {
-            // Debug.Log("dragging item");
-
             if (InventoryManager.instance.isDraggingItem)
             {
                 itemIcon.gameObject.transform.position = Input.mousePosition;
@@ -358,7 +356,7 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
 
                 if (obj.canCombineWithAdditionalItem1)
                 {
-                    // If working on the game some time in the long future, remove these hard coded dependencies
+                    // If the future, remove these hard coded dependencies
                     if (obj.additionalItem1.itemType != ItemType.Weapon && obj.inventoryItemName != "Oil")
                     {
                         itemIsDraggable = true;
@@ -405,33 +403,39 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
 
                     if (additionalItemScriptableObjectUnderDraggingItem == obj.additionalItem1)
                     {
-                        Debug.Log("item combined with additionalItem1");
+                        // In the future remove this hard coded dependency
+                        string text = "Torch combined with Oil";
+                        InventoryManager.instance.ShowTextOnHighlightText(text, 0f, 1f);
+
+                        // Play inventory drag and drop sound
+                        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.InventoryDragAndDrop);
+
                         StopItemDragAndReset();
 
                         // Remove this item and additionalItem1 from inventory
-                        GameData.currentPlayerInventory.RemoveItem(obj);
-                        GameData.currentPlayerInventory.RemoveItem(obj.additionalItem1);
+                        InventoryManager.instance.DeleteInventoryItem(obj);
+                        InventoryManager.instance.DeleteInventoryItem(obj.additionalItem1);
 
                         // Add combinedObject1 to inventory
-                        GameData.currentPlayerInventory.AddItem(obj.combinedObject1, 1);
-
-                        // Update inventory
-                        InventoryManager.instance.UpdateInventorySlots();
+                        InventoryManager.instance.AddInventoryItem(obj.combinedObject1);
                     }
                     else if (additionalItemScriptableObjectUnderDraggingItem == obj.additionalItem2)
                     {
-                        Debug.Log("item combined with additionalItem2");
+                        // In the future add these interactions if required
+                        string text = "";
+                        InventoryManager.instance.ShowTextOnHighlightText(text, 0f, 1f);
+
                         StopItemDragAndReset();
 
                         // Remove this item and additionalItem2 from inventory
-                        GameData.currentPlayerInventory.RemoveItem(obj);
-                        GameData.currentPlayerInventory.RemoveItem(obj.additionalItem2);
+                        InventoryManager.instance.DeleteInventoryItem(obj);
+                        InventoryManager.instance.DeleteInventoryItem(obj.additionalItem2);
 
                         // Add combinedObject2 to inventory
                         GameData.currentPlayerInventory.AddItem(obj.combinedObject2, 1);
 
                         // Update inventory
-                        InventoryManager.instance.UpdateInventorySlots();
+                        InventoryManager.instance.AddInventoryItem(obj.combinedObject2);
                     }
                 }
                 else if (itemScriptableObject.itemType == ItemType.DescBox_Then_Dialogue)

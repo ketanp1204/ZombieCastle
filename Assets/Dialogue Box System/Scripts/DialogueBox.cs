@@ -193,10 +193,16 @@ public class DialogueBox : MonoBehaviour
 
             if (addToInventoryAfterDialogue)
             {
-                // TODO: Open inventory box or flash inventory bag in toolbar (preferably latter) to indicate newly added item
+                // Add to inventory
                 if (InventoryManager.instance)
                 {
                     InventoryManager.instance.AddInventoryItem(currentItem);
+                }
+
+                // Highlight inventory bag in toolbar
+                if (ToolbarManager.instance)
+                {
+                    ToolbarManager.instance.HighlightInventoryBag();
                 }
 
                 // Remove the object from the scene
@@ -399,6 +405,9 @@ public class DialogueBox : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 continueButton.GetComponent<Button>().onClick.Invoke();
+
+                skipAutoTyping = false;
+                skippedCurrentDialogue = false;
             }
         }
     }

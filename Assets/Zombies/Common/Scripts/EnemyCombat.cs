@@ -11,9 +11,7 @@ public class EnemyCombat : MonoBehaviour
     public enum ZombieTypes
     {
         Zombie1,
-        Zombie2,
-        Zombie3,
-        Zombie4
+        Zombie2
     }
 
     // Public attack variables
@@ -30,7 +28,6 @@ public class EnemyCombat : MonoBehaviour
 
     // Public references
     [Header("References")]
-    public LayerMask playerLayerMask;
     public HealthBar healthBar;
     public Transform bloodParticlesStartPosition;
     public BoxCollider2D damageAreaCollider;
@@ -114,8 +111,6 @@ public class EnemyCombat : MonoBehaviour
             attackHitboxAnimator.SetBool("IsAttacking", false);
         }
 
-        healthWhenAttackStarted = currentHealth;
-
         attackTask = new Task(Attack());
     }
 
@@ -188,13 +183,13 @@ public class EnemyCombat : MonoBehaviour
         // Push enemy in hit direction
         StartCoroutine(PushEnemyInHitDirection(playerPos));
 
+        // Stop attack task
         if (attackTask != null)
         {
             attackTask.Stop();
             attackTask = null;
         }
 
-        // Stop attack task
         StopAttack();
 
         // Play hurt animation
@@ -228,7 +223,7 @@ public class EnemyCombat : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
 
-        // Set enemy state to chasing
+        // Set enemy state to idle
         enemyAI.enemyState = EnemyAI.EnemyState.Idle;
     }
 
@@ -244,7 +239,6 @@ public class EnemyCombat : MonoBehaviour
             attackTask = null;
         }
 
-        // Stop attack task
         StopAttack();
 
         // Disable damage area collider
@@ -257,7 +251,7 @@ public class EnemyCombat : MonoBehaviour
         animator.SetBool("IsDead", true);
 
         // Play zombie death sound
-        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ZombieDeath);
+        // AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ZombieDeath);
 
         // Stop pathfinding
         enemyAI.followPath = false;
@@ -278,8 +272,6 @@ public class EnemyCombat : MonoBehaviour
 
         // Send a notification to the multiple zombies death behaviour script
         MultipleZombiesDeathBehaviour.instance.AddDeadZombie();
-
-        enemyAI.enemyState = EnemyAI.EnemyState.Dead;
 
         // Destroy enemy after delay
         StartCoroutine(DestroyGameObjectAfterDelay(gameObject, destroyDelayAfterDeath));

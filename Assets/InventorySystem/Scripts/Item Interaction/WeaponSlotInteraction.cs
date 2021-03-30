@@ -305,22 +305,110 @@ public class WeaponSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPoint
         }
         else
         {
-            // Can combine with either of the two additionalItems of this weapon
+            // In the future, remove these hard coded dependencies
             if (additionalItemScriptableObjectUnderDraggingWeapon != null)
             {
                 if (additionalItemScriptableObjectUnderDraggingWeapon == scriptableObject.additionalItem1)
                 {
-                    Debug.Log("weapon combined with additionalItem1");
                     StopWeaponDragAndReset();
 
                     // TODO: for sword, enable magic potion combat
+                    if (scriptableObject.additionalItem1.itemName == "Magic Potion")
+                    {
+                        if (PlayerCombat.instance.swordAttackType != PlayerCombat.SwordAttackTypes.Magic)
+                        {
+                            // Show text on highlight text
+                            string text = scriptableObject.itemName + " combined with " + "Elixirium";
+                            InventoryManager.instance.ShowTextOnHighlightText(text, 0f, 1f);
+
+                            // Play magic potion sound
+                            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.MagicPotionCollect);
+
+                            // Set player combat magic potion status
+                            PlayerCombat.instance.swordAttackType = PlayerCombat.SwordAttackTypes.Magic;
+
+                            // Set/unset slot selected bool and show/hide background
+                            if (!slotSelected)
+                            {
+                                SetWeaponToSelected();
+
+                                // Unset selected bool of other weapon slots
+                                foreach (Transform child in transform.parent)
+                                {
+                                    if (child.gameObject != gameObject)
+                                    {
+                                        child.GetComponent<WeaponSlotInteraction>().UnselectWeapon();
+                                    }
+                                }
+                            }
+
+                            if (!Player.SwordDrawn())
+                            {
+                                // Equip
+                                Player.EquipSword();
+                            }
+                        }
+                        else
+                        {
+                            // Show normal sword text on highlight text
+                            string text = "Normal sword equipped";
+                            InventoryManager.instance.ShowTextOnHighlightText(text, 0f, 1f);
+
+                            // Reset to normal sword
+                            PlayerCombat.instance.swordAttackType = PlayerCombat.SwordAttackTypes.Normal;
+                        }
+                    }
                 }
                 else if (additionalItemScriptableObjectUnderDraggingWeapon == scriptableObject.additionalItem2)
                 {
-                    Debug.Log("weapon combined with additionalItem2");
                     StopWeaponDragAndReset();
 
-                    // TODO: for sword, enable fire element combat
+                    if (scriptableObject.additionalItem2.itemName == "The Eternal Fire")
+                    {
+                        if (PlayerCombat.instance.swordAttackType != PlayerCombat.SwordAttackTypes.Fire)
+                        {
+                            // Show text on highlight text
+                            string text = scriptableObject.itemName + " combined with " + "The Eternal Fire";
+                            InventoryManager.instance.ShowTextOnHighlightText(text, 0f, 1f);
+
+                            // Play fire element sound
+                            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.FireElement);
+
+                            // Set player combat magic potion status
+                            PlayerCombat.instance.swordAttackType = PlayerCombat.SwordAttackTypes.Fire;
+
+                            // Set/unset slot selected bool and show/hide background
+                            if (!slotSelected)
+                            {
+                                SetWeaponToSelected();
+
+                                // Unset selected bool of other weapon slots
+                                foreach (Transform child in transform.parent)
+                                {
+                                    if (child.gameObject != gameObject)
+                                    {
+                                        child.GetComponent<WeaponSlotInteraction>().UnselectWeapon();
+                                    }
+                                }
+                            }
+
+                            // Equip the sword
+                            if (!Player.SwordDrawn())
+                            {
+                                // Equip
+                                Player.EquipSword();
+                            }
+                        }
+                        else
+                        {
+                            // Show normal sword text on highlight text
+                            string text = "Normal sword equipped";
+                            InventoryManager.instance.ShowTextOnHighlightText(text, 0f, 1f);
+
+                            // Reset to normal sword
+                            PlayerCombat.instance.swordAttackType = PlayerCombat.SwordAttackTypes.Normal;
+                        }
+                    }
                 }
             }    
         }

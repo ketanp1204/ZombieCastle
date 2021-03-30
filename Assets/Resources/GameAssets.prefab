@@ -134,6 +134,8 @@ MonoBehaviour:
     soundData: {fileID: 11400000, guid: 9d57bd16c2aa8a549b62a3aa585fdf9e, type: 2}
   - sound: 44
     soundData: {fileID: 11400000, guid: 07e8a88eee2106d498f7302e4515c943, type: 2}
+  - sound: 45
+    soundData: {fileID: 11400000, guid: 26262c38e14c05a448f847db692d2a9a, type: 2}
   treasureBoxOpenSprite: {fileID: 21300000, guid: fcf983593b0d1b443b76767648faae7d, type: 3}
   treasureBoxClosedSprite: {fileID: 21300000, guid: 23bf4929c984bc8429d0721ec6325e3b, type: 3}
   bloodParticles: {fileID: 3095269012409172603, guid: 6f7d3f8ada96d264899aff44f820f75e, type: 3}
@@ -149,3 +151,4 @@ MonoBehaviour:
   playerStartInventory: {fileID: 11400000, guid: 2b3398ac389869d4e923b3387c76be84, type: 2}
   r1_barrel_oil_collectable: {fileID: 11400000, guid: 37c58e93a604ce545bb0be87c15be717, type: 2}
   playerBossFireballParticlePrefab: {fileID: 6036412115239697856, guid: ed9f603ef4cbfb54b86db263d74414a6, type: 3}
+  healthPotion: {fileID: 11400000, guid: 83ab74d17ff6daf4d90e7df707a8e8b1, type: 2}

@@ -464,12 +464,14 @@ public class PlayerCombat : MonoBehaviour
 
         Player.StopMovement();
 
-        isBlocking_Sword = true;
-
         // Play player sword block animation
         animator.SetTrigger("SwordBlock");
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
+
+        isBlocking_Sword = true;
+
+        yield return new WaitForSeconds(0.3f);
 
         isBlocking_Sword = false;
 

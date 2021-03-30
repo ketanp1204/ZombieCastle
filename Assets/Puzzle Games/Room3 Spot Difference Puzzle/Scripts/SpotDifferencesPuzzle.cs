@@ -134,6 +134,9 @@ public class SpotDifferencesPuzzle : MonoBehaviour
 
     public void StartDiffPuzzle()
     {
+        // Play continue button sound for this start button
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ContinueButton);
+
         // Disable interact button
         interactButton.interactable = false;
 
@@ -182,6 +185,9 @@ public class SpotDifferencesPuzzle : MonoBehaviour
 
     public void AddOneDifferenceFound()
     {
+        // Play mouse hover sound for this click event
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryMouseHover);
+
         numberOfDifferencesFound += 1;
 
         char[] numberText = numberOfDifferencesFoundText.text.ToCharArray();
@@ -208,6 +214,9 @@ public class SpotDifferencesPuzzle : MonoBehaviour
         // Stop clock ticking sound
         AudioManager.StopLoopingSound(AudioManager.Sound.PuzzleClock);
 
+        // Play success sound
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.MazeSuccess);
+
         // Exit
         CloseDiffPuzzle();
     }
@@ -223,13 +232,19 @@ public class SpotDifferencesPuzzle : MonoBehaviour
         // Show key reward 
         if (DescriptionBox.instance)
         {
-            DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(1f, swordReward, null, AudioManager.Sound.Null);           // TODO: add sword receive sound
+            DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(1f, swordReward, null, AudioManager.Sound.PlayerSwordAttack);           
         }
 
         // Add key reward to inventory
         if (InventoryManager.instance)
         {
             InventoryManager.instance.AddInventoryItem(swordReward);
+        }
+
+        // Highlight inventory bag in toolbar
+        if (ToolbarManager.instance)
+        {
+            ToolbarManager.instance.HighlightInventoryBag();
         }
     }
 
@@ -247,6 +262,9 @@ public class SpotDifferencesPuzzle : MonoBehaviour
 
         // Hide puzzle gameobject
         puzzleGO.SetActive(false);
+
+        // Unlock lobby stairs unblock functionality
+        GameData.lobby_r5_stairsUnlocked = true;
 
         // Enable Player movement
         Player.EnableMovement();
@@ -274,6 +292,9 @@ public class SpotDifferencesPuzzle : MonoBehaviour
         {
             script.Reset();
         }
+
+        // Stop clock ticking sound
+        AudioManager.StopLoopingSound(AudioManager.Sound.PuzzleClock);
 
         // Reset number of differences
         numberOfDifferencesFound = 0;

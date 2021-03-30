@@ -170,8 +170,7 @@ public class TreasureBoxInteraction : MonoBehaviour
             // Show fire element description box
             if (DescriptionBox.instance)
             {
-                // TODO: change to fire element received sound
-                DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(0.3f, fireElementScriptableObject, fireElementScriptableObject.playerComments, AudioManager.Sound.Null);
+                DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(0.3f, fireElementScriptableObject, fireElementScriptableObject.playerComments, AudioManager.Sound.FireElement);
 
                 // Update this completed interaction in the GameData class
                 GameData.r3_treasureBoxFireElementCollected = true;

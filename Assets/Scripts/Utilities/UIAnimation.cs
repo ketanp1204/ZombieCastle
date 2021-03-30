@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public static class UIAnimation
@@ -82,6 +83,37 @@ public static class UIAnimation
             if (text != null)
             {
                 text.fontSize = currentValue;
+            }
+
+            if (percentageComplete >= 1)
+            {
+                break;
+            }
+
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    public static IEnumerator FadeUIImageAfteDelay(Image image, float startAlpha, float endAlpha, float delay, float lerpTime = 0.3f)
+    {
+        yield return new WaitForSeconds(delay);
+
+        float _timeStartedLerping = Time.unscaledTime;
+        float timeSinceStarted;
+        float percentageComplete;
+
+        while (true)
+        {
+            timeSinceStarted = Time.unscaledTime - _timeStartedLerping;
+            percentageComplete = timeSinceStarted / lerpTime;
+
+            float currentValue = Mathf.Lerp(startAlpha, endAlpha, percentageComplete);
+
+            if (image != null)
+            {
+                Color c = image.color;
+                c.a = currentValue;
+                image.color = c;
             }
 
             if (percentageComplete >= 1)

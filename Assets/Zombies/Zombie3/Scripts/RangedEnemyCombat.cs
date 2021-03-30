@@ -88,10 +88,13 @@ public class RangedEnemyCombat : MonoBehaviour
         canAttack = true;
         animator = GetComponent<Animator>();
 
-        if (rangedEnemyAI.enemyState == RangedEnemyAI.EnemyState.Attacking)
+        if (isAttacking)
             return;
 
         if (rangedEnemyAI.enemyState == RangedEnemyAI.EnemyState.Dead)
+            return;
+
+        if (PlayerStats.IsDead)
             return;
 
 
@@ -101,36 +104,29 @@ public class RangedEnemyCombat : MonoBehaviour
             attackTask = null;
         }
 
-        healthWhenAttackStarted = currentHealth;
-
         attackTask = new Task(Attack());
     }
 
     private IEnumerator Attack()
     {
-        while (canAttack && healthWhenAttackStarted == currentHealth)
+        if (rangedEnemyAI.enemyState == RangedEnemyAI.EnemyState.Dead)
         {
-            if (rangedEnemyAI.enemyState == RangedEnemyAI.EnemyState.Dead)
-            {
-                canAttack = false;
-                isAttacking = false;
-                yield break;
-            }
-
-            rangedEnemyAI.enemyState = RangedEnemyAI.EnemyState.Attacking;
-
-            isAttacking = true;
-
-            // Play attack animation
-            animator.SetTrigger("Attack");
-
-            // Spawn magic particles
-            new Task(SpawnMagicParticles());
-
-            yield return new WaitForSeconds(magicAttackRepeatTime);
+            canAttack = false;
+            isAttacking = false;
+            yield break;
         }
+
+        isAttacking = true;
+
+        // Play attack animation
+        animator.SetTrigger("Attack");
+
+        // Spawn magic particles
+        new Task(SpawnMagicParticles());
+
+        yield return new WaitForSeconds(magicAttackRepeatTime);
+        
         isAttacking = false;
-        rangedEnemyAI.enemyState = RangedEnemyAI.EnemyState.Chasing;
     }
 
     private IEnumerator SpawnMagicParticles()
@@ -138,12 +134,15 @@ public class RangedEnemyCombat : MonoBehaviour
         // Wait for anim to reach magic particle spawn location
         yield return new WaitForSeconds(0.2f);
 
-        // Spawn magic particles
-        Instantiate(magicParticlePrefab, magicParticlesSpawnLocation.position, magicParticlesSpawnLocation.localRotation);
+        if (isAttacking)
+        {
+            // Spawn magic particles
+            Instantiate(magicParticlePrefab, magicParticlesSpawnLocation.position, magicParticlesSpawnLocation.localRotation);
 
-        yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.1f);
 
-        Instantiate(magicParticlePrefab, magicParticlesSpawnLocation.position, magicParticlesSpawnLocation.localRotation);
+            Instantiate(magicParticlePrefab, magicParticlesSpawnLocation.position, magicParticlesSpawnLocation.localRotation);
+        }
     }
 
     public void TakeDamage(Transform playerPosition, int damageAmount)
@@ -156,16 +155,16 @@ public class RangedEnemyCombat : MonoBehaviour
 
         if (rangedEnemyAI.facingRight)
         {
-            bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
         else
         {
-            bloodParticles.transform.localScale = new Vector3(1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            bloodParticles.transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
         StartCoroutine(DestroyGameObjectAfterDelay(bloodParticles, 5f));
 
-        // Play zombie 3 getting hurt audio
-        AudioManager.PlayOneShotSound(AudioManager.Sound.Zombie3GettingHit);
+        // Play zombie 2 getting hurt audio for zombie 3 (unless audio changed later)
+        AudioManager.PlayOneShotSound(AudioManager.Sound.Zombie2GettingHit);
 
         // Reduce health
         currentHealth -= (int)Mathf.Floor(damageAmount * damageMultiplier);
@@ -216,8 +215,8 @@ public class RangedEnemyCombat : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
 
-        // Set enemy state to chasing
-        rangedEnemyAI.enemyState = RangedEnemyAI.EnemyState.Chasing;
+        // Set enemy state to idle
+        rangedEnemyAI.enemyState = RangedEnemyAI.EnemyState.Idle;
     }
 
     void Die()
@@ -231,6 +230,8 @@ public class RangedEnemyCombat : MonoBehaviour
             attackTask.Stop();
             attackTask = null;
         }
+
+        StopAttack();
 
         // Disable damage collider
         damageCollider.enabled = false;

@@ -66,14 +66,6 @@ public class JigsawPuzzle : MonoBehaviour
         {
             DisablePortraitCollider();
         }
-
-        /*
-        // Check if drawer magic potion already collected
-        if (GameData.r2_drawerHealthPotionCollected)
-        {
-            drawerGameObject.GetComponent<BoxCollider2D>().enabled = false;
-        }
-        */
     }
 
     void SetReferences()
@@ -153,6 +145,9 @@ public class JigsawPuzzle : MonoBehaviour
 
     public void StartJigsawPuzzle()
     {
+        // Play continue button sound for this start button
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ContinueButton);
+
         // Disable interact button
         interactButton.interactable = false;
 
@@ -207,6 +202,9 @@ public class JigsawPuzzle : MonoBehaviour
 
     public void AddSolvedPiece()
     {
+        // Play mouse hover sound for this click event
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryMouseHover);
+
         numberOfPiecesSolved += 1;
 
         if (numberOfPiecesSolved == 14)
@@ -222,6 +220,9 @@ public class JigsawPuzzle : MonoBehaviour
 
         // Stop clock ticking sound
         AudioManager.StopLoopingSound(AudioManager.Sound.PuzzleClock);
+
+        // Play success sound
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.MazeSuccess);
 
         // Exit
         CloseJigsawPuzzle();

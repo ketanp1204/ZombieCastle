@@ -159,9 +159,6 @@ public class MazePuzzle : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        // Stop clock ticking sound
-        AudioManager.StopLoopingSound(AudioManager.Sound.PuzzleClock);
-
         // Puzzle failure
         if (!puzzleSuccess)
         {
@@ -184,6 +181,9 @@ public class MazePuzzle : MonoBehaviour
     {
         // Stop timer stop task
         timerTask.Stop();
+
+        // Stop clock ticking sound
+        AudioManager.StopLoopingSound(AudioManager.Sound.PuzzleClock);
 
         // Play success sound
         AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.MazeSuccess);
@@ -250,6 +250,9 @@ public class MazePuzzle : MonoBehaviour
     private void ResetPuzzle()
     {
         EventSystem.current.SetSelectedGameObject(null);
+
+        // Stop clock ticking sound
+        AudioManager.StopLoopingSound(AudioManager.Sound.PuzzleClock);
 
         // Stop maze player movement
         MazePlayer.EndPuzzle();

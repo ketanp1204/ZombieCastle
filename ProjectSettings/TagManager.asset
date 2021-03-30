@@ -15,6 +15,7 @@ TagManager:
   - JigsawPuzzleFinalPiece
   - TreasureBox
   - Boss
+  - LobbyStairsBlockTrigger
   layers:
   - Default
   - TransparentFX

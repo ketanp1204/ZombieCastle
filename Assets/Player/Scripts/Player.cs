@@ -121,9 +121,6 @@ public class Player : MonoBehaviour
         weaponEquippedDict[PlayerCombat.WeaponTypes.Axe] = false;
         weaponEquippedDict[PlayerCombat.WeaponTypes.Sword] = false;
 
-        // testing
-        playerCombat.swordAttackType = PlayerCombat.SwordAttackTypes.Fire;
-
         // Health
         if (PlayerStats.isFirstScene)
         {

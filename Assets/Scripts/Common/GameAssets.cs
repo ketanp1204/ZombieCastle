@@ -55,5 +55,8 @@ public class GameAssets : MonoBehaviour
 
     [Header("Room 5")]
     public GameObject playerBossFireballParticlePrefab;
+
+    [Header("Health Potion")]
+    public ItemObject healthPotion;
     
 }
