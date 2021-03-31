@@ -62,11 +62,10 @@ public class PlayerTopDown : MonoBehaviour
         Initialize();
         ResetAnimatorMovementParameters();
 
-        if (PlayerStats.isFirstScene)
+        if (!GameData.lobby_introDialogueSeen)
         {
             animator.SetBool("IsFirstScene", true);
-            if (!GameData.lobby_introDialogueSeen)
-                StopMovement();
+            StopMovement();
         }
         else
         {

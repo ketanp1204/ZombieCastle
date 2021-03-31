@@ -20,7 +20,7 @@ MonoBehaviour:
   playerComments:
   - I wonder what a 'Legendary Weapon' is.
   inventoryItemName: Elixirium
-  inventorySprite: {fileID: 21300000, guid: 4b34927f6a9102a4e80efc4c702a7b6a, type: 3}
+  inventorySprite: {fileID: 21300000, guid: f6635ae6c0945a4479e98f5307b6f8c1, type: 3}
   usableItem: 0
   canCombineWithAdditionalItem1: 1
   additionalItem1: {fileID: 11400000, guid: f8f663202a659d74d86be428ab7dbe22, type: 2}

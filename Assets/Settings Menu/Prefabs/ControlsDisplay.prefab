@@ -79,7 +79,16 @@ MonoBehaviour:
     Left Mouse Button
     - Attack
 
-    Space - Skip dialogue/Continue Dialogue'
+    Space - Skip dialogue/Continue Dialogue
+
+    Space - Block ranged
+    attacks when sword is equipped
+
+    Escape - Close UI elements/Pause Menu
+
+    Mouse
+    Drag and Drop in Inventory - Combine certain weapons with items or items with
+    other items.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7e016783f6bcda944a445f4658832686, type: 2}
   m_sharedMaterial: {fileID: 9033350098051320672, guid: 7e016783f6bcda944a445f4658832686, type: 2}

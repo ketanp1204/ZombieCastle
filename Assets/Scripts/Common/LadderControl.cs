@@ -130,8 +130,7 @@ public class LadderControl : MonoBehaviour
                 {
                     playerAnimator.SetBool("LadderClimbDown", false);
                     Player.instance.UnsetClimbingLadderDown();
-                    Player.EnableMovement();
-                    Player.EnableAttackInputAfterDelay();
+                    new Task(EnablePlayerInputAfterDelay());
                     climbingLadder = false;
                     break;
                 }
@@ -166,8 +165,7 @@ public class LadderControl : MonoBehaviour
                     ladderBoxCollider.enabled = true;
                     playerAnimator.SetBool("LadderClimbUp", false);
                     Player.instance.UnsetClimbingLadderUp();
-                    Player.EnableMovement();
-                    Player.EnableAttackInputAfterDelay();
+                    new Task(EnablePlayerInputAfterDelay());
                     climbingLadder = false;
                     break;
                 }
@@ -175,5 +173,13 @@ public class LadderControl : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
         }
+    }
+
+    private IEnumerator EnablePlayerInputAfterDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        Player.EnableMovement();
+        Player.EnableAttackInputAfterDelay();
     }
 }

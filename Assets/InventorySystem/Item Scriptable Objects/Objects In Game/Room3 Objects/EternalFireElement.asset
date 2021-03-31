@@ -25,7 +25,8 @@ MonoBehaviour:
 
 '
   inventoryItemName: The Eternal Fire
-  inventorySprite: {fileID: 21300000, guid: de6c5964ad8512f44992178a687054ea, type: 3}
+  inventorySprite: {fileID: 21300000, guid: 2145a2deca24bae4fa9e954ccaceaffe, type: 3}
+  usableItem: 0
   canCombineWithAdditionalItem1: 1
   additionalItem1: {fileID: 11400000, guid: f8f663202a659d74d86be428ab7dbe22, type: 2}
   combinedObject1: {fileID: 0}

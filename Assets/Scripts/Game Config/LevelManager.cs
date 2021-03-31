@@ -35,6 +35,10 @@ public class LevelManager : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
+
+        // Initialize Game Data
+        if (!GameData.isInitialized)
+            GameData.Initialize();
     }
 
     void OnEnable()
@@ -65,12 +69,9 @@ public class LevelManager : MonoBehaviour
         }
         else if (scene.name == "CastleLobby")
         {
-            if (PlayerStats.isFirstScene)
+            if (!GameData.lobby_introDialogueSeen)
             {
-                if (GameData.lobby_introDialogueSeen)
-                    animatorSpeed = 1f;
-                else
-                    animatorSpeed = 0.15f;
+                animatorSpeed = 0.15f;
             }
             else
             {

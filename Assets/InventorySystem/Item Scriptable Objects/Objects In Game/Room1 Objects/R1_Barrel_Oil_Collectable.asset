@@ -19,6 +19,7 @@ MonoBehaviour:
   hasPlayerComment: 1
   playerComments:
   - I can collect some oil and soak the torch in it and light it up.
+  destroyFromSceneAfterAddingToInventory: 0
   inventoryItemName: Oil
   inventorySprite: {fileID: 21300000, guid: b048663e29d70874f9cee42cb6e9ac7e, type: 3}
   canCombineWithAdditionalItem1: 1

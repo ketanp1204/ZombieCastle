@@ -8,6 +8,7 @@ public class LobbyStairsBlock : MonoBehaviour
     // Private references
     private BoxCollider2D triggerCollider;
     private SpriteGlow.SpriteGlowEffect glowEffect;
+    private SpriteRenderer outlineSR;
 
     // Public references
     public BoxCollider2D stairsBlockCollider;
@@ -25,6 +26,7 @@ public class LobbyStairsBlock : MonoBehaviour
     {
         triggerCollider = GetComponent<BoxCollider2D>();
         glowEffect = GetComponent<SpriteGlow.SpriteGlowEffect>();
+        outlineSR = GetComponent<SpriteRenderer>();
     }
 
     private void Initialize()
@@ -46,6 +48,8 @@ public class LobbyStairsBlock : MonoBehaviour
     public void UnblockStairs()
     {
         topFloorCamera.Priority = 15;
+
+        outlineSR.enabled = false;
 
         stairsBlockCollider.enabled = false;
 

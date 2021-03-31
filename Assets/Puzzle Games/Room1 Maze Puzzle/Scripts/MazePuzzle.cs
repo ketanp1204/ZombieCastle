@@ -82,10 +82,26 @@ public class MazePuzzle : MonoBehaviour
 
         interactButton.onClick.AddListener(() => StartMazePuzzle());
 
-        if (GameData.r1_mazePuzzleCompleted)
+        if (GameData.r1_combatCompleted)
+        {
+            if (GameData.r1_mazePuzzleCompleted)
+            {
+                DisablePortraitCollider();
+            }
+            else
+            {
+                EnablePortraitCollider();
+            }
+        }
+        else
         {
             DisablePortraitCollider();
         }
+    }
+
+    public void EnablePortraitCollider()
+    {
+        boxCollider.enabled = true;
     }
 
     public void DisablePortraitCollider()
@@ -239,6 +255,8 @@ public class MazePuzzle : MonoBehaviour
 
         // Hide cursor
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
+
+        AudioManager.SetLoopingSoundVolume(AudioManager.Sound.BackgroundTrack, 0.04f);
 
         // Hide maze puzzle gameobject
         mazePuzzleGO.SetActive(false);

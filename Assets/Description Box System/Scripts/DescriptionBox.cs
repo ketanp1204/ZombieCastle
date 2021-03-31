@@ -282,15 +282,7 @@ public class DescriptionBox : MonoBehaviour
             // Enable escape key to close inventory box
             if (descBoxOpenLocation == DescBoxOpenLocations.AfterReward)
             {
-                if (dialogueAfterReceivingReward != null)
-                {
-                    if (DialogueBox.instance)
-                    {
-                        // Show dialogue after reward
-                        DialogueBox.instance.FillSentences(dialogueAfterReceivingReward);
-                        DialogueBox.instance.StartDialogueDisplay();
-                    }
-                }
+                new Task(ShowDialogueAfterRewardAfterDelay());
 
                 // Lock mouse cursor
                 Cursor.lockState = CursorLockMode.Locked;
@@ -313,6 +305,21 @@ public class DescriptionBox : MonoBehaviour
 
             // Reset local values
             ResetValues();
+        }
+    }
+
+    private IEnumerator ShowDialogueAfterRewardAfterDelay()
+    {
+        yield return new WaitForSeconds(0.3f);
+
+        if (dialogueAfterReceivingReward != null)
+        {
+            if (DialogueBox.instance)
+            {
+                // Show dialogue after reward
+                DialogueBox.instance.FillSentences(dialogueAfterReceivingReward);
+                DialogueBox.instance.StartDialogueDisplay();
+            }
         }
     }
 

@@ -499,7 +499,7 @@ public class ItemSlotInteraction : MonoBehaviour, IPointerEnterHandler, IPointer
             itemIcon.color = c;
 
             // Set NameText 
-            nameText.text = pc_Then_Inventory_Object.itemName;
+            nameText.text = pc_Then_Inventory_Object.inventoryItemName;
 
             // Set itemScriptableObject
             itemScriptableObject = scriptableObject;

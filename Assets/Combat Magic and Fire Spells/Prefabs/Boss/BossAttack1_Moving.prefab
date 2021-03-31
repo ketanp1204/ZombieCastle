@@ -159,5 +159,5 @@ MonoBehaviour:
   parabolicAngle: 0
   hasImpactEffect: 1
   impactEffectPrefab: {fileID: 5139825868290766986, guid: 097b892c4781ab5479c804105fcd064f, type: 3}
-  spellDamage: 4
+  spellDamage: 3
   character: 1

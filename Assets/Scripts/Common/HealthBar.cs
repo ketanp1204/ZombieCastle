@@ -45,6 +45,8 @@ public class HealthBar : MonoBehaviour
 
         fill.color = gradient.Evaluate(slider.normalizedValue);
 
+        PlayerStats.currentHealth = 100;
+
         string text = "Health restored";
         InventoryManager.instance.ShowTextOnHighlightText(text, 0f, 2f);
 

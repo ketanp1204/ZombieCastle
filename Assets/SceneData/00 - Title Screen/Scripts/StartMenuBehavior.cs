@@ -14,8 +14,14 @@ public class StartMenuBehavior : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
         Cursor.lockState = CursorLockMode.None;                                                 // Unlock mouse cursor
 
-        AudioManager.Initialize();
+        if (!AudioManager.isInitialized)
+            AudioManager.Initialize();
         AudioManager.PlaySoundLooping(AudioManager.Sound.TitleScreenTrack);
+        AudioManager.StopLoopingSound(AudioManager.Sound.BackgroundTrack);
+        AudioManager.StopLoopingSound(AudioManager.Sound.Room5Background);
+
+        GameData.currentPlayerInventory.Container.Clear();
+        GameData.currentPlayerInventory.AddItem(GameAssets.instance.knifeObject, 1);
     }
 
     public void StartGame()

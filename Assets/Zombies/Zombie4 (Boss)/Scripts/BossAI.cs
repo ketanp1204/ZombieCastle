@@ -28,7 +28,7 @@ public class BossAI : MonoBehaviour
     // Public Variables
     public float attackStartDistance;
     [HideInInspector]
-    public bool combatStated = false;
+    public bool combatStarted = false;
 
     [Header("Pathfinding")]
     public float pathUpdateSeconds;
@@ -72,9 +72,9 @@ public class BossAI : MonoBehaviour
 
     public void StartChasingPlayer()
     {
-        if (!combatStated)
+        if (!combatStarted)
         {
-            combatStated = true;
+            combatStarted = true;
             new Task(PlayRoarSoundInDelays());
         }
 

@@ -265,6 +265,9 @@ public class BossCombat : MonoBehaviour
         if (bossAI.state == BossAI.BossState.KneelDown)
             return;
 
+        if (!bossAI.combatStarted)
+            return;
+
         // Play getting hit sound
         AudioManager.PlayOneShotSound(AudioManager.Sound.Zombie4GettingHit);
 

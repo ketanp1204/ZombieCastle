@@ -7,7 +7,7 @@ public class SetGlobalVolume : MonoBehaviour
 {
     private void Start()
     {
-        AudioListener.volume = 0.7f;
+        AudioListener.volume = 1f;
     }
 
     public void SetGlobalAudioVolume(float volume)

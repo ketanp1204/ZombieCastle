@@ -156,14 +156,12 @@ public class TreasureBoxInteraction : MonoBehaviour
         if (roomIndex == RoomIndex.Room1)
         {
             // Open inventory to select key
-            InventoryManager.ShowInventory();
-            InventoryManager.instance.HighlightItemOnTreasureBoxInteraction(lobbyKeyScriptableObject, this);
+            new Task(OpenInventoryToSelectKeyAfterDelay(lobbyKeyScriptableObject, 0.3f));
         }
         else if (roomIndex == RoomIndex.Room2)
         {
             // Open inventory to select key
-            InventoryManager.ShowInventory();
-            InventoryManager.instance.HighlightItemOnTreasureBoxInteraction(room2TreasureBoxKeyScriptableObject, this);
+            new Task(OpenInventoryToSelectKeyAfterDelay(room2TreasureBoxKeyScriptableObject, 0.3f));
         }
         else if (roomIndex == RoomIndex.Room3)
         {
@@ -181,49 +179,72 @@ public class TreasureBoxInteraction : MonoBehaviour
         }
     }
 
+    private IEnumerator OpenInventoryToSelectKeyAfterDelay(ItemObject key, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // Open inventory to select key
+        InventoryManager.ShowInventory();
+        InventoryManager.instance.HighlightItemOnTreasureBoxInteraction(key, this);
+    }
+
     public void BehaviourAfterInventoryItemSelected()
     {
         if (roomIndex == RoomIndex.Room1)
         {
-            // Set treasure box image display to box open sprite
-            imageDisplayGO.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.treasureBoxOpenSprite;
-
-            // Show axe received on description box and following dialogue
-            if (DescriptionBox.instance)
-            {
-                DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(0.3f, axeScriptableObject, axeReceivedDialogue, AudioManager.Sound.R1_Box_Axe_Received);
-            }
-
-            // Delete key from inventory
-            InventoryManager.instance.DeleteInventoryItem(lobbyKeyScriptableObject);
-
-            // Update this completed interaction in the GameData class
-            GameData.r1_treasureBoxAxeCollected = true;
-
-            // Disable the treasure box's collider
-            DisableCollider();
+            new Task(Room1BehaviourAfterInventoryKeySelected());
         }
         else if (roomIndex == RoomIndex.Room2)
         {
-            // Set treasure box image display to box open sprite
-            imageDisplayGO.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.treasureBoxOpenSprite;
-
-            // Show magic potion received on description box and following dialogue
-            if (DescriptionBox.instance)
-            {
-                string[] magicPotionReceivedDialogue = magicPotionScriptableObject.playerComments;
-                DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(0.5f, magicPotionScriptableObject, magicPotionReceivedDialogue, AudioManager.Sound.MagicPotionCollect);
-            }
-
-            // Delete key from inventory
-            InventoryManager.instance.DeleteInventoryItem(room2TreasureBoxKeyScriptableObject);
-
-            // Update this completed interaction in the GameData class
-            GameData.r2_treasureBoxMagicPotionCollected = true;
-
-            // Disable the treasure box's collider
-            DisableCollider();
+            new Task(Room2BehaviourAfterInventoryKeySelected());
         }
+    }
+
+    private IEnumerator Room1BehaviourAfterInventoryKeySelected()
+    {
+        yield return new WaitForSeconds(0.3f);
+
+        // Set treasure box image display to box open sprite
+        imageDisplayGO.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.treasureBoxOpenSprite;
+
+        // Show axe received on description box and following dialogue
+        if (DescriptionBox.instance)
+        {
+            DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(0.3f, axeScriptableObject, axeReceivedDialogue, AudioManager.Sound.R1_Box_Axe_Received);
+        }
+
+        // Delete key from inventory
+        InventoryManager.instance.DeleteInventoryItem(lobbyKeyScriptableObject);
+
+        // Update this completed interaction in the GameData class
+        GameData.r1_treasureBoxAxeCollected = true;
+
+        // Disable the treasure box's collider
+        DisableCollider();
+    }
+
+    private IEnumerator Room2BehaviourAfterInventoryKeySelected()
+    {
+        yield return new WaitForSeconds(0.3f);
+
+        // Set treasure box image display to box open sprite
+        imageDisplayGO.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.treasureBoxOpenSprite;
+
+        // Show magic potion received on description box and following dialogue
+        if (DescriptionBox.instance)
+        {
+            string[] magicPotionReceivedDialogue = magicPotionScriptableObject.playerComments;
+            DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(0.5f, magicPotionScriptableObject, magicPotionReceivedDialogue, AudioManager.Sound.MagicPotionCollect);
+        }
+
+        // Delete key from inventory
+        InventoryManager.instance.DeleteInventoryItem(room2TreasureBoxKeyScriptableObject);
+
+        // Update this completed interaction in the GameData class
+        GameData.r2_treasureBoxMagicPotionCollected = true;
+
+        // Disable the treasure box's collider
+        DisableCollider();
     }
 
     public void EnableCollider()

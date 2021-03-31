@@ -21,7 +21,7 @@ MonoBehaviour:
   - Aspirin?
   - 'That will surely come in handy. '
   inventoryItemName: Aspirin
-  inventorySprite: {fileID: 21300000, guid: 8459e4ef160d0884dbd2f3ee98bc44de, type: 3}
+  inventorySprite: {fileID: 21300000, guid: 8cf06c42cb99e3e449cdb52342a73952, type: 3}
   usableItem: 1
   canCombineWithAdditionalItem1: 0
   additionalItem1: {fileID: 0}

@@ -80,11 +80,6 @@ public class Player : MonoBehaviour
         {
             instance = this;
         }
-
-        if (!GameData.isInitialized)
-        {
-            GameData.Initialize();
-        }
     }
 
     private void Start()
@@ -205,18 +200,15 @@ public class Player : MonoBehaviour
             animator.SetBool("HoldingTorch", false);
             isInRoom3 = false;
 
-            if (GameData.loadingCheckpointFromGameOver)
+            if (GameData.r5_zombie3CombatCompleted)
             {
-                if (GameData.r5_zombie3CombatCompleted)
-                {
-                    // Set player position to middle floor 
-                    transform.position = new Vector3(18.5f, -2.61f, 0f);
-                }
-                else
-                {
-                    // Set player position to room 5 door
-                    transform.position = new Vector3(-22.12f, 7.58f, 0f);
-                }
+                // Set player position to middle floor 
+                transform.position = new Vector3(18.5f, -2.61f, 0f);
+            }
+            else
+            {
+                // Set player position to room 5 door
+                transform.position = new Vector3(-22.12f, 7.58f, 0f);
             }
         }
 

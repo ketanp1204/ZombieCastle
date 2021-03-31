@@ -76,6 +76,7 @@ public class EnemyAI : MonoBehaviour
         if (!combatStarted)
         {
             combatStarted = true;
+
             new Task(PlayRoarSoundInDelays());
         }
 
@@ -94,8 +95,6 @@ public class EnemyAI : MonoBehaviour
     {
         while (enemyState != EnemyState.Dead)
         {
-            yield return new WaitForSeconds(7f);
-
             if (enemyState != EnemyState.Dead)
             {
                 if (enemyCombat.zombieType == EnemyCombat.ZombieTypes.Zombie1)
@@ -109,6 +108,8 @@ public class EnemyAI : MonoBehaviour
                     AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie2Roar);
                 }
             }
+
+            yield return new WaitForSeconds(7f);
         }
     }
 

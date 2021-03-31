@@ -41,6 +41,7 @@ public class BehaviourAfterBossDefeated : MonoBehaviour
 
     private IEnumerator GameEndBehaviour()
     {
+        AudioManager.StopLoopingSound(AudioManager.Sound.Room5Background);
         AudioManager.StopLoopingSound(AudioManager.Sound.BossBattleTrack);
 
         yield return new WaitForSeconds(1f);

@@ -56,7 +56,7 @@ public class BossVisibleCameraZoomOut : MonoBehaviour
             }
             else
             {
-                StartBossBatlle();
+                StartBossBattle();
             }
 
             // Stop room 5 background track
@@ -70,7 +70,7 @@ public class BossVisibleCameraZoomOut : MonoBehaviour
         }
     }
 
-    public void StartBossBatlle()
+    public void StartBossBattle()
     {
         // Block player and boss in combat area
         bossCombatBlockWall1.SetActive(true);

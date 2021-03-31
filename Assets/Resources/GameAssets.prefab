@@ -178,3 +178,4 @@ MonoBehaviour:
   r1_barrel_oil_collectable: {fileID: 11400000, guid: 37c58e93a604ce545bb0be87c15be717, type: 2}
   playerBossFireballParticlePrefab: {fileID: 6036412115239697856, guid: ed9f603ef4cbfb54b86db263d74414a6, type: 3}
   healthPotion: {fileID: 11400000, guid: 83ab74d17ff6daf4d90e7df707a8e8b1, type: 2}
+  knifeObject: {fileID: 11400000, guid: 633cac347e6a8044ab8d1909852a247d, type: 2}

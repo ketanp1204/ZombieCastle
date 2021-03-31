@@ -15,6 +15,8 @@ public class R1_CombatStartBehaviour : MonoBehaviour
     public GameObject leftWallCollider;
     public GameObject combatBlockWall;
     public WeaponObject knifeScriptableObject;
+    public BoxCollider2D treasureBoxCollider;
+    public BoxCollider2D barrelCollider;
 
     // Private References
     private List<GameObject> zombieGameObjects;
@@ -54,11 +56,31 @@ public class R1_CombatStartBehaviour : MonoBehaviour
             }
             combatStartCollider.enabled = false;
             leftWallCollider.SetActive(true);
+
+            if (!GameData.r1_treasureBoxAxeCollected)
+            {
+                treasureBoxCollider.enabled = true;
+            }
+            else
+            {
+                treasureBoxCollider.enabled = false;
+            }
+
+            if (!GameData.r1_barrelOilCollected)
+            {
+                barrelCollider.enabled = true;
+            }
+            else
+            {
+                barrelCollider.enabled = false;
+            }
         }
         else
         {
             combatStartCollider.enabled = true;
             leftWallCollider.SetActive(false);
+            treasureBoxCollider.enabled = false;
+            barrelCollider.enabled = false;
         }
     }
 

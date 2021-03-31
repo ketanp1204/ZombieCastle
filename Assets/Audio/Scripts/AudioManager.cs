@@ -73,6 +73,7 @@ public static class AudioManager
     public static Dictionary<Sound, GameObject> playOneShotGameObjects;
 
     public static AudioClip currentAudioClip;
+    public static bool isInitialized = false;
 
     public static void Initialize()
     {
@@ -80,6 +81,7 @@ public static class AudioManager
         playSoundOnceGameObjects = new Dictionary<Sound, GameObject>();
         loopingSoundGameObjects = new Dictionary<Sound, GameObject>();
         playOneShotGameObjects = new Dictionary<Sound, GameObject>();
+        isInitialized = true;
 }
 
     public static void PlaySoundAtPosition(Sound sound, Vector3 position)

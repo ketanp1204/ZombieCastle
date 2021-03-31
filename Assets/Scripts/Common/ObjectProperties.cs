@@ -7,7 +7,8 @@ public class ObjectProperties : MonoBehaviour
     private enum PC_Then_Inventory_Objects
     {
         Lobby_Key,
-        Lobby_Torch
+        Lobby_Torch,
+        Room1_Barrel
     }
 
     private enum Desc_Box_Then_Dialogue_Objects
@@ -60,6 +61,13 @@ public class ObjectProperties : MonoBehaviour
                     Destroy(imageDisplayGO);
                 }
             }
+            else if (itemName == PC_Then_Inventory_Objects.Room1_Barrel.ToString())
+            {
+                if (GameData.r1_barrelOilCollected)
+                {
+                    GetComponent<BoxCollider2D>().enabled = false;
+                }
+            }
         }
         else if(objectData.itemType == ItemType.DescBox_Then_Dialogue)
         {
@@ -110,7 +118,14 @@ public class ObjectProperties : MonoBehaviour
         }
         else if (itemName == PC_Then_Inventory_Objects.Lobby_Key.ToString())
         {
+            // Play key sound
+            AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.KeyCollect);
+
             GameData.lobby_keyCollected = true;
+        }
+        else if (itemName == PC_Then_Inventory_Objects.Room1_Barrel.ToString())
+        {
+            GameData.r1_barrelOilCollected = true;
         }
     }
 

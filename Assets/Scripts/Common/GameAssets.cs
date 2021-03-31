@@ -58,5 +58,8 @@ public class GameAssets : MonoBehaviour
 
     [Header("Health Potion")]
     public ItemObject healthPotion;
+
+    [Header("Knife")]
+    public WeaponObject knifeObject;
     
 }

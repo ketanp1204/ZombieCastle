@@ -299,6 +299,8 @@ public class JigsawPuzzle : MonoBehaviour
         // Hide cursor
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
 
+        AudioManager.SetLoopingSoundVolume(AudioManager.Sound.BackgroundTrack, 0.04f);
+
         // Hide jigsaw puzzle gameobject
         jigsawPuzzleGO.SetActive(false);
 

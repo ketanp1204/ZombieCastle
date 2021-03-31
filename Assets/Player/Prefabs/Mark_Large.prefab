@@ -587,6 +587,7 @@ MonoBehaviour:
   torchGO: {fileID: 1888932303}
   combatCameraPosition: {fileID: 5056755557812388392}
   movePlayer: 0
+  canAttack: 0
   isClimbingLadder: 0
   movementSpeed: 7
   currentHealth: 0
@@ -618,11 +619,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axeDamage: 50
-  axeAttackRepeatTime: 0.7
+  axeAttackRepeatTime: 0.9
   axeHitboxAnimator_L: {fileID: 5079447134803724496}
   axeHitboxAnimator_R: {fileID: 2437771053754895001}
   knifeDamage: 4
-  knifeAttackRepeatTime: 0.6
+  knifeAttackRepeatTime: 1.2
   knifeHitboxAnimator_L: {fileID: 2430838785247921643}
   knifeHitboxAnimator_R: {fileID: 8495685439208976738}
   swordAttackType: 0

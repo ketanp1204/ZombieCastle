@@ -262,6 +262,8 @@ public class DialogueBox : MonoBehaviour
 
             if (isGameStartDialogue)
             {
+                LevelManager.SetAnimatorSpeed(1f);
+
                 if (DisplayGameInstructions.instance)
                 {
                     DisplayGameInstructions.instance.StartInstructionsDisplay();
@@ -271,7 +273,7 @@ public class DialogueBox : MonoBehaviour
             if (room5BossBattleAfterDialogue)
             {
                 GameData.r5_bossDialogueSeen = true;
-                BossVisibleCameraZoomOut.instance.StartBossBatlle();
+                BossVisibleCameraZoomOut.instance.StartBossBattle();
             }
 
             Player.EnableMovement();
@@ -416,7 +418,7 @@ public class DialogueBox : MonoBehaviour
 
     private IEnumerator SetContinueButtonEnabledFlagToTrueAfterDelay()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.4f);
 
         continueButtonEnabled = true;
     }

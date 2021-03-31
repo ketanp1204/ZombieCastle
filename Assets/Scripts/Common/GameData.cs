@@ -23,8 +23,8 @@ public static class GameData
     // Room 1
     public static bool r1_combatCompleted;
     public static bool r1_mazePuzzleCompleted;
-    public static bool r1_barrelOilCollected;
     public static bool r1_treasureBoxAxeCollected;
+    public static bool r1_barrelOilCollected;
 
     // Room 2
     public static bool r2_combatCompleted;
@@ -66,19 +66,19 @@ public static class GameData
     
     private static void UnsetBools()
     {
-        lobby_introDialogueSeen = true;         
+        lobby_introDialogueSeen = false;       
         lobby_instructionsSeen = false;
         lobby_torchCollected = false;
         lobby_keyCollected = false;
         lobby_paperRead = false;
-        lobby_r5_stairsUnlocked = true;             
+        lobby_r5_stairsUnlocked = false;             
         lobby_tried_opening_r3_door_with_torch = false;
         lobby_opened_r3_door_with_torch = false;
 
         r1_combatCompleted = false;
         r1_mazePuzzleCompleted = false;
-        r1_barrelOilCollected = false;
         r1_treasureBoxAxeCollected = false;
+        r1_barrelOilCollected = false;
 
         r2_combatCompleted = false;
         r2_jigsawPuzzleCompleted = false;
@@ -89,7 +89,7 @@ public static class GameData
         r3_spotDifferencePuzzleCompleted = false;
         r3_treasureBoxFireElementCollected = false;
 
-        r5_zombie3CombatCompleted = true;
+        r5_zombie3CombatCompleted = false;
         r5_bossDialogueSeen = false;
 
         loadingCheckpointFromGameOver = false;
