@@ -272,7 +272,7 @@ public class DescriptionBox : MonoBehaviour
         if (instance.isActive)
         {
             // Play paper pickup sound
-            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.PaperPickup);
+            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.InventoryClose);
 
             // Hide description box
             new Task(UIAnimation.FadeCanvasGroupAfterDelay(descBoxCG, 1f, 0f, 0f));

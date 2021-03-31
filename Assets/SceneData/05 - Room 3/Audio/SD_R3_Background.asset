@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SD_R3_Background
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 41147111602ce394db0b3da06f8f166c, type: 3}
-  loopSound: 0
+  loopSound: 1
   volume: 0.07

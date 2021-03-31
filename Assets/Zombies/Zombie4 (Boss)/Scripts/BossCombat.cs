@@ -311,7 +311,7 @@ public class BossCombat : MonoBehaviour
                 animator.SetBool("KneelDown", true);
 
                 // Regenerate health
-                new Task(StartRegeneratingHealthAfterDelay(currentHealth, currentHealth + 20f, 1f, 10f));
+                new Task(StartRegeneratingHealthAfterDelay(currentHealth, currentHealth + 20f, 1f, 4f));
             }
             else
             {
@@ -347,7 +347,7 @@ public class BossCombat : MonoBehaviour
                 animator.SetBool("KneelDown", true);
 
                 // Regenerate health
-                new Task(StartRegeneratingHealthAfterDelay(currentHealth, currentHealth + 20f, 1f, 10f));
+                new Task(StartRegeneratingHealthAfterDelay(currentHealth, currentHealth + 10f, 1f, 4f));
             }
             else
             {
@@ -371,11 +371,13 @@ public class BossCombat : MonoBehaviour
         }
     }
 
-    private IEnumerator StartRegeneratingHealthAfterDelay(float startHealth, float endHealth, float delay, float lerpTime = 10f)
+    private IEnumerator StartRegeneratingHealthAfterDelay(float startHealth, float endHealth, float delay, float lerpTime = 4f)
     {
         bossAI.state = BossAI.BossState.KneelDown;
 
         yield return new WaitForSeconds(delay);
+
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.BossHealthRecharge);
 
         new Task(FlashRegenerationLight());
 

@@ -95,8 +95,22 @@ public class GameSession : MonoBehaviour
             // Play room3 background sound
             AudioManager.PlaySoundLooping(AudioManager.Sound.Room3Background);
 
+            // Play candle burning sound
+            AudioManager.PlaySoundLooping(AudioManager.Sound.CandleBurning);
+
             // Stop game background sound
             AudioManager.StopLoopingSound(AudioManager.Sound.BackgroundTrack);
+        }
+        else if (scene.name == "Room5")
+        {
+            // Play room5 background sound
+            AudioManager.PlaySoundLooping(AudioManager.Sound.Room5Background);
+
+            // Stop game background sound
+            AudioManager.StopLoopingSound(AudioManager.Sound.BackgroundTrack);
+
+            // Stop candle burning sound
+            AudioManager.StopLoopingSound(AudioManager.Sound.CandleBurning);
         }
         else
         {
@@ -105,6 +119,9 @@ public class GameSession : MonoBehaviour
 
             // Stop room 3 background track
             AudioManager.StopLoopingSound(AudioManager.Sound.Room3Background);
+
+            // Stop candle burning sound
+            AudioManager.StopLoopingSound(AudioManager.Sound.CandleBurning);
         }
     }
 
@@ -148,13 +165,13 @@ public class GameSession : MonoBehaviour
     {
         GameData.currentPlayerInventory.Container.Clear();
         GameData.currentPlayerInventory.AddItem(knifeInventoryObject, 1);
-        // GameData.currentPlayerInventory.AddItem(axeInventoryObject, 1);
+        GameData.currentPlayerInventory.AddItem(axeInventoryObject, 1);
         GameData.currentPlayerInventory.AddItem(sword, 1);
         
         GameData.currentPlayerInventory.AddItem(lobbyKeyInventoryObject, 1);
-        // GameData.currentPlayerInventory.AddItem(lobbyTorchInventoryObject, 1);
-        // GameData.currentPlayerInventory.AddItem(r1_oil_barrel, 1);
-        // GameData.currentPlayerInventory.AddItem(fireElement, 1);
+        GameData.currentPlayerInventory.AddItem(lobbyTorchInventoryObject, 1);
+        GameData.currentPlayerInventory.AddItem(r1_oil_barrel, 1);
+        GameData.currentPlayerInventory.AddItem(fireElement, 1);
         GameData.currentPlayerInventory.AddItem(magicPotion, 1);
     }
 }

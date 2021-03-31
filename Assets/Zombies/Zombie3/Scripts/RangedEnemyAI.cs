@@ -71,12 +71,12 @@ public class RangedEnemyAI : MonoBehaviour
 
     public void StartChasingPlayer()
     {
-        // Play roar sound
-        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie3Roar);
-
         if (!combatStarted)
+        {
             combatStarted = true;
-
+            new Task(PlayRoarSoundInDelays());
+        }
+        
         if (pathUpdateTask != null)
         {
             pathUpdateTask.Stop();
@@ -86,6 +86,20 @@ public class RangedEnemyAI : MonoBehaviour
         followPath = true;
 
         pathUpdateTask = new Task(UpdatePathfindingPath());
+    }
+
+    private IEnumerator PlayRoarSoundInDelays()
+    {
+        while (enemyState != EnemyState.Dead)
+        {
+            yield return new WaitForSeconds(7f);
+
+            if (enemyState != EnemyState.Dead)
+            {
+                // Play roar sound
+                AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie3Roar);
+            }
+        }
     }
 
     private IEnumerator UpdatePathfindingPath()

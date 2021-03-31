@@ -174,7 +174,7 @@ public class RangedEnemyCombat : MonoBehaviour
         StartCoroutine(DestroyGameObjectAfterDelay(bloodParticles, 5f));
 
         // Play zombie 2 getting hurt audio for zombie 3 (unless audio changed later)
-        AudioManager.PlayOneShotSound(AudioManager.Sound.Zombie2GettingHit);
+        AudioManager.PlayOneShotSound(AudioManager.Sound.Zombie3GettingHit);
 
         // Reduce health
         currentHealth -= (int)Mathf.Floor(damageAmount * damageMultiplier);

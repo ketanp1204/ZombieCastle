@@ -71,7 +71,7 @@ public static class GameData
         lobby_torchCollected = false;
         lobby_keyCollected = false;
         lobby_paperRead = false;
-        lobby_r5_stairsUnlocked = false;             
+        lobby_r5_stairsUnlocked = true;             
         lobby_tried_opening_r3_door_with_torch = false;
         lobby_opened_r3_door_with_torch = false;
 
@@ -89,7 +89,7 @@ public static class GameData
         r3_spotDifferencePuzzleCompleted = false;
         r3_treasureBoxFireElementCollected = false;
 
-        r5_zombie3CombatCompleted = false;
+        r5_zombie3CombatCompleted = true;
         r5_bossDialogueSeen = false;
 
         loadingCheckpointFromGameOver = false;

@@ -59,6 +59,12 @@ public class BossVisibleCameraZoomOut : MonoBehaviour
                 StartBossBatlle();
             }
 
+            // Stop room 5 background track
+            AudioManager.StopLoopingSound(AudioManager.Sound.Room5Background);
+
+            // Why do I hear boss music?
+            AudioManager.PlaySoundLooping(AudioManager.Sound.BossBattleTrack);
+
             // Disable this collider
             bossFightStartCollider.enabled = false;
         }

@@ -73,9 +73,6 @@ public class R1_CombatStartBehaviour : MonoBehaviour
             Camera.main.gameObject.GetComponent<CinemachineBrain>().m_IgnoreTimeScale = true;
             cinemachineCamera.Follow = temporaryCameraTarget;
 
-            // Play zombie 1 roar
-            AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie1Roar);
-
             // Show player dialogue about using knife
             if (DialogueBox.instance)
             {

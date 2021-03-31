@@ -27,6 +27,8 @@ public class BossAI : MonoBehaviour
 
     // Public Variables
     public float attackStartDistance;
+    [HideInInspector]
+    public bool combatStated = false;
 
     [Header("Pathfinding")]
     public float pathUpdateSeconds;
@@ -70,8 +72,11 @@ public class BossAI : MonoBehaviour
 
     public void StartChasingPlayer()
     {
-        // Play boss roar sound
-        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie4Roar);
+        if (!combatStated)
+        {
+            combatStated = true;
+            new Task(PlayRoarSoundInDelays());
+        }
 
         if (pathUpdateTask != null)
         {
@@ -82,6 +87,20 @@ public class BossAI : MonoBehaviour
         followPath = true;
 
         pathUpdateTask = new Task(UpdatePathfindingPath());
+    }
+
+    private IEnumerator PlayRoarSoundInDelays()
+    {
+        while (state != BossState.Dead)
+        {
+            yield return new WaitForSeconds(7f);
+
+            if (state != BossState.Dead)
+            {
+                // Play roar sound
+                AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie4Roar);
+            }
+        }
     }
 
     private IEnumerator UpdatePathfindingPath()

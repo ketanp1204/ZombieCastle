@@ -17,6 +17,8 @@ public class GameOverScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioManager.StopLoopingSound(AudioManager.Sound.BossBattleTrack);
+
         // Lock the cursor
         Cursor.lockState = CursorLockMode.Locked;
 

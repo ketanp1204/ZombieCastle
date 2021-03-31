@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 258f440286c1f594ea7302689d6ebd1d, type: 3}
   m_Name: SD_Z3_Getting_Hit
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 37d8b381e9cab484db740985347c6069, type: 3}
+  audioClip: {fileID: 8300000, guid: 3ba0a24f1e893d144ab3c386a986e055, type: 3}
   loopSound: 0
-  volume: 0.5
+  volume: 0.3

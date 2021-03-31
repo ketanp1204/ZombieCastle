@@ -16260,7 +16260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stairsBlockCollider: {fileID: 226817841}
-  stairsBlockDisplayGO: {fileID: 0}
+  stairsBlockDisplayGO: {fileID: 1698728082}
   topFloorCamera: {fileID: 1196177631}
 --- !u!61 &2038800066
 BoxCollider2D:

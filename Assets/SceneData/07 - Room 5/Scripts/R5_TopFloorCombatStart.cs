@@ -8,7 +8,10 @@ public class R5_TopFloorCombatStart : MonoBehaviour
     // Public References
     public GameObject zombieGameObjectsContainer;
     public CinemachineVirtualCamera cinemachineCamera;
-    public GameObject combatBlockWall;
+    public GameObject combatBlockWall1;
+    public GameObject combatBlockWall2;
+    public GameObject zombie3PathfindingObject;
+    public GameObject bossPathfindingObject;
 
     // Private References
     private List<GameObject> zombieGameObjects;
@@ -17,7 +20,8 @@ public class R5_TopFloorCombatStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        combatBlockWall.SetActive(false);
+        combatBlockWall1.SetActive(false);
+        combatBlockWall2.SetActive(false);
         zombieGameObjects = new List<GameObject>();
         foreach (Transform child in zombieGameObjectsContainer.transform)
         {
@@ -34,10 +38,14 @@ public class R5_TopFloorCombatStart : MonoBehaviour
                 Destroy(zombie);
             }
             combatStartCollider.enabled = false;
+            zombie3PathfindingObject.SetActive(false);
+            bossPathfindingObject.SetActive(true);
         }
         else
         {
             combatStartCollider.enabled = true;
+            zombie3PathfindingObject.SetActive(true);
+            bossPathfindingObject.SetActive(false);
         }
     }
 
@@ -46,7 +54,8 @@ public class R5_TopFloorCombatStart : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // Block the player in the combat area
-            combatBlockWall.SetActive(true);
+            combatBlockWall1.SetActive(true);
+            combatBlockWall2.SetActive(true);
 
             // Disable this collider
             combatStartCollider.enabled = false;

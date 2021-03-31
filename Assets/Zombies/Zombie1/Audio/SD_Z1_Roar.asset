@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 258f440286c1f594ea7302689d6ebd1d, type: 3}
   m_Name: SD_Z1_Roar
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 6e27c92e4d351e44dbf3dc0f0d43cab0, type: 3}
+  audioClip: {fileID: 8300000, guid: 8b74803fb14f01c409928974c89b24c5, type: 3}
   loopSound: 0
-  volume: 0.25
+  volume: 0.1

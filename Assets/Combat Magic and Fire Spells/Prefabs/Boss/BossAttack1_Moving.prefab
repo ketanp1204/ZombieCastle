@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1427381393886299049}
   - component: {fileID: 1427381393886299054}
   m_Layer: 16
-  m_Name: BossMagicSpell_Moving
+  m_Name: BossAttack1_Moving
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,5 +159,5 @@ MonoBehaviour:
   parabolicAngle: 0
   hasImpactEffect: 1
   impactEffectPrefab: {fileID: 5139825868290766986, guid: 097b892c4781ab5479c804105fcd064f, type: 3}
-  spellDamage: 2
+  spellDamage: 4
   character: 1

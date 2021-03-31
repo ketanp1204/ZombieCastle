@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: b0c33bde298f93d4680d2491b645e998, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9622642, g: 0.46751517, b: 0.46751517, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -159,5 +159,5 @@ MonoBehaviour:
   parabolicAngle: 0
   hasImpactEffect: 1
   impactEffectPrefab: {fileID: 8802653464151841848, guid: 6d8449c3203e36043af5a6dd8c1816c7, type: 3}
-  spellDamage: 5
+  spellDamage: 4
   character: 0

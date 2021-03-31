@@ -10,8 +10,12 @@ public class BehaviourAfterBossDefeated : MonoBehaviour
     // Dialogue camera
     public CinemachineVirtualCamera gameEndDialogueCamera;
 
-    // Boss health bar canvas group
+    // Boss and player health bars
     public CanvasGroup bossHealthBarCG;
+    public CanvasGroup playerHealthBarCG;
+
+    // Combat block wall
+    public GameObject combatBlockWall;
 
     // Dialogue boxes UI
     public TextMeshProUGUI playerText;
@@ -37,8 +41,24 @@ public class BehaviourAfterBossDefeated : MonoBehaviour
 
     private IEnumerator GameEndBehaviour()
     {
+        AudioManager.StopLoopingSound(AudioManager.Sound.BossBattleTrack);
+
+        yield return new WaitForSeconds(1f);
+
+        AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
+        AudioManager.SetLoopingSoundVolume(AudioManager.Sound.BackgroundTrack, 0.08f);
+
         // Hide boss health bar
         bossHealthBarCG.alpha = 0f;
+
+        // Hide player health bar
+        playerHealthBarCG.alpha = 0f;
+
+        // Hide combat block wall
+        combatBlockWall.SetActive(false);
+
+        // Unequip sword
+        Player.UnequipSword();
 
         // Disable player movement and make him face Betty
         Player.instance.MakePlayerFaceLeft();

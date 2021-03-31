@@ -393,7 +393,7 @@ public class IntroSequence : MonoBehaviour
         LevelManager.FadeScreenInAndOut();
 
         yield return new WaitForSeconds(1f);
-
+        
         // Shift to fifth image
         cinemachineCamera.Follow = img5_CamStartPos;
         cinemachineCamera.GetComponent<CinemachineConfiner>().m_BoundingShape2D = img5_Bounds;
@@ -408,16 +408,18 @@ public class IntroSequence : MonoBehaviour
         img5_PlayerText.text = "";
         new Task(TypeText(img5_PlayerText, img5_PlayerDialogues[0], 0.7f));
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
+
+        // Play blackout music
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.IntroSequenceBlackout);
+
+        yield return new WaitForSeconds(2f);
 
         // Start fading in color image
         new Task(FadeSpriteRendererAfterDelay(colorImage, 0f, 0.9f, 0f, 5f));
 
         // Start increasing pumpkins light intensity
         new Task(InterpolateLight2DIntensity(pumpkinLight2D, pumpkinLight2D.intensity, 15f, 0f, 2f));
-
-        // Play blackout music
-        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.IntroSequenceBlackout);
 
         // Get background music AudioSource
         AudioSource backgroundMusicAudioSource = AudioManager.loopingSoundGameObjects[AudioManager.Sound.IntroSequenceBackground].GetComponent<AudioSource>();

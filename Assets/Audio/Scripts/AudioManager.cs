@@ -61,7 +61,10 @@ public static class AudioManager
         Zombie3Death,
         Zombie3Attack,
         Zombie2Attack,
-        Zombie1Attack
+        Zombie1Attack,
+        Room5Background,
+        BossBattleTrack,
+        BossHealthRecharge
     }
 
     // private static Dictionary<Sound, float> soundTimerDictionary;
@@ -215,6 +218,17 @@ public static class AudioManager
             AudioSource audioSource = loopingSoundGameObjects[sound].GetComponent<AudioSource>();
 
             audioSource.Stop();
+        }
+    }
+
+    public static void SetLoopingSoundVolume(Sound sound, float volume)
+    {
+        if (loopingSoundGameObjects.ContainsKey(sound))
+        {
+            // Get AudioSource
+            AudioSource audioSource = loopingSoundGameObjects[sound].GetComponent<AudioSource>();
+
+            audioSource.volume = volume;
         }
     }
 

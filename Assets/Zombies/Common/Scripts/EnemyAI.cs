@@ -27,6 +27,8 @@ public class EnemyAI : MonoBehaviour
     public float attackStartDistance;
     [HideInInspector]
     public bool facingRight = true;
+    [HideInInspector]
+    public bool combatStarted = false;
 
     [Header("Pathfinding")]
     public float pathUpdateSeconds;
@@ -71,6 +73,12 @@ public class EnemyAI : MonoBehaviour
 
     public void StartChasingPlayer()
     {
+        if (!combatStarted)
+        {
+            combatStarted = true;
+            new Task(PlayRoarSoundInDelays());
+        }
+
         if (pathUpdateTask != null)
         {
             pathUpdateTask.Stop();
@@ -80,6 +88,28 @@ public class EnemyAI : MonoBehaviour
         followPath = true;
 
         pathUpdateTask = new Task(UpdatePathfindingPath());
+    }
+
+    private IEnumerator PlayRoarSoundInDelays()
+    {
+        while (enemyState != EnemyState.Dead)
+        {
+            yield return new WaitForSeconds(7f);
+
+            if (enemyState != EnemyState.Dead)
+            {
+                if (enemyCombat.zombieType == EnemyCombat.ZombieTypes.Zombie1)
+                {
+                    // Play zombie 1 roar sound
+                    AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie1Roar);
+                }
+                else
+                {
+                    // Play zombie 2 roar sound
+                    AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie2Roar);
+                }
+            }
+        }
     }
 
     private IEnumerator UpdatePathfindingPath()

@@ -124,6 +124,8 @@ public class JigsawPuzzle : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        AudioManager.SetLoopingSoundVolume(AudioManager.Sound.BackgroundTrack, 0.02f);
+
         // Show cursor
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
         Cursor.lockState = CursorLockMode.None;                                                 // Unlock mouse cursor

@@ -130,6 +130,7 @@ public class PauseMenu : MonoBehaviour
             if (!DialogueBox.IsOpen() && !NoteBox.IsOpen())                                          
                 Cursor.lockState = CursorLockMode.Locked;                       // Center and lock mouse cursor
 
+            AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ContinueButton);
             instance.GetComponent<Animator>().SetTrigger("Resume");
             Time.timeScale = 1f;
             GameIsPaused = false;
@@ -145,6 +146,7 @@ public class PauseMenu : MonoBehaviour
 
     public static void QuitGame()                                               // Quits the game from the Pause Menu
     {
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ContinueButton);
         Debug.Log("Quitting Game...");
         Application.Quit();
     }
