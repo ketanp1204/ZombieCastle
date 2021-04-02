@@ -135,6 +135,7 @@ public class DialogueBox : MonoBehaviour
             if (skipAutoTyping)
             {
                 dialogueText.text = sentences[dialogueIndex];
+                isTyping = false;
                 skipAutoTyping = false;
                 break;
             }
@@ -420,7 +421,7 @@ public class DialogueBox : MonoBehaviour
             }
         }
 
-        if (continueButtonEnabled)
+        if (continueButtonEnabled && !isTyping)
         {
             // Click continue button by pressing space
             if (Input.GetKeyDown(KeyCode.Space))

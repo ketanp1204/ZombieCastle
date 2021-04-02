@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 549246629}
+  quitButton: {fileID: 1902578867}
 --- !u!4 &6756886
 Transform:
   m_ObjectHideFlags: 0

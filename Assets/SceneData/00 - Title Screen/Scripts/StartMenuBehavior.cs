@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class StartMenuBehavior : MonoBehaviour
 {
     // Cached References
     public Animator animator;
+    public Button quitButton;
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
         Cursor.lockState = CursorLockMode.None;                                                 // Unlock mouse cursor
+
+        quitButton.onClick.AddListener(() => LevelManager.instance.QuitGame());
 
         if (!AudioManager.isInitialized)
             AudioManager.Initialize();
