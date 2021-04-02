@@ -177,8 +177,6 @@ public class GameEnding : MonoBehaviour
 
         yield return new WaitForSeconds(2.5f);
 
-        GameData.ResetData();
-
         LevelManager.LoadSceneByName("TitleScreen");
     }
 

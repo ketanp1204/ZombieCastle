@@ -14,6 +14,9 @@ public class BehaviourAfterBossDefeated : MonoBehaviour
     public CanvasGroup bossHealthBarCG;
     public CanvasGroup playerHealthBarCG;
 
+    // Cage image
+    public GameObject cage;
+
     // Combat block wall
     public GameObject combatBlockWall;
 
@@ -75,6 +78,9 @@ public class BehaviourAfterBossDefeated : MonoBehaviour
         LevelManager.FadeScreenInAndOut();
 
         yield return new WaitForSeconds(LevelManager.GetCrossFadeStartAnimLength());
+
+        // Remove cage
+        cage.SetActive(false);
 
         // Remove boss from scene
         Destroy(GameObject.Find("BossZombie"));

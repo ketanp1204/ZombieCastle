@@ -39,6 +39,8 @@ public class MazePuzzle : MonoBehaviour
 
     // Public Variables
     [HideInInspector]
+    public bool isActive = false;
+    [HideInInspector]
     public bool firstSwitchHitFlag = false;                             // Set after 1st switch is hit
     [HideInInspector]
     public bool timerStarted = false;                                   // Timer starts after 1st switch in the maze is hit
@@ -109,6 +111,14 @@ public class MazePuzzle : MonoBehaviour
         boxCollider.enabled = false;
     }
 
+    public static bool IsActive()
+    {
+        if (instance == null)
+            return false;
+
+        return instance.isActive;
+    }
+
     public static void LoadMazePuzzleUI()
     {
         instance.StartCoroutine(instance.LoadPuzzleUI());
@@ -121,6 +131,9 @@ public class MazePuzzle : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         AudioManager.SetLoopingSoundVolume(AudioManager.Sound.BackgroundTrack, 0.02f);
+
+        // Set active status
+        isActive = true;
 
         // Show cursor
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
@@ -152,8 +165,10 @@ public class MazePuzzle : MonoBehaviour
 
         // Disable interact button
         interactButton.interactable = false;
-
         EventSystem.current.SetSelectedGameObject(null);
+
+        // Hide cursor
+        Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
 
         // Start puzzle timer
         StartPuzzleTimer();
@@ -253,6 +268,9 @@ public class MazePuzzle : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        // Unset active status
+        isActive = false;
+
         // Hide cursor
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
 
@@ -280,6 +298,10 @@ public class MazePuzzle : MonoBehaviour
     private void ResetPuzzle()
     {
         EventSystem.current.SetSelectedGameObject(null);
+
+        // Show cursor
+        Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
+        Cursor.lockState = CursorLockMode.None;                                                 // Unlock mouse cursor
 
         // Stop clock ticking sound
         AudioManager.StopLoopingSound(AudioManager.Sound.PuzzleClock);

@@ -77,6 +77,9 @@ public class DescriptionBox : MonoBehaviour
 
     public static bool IsOpen()
     {
+        if (instance == null)
+            return false;
+
         return instance.isOpen;
     }
 
@@ -162,7 +165,7 @@ public class DescriptionBox : MonoBehaviour
                 {
                     // Set usable button for health potion
                     useButtonGO.SetActive(true);
-                    useButton.onClick.AddListener(() => playerHealthBar.UseHealthPotion());
+                    useButton.onClick.AddListener(() => playerHealthBar.UseHealthPotion(obj.sceneName));
                 }
             }
         }

@@ -39,6 +39,8 @@ public class JigsawPuzzle : MonoBehaviour
 
     // Public Variables
     [HideInInspector]
+    public bool isActive = false;
+    [HideInInspector]
     public bool timerStarted = false;                                   // Timer starts on pressing start button
     [HideInInspector]
     public int numberOfPiecesSolved = 0;                                // Int - Number of currently solved pieces
@@ -118,11 +120,22 @@ public class JigsawPuzzle : MonoBehaviour
         boxCollider.enabled = false;
     }
 
+    public static bool IsActive()
+    {
+        if (instance == null)
+            return false;
+
+        return instance.isActive;
+    }
+    
     private IEnumerator LoadPuzzleUI()
     {
         LevelManager.FadeScreenInAndOut();
 
         yield return new WaitForSeconds(0.5f);
+
+        // Set active status
+        isActive = true;
 
         AudioManager.SetLoopingSoundVolume(AudioManager.Sound.BackgroundTrack, 0.02f);
 
@@ -295,6 +308,9 @@ public class JigsawPuzzle : MonoBehaviour
         LevelManager.FadeScreenInAndOut();
 
         yield return new WaitForSeconds(0.5f);
+
+        // Unset active status
+        isActive = false;
 
         // Hide cursor
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor

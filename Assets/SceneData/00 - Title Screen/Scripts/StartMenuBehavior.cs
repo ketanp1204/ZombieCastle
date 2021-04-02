@@ -20,6 +20,8 @@ public class StartMenuBehavior : MonoBehaviour
         AudioManager.StopLoopingSound(AudioManager.Sound.BackgroundTrack);
         AudioManager.StopLoopingSound(AudioManager.Sound.Room5Background);
 
+        GameData.ResetData();
+        GameData.Initialize();
         GameData.currentPlayerInventory.Container.Clear();
         GameData.currentPlayerInventory.AddItem(GameAssets.instance.knifeObject, 1);
     }

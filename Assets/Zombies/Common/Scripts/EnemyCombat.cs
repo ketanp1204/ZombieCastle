@@ -129,7 +129,7 @@ public class EnemyCombat : MonoBehaviour
         // Play attack sound if zombie 2 is attacking
         if (zombieType == ZombieTypes.Zombie2)
         {
-            AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie2Attack);
+            new Task(PlayZombie2AttackSoundAfterDelay());
         }
 
         // Play attack animation
@@ -143,6 +143,13 @@ public class EnemyCombat : MonoBehaviour
         attackHitboxAnimator.SetBool("IsAttacking", false);
         
         isAttacking = false;
+    }
+
+    private IEnumerator PlayZombie2AttackSoundAfterDelay()
+    {
+        yield return new WaitForSeconds(0.3f);
+
+        AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.Zombie2Attack);
     }
 
     public void TakeDamage(Transform playerPos, int damageAmount)

@@ -36,7 +36,7 @@ public class HealthBar : MonoBehaviour
         new Task(UIAnimation.FadeCanvasGroupAfterDelay(healthBarCG, 0f, 1f, delay, 0.1f));
     }
 
-    public void UseHealthPotion()
+    public void UseHealthPotion(string sceneName)
     {
         // Play health potion sound
         AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.HealthPotionCollect);
@@ -50,10 +50,29 @@ public class HealthBar : MonoBehaviour
         string text = "Health restored";
         InventoryManager.instance.ShowTextOnHighlightText(text, 0f, 2f);
 
-        InventoryManager.instance.DeleteInventoryItem(GameAssets.instance.healthPotion);
+        if (sceneName == LevelManager.SceneNames.Room2.ToString())
+        {
+            InventoryManager.instance.DeleteInventoryItem(GameAssets.instance.room2_healthPotion);
+        }
+        else if (sceneName == LevelManager.SceneNames.Room5.ToString())
+        {
+            InventoryManager.instance.DeleteInventoryItem(GameAssets.instance.room5_healthPotion);
+        }
+        
+        if (Player.instance)
+        {
+            if (PlayerStats.playerState == PlayerStats.PlayerState.Idle)
+            {
+                ShowHealthBarAfterDelay(0f);
 
-        ShowHealthBarAfterDelay(0f);
+                HideHealthBarAfterDelay(3f);
+            }
+        }
+        else
+        {
+            ShowHealthBarAfterDelay(0f);
 
-        HideHealthBarAfterDelay(3f);
+            HideHealthBarAfterDelay(3f);
+        }
     }
 }

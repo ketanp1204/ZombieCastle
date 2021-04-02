@@ -16,6 +16,7 @@ public class TreasureBoxInteraction : MonoBehaviour
 
 
     // Private references
+    private SpriteRenderer outlineSR;
     private BoxCollider2D boxCollider;
     private SpriteGlow.SpriteGlowEffect glowEffect;
 
@@ -56,6 +57,7 @@ public class TreasureBoxInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        outlineSR = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
         glowEffect = GetComponent<SpriteGlow.SpriteGlowEffect>();
         glowEffect.enabled = false;
@@ -86,6 +88,7 @@ public class TreasureBoxInteraction : MonoBehaviour
 
     private void SetTreasureBoxSpriteToOpenAndDisableCollider()
     {
+        outlineSR.enabled = false;
         imageDisplayGO.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.treasureBoxOpenSprite;
         DisableCollider();
     }

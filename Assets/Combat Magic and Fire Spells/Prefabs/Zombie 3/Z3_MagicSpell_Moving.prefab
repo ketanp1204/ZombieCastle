@@ -138,7 +138,7 @@ MonoBehaviour:
   parabolicAngle: 0
   hasImpactEffect: 1
   impactEffectPrefab: {fileID: 5757771110049638929, guid: a1c7de1e1fb748347b9cabe5977363a4, type: 3}
-  spellDamage: 6
+  spellDamage: 3
   character: 1
 --- !u!50 &-4442510714792072764
 Rigidbody2D:

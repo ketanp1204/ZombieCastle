@@ -333,6 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackStartDistance: 2.7
   facingRight: 1
+  combatStarted: 0
   pathUpdateSeconds: 0.5
   followPath: 0
   speed: 100
@@ -362,7 +363,7 @@ MonoBehaviour:
   hitboxCollider: {fileID: 6032552034275832256}
   maxHealth: 100
   destroyDelayAfterDeath: 3
-  pushDistanceOnHit: 2
+  pushDistanceOnHit: 1
   damageMultiplier: 0.3
   zombieType: 1
   isAttacking: 0

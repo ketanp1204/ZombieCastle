@@ -127,27 +127,38 @@ public class PauseMenu : MonoBehaviour
 
         if (GameIsPaused)
         {
-            if (!DialogueBox.IsOpen() && !NoteBox.IsOpen())                                          
+            if (!DialogueBox.IsOpen() && !NoteBox.IsOpen() && !DescriptionBox.IsOpen() && !MazePuzzle.IsActive() && !JigsawPuzzle.IsActive() && !SpotDifferencesPuzzle.IsActive())                                          
                 Cursor.lockState = CursorLockMode.Locked;                       // Center and lock mouse cursor
 
+            AudioListener.pause = false;
             AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ContinueButton);
             instance.GetComponent<Animator>().SetTrigger("Resume");
             Time.timeScale = 1f;
             GameIsPaused = false;
             EventSystem.current.SetSelectedGameObject(null);
+
+            Player.EnableMovement();
+            Player.EnableAttackInputAfterDelay();
         }
     }
 
     public static void Pause()                                                  // Pauses the game when 'Escape' is pressed
     {
         if (!GameIsPaused && instance.CanPauseGame)
+        {
+            if (Player.instance)
+            {
+                Player.StopMovement();
+                Player.DisableAttackInput();
+            }
             instance.PauseGame();
+        }
+            
     }
 
     public static void QuitGame()                                               // Quits the game from the Pause Menu
     {
         AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ContinueButton);
-        Debug.Log("Quitting Game...");
         Application.Quit();
     }
 
@@ -203,6 +214,7 @@ public class PauseMenu : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        AudioListener.pause = true;
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
         Cursor.lockState = CursorLockMode.None;                                                 // Unlock mouse cursor
         Time.timeScale = 0f;

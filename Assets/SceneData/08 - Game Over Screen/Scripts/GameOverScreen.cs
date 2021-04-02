@@ -10,6 +10,7 @@ public class GameOverScreen : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI loadCheckpointText;
     public TextMeshProUGUI quitGameText;
+    public Button quitButton;
 
     // Public variables
     public float gameOverTextAnimLerpTime;
@@ -17,6 +18,9 @@ public class GameOverScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        quitButton.onClick.AddListener(() => LevelManager.instance.QuitGame());
+
+        AudioManager.StopLoopingSound(AudioManager.Sound.BackgroundTrack);
         AudioManager.StopLoopingSound(AudioManager.Sound.BossBattleTrack);
 
         // Lock the cursor

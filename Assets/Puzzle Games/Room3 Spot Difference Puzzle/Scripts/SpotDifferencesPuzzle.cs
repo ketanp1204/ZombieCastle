@@ -30,7 +30,6 @@ public class SpotDifferencesPuzzle : MonoBehaviour
     public WeaponObject swordReward;                                    // Sword reward received after successful puzzle completion
 
     // Private Variables
-    private bool isActive;
     private int numberOfDifferencesFound = 0;
     private bool puzzleSuccess = false;
 
@@ -40,9 +39,11 @@ public class SpotDifferencesPuzzle : MonoBehaviour
 
     // Public Variables
     [HideInInspector]
+    public bool isActive = false;
+    [HideInInspector]
     public bool timerStarted = false;                                   // Timer starts after 1st switch in the maze is hit
 
-    public float puzzleTime = 20f;                                      // Time allowed to complete the puzzle
+    public float puzzleTime = 35f;                                      // Time allowed to complete the puzzle
     public float bonusTime = 5f;                                        // Bonus time to add 
 
     private void Awake()
@@ -100,6 +101,14 @@ public class SpotDifferencesPuzzle : MonoBehaviour
         cupboardBoxCollider.enabled = false;
     }
 
+    public static bool IsActive()
+    {
+        if (instance == null)
+            return false;
+
+        return instance.isActive;
+    }
+
     public static void LoadDiffPuzzleUI()
     {
         instance.StartCoroutine(instance.LoadPuzzle());
@@ -110,6 +119,9 @@ public class SpotDifferencesPuzzle : MonoBehaviour
         LevelManager.FadeScreenInAndOut();
 
         yield return new WaitForSeconds(0.5f);
+
+        // Set active status
+        isActive = true;
 
         // Show cursor
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
@@ -197,10 +209,29 @@ public class SpotDifferencesPuzzle : MonoBehaviour
 
         numberOfDifferencesFound += 1;
 
-        char[] numberText = numberOfDifferencesFoundText.text.ToCharArray();
-        char currentNumber = numberOfDifferencesFound.ToString()[0];
-        numberText[0] = currentNumber;
-        numberOfDifferencesFoundText.text = new string(numberText);
+        if (numberOfDifferencesFound < 10)
+        {
+            char[] numberText = numberOfDifferencesFoundText.text.ToCharArray();
+            char currentNumber = numberOfDifferencesFound.ToString()[0];
+            numberText[0] = currentNumber;
+            numberOfDifferencesFoundText.text = new string(value: numberText);
+        }
+        else
+        {
+            if (numberOfDifferencesFound == 10)
+            {
+                numberOfDifferencesFoundText.text = "10 of 12";
+            }
+            else if (numberOfDifferencesFound == 11)
+            {
+                numberOfDifferencesFoundText.text = "11 of 12";
+            }
+            else
+            {
+                numberOfDifferencesFoundText.text = "12 of 12";
+            }
+        }
+        
 
         if (numberOfDifferencesFound == 12)
         {
@@ -261,6 +292,9 @@ public class SpotDifferencesPuzzle : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        // Unset active status
+        isActive = false;
+
         // Hide cursor
         Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock mouse cursor
 
@@ -287,11 +321,6 @@ public class SpotDifferencesPuzzle : MonoBehaviour
 
         // Set cinemachine camera priority
         cinemachineCamera.Priority = 5;
-    }
-
-    public static bool IsActive()
-    {
-        return instance.isActive;
     }
 
     private void ResetPuzzle()

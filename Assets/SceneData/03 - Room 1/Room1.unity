@@ -2801,6 +2801,7 @@ MonoBehaviour:
   switch1Collider: {fileID: 392222310}
   switch2Collider: {fileID: 550629447}
   keyRewardScriptableObject: {fileID: 11400000, guid: 821fce0b07dfeaf4d88fed329f907fed, type: 2}
+  isActive: 0
   firstSwitchHitFlag: 0
   timerStarted: 0
   puzzleTime: 20
@@ -5580,6 +5581,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hit the two switches in the maze to untie the knot on the top of the maze
     and escape before the timer runs out. Each switch adds 5 seconds to the timer.
+    Use W/S/A/D to move aorund.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7e016783f6bcda944a445f4658832686, type: 2}
   m_sharedMaterial: {fileID: 9033350098051320672, guid: 7e016783f6bcda944a445f4658832686, type: 2}

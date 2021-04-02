@@ -39,6 +39,7 @@ public static class GameData
 
     // Room 5
     public static bool r5_zombie3CombatCompleted;
+    public static bool r5_drawerHealthPotionCollected;
     public static bool r5_bossDialogueSeen;
 
     // Scene loading
@@ -55,18 +56,15 @@ public static class GameData
 
     public static void ResetData()
     {
-        if (isInitialized)
-        {
-            isInitialized = false;
-            currentPlayerInventory = null;
-            sceneName = LevelManager.SceneNames.Lobby;
-            UnsetBools();
-        }
+        isInitialized = false;
+        currentPlayerInventory = null;
+        sceneName = LevelManager.SceneNames.Lobby;
+        UnsetBools();
     }
     
     private static void UnsetBools()
     {
-        lobby_introDialogueSeen = false;       
+        lobby_introDialogueSeen = true;            
         lobby_instructionsSeen = false;
         lobby_torchCollected = false;
         lobby_keyCollected = false;
@@ -90,6 +88,7 @@ public static class GameData
         r3_treasureBoxFireElementCollected = false;
 
         r5_zombie3CombatCompleted = false;
+        r5_drawerHealthPotionCollected = false;
         r5_bossDialogueSeen = false;
 
         loadingCheckpointFromGameOver = false;

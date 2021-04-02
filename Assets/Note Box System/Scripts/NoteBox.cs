@@ -62,6 +62,9 @@ public class NoteBox : MonoBehaviour
 
     public static bool IsOpen()
     {
+        if (instance == null)
+            return false;
+
         return instance.isOpen;
     }
 
@@ -218,7 +221,7 @@ public class NoteBox : MonoBehaviour
 
     private IEnumerator SetContinueButtonEnabledFlagToTrueAfterDelay()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.4f);
 
         continueButtonEnabled = true;
     }

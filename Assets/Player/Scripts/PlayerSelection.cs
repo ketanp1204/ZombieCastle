@@ -216,6 +216,9 @@ public class PlayerSelection : MonoBehaviour
 
                             string[] sentenceArray = descBox_Then_Dialogue_Object.playerComments;
 
+                            if (sentenceArray.Length == 0)
+                                sentenceArray = null;
+
                             if (DescriptionBox.instance)
                             {
                                 DescriptionBox.instance.ShowRewardInDescBoxAfterDelay(0.2f, descBox_Then_Dialogue_Object, sentenceArray, objectProperties.descBoxItemReceivedSound);

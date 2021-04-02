@@ -82,6 +82,9 @@ public class DialogueBox : MonoBehaviour
 
     public static bool IsOpen()
     {
+        if (instance == null)
+            return false;
+
         return instance.isOpen;
     }
 
@@ -97,23 +100,26 @@ public class DialogueBox : MonoBehaviour
 
     public void StartDialogueDisplay()
     {
-        Player.StopMovement();
-        Player.DisableAttackInput();
-        PlayerTopDown.StopMovement();
+        if (!isTyping)
+        {
+            Player.StopMovement();
+            Player.DisableAttackInput();
+            PlayerTopDown.StopMovement();
 
-        InventoryManager.DisableInventoryOpen();
-        ToolbarManager.DisableToolbarOpen();
+            InventoryManager.DisableInventoryOpen();
+            ToolbarManager.DisableToolbarOpen();
 
-        // Fade in dialogue box
-        new Task(UIAnimation.FadeCanvasGroupAfterDelay(dialogueBoxCG, 0f, 1f, dialogueDisplayDelay));
-        dialogueBoxCG.interactable = true;
-        dialogueBoxCG.blocksRaycasts = true;
+            // Fade in dialogue box
+            new Task(UIAnimation.FadeCanvasGroupAfterDelay(dialogueBoxCG, 0f, 1f, dialogueDisplayDelay));
+            dialogueBoxCG.interactable = true;
+            dialogueBoxCG.blocksRaycasts = true;
 
-        isOpen = true;
+            isOpen = true;
 
-        textTypingDelay = dialogueDisplayDelay + 0.2f;
+            textTypingDelay = dialogueDisplayDelay + 0.2f;
 
-        StartCoroutine(TypeText(textTypingDelay));
+            StartCoroutine(TypeText(textTypingDelay));
+        }
     }
 
     private IEnumerator TypeText(float delay)                                                       // Starts typing text after delay
@@ -163,125 +169,136 @@ public class DialogueBox : MonoBehaviour
         {
             dialogueIndex++;
             dialogueText.text = "";
-            StartCoroutine(TypeText(0f));                                                           // No delay in between dialogue sentences
+            StartCoroutine(TypeText(0.1f));                                                          
         }
         else
-        {                                                                                           
-            dialogueText.text = "";                                                                 // No more dialogue texts left to display
-
-            Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock cursor
-            isTyping = false;                                                                       // Text is not being typed in the dialogue box
-
-            InventoryManager.EnableInventoryOpen();
-            ToolbarManager.EnableToolbarOpen();
-
-            // Fade out the dialogue box
-            new Task(UIAnimation.FadeCanvasGroupAfterDelay(dialogueBoxCG, 1f, 0f, 0f));
-
-            isOpen = false;
-
-            if (isTreasureBox)
-            {
-                // Start behaviour after dialogue over
-                if (treasureBoxInstance != null)
-                {
-                    treasureBoxInstance.BehaviourAfterDialogue();
-                }
-                else
-                {
-                    Debug.Log("Treasure box interaction script not set");
-                }
-            }
-
-            if (addToInventoryAfterDialogue)
-            {
-                // Add to inventory
-                if (InventoryManager.instance)
-                {
-                    InventoryManager.instance.AddInventoryItem(currentItem);
-                }
-
-                // Highlight inventory bag in toolbar
-                if (ToolbarManager.instance)
-                {
-                    ToolbarManager.instance.HighlightInventoryBag();
-                }
-
-                // Remove the object from the scene
-                if (pcThenInventoryGO != null)
-                {
-                    if (destroyPCThenInvObjAfterAdd)
-                    {
-                        Destroy(pcThenInventoryGO);
-                        Destroy(imageDisplayGO);
-
-                        pcThenInventoryGO = null;
-                        imageDisplayGO = null;
-                        destroyPCThenInvObjAfterAdd = false;
-                    }
-                }
-            }
-
-            if (showNoteAfterDisplay)
-            {
-                NoteBox.instance.SetCurrentItem(currentItem);
-                NoteBox.instance.FillNotePageText();
-                NoteBox.instance.ShowNoteBox();
-            }
-
-            if (lobbyBeforeEnteringRoom3)
-            {
-                if (Room3AccessBehaviour.instance)
-                {
-                    Room3AccessBehaviour.instance.BehaviourAfterDialogue();
-                }
-            }
-
-            if (room1MazePuzzleAfterDialogue)
-            {
-                // Load maze puzzle UI
-                MazePuzzle.LoadMazePuzzleUI();
-            }
-
-            if (room2JigsawPuzzleAfterDialogue)
-            {
-                // Load jigsaw puzzle UI
-                JigsawPuzzle.LoadJigsawPuzzleUI();
-            }
-
-            if (room3DiffPuzzleAfterDialogue)
-            {
-                // Load diff puzzle UI
-                SpotDifferencesPuzzle.LoadDiffPuzzleUI();
-            }
-
-            if (room1ZombieDiscovery)
-            {
-                R1_CombatStartBehaviour.instance.ShowInventoryAfterKnifeOpenDialogue();
-            }
-
-            if (isGameStartDialogue)
-            {
-                LevelManager.SetAnimatorSpeed(1f);
-
-                if (DisplayGameInstructions.instance)
-                {
-                    DisplayGameInstructions.instance.StartInstructionsDisplay();
-                }
-            }
-
-            if (room5BossBattleAfterDialogue)
-            {
-                GameData.r5_bossDialogueSeen = true;
-                BossVisibleCameraZoomOut.instance.StartBossBattle();
-            }
-
-            Player.EnableMovement();
-            Player.EnableAttackInputAfterDelay();
-            PlayerTopDown.EnableMovement();
-
-            ResetValues();
+        {
+            EndDialogue();
         }
+    }
+
+    private void EndDialogue()
+    {
+        dialogueText.text = "";                                                                 // No more dialogue texts left to display
+
+        Cursor.lockState = CursorLockMode.Locked;                                               // Center and lock cursor
+        isTyping = false;                                                                       // Text is not being typed in the dialogue box
+
+        InventoryManager.EnableInventoryOpen();
+        ToolbarManager.EnableToolbarOpen();
+
+        // Fade out the dialogue box
+        new Task(UIAnimation.FadeCanvasGroupAfterDelay(dialogueBoxCG, 1f, 0f, 0f));
+
+        isOpen = false;
+
+        if (isTreasureBox)
+        {
+            // Start behaviour after dialogue over
+            if (treasureBoxInstance != null)
+            {
+                treasureBoxInstance.BehaviourAfterDialogue();
+            }
+            else
+            {
+                Debug.Log("Treasure box interaction script not set");
+            }
+        }
+
+        if (addToInventoryAfterDialogue)
+        {
+            // Add to inventory
+            if (InventoryManager.instance)
+            {
+                InventoryManager.instance.AddInventoryItem(currentItem);
+            }
+
+            // Highlight inventory bag in toolbar
+            if (ToolbarManager.instance)
+            {
+                ToolbarManager.instance.HighlightInventoryBag();
+            }
+
+            // Remove the object from the scene
+            if (pcThenInventoryGO != null)
+            {
+                if (destroyPCThenInvObjAfterAdd)
+                {
+                    Destroy(pcThenInventoryGO);
+                    Destroy(imageDisplayGO);
+
+                    pcThenInventoryGO = null;
+                    imageDisplayGO = null;
+                    destroyPCThenInvObjAfterAdd = false;
+                }
+            }
+        }
+
+        if (showNoteAfterDisplay)
+        {
+            NoteBox.instance.SetCurrentItem(currentItem);
+            NoteBox.instance.FillNotePageText();
+            NoteBox.instance.ShowNoteBox();
+        }
+
+        if (lobbyBeforeEnteringRoom3)
+        {
+            if (Room3AccessBehaviour.instance)
+            {
+                Room3AccessBehaviour.instance.BehaviourAfterDialogue();
+            }
+        }
+
+        if (room1MazePuzzleAfterDialogue)
+        {
+            // Load maze puzzle UI
+            MazePuzzle.LoadMazePuzzleUI();
+        }
+
+        if (room2JigsawPuzzleAfterDialogue)
+        {
+            // Load jigsaw puzzle UI
+            JigsawPuzzle.LoadJigsawPuzzleUI();
+        }
+
+        if (room3DiffPuzzleAfterDialogue)
+        {
+            // Load diff puzzle UI
+            SpotDifferencesPuzzle.LoadDiffPuzzleUI();
+        }
+
+        if (room1ZombieDiscovery)
+        {
+            R1_CombatStartBehaviour.instance.ShowInventoryAfterKnifeOpenDialogue();
+        }
+
+        if (isGameStartDialogue)
+        {
+            LevelManager.SetAnimatorSpeed(1f);
+
+            if (DisplayGameInstructions.instance)
+            {
+                DisplayGameInstructions.instance.StartInstructionsDisplay();
+            }
+        }
+
+        if (room5BossBattleAfterDialogue)
+        {
+            GameData.r5_bossDialogueSeen = true;
+            BossVisibleCameraZoomOut.instance.StartBossBattle();
+        }
+
+        Player.EnableMovement();
+        Player.EnableAttackInputAfterDelay();
+        PlayerTopDown.EnableMovement();
+
+        ResetValues();
+    }
+
+    public void CloseDialogueBox()
+    {
+        AudioManager.PlaySoundOnceOnPersistentObject(AudioManager.Sound.ContinueButton);
+        EndDialogue();
     }
 
     public void SetPCThenInventoryGameObject(GameObject pcThenInv, GameObject displayGO, bool deleteObjectAfterAdd)

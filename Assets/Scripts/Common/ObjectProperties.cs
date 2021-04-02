@@ -13,7 +13,8 @@ public class ObjectProperties : MonoBehaviour
 
     private enum Desc_Box_Then_Dialogue_Objects
     {
-        Room2_Drawer
+        Room2_Drawer,
+        Room5_Drawer
     }
 
     private enum PC_Then_Note_Objects
@@ -82,6 +83,13 @@ public class ObjectProperties : MonoBehaviour
                     GetComponent<BoxCollider2D>().enabled = false;
                 }
             }
+            else if (itemName == Desc_Box_Then_Dialogue_Objects.Room5_Drawer.ToString())
+            {
+                if (GameData.r5_drawerHealthPotionCollected)
+                {
+                    GetComponent<BoxCollider2D>().enabled = false;
+                }
+            }
         }
         else if(objectData.itemType == ItemType.PC_Then_Note)
         {
@@ -138,6 +146,10 @@ public class ObjectProperties : MonoBehaviour
         if (itemName == Desc_Box_Then_Dialogue_Objects.Room2_Drawer.ToString())
         {
             GameData.r2_drawerHealthPotionCollected = true;
+        }
+        else if (itemName == Desc_Box_Then_Dialogue_Objects.Room5_Drawer.ToString())
+        {
+            GameData.r5_drawerHealthPotionCollected = true;
         }
     }
 

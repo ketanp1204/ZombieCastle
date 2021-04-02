@@ -169,6 +169,15 @@ public class Player : MonoBehaviour
             torchGO.SetActive(false);
             animator.SetBool("HoldingTorch", false);
             isInRoom3 = false;
+
+            if (GameData.r1_combatCompleted)
+            {
+                InventoryManager.instance.EnableInteractionOfAllSlots();
+            }
+            else
+            {
+                InventoryManager.instance.DisableAllWeaponInteractions();
+            }
         }
         else if (scene.name == "Room2")
         {

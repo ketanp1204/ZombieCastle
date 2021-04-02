@@ -58,6 +58,9 @@ public class GameSession : MonoBehaviour
             // Play background track
             AudioManager.PlaySoundLooping(AudioManager.Sound.BackgroundTrack);
 
+            // Play candle burning sound
+            AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.CandleBurning);
+
             // Stop room 3 background track
             AudioManager.StopLoopingSound(AudioManager.Sound.Room3Background);
 
@@ -68,9 +71,6 @@ public class GameSession : MonoBehaviour
                 if (!GameData.lobby_introDialogueSeen)
                     StartCoroutine(PlayIntroDialogue());
             }
-
-            // Play candle burning sound
-            AudioManager.PlaySoundOnceOnNonPersistentObject(AudioManager.Sound.CandleBurning);
 
             // Hide cursor
             Cursor.lockState = CursorLockMode.Locked;

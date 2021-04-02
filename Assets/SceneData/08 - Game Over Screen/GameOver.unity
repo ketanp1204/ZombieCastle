@@ -155,6 +155,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1847955339}
   loadCheckpointText: {fileID: 1492198799}
   quitGameText: {fileID: 625445471}
+  quitButton: {fileID: 1902578867}
   gameOverTextAnimLerpTime: 0.3
 --- !u!4 &245793532
 Transform:
