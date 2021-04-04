@@ -38,6 +38,7 @@ public static class GameData
     public static bool r3_treasureBoxFireElementCollected;
 
     // Room 5
+    public static bool r5_instructionSeen;
     public static bool r5_zombie3CombatCompleted;
     public static bool r5_drawerHealthPotionCollected;
     public static bool r5_bossDialogueSeen;
@@ -92,6 +93,7 @@ public static class GameData
         r3_spotDifferencePuzzleCompleted = false;
         r3_treasureBoxFireElementCollected = false;
 
+        r5_instructionSeen = false;
         r5_zombie3CombatCompleted = false;
         r5_drawerHealthPotionCollected = false;
         r5_bossDialogueSeen = false;
