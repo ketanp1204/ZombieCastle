@@ -46,9 +46,13 @@ public static class GameData
     public static LevelManager.SceneNames sceneName;
     public static bool loadingCheckpointFromGameOver;
 
+    // Audio
+    public static float audioVolume;
+
     public static void Initialize()
     {
         currentPlayerInventory = GameAssets.instance.playerStartInventory;
+        audioVolume = 1f;
         UnsetBools();
         isInitialized = true;
         sceneName = LevelManager.SceneNames.Lobby;
@@ -58,6 +62,7 @@ public static class GameData
     {
         isInitialized = false;
         currentPlayerInventory = null;
+        audioVolume = 1f;
         sceneName = LevelManager.SceneNames.Lobby;
         UnsetBools();
     }

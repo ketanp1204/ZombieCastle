@@ -6424,7 +6424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectData: {fileID: 11400000, guid: 1233cbad180c3214ba468f96bd521155, type: 2}
   imageDisplayGO: {fileID: 0}
-  descBoxItemReceivedSound: 37
+  descBoxItemReceivedSound: 36
 --- !u!1 &1885757233
 GameObject:
   m_ObjectHideFlags: 0
